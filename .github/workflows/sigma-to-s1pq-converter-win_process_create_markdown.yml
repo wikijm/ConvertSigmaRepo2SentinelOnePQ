@@ -1,6 +1,8 @@
 name: Transform Sigma Windows Process Creation Events to S1PQ
 
 on:
+  workflow_dispatch:
+ 
   schedule:
     - cron: '0 0 * * *'  # Run once per day at midnight
 
