@@ -4,11 +4,13 @@ on:
   workflow_dispatch:
  
   schedule:
-    - cron: '0 0 * * *'  # Run once per day at midnight
+    - cron: "0 0 * * *"  # Run once per day at midnight
 
 jobs:
   run-python-script:
     runs-on: ubuntu-latest  # Change value from 'self-hosted' to 'ubuntu-latest' if you want to host it on Github.
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout code
