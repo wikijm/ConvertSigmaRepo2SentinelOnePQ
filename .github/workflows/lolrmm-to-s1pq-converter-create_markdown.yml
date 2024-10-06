@@ -36,8 +36,7 @@ jobs:
       - name: Create destination folder 'S1PQ - LOLRMM'
         run: |
           mkdir -p "${{ github.workspace }}/S1PQ - LOLRMM"
-          cd 'S1PQ - LOLRMM'
-      
+
       - name: Run 'Sigma to S1PQ - Windows process event creation script'
         run: python lolrmm-to-s1pq-converter-create_markdown.py
 
