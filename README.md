@@ -1,4 +1,5 @@
 # ConvertSigmaRepo2SentinelOnePQ
+![banner](images/banner.png)
 Scripts stolen and heavily based on [rcegan/ConvertSigmaRepo2KQL](https://github.com/rcegan/ConvertSigmaRepo2KQL), played by GitHub Actions that converts Sigma rules to SentinelOne PowerQuery via PySigma.
 
 ## Usage
