@@ -76,5 +76,9 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
 
 ## Thanks
 Many thanks to:
+- [@SigmaHQ](https://github.com/SigmaHQ) for
+    - [Sigma Rule Repository](https://github.com/SigmaHQ/sigma)
+    - [pySigma](https://github.com/SigmaHQ/pySigma)
+    - [sigma-cli](https://github.com/SigmaHQ/sigma-cli)
 - [@rcegan](https://github.com/rcegan) for [rcegan/ConvertSigmaRepo2KQL](https://github.com/rcegan/ConvertSigmaRepo2KQL)
 - [@7RedViolin](https://github.com/7RedViolin) for [7RedViolin/pySigma-backend-sentinelone-pq)](https://github.com/7RedViolin/pySigma-backend-sentinelone-pq)
