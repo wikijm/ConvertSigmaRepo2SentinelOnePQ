@@ -51,8 +51,10 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
         Ensure your script (sigma-to-s1pq-converter-win_process_create_markdown.py) is compatible with Python 3.10.
 
 4. Required Libraries:
-        **sigma-cli**: This is installed using pip install sigma-cli.
-        **sigma-cli pipelines**: Installed using sigma plugin install sentinelone-pq.
+
+      **sigma-cli**: This is installed using pip install sigma-cli.
+
+      **sigma-cli pipelines**: Installed using sigma plugin install sentinelone-pq.
 
 5. Sigma Repository: The workflow clones the Sigma repository from GitHub. Ensure you have internet access to clone the repository.
 
