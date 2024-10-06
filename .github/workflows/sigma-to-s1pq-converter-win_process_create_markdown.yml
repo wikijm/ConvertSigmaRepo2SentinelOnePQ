@@ -25,7 +25,7 @@ jobs:
       
       - name: Install sigma-cli pipelines
         run: |
-          sigma plugin install sentinelone_pq
+          sigma plugin install sentinelone-pq
         
       - name: Get Sigma repository
         run: |
