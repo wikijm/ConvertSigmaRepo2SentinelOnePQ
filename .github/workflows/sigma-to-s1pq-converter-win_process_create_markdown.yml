@@ -30,6 +30,9 @@ jobs:
       - name: Get Sigma repository
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
+
+      - name: Create destination folder 'S1PQ - Windows Process Creation'
+        run: mkdir -p "${{ github.workspace }}/S1PQ - Windows Process Creation"
       
       - name: Run 'Sigma to S1PQ - Windows process event creation script'
         run: python sigma-to-s1pq-converter-win_process_create_markdown.py
