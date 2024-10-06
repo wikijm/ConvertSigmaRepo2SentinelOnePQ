@@ -67,9 +67,9 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
         Ensure your script handles paths correctly and writes output to this directory.
 
 9. GitHub Actions:
-        actions/checkout@v4.2.0: Used to check out the repository code.
-        actions/setup-python@v4.7.1: Used to set up the Python environment.
-        stefanzweifel/git-auto-commit-action@v5: Used to commit and push changes automatically.
+   - actions/checkout@v4.2.0: Used to check out the repository code.
+   - actions/setup-python@v4.7.1: Used to set up the Python environment.
+   - stefanzweifel/git-auto-commit-action@v5: Used to commit and push changes automatically.
 
 10. Script Execution: Ensure your script (sigma-to-s1pq-converter-win_process_create_markdown.py) is present in the repository and executable.
 
