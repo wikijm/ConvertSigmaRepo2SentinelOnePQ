@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-10-2024 07:02:16):
+// Translated content (automatically translated on 07-10-2024 05:19:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "type %windir%\system32\ntdll.dll" or tgt.process.cmdline contains "type %systemroot%\system32\ntdll.dll" or tgt.process.cmdline contains "type c:\windows\system32\ntdll.dll" or tgt.process.cmdline contains "\ntdll.dll > \\.\pipe\"))
 ```
 

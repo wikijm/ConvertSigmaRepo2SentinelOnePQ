@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-10-2024 07:02:16):
+// Translated content (automatically translated on 07-10-2024 05:19:01):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\w3wp.exe" and (tgt.process.cmdline contains "appcmd.exe add module" or (tgt.process.cmdline contains " system.enterpriseservices.internal.publish" and tgt.process.image.path contains "\powershell.exe") or (tgt.process.cmdline contains "gacutil" and tgt.process.cmdline contains " /I"))))
 ```
 
