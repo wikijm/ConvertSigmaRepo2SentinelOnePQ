@@ -1,4 +1,4 @@
-name: Transform Sigma LOLRMM to S1PQ
+name: Transform Sigma LOLRMM WikiJM to S1PQ
 
 on:
   workflow_dispatch:
@@ -33,9 +33,9 @@ jobs:
         run: |
           git clone https://github.com/wikijm/LOLRMM.git
 
-      - name: Create destination folder 'S1PQ - LOLRMM'
+      - name: Create destination folder 'S1PQ - LOLRMM WikiJM'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - LOLRMM"
+          mkdir -p "${{ github.workspace }}/S1PQ - LOLRMM WikiJM"
 
       - name: Run 'Sigma to S1PQ - Windows process event creation script'
         run: python lolrmm-to-s1pq-converter-create_markdown.py
