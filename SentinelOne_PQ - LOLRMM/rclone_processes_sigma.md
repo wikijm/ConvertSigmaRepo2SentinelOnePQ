@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2024 01:17:59):
+// Translated content (automatically translated on 08-10-2024 15:38:03):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\rclone.exe")
 ```
 
