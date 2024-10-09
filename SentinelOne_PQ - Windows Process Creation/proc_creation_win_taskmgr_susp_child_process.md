@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2024 01:19:09):
+// Translated content (automatically translated on 09-10-2024 01:18:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\taskmgr.exe" and (not (tgt.process.image.path contains ":\Windows\System32\mmc.exe" or tgt.process.image.path contains ":\Windows\System32\resmon.exe" or tgt.process.image.path contains ":\Windows\System32\Taskmgr.exe"))))
 ```
 

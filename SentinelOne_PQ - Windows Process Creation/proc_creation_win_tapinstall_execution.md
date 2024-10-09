@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2024 01:19:09):
+// Translated content (automatically translated on 09-10-2024 01:18:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\tapinstall.exe" and (not ((tgt.process.image.path contains ":\Program Files\Avast Software\SecureLine VPN\" or tgt.process.image.path contains ":\Program Files (x86)\Avast Software\SecureLine VPN\") or tgt.process.image.path contains ":\Program Files\OpenVPN Connect\drivers\tap\" or tgt.process.image.path contains ":\Program Files (x86)\Proton Technologies\ProtonVPNTap\installer\"))))
 ```
 

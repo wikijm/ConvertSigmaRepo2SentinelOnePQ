@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2024 01:19:09):
+// Translated content (automatically translated on 09-10-2024 01:18:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" and tgt.process.cmdline contains "scecli\0" and tgt.process.cmdline contains "reg add"))
 ```
 
