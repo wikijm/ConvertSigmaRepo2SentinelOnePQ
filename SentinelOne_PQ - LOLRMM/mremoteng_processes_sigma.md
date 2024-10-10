@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-10-2024 01:17:44):
+// Translated content (automatically translated on 10-10-2024 01:17:31):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mRemoteNG.exe" or src.process.image.path contains "\mRemoteNG.exe" or src.process.image.path contains "\mRemoteNG.exe"))
 ```
 
