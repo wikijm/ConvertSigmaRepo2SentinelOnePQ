@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-10-2024 01:24:17):
+// Translated content (automatically translated on 15-10-2024 01:20:01):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\Event Viewer\RecentViews" or tgt.process.cmdline contains "\EventV~1\RecentViews") and tgt.process.cmdline contains ">"))
 ```
 
