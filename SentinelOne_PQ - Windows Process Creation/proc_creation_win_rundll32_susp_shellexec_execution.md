@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-10-2024 01:19:23):
+// Translated content (automatically translated on 18-10-2024 01:19:37):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ShellExec_RunDLL" and (tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "msiexec" or tgt.process.cmdline contains "\Users\Public\" or tgt.process.cmdline contains "odbcconf" or tgt.process.cmdline contains "\Desktop\" or tgt.process.cmdline contains "\Temp\" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "iex" or tgt.process.cmdline contains "comspec")))
 ```
 
