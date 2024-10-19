@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2024 01:18:28):
+// Translated content (automatically translated on 19-10-2024 01:17:22):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\Dropbox.exe")
 ```
 

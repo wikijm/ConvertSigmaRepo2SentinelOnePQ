@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2024 01:18:28):
+// Translated content (automatically translated on 19-10-2024 01:17:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "paexec.exe" or src.process.image.path="*PAExec-*.exe" or src.process.image.path contains "remcom.exe" or src.process.image.path contains "remcomsvc.exe" or src.process.image.path contains "xcmd.exe" or src.process.image.path contains "xcmdsvc.exe"))
 ```
 
