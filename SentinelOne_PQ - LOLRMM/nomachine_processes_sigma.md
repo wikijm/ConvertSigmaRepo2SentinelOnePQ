@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-10-2024 01:17:22):
+// Translated content (automatically translated on 20-10-2024 01:24:32):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*nomachine*.exe" or src.process.image.path contains "nxd.exe"))
 ```
 
