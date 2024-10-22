@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-10-2024 01:20:09):
+// Translated content (automatically translated on 22-10-2024 01:19:09):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ImperoClientSVC.exe")
 ```
 
