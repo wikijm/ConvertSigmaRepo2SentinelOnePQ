@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2024 01:20:15):
+// Translated content (automatically translated on 23-10-2024 01:19:10):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\onenote.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wscript.exe") and (tgt.process.cmdline contains "\exported\" or tgt.process.cmdline contains "\onenoteofflinecache_files\")))
 ```
 
