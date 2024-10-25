@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2024 01:19:12):
+// Translated content (automatically translated on 25-10-2024 01:20:00):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\ntdsutil.exe")
 ```
 
