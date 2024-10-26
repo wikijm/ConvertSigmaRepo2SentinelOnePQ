@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-10-2024 01:20:00):
+// Translated content (automatically translated on 26-10-2024 01:17:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\wscript.exe" or src.process.image.path contains "\cscript.exe") and (tgt.process.image.path contains "\rundll32.exe" or ((tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and ((tgt.process.cmdline contains "mshta" and tgt.process.cmdline contains "http") or (tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "msiexec")))) and (not (tgt.process.image.path contains "\rundll32.exe" and (tgt.process.cmdline contains "UpdatePerUserSystemParameters" or tgt.process.cmdline contains "PrintUIEntry" or tgt.process.cmdline contains "ClearMyTracksByProcess")))))
 ```
 
