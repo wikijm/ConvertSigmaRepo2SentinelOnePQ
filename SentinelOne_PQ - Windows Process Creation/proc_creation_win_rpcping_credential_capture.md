@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2024 01:17:36):
+// Translated content (automatically translated on 27-10-2024 01:25:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\rpcping.exe" and (tgt.process.cmdline contains "-s" or tgt.process.cmdline contains "/s" or tgt.process.cmdline contains "–s" or tgt.process.cmdline contains "—s" or tgt.process.cmdline contains "―s") and (((tgt.process.cmdline contains "-u" or tgt.process.cmdline contains "/u" or tgt.process.cmdline contains "–u" or tgt.process.cmdline contains "—u" or tgt.process.cmdline contains "―u") and (tgt.process.cmdline contains "NTLM")) or ((tgt.process.cmdline contains "-t" or tgt.process.cmdline contains "/t" or tgt.process.cmdline contains "–t" or tgt.process.cmdline contains "—t" or tgt.process.cmdline contains "―t") and (tgt.process.cmdline contains "ncacn_np")))))
 ```
 

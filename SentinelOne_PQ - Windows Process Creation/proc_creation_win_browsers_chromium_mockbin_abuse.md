@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2024 01:17:36):
+// Translated content (automatically translated on 27-10-2024 01:25:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\brave.exe" or tgt.process.image.path contains "\chrome.exe" or tgt.process.image.path contains "\msedge.exe" or tgt.process.image.path contains "\opera.exe" or tgt.process.image.path contains "\vivaldi.exe") and tgt.process.cmdline contains "--headless" and (tgt.process.cmdline contains "://run.mocky" or tgt.process.cmdline contains "://mockbin")))
 ```
 
