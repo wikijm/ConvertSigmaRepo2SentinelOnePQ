@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2024 01:22:33):
+// Translated content (automatically translated on 29-10-2024 01:21:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\powershell.exe" and (tgt.process.cmdline contains "http://127.0.0.1" and tgt.process.cmdline contains "%{(IRM $_)}" and tgt.process.cmdline contains ".SubString.ToString()[67,72,64]-Join" and tgt.process.cmdline contains "Import-Module")))
 ```
 
