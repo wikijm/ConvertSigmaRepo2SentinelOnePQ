@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2024 01:21:14):
+// Translated content (automatically translated on 30-10-2024 01:20:12):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\runonce.exe" or tgt.process.displayName="Run Once Wrapper") and (tgt.process.cmdline contains "/AlternateShellStartup" or tgt.process.cmdline contains "/r")))
 ```
 

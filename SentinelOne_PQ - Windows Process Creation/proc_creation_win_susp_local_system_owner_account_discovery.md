@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2024 01:21:14):
+// Translated content (automatically translated on 30-10-2024 01:20:12):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\cmd.exe" and (tgt.process.cmdline contains " /c" and tgt.process.cmdline contains "dir " and tgt.process.cmdline contains "\Users\")) and (not tgt.process.cmdline contains " rmdir ")) or (((tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\net1.exe") and tgt.process.cmdline contains "user") and (not (tgt.process.cmdline contains "/domain" or tgt.process.cmdline contains "/add" or tgt.process.cmdline contains "/delete" or tgt.process.cmdline contains "/active" or tgt.process.cmdline contains "/expires" or tgt.process.cmdline contains "/passwordreq" or tgt.process.cmdline contains "/scriptpath" or tgt.process.cmdline contains "/times" or tgt.process.cmdline contains "/workstations"))) or ((tgt.process.image.path contains "\whoami.exe" or tgt.process.image.path contains "\quser.exe" or tgt.process.image.path contains "\qwinsta.exe") or (tgt.process.image.path contains "\wmic.exe" and (tgt.process.cmdline contains "useraccount" and tgt.process.cmdline contains "get")) or (tgt.process.image.path contains "\cmdkey.exe" and tgt.process.cmdline contains " /l"))))
 ```
 

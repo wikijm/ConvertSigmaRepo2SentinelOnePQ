@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2024 01:21:14):
+// Translated content (automatically translated on 30-10-2024 01:20:12):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\wevtutil.exe" and (tgt.process.cmdline contains "clear-log " or tgt.process.cmdline contains " cl " or tgt.process.cmdline contains "set-log " or tgt.process.cmdline contains " sl " or tgt.process.cmdline contains "lfn:")) or ((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and (tgt.process.cmdline contains "Clear-EventLog " or tgt.process.cmdline contains "Remove-EventLog " or tgt.process.cmdline contains "Limit-EventLog " or tgt.process.cmdline contains "Clear-WinEvent ")) or ((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wmic.exe") and tgt.process.cmdline contains "ClearEventLog")) and (not ((src.process.image.path in ("C:\Windows\SysWOW64\msiexec.exe","C:\Windows\System32\msiexec.exe")) and tgt.process.cmdline contains " sl "))))
 ```
 
