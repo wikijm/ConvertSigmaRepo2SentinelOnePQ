@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2024 01:19:10):
+// Translated content (automatically translated on 31-10-2024 01:19:58):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "global.rel.tunnels.api.visualstudio.com" or url.address contains ".rel.tunnels.api.visualstudio.com" or url.address contains ".devtunnels.ms") or (event.dns.request contains "global.rel.tunnels.api.visualstudio.com" or event.dns.request contains ".rel.tunnels.api.visualstudio.com" or event.dns.request contains ".devtunnels.ms")))
 ```
 
