@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2024 01:20:55):
+// Translated content (automatically translated on 01-11-2024 01:25:33):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\replace.exe" and (tgt.process.cmdline contains "-a" or tgt.process.cmdline contains "/a" or tgt.process.cmdline contains "–a" or tgt.process.cmdline contains "—a" or tgt.process.cmdline contains "―a")))
 ```
 
