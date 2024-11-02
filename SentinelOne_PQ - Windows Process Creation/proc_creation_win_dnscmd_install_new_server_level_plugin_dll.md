@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2024 01:25:33):
+// Translated content (automatically translated on 02-11-2024 01:18:28):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\dnscmd.exe" and (tgt.process.cmdline contains "/config" and tgt.process.cmdline contains "/serverlevelplugindll")))
 ```
 

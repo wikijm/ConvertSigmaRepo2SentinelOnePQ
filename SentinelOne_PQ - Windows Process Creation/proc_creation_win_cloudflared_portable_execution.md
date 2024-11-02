@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2024 01:25:33):
+// Translated content (automatically translated on 02-11-2024 01:18:28):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\cloudflared.exe" and (not (tgt.process.image.path contains ":\Program Files (x86)\cloudflared\" or tgt.process.image.path contains ":\Program Files\cloudflared\"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.
 ```yaml
 title: Cloudflared Portable Execution
 id: fadb84f0-4e84-4f6d-a1ce-9ef2bffb6ccd
-status: experimental
+status: test
 description: |
     Detects the execution of the "cloudflared" binary from a non standard location.
 references:

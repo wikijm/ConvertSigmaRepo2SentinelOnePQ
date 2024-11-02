@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2024 01:25:33):
+// Translated content (automatically translated on 02-11-2024 01:18:28):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\Microsoft\Teams\Cookies" or tgt.process.cmdline contains "\Microsoft\Teams\Local Storage\leveldb") and (not tgt.process.image.path contains "\Microsoft\Teams\current\Teams.exe")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdli
 ```yaml
 title: Potentially Suspicious Command Targeting Teams Sensitive Files
 id: d2eb17db-1d39-41dc-b57f-301f6512fa75
-status: experimental
+status: test
 description: |
     Detects a commandline containing references to the Microsoft Teams database or cookies files from a process other than Teams.
     The database might contain authentication tokens and other sensitive information about the logged in accounts.

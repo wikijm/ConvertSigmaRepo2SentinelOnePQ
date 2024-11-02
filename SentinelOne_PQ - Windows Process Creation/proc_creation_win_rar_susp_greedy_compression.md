@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2024 01:25:33):
+// Translated content (automatically translated on 02-11-2024 01:18:28):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\rar.exe" or tgt.process.displayName="Command line RAR") or (tgt.process.cmdline contains ".exe a " or tgt.process.cmdline contains " a -m")) and ((tgt.process.cmdline contains " -hp" and tgt.process.cmdline contains " -r ") and (tgt.process.cmdline="* *:\\*.*" or tgt.process.cmdline="* *:\\\*.*" or tgt.process.cmdline="* *:\$Recycle.bin\*" or tgt.process.cmdline="* *:\PerfLogs\*" or tgt.process.cmdline="* *:\Temp*" or tgt.process.cmdline="* *:\Users\Public\*" or tgt.process.cmdline="* *:\Windows\*" or tgt.process.cmdline contains " %public%"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.imag
 ```yaml
 title: Suspicious Greedy Compression Using Rar.EXE
 id: afe52666-401e-4a02-b4ff-5d128990b8cb
-status: experimental
+status: test
 description: Detects RAR usage that creates an archive from a suspicious folder, either a system folder or one of the folders often used by attackers for staging purposes
 references:
     - https://decoded.avast.io/martinchlumecky/png-steganography

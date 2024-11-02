@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2024 01:25:33):
+// Translated content (automatically translated on 02-11-2024 01:18:28):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.cmdline contains ".exe" or src.process.cmdline contains ".exe\"") and tgt.process.image.path contains "\cmd.exe" and tgt.process.cmdline contains "/c echo \"") and (not ((src.process.image.path contains ":\Windows\System32\" or src.process.image.path contains ":\Windows\SysWOW64\") and src.process.image.path contains "\forfiles.exe" and (tgt.process.image.path contains ":\Windows\System32\" or tgt.process.image.path contains ":\Windows\SysWOW64\") and tgt.process.image.path contains "\cmd.exe"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (((src.process.cmdl
 ```yaml
 title: Forfiles.EXE Child Process Masquerading
 id: f53714ec-5077-420e-ad20-907ff9bb2958
-status: experimental
+status: test
 description: |
     Detects the execution of "forfiles" from a non-default location, in order to potentially spawn a custom "cmd.exe" from the current working directory.
 references:
