@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2024 01:18:28):
+// Translated content (automatically translated on 03-11-2024 01:24:51):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "localgroup " and tgt.process.cmdline contains " /add") or (tgt.process.cmdline contains "Add-LocalGroupMember " and tgt.process.cmdline contains " -Group ")) and (tgt.process.cmdline contains " administrators " or tgt.process.cmdline contains " administrateur")))
 ```
 
