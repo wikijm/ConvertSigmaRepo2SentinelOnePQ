@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2024 01:21:20):
+// Translated content (automatically translated on 05-11-2024 01:18:03):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\code.exe" and ((tgt.process.image.path contains "\calc.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\wscript.exe") or ((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\cmd.exe") and (tgt.process.cmdline contains "Invoke-Expressions" or tgt.process.cmdline contains "IEX" or tgt.process.cmdline contains "Invoke-Command" or tgt.process.cmdline contains "ICM" or tgt.process.cmdline contains "DownloadString" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "wscript" or tgt.process.cmdline contains "cscript")) or (tgt.process.image.path contains ":\Users\Public\" or tgt.process.image.path contains ":\Windows\Temp\" or tgt.process.image.path contains ":\Temp\"))))
 ```
 
