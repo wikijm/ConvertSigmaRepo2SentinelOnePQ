@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2024 01:18:03):
+// Translated content (automatically translated on 06-11-2024 01:17:49):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wusa.exe" and ((src.process.image.path contains ":\Perflogs\" or src.process.image.path contains ":\Users\Public\" or src.process.image.path contains ":\Windows\Temp\" or src.process.image.path contains "\Appdata\Local\Temp\" or src.process.image.path contains "\Temporary Internet") or ((src.process.image.path contains ":\Users\" and src.process.image.path contains "\Favorites\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Favourites\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Contacts\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Pictures\"))) and (not tgt.process.cmdline contains ".msu")))
 ```
 
