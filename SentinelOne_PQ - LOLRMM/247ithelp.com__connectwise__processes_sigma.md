@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-11-2024 01:16:51):
+// Translated content (automatically translated on 07-11-2024 01:17:12):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "Remote Workforce Client.exe")
 ```
 
