@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-11-2024 01:17:12):
+// Translated content (automatically translated on 08-11-2024 01:17:19):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "aeroadmin.exe" or src.process.image.path contains "AeroAdmin.exe"))
 ```
 
