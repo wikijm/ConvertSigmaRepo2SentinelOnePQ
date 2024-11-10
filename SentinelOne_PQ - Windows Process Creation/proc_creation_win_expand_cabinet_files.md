@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2024 01:16:24):
+// Translated content (automatically translated on 10-11-2024 01:22:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\expand.exe" and (tgt.process.cmdline contains "-F:" or tgt.process.cmdline contains "/F:" or tgt.process.cmdline contains "–F:" or tgt.process.cmdline contains "—F:" or tgt.process.cmdline contains "―F:")) and ((tgt.process.cmdline contains ":\Perflogs\" or tgt.process.cmdline contains ":\Users\Public\" or tgt.process.cmdline contains "\Temporary Internet" or tgt.process.cmdline contains ":\ProgramData" or tgt.process.cmdline contains "\AppData\Local\Temp" or tgt.process.cmdline contains "\AppData\Roaming\Temp" or tgt.process.cmdline contains ":\Windows\Temp") or ((tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favorites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favourites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Contacts\"))) and (not (src.process.image.path="C:\Program Files (x86)\Dell\UpdateService\ServiceShell.exe" and tgt.process.cmdline contains "C:\ProgramData\Dell\UpdateService\Temp\"))))
 ```
 
