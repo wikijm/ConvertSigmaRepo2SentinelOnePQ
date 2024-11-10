@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2024 01:15:22):
+// Translated content (automatically translated on 10-11-2024 01:21:50):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\StorageExplorer.exe")
 ```
 
