@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2024 01:21:50):
+// Translated content (automatically translated on 11-11-2024 01:18:42):
 event.category="Registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\SOFTWARE\Clients\Media\AnyDesk" or registry.keyPath contains "HKLM\SYSTEM\CurrentControlSet\Services\AnyDesk" or registry.keyPath contains "HKLM\SOFTWARE\Classes\.anydesk\shell\open\command" or registry.keyPath contains "HKLM\SOFTWARE\Classes\AnyDesk\shell\open\command" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\AnyDesk Printer\*" or registry.keyPath contains "HKLM\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk" or registry.keyPath contains "HKLM\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk" or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\AnyDesk"))
 ```
 
