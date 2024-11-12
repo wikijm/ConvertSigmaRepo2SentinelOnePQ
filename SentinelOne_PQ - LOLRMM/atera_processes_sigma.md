@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2024 01:18:42):
+// Translated content (automatically translated on 12-11-2024 01:16:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\AgentPackageNetworkDiscovery.exe" or src.process.image.path contains "\AgentPackageTaskScheduler.exe" or src.process.image.path contains "\AteraAgent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "ateraagent.exe" or src.process.image.path contains "syncrosetup.exe"))
 ```
 
