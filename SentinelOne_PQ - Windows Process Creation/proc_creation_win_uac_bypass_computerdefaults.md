@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2024 01:19:45):
+// Translated content (automatically translated on 12-11-2024 01:17:25):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.integrityLevel in ("High","System")) and tgt.process.image.path="C:\Windows\System32\ComputerDefaults.exe") and (not (src.process.image.path contains ":\Windows\System32" or src.process.image.path contains ":\Program Files"))))
 ```
 
