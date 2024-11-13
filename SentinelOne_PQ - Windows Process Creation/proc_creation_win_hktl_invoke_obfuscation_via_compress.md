@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-11-2024 01:17:25):
+// Translated content (automatically translated on 13-11-2024 01:18:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "new-object" and tgt.process.cmdline contains "text.encoding]::ascii") and (tgt.process.cmdline contains "system.io.compression.deflatestream" or tgt.process.cmdline contains "system.io.streamreader" or tgt.process.cmdline contains "readtoend(")))
 ```
 

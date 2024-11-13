@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-11-2024 01:17:25):
+// Translated content (automatically translated on 13-11-2024 01:18:58):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\cmd.exe" and (src.process.cmdline contains " -c " or src.process.cmdline contains " /c " or src.process.cmdline contains " –c " or src.process.cmdline contains " —c " or src.process.cmdline contains " ―c " or src.process.cmdline contains " -r " or src.process.cmdline contains " /r " or src.process.cmdline contains " –r " or src.process.cmdline contains " —r " or src.process.cmdline contains " ―r " or src.process.cmdline contains " -k " or src.process.cmdline contains " /k " or src.process.cmdline contains " –k " or src.process.cmdline contains " —k " or src.process.cmdline contains " ―k ") and tgt.process.image.path contains "\chcp.com" and (tgt.process.cmdline contains "chcp" or tgt.process.cmdline contains "chcp " or tgt.process.cmdline contains "chcp  ")))
 ```
 
