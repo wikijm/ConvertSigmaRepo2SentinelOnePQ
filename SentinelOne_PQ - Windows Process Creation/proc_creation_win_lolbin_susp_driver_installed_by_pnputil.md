@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-11-2024 01:21:54):
+// Translated content (automatically translated on 17-11-2024 01:27:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "-i" or tgt.process.cmdline contains "/install" or tgt.process.cmdline contains "-a" or tgt.process.cmdline contains "/add-driver" or tgt.process.cmdline contains ".inf") and tgt.process.image.path contains "\pnputil.exe")) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
