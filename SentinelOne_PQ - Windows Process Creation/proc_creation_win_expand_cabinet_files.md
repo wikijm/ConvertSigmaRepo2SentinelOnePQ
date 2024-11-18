@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 17-11-2024 01:27:38):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\expand.exe" and (tgt.process.cmdline contains "-F:" or tgt.process.cmdline contains "/F:" or tgt.process.cmdline contains "–F:" or tgt.process.cmdline contains "—F:" or tgt.process.cmdline contains "―F:")) and ((tgt.process.cmdline contains ":\Perflogs\" or tgt.process.cmdline contains ":\Users\Public\" or tgt.process.cmdline contains "\Temporary Internet" or tgt.process.cmdline contains ":\ProgramData" or tgt.process.cmdline contains "\AppData\Local\Temp" or tgt.process.cmdline contains "\AppData\Roaming\Temp" or tgt.process.cmdline contains ":\Windows\Temp") or ((tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favorites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favourites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Contacts\"))) and (not (src.process.image.path="C:\Program Files (x86)\Dell\UpdateService\ServiceShell.exe" and tgt.process.cmdline contains "C:\ProgramData\Dell\UpdateService\Temp\"))))
+// Translated content (automatically translated on 18-11-2024 01:25:07):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\expand.exe" and (tgt.process.cmdline contains "-F:" or tgt.process.cmdline contains "/F:" or tgt.process.cmdline contains "–F:" or tgt.process.cmdline contains "—F:" or tgt.process.cmdline contains "―F:")) and ((tgt.process.cmdline contains ":\Perflogs\" or tgt.process.cmdline contains ":\ProgramData" or tgt.process.cmdline contains ":\Users\Public\" or tgt.process.cmdline contains ":\Windows\Temp\" or tgt.process.cmdline contains "\Admin$\" or tgt.process.cmdline contains "\AppData\Local\Temp\" or tgt.process.cmdline contains "\AppData\Roaming\" or tgt.process.cmdline contains "\C$\" or tgt.process.cmdline contains "\Temporary Internet") or ((tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favorites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Favourites\") or (tgt.process.cmdline contains ":\Users\" and tgt.process.cmdline contains "\Contacts\"))) and (not (src.process.image.path="C:\Program Files (x86)\Dell\UpdateService\ServiceShell.exe" and tgt.process.cmdline contains "C:\ProgramData\Dell\UpdateService\Temp\"))))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://blog.malwarebytes.com/threat-intelligence/2021/08/new-variant-of-konni-malware-used-in-campaign-targetting-russia/
 author: Bhabesh Raj, X__Junior (Nextron Systems)
 date: 2021-07-30
-modified: 2024-03-05
+modified: 2024-11-13
 tags:
     - attack.defense-evasion
     - attack.t1218
@@ -29,12 +29,14 @@ detection:
     selection_folders_1:
         CommandLine|contains:
             - ':\Perflogs\'
-            - ':\Users\Public\'
-            - '\Temporary Internet'
             - ':\ProgramData'
-            - '\AppData\Local\Temp'
-            - '\AppData\Roaming\Temp'
-            - ':\Windows\Temp'
+            - ':\Users\Public\'
+            - ':\Windows\Temp\'
+            - '\Admin$\'
+            - '\AppData\Local\Temp\'
+            - '\AppData\Roaming\'
+            - '\C$\'
+            - '\Temporary Internet'
     selection_folders_2:
         - CommandLine|contains|all:
               - ':\Users\'
