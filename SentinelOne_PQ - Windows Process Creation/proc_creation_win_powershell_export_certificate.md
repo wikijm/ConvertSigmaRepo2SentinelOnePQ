@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2024 01:22:49):
+// Translated content (automatically translated on 22-11-2024 01:23:55):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Export-PfxCertificate " or tgt.process.cmdline contains "Export-Certificate "))
 ```
 
