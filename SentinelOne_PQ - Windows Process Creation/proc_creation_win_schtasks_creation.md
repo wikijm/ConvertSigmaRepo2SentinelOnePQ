@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2024 01:35:55):
+// Translated content (automatically translated on 25-11-2024 01:24:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\schtasks.exe" and tgt.process.cmdline contains " /create ") and (not (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI"))))
 ```
 

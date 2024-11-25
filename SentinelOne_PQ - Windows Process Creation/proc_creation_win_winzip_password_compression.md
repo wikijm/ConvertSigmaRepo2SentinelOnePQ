@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2024 01:35:55):
+// Translated content (automatically translated on 25-11-2024 01:24:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "winzip.exe" or tgt.process.cmdline contains "winzip64.exe") and tgt.process.cmdline contains "-s\"" and (tgt.process.cmdline contains " -min " or tgt.process.cmdline contains " -a ")))
 ```
 
