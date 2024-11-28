@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2024 01:25:31):
+// Translated content (automatically translated on 28-11-2024 01:25:01):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\ruby.exe" and (tgt.process.cmdline contains "-i " and tgt.process.cmdline contains "-u " and tgt.process.cmdline contains "-p ")))
 ```
 
