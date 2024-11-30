@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-11-2024 01:24:50):
+// Translated content (automatically translated on 30-11-2024 01:23:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\format.com" and tgt.process.cmdline contains "/fs:") and (not (tgt.process.cmdline contains "/fs:exFAT" or tgt.process.cmdline contains "/fs:FAT" or tgt.process.cmdline contains "/fs:NTFS" or tgt.process.cmdline contains "/fs:ReFS" or tgt.process.cmdline contains "/fs:UDF"))))
 ```
 
