@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","System")) and src.process.image.path contains "\AppData\Local\Temp\pkgmgr.exe" and tgt.process.cmdline="\"C:\Windows\system32\msconfig.exe\" -5"))
+// Translated content (automatically translated on 02-12-2024 01:27:48):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288")) and src.process.image.path contains "\AppData\Local\Temp\pkgmgr.exe" and tgt.process.cmdline="\"C:\Windows\system32\msconfig.exe\" -5"))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://github.com/hfiref0x/UACME
 author: Christian Burkard (Nextron Systems)
 date: 2021-08-30
-modified: 2022-10-09
+modified: 2024-12-01
 tags:
     - attack.defense-evasion
     - attack.privilege-escalation
@@ -27,6 +27,8 @@ detection:
         IntegrityLevel:
             - 'High'
             - 'System'
+            - 'S-1-16-16384' # System
+            - 'S-1-16-12288' # High
         ParentImage|endswith: '\AppData\Local\Temp\pkgmgr.exe'
         CommandLine: '"C:\Windows\system32\msconfig.exe" -5'
     condition: selection

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
+// Translated content (automatically translated on 02-12-2024 01:27:48):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " --buildcache " or tgt.process.cmdline contains " --bhdump " or tgt.process.cmdline contains " --certdump " or tgt.process.cmdline contains " --dnsdump ") and (tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " --cachefilename " or tgt.process.cmdline contains " -o " or tgt.process.cmdline contains " --outputdirectory")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdli
 ```yaml
 title: HackTool - SOAPHound Execution
 id: e92a4287-e072-4a40-9739-370c106bb750
-status: experimental
+status: test
 description: |
     Detects the execution of SOAPHound, a .NET tool for collecting Active Directory data, using specific command-line arguments that may indicate an attempt to extract sensitive AD information.
 references:

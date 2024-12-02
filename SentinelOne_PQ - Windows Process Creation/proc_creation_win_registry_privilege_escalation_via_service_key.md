@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.integrityLevel="Medium" and (tgt.process.cmdline contains "ControlSet" and tgt.process.cmdline contains "services") and (tgt.process.cmdline contains "\ImagePath" or tgt.process.cmdline contains "\FailureCommand" or tgt.process.cmdline contains "\ServiceDll")))
+// Translated content (automatically translated on 02-12-2024 01:27:48):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("Medium","S-1-16-8192")) and (tgt.process.cmdline contains "ControlSet" and tgt.process.cmdline contains "services") and (tgt.process.cmdline contains "\ImagePath" or tgt.process.cmdline contains "\FailureCommand" or tgt.process.cmdline contains "\ServiceDll")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://pentestlab.blog/2017/03/31/insecure-registry-permissions/
 author: Teymur Kheirkhabarov
 date: 2019-10-26
-modified: 2023-01-30
+modified: 2024-12-01
 tags:
     - attack.privilege-escalation
     - attack.t1574.011
@@ -24,7 +24,9 @@ logsource:
     category: process_creation
 detection:
     selection:
-        IntegrityLevel: 'Medium'
+        IntegrityLevel:
+            - 'Medium'
+            - 'S-1-16-8192'
         CommandLine|contains|all:
             - 'ControlSet'
             - 'services'

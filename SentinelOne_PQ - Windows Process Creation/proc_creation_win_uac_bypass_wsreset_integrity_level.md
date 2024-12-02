@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wsreset.exe" and (tgt.process.integrityLevel in ("High","System"))))
+// Translated content (automatically translated on 02-12-2024 01:27:48):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wsreset.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
 
@@ -16,7 +16,7 @@ references:
     - https://medium.com/falconforce/falconfriday-detecting-uac-bypasses-0xff16-86c2a9107abf
 author: Christian Burkard (Nextron Systems)
 date: 2021-08-23
-modified: 2022-10-09
+modified: 2024-12-01
 tags:
     - attack.defense-evasion
     - attack.privilege-escalation
@@ -30,6 +30,8 @@ detection:
         IntegrityLevel:
             - 'High'
             - 'System'
+            - 'S-1-16-16384' # System
+            - 'S-1-16-12288' # High
     condition: selection
 falsepositives:
     - Unknown

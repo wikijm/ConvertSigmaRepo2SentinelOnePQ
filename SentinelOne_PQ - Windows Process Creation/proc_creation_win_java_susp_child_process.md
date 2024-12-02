@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
+// Translated content (automatically translated on 02-12-2024 01:27:48):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\java.exe" and (tgt.process.image.path contains "\AppVLP.exe" or tgt.process.image.path contains "\bitsadmin.exe" or tgt.process.image.path contains "\certutil.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\curl.exe" or tgt.process.image.path contains "\forfiles.exe" or tgt.process.image.path contains "\hh.exe" or tgt.process.image.path contains "\mftrace.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\net1.exe" or tgt.process.image.path contains "\query.exe" or tgt.process.image.path contains "\reg.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\scrcons.exe" or tgt.process.image.path contains "\scriptrunner.exe" or tgt.process.image.path contains "\sh.exe" or tgt.process.image.path contains "\systeminfo.exe" or tgt.process.image.path contains "\whoami.exe" or tgt.process.image.path contains "\wmic.exe" or tgt.process.image.path contains "\wscript.exe")))
 ```
 
@@ -11,7 +11,7 @@ id: 0d34ed8b-1c12-4ff2-828c-16fc860b766d
 related:
     - id: dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0
       type: similar
-status: experimental
+status: test
 description: Detects suspicious processes spawned from a Java host process which could indicate a sign of exploitation (e.g. log4j)
 references:
     - https://web.archive.org/web/20231230220738/https://www.lunasec.io/docs/blog/log4j-zero-day/

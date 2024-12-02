@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.integrityLevel="High" and (tgt.process.cmdline contains "conhost.exe" and tgt.process.cmdline contains "0xffffffff" and tgt.process.cmdline contains "-ForceV1")))
+// Translated content (automatically translated on 02-12-2024 01:27:48):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","S-1-16-12288")) and (tgt.process.cmdline contains "conhost.exe" and tgt.process.cmdline contains "0xffffffff" and tgt.process.cmdline contains "-ForceV1")))
 ```
 
 
@@ -16,6 +16,7 @@ references:
     - https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control
 author: frack113
 date: 2022-12-09
+modified: 2024-12-01
 tags:
     - attack.defense-evasion
     - attack.t1202
@@ -24,7 +25,9 @@ logsource:
     category: process_creation
 detection:
     selection:
-        IntegrityLevel: 'High'
+        IntegrityLevel:
+            - 'High'
+            - 'S-1-16-12288'
         CommandLine|contains|all:
             - 'conhost.exe'
             - '0xffffffff'

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
+// Translated content (automatically translated on 02-12-2024 01:27:48):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\svchost.exe" and tgt.process.image.path contains "\mmc.exe" and tgt.process.cmdline contains "-Embedding"))
 ```
 

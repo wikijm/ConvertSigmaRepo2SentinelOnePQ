@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-12-2024 01:45:27):
+// Translated content (automatically translated on 02-12-2024 01:27:48):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\wscript.exe" or tgt.process.image.path contains "\cscript.exe") and (tgt.process.cmdline contains ":\Temp\" or tgt.process.cmdline contains ":\Tmp\" or tgt.process.cmdline contains ":\Users\Public\" or tgt.process.cmdline contains ":\Windows\Temp\" or tgt.process.cmdline contains "\AppData\Local\Temp\") and (tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".jse" or tgt.process.cmdline contains ".vba" or tgt.process.cmdline contains ".vbe" or tgt.process.cmdline contains ".vbs" or tgt.process.cmdline contains ".wsf")))
 ```
 
@@ -11,7 +11,7 @@ id: cea72823-df4d-4567-950c-0b579eaf0846
 related:
     - id: 1e33157c-53b1-41ad-bbcc-780b80b58288
       type: similar
-status: experimental
+status: test
 description: Detects wscript/cscript executions of scripts located in user directories
 references:
     - https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
