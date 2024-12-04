@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-12-2024 01:26:30):
+// Translated content (automatically translated on 04-12-2024 01:26:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.displayName="SQLite" or (tgt.process.image.path contains "\sqlite.exe" or tgt.process.image.path contains "\sqlite3.exe")) and (tgt.process.cmdline contains "cookies.sqlite" or tgt.process.cmdline contains "places.sqlite")))
 ```
 
