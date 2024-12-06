@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-12-2024 01:26:45):
+// Translated content (automatically translated on 06-12-2024 01:25:42):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\link.exe" and tgt.process.cmdline contains "LINK /") and (not ((src.process.image.path contains "C:\Program Files\Microsoft Visual Studio\" or src.process.image.path contains "C:\Program Files (x86)\Microsoft Visual Studio\") and (src.process.image.path contains "\VC\bin\" or src.process.image.path contains "\VC\Tools\")))))
 ```
 
