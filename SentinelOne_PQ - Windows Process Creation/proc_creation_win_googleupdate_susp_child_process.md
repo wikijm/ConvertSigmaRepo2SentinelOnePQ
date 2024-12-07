@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2024 01:25:42):
+// Translated content (automatically translated on 07-12-2024 01:25:20):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\GoogleUpdate.exe" and (not ((tgt.process.image.path contains "\Google" or (tgt.process.image.path contains "\setup.exe" or tgt.process.image.path contains "chrome_updater.exe" or tgt.process.image.path contains "chrome_installer.exe")) or not (tgt.process.image.path matches "\.*")))))
 ```
 
