@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2024 01:25:20):
+// Translated content (automatically translated on 08-12-2024 01:39:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\takeown.exe" and (tgt.process.cmdline contains "/f " and tgt.process.cmdline contains "/r"))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
