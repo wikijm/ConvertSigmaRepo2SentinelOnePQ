@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-12-2024 01:39:51):
+// Translated content (automatically translated on 09-12-2024 01:36:53):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains ".SettingContent-ms" and (not tgt.process.cmdline contains "immersivecontrolpanel"))) | columns ParentProcess,tgt.process.cmdline,src.process.cmdline
 ```
 
