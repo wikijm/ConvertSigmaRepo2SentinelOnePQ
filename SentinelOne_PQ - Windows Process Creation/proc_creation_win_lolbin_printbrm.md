@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-12-2024 01:26:38):
+// Translated content (automatically translated on 12-12-2024 01:26:09):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\PrintBrm.exe" and (tgt.process.cmdline contains " -f" and tgt.process.cmdline contains ".zip")))
 ```
 

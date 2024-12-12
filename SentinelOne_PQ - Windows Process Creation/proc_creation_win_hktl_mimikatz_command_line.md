@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-12-2024 01:26:38):
+// Translated content (automatically translated on 12-12-2024 01:26:09):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "DumpCreds" or tgt.process.cmdline contains "mimikatz") or (tgt.process.cmdline contains "::aadcookie" or tgt.process.cmdline contains "::detours" or tgt.process.cmdline contains "::memssp" or tgt.process.cmdline contains "::mflt" or tgt.process.cmdline contains "::ncroutemon" or tgt.process.cmdline contains "::ngcsign" or tgt.process.cmdline contains "::printnightmare" or tgt.process.cmdline contains "::skeleton" or tgt.process.cmdline contains "::preshutdown" or tgt.process.cmdline contains "::mstsc" or tgt.process.cmdline contains "::multirdp") or (tgt.process.cmdline contains "rpc::" or tgt.process.cmdline contains "token::" or tgt.process.cmdline contains "crypto::" or tgt.process.cmdline contains "dpapi::" or tgt.process.cmdline contains "sekurlsa::" or tgt.process.cmdline contains "kerberos::" or tgt.process.cmdline contains "lsadump::" or tgt.process.cmdline contains "privilege::" or tgt.process.cmdline contains "process::" or tgt.process.cmdline contains "vault::")))
 ```
 
