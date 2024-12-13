@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-12-2024 01:26:09):
+// Translated content (automatically translated on 13-12-2024 01:27:25):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.displayName="SQLite" or (tgt.process.image.path contains "\sqlite.exe" or tgt.process.image.path contains "\sqlite3.exe")) and (tgt.process.cmdline contains "\User Data\" or tgt.process.cmdline contains "\Opera Software\" or tgt.process.cmdline contains "\ChromiumViewer\") and (tgt.process.cmdline contains "Login Data" or tgt.process.cmdline contains "Cookies" or tgt.process.cmdline contains "Web Data" or tgt.process.cmdline contains "History" or tgt.process.cmdline contains "Bookmarks")))
 ```
 
