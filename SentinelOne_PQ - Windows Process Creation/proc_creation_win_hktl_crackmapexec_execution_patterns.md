@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-12-2024 01:26:22):
+// Translated content (automatically translated on 18-12-2024 01:23:19):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*cmd.exe /Q /c * 1> \\*\*\* 2>&1*" or tgt.process.cmdline="*cmd.exe /C * > \\*\*\* 2>&1*" or tgt.process.cmdline="*cmd.exe /C * > *\Temp\* 2>&1*" or tgt.process.cmdline contains "powershell.exe -exec bypass -noni -nop -w 1 -C \"" or tgt.process.cmdline contains "powershell.exe -noni -nop -w 1 -enc "))
 ```
 
