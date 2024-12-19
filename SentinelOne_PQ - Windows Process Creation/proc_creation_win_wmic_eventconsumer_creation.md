@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-12-2024 01:23:19):
+// Translated content (automatically translated on 19-12-2024 01:24:04):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ActiveScriptEventConsumer" and tgt.process.cmdline contains " CREATE ")) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
