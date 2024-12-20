@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-12-2024 01:24:04):
+// Translated content (automatically translated on 20-12-2024 01:20:05):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\cmd.exe" or src.process.image.path contains "\cscript.exe" or src.process.image.path contains "\mshta.exe" or src.process.image.path contains "\powershell_ise.exe" or src.process.image.path contains "\powershell.exe" or src.process.image.path contains "\pwsh.exe" or src.process.image.path contains "\wscript.exe") and tgt.process.image.path contains "\regsvr32.exe") and (not (src.process.image.path="C:\Windows\System32\cmd.exe" and tgt.process.cmdline contains " /s C:\Windows\System32\RpcProxy\RpcProxy.dll"))))
 ```
 
