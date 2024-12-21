@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2024 01:20:05):
+// Translated content (automatically translated on 21-12-2024 01:18:26):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\VBoxDrvInst.exe" and (tgt.process.cmdline contains "driver" and tgt.process.cmdline contains "executeinf"))) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
