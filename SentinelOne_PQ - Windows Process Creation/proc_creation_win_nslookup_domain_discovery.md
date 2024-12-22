@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-12-2024 01:18:26):
+// Translated content (automatically translated on 22-12-2024 01:25:40):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "nslookup" and tgt.process.cmdline contains "_ldap._tcp.dc._msdcs."))
 ```
 
