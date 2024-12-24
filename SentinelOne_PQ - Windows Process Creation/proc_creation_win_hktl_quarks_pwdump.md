@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-12-2024 01:21:03):
+// Translated content (automatically translated on 24-12-2024 01:19:42):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\QuarksPwDump.exe" or (tgt.process.cmdline in (" -dhl"," --dump-hash-local"," -dhdc"," --dump-hash-domain-cached"," --dump-bitlocker"," -dhd "," --dump-hash-domain ","--ntds-file"))))
 ```
 
