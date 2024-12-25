@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-12-2024 01:19:42):
+// Translated content (automatically translated on 25-12-2024 01:18:33):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\WerFault.exe" and tgt.process.cmdline contains "WerFault.exe") or (tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or (tgt.process.image.path contains "\regsvcs.exe" and tgt.process.cmdline contains "regsvcs.exe") or (tgt.process.image.path contains "\regasm.exe" and tgt.process.cmdline contains "regasm.exe") or (tgt.process.image.path contains "\regsvr32.exe" and tgt.process.cmdline contains "regsvr32.exe")) and (not ((src.process.image.path contains "\AppData\Local\Microsoft\EdgeUpdate\Install\{" and tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or ((src.process.image.path contains "\AppData\Local\BraveSoftware\Brave-Browser\Application\" or src.process.image.path contains "\AppData\Local\Google\Chrome\Application\") and src.process.image.path contains "\Installer\setup.exe" and src.process.cmdline contains "--uninstall " and tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe")))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-12-2024 01:19:42):
+// Translated content (automatically translated on 25-12-2024 01:18:33):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="C:\WINDOWS\system32\wbem\scrcons.exe" and src.process.image.path="C:\Windows\System32\svchost.exe"))
 ```
 
