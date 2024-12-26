@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-12-2024 01:18:33):
+// Translated content (automatically translated on 26-12-2024 01:19:01):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "svchost.exe" and tgt.process.image.path contains "\svchost.exe") and (not ((src.process.image.path contains "\rpcnet.exe" or src.process.image.path contains "\rpcnetp.exe") or not (tgt.process.cmdline matches "\.*"))))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
