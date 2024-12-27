@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-12-2024 01:19:01):
+// Translated content (automatically translated on 27-12-2024 01:19:24):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\diskshadow.exe" and (tgt.process.image.path contains "\certutil.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\wscript.exe")))
 ```
 
