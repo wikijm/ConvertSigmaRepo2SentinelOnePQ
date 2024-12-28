@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2024 01:19:24):
+// Translated content (automatically translated on 28-12-2024 01:17:59):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\rar.exe" or tgt.process.image.path contains "\winrar.exe") or tgt.process.displayName="Command line RAR") and (tgt.process.cmdline contains ".dmp" or tgt.process.cmdline contains ".dump" or tgt.process.cmdline contains ".hdmp")))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2024 01:19:24):
+// Translated content (automatically translated on 28-12-2024 01:17:59):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\cmstp.exe") | columns tgt.process.cmdline,src.process.cmdline,Details
 ```
 

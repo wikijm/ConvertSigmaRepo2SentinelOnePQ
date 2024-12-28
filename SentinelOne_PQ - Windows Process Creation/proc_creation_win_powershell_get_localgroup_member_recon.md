@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2024 01:19:24):
+// Translated content (automatically translated on 28-12-2024 01:17:59):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Get-LocalGroupMember " and (tgt.process.cmdline contains "domain admins" or tgt.process.cmdline contains " administrator" or tgt.process.cmdline contains " administrateur" or tgt.process.cmdline contains "enterprise admins" or tgt.process.cmdline contains "Exchange Trusted Subsystem" or tgt.process.cmdline contains "Remote Desktop Users" or tgt.process.cmdline contains "Utilisateurs du Bureau à distance" or tgt.process.cmdline contains "Usuarios de escritorio remoto"))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
