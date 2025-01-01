@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-12-2024 01:19:07):
+// Translated content (automatically translated on 01-01-2025 01:25:47):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\wsmprovhost.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\sh.exe" or tgt.process.image.path contains "\bash.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wsl.exe" or tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\certutil.exe" or tgt.process.image.path contains "\whoami.exe" or tgt.process.image.path contains "\bitsadmin.exe")))
 ```
 

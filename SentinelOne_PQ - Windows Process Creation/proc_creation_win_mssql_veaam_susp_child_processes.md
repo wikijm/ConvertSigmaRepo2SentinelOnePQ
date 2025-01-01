@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-12-2024 01:19:07):
+// Translated content (automatically translated on 01-01-2025 01:25:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\sqlservr.exe" and src.process.cmdline contains "VEEAMSQL") and (((tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wsl.exe" or tgt.process.image.path contains "\wt.exe") and (tgt.process.cmdline contains "-ex " or tgt.process.cmdline contains "bypass" or tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "DownloadString" or tgt.process.cmdline contains "http://" or tgt.process.cmdline contains "https://" or tgt.process.cmdline contains "mshta" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "wscript" or tgt.process.cmdline contains "copy ")) or (tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\net1.exe" or tgt.process.image.path contains "\netstat.exe" or tgt.process.image.path contains "\nltest.exe" or tgt.process.image.path contains "\ping.exe" or tgt.process.image.path contains "\tasklist.exe" or tgt.process.image.path contains "\whoami.exe"))))
 ```
 
