@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-01-2025 01:25:47):
+// Translated content (automatically translated on 02-01-2025 01:18:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\reg.exe" and (tgt.process.cmdline contains " query " and tgt.process.cmdline contains "/t " and tgt.process.cmdline contains "REG_SZ" and tgt.process.cmdline contains "/s")) and ((tgt.process.cmdline contains "/f " and tgt.process.cmdline contains "HKLM") or (tgt.process.cmdline contains "/f " and tgt.process.cmdline contains "HKCU") or tgt.process.cmdline contains "HKCU\Software\SimonTatham\PuTTY\Sessions")))
 ```
 
