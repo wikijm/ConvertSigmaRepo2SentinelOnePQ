@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-01-2025 01:18:56):
+// Translated content (automatically translated on 03-01-2025 01:19:47):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\netscan.exe" or tgt.process.displayName="Network Scanner" or tgt.process.displayName="Application for scanning networks"))
 ```
 
