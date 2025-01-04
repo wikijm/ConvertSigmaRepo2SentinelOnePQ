@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2025 01:19:47):
+// Translated content (automatically translated on 04-01-2025 01:18:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[System.Net.WebRequest]::create" or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "Invoke-RestMethod" or tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Net.WebClient" or tgt.process.cmdline contains "Resume-BitsTransfer" or tgt.process.cmdline contains "Start-BitsTransfer" or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "WinHttp.WinHttpRequest"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2025 01:19:47):
+// Translated content (automatically translated on 04-01-2025 01:18:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\cmd.exe" and src.process.cmdline contains ".bat") and ((tgt.process.image.path contains "\xcopy.exe" and (tgt.process.cmdline contains "powershell.exe" and tgt.process.cmdline contains ".bat.exe")) or (tgt.process.image.path contains "\xcopy.exe" and (tgt.process.cmdline contains "pwsh.exe" and tgt.process.cmdline contains ".bat.exe")) or (tgt.process.image.path contains "\attrib.exe" and (tgt.process.cmdline contains "+s" and tgt.process.cmdline contains "+h" and tgt.process.cmdline contains ".bat.exe")))))
 ```
 
