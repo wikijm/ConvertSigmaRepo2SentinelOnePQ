@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-01-2025 01:18:14):
+// Translated content (automatically translated on 05-01-2025 01:25:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\reg.exe" and (tgt.process.cmdline contains "HKEY_CURRENT_USER\Control Panel\Desktop" or tgt.process.cmdline contains "HKCU\Control Panel\Desktop")) and ((tgt.process.cmdline contains "/v ScreenSaveActive" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d 1" and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v ScreenSaveTimeout" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v ScreenSaverIsSecure" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d 0" and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v SCRNSAVE.EXE" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains ".scr" and tgt.process.cmdline contains "/f"))))
 ```
 
