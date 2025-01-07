@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-01-2025 01:23:04):
+// Translated content (automatically translated on 07-01-2025 01:20:25):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\cmd.exe" and (src.process.cmdline contains " -c " or src.process.cmdline contains " /c " or src.process.cmdline contains " –c " or src.process.cmdline contains " —c " or src.process.cmdline contains " ―c " or src.process.cmdline contains " -r " or src.process.cmdline contains " /r " or src.process.cmdline contains " –r " or src.process.cmdline contains " —r " or src.process.cmdline contains " ―r " or src.process.cmdline contains " -k " or src.process.cmdline contains " /k " or src.process.cmdline contains " –k " or src.process.cmdline contains " —k " or src.process.cmdline contains " ―k ") and tgt.process.image.path contains "\chcp.com" and (tgt.process.cmdline contains "chcp" or tgt.process.cmdline contains "chcp " or tgt.process.cmdline contains "chcp  ")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.
 ```yaml
 title: Console CodePage Lookup Via CHCP
 id: 7090adee-82e2-4269-bd59-80691e7c6338
-status: experimental
+status: test
 description: Detects use of chcp to look up the system locale value as part of host discovery
 references:
     - https://thedfirreport.com/2022/04/04/stolen-images-campaign-ends-in-conti-ransomware/

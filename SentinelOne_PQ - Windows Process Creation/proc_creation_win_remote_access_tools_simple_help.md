@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-01-2025 01:23:04):
+// Translated content (automatically translated on 07-01-2025 01:20:25):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\JWrapper-Remote Access\" or tgt.process.image.path contains "\JWrapper-Remote Support\") and tgt.process.image.path contains "\SimpleService.exe"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image
 ```yaml
 title: Remote Access Tool - Simple Help Execution
 id: 95e60a2b-4705-444b-b7da-ba0ea81a3ee2
-status: experimental
+status: test
 description: |
     An adversary may use legitimate desktop support and remote access software, such as Team Viewer, Go2Assist, LogMein, AmmyyAdmin, etc, to establish an interactive command and control channel to target systems within networks.
     These services are commonly used as legitimate technical support software, and may be allowed by application control within a target environment.

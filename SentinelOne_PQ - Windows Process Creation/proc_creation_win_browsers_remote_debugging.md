@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-01-2025 01:23:04):
+// Translated content (automatically translated on 07-01-2025 01:20:25):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " --remote-debugging-" or (tgt.process.image.path contains "\firefox.exe" and tgt.process.cmdline contains " -start-debugger-server")))
 ```
 
