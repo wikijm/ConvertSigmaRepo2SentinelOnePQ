@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-01-2025 01:20:25):
+// Translated content (automatically translated on 08-01-2025 01:19:53):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\System\CurrentControlSet\Control" and tgt.process.cmdline contains "Write Protection" and tgt.process.cmdline contains "0" and tgt.process.cmdline contains "storage"))
 ```
 

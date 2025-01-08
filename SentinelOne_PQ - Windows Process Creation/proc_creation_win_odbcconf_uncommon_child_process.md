@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-01-2025 01:20:25):
+// Translated content (automatically translated on 08-01-2025 01:19:53):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\odbcconf.exe")
 ```
 
