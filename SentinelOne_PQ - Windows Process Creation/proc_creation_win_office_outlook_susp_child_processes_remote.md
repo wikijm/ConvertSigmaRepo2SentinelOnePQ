@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-01-2025 01:26:51):
+// Translated content (automatically translated on 13-01-2025 01:23:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\outlook.exe" and tgt.process.image.path contains "\\"))
 ```
 
