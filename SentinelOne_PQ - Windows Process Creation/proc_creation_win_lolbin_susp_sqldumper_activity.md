@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-01-2025 01:23:40):
+// Translated content (automatically translated on 14-01-2025 01:16:27):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\sqldumper.exe" and (tgt.process.cmdline contains "0x0110" or tgt.process.cmdline contains "0x01100:40")))
 ```
 

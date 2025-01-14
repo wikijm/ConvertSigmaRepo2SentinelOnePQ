@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-01-2025 01:23:40):
+// Translated content (automatically translated on 14-01-2025 01:16:27):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\msra.exe" and src.process.cmdline contains "msra.exe" and (tgt.process.image.path contains "\arp.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\netstat.exe" or tgt.process.image.path contains "\nslookup.exe" or tgt.process.image.path contains "\route.exe" or tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\whoami.exe")))
 ```
 
