@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-01-2025 01:18:11):
+// Translated content (automatically translated on 16-01-2025 01:17:26):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\curl.exe" or tgt.process.image.path contains "\wget.exe") or (tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "Start-BitsTransfer" or tgt.process.cmdline contains ".DownloadFile(" or tgt.process.cmdline contains ".DownloadString(")) and (tgt.process.cmdline contains "https://attachment.outlook.live.net/owa/" or tgt.process.cmdline contains "https://onenoteonlinesync.onenote.com/onenoteonlinesync/")))
 ```
 
