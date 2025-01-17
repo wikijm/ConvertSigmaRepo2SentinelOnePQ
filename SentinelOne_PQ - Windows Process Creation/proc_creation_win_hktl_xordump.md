@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-01-2025 01:17:26):
+// Translated content (automatically translated on 17-01-2025 01:17:05):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\xordump.exe" or (tgt.process.cmdline contains " -process lsass.exe " or tgt.process.cmdline contains " -m comsvcs " or tgt.process.cmdline contains " -m dbghelp " or tgt.process.cmdline contains " -m dbgcore ")))
 ```
 
