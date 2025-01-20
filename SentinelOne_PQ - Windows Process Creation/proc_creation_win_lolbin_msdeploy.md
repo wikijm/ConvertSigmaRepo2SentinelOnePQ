@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-01-2025 01:23:06):
+// Translated content (automatically translated on 20-01-2025 01:18:48):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "verb:sync" and tgt.process.cmdline contains "-source:RunCommand" and tgt.process.cmdline contains "-dest:runCommand") and tgt.process.image.path contains "\msdeploy.exe")) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
