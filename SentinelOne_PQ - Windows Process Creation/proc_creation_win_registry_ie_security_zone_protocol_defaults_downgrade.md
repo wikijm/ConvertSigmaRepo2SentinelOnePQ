@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-01-2025 01:18:48):
+// Translated content (automatically translated on 21-01-2025 01:17:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProtocolDefaults" and tgt.process.cmdline contains "http" and tgt.process.cmdline contains " 0"))
 ```
 
