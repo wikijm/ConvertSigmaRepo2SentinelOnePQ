@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-01-2025 01:19:11):
+// Translated content (automatically translated on 23-01-2025 01:17:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\stordiag.exe" and (tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\systeminfo.exe" or tgt.process.image.path contains "\fltmc.exe")) and (not (src.process.image.path contains "c:\windows\system32\" or src.process.image.path contains "c:\windows\syswow64\"))))
 ```
 
