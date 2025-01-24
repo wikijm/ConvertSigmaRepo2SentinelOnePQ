@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-01-2025 01:17:36):
+// Translated content (automatically translated on 24-01-2025 01:17:53):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[Type]::GetTypeFromCLSID(" and (tgt.process.cmdline contains "0002DF01-0000-0000-C000-000000000046" or tgt.process.cmdline contains "F6D90F16-9C73-11D3-B32E-00C04F990BB4" or tgt.process.cmdline contains "F5078F35-C551-11D3-89B9-0000F81FE221" or tgt.process.cmdline contains "88d96a0a-f192-11d4-a65f-0040963251e5" or tgt.process.cmdline contains "AFBA6B42-5692-48EA-8141-DC517DCF0EF1" or tgt.process.cmdline contains "AFB40FFD-B609-40A3-9828-F88BBE11E4E3" or tgt.process.cmdline contains "88d96a0b-f192-11d4-a65f-0040963251e5" or tgt.process.cmdline contains "2087c2f4-2cef-4953-a8ab-66779b670495" or tgt.process.cmdline contains "000209FF-0000-0000-C000-000000000046" or tgt.process.cmdline contains "00024500-0000-0000-C000-000000000046")))
 ```
 
