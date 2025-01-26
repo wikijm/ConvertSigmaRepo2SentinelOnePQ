@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-01-2025 01:14:07):
+// Translated content (automatically translated on 26-01-2025 01:20:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "-m 1M" or tgt.process.cmdline contains "-m 2M" or tgt.process.cmdline contains "-m 3M") and (tgt.process.cmdline contains "restrict=off" and tgt.process.cmdline contains "-netdev " and tgt.process.cmdline contains "connect=" and tgt.process.cmdline contains "-nographic")) and (not (tgt.process.cmdline contains " -cdrom " or tgt.process.cmdline contains " type=virt " or tgt.process.cmdline contains " -blockdev "))))
 ```
 
