@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2025 01:19:00):
+// Translated content (automatically translated on 28-01-2025 01:17:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1.exe" or tgt.process.cmdline contains "~1.bat" or tgt.process.cmdline contains "~1.msi" or tgt.process.cmdline contains "~1.vbe" or tgt.process.cmdline contains "~1.vbs" or tgt.process.cmdline contains "~1.dll" or tgt.process.cmdline contains "~1.ps1" or tgt.process.cmdline contains "~1.js" or tgt.process.cmdline contains "~1.hta" or tgt.process.cmdline contains "~2.exe" or tgt.process.cmdline contains "~2.bat" or tgt.process.cmdline contains "~2.msi" or tgt.process.cmdline contains "~2.vbe" or tgt.process.cmdline contains "~2.vbs" or tgt.process.cmdline contains "~2.dll" or tgt.process.cmdline contains "~2.ps1" or tgt.process.cmdline contains "~2.js" or tgt.process.cmdline contains "~2.hta") and (not ((src.process.image.path contains "\WebEx\WebexHost.exe" or src.process.image.path contains "\thor\thor64.exe") or tgt.process.cmdline contains "C:\xampp\vcredist\VCREDI~1.EXE"))))
 ```
 
