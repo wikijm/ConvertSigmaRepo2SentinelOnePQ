@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-01-2025 01:17:40):
+// Translated content (automatically translated on 29-01-2025 01:17:27):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="C:\Windows\System32\OpenSSH\sshd.exe" or (tgt.process.image.path contains "\ssh.exe" and (tgt.process.cmdline contains "ProxyCommand=" or (tgt.process.cmdline contains "PermitLocalCommand" and tgt.process.cmdline contains "LocalCommand")))))
 ```
 
