@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-01-2025 01:17:27):
+// Translated content (automatically translated on 30-01-2025 01:16:41):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline in ("rundll32.exe","rundll32"))) | columns ComputerName,SubjectUserName,tgt.process.cmdline,tgt.process.image.path,src.process.image.path
 ```
 
