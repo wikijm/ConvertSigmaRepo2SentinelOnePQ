@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-01-2025 01:16:41):
+// Translated content (automatically translated on 31-01-2025 01:18:01):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -n " or tgt.process.cmdline contains " /n " or tgt.process.cmdline contains " –n " or tgt.process.cmdline contains " —n " or tgt.process.cmdline contains " ―n ") and tgt.process.cmdline contains "Nul" and (tgt.process.cmdline contains " -f " or tgt.process.cmdline contains " /f " or tgt.process.cmdline contains " –f " or tgt.process.cmdline contains " —f " or tgt.process.cmdline contains " ―f " or tgt.process.cmdline contains " -q " or tgt.process.cmdline contains " /q " or tgt.process.cmdline contains " –q " or tgt.process.cmdline contains " —q " or tgt.process.cmdline contains " ―q ") and (tgt.process.cmdline contains "ping" and tgt.process.cmdline contains "del ")))
 ```
 
