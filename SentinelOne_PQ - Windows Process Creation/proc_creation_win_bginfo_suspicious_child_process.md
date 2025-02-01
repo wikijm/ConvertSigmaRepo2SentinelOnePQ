@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2025 01:18:01):
+// Translated content (automatically translated on 01-02-2025 01:22:04):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\bginfo.exe" or src.process.image.path contains "\bginfo64.exe") and ((tgt.process.image.path contains "\calc.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\notepad.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wscript.exe") or (tgt.process.image.path contains "\AppData\Local\" or tgt.process.image.path contains "\AppData\Roaming\" or tgt.process.image.path contains ":\Users\Public\" or tgt.process.image.path contains ":\Temp\" or tgt.process.image.path contains ":\Windows\Temp\" or tgt.process.image.path contains ":\PerfLogs\"))))
 ```
 
