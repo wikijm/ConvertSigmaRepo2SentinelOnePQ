@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-02-2025 01:22:04):
+// Translated content (automatically translated on 02-02-2025 01:21:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains ".DownloadString(" or tgt.process.cmdline contains ".DownloadFile(" or tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "iwr "))
 ```
 
