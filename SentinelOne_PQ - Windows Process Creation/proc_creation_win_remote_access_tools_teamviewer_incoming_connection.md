@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-02-2025 01:18:52):
+// Translated content (automatically translated on 04-02-2025 01:18:00):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="TeamViewer_Desktop.exe" and src.process.image.path="TeamViewer_Service.exe" and tgt.process.cmdline contains "TeamViewer_Desktop.exe --IPCport 5939 --Module 1"))
 ```
 
@@ -13,7 +13,7 @@ related:
       type: similar
     - id: f459ccb4-9805-41ea-b5b2-55e279e2424a
       type: similar
-status: experimental
+status: test
 description: |
     Detects the command line executed when TeamViewer starts a session started by a remote host.
     Once a connection has been started, an investigator can verify the connection details by viewing the "incoming_connections.txt" log file in the TeamViewer folder.
