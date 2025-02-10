@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-02-2025 01:22:49):
+// Translated content (automatically translated on 10-02-2025 01:20:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\HarddiskVolumeShadowCopy" and tgt.process.cmdline contains "System32\config\sam") and (tgt.process.cmdline contains "Copy-Item" or tgt.process.cmdline contains "cp $_." or tgt.process.cmdline contains "cpi $_." or tgt.process.cmdline contains "copy $_." or tgt.process.cmdline contains ".File]::Copy(")))
 ```
 
