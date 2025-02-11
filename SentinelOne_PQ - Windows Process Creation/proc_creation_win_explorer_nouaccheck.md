@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2025 01:20:11):
+// Translated content (automatically translated on 11-02-2025 01:18:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\explorer.exe" and tgt.process.cmdline contains "/NOUACCHECK") and (not (src.process.cmdline="C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule" or src.process.image.path="C:\Windows\System32\svchost.exe"))))
 ```
 
