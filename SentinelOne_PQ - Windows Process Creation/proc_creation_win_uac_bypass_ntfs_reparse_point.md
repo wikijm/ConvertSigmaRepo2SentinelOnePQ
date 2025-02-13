@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 07-10-2024 05:19:01):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\"C:\Windows\system32\wusa.exe\"  /quiet C:\Users\" and tgt.process.cmdline contains "\AppData\Local\Temp\update.msu" and (tgt.process.integrityLevel in ("High","System"))) or (src.process.cmdline="\"C:\Windows\system32\dism.exe\" /online /quiet /norestart /add-package /packagepath:\"C:\Windows\system32\pe386\" /ignorecheck" and (tgt.process.integrityLevel in ("High","System")) and (tgt.process.cmdline contains "C:\Users\" and tgt.process.cmdline contains "\AppData\Local\Temp\" and tgt.process.cmdline contains "\dismhost.exe {") and tgt.process.image.path contains "\DismHost.exe")))
+// Translated content (automatically translated on 13-02-2025 01:19:34):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\"C:\Windows\system32\wusa.exe\"  /quiet C:\Users\" and tgt.process.cmdline contains "\AppData\Local\Temp\update.msu" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))) or (src.process.cmdline="\"C:\Windows\system32\dism.exe\" /online /quiet /norestart /add-package /packagepath:\"C:\Windows\system32\pe386\" /ignorecheck" and (tgt.process.integrityLevel in ("High","System")) and (tgt.process.cmdline contains "C:\Users\" and tgt.process.cmdline contains "\AppData\Local\Temp\" and tgt.process.cmdline contains "\dismhost.exe {") and tgt.process.image.path contains "\DismHost.exe")))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://github.com/hfiref0x/UACME
 author: Christian Burkard (Nextron Systems)
 date: 2021-08-30
-modified: 2022-10-09
+modified: 2024-12-01
 tags:
     - attack.defense-evasion
     - attack.privilege-escalation
@@ -29,6 +29,8 @@ detection:
         IntegrityLevel:
             - 'High'
             - 'System'
+            - 'S-1-16-16384' # System
+            - 'S-1-16-12288' # High
     selection2:
         ParentCommandLine: '"C:\Windows\system32\dism.exe" /online /quiet /norestart /add-package /packagepath:"C:\Windows\system32\pe386" /ignorecheck'
         IntegrityLevel:

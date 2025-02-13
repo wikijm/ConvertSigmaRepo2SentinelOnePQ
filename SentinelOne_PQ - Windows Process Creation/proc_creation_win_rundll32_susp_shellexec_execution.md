@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 07-10-2024 05:19:01):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ShellExec_RunDLL" and (tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "msiexec" or tgt.process.cmdline contains "\Users\Public\" or tgt.process.cmdline contains "odbcconf" or tgt.process.cmdline contains "\Desktop\" or tgt.process.cmdline contains "\Temp\" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "iex" or tgt.process.cmdline contains "comspec")))
+// Translated content (automatically translated on 13-02-2025 01:19:34):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ShellExec_RunDLL" and (tgt.process.cmdline contains "\Desktop\" or tgt.process.cmdline contains "\Temp\" or tgt.process.cmdline contains "\Users\Public\" or tgt.process.cmdline contains "comspec" or tgt.process.cmdline contains "iex" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "msiexec" or tgt.process.cmdline contains "odbcconf" or tgt.process.cmdline contains "regsvr32")))
 ```
 
 
@@ -11,6 +11,8 @@ id: d87bd452-6da1-456e-8155-7dc988157b7d
 related:
     - id: 36c5146c-d127-4f85-8e21-01bf62355d5a
       type: obsolete
+    - id: 8823e85d-31d8-473e-b7f4-92da070f0fc6
+      type: similar
 status: test
 description: Detects suspicious usage of the ShellExec_RunDLL function to launch other commands as seen in the the raspberry-robin attack
 references:
@@ -30,16 +32,16 @@ detection:
         CommandLine|contains: 'ShellExec_RunDLL'
     selection_suspcli:
         CommandLine|contains:
-            # Add more LOLBINs and Susp Paths
-            - 'regsvr32'
-            - 'msiexec'
-            - '\Users\Public\'
-            - 'odbcconf'
+            # Note: The ordinal number may differ depending on the DLL version
             - '\Desktop\'
             - '\Temp\'
-            - 'Invoke-'
-            - 'iex'
+            - '\Users\Public\'
             - 'comspec'
+            - 'iex'
+            - 'Invoke-'
+            - 'msiexec'
+            - 'odbcconf'
+            - 'regsvr32'
     condition: all of selection_*
 falsepositives:
     - Unknown

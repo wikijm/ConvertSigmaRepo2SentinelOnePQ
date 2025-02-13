@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2024 05:19:01):
+// Translated content (automatically translated on 13-02-2025 01:19:34):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "RECYCLERS.BIN\" or tgt.process.image.path contains "RECYCLER.BIN\"))
 ```
 
@@ -11,7 +11,7 @@ id: 5ce0f04e-3efc-42af-839d-5b3a543b76c0
 related:
     - id: cd8b36ac-8e4a-4c2f-a402-a29b8fbd5bca
       type: derived
-status: experimental
+status: test
 description: Detects process execution from a fake recycle bin folder, often used to avoid security solution.
 references:
     - https://www.mandiant.com/resources/blog/infected-usb-steal-secrets

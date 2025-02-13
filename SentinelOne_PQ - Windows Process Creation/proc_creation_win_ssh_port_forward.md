@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2024 05:19:01):
+// Translated content (automatically translated on 13-02-2025 01:19:34):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\ssh.exe" and (tgt.process.cmdline contains " -R " or tgt.process.cmdline contains " /R " or tgt.process.cmdline contains " –R " or tgt.process.cmdline contains " —R " or tgt.process.cmdline contains " ―R ")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.
 ```yaml
 title: Port Forwarding Activity Via SSH.EXE
 id: 327f48c1-a6db-4eb8-875a-f6981f1b0183
-status: experimental
+status: test
 description: Detects port forwarding activity via SSH.exe
 references:
     - https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/

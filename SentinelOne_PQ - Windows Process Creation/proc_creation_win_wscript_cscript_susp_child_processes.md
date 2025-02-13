@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2024 05:19:01):
+// Translated content (automatically translated on 13-02-2025 01:19:34):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\wscript.exe" or src.process.image.path contains "\cscript.exe") and (tgt.process.image.path contains "\rundll32.exe" or ((tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and ((tgt.process.cmdline contains "mshta" and tgt.process.cmdline contains "http") or (tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "msiexec")))) and (not (tgt.process.image.path contains "\rundll32.exe" and (tgt.process.cmdline contains "UpdatePerUserSystemParameters" or tgt.process.cmdline contains "PrintUIEntry" or tgt.process.cmdline contains "ClearMyTracksByProcess")))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image
 ```yaml
 title: Cscript/Wscript Potentially Suspicious Child Process
 id: b6676963-0353-4f88-90f5-36c20d443c6a
-status: experimental
+status: test
 description: |
     Detects potentially suspicious child processes of Wscript/Cscript. These include processes such as rundll32 with uncommon exports or PowerShell spawning rundll32 or regsvr32.
     Malware such as Pikabot and Qakbot were seen using similar techniques as well as many others.
