@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-02-2025 01:39:42):
+// Translated content (automatically translated on 15-02-2025 01:38:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "DownloadFile" or tgt.process.cmdline contains "DownloadString") and ((tgt.process.cmdline contains " 0x" or tgt.process.cmdline contains "//0x" or tgt.process.cmdline contains ".0x" or tgt.process.cmdline contains ".00x") or (tgt.process.cmdline contains "http://%" and tgt.process.cmdline contains "%2e") or (tgt.process.cmdline matches "https?://[0-9]{1,3}\\.[0-9]{1,3}\\.0[0-9]{3,4}" or tgt.process.cmdline matches "https?://[0-9]{1,3}\\.0[0-9]{3,7}" or tgt.process.cmdline matches "https?://0[0-9]{3,11}" or tgt.process.cmdline matches "https?://(0[0-9]{1,11}\\.){3}0[0-9]{1,11}" or tgt.process.cmdline matches "https?://0[0-9]{1,11}" or tgt.process.cmdline matches " [0-7]{7,13}")) and (not tgt.process.cmdline matches "https?://((25[0-5]|(2[0-4]|1\\d|[1-9])?\\d)(\\.|\\b)){4}")))
 ```
 
