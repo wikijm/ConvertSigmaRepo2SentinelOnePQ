@@ -33,9 +33,9 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - Windows Process Creation'
+      - name: Create destination folder 'S1PQ - Windows - Process Creation'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Windows Process Creation"
+          mkdir -p "${{ github.workspace }}/S1PQ - Windows - Process Creation"
           cd 'S1PQ - Windows Process Creation'
       
       - name: Run 'Sigma to S1PQ - Windows process event creation script'
