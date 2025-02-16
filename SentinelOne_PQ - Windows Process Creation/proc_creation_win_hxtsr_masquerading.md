@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-02-2025 01:38:36):
+// Translated content (automatically translated on 16-02-2025 01:46:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\hxtsr.exe" and (not (tgt.process.image.path contains ":\program files\windowsapps\microsoft.windowscommunicationsapps_" and tgt.process.image.path contains "\hxtsr.exe"))))
 ```
 
