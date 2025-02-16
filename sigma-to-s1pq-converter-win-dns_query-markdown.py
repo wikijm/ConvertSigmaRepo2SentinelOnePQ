@@ -7,7 +7,7 @@ from sigma.backends.sentinelone_pq import SentinelOnePQBackend
 rules_directory = 'sigma/rules/windows/dns_query/'
 
 # Create a folder to store all the translated .md files, if it does not exist already
-output_directory = 'SentinelOne_PQ - Windows DNS Query'
+output_directory = 'SentinelOne_PQ - Windows - DNS Query'
 os.makedirs(output_directory, exist_ok=True)
 
 # List all .yml files in the specified directory

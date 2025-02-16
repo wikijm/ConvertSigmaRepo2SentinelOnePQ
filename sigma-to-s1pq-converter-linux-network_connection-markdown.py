@@ -4,10 +4,10 @@ from sigma.rule import SigmaRule
 from sigma.backends.sentinelone_pq import SentinelOnePQBackend
 
 # Put in the directory containing all the sigma rules
-rules_directory = 'sigma/rules/windows/process_creation/'
+rules_directory = 'sigma/rules/linux/network_connection/'
 
 # Create a folder to store all the translated .md files, if it does not exist already
-output_directory = 'SentinelOne_PQ - Windows - Process Creation'
+output_directory = 'SentinelOne_PQ - Linux - Network Connection'
 os.makedirs(output_directory, exist_ok=True)
 
 # List all .yml files in the specified directory
