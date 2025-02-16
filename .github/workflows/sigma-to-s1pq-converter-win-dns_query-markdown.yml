@@ -33,9 +33,9 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - Windows DNS Query'
+      - name: Create destination folder 'S1PQ - Windows - DNS Query'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Windows DNS Query"
+          mkdir -p "${{ github.workspace }}/S1PQ - Windows - DNS Query"
           cd 'S1PQ - Windows DNS Query'
       
       - name: Run 'Sigma to S1PQ - Windows process event creation script'
