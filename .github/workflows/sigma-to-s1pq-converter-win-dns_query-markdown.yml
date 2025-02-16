@@ -33,13 +33,13 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - Windows - Process Creation
+      - name: Create destination folder 'S1PQ - Windows - DNS Query'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Windows - Process Creation"
-          cd 'S1PQ - Linux - Network Connection'
+          mkdir -p "${{ github.workspace }}/S1PQ - Windows - DNS Query"
+          cd 'S1PQ - Windows - DNS Query'
       
-      - name: Run 'Sigma to S1PQ - Windows process event creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/process_creation/' 'S1PQ - Windows - Process Creation'
+      - name: Run 'Sigma to S1PQ - Windows DNS event query script'
+        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/dns_query/' 'S1PQ - Windows - DNS Query'
 
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
