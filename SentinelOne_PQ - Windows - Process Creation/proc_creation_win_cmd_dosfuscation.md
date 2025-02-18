@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-02-2025 01:43:12):
+// Translated content (automatically translated on 18-02-2025 01:39:48):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "^^" or tgt.process.cmdline contains "^|^" or tgt.process.cmdline contains ",;," or tgt.process.cmdline contains ";;;;" or tgt.process.cmdline contains ";; ;;" or tgt.process.cmdline contains "(,(," or tgt.process.cmdline contains "%COMSPEC:~" or tgt.process.cmdline contains " c^m^d" or tgt.process.cmdline contains "^c^m^d" or tgt.process.cmdline contains " c^md" or tgt.process.cmdline contains " cm^d" or tgt.process.cmdline contains "^cm^d" or tgt.process.cmdline contains " s^et " or tgt.process.cmdline contains " s^e^t " or tgt.process.cmdline contains " se^t "))
 ```
 
