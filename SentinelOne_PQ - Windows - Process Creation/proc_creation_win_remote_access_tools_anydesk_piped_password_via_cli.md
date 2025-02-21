@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-02-2025 01:41:01):
+// Translated content (automatically translated on 21-02-2025 01:41:18):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "/c " and tgt.process.cmdline contains "echo " and tgt.process.cmdline contains ".exe --set-password"))
 ```
 
