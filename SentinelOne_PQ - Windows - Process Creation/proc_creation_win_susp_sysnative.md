@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-02-2025 01:37:50):
+// Translated content (automatically translated on 23-02-2025 01:46:21):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains ":\Windows\Sysnative\" or tgt.process.image.path contains ":\Windows\Sysnative\"))
 ```
 
