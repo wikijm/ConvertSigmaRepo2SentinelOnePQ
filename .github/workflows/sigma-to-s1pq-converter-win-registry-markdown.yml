@@ -41,5 +41,11 @@ jobs:
       - name: Run 'Sigma to S1PQ - Windows - Registry creation script'
         run: python sigma-to-s1pq-converter.py 'sigma/rules/win/registry/' 'S1PQ - Windows - Registry' 
 
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Push changes
+        run: git push origin main
+        
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
