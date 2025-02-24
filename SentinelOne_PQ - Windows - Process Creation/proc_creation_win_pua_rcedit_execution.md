@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-02-2025 01:46:21):
+// Translated content (automatically translated on 24-02-2025 01:43:43):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\rcedit-x64.exe" or tgt.process.image.path contains "\rcedit-x86.exe") or tgt.process.displayName="Edit resources of exe" or tgt.process.displayName="rcedit") and tgt.process.cmdline contains "--set-" and (tgt.process.cmdline contains "OriginalFileName" or tgt.process.cmdline contains "CompanyName" or tgt.process.cmdline contains "FileDescription" or tgt.process.cmdline contains "ProductName" or tgt.process.cmdline contains "ProductVersion" or tgt.process.cmdline contains "LegalCopyright")))
 ```
 
