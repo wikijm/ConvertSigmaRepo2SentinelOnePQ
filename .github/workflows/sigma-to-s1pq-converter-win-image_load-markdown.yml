@@ -1,4 +1,4 @@
-name: Transform Sigma - Linux - Network Connection Events to S1PQ
+name: Transform Sigma - Windows - Image load Events to S1PQ
 
 on:
   workflow_dispatch:
@@ -33,13 +33,13 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - Linux - Network Connection'
+      - name: Create destination folder 'S1PQ - Windows - Image load'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Linux - Network Connection"
-          cd 'S1PQ - Linux - Network Connection'
+          mkdir -p "${{ github.workspace }}/S1PQ - Windows - Image load"
+          cd 'S1PQ - Windows - Image load'
       
-      - name: Run 'Sigma to S1PQ - Linux - Network Connection creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/linux/network_connection/' 'S1PQ - Linux - Network Connection' 
+      - name: Run 'Sigma to S1PQ - Windows - Image load creation script'
+        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/image_load/' 'S1PQ - Windows - Image load' 
 
       - name: Pull latest changes
         run: git pull origin main
