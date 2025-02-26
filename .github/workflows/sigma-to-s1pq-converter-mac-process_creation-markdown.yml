@@ -1,4 +1,4 @@
-name: Transform Sigma - Linux - Network Connection Events to S1PQ
+name: Transform Sigma - MacOS - Process Creation to S1PQ
 
 on:
   workflow_dispatch:
@@ -33,13 +33,13 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - Linux - Network Connection'
+      - name: Create destination folder 'S1PQ - MacOS - Process Creation'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Linux - Network Connection"
-          cd 'S1PQ - Linux - Network Connection'
+          mkdir -p "${{ github.workspace }}/S1PQ - MacOS - Process Creation"
+          cd 'S1PQ - MacOS - Process Creation'
       
-      - name: Run 'Sigma to S1PQ - Linux - Network Connection creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/linux/network_connection/' 'S1PQ - Linux - Network Connection' 
+      - name: Run 'Sigma to S1PQ - MacOS - Process Creation query script'
+        run: python sigma-to-s1pq-converter.py 'sigma/rules/macos/process_creation/' 'S1PQ - MacOS - Process Creation'
 
       - name: Pull latest changes
         run: git pull origin main

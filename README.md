@@ -8,6 +8,26 @@ Firstly, modify the 'rules_directory' variable to reflect the location of your S
 
 Next, modify the 'output_directory' to match whichever folder you want the rules to be dumped into. Expect over 1000+ results.
 
+## GitHub Workflows status
+
+## Repository structure:
+| Destination Folder                                                           | API query | Manual import | GitHub Actions since | Last GitHub Actions execution status |
+|------------------------------------------------------------------|-----------------------------------------------------------------|-------------------------------------|----------------------|-----------------------------------------------|
+| accounts                                                         |<div align="center">✅</div>|<div align="center">2024.09.18</div>|<div align="center">2024.09.19</div>|<div align="center">Not implemented yet</div>| 
+| activities-exclusions                                            |<div align="center">✅</div>|<div align="center">2025.02.22</div>|<div align="center">2025.02.22</div>|<div align="center">[![GitHub Actions](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/activities-exclusions.yml/badge.svg)](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/activities-exclusions.yml)</div>|
+| activities-falsepositivefocus                                    |<div align="center">✅</div>|<div align="center">2025.02.22</div>|<div align="center">2025.02.22</div>|<div align="center">[![GitHub Actions](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/activities-falsepositivefocus.yml/badge.svg)](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions)</div>|
+| activities-types                                                 |<div align="center">✅</div>|<div align="center">2025.02.22</div>|<div align="center">2025.02.22</div>|<div align="center">Not implemented yet</div>| 
+| cloud-detection                                                  |<div align="center">✅</div>|<div align="center">2024.09.18</div>|<div align="center">2024.09.19</div>|<div align="center">[![GitHub Actions](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/cloud-detection.yml/badge.svg)](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions)</div>|
+| dashboards                                                       |<div align="center">❌</div>|<div align="center">2024.04.07</div>|<div align="center">❌</div>|<div align="center">Not implemented yet</div>| 
+| exclusions                                                       |<div align="center">✅</div>|<div align="center">2024.09.18</div>|<div align="center">2024.09.19</div>|<div align="center">[![GitHub Actions](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/exclusions.yml/badge.svg)](https://github.com/Sanofi-GitHub/CSOC_SentinelOne-config/actions/workflows/exclusions.yml)</div>|
+
+| Category | Operating System | Destination Folder | Last GitHub Actions execution status |
+|----------|------------------|--------------------|--------------------------------------|
+| rules | Linux | Destination Folder | Last GitHub Actions execution status |
+
+
+
+
 ## Example
 For GitHub Workflow, you can find an example of workflow here: [Example Workflow.md](Example Workflow.md)
 
