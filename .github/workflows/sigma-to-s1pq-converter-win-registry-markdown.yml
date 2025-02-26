@@ -39,7 +39,7 @@ jobs:
           cd 'S1PQ - Windows - Registry'
       
       - name: Run 'Sigma to S1PQ - Windows - Registry creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/registry/' 'S1PQ - Windows - Registry' 
+        run: python sigma-to-s1pq-converter.py 'sigma/rules/windows/registry/' 'S1PQ - Windows - Registry' 
   
       - name: Pull latest changes
         run: git pull origin main
