@@ -39,7 +39,7 @@ jobs:
           cd 'S1PQ - Windows - DNS Query'
       
       - name: Run 'Sigma to S1PQ - Windows DNS event query script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/dns_query/' 'S1PQ - Windows - DNS Query'
+        run: python sigma-to-s1pq-converter.py 'sigma/rules/windows/dns_query/' 'S1PQ - Windows - DNS Query'
 
       - name: Pull latest changes
         run: git pull origin main

@@ -36,10 +36,10 @@ jobs:
       - name: Create destination folder 'S1PQ - Threat Hunting - Windows - Process Creation'
         run: |
           mkdir -p "${{ github.workspace }}/S1PQ - Threat Hunting - Windows - Process Creation"
-          cd 'S1PQ - Windows - Image load'
+          cd 'S1PQ - Threat Hunting - Windows - Process Creation'
       
       - name: Run 'Sigma to S1PQ - Threat Hunting - Windows - Process Creation creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules-threat-hunting/windows/process_creation/' 'S1PQ - Windows - Process Creation' 
+        run: python sigma-to-s1pq-converter.py 'sigma/rules-threat-hunting/windows/process_creation/' 'S1PQ - Threat Hunting - Windows - Process Creation' 
 
       - name: Pull latest changes
         run: git pull origin main
