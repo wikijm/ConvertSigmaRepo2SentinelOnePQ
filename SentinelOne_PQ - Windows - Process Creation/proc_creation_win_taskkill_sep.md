@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-02-2025 01:42:20):
+// Translated content (automatically translated on 27-02-2025 01:42:58):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "taskkill" and tgt.process.cmdline contains " /F " and tgt.process.cmdline contains " /IM " and tgt.process.cmdline contains "ccSvcHst.exe"))
 ```
 
