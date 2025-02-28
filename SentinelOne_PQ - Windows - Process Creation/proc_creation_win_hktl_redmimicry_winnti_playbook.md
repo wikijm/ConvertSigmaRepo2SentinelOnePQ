@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-02-2025 01:42:58):
+// Translated content (automatically translated on 28-02-2025 01:43:09):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\cmd.exe") and (tgt.process.cmdline contains "gthread-3.6.dll" or tgt.process.cmdline contains "\Windows\Temp\tmp.bat" or tgt.process.cmdline contains "sigcmm-2.4.dll")))
 ```
 
