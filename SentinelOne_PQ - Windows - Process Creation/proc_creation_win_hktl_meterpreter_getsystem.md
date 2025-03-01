@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-02-2025 01:43:09):
+// Translated content (automatically translated on 01-03-2025 01:48:55):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\services.exe" and (((tgt.process.cmdline contains "/c" and tgt.process.cmdline contains "echo" and tgt.process.cmdline contains "\pipe\") and (tgt.process.cmdline contains "cmd" or tgt.process.cmdline contains "%COMSPEC%")) or (tgt.process.cmdline contains "rundll32" and tgt.process.cmdline contains ".dll,a" and tgt.process.cmdline contains "/p:")) and (not tgt.process.cmdline contains "MpCmdRun"))) | columns ComputerName,tgt.process.user,tgt.process.cmdline
 ```
 
