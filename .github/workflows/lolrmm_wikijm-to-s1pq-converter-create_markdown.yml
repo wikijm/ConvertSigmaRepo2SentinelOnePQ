@@ -29,7 +29,7 @@ jobs:
         run: |
           sigma plugin install sentinelone-pq
         
-      - name: Get Sigma repository
+      - name: Get LOLRMM repository
         run: |
           git clone https://github.com/wikijm/LOLRMM.git
 
@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p "${{ github.workspace }}/S1PQ - LOLRMM WikiJM"
 
-      - name: Run 'Sigma to S1PQ - Windows process event creation script'
+      - name: Run 'LOLRMM to S1PQ - Creation script'
         run: python lolrmm-to-s1pq-converter-create_markdown.py
 
       - name: Pull latest changes
