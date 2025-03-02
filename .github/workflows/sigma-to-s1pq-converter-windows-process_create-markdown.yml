@@ -1,4 +1,4 @@
-name: Transform Sigma - MacOS - Process Creation to S1PQ
+name: Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ
 
 on:
   workflow_dispatch:
@@ -11,11 +11,15 @@ jobs:
     runs-on: ubuntu-latest  # Change value from 'self-hosted' to 'ubuntu-latest' if you want to host it on Github.
     permissions:
       contents: write
+    env:
+      SIGMACATEGORY: "rules"
+      PLATFORM: "windows"
+      SIGMARULE: "process_creation"
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.0
-        
+
       - name: Set up Python
         uses: actions/setup-python@v4.7.1
         with:
@@ -33,13 +37,13 @@ jobs:
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
 
-      - name: Create destination folder 'S1PQ - MacOS - Process Creation'
+      - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - MacOS - Process Creation"
-          cd 'S1PQ - MacOS - Process Creation'
+          mkdir -p "${{ github.workspace }}/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+          cd 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
       
-      - name: Run 'Sigma to S1PQ - MacOS - Process Creation query script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/macos/process_creation/' 'S1PQ - MacOS - Process Creation'
+      - name: Run 'sigma-to-s1pq-converter.py' script
+        run: python sigma-to-s1pq-converter.py 'sigma/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}/${{ env.SIGMARULE }}/' 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}' 
 
       - name: Pull latest changes
         run: git pull origin main

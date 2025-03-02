@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-02-2025 01:43:09):
+// Translated content (automatically translated on 02-03-2025 01:47:50):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\caddy.exe" or src.process.image.path contains "\httpd.exe" or src.process.image.path contains "\nginx.exe" or src.process.image.path contains "\php-cgi.exe" or src.process.image.path contains "\w3wp.exe" or src.process.image.path contains "\ws_tomcatservice.exe") or ((src.process.image.path contains "\java.exe" or src.process.image.path contains "\javaw.exe") and (src.process.image.path contains "-tomcat-" or src.process.image.path contains "\tomcat")) or ((src.process.image.path contains "\java.exe" or src.process.image.path contains "\javaw.exe") and (tgt.process.cmdline contains "CATALINA_HOME" or tgt.process.cmdline contains "catalina.jar"))) and (tgt.process.cmdline contains "perl --help" or tgt.process.cmdline contains "perl -h" or tgt.process.cmdline contains "python --help" or tgt.process.cmdline contains "python -h" or tgt.process.cmdline contains "python3 --help" or tgt.process.cmdline contains "python3 -h" or tgt.process.cmdline contains "wget --help")))
 ```
 
