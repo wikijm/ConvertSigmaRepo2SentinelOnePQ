@@ -8,6 +8,63 @@ Firstly, modify the 'rules_directory' variable to reflect the location of your S
 
 Next, modify the 'output_directory' to match whichever folder you want the rules to be dumped into. Expect over 1000+ results.
 
+## Sigma coverage
+
+| 1st level            | 2nd level   | 3rd level            | Status              |
+|----------------------|-------------|----------------------|---------------------|
+| rules-threat-hunting | cloud       | 2 folders            | Not applicable      |
+| rules-threat-hunting | linux       | file_event           | Will be implemented |
+| rules-threat-hunting | linux       | process_creation     | Will be implemented |
+| rules-threat-hunting | macos       | file_event           | Will be implemented |
+| rules-threat-hunting | macos       | process_creation     | Will be implemented |
+| rules-threat-hunting | web         | proxy_generic        | Not applicable      |
+| rules-threat-hunting | windows     | builtin              | Will be implemented |
+| rules-threat-hunting | windows     | create_remote_threat | Will be implemented |
+| rules-threat-hunting | windows     | file                 | Will be implemented |
+| rules-threat-hunting | windows     | image_load           | Will be implemented |
+| rules-threat-hunting | windows     | network_connection   | Will be implemented |
+| rules-threat-hunting | windows     | pipe_created         | Will be implemented |
+| rules-threat-hunting | windows     | powershell           | Will be implemented |
+| rules-threat-hunting | windows     | process_access       | Implemented         |
+| rules-threat-hunting | windows     | process_creation     | Implemented         |
+| rules-threat-hunting | windows     | registry             | Will be implemented |
+| rules                | application | 10 folders           | Not applicable      |
+| rules                | category    | 2 folders            | Not applicable      |
+| rules                | cloud       | 9 folders            | Not applicable      |
+| rules                | compliance  | N/A                  | Not applicable      |
+| rules                | linux       | auditd               | Will be implemented |
+| rules                | linux       | builtin              | Will be implemented |
+| rules                | linux       | file_event           | Will be implemented |
+| rules                | linux       | network_connection   | Will be implemented |
+| rules                | linux       | process_creation     | Implemented         |
+| rules                | macos       | file_event           | Implemented         |
+| rules                | macos       | process_creation     | Implemented         |
+| rules                | network     | cisco                | Not applicable      |
+| rules                | network     | dns                  | Will be implemented |
+| rules                | network     | firewall             | Will be implemented |
+| rules                | network     | huawei               | Not applicable      |
+| rules                | network     | juniper              | Not applicable      |
+| rules                | network     | zeek                 | Not applicable      |
+| rules                | web         | 3 folders            | Not applicable      |
+| rules                | windows     | builtin              | Will be implemented |
+| rules                | windows     | create_remote_threat | Will be implemented |
+| rules                | windows     | dns_query            | Will be implemented |
+| rules                | windows     | driver_load          | Will be implemented |
+| rules                | windows     | file                 | Will be implemented |
+| rules                | windows     | image_load           | Will be implemented |
+| rules                | windows     | network_connection   | Will be implemented |
+| rules                | windows     | pipe_created         | Will be implemented |
+| rules                | windows     | powershell           | Will be implemented |
+| rules                | windows     | process_access       | Will be implemented |
+| rules                | windows     | process_creation     | Implemented         |
+| rules                | windows     | process_tampering    | Will be implemented |
+| rules                | windows     | raw_access_thread    | Will be implemented |
+| rules                | windows     | registry             | Will be implemented |
+| rules                | windows     | sysmon               | Not applicable      |
+| rules                | windows     | sysmon               | Not applicable      |
+| rules                | windows     | wmi_event            | Will be implemented |
+
+
 ## GitHub Workflows status
 | Category             | Operating System | Destination Folder                                        | Last GitHub Actions execution status                                                                                                                                                                                                                                                                                   |
 |----------------------|------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
