@@ -61,7 +61,7 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 | rules                | windows     | raw_access_thread    | Will be implemented |
 | rules                | windows     | registry             | Implemented         |
 | rules                | windows     | sysmon               | Not applicable      |
-| rules                | windows     | wmi_event            | Will be implemented |
+| rules                | windows     | wmi_event            | Implemented         |
 
 
 ## GitHub Workflows status
@@ -76,7 +76,7 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 | rules                | Windows          | S1PQ - Windows - Image Load                        | [![Transform "sigma/rules/windows/image_load/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml)                                                    |
 | rules                | Windows          | S1PQ - Windows - Process Creation                  | [![Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml)                                        |
 | rules                | Windows          | S1PQ - Windows - Registry                          | [![Transform "sigma/rules/windows/registry/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml)                                                                |
-
+| rules                | Windows          | S1PQ - Windows - WMI Event                          | [![Transform "sigma/rules/windows/wmi_event/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-wmi_event-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-wmi_event-markdown.yml)                                                                |
 
 ## Example
 For GitHub Workflow, you can find an example of workflow here: [Example Workflow.md](Example Workflow.md)
