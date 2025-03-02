@@ -13,7 +13,7 @@ jobs:
       contents: write
     env:
       SIGMACATEGORY: "rules"
-      PLATFORM: "macos"
+      PLATFORM: "linux"
       SIGMARULE: "process_creation"      
     
     steps:
