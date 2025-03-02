@@ -49,7 +49,7 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 | rules                | windows     | builtin              | Will be implemented |
 | rules                | windows     | create_remote_threat | Will be implemented |
 | rules                | windows     | dns_query            | Implemented         |
-| rules                | windows     | driver_load          | Will be implemented |
+| rules                | windows     | driver_load          | Not applicable      |
 | rules                | windows     | file                 | Will be implemented |
 | rules                | windows     | image_load           | Implemented         |
 | rules                | windows     | network_connection   | Will be implemented |
