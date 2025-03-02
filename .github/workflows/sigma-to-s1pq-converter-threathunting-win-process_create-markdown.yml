@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest  # Change value from 'self-hosted' to 'ubuntu-latest' if you want to host it on Github.
     permissions:
       contents: write
+    env:
+      SIGMACATEGORY: "rules-threat-hunting"
+      PLATFORM: "windows"
+      SIGMARULE: "process_creation"
     
     steps:
       - name: Checkout code
@@ -35,11 +39,11 @@ jobs:
 
       - name: Create destination folder 'S1PQ - Threat Hunting - Windows - Process Creation'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Threat Hunting - Windows - Process Creation"
-          cd 'S1PQ - Threat Hunting - Windows - Process Creation'
+          mkdir -p "${{ github.workspace }}/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+          cd 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
       
-      - name: Run 'Sigma to S1PQ - Threat Hunting - Windows - Process Creation creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules-threat-hunting/windows/process_creation/' 'S1PQ - Threat Hunting - Windows - Process Creation' 
+      - name: Run 'sigma-to-s1pq-converter.py' script
+        run: python sigma-to-s1pq-converter.py 'sigma/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}/${{ env.SIGMARULE }}/' 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
 
       - name: Pull latest changes
         run: git pull origin main
