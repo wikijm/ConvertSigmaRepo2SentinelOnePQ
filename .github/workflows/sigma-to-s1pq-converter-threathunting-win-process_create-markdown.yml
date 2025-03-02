@@ -1,4 +1,4 @@
-name: Transform Sigma - Threat Hunting - Windows - Process Creation Events to S1PQ
+name: Transform "sigma/rules-threat-hunting/windows/process_creation/" Sigma rules to S1PQ
 
 on:
   workflow_dispatch:
