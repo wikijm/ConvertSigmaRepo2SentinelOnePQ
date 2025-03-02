@@ -11,24 +11,24 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 ## GitHub Workflows status
 | Category             | Operating System | Destination Folder                                        | Last GitHub Actions execution status                                                                                                                                                                                                                                                                                   |
 |----------------------|------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| rules-threat-hunting | Windows          | S1PQ - Threat Hunting - Windows - Process Creation        | <div align="center">[![Transform "sigma/rules-threat-hunting/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml)</div>|
+| rules-threat-hunting | Windows          | S1PQ - Threat Hunting - Windows - Process Creation        | <div align="center">[![Transform "sigma/rules-threat-hunting/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_creation-markdown.yml)</div>|
 | rules                | Linux            | S1PQ - Linux - Network Connection                         | <div align="center">[![Transform "sigma/rules/linux/network_connection/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml)</div>|
 | rules                | Linux            | S1PQ - Linux - Process Creation                           | <div align="center">[![Transform "sigma/rules/linux/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml)</div>                   |
 | rules                | MacOS            | S1PQ - MacOS - File Event                                 | <div align="center">[![Transform "sigma/rules/macos/file_event" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml)</div>                                |
 | rules                | Windows          | S1PQ - Windows - DNS Query                                | <div align="center">[![Transform "sigma/rules/windows/dns_query/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml)</div>                                   |
 | rules                | Windows          | S1PQ - Windows - Image Load                               | <div align="center">[![Transform "sigma/rules/windows/image_load/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml)</div>                                  |
-| rules                | Windows          | S1PQ - Windows - Process Creation                         | <div align="center">[![Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_create-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_create-markdown.yml)</div>                   |
+| rules                | Windows          | S1PQ - Windows - Process Creation                         | <div align="center">[![Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml)</div>                   |
 | rules                | Windows          | S1PQ - Windows - Registry                                 | <div align="center">[![Transform "sigma/rules/windows/registry/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml)</div>                                |
 
 
 ## Example
 For GitHub Workflow, you can find an example of workflow here: [Example Workflow.md](Example Workflow.md)
 
-To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigma-to-s1pq-converter-win_process_create_markdown.py) is generating, please look at [SentinelOne_PQ - Windows Process Creation/proc_creation_win_addinutil_uncommon_child_process.md](SentinelOne_PQ - Windows Process Creation/proc_creation_win_addinutil_uncommon_child_process.md)
+To see what result [sigma-to-s1pq-converter-win_process_creation_markdown.py](sigma-to-s1pq-converter-win_process_creation_markdown.py) is generating, please look at [SentinelOne_PQ - Windows Process Creation/proc_creation_win_addinutil_uncommon_child_process.md](SentinelOne_PQ - Windows Process Creation/proc_creation_win_addinutil_uncommon_child_process.md)
 ![image](https://github.com/user-attachments/assets/ca6af8ff-f15b-4142-a0e4-17e72bb619b4)
 
 ## Dependencies
-### sigma-to-s1pq-converter-win_process_create_markdown.py
+### sigma-to-s1pq-converter-win_process_creation_markdown.py
 
 1. Python Environment: Ensure you have Python installed on your system. You can download it from python.org.
 
@@ -53,7 +53,7 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
 
 6. Error Handling: The script includes basic error handling to catch exceptions during file processing. Ensure you have proper error logging or handling mechanisms in place if you plan to run this script in a production environment.
 
-### .github/workflows/sigma-to-s1pq-converter-win_process_create_markdown.yml
+### .github/workflows/sigma-to-s1pq-converter-win_process_creation_markdown.yml
 
 1. GitHub Account: Ensure you have a GitHub account and a repository where you can add this workflow.
 
@@ -61,7 +61,7 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
 
 3. Python Environment:
         The workflow sets up Python 3.10 using the actions/setup-python action.
-        Ensure your script (sigma-to-s1pq-converter-win_process_create_markdown.py) is compatible with Python 3.10.
+        Ensure your script (sigma-to-s1pq-converter-win_process_creation_markdown.py) is compatible with Python 3.10.
 
 4. Required Libraries:
 
@@ -84,7 +84,7 @@ To see what result [sigma-to-s1pq-converter-win_process_create_markdown.py](sigm
    - actions/setup-python@v4.7.1: Used to set up the Python environment.
    - stefanzweifel/git-auto-commit-action@v5: Used to commit and push changes automatically.
 
-10. Script Execution: Ensure your script (sigma-to-s1pq-converter-win_process_create_markdown.py) is present in the repository and executable.
+10. Script Execution: Ensure your script (sigma-to-s1pq-converter-win_process_creation_markdown.py) is present in the repository and executable.
 
 
 ## Thanks
