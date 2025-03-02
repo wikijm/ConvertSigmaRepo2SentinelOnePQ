@@ -36,20 +36,20 @@ jobs:
       - name: Get Sigma repository
         run: |
           git clone https://github.com/SigmaHQ/sigma.git
-
-      - name: Create destination folder 'S1PQ - Windows - Image load'
+  
+      - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - Windows - Image load"
-          cd 'S1PQ - Windows - Image load'
+          mkdir -p "${{ github.workspace }}/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+          cd 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
       
-      - name: Run 'Sigma to S1PQ - Windows - Image load creation script'
-        run: python sigma-to-s1pq-converter.py 'sigma/rules/win/image_load/' 'S1PQ - Windows - Image load' 
-
+      - name: Run 'sigma-to-s1pq-converter.py' script
+        run: python sigma-to-s1pq-converter.py 'sigma/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}/${{ env.SIGMARULE }}/' 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}' 
+  
       - name: Pull latest changes
         run: git pull origin main
-
+  
       - name: Push changes
         run: git push origin main
-
+  
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
