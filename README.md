@@ -48,10 +48,10 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 | rules                | web         | 3 folders            | Not applicable      |
 | rules                | windows     | builtin              | Will be implemented |
 | rules                | windows     | create_remote_threat | Will be implemented |
-| rules                | windows     | dns_query            | Will be implemented |
+| rules                | windows     | dns_query            | Implemented         |
 | rules                | windows     | driver_load          | Will be implemented |
 | rules                | windows     | file                 | Will be implemented |
-| rules                | windows     | image_load           | Will be implemented |
+| rules                | windows     | image_load           | Implemented         |
 | rules                | windows     | network_connection   | Will be implemented |
 | rules                | windows     | pipe_created         | Will be implemented |
 | rules                | windows     | powershell           | Will be implemented |
@@ -59,8 +59,7 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 | rules                | windows     | process_creation     | Implemented         |
 | rules                | windows     | process_tampering    | Will be implemented |
 | rules                | windows     | raw_access_thread    | Will be implemented |
-| rules                | windows     | registry             | Will be implemented |
-| rules                | windows     | sysmon               | Not applicable      |
+| rules                | windows     | registry             | Implemented         |
 | rules                | windows     | sysmon               | Not applicable      |
 | rules                | windows     | wmi_event            | Will be implemented |
 
