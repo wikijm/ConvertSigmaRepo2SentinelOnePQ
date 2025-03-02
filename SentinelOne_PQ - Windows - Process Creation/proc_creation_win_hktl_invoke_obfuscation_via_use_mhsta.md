@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-03-2025 01:48:55):
+// Translated content (automatically translated on 02-03-2025 01:47:50):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "set" and tgt.process.cmdline contains "&&" and tgt.process.cmdline contains "mshta" and tgt.process.cmdline contains "vbscript:createobject" and tgt.process.cmdline contains ".run" and tgt.process.cmdline contains "(window.close)"))
 ```
 
