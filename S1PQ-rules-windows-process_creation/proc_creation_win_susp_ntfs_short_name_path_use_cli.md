@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-03-2025 17:58:26):
+// Translated content (automatically translated on 03-03-2025 01:52:37):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1\" or tgt.process.cmdline contains "~2\") and (not ((src.process.image.path in ("C:\Windows\System32\Dism.exe","C:\Windows\System32\cleanmgr.exe","C:\Program Files\GPSoftware\Directory Opus\dopus.exe")) or (src.process.image.path contains "\WebEx\WebexHost.exe" or src.process.image.path contains "\thor\thor64.exe" or src.process.image.path contains "\veam.backup.shell.exe" or src.process.image.path contains "\winget.exe" or src.process.image.path contains "\Everything\Everything.exe") or src.process.image.path contains "\AppData\Local\Temp\WinGet\" or (tgt.process.cmdline contains "\appdata\local\webex\webex64\meetings\wbxreport.exe" or tgt.process.cmdline contains "C:\Program Files\Git\post-install.bat" or tgt.process.cmdline contains "C:\Program Files\Git\cmd\scalar.exe")))))
 ```
 
