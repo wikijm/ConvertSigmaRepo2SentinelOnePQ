@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-03-2025 00:51:49):
+// Translated content (automatically translated on 04-03-2025 00:50:31):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/git" and tgt.process.cmdline contains " clone ") and (tgt.process.cmdline contains "exploit" or tgt.process.cmdline contains "Vulns" or tgt.process.cmdline contains "vulnerability" or tgt.process.cmdline contains "RCE" or tgt.process.cmdline contains "RemoteCodeExecution" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "CVE-" or tgt.process.cmdline contains "poc-" or tgt.process.cmdline contains "ProofOfConcept" or tgt.process.cmdline contains "proxyshell" or tgt.process.cmdline contains "log4shell" or tgt.process.cmdline contains "eternalblue" or tgt.process.cmdline contains "eternal-blue" or tgt.process.cmdline contains "MS17-")))
 ```
 
