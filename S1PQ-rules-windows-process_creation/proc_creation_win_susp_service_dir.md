@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-03-2025 01:52:37):
+// Translated content (automatically translated on 04-03-2025 01:51:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\Users\Public\" or tgt.process.image.path contains "\$Recycle.bin" or tgt.process.image.path contains "\Users\All Users\" or tgt.process.image.path contains "\Users\Default\" or tgt.process.image.path contains "\Users\Contacts\" or tgt.process.image.path contains "\Users\Searches\" or tgt.process.image.path contains "C:\Perflogs\" or tgt.process.image.path contains "\config\systemprofile\" or tgt.process.image.path contains "\Windows\Fonts\" or tgt.process.image.path contains "\Windows\IME\" or tgt.process.image.path contains "\Windows\addins\") and (src.process.image.path contains "\services.exe" or src.process.image.path contains "\svchost.exe")))
 ```
 
