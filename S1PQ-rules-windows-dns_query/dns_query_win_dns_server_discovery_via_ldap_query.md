@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 01:50:05):
+// Translated content (automatically translated on 05-03-2025 01:50:02):
 event.category="DNS" and (endpoint.os="windows" and (event.dns.request contains "_ldap." and (not ((src.process.image.path contains ":\Program Files\" or src.process.image.path contains ":\Program Files (x86)\" or src.process.image.path contains ":\Windows\") or (src.process.image.path contains ":\ProgramData\Microsoft\Windows Defender\Platform\" and src.process.image.path contains "\MsMpEng.exe") or src.process.image.path="<unknown process>" or not (src.process.image.path matches "\.*"))) and (not (src.process.image.path contains "C:\WindowsAzure\GuestAgent" or (src.process.image.path contains "\chrome.exe" or src.process.image.path contains "\firefox.exe" or src.process.image.path contains "\opera.exe")))))
 ```
 
