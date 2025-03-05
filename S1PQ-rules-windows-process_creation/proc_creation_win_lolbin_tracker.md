@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 01:51:18):
+// Translated content (automatically translated on 05-03-2025 01:51:21):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\tracker.exe" or tgt.process.displayName="Tracker") and (tgt.process.cmdline contains " /d " or tgt.process.cmdline contains " /c ")) and (not (tgt.process.cmdline contains " /ERRORREPORT:PROMPT " or (src.process.image.path contains "\Msbuild\Current\Bin\MSBuild.exe" or src.process.image.path contains "\Msbuild\Current\Bin\amd64\MSBuild.exe")))))
 ```
 

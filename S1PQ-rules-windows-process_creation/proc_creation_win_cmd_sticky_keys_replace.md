@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 01:51:18):
+// Translated content (automatically translated on 05-03-2025 01:51:21):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "copy " and tgt.process.cmdline contains "/y " and tgt.process.cmdline contains "C:\windows\system32\cmd.exe C:\windows\system32\sethc.exe"))
 ```
 

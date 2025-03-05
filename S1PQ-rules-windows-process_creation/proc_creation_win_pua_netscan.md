@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 01:51:18):
+// Translated content (automatically translated on 05-03-2025 01:51:21):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\netscan.exe" or tgt.process.displayName="Network Scanner" or tgt.process.displayName="Application for scanning networks"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.
 ```yaml
 title: PUA - SoftPerfect Netscan Execution
 id: ca387a8e-1c84-4da3-9993-028b45342d30
-status: experimental
+status: test
 description: |
     Detects usage of SoftPerfect's "netscan.exe". An application for scanning networks.
     It is actively used in-the-wild by threat actors to inspect and understand the network architecture of a victim.

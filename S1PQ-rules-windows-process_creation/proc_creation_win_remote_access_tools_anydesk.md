@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 01:51:18):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\AnyDesk.exe" or tgt.process.displayName="AnyDesk" or tgt.process.displayName="AnyDesk" or tgt.process.publisher="AnyDesk Software GmbH"))
+// Translated content (automatically translated on 05-03-2025 01:51:21):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\AnyDesk.exe" or tgt.process.image.path contains "\AnyDeskMSI.exe") or tgt.process.displayName="AnyDesk" or tgt.process.displayName="AnyDesk" or tgt.process.publisher="AnyDesk Software GmbH"))
 ```
 
 
@@ -18,9 +18,10 @@ description: |
     Remote access tools like VNC, Ammyy, and Teamviewer are used frequently when compared with other legitimate software commonly used by adversaries. (Citation: Symantec Living off the Land)
 references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md#atomic-test-2---anydesk-files-detected-test-on-windows
+    - https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/
 author: frack113
 date: 2022-02-11
-modified: 2023-03-05
+modified: 2025-02-24
 tags:
     - attack.command-and-control
     - attack.t1219
@@ -29,7 +30,9 @@ logsource:
     product: windows
 detection:
     selection:
-        - Image|endswith: '\AnyDesk.exe'
+        - Image|endswith:
+              - '\AnyDesk.exe'
+              - '\AnyDeskMSI.exe'
         - Description: AnyDesk
         - Product: AnyDesk
         - Company: AnyDesk Software GmbH
