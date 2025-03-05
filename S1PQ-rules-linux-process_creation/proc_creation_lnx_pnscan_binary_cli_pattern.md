@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2025 00:50:31):
+// Translated content (automatically translated on 05-03-2025 00:50:41):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.cmdline matches "-(W|R)\\s?(\\s|"|')([0-9a-fA-F]{2}\\s?){2,20}(\\s|"|')")
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and tgt.process.cmdline m
 ```yaml
 title: Pnscan Binary Data Transmission Activity
 id: 97de11cd-4b67-4abf-9a8b-1020e670aa9e
-status: experimental
+status: test
 description: |
     Detects command line patterns associated with the use of Pnscan for sending and receiving binary data across the network.
     This behavior has been identified in a Linux malware campaign targeting Docker, Apache Hadoop, Redis, and Confluence and was previously used by the threat actor known as TeamTNT
