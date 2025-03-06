@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-03-2025 01:51:21):
+// Translated content (automatically translated on 06-03-2025 01:51:27):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\chcp.com" and (tgt.process.cmdline contains " 936" or tgt.process.cmdline contains " 1258"))) | columns src.process.cmdline
 ```
 
