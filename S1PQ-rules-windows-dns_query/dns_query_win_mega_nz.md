@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-03-2025 01:50:02):
+// Translated content (automatically translated on 06-03-2025 01:50:15):
 event.category="DNS" and (endpoint.os="windows" and event.dns.request contains "userstorage.mega.co.nz")
 ```
 
