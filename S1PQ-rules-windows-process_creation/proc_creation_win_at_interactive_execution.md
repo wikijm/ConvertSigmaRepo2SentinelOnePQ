@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-03-2025 01:51:27):
+// Translated content (automatically translated on 07-03-2025 01:51:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\at.exe" and tgt.process.cmdline contains "interactive"))
 ```
 

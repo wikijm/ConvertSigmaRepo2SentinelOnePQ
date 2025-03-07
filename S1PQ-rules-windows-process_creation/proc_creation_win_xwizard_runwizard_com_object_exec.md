@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-03-2025 01:51:27):
+// Translated content (automatically translated on 07-03-2025 01:51:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="RunWizard" and tgt.process.cmdline matches "\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}"))
 ```
 

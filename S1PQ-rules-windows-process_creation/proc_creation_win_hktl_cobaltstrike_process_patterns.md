@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-03-2025 01:51:27):
+// Translated content (automatically translated on 07-03-2025 01:51:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "cmd.exe /C whoami" and src.process.image.path contains "C:\Temp\") or ((src.process.image.path contains "\runonce.exe" or src.process.image.path contains "\dllhost.exe") and (tgt.process.cmdline contains "cmd.exe /c echo" and tgt.process.cmdline contains "> \\.\pipe")) or ((src.process.cmdline contains "cmd.exe /C echo" and src.process.cmdline contains " > \\.\pipe") and tgt.process.cmdline contains "conhost.exe 0xffffffff -ForceV1") or (src.process.cmdline contains "/C whoami" and tgt.process.cmdline contains "conhost.exe 0xffffffff -ForceV1")))
 ```
 
