@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-03-2025 01:11:28):
+// Translated content (automatically translated on 08-03-2025 00:56:32):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((src.process.image.path contains "\gup.exe" and module.path contains "\libcurl.dll") and (not src.process.image.path contains "\Notepad++\updater\GUP.exe")))
 ```
 
