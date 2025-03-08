@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-03-2025 00:51:05):
+// Translated content (automatically translated on 08-03-2025 00:39:07):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/chmod" and (tgt.process.cmdline contains "/tmp/" or tgt.process.cmdline contains "/.Library/" or tgt.process.cmdline contains "/etc/" or tgt.process.cmdline contains "/opt/")))
 ```
 
