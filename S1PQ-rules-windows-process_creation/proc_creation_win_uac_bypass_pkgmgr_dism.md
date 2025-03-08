@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-03-2025 01:51:51):
+// Translated content (automatically translated on 08-03-2025 01:23:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\pkgmgr.exe" and tgt.process.image.path contains "\dism.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
