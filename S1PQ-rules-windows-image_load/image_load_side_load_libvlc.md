@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-03-2025 00:56:32):
+// Translated content (automatically translated on 09-03-2025 01:01:50):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\libvlc.dll" and (not (module.path contains "C:\Program Files (x86)\VideoLAN\VLC\" or module.path contains "C:\Program Files\VideoLAN\VLC\"))))
 ```
 

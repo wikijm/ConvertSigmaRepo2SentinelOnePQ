@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-03-2025 00:56:32):
+// Translated content (automatically translated on 09-03-2025 01:01:50):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\msdt.exe" and module.path contains "\sdiageng.dll"))
 ```
 
