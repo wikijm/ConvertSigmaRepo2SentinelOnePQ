@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-03-2025 00:34:22):
+// Translated content (automatically translated on 09-03-2025 00:38:20):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\csc.exe" and tgt.process.cmdline contains "/noconfig /fullpaths @"))
 ```
 
