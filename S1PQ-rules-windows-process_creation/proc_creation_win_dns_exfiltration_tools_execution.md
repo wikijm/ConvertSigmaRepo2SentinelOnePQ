@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-03-2025 01:35:47):
+// Translated content (automatically translated on 10-03-2025 01:33:56):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\iodine.exe" or tgt.process.image.path contains "\dnscat2"))
 ```
 
