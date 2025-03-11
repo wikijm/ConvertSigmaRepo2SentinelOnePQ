@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-03-2025 01:33:56):
+// Translated content (automatically translated on 11-03-2025 01:52:23):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\appvlp.exe" and (not (tgt.process.image.path contains ":\Windows\SysWOW64\rundll32.exe" or tgt.process.image.path contains ":\Windows\System32\rundll32.exe")) and (not ((tgt.process.image.path contains ":\Program Files\Microsoft Office" and tgt.process.image.path contains "\msoasb.exe") or ((tgt.process.image.path contains ":\Program Files\Microsoft Office" and tgt.process.image.path contains "\SkypeSrv\") and tgt.process.image.path contains "\SKYPESERVER.EXE") or (tgt.process.image.path contains ":\Program Files\Microsoft Office" and tgt.process.image.path contains "\MSOUC.EXE")))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-03-2025 01:33:56):
+// Translated content (automatically translated on 11-03-2025 01:52:23):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\hh.exe" and (tgt.process.image.path contains "\CertReq.exe" or tgt.process.image.path contains "\CertUtil.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\installutil.exe" or tgt.process.image.path contains "\MSbuild.exe" or tgt.process.image.path contains "\MSHTA.EXE" or tgt.process.image.path contains "\msiexec.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\wmic.exe" or tgt.process.image.path contains "\wscript.exe")))
 ```
 
