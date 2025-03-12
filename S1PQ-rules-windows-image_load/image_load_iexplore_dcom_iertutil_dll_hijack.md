@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-03-2025 01:11:29):
+// Translated content (automatically translated on 12-03-2025 01:10:31):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\Internet Explorer\iexplore.exe" and module.path contains "\Internet Explorer\iertutil.dll"))
 ```
 
