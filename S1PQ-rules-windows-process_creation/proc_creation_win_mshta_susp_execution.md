@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-03-2025 01:50:59):
+// Translated content (automatically translated on 13-03-2025 01:52:49):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\mshta.exe" and (tgt.process.cmdline contains "vbscript" or tgt.process.cmdline contains ".jpg" or tgt.process.cmdline contains ".png" or tgt.process.cmdline contains ".lnk" or tgt.process.cmdline contains ".xls" or tgt.process.cmdline contains ".doc" or tgt.process.cmdline contains ".zip" or tgt.process.cmdline contains ".dll")))
 ```
 
