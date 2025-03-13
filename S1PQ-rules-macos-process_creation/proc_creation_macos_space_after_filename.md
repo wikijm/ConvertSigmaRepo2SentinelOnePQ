@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-03-2025 01:11:05):
+// Translated content (automatically translated on 13-03-2025 01:12:30):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains " " or tgt.process.image.path contains " "))
 ```
 
