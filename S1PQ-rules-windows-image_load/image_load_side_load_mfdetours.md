@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-03-2025 01:10:37):
+// Translated content (automatically translated on 15-03-2025 01:09:59):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mfdetours.dll" and (not module.path contains ":\Program Files (x86)\Windows Kits\10\bin\")))
 ```
 
