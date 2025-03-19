@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-03-2025 01:53:12):
+// Translated content (automatically translated on 19-03-2025 01:53:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="C:\Windows\explorer.exe" and tgt.process.image.path="C:\Windows\System32\cmd.exe" and (tgt.process.cmdline contains "powershell" and tgt.process.cmdline contains ".lnk")))
 ```
 
