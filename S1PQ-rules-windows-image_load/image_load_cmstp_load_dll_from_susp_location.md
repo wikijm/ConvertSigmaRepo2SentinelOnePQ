@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-03-2025 01:11:06):
+// Translated content (automatically translated on 21-03-2025 01:12:37):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\cmstp.exe" and (module.path contains "\PerfLogs\" or module.path contains "\ProgramData\" or module.path contains "\Users\" or module.path contains "\Windows\Temp\" or module.path contains "C:\Temp\") and (module.path contains ".dll" or module.path contains ".ocx")))
 ```
 
