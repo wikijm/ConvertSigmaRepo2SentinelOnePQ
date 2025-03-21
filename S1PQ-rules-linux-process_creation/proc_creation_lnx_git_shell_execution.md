@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-03-2025 00:50:28):
+// Translated content (automatically translated on 21-03-2025 00:51:53):
 event.type="Process Creation" and (endpoint.os="linux" and (src.process.image.path contains "/git" and (src.process.cmdline contains " -p " and src.process.cmdline contains "help") and (tgt.process.cmdline contains "bash 0<&1" or tgt.process.cmdline contains "dash 0<&1" or tgt.process.cmdline contains "sh 0<&1")))
 ```
 
