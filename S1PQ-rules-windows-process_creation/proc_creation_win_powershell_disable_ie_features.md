@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-03-2025 01:54:21):
+// Translated content (automatically translated on 22-03-2025 01:51:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -name IEHarden " and tgt.process.cmdline contains " -value 0 ") or (tgt.process.cmdline contains " -name DEPOff " and tgt.process.cmdline contains " -value 1 ") or (tgt.process.cmdline contains " -name DisableFirstRunCustomize " and tgt.process.cmdline contains " -value 2 ")))
 ```
 
