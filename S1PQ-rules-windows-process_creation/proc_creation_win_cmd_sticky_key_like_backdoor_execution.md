@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-03-2025 01:51:06):
+// Translated content (automatically translated on 23-03-2025 01:59:42):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\winlogon.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\wscript.exe" or tgt.process.image.path contains "\wt.exe") and (tgt.process.cmdline contains "sethc.exe" or tgt.process.cmdline contains "utilman.exe" or tgt.process.cmdline contains "osk.exe" or tgt.process.cmdline contains "Magnify.exe" or tgt.process.cmdline contains "Narrator.exe" or tgt.process.cmdline contains "DisplaySwitch.exe")))
 ```
 
