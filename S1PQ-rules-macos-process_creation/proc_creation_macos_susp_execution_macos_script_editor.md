@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-03-2025 01:11:30):
+// Translated content (automatically translated on 23-03-2025 01:17:36):
 event.type="Process Creation" and (endpoint.os="osx" and (src.process.image.path contains "/Script Editor" and ((tgt.process.image.path contains "/curl" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/sh" or tgt.process.image.path contains "/zsh" or tgt.process.image.path contains "/dash" or tgt.process.image.path contains "/fish" or tgt.process.image.path contains "/osascript" or tgt.process.image.path contains "/mktemp" or tgt.process.image.path contains "/chmod" or tgt.process.image.path contains "/php" or tgt.process.image.path contains "/nohup" or tgt.process.image.path contains "/openssl" or tgt.process.image.path contains "/plutil" or tgt.process.image.path contains "/PlistBuddy" or tgt.process.image.path contains "/xattr" or tgt.process.image.path contains "/sqlite" or tgt.process.image.path contains "/funzip" or tgt.process.image.path contains "/popen") or (tgt.process.image.path contains "python" or tgt.process.image.path contains "perl"))))
 ```
 
