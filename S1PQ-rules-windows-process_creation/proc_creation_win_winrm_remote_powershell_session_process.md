@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-03-2025 01:57:22):
+// Translated content (automatically translated on 25-03-2025 01:54:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wsmprovhost.exe" or src.process.image.path contains "\wsmprovhost.exe")) | columns ComputerName,tgt.process.user,tgt.process.cmdline
 ```
 
