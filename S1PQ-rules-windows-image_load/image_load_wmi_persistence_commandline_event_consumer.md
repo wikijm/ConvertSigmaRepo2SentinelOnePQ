@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-03-2025 01:13:25):
+// Translated content (automatically translated on 26-03-2025 01:12:45):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path="C:\Windows\System32\wbem\WmiPrvSE.exe" and module.path contains "\wbemcons.dll"))
 ```
 
