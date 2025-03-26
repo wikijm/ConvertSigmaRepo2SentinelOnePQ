@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-03-2025 01:54:51):
+// Translated content (automatically translated on 26-03-2025 01:54:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\SepRemovalToolNative_x64.exe" or (tgt.process.image.path contains "\CATClean.exe" and tgt.process.cmdline contains "--uninstall") or (tgt.process.image.path contains "\NetInstaller.exe" and tgt.process.cmdline contains "-r") or (tgt.process.image.path contains "\WFPUnins.exe" and (tgt.process.cmdline contains "/uninstall" and tgt.process.cmdline contains "/enterprise"))))
 ```
 
