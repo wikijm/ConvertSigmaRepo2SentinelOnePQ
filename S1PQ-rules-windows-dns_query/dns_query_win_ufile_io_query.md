@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-03-2025 01:52:56):
+// Translated content (automatically translated on 28-03-2025 01:53:15):
 event.category="DNS" and (endpoint.os="windows" and event.dns.request contains "ufile.io")
 ```
 
