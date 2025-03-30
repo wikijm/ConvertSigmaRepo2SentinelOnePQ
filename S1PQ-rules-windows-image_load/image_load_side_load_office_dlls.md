@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-03-2025 01:11:42):
+// Translated content (automatically translated on 30-03-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\outllib.dll" and (not (module.path contains "C:\Program Files\Microsoft Office\OFFICE" or module.path contains "C:\Program Files (x86)\Microsoft Office\OFFICE" or module.path contains "C:\Program Files\Microsoft Office\Root\OFFICE" or module.path contains "C:\Program Files (x86)\Microsoft Office\Root\OFFICE"))))
 ```
 
