@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-04-2025 01:56:10):
+// Translated content (automatically translated on 03-04-2025 01:54:39):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\vbc.exe" and tgt.process.image.path contains "\cvtres.exe"))
 ```
 
