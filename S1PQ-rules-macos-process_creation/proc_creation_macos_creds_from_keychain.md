@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-04-2025 01:14:31):
+// Translated content (automatically translated on 03-04-2025 01:13:41):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path="/usr/bin/security" and (tgt.process.cmdline contains "find-certificate" or tgt.process.cmdline contains " export ")) or (tgt.process.cmdline contains " dump-keychain " or tgt.process.cmdline contains " login-keychain ")))
 ```
 
