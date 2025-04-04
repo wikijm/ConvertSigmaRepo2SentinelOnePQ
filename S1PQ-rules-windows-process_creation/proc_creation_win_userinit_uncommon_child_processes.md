@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-04-2025 01:54:39):
+// Translated content (automatically translated on 04-04-2025 01:54:46):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\userinit.exe" and (not tgt.process.image.path contains ":\WINDOWS\explorer.exe") and (not ((tgt.process.cmdline contains "netlogon.bat" or tgt.process.cmdline contains "UsrLogon.cmd") or tgt.process.cmdline="PowerShell.exe" or (tgt.process.image.path contains ":\Windows\System32\proquota.exe" or tgt.process.image.path contains ":\Windows\SysWOW64\proquota.exe") or (tgt.process.image.path contains ":\Program Files (x86)\Citrix\HDX\bin\cmstart.exe" or tgt.process.image.path contains ":\Program Files (x86)\Citrix\HDX\bin\icast.exe" or tgt.process.image.path contains ":\Program Files (x86)\Citrix\System32\icast.exe" or tgt.process.image.path contains ":\Program Files\Citrix\HDX\bin\cmstart.exe" or tgt.process.image.path contains ":\Program Files\Citrix\HDX\bin\icast.exe" or tgt.process.image.path contains ":\Program Files\Citrix\System32\icast.exe") or not (tgt.process.image.path matches "\.*")))))
 ```
 
