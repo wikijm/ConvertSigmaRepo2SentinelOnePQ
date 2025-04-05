@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2025 01:54:46):
+// Translated content (automatically translated on 05-04-2025 01:53:05):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\mmc.exe" and src.process.cmdline contains "WF.msc") and (not tgt.process.image.path contains "\WerFault.exe")))
 ```
 

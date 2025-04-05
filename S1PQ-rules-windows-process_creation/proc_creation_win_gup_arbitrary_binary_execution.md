@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2025 01:54:46):
+// Translated content (automatically translated on 05-04-2025 01:53:05):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\gup.exe" and tgt.process.image.path contains "\explorer.exe") and (not ((tgt.process.image.path contains "\explorer.exe" and tgt.process.cmdline contains "\Notepad++\notepad++.exe") or src.process.image.path contains "\Notepad++\updater\" or not (tgt.process.cmdline matches "\.*")))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-04-2025 01:54:46):
+// Translated content (automatically translated on 05-04-2025 01:53:05):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\SharpUp.exe" or tgt.process.displayName="SharpUp" or (tgt.process.cmdline contains "HijackablePaths" or tgt.process.cmdline contains "UnquotedServicePath" or tgt.process.cmdline contains "ProcessDLLHijack" or tgt.process.cmdline contains "ModifiableServiceBinaries" or tgt.process.cmdline contains "ModifiableScheduledTask" or tgt.process.cmdline contains "DomainGPPPassword" or tgt.process.cmdline contains "CachedGPPPassword")))
 ```
 
