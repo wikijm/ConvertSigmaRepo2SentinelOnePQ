@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-04-2025 01:17:28):
+// Translated content (automatically translated on 07-04-2025 01:15:33):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\scrcons.exe" and (module.path contains "\vbscript.dll" or module.path contains "\wbemdisp.dll" or module.path contains "\wshom.ocx" or module.path contains "\scrrun.dll")))
 ```
 
