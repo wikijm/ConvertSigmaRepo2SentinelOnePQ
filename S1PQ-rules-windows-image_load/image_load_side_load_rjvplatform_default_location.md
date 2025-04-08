@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-04-2025 01:15:33):
+// Translated content (automatically translated on 08-04-2025 01:13:29):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path="C:\Windows\System32\SystemResetPlatform\SystemResetPlatform.exe" and module.path="C:\$SysReset\Framework\Stack\RjvPlatform.dll"))
 ```
 
