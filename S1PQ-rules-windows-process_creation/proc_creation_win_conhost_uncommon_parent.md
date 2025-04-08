@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 07-04-2025 01:58:29):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\conhost.exe" and (src.process.image.path contains "\explorer.exe" or src.process.image.path contains "\lsass.exe" or src.process.image.path contains "\regsvr32.exe" or src.process.image.path contains "\rundll32.exe" or src.process.image.path contains "\services.exe" or src.process.image.path contains "\smss.exe" or src.process.image.path contains "\spoolsv.exe" or src.process.image.path contains "\svchost.exe" or src.process.image.path contains "\userinit.exe" or src.process.image.path contains "\wininit.exe" or src.process.image.path contains "\winlogon.exe")) and (not (src.process.cmdline contains "-k apphost -s AppHostSvc" or src.process.cmdline contains "-k imgsvc" or src.process.cmdline contains "-k localService -p -s RemoteRegistry" or src.process.cmdline contains "-k LocalSystemNetworkRestricted -p -s NgcSvc" or src.process.cmdline contains "-k NetSvcs -p -s NcaSvc" or src.process.cmdline contains "-k netsvcs -p -s NetSetupSvc" or src.process.cmdline contains "-k netsvcs -p -s wlidsvc" or src.process.cmdline contains "-k NetworkService -p -s DoSvc" or src.process.cmdline contains "-k wsappx -p -s AppXSvc" or src.process.cmdline contains "-k wsappx -p -s ClipSVC")) and (not (src.process.cmdline contains "C:\Program Files (x86)\Dropbox\Client\" or src.process.cmdline contains "C:\Program Files\Dropbox\Client\"))))
+// Translated content (automatically translated on 08-04-2025 01:55:30):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\conhost.exe" and (src.process.image.path contains "\explorer.exe" or src.process.image.path contains "\lsass.exe" or src.process.image.path contains "\regsvr32.exe" or src.process.image.path contains "\rundll32.exe" or src.process.image.path contains "\services.exe" or src.process.image.path contains "\smss.exe" or src.process.image.path contains "\spoolsv.exe" or src.process.image.path contains "\svchost.exe" or src.process.image.path contains "\userinit.exe" or src.process.image.path contains "\wininit.exe" or src.process.image.path contains "\winlogon.exe")) and (not (src.process.cmdline contains "-k apphost -s AppHostSvc" or src.process.cmdline contains "-k imgsvc" or src.process.cmdline contains "-k localService -p -s RemoteRegistry" or src.process.cmdline contains "-k LocalSystemNetworkRestricted -p -s NgcSvc" or src.process.cmdline contains "-k NetSvcs -p -s NcaSvc" or src.process.cmdline contains "-k netsvcs -p -s NetSetupSvc" or src.process.cmdline contains "-k netsvcs -p -s wlidsvc" or src.process.cmdline contains "-k NetworkService -p -s DoSvc" or src.process.cmdline contains "-k wsappx -p -s AppXSvc" or src.process.cmdline contains "-k wsappx -p -s ClipSVC" or src.process.cmdline contains "-k wusvcs -p -s WaaSMedicSvc")) and (not (src.process.cmdline contains "C:\Program Files (x86)\Dropbox\Client\" or src.process.cmdline contains "C:\Program Files\Dropbox\Client\"))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.elastic.co/guide/en/security/current/conhost-spawned-by-suspicious-parent-process.html
 author: Tim Rauch, Elastic (idea)
 date: 2022-09-28
-modified: 2023-03-29
+modified: 2025-03-06
 tags:
     - attack.execution
     - attack.t1059
@@ -52,6 +52,7 @@ detection:
             - '-k NetworkService -p -s DoSvc'
             - '-k wsappx -p -s AppXSvc'
             - '-k wsappx -p -s ClipSVC'
+            - '-k wusvcs -p -s WaaSMedicSvc'
     filter_optional_dropbox:
         ParentCommandLine|contains:
             - 'C:\Program Files (x86)\Dropbox\Client\'

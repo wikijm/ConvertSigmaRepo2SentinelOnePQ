@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 07-04-2025 01:58:29):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\svchost.exe" or tgt.process.image.path contains "\taskhost.exe" or tgt.process.image.path contains "\lsm.exe" or tgt.process.image.path contains "\lsass.exe" or tgt.process.image.path contains "\services.exe" or tgt.process.image.path contains "\lsaiso.exe" or tgt.process.image.path contains "\csrss.exe" or tgt.process.image.path contains "\wininit.exe" or tgt.process.image.path contains "\winlogon.exe") and (not (((src.process.image.path contains "\SavService.exe" or src.process.image.path contains "\ngen.exe") or (src.process.image.path contains "\System32\" or src.process.image.path contains "\SysWOW64\")) or ((src.process.image.path contains "\Windows Defender\" or src.process.image.path contains "\Microsoft Security Client\") and src.process.image.path contains "\MsMpEng.exe") or (not (src.process.image.path matches "\.*") or src.process.image.path="-")))))
+// Translated content (automatically translated on 08-04-2025 01:55:30):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\svchost.exe" or tgt.process.image.path contains "\taskhost.exe" or tgt.process.image.path contains "\lsm.exe" or tgt.process.image.path contains "\lsass.exe" or tgt.process.image.path contains "\services.exe" or tgt.process.image.path contains "\lsaiso.exe" or tgt.process.image.path contains "\csrss.exe" or tgt.process.image.path contains "\wininit.exe" or tgt.process.image.path contains "\winlogon.exe") and (not (((src.process.image.path contains "\SavService.exe" or src.process.image.path contains "\ngen.exe") or (src.process.image.path contains "\System32\" or src.process.image.path contains "\SysWOW64\")) or ((src.process.image.path contains "\Windows Defender\" or src.process.image.path contains "\Microsoft Security Client\") and src.process.image.path contains "\MsMpEng.exe") or (not (src.process.image.path matches "\.*") or (src.process.image.path in ("","-")))))))
 ```
 
 
@@ -16,7 +16,7 @@ references:
     - https://www.13cubed.com/downloads/windows_process_genealogy_v2.pdf
 author: vburov
 date: 2019-02-23
-modified: 2022-02-14
+modified: 2025-03-06
 tags:
     - attack.defense-evasion
     - attack.t1036.003
@@ -50,7 +50,9 @@ detection:
         ParentImage|endswith: '\MsMpEng.exe'
     filter_null:
         - ParentImage: null
-        - ParentImage: '-'
+        - ParentImage:
+              - ''
+              - '-'
     condition: selection and not 1 of filter_*
 falsepositives:
     - Some security products seem to spawn these
