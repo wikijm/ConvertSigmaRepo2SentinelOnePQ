@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-04-2025 01:55:35):
+// Translated content (automatically translated on 11-04-2025 01:56:18):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "txt:" and ((tgt.process.cmdline contains "type " and tgt.process.cmdline contains " > ") or (tgt.process.cmdline contains "makecab " and tgt.process.cmdline contains ".cab") or (tgt.process.cmdline contains "reg " and tgt.process.cmdline contains " export ") or (tgt.process.cmdline contains "regedit " and tgt.process.cmdline contains " /E ") or (tgt.process.cmdline contains "esentutl " and tgt.process.cmdline contains " /y " and tgt.process.cmdline contains " /d " and tgt.process.cmdline contains " /o "))))
 ```
 

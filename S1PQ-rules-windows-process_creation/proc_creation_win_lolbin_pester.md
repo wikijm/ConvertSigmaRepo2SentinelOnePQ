@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-04-2025 01:55:35):
+// Translated content (automatically translated on 11-04-2025 01:56:18):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\powershell.exe" or src.process.image.path contains "\pwsh.exe") and src.process.cmdline contains "\WindowsPowerShell\Modules\Pester\") and (src.process.cmdline contains "{ Invoke-Pester -EnableExit ;" or src.process.cmdline contains "{ Get-Help \"")))
 ```
 
