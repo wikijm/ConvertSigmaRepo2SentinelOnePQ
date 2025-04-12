@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-04-2025 01:14:38):
+// Translated content (automatically translated on 12-04-2025 01:12:58):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/xattr" and (tgt.process.cmdline contains "-d" and tgt.process.cmdline contains "com.apple.quarantine")))
 ```
 
