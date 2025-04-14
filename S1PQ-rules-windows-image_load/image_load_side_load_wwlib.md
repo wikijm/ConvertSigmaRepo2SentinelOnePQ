@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-04-2025 02:41:34):
+// Translated content (automatically translated on 14-04-2025 01:16:58):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\wwlib.dll" and (not ((src.process.image.path contains "C:\Program Files (x86)\Microsoft Office\" or src.process.image.path contains "C:\Program Files\Microsoft Office\") and src.process.image.path contains "\winword.exe" and (module.path contains "C:\Program Files (x86)\Microsoft Office\" or module.path contains "C:\Program Files\Microsoft Office\")))))
 ```
 
