@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:15:58):
+// Translated content (automatically translated on 17-04-2025 01:15:01):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/sysctl" or tgt.process.cmdline contains "sysctl") and (tgt.process.cmdline contains "hw." or tgt.process.cmdline contains "kern." or tgt.process.cmdline contains "machdep.")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.pat
 ```yaml
 title: System Information Discovery Via Sysctl - MacOS
 id: 6ff08e55-ea53-4f27-94a1-eff92e6d9d5c
-status: experimental
+status: test
 description: |
     Detects the execution of "sysctl" with specific arguments that have been used by threat actors and malware. It provides system hardware information.
     This process is primarily used to detect and avoid virtualization and analysis environments.

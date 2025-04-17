@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:15:58):
+// Translated content (automatically translated on 17-04-2025 01:15:01):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/tmutil" or tgt.process.cmdline contains "tmutil") and tgt.process.cmdline contains "disable"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.pat
 ```yaml
 title: Time Machine Backup Disabled Via Tmutil - MacOS
 id: 2c95fa8a-8b8d-4787-afce-7117ceb8e3da
-status: experimental
+status: test
 description: |
     Detects disabling of Time Machine (Apple's automated backup utility software) via the native macOS backup utility "tmutil".
     An attacker can use this to prevent backups from occurring.

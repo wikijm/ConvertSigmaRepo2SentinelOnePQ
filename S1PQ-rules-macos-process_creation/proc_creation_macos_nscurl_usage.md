@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:15:58):
+// Translated content (automatically translated on 17-04-2025 01:15:01):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/nscurl" and (tgt.process.cmdline contains "--download " or tgt.process.cmdline contains "--download-directory " or tgt.process.cmdline contains "--output " or tgt.process.cmdline contains "-dir " or tgt.process.cmdline contains "-dl " or tgt.process.cmdline contains "-ld" or tgt.process.cmdline contains "-o ")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path
 ```yaml
 title: File Download Via Nscurl - MacOS
 id: 6d8a7cf1-8085-423b-b87d-7e880faabbdf
-status: experimental
+status: test
 description: Detects the execution of the nscurl utility in order to download files.
 references:
     - https://www.loobins.io/binaries/nscurl/

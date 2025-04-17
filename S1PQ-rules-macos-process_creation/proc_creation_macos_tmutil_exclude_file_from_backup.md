@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:15:58):
+// Translated content (automatically translated on 17-04-2025 01:15:01):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/tmutil" or tgt.process.cmdline contains "tmutil") and tgt.process.cmdline contains "addexclusion"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.pat
 ```yaml
 title: New File Exclusion Added To Time Machine Via Tmutil - MacOS
 id: 9acf45ed-3a26-4062-bf08-56857613eb52
-status: experimental
+status: test
 description: |
     Detects the addition of a new file or path exclusion to MacOS Time Machine via the "tmutil" utility.
     An adversary could exclude a path from Time Machine backups to prevent certain files from being backed up.

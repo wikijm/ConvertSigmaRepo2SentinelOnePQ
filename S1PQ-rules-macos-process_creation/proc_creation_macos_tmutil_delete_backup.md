@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:15:58):
+// Translated content (automatically translated on 17-04-2025 01:15:01):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/tmutil" or tgt.process.cmdline contains "tmutil") and tgt.process.cmdline contains "delete"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.pat
 ```yaml
 title: Time Machine Backup Deletion Attempt Via Tmutil - MacOS
 id: 452df256-da78-427a-866f-49fa04417d74
-status: experimental
+status: test
 description: |
     Detects deletion attempts of MacOS Time Machine backups via the native backup utility "tmutil".
     An adversary may perform this action before launching a ransonware attack to prevent the victim from restoring their files.
