@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:58:40):
+// Translated content (automatically translated on 17-04-2025 01:57:01):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Acrobat Reader" or src.process.image.path contains "Microsoft Office" or src.process.image.path contains "PDF Reader") and (tgt.process.image.path contains "\brave.exe" or tgt.process.image.path contains "\chrome.exe" or tgt.process.image.path contains "\firefox.exe" or tgt.process.image.path contains "\msedge.exe" or tgt.process.image.path contains "\opera.exe" or tgt.process.image.path contains "\maxthon.exe" or tgt.process.image.path contains "\seamonkey.exe" or tgt.process.image.path contains "\vivaldi.exe" or tgt.process.image.path contains "") and tgt.process.cmdline contains "http"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image
 ```yaml
 title: Potential Suspicious Browser Launch From Document Reader Process
 id: 1193d960-2369-499f-a158-7b50a31df682
-status: experimental
+status: test
 description: |
     Detects when a browser process or browser tab is launched from an application that handles document files such as Adobe, Microsoft Office, etc. And connects to a web application over http(s), this could indicate a possible phishing attempt.
 references:

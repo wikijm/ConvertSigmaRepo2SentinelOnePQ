@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:58:40):
+// Translated content (automatically translated on 17-04-2025 01:57:01):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "-m 1M" or tgt.process.cmdline contains "-m 2M" or tgt.process.cmdline contains "-m 3M") and (tgt.process.cmdline contains "restrict=off" and tgt.process.cmdline contains "-netdev " and tgt.process.cmdline contains "connect=" and tgt.process.cmdline contains "-nographic")) and (not (tgt.process.cmdline contains " -cdrom " or tgt.process.cmdline contains " type=virt " or tgt.process.cmdline contains " -blockdev "))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdl
 ```yaml
 title: Potentially Suspicious Usage Of Qemu
 id: 5fc297ae-25b6-488a-8f25-cc12ac29b744
-status: experimental
+status: test
 description: |
     Detects potentially suspicious execution of the Qemu utility in a Windows environment.
     Threat actors have leveraged this utility and this technique for achieving network access as reported by Kaspersky.

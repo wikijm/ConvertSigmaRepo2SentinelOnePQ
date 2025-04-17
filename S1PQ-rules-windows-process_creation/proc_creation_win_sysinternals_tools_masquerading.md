@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 16-04-2025 01:58:40):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\accesschk.exe" or tgt.process.image.path contains "\accesschk64.exe" or tgt.process.image.path contains "\AccessEnum.exe" or tgt.process.image.path contains "\ADExplorer.exe" or tgt.process.image.path contains "\ADExplorer64.exe" or tgt.process.image.path contains "\ADInsight.exe" or tgt.process.image.path contains "\ADInsight64.exe" or tgt.process.image.path contains "\adrestore.exe" or tgt.process.image.path contains "\adrestore64.exe" or tgt.process.image.path contains "\Autologon.exe" or tgt.process.image.path contains "\Autologon64.exe" or tgt.process.image.path contains "\Autoruns.exe" or tgt.process.image.path contains "\Autoruns64.exe" or tgt.process.image.path contains "\autorunsc.exe" or tgt.process.image.path contains "\autorunsc64.exe" or tgt.process.image.path contains "\Bginfo.exe" or tgt.process.image.path contains "\Bginfo64.exe" or tgt.process.image.path contains "\Cacheset.exe" or tgt.process.image.path contains "\Cacheset64.exe" or tgt.process.image.path contains "\Clockres.exe" or tgt.process.image.path contains "\Clockres64.exe" or tgt.process.image.path contains "\Contig.exe" or tgt.process.image.path contains "\Contig64.exe" or tgt.process.image.path contains "\Coreinfo.exe" or tgt.process.image.path contains "\Coreinfo64.exe" or tgt.process.image.path contains "\CPUSTRES.EXE" or tgt.process.image.path contains "\CPUSTRES64.EXE" or tgt.process.image.path contains "\ctrl2cap.exe" or tgt.process.image.path contains "\Dbgview.exe" or tgt.process.image.path contains "\dbgview64.exe" or tgt.process.image.path contains "\Desktops.exe" or tgt.process.image.path contains "\Desktops64.exe" or tgt.process.image.path contains "\disk2vhd.exe" or tgt.process.image.path contains "\disk2vhd64.exe" or tgt.process.image.path contains "\diskext.exe" or tgt.process.image.path contains "\diskext64.exe" or tgt.process.image.path contains "\Diskmon.exe" or tgt.process.image.path contains "\Diskmon64.exe" or tgt.process.image.path contains "\DiskView.exe" or tgt.process.image.path contains "\DiskView64.exe" or tgt.process.image.path contains "\du.exe" or tgt.process.image.path contains "\du64.exe" or tgt.process.image.path contains "\efsdump.exe" or tgt.process.image.path contains "\FindLinks.exe" or tgt.process.image.path contains "\FindLinks64.exe" or tgt.process.image.path contains "\handle.exe" or tgt.process.image.path contains "\handle64.exe" or tgt.process.image.path contains "\hex2dec.exe" or tgt.process.image.path contains "\hex2dec64.exe" or tgt.process.image.path contains "\junction.exe" or tgt.process.image.path contains "\junction64.exe" or tgt.process.image.path contains "\ldmdump.exe" or tgt.process.image.path contains "\listdlls.exe" or tgt.process.image.path contains "\listdlls64.exe" or tgt.process.image.path contains "\livekd.exe" or tgt.process.image.path contains "\livekd64.exe" or tgt.process.image.path contains "\loadOrd.exe" or tgt.process.image.path contains "\loadOrd64.exe" or tgt.process.image.path contains "\loadOrdC.exe" or tgt.process.image.path contains "\loadOrdC64.exe" or tgt.process.image.path contains "\logonsessions.exe" or tgt.process.image.path contains "\logonsessions64.exe" or tgt.process.image.path contains "\movefile.exe" or tgt.process.image.path contains "\movefile64.exe" or tgt.process.image.path contains "\notmyfault.exe" or tgt.process.image.path contains "\notmyfault64.exe" or tgt.process.image.path contains "\notmyfaultc.exe" or tgt.process.image.path contains "\notmyfaultc64.exe" or tgt.process.image.path contains "\ntfsinfo.exe" or tgt.process.image.path contains "\ntfsinfo64.exe" or tgt.process.image.path contains "\pendmoves.exe" or tgt.process.image.path contains "\pendmoves64.exe" or tgt.process.image.path contains "\pipelist.exe" or tgt.process.image.path contains "\pipelist64.exe" or tgt.process.image.path contains "\portmon.exe" or tgt.process.image.path contains "\procdump.exe" or tgt.process.image.path contains "\procdump64.exe" or tgt.process.image.path contains "\procexp.exe" or tgt.process.image.path contains "\procexp64.exe" or tgt.process.image.path contains "\Procmon.exe" or tgt.process.image.path contains "\Procmon64.exe" or tgt.process.image.path contains "\psExec.exe" or tgt.process.image.path contains "\psExec64.exe" or tgt.process.image.path contains "\psfile.exe" or tgt.process.image.path contains "\psfile64.exe" or tgt.process.image.path contains "\psGetsid.exe" or tgt.process.image.path contains "\psGetsid64.exe" or tgt.process.image.path contains "\psInfo.exe" or tgt.process.image.path contains "\psInfo64.exe" or tgt.process.image.path contains "\pskill.exe" or tgt.process.image.path contains "\pskill64.exe" or tgt.process.image.path contains "\pslist.exe" or tgt.process.image.path contains "\pslist64.exe" or tgt.process.image.path contains "\psLoggedon.exe" or tgt.process.image.path contains "\psLoggedon64.exe" or tgt.process.image.path contains "\psloglist.exe" or tgt.process.image.path contains "\psloglist64.exe" or tgt.process.image.path contains "\pspasswd.exe" or tgt.process.image.path contains "\pspasswd64.exe" or tgt.process.image.path contains "\psping.exe" or tgt.process.image.path contains "\psping64.exe" or tgt.process.image.path contains "\psService.exe" or tgt.process.image.path contains "\psService64.exe" or tgt.process.image.path contains "\psshutdown.exe" or tgt.process.image.path contains "\psshutdown64.exe" or tgt.process.image.path contains "\pssuspend.exe" or tgt.process.image.path contains "\pssuspend64.exe" or tgt.process.image.path contains "\RAMMap.exe" or tgt.process.image.path contains "\RDCMan.exe" or tgt.process.image.path contains "\RegDelNull.exe" or tgt.process.image.path contains "\RegDelNull64.exe" or tgt.process.image.path contains "\regjump.exe" or tgt.process.image.path contains "\ru.exe" or tgt.process.image.path contains "\ru64.exe" or tgt.process.image.path contains "\sdelete.exe" or tgt.process.image.path contains "\sdelete64.exe" or tgt.process.image.path contains "\ShareEnum.exe" or tgt.process.image.path contains "\ShareEnum64.exe" or tgt.process.image.path contains "\shellRunas.exe" or tgt.process.image.path contains "\sigcheck.exe" or tgt.process.image.path contains "\sigcheck64.exe" or tgt.process.image.path contains "\streams.exe" or tgt.process.image.path contains "\streams64.exe" or tgt.process.image.path contains "\strings.exe" or tgt.process.image.path contains "\strings64.exe" or tgt.process.image.path contains "\sync.exe" or tgt.process.image.path contains "\sync64.exe" or tgt.process.image.path contains "\Sysmon.exe" or tgt.process.image.path contains "\Sysmon64.exe" or tgt.process.image.path contains "\tcpvcon.exe" or tgt.process.image.path contains "\tcpvcon64.exe" or tgt.process.image.path contains "\tcpview.exe" or tgt.process.image.path contains "\tcpview64.exe" or tgt.process.image.path contains "\Testlimit.exe" or tgt.process.image.path contains "\Testlimit64.exe" or tgt.process.image.path contains "\vmmap.exe" or tgt.process.image.path contains "\vmmap64.exe" or tgt.process.image.path contains "\Volumeid.exe" or tgt.process.image.path contains "\Volumeid64.exe" or tgt.process.image.path contains "\whois.exe" or tgt.process.image.path contains "\whois64.exe" or tgt.process.image.path contains "\Winobj.exe" or tgt.process.image.path contains "\Winobj64.exe" or tgt.process.image.path contains "\ZoomIt.exe" or tgt.process.image.path contains "\ZoomIt64.exe") and (not ((tgt.process.publisher in ("Sysinternals - www.sysinternals.com","Sysinternals")) or not (tgt.process.publisher matches "\.*")))))
+// Translated content (automatically translated on 17-04-2025 01:57:01):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\accesschk.exe" or tgt.process.image.path contains "\accesschk64.exe" or tgt.process.image.path contains "\AccessEnum.exe" or tgt.process.image.path contains "\ADExplorer.exe" or tgt.process.image.path contains "\ADExplorer64.exe" or tgt.process.image.path contains "\ADInsight.exe" or tgt.process.image.path contains "\ADInsight64.exe" or tgt.process.image.path contains "\adrestore.exe" or tgt.process.image.path contains "\adrestore64.exe" or tgt.process.image.path contains "\Autologon.exe" or tgt.process.image.path contains "\Autologon64.exe" or tgt.process.image.path contains "\Autoruns.exe" or tgt.process.image.path contains "\Autoruns64.exe" or tgt.process.image.path contains "\autorunsc.exe" or tgt.process.image.path contains "\autorunsc64.exe" or tgt.process.image.path contains "\Bginfo.exe" or tgt.process.image.path contains "\Bginfo64.exe" or tgt.process.image.path contains "\Cacheset.exe" or tgt.process.image.path contains "\Cacheset64.exe" or tgt.process.image.path contains "\Clockres.exe" or tgt.process.image.path contains "\Clockres64.exe" or tgt.process.image.path contains "\Contig.exe" or tgt.process.image.path contains "\Contig64.exe" or tgt.process.image.path contains "\Coreinfo.exe" or tgt.process.image.path contains "\Coreinfo64.exe" or tgt.process.image.path contains "\CPUSTRES.EXE" or tgt.process.image.path contains "\CPUSTRES64.EXE" or tgt.process.image.path contains "\ctrl2cap.exe" or tgt.process.image.path contains "\Dbgview.exe" or tgt.process.image.path contains "\dbgview64.exe" or tgt.process.image.path contains "\Desktops.exe" or tgt.process.image.path contains "\Desktops64.exe" or tgt.process.image.path contains "\disk2vhd.exe" or tgt.process.image.path contains "\disk2vhd64.exe" or tgt.process.image.path contains "\diskext.exe" or tgt.process.image.path contains "\diskext64.exe" or tgt.process.image.path contains "\Diskmon.exe" or tgt.process.image.path contains "\Diskmon64.exe" or tgt.process.image.path contains "\DiskView.exe" or tgt.process.image.path contains "\DiskView64.exe" or tgt.process.image.path contains "\du.exe" or tgt.process.image.path contains "\du64.exe" or tgt.process.image.path contains "\efsdump.exe" or tgt.process.image.path contains "\FindLinks.exe" or tgt.process.image.path contains "\FindLinks64.exe" or tgt.process.image.path contains "\handle.exe" or tgt.process.image.path contains "\handle64.exe" or tgt.process.image.path contains "\hex2dec.exe" or tgt.process.image.path contains "\hex2dec64.exe" or tgt.process.image.path contains "\junction.exe" or tgt.process.image.path contains "\junction64.exe" or tgt.process.image.path contains "\ldmdump.exe" or tgt.process.image.path contains "\listdlls.exe" or tgt.process.image.path contains "\listdlls64.exe" or tgt.process.image.path contains "\livekd.exe" or tgt.process.image.path contains "\livekd64.exe" or tgt.process.image.path contains "\loadOrd.exe" or tgt.process.image.path contains "\loadOrd64.exe" or tgt.process.image.path contains "\loadOrdC.exe" or tgt.process.image.path contains "\loadOrdC64.exe" or tgt.process.image.path contains "\logonsessions.exe" or tgt.process.image.path contains "\logonsessions64.exe" or tgt.process.image.path contains "\movefile.exe" or tgt.process.image.path contains "\movefile64.exe" or tgt.process.image.path contains "\notmyfault.exe" or tgt.process.image.path contains "\notmyfault64.exe" or tgt.process.image.path contains "\notmyfaultc.exe" or tgt.process.image.path contains "\notmyfaultc64.exe" or tgt.process.image.path contains "\ntfsinfo.exe" or tgt.process.image.path contains "\ntfsinfo64.exe" or tgt.process.image.path contains "\pendmoves.exe" or tgt.process.image.path contains "\pendmoves64.exe" or tgt.process.image.path contains "\pipelist.exe" or tgt.process.image.path contains "\pipelist64.exe" or tgt.process.image.path contains "\portmon.exe" or tgt.process.image.path contains "\procdump.exe" or tgt.process.image.path contains "\procdump64.exe" or tgt.process.image.path contains "\procexp.exe" or tgt.process.image.path contains "\procexp64.exe" or tgt.process.image.path contains "\Procmon.exe" or tgt.process.image.path contains "\Procmon64.exe" or tgt.process.image.path contains "\psExec.exe" or tgt.process.image.path contains "\psExec64.exe" or tgt.process.image.path contains "\psfile.exe" or tgt.process.image.path contains "\psfile64.exe" or tgt.process.image.path contains "\psGetsid.exe" or tgt.process.image.path contains "\psGetsid64.exe" or tgt.process.image.path contains "\psInfo.exe" or tgt.process.image.path contains "\psInfo64.exe" or tgt.process.image.path contains "\pskill.exe" or tgt.process.image.path contains "\pskill64.exe" or tgt.process.image.path contains "\pslist.exe" or tgt.process.image.path contains "\pslist64.exe" or tgt.process.image.path contains "\psLoggedon.exe" or tgt.process.image.path contains "\psLoggedon64.exe" or tgt.process.image.path contains "\psloglist.exe" or tgt.process.image.path contains "\psloglist64.exe" or tgt.process.image.path contains "\pspasswd.exe" or tgt.process.image.path contains "\pspasswd64.exe" or tgt.process.image.path contains "\psping.exe" or tgt.process.image.path contains "\psping64.exe" or tgt.process.image.path contains "\psService.exe" or tgt.process.image.path contains "\psService64.exe" or tgt.process.image.path contains "\psshutdown.exe" or tgt.process.image.path contains "\psshutdown64.exe" or tgt.process.image.path contains "\pssuspend.exe" or tgt.process.image.path contains "\pssuspend64.exe" or tgt.process.image.path contains "\RAMMap.exe" or tgt.process.image.path contains "\RAMMap64.exe" or tgt.process.image.path contains "\RDCMan.exe" or tgt.process.image.path contains "\RegDelNull.exe" or tgt.process.image.path contains "\RegDelNull64.exe" or tgt.process.image.path contains "\regjump.exe" or tgt.process.image.path contains "\ru.exe" or tgt.process.image.path contains "\ru64.exe" or tgt.process.image.path contains "\sdelete.exe" or tgt.process.image.path contains "\sdelete64.exe" or tgt.process.image.path contains "\ShareEnum.exe" or tgt.process.image.path contains "\ShareEnum64.exe" or tgt.process.image.path contains "\shellRunas.exe" or tgt.process.image.path contains "\sigcheck.exe" or tgt.process.image.path contains "\sigcheck64.exe" or tgt.process.image.path contains "\streams.exe" or tgt.process.image.path contains "\streams64.exe" or tgt.process.image.path contains "\strings.exe" or tgt.process.image.path contains "\strings64.exe" or tgt.process.image.path contains "\sync.exe" or tgt.process.image.path contains "\sync64.exe" or tgt.process.image.path contains "\Sysmon.exe" or tgt.process.image.path contains "\Sysmon64.exe" or tgt.process.image.path contains "\tcpvcon.exe" or tgt.process.image.path contains "\tcpvcon64.exe" or tgt.process.image.path contains "\tcpview.exe" or tgt.process.image.path contains "\tcpview64.exe" or tgt.process.image.path contains "\Testlimit.exe" or tgt.process.image.path contains "\Testlimit64.exe" or tgt.process.image.path contains "\vmmap.exe" or tgt.process.image.path contains "\vmmap64.exe" or tgt.process.image.path contains "\Volumeid.exe" or tgt.process.image.path contains "\Volumeid64.exe" or tgt.process.image.path contains "\whois.exe" or tgt.process.image.path contains "\whois64.exe" or tgt.process.image.path contains "\Winobj.exe" or tgt.process.image.path contains "\Winobj64.exe" or tgt.process.image.path contains "\ZoomIt.exe" or tgt.process.image.path contains "\ZoomIt64.exe") or (tgt.process.image.path contains "\accesschk64a.exe" or tgt.process.image.path contains "\ADExplorer64a.exe" or tgt.process.image.path contains "\ADInsight64a.exe" or tgt.process.image.path contains "\adrestore64a.exe" or tgt.process.image.path contains "\Autologon64a.exe" or tgt.process.image.path contains "\Autoruns64a.exe" or tgt.process.image.path contains "\autorunsc64a.exe" or tgt.process.image.path contains "\Clockres64a.exe" or tgt.process.image.path contains "\Contig64a.exe" or tgt.process.image.path contains "\Coreinfo64a.exe" or tgt.process.image.path contains "\Dbgview64a.exe" or tgt.process.image.path contains "\disk2vhd64a.exe" or tgt.process.image.path contains "\diskext64a.exe" or tgt.process.image.path contains "\DiskView64a.exe" or tgt.process.image.path contains "\du64a.exe" or tgt.process.image.path contains "\FindLinks64a.exe" or tgt.process.image.path contains "\handle64a.exe" or tgt.process.image.path contains "\hex2dec64a.exe" or tgt.process.image.path contains "\junction64a.exe" or tgt.process.image.path contains "\LoadOrd64a.exe" or tgt.process.image.path contains "\LoadOrdC64a.exe" or tgt.process.image.path contains "\logonsessions64a.exe" or tgt.process.image.path contains "\movefile64a.exe" or tgt.process.image.path contains "\notmyfault64a.exe" or tgt.process.image.path contains "\notmyfaultc64a.exe" or tgt.process.image.path contains "\pendmoves64a.exe" or tgt.process.image.path contains "\pipelist64a.exe" or tgt.process.image.path contains "\procdump64a.exe" or tgt.process.image.path contains "\procexp64a.exe" or tgt.process.image.path contains "\Procmon64a.exe" or tgt.process.image.path contains "\PsExec64a.exe" or tgt.process.image.path contains "\psfile64a.exe" or tgt.process.image.path contains "\PsGetsid64a.exe" or tgt.process.image.path contains "\PsInfo64a.exe" or tgt.process.image.path contains "\pskill64a.exe" or tgt.process.image.path contains "\psloglist64a.exe" or tgt.process.image.path contains "\pspasswd64a.exe" or tgt.process.image.path contains "\psping64a.exe" or tgt.process.image.path contains "\PsService64a.exe" or tgt.process.image.path contains "\pssuspend64a.exe" or tgt.process.image.path contains "\RAMMap64a.exe" or tgt.process.image.path contains "\RegDelNull64a.exe" or tgt.process.image.path contains "\ru64a.exe" or tgt.process.image.path contains "\sdelete64a.exe" or tgt.process.image.path contains "\sigcheck64a.exe" or tgt.process.image.path contains "\streams64a.exe" or tgt.process.image.path contains "\strings64a.exe" or tgt.process.image.path contains "\sync64a.exe" or tgt.process.image.path contains "\Sysmon64a.exe" or tgt.process.image.path contains "\tcpvcon64a.exe" or tgt.process.image.path contains "\tcpview64a.exe" or tgt.process.image.path contains "\vmmap64a.exe" or tgt.process.image.path contains "\whois64a.exe" or tgt.process.image.path contains "\Winobj64a.exe" or tgt.process.image.path contains "\ZoomIt64a.exe")) and (not (((tgt.process.publisher in ("Sysinternals - www.sysinternals.com","Sysinternals")) or tgt.process.displayName contains "Sysinternals") or (not (tgt.process.publisher matches "\.*") or not (tgt.process.displayName matches "\.*"))))))
 ```
 
 
@@ -9,17 +9,21 @@ event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image
 title: Potential Binary Impersonating Sysinternals Tools
 id: 7cce6fc8-a07f-4d84-a53e-96e1879843c9
 status: test
-description: Detects binaries that use the same name as legitimate sysinternals tools to evade detection
+description: |
+    Detects binaries that use the same name as legitimate sysinternals tools to evade detection.
+    This rule looks for the execution of binaries that are named similarly to Sysinternals tools.
+    Adversary may rename their malicious tools as legitimate Sysinternals tools to evade detection.
 references:
     - https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite
-author: frack113
+author: frack113, Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2021-12-20
-modified: 2022-12-08
+modified: 2025-04-12
 tags:
     - attack.execution
     - attack.defense-evasion
     - attack.t1218
     - attack.t1202
+    - attack.t1036.005
 logsource:
     category: process_creation
     product: windows
@@ -134,6 +138,7 @@ detection:
             - '\pssuspend.exe'
             - '\pssuspend64.exe'
             - '\RAMMap.exe'
+            - '\RAMMap64.exe'
             - '\RDCMan.exe'
             - '\RegDelNull.exe'
             - '\RegDelNull64.exe'
@@ -171,13 +176,72 @@ detection:
             - '\Winobj64.exe'
             - '\ZoomIt.exe'
             - '\ZoomIt64.exe'
+    selection_arm64:
+        Image|endswith:
+            - '\accesschk64a.exe'
+            - '\ADExplorer64a.exe'
+            - '\ADInsight64a.exe'
+            - '\adrestore64a.exe'
+            - '\Autologon64a.exe'
+            - '\Autoruns64a.exe'
+            - '\autorunsc64a.exe'
+            - '\Clockres64a.exe'
+            - '\Contig64a.exe'
+            - '\Coreinfo64a.exe'
+            - '\Dbgview64a.exe'
+            - '\disk2vhd64a.exe'
+            - '\diskext64a.exe'
+            - '\DiskView64a.exe'
+            - '\du64a.exe'
+            - '\FindLinks64a.exe'
+            - '\handle64a.exe'
+            - '\hex2dec64a.exe'
+            - '\junction64a.exe'
+            - '\LoadOrd64a.exe'
+            - '\LoadOrdC64a.exe'
+            - '\logonsessions64a.exe'
+            - '\movefile64a.exe'
+            - '\notmyfault64a.exe'
+            - '\notmyfaultc64a.exe'
+            - '\pendmoves64a.exe'
+            - '\pipelist64a.exe'
+            - '\procdump64a.exe'
+            - '\procexp64a.exe'
+            - '\Procmon64a.exe'
+            - '\PsExec64a.exe'
+            - '\psfile64a.exe'
+            - '\PsGetsid64a.exe'
+            - '\PsInfo64a.exe'
+            - '\pskill64a.exe'
+            - '\psloglist64a.exe'
+            - '\pspasswd64a.exe'
+            - '\psping64a.exe'
+            - '\PsService64a.exe'
+            - '\pssuspend64a.exe'
+            - '\RAMMap64a.exe'
+            - '\RegDelNull64a.exe'
+            - '\ru64a.exe'
+            - '\sdelete64a.exe'
+            - '\sigcheck64a.exe'
+            - '\streams64a.exe'
+            - '\strings64a.exe'
+            - '\sync64a.exe'
+            - '\Sysmon64a.exe'
+            - '\tcpvcon64a.exe'
+            - '\tcpview64a.exe'
+            - '\vmmap64a.exe'
+            - '\whois64a.exe'
+            - '\Winobj64a.exe'
+            - '\ZoomIt64a.exe'
     filter_valid:
-        Company:
-            - 'Sysinternals - www.sysinternals.com'
-            - 'Sysinternals'
+        - Company:
+              - 'Sysinternals - www.sysinternals.com'
+              - 'Sysinternals'
+        - Product|startswith: 'Sysinternals'
     filter_empty:
-        Company: null
-    condition: selection_exe and not 1 of filter*
+        - Company: null
+        - Product: null
+    condition: 1 of selection_* and not 1 of filter_*
 falsepositives:
     - Unknown
 level: medium
