@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-04-2025 01:57:01):
+// Translated content (automatically translated on 18-04-2025 01:54:16):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\reg.exe" and (tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" and tgt.process.cmdline contains "add" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "/d 0")))
 ```
 
@@ -19,7 +19,7 @@ references:
     - https://thedfirreport.com/2024/04/01/from-onenote-to-ransomnote-an-ice-cold-intrusion/
     - https://thedfirreport.com/2024/04/29/from-icedid-to-dagon-locker-ransomware-in-29-days/
     - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/
-author: '@Kostastsale, @TheDFIRReport'
+author: '@Kostastsale, TheDFIRReport'
 date: 2022-05-14
 modified: 2024-08-23
 tags:
