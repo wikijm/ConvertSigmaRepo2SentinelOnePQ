@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-04-2025 00:52:56):
+// Translated content (automatically translated on 18-04-2025 00:52:24):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/apt" or tgt.process.image.path contains "/apt-get") and tgt.process.cmdline contains "APT::Update::Pre-Invoke::="))
 ```
 
