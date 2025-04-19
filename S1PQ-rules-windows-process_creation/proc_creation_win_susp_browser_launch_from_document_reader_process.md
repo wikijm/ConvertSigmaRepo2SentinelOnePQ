@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-04-2025 01:54:16):
+// Translated content (automatically translated on 19-04-2025 01:52:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Acrobat Reader" or src.process.image.path contains "Microsoft Office" or src.process.image.path contains "PDF Reader") and (tgt.process.image.path contains "\brave.exe" or tgt.process.image.path contains "\chrome.exe" or tgt.process.image.path contains "\firefox.exe" or tgt.process.image.path contains "\msedge.exe" or tgt.process.image.path contains "\opera.exe" or tgt.process.image.path contains "\maxthon.exe" or tgt.process.image.path contains "\seamonkey.exe" or tgt.process.image.path contains "\vivaldi.exe" or tgt.process.image.path contains "") and tgt.process.cmdline contains "http"))
 ```
 
