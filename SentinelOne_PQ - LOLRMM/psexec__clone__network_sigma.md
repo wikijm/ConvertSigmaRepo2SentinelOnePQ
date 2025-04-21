@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and (url.address contains "user_managed" or event.dns.request contains "user_managed"))
 ```
 
@@ -19,7 +19,7 @@ id: 0e19d5d5-98be-43da-8498-9b25a7794086
 status: experimental
 description: Detects potential network activity of PSEXEC (Clone) RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

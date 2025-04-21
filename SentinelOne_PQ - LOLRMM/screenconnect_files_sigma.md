@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\Program Files*\ScreenConnect\App_Data\Session.db" or tgt.file.path="*C:\Program Files*\ScreenConnect\App_Data\User.xml" or tgt.file.path="*C:\ProgramData\ScreenConnect Client*\user.config"))
 ```
 
@@ -21,7 +21,7 @@ id: adb2440e-8700-4ab3-9a1a-6b761826955f
 status: experimental
 description: Detects potential files activity of ScreenConnect RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

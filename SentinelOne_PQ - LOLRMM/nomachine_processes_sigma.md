@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*nomachine*.exe" or src.process.image.path contains "nxd.exe"))
 ```
 
@@ -20,7 +20,7 @@ id: 40a4638d-dc15-40f9-be1f-f5667b56a562
 status: experimental
 description: Detects potential processes activity of NoMachine RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

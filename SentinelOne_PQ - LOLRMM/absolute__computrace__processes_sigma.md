@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "rpcnet.exe" or src.process.image.path contains "ctes.exe" or src.process.image.path contains "ctespersitence.exe" or src.process.image.path contains "cteshostsvc.exe" or src.process.image.path contains "rpcld.exe"))
 ```
 
@@ -23,7 +23,7 @@ id: f263b53c-1907-43ec-b69a-d81d3abeeb7e
 status: experimental
 description: Detects potential processes activity of Absolute (Computrace) RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

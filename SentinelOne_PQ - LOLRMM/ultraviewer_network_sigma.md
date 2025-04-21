@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains " .ultraviewer.net" or url.address contains "ultraviewer.net") or (event.dns.request contains " .ultraviewer.net" or event.dns.request contains "ultraviewer.net")))
 ```
 
@@ -20,7 +20,7 @@ id: c0e39e37-f563-46a1-90a7-2a1736c1165c
 status: experimental
 description: Detects potential network activity of UltraViewer RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

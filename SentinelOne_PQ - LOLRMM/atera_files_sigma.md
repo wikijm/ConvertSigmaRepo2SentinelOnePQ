@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\*" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe" or tgt.file.path contains "C:\Program Files\Atera Networks\AlphaAgent.exe" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe" or tgt.file.path contains "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe"))
 ```
 
@@ -27,7 +27,7 @@ id: a08c1267-edce-4af3-8f48-bf74bb4f52c6
 status: experimental
 description: Detects potential files activity of Atera RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

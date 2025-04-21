@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.category="Registry" and (endpoint.os="windows" and (registry.keyPath contains "KLM\SOFTWARE\WOW6432Node\Splashtop Inc.\*" or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Splashtop Software Updater" or registry.keyPath contains "HKLM\SYSTEM\CurrentControlSet\Services\SplashtopRemoteService" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Splashtop-Splashtop Streamer-Remote Session/Operational" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Splashtop-Splashtop Streamer-Status/Operational" or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Splashtop Software Updater\InstallRefCount" or registry.keyPath contains "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Network\SplashtopRemoteService" or registry.keyPath contains "HKU\.DEFAULT\Software\Splashtop Inc.\*" or registry.keyPath contains "HKU\SID\Software\Splashtop Inc.\*" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\Splashtop PDF Remote Printer" or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Splashtop Inc.\Splashtop Remote Server\ClientInfo\*"))
 ```
 
@@ -34,7 +34,7 @@ id: 04c91c15-0a2e-4092-8417-e011178ae756
 status: experimental
 description: Detects potential registry activity of Splashtop RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

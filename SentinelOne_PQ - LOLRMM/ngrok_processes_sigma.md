@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ngrok.exe")
 ```
 
@@ -19,7 +19,7 @@ id: 5c6a492b-4f87-4f2f-8f1d-95b1c7c16ef1
 status: experimental
 description: Detects potential processes activity of ngrok RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "aeroadmin.exe" or src.process.image.path contains "AeroAdmin.exe"))
 ```
 
@@ -20,7 +20,7 @@ id: bc9952c3-2d21-418e-9eed-a1d0450ee0c1
 status: experimental
 description: Detects potential processes activity of AeroAdmin RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

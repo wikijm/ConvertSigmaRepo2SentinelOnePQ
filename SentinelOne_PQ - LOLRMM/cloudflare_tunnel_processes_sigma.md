@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "cloudflared.exe")
 ```
 
@@ -19,7 +19,7 @@ id: 2f96065e-f2f6-4f4a-8567-4a79e03eeb5f
 status: experimental
 description: Detects potential processes activity of CloudFlare Tunnel RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

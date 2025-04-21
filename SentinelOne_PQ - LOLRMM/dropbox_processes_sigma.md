@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\Dropbox.exe")
 ```
 
@@ -19,7 +19,7 @@ id: 6300b5e7-3e3c-4c2b-8767-c92fb412f065
 status: experimental
 description: Detects potential processes activity of Dropbox RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

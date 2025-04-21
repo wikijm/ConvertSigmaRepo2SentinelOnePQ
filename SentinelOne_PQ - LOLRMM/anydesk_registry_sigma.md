@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.category="Registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\SOFTWARE\Clients\Media\AnyDesk" or registry.keyPath contains "HKLM\SYSTEM\CurrentControlSet\Services\AnyDesk" or registry.keyPath contains "HKLM\SOFTWARE\Classes\.anydesk\shell\open\command" or registry.keyPath contains "HKLM\SOFTWARE\Classes\AnyDesk\shell\open\command" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\AnyDesk Printer\*" or registry.keyPath contains "HKLM\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk" or registry.keyPath contains "HKLM\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk" or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\AnyDesk"))
 ```
 
@@ -26,7 +26,7 @@ id: cd914a84-51f3-4342-be98-4e5bc1b7a55e
 status: experimental
 description: Detects potential registry activity of AnyDesk RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

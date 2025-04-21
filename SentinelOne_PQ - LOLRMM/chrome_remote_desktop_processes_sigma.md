@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remote_host.exe" or src.process.image.path contains "remoting_host.exe" or src.process.image.path contains "\remoting_host.exe"))
 ```
 
@@ -21,7 +21,7 @@ id: 9ba8e1a9-1a5f-4297-bc82-712f5427355a
 status: experimental
 description: Detects potential processes activity of Chrome Remote Desktop RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2024 01:18:01):
+// Translated content (automatically translated on 21-04-2025 00:52:40):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\windows\System32\winevt\Logs\Splashtop-Splashtop Streamer-Status%4Operational.evtx" or tgt.file.path contains "C:\windows\System32\winevt\Logs\Splashtop-Splashtop Streamer-Remote Session%4Operational.evtx" or tgt.file.path contains "%PROGRAMDATA%\Splashtop\Temp\log\FTCLog.txt" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\agent_log.txt" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\SPLog.txt" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\svcinfo.txt" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\log\sysinfo.txt" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\SRService.exe" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\SRAgent.exe" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Software Updater\SSUAgent.exe" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\SRUtility.exe" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\SRFeature.exe" or tgt.file.path contains "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\db\SRAgent.sqlite3"))
 ```
 
@@ -31,7 +31,7 @@ id: 4281fc0d-d007-4455-93a4-c74479a91204
 status: experimental
 description: Detects potential files activity of Splashtop RMM tool
 author: LOLRMM Project
-date: 2024-08-07
+date: 2024/08/07
 tags:
 - attack.execution
 - attack.t1219
