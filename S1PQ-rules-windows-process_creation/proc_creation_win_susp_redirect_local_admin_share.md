@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-04-2025 02:04:08):
+// Translated content (automatically translated on 21-04-2025 02:02:55):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains ">" and (tgt.process.cmdline contains "\\127.0.0.1\admin$\" or tgt.process.cmdline contains "\\localhost\admin$\")))
 ```
 
