@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 21-04-2025 00:52:40):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "tacticalrmm.exe")
+// Translated content (automatically translated on 21-04-2025 01:38:38):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "tacticalrmm.exe" or src.process.image.path contains "tacticalrmm.exe"))
 ```
 
 
@@ -13,6 +13,7 @@ logsource:
 detection:
   selection:
     ParentImage|endswith:
+    - tacticalrmm.exe
     - tacticalrmm.exe
   condition: selection
 id: 58f7ad72-6d1a-46b6-b998-4a984395f7d5
