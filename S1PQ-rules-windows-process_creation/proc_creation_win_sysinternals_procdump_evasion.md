@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-04-2025 02:02:55):
+// Translated content (automatically translated on 22-04-2025 01:57:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "copy procdump" or tgt.process.cmdline contains "move procdump") or ((tgt.process.cmdline contains "copy " and tgt.process.cmdline contains ".dmp ") and (tgt.process.cmdline contains "2.dmp" or tgt.process.cmdline contains "lsass" or tgt.process.cmdline contains "out.dmp")) or (tgt.process.cmdline contains "copy lsass.exe_" or tgt.process.cmdline contains "move lsass.exe_")))
 ```
 
