@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-04-2025 01:20:19):
+// Translated content (automatically translated on 25-04-2025 01:21:05):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="linux" and (src.process.image.path contains "/bin/bash" and (not (dst.ip.address in ("127.0.0.1","0.0.0.0")))))
 ```
 
