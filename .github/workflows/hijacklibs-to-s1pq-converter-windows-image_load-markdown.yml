@@ -41,7 +41,7 @@ jobs:
         run: wget -O ./${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml ${{ env.SOURCEURL }}
       
       - name: Create one file per Sigma rule
-        run: python transformers/sigma-splittera.py --input "${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
+        run: python transformers/sigma-splitter.py --input "${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
 
       - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
         run: |
