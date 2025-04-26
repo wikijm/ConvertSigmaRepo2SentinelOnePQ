@@ -15,6 +15,7 @@ jobs:
       SIGMACATEGORY: "HijackLibs"
       PLATFORM: "windows"
       SIGMARULE: "image_load"
+      SOURCEURL: "https://hijacklibs.net/api/sigma_feed_image.yml"
     
     steps:
       - name: Checkout code
@@ -33,12 +34,15 @@ jobs:
         run: |
           sigma plugin install sentinelone-pq
         
-      - name: Get Sigma file
-        run: |
-          mkdir -p "${{ github.workspace }}/${{ env.SIGMACATEGORY }}"
-          cd '${{ env.SIGMACATEGORY }}'
-          wget -O ./${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml https://hijacklibs.net/api/sigma_feed_image.yml
-  
+      - name: Enter into HijackLibs folder
+        run: cd '${{ env.SIGMACATEGORY }}'
+        
+      - name: Download Sigma rules from HijackLibs
+        run: wget -O ./${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml ${{ env.SOURCEURL }}
+      
+      - name: Create one file per Sigma rule
+        run: python transformers/sigma-splittera.py --input "${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
+
       - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
         run: |
           mkdir -p "${{ github.workspace }}/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
@@ -52,6 +56,6 @@ jobs:
   
       - name: Push changes
         run: git push origin main
-  
+        
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
