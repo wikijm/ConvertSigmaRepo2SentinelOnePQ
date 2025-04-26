@@ -4,13 +4,21 @@ import argparse
 from sigma.rule import SigmaRule
 from sigma.backends.sentinelone_pq import SentinelOnePQBackend
 
-def main(rules_directory, output_directory):
+def main(rules_directory, output_directory, exclude_file):
     """
     Convert all Sigma .yml files from `rules_directory` into SentinelOne PowerQuery
     format, then write each translated rule + original YAML content to `output_directory`.
     """
     os.makedirs(output_directory, exist_ok=True)
     yaml_files = [f for f in os.listdir(rules_directory) if f.endswith('.yml')]
+
+    # Validate exclude_file and exclude it if valid
+    if exclude_file:
+        if exclude_file not in yaml_files:
+            print(f"Error: File '{exclude_file}' not found in the input folder '{rules_directory}'.")
+            return
+        yaml_files = [f for f in yaml_files if f != exclude_file]
+
     s1pqdef_backend = SentinelOnePQBackend()
     current_datetime = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
     processed_count = 0
@@ -50,5 +58,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Convert Sigma rules to SentinelOne PowerQuery format.')
     parser.add_argument('rules_directory', type=str, help='Directory containing Sigma rules in .yml format')
     parser.add_argument('output_directory', type=str, help='Directory to store the translated .md files')
+    parser.add_argument('--exclude', type=str, help='Name of the YAML file to exclude from conversion', default=None)
     args = parser.parse_args()
-    main(args.rules_directory, args.output_directory)
+    main(args.rules_directory, args.output_directory, args.exclude)
