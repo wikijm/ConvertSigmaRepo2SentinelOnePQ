@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-04-2025 01:59:34):
+// Translated content (automatically translated on 26-04-2025 01:54:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "copy procdump" or tgt.process.cmdline contains "move procdump") or ((tgt.process.cmdline contains "copy " and tgt.process.cmdline contains ".dmp ") and (tgt.process.cmdline contains "2.dmp" or tgt.process.cmdline contains "lsass" or tgt.process.cmdline contains "out.dmp")) or (tgt.process.cmdline contains "copy lsass.exe_" or tgt.process.cmdline contains "move lsass.exe_")))
 ```
 
@@ -19,6 +19,7 @@ tags:
     - attack.defense-evasion
     - attack.t1036
     - attack.t1003.001
+    - attack.credential-access
 logsource:
     category: process_creation
     product: windows

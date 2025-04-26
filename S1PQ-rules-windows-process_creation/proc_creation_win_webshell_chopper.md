@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-04-2025 01:59:34):
+// Translated content (automatically translated on 26-04-2025 01:54:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\w3wp.exe" or src.process.image.path contains "\w3wp.exe") and (tgt.process.cmdline contains "&ipconfig&echo" or tgt.process.cmdline contains "&quser&echo" or tgt.process.cmdline contains "&whoami&echo" or tgt.process.cmdline contains "&c:&echo" or tgt.process.cmdline contains "&cd&echo" or tgt.process.cmdline contains "&dir&echo" or tgt.process.cmdline contains "&echo [E]" or tgt.process.cmdline contains "&echo [S]")))
 ```
 
@@ -16,6 +16,7 @@ author: Florian Roth (Nextron Systems), MSTI (query)
 date: 2022-10-01
 tags:
     - attack.persistence
+    - attack.discovery
     - attack.t1505.003
     - attack.t1018
     - attack.t1033
