@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p "${{ github.workspace }}/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
           cd 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
-          curl https://hijacklibs.net/api/sigma_feed_image.yml
+          wget -0 ./hijacklibs-image_load.yml https://hijacklibs.net/api/sigma_feed_image.yml
   
       - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
         run: |
