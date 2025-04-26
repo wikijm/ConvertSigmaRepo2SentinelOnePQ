@@ -14,7 +14,7 @@ jobs:
     env:
       SIGMACATEGORY: "HijackLibs"
       PLATFORM: "windows"
-      SIGMARULE: image_load"
+      SIGMARULE: "image_load"
     
     steps:
       - name: Checkout code
