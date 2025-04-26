@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 26-04-2025 00:48:03):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\AgentPackageNetworkDiscovery.exe" or src.process.image.path contains "\AgentPackageTaskScheduler.exe" or src.process.image.path contains "\AteraAgent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "ateraagent.exe" or src.process.image.path contains "syncrosetup.exe"))
+// Translated content (automatically translated on 26-04-2025 01:24:34):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\AgentPackageNetworkDiscovery.exe" or src.process.image.path contains "\AgentPackageTaskScheduler.exe" or src.process.image.path contains "\AteraAgent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "atera_agent.exe" or src.process.image.path contains "ateraagent.exe" or src.process.image.path contains "syncrosetup.exe"))
 ```
 
 
@@ -16,6 +16,7 @@ detection:
     - '*\AgentPackageNetworkDiscovery.exe'
     - '*\AgentPackageTaskScheduler.exe'
     - '*\AteraAgent.exe'
+    - atera_agent.exe
     - atera_agent.exe
     - ateraagent.exe
     - syncrosetup.exe
