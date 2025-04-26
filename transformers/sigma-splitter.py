@@ -39,8 +39,8 @@ def split_sigma_rules(input_file, output_folder):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Split Sigma rules from a YAML file.")
-    parser.add_argument("input_file", help="Path to the input YAML file.")
-    parser.add_argument("output_folder", help="Path to the output folder.")
+    parser.add_argument("--input_file", required=True, help="Path to the input YAML file.")
+    parser.add_argument("--output_folder", required=True, help="Path to the output folder.")
 
     args = parser.parse_args()
 
