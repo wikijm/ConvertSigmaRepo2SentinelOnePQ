@@ -36,7 +36,7 @@ jobs:
       - name: Get Sigma file
         run: |
           mkdir -p "${{ github.workspace }}/${{ env.SIGMACATEGORY }}"
-          cd '/${{ env.SIGMACATEGORY }}'
+          cd '${{ env.SIGMACATEGORY }}'
           wget -O ./${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml https://hijacklibs.net/api/sigma_feed_image.yml
   
       - name: Create destination folder 'S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
