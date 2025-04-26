@@ -1,7 +1,7 @@
 import os
 import argparse
 
-def split_sigma_rules(input_file, output_file, output_folder):
+def split_sigma_rules(input_file, output_folder):
     # Read the input file
     with open(input_file, 'r') as file:
         lines = file.readlines()
@@ -40,9 +40,8 @@ def split_sigma_rules(input_file, output_file, output_folder):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Split Sigma rules from a YAML file.")
     parser.add_argument("input_file", help="Path to the input YAML file.")
-    parser.add_argument("output_file", help="Name of the output file.")
     parser.add_argument("output_folder", help="Path to the output folder.")
 
     args = parser.parse_args()
 
-    split_sigma_rules(args.input_file, args.output_file, args.output_folder)
+    split_sigma_rules(args.input_file, args.output_folder)
