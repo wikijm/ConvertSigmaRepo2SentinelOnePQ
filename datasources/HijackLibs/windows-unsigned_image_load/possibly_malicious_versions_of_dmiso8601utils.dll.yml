@@ -1,0 +1,28 @@
+title: Possibly malicious versions of dmiso8601utils.dll
+id: 1237533b-9395-48a3-4833-5b9ff8860726
+status: experimental
+description: Detects possible DLL hijacking of dmiso8601utils.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/dmiso8601utils.html
+author: "Wietze Beukema"
+date: 2021-02-27
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\dmiso8601utils.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
