@@ -33,12 +33,9 @@ jobs:
       - name: Install sigma-cli pipelines
         run: |
           sigma plugin install sentinelone-pq
-        
-      - name: Enter into HijackLibs folder
-        run: cd '${{ env.SIGMACATEGORY }}'
-        
+                
       - name: Download Sigma rules from HijackLibs
-        run: wget -O ./${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml ${{ env.SOURCEURL }}
+        run: wget -O datasources/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml ${{ env.SOURCEURL }}
       
       - name: Create one file per Sigma rule
         run: python transformers/sigma-splitter.py --input_file "${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml" --output_folder "${{ env.SIGMACATEGORY }}"
