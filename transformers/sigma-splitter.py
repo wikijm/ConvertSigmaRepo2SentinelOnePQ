@@ -2,6 +2,10 @@ import os
 import argparse
 
 def split_sigma_rules(input_file, output_folder):
+    # Ensure the output folder exists
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     # Read the input file
     with open(input_file, 'r') as file:
         lines = file.readlines()
