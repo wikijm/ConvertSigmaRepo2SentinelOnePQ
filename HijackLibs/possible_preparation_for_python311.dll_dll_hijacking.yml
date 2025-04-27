@@ -1,0 +1,27 @@
+title: Possible preparation for python311.dll DLL Hijacking
+id: 2990442b-2202-48a3-8342-5b9ff8695619
+status: experimental
+description: Detects possible DLL hijacking of python311.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/python/python311.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2024-10-02
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\python311.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Python311\*'
+            - 'c:\program files (x86)\Python311\*'
+            - 'c:\users\*\appdata\local\Programs\Python\Python311\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -1,0 +1,26 @@
+title: Possible preparation for siteadv.dll DLL Hijacking
+id: 1129002b-5201-48a3-9406-5b9ff8493552
+status: experimental
+description: Detects possible DLL hijacking of siteadv.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/mcafee/siteadv.html
+author: "Christiaan Beek"
+date: 2023-01-16
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\siteadv.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\SiteAdvisor\*\*'
+            - 'c:\program files (x86)\SiteAdvisor\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

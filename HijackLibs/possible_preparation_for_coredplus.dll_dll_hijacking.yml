@@ -1,0 +1,28 @@
+title: Possible preparation for coredplus.dll DLL Hijacking
+id: 5265762b-7437-48a3-2115-5b9ff8350063
+status: experimental
+description: Detects possible DLL hijacking of coredplus.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/coredplus.html
+author: "Chris Spehn"
+date: 2021-08-17
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\coredplus.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

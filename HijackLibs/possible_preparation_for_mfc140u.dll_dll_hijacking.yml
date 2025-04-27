@@ -1,0 +1,26 @@
+title: Possible preparation for mfc140u.dll DLL Hijacking
+id: 3650592b-3546-48a3-3513-5b9ff8400652
+status: experimental
+description: Detects possible DLL hijacking of mfc140u.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/checkmal/mfc140u.html
+author: "Jai Minton - HuntressLabs"
+date: 2025-02-19
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\mfc140u.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\CheckMAL\AppCheck\*'
+            - 'c:\program files (x86)\CheckMAL\AppCheck\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

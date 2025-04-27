@@ -1,0 +1,26 @@
+title: Possible preparation for krpt.dll DLL Hijacking
+id: 4415742b-9766-48a3-4354-5b9ff8616475
+status: experimental
+description: Detects possible DLL hijacking of krpt.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/kingsoft/krpt.html
+author: "Still Hsu"
+date: 2024-11-09
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\krpt.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Kingsoft\WPS Office\*\office6\*'
+            - 'c:\program files (x86)\Kingsoft\WPS Office\*\office6\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

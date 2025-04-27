@@ -1,0 +1,28 @@
+title: Possible preparation for qtgui4.dll DLL Hijacking
+id: 9746982b-4026-48a3-2477-5b9ff8238508
+status: experimental
+description: Detects possible DLL hijacking of qtgui4.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/qt/qtgui4.html
+author: "Jai Minton - HuntressLabs"
+date: 2025-04-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\qtgui4.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Audacity\*'
+            - 'c:\program files (x86)\Audacity\*'
+            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -1,0 +1,28 @@
+title: Possible preparation for libxfont-1.dll DLL Hijacking
+id: 4954712b-9809-48a3-9172-5b9ff8180439
+status: experimental
+description: Detects possible DLL hijacking of libxfont-1.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/mobatek/libxfont-1.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-05-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libxfont-1.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Mobatek\MobaXterm Personal Edition\*'
+            - 'c:\program files (x86)\Mobatek\MobaXterm Personal Edition\*'
+            - 'c:\program files\Mobatek\MobaXterm\*'
+            - 'c:\program files (x86)\Mobatek\MobaXterm\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

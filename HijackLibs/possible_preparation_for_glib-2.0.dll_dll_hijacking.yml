@@ -1,0 +1,30 @@
+title: Possible preparation for glib-2.0.dll DLL Hijacking
+id: 7524132b-7740-48a3-2257-5b9ff8783090
+status: experimental
+description: Detects possible DLL hijacking of glib-2.0.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vmware/glib-2.0.html
+author: "Wietze Beukema"
+date: 2023-04-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\glib-2.0.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VMware\VMware Tools\*'
+            - 'c:\program files (x86)\VMware\VMware Tools\*'
+            - 'c:\program files\VMware\VMware Workstation\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\*'
+            - 'c:\program files\VMware\VMware Player\*'
+            - 'c:\program files (x86)\VMware\VMware Player\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

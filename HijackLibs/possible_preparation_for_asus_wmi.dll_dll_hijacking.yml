@@ -1,0 +1,26 @@
+title: Possible preparation for asus_wmi.dll DLL Hijacking
+id: 9261902b-9521-48a3-3514-5b9ff8164788
+status: experimental
+description: Detects possible DLL hijacking of asus_wmi.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/asus/asus_wmi.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-04-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\asus_wmi.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\ASUS\AXSP\*\*'
+            - 'c:\program files (x86)\ASUS\AXSP\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

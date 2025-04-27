@@ -1,0 +1,26 @@
+title: Possible preparation for log.dll DLL Hijacking
+id: 9451182b-1318-48a3-1317-5b9ff8166908
+status: experimental
+description: Detects possible DLL hijacking of log.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/bitdefender/log.html
+author: "Wietze Beukema"
+date: 2022-06-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\log.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Bitdefender Antivirus Free\*'
+            - 'c:\program files (x86)\Bitdefender Antivirus Free\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

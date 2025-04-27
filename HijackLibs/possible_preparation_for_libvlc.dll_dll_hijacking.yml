@@ -1,0 +1,26 @@
+title: Possible preparation for libvlc.dll DLL Hijacking
+id: 1010922b-1035-48a3-1344-5b9ff8330336
+status: experimental
+description: Detects possible DLL hijacking of libvlc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vlc/libvlc.html
+author: "Wietze Beukema"
+date: 2022-11-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libvlc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VideoLAN\VLC\*'
+            - 'c:\program files (x86)\VideoLAN\VLC\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

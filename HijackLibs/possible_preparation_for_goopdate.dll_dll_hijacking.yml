@@ -1,0 +1,29 @@
+title: Possible preparation for goopdate.dll DLL Hijacking
+id: 8106292b-1674-48a3-4587-5b9ff8794453
+status: experimental
+description: Detects possible DLL hijacking of goopdate.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/dropbox/goopdate.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-08-08
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\goopdate.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Dropbox\Update\*'
+            - 'c:\program files (x86)\Dropbox\Update\*'
+            - 'c:\program files\Dropbox\Update\*\*'
+            - 'c:\program files (x86)\Dropbox\Update\*\*'
+            - 'c:\users\*\appdata\local\DropboxUpdate\Update\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

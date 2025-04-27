@@ -1,0 +1,26 @@
+title: Possible preparation for hpqhvsei.dll DLL Hijacking
+id: 9170172b-1995-48a3-3467-5b9ff8750947
+status: experimental
+description: Detects possible DLL hijacking of hpqhvsei.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/hp/hpqhvsei.html
+author: "Wietze Beukema"
+date: 2023-02-26
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hpqhvsei.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\HP\*'
+            - 'c:\program files (x86)\HP\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

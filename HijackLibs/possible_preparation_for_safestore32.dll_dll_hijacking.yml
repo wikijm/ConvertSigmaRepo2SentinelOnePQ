@@ -1,0 +1,26 @@
+title: Possible preparation for safestore32.dll DLL Hijacking
+id: 9492102b-3819-48a3-7381-5b9ff8837017
+status: experimental
+description: Detects possible DLL hijacking of safestore32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sophos/safestore32.html
+author: "Wietze Beukema"
+date: 2023-09-04
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\safestore32.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Sophos\Sophos Anti-Virus\*'
+            - 'c:\program files (x86)\Sophos\Sophos Anti-Virus\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

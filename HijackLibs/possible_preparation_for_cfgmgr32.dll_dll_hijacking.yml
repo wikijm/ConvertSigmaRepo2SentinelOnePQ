@@ -1,0 +1,29 @@
+title: Possible preparation for cfgmgr32.dll DLL Hijacking
+id: 8798342b-4582-48a3-1057-5b9ff8403867
+status: experimental
+description: Detects possible DLL hijacking of cfgmgr32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/cfgmgr32.html
+author: "Wietze Beukema"
+date: 2023-05-19
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\cfgmgr32.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

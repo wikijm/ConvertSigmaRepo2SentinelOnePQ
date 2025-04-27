@@ -1,0 +1,26 @@
+title: Possible preparation for mspgimme.dll DLL Hijacking
+id: 4129982b-9291-48a3-5273-5b9ff8568681
+status: experimental
+description: Detects possible DLL hijacking of mspgimme.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/mspgimme.html
+author: "Josh Allman"
+date: 2025-03-27
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\mspgimme.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Common Files\Microsoft Shared\MODI\11.0\*'
+            - 'c:\program files (x86)\Common Files\Microsoft Shared\MODI\11.0\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

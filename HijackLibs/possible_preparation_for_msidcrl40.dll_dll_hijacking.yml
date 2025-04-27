@@ -1,0 +1,26 @@
+title: Possible preparation for msidcrl40.dll DLL Hijacking
+id: 2253402b-4592-48a3-2807-5b9ff8762429
+status: experimental
+description: Detects possible DLL hijacking of msidcrl40.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/msidcrl40.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-05-29
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msidcrl40.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\msn messenger\*'
+            - 'c:\program files (x86)\msn messenger\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

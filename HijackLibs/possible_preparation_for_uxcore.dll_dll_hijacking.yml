@@ -1,0 +1,26 @@
+title: Possible preparation for uxcore.dll DLL Hijacking
+id: 1416642b-5077-48a3-3793-5b9ff8228927
+status: experimental
+description: Detects possible DLL hijacking of uxcore.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/uxcore.html
+author: "Jai Minton - HuntressLabs"
+date: 2025-01-22
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\uxcore.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\windows live\installer\*'
+            - 'c:\program files (x86)\windows live\installer\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

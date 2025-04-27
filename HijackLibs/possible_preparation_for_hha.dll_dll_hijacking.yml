@@ -1,0 +1,31 @@
+title: Possible preparation for hha.dll DLL Hijacking
+id: 6370912b-6722-48a3-2305-5b9ff8430460
+status: experimental
+description: Detects possible DLL hijacking of hha.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/hha.html
+author: "Wietze Beukema"
+date: 2021-12-08
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\hha.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\program files\HTML Help Workshop\*'
+            - 'c:\program files (x86)\HTML Help Workshop\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -1,0 +1,30 @@
+title: Possible preparation for wcldll.dll DLL Hijacking
+id: 7641612b-9521-48a3-3514-5b9ff8984964
+status: experimental
+description: Detects possible DLL hijacking of wcldll.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/cisco/wcldll.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-04-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\wcldll.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Cisco Systems\Cisco Jabber\*'
+            - 'c:\program files (x86)\Cisco Systems\Cisco Jabber\*'
+            - 'c:\program files\Webex\Applications\*'
+            - 'c:\program files (x86)\Webex\Applications\*'
+            - 'c:\program files\Webex\Plugins\*'
+            - 'c:\program files (x86)\Webex\Plugins\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

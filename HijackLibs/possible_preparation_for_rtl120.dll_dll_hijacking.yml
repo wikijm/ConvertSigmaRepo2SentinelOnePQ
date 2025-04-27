@@ -1,0 +1,26 @@
+title: Possible preparation for rtl120.dll DLL Hijacking
+id: 1106122b-1146-48a3-9461-5b9ff8861492
+status: experimental
+description: Detects possible DLL hijacking of rtl120.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/itop/rtl120.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-06-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\rtl120.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\DualSafe Password Manager\*'
+            - 'c:\program files (x86)\DualSafe Password Manager\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
