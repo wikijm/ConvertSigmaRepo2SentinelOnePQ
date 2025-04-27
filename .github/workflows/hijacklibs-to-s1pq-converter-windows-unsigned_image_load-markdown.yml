@@ -1,0 +1,59 @@
+name: Transform "HijackLibs Unsigned Image Load" Sigma rules to S1PQ
+
+on:
+  workflow_dispatch:
+ 
+  schedule:
+    - cron: "0 0 * * *"  # Run once per day at midnight
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest  # Change value from 'self-hosted' to 'ubuntu-latest' if you want to host it on Github.
+    permissions:
+      contents: write
+    env:
+      SIGMACATEGORY: "HijackLibs"
+      PLATFORM: "windows"
+      SIGMARULE: "unsigned_image_load"
+      SOURCEURL: "https://hijacklibs.net/api/sigma_feed_signature.yml"
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.0
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4.7.1
+        with:
+          python-version: '3.10'
+        
+      - name: get sigma-cli # other parts of my CI/CD workflow use the sigma-cli - I've left it in, but you should be ok to remove this section and the plugin install steps too.
+        run: |
+          python -m pip install sigma-cli 
+      
+      - name: Install sigma-cli pipelines
+        run: |
+          sigma plugin install sentinelone-pq
+                
+      - name: Download Sigma rules from HijackLibs
+        run: |
+          mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
+          wget -O datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml ${{ env.SOURCEURL }}
+      
+      - name: Create one file per Sigma rule
+        run: python transformers/sigma-splitter.py --input_file "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml" --output_folder "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+
+      - name: Create destination folder 'results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
+        run: |
+          mkdir -p "results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+      
+      - name: Run 'sigma-to-s1pq-converter.py' script
+        run: python transformers/sigma-to-s1pq-converter.py '${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/' 'results/S1PQ-${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}' "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
+  
+      - name: Pull latest changes
+        run: git pull origin main
+  
+      - name: Push changes
+        run: git push origin main
+        
+      - name: Commit and push translated process creation rules
+        uses: stefanzweifel/git-auto-commit-action@v5
