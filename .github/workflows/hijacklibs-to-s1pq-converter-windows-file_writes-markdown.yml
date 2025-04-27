@@ -48,7 +48,7 @@ jobs:
           cd 'results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}'
       
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python transformers/sigma-to-s1pq-converter.py --rules_directory '${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/' --output_directory 'results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}' --exclude_file "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
+        run: python transformers/sigma-to-s1pq-converter.py '${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/' 'results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}' --exclude_file "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
   
       - name: Pull latest changes
         run: git pull origin main
