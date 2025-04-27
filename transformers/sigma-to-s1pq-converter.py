@@ -60,4 +60,4 @@ if __name__ == "__main__":
     parser.add_argument('output_directory', type=str, help='Directory to store the translated .md files')
     parser.add_argument('--exclude_file', type=str, help='Name of the YAML file to exclude from conversion', default=None)
     args = parser.parse_args()
-    main(args.rules_directory, args.output_directory, args.exclude)
+    main(args.rules_directory, args.output_directory, args.exclude_file)
