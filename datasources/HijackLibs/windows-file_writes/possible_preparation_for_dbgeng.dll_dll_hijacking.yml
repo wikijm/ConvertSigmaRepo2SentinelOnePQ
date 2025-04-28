@@ -1,0 +1,37 @@
+title: Possible preparation for dbgeng.dll DLL Hijacking
+id: 9774422b-9223-48a3-6181-5b9ff8657582
+status: experimental
+description: Detects possible DLL hijacking of dbgeng.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/dbgeng.html
+author: "Wietze Beukema"
+date: 2023-03-01
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dbgeng.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Windows Kits\*\Debuggers\x86\*'
+            - 'c:\program files (x86)\Windows Kits\*\Debuggers\x86\*'
+            - 'c:\program files\Windows Kits\*\Debuggers\x64\*'
+            - 'c:\program files (x86)\Windows Kits\*\Debuggers\x64\*'
+            - 'c:\program files\Windows Kits\*\Debuggers\arm\*'
+            - 'c:\program files (x86)\Windows Kits\*\Debuggers\arm\*'
+            - 'c:\program files\Windows Kits\*\Debuggers\arm64\*'
+            - 'c:\program files (x86)\Windows Kits\*\Debuggers\arm64\*'
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

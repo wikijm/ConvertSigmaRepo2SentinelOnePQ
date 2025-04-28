@@ -1,0 +1,29 @@
+title: Possible preparation for eappprxy.dll DLL Hijacking
+id: 9359382b-9395-48a3-4833-5b9ff8247280
+status: experimental
+description: Detects possible DLL hijacking of eappprxy.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/eappprxy.html
+author: "Wietze Beukema"
+date: 2021-02-27
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\eappprxy.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

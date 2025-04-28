@@ -1,0 +1,26 @@
+title: Possible preparation for avdevice-54.dll DLL Hijacking
+id: 1624172b-6171-48a3-7472-5b9ff8676420
+status: experimental
+description: Detects possible DLL hijacking of avdevice-54.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/anymp4/avdevice-54.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\avdevice-54.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
+            - 'c:\program files (x86)\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

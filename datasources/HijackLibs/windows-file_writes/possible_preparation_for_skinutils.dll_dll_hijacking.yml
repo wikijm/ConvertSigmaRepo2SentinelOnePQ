@@ -1,0 +1,26 @@
+title: Possible preparation for skinutils.dll DLL Hijacking
+id: 1801632b-6171-48a3-7472-5b9ff8387108
+status: experimental
+description: Detects possible DLL hijacking of skinutils.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/icq/skinutils.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\skinutils.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\ICQLite\*'
+            - 'c:\program files (x86)\ICQLite\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

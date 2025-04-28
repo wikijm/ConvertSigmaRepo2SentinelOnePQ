@@ -1,0 +1,30 @@
+title: Possible preparation for avutil.dll DLL Hijacking
+id: 4821732b-3109-48a3-1955-5b9ff8677522
+status: experimental
+description: Detects possible DLL hijacking of avutil.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vsosoftware/avutil.html
+author: "Wietze Beukema"
+date: 2024-07-01
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\avutil.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VSO\ConvertX\7\*'
+            - 'c:\program files (x86)\VSO\ConvertX\7\*'
+            - 'c:\program files\VSO\convertXtoDVD\*'
+            - 'c:\program files (x86)\VSO\convertXtoDVD\*'
+            - 'c:\program files\Common Files\Oracle\Java\javapath\*'
+            - 'c:\program files (x86)\Common Files\Oracle\Java\javapath\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

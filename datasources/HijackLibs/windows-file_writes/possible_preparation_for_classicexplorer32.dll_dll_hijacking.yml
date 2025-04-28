@@ -1,0 +1,28 @@
+title: Possible preparation for classicexplorer32.dll DLL Hijacking
+id: 1270152b-4774-48a3-6608-5b9ff8770283
+status: experimental
+description: Detects possible DLL hijacking of classicexplorer32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/classicshell/classicexplorer32.html
+author: "Pokhlebin Maxim"
+date: 2023-06-08
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\classicexplorer32.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Classic Shell\*'
+            - 'c:\program files (x86)\Classic Shell\*'
+            - 'c:\program files\Open-Shell\*'
+            - 'c:\program files (x86)\Open-Shell\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

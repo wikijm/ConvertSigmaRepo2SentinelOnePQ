@@ -1,0 +1,31 @@
+title: Possible preparation for msimg32.dll DLL Hijacking
+id: 7330222b-4026-48a3-2477-5b9ff8149851
+status: experimental
+description: Detects possible DLL hijacking of msimg32.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/msimg32.html
+author: "Jai Minton - HuntressLabs"
+date: 2025-04-10
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msimg32.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Haihaisoft PDF Reader\*'
+            - 'c:\program files (x86)\Haihaisoft PDF Reader\*'
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

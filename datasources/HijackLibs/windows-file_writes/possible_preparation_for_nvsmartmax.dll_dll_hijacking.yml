@@ -1,0 +1,26 @@
+title: Possible preparation for nvsmartmax.dll DLL Hijacking
+id: 6820622b-3819-48a3-7381-5b9ff8297672
+status: experimental
+description: Detects possible DLL hijacking of nvsmartmax.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/nvidia/nvsmartmax.html
+author: "Wietze Beukema"
+date: 2023-09-04
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\nvsmartmax.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\NVIDIA Corporation\Display\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\Display\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

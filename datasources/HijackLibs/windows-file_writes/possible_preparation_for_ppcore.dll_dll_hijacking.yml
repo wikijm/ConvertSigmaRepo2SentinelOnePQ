@@ -1,0 +1,32 @@
+title: Possible preparation for ppcore.dll DLL Hijacking
+id: 5961132b-2351-48a3-2815-5b9ff8263220
+status: experimental
+description: Detects possible DLL hijacking of ppcore.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/ppcore.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-04-23
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\ppcore.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Microsoft Office\OFFICE*\*'
+            - 'c:\program files (x86)\Microsoft Office\OFFICE*\*'
+            - 'c:\program files\Microsoft Office\Root\OFFICE*\*'
+            - 'c:\program files (x86)\Microsoft Office\Root\OFFICE*\*'
+            - 'c:\program files\Microsoft Office *\ClientX86\Root\Office*\*'
+            - 'c:\program files (x86)\Microsoft Office *\ClientX86\Root\Office*\*'
+            - 'c:\program files\Microsoft Office *\ClientX64\Root\Office*\*'
+            - 'c:\program files (x86)\Microsoft Office *\ClientX64\Root\Office*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

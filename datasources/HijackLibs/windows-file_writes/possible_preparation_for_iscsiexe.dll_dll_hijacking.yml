@@ -1,0 +1,29 @@
+title: Possible preparation for iscsiexe.dll DLL Hijacking
+id: 9451792b-9943-48a3-1235-5b9ff8225239
+status: experimental
+description: Detects possible DLL hijacking of iscsiexe.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/iscsiexe.html
+author: "Wietze Beukema"
+date: 2023-05-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\iscsiexe.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

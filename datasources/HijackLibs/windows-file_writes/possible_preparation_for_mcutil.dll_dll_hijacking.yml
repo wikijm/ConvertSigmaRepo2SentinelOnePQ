@@ -1,0 +1,26 @@
+title: Possible preparation for mcutil.dll DLL Hijacking
+id: 6572852b-5264-48a3-2775-5b9ff8452084
+status: experimental
+description: Detects possible DLL hijacking of mcutil.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/mcafee/mcutil.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-08-07
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\mcutil.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\McAfee Inc.\McAfee Total Protection 2009\*'
+            - 'c:\program files (x86)\McAfee Inc.\McAfee Total Protection 2009\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

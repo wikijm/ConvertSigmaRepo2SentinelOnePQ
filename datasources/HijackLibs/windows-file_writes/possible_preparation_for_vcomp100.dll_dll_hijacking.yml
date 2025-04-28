@@ -1,0 +1,22 @@
+title: Possible preparation for vcomp100.dll DLL Hijacking
+id: 8078552b-1386-48a3-5209-5b9ff8188274
+status: experimental
+description: Detects possible DLL hijacking of vcomp100.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/adobe/vcomp100.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-07-09
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vcomp100.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

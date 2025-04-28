@@ -1,0 +1,30 @@
+title: Possible preparation for rastls.dll DLL Hijacking
+id: 2346692b-1995-48a3-3467-5b9ff8265175
+status: experimental
+description: Detects possible DLL hijacking of rastls.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/symantec/rastls.html
+author: "Wietze Beukema"
+date: 2023-02-26
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\rastls.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\*'
+            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\*'
+            - 'c:\windows\system32\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

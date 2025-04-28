@@ -1,0 +1,28 @@
+title: Possible preparation for tpsvc.dll DLL Hijacking
+id: 1712242b-9569-48a3-1936-5b9ff8544276
+status: experimental
+description: Detects possible DLL hijacking of tpsvc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/thinprint/tpsvc.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-04-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tpsvc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\VMWare\VMWare Tools\*'
+            - 'c:\program files (x86)\VMWare\VMWare Tools\*'
+            - 'c:\program files\Common Files\ThinPrint\*'
+            - 'c:\program files (x86)\Common Files\ThinPrint\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

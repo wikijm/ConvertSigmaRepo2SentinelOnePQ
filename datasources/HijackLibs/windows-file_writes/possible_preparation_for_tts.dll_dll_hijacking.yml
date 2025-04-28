@@ -1,0 +1,26 @@
+title: Possible preparation for tts.dll DLL Hijacking
+id: 7423772b-1967-48a3-9518-5b9ff8557181
+status: experimental
+description: Detects possible DLL hijacking of tts.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/leppsoft/tts.html
+author: "Walter Gordillo"
+date: 2025-03-14
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tts.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Soundpad\*'
+            - 'c:\program files (x86)\Soundpad\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

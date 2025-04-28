@@ -1,0 +1,25 @@
+title: Possible preparation for mpsvc.dll DLL Hijacking
+id: 9492752b-1313-48a3-6160-5b9ff8899459
+status: experimental
+description: Detects possible DLL hijacking of mpsvc.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/mpsvc.html
+author: "Wietze Beukema"
+date: 2021-12-07
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\mpsvc.dll'
+    filter:
+        TargetFileName:
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

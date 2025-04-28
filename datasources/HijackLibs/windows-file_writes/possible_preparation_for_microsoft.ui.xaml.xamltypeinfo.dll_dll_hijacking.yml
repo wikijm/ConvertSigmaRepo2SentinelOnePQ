@@ -1,0 +1,22 @@
+title: Possible preparation for microsoft.ui.xaml.xamltypeinfo.dll DLL Hijacking
+id: 3584232b-7740-48a3-2257-5b9ff8497102
+status: experimental
+description: Detects possible DLL hijacking of microsoft.ui.xaml.xamltypeinfo.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/microsoft.ui.xaml.xamltypeinfo.html
+author: "Wietze Beukema"
+date: 2023-04-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\microsoft.ui.xaml.xamltypeinfo.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

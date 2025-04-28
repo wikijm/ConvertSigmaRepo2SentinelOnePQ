@@ -1,0 +1,30 @@
+title: Possible preparation for mpgear.dll DLL Hijacking
+id: 1970122b-9569-48a3-1936-5b9ff8709922
+status: experimental
+description: Detects possible DLL hijacking of mpgear.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/mpgear.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-04-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\mpgear.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Windows Defender Advanced Threat Protection\Classification\*'
+            - 'c:\program files (x86)\Windows Defender Advanced Threat Protection\Classification\*'
+            - 'c:\windows\system32\MRT\*\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

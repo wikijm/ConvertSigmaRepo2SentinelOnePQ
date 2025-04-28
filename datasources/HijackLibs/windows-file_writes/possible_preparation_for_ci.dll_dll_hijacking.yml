@@ -1,0 +1,30 @@
+title: Possible preparation for ci.dll DLL Hijacking
+id: 3188552b-6171-48a3-7472-5b9ff8356391
+status: experimental
+description: Detects possible DLL hijacking of ci.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/digiarty/ci.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\ci.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Digiarty\WinX Blu-ray Decrypter\*'
+            - 'c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\*'
+            - 'c:\windows\system32\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

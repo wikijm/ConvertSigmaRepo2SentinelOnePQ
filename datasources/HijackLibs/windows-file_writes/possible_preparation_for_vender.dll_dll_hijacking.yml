@@ -1,0 +1,28 @@
+title: Possible preparation for vender.dll DLL Hijacking
+id: 9481842b-4150-48a3-8413-5b9ff8267972
+status: experimental
+description: Detects possible DLL hijacking of vender.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/asus/vender.html
+author: "Wietze Beukema"
+date: 2023-04-04
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vender.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\ASUS\GPU TweakII\*'
+            - 'c:\program files (x86)\ASUS\GPU TweakII\*'
+            - 'c:\program files\ASUS\VGA COM\*\*'
+            - 'c:\program files (x86)\ASUS\VGA COM\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -1,0 +1,26 @@
+title: Possible preparation for qtcorevbox4.dll DLL Hijacking
+id: 7210632b-9569-48a3-1936-5b9ff8559513
+status: experimental
+description: Detects possible DLL hijacking of qtcorevbox4.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/oracle/qtcorevbox4.html
+author: "Jai Minton - HuntressLabs"
+date: 2024-04-15
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\qtcorevbox4.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Oracle\VirtualBox\*'
+            - 'c:\program files (x86)\Oracle\VirtualBox\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

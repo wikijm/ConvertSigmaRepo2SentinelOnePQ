@@ -1,0 +1,26 @@
+title: Possible preparation for vivaldi_elf.dll DLL Hijacking
+id: 5086082b-2523-48a3-4236-5b9ff8819409
+status: experimental
+description: Detects possible DLL hijacking of vivaldi_elf.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/vivaldi/vivaldi_elf.html
+author: "Wietze Beukema"
+date: 2023-04-22
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vivaldi_elf.dll'
+    filter:
+        TargetFileName:
+            - 'c:\users\*\appdata\local\Vivaldi\Application\*'
+            - 'c:\users\*\appdata\local\Vivaldi\Application\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

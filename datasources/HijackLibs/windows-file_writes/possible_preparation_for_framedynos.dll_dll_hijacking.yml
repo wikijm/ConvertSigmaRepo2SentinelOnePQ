@@ -1,0 +1,29 @@
+title: Possible preparation for framedynos.dll DLL Hijacking
+id: 3078282b-2028-48a3-1241-5b9ff8675877
+status: experimental
+description: Detects possible DLL hijacking of framedynos.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/framedynos.html
+author: "Chris Spehn"
+date: 2021-08-16
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\framedynos.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

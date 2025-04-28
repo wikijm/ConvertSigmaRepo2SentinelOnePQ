@@ -1,0 +1,29 @@
+title: Possible preparation for d3d10_1core.dll DLL Hijacking
+id: 5334922b-9395-48a3-4833-5b9ff8162909
+status: experimental
+description: Detects possible DLL hijacking of d3d10_1core.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/d3d10_1core.html
+author: "Wietze Beukema"
+date: 2021-02-27
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\d3d10_1core.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
