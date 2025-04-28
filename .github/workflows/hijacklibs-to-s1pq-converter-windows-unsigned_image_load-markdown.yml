@@ -42,12 +42,12 @@ jobs:
       - name: Create one file per Sigma rule
         run: python "${{ github.workspace }}/transformers/sigma-splitter.py" --input_file "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml" --output_folder "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
 
-      - name: Create destination folder "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+      - name: Create destination folder "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
         run: |
           mkdir -p "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
       
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}" "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
+        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}" "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
   
       - name: Pull latest changes
         run: git pull origin main
