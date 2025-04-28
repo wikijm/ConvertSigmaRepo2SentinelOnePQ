@@ -13,12 +13,14 @@ def main(rules_directory, output_directory, exclude_file=None):
     os.makedirs(output_directory, exist_ok=True)
     yaml_files = [f for f in os.listdir(rules_directory) if f.endswith('.yml')]
 
+    print(yaml_files)
+
     # Validate exclude_file and exclude it if valid
     if exclude_file != None:
-        if exclude_file not in yaml_files:
-            print(f"Error: File '{exclude_file}' not found in the input folder '{rules_directory}'.")
-            return
-        yaml_files = [f for f in yaml_files if f != exclude_file]
+        try:
+            yaml_files.remove(exclude_file)
+        except ValueError:
+            pass
 
     s1pqdef_backend = SentinelOnePQBackend()
     current_datetime = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
