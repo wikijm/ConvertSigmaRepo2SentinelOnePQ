@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: '3.10'
         
-      - name: get sigma-cli # other parts of my CI/CD workflow use the sigma-cli - I've left it in, but you should be ok to remove this section and the plugin install steps too.
+      - name: get sigma-cli
         run: |
           python -m pip install sigma-cli 
       
@@ -57,3 +57,4 @@ jobs:
         
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
+        
