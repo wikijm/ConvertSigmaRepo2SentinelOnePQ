@@ -47,7 +47,7 @@ jobs:
           mkdir -p "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
       
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/" "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}.yml"
+        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}" "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}-${{ env.SIGMARULE }}"
   
       - name: Pull latest changes
         run: git pull origin main
