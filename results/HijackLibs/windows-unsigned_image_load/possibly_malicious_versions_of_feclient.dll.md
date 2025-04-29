@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-04-2025 14:49:05):
+// Translated content (automatically translated on 29-04-2025 01:24:28):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\feclient.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
