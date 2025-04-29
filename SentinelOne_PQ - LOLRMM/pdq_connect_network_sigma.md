@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-04-2025 01:38:09):
-(event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "app.pdq.com" or url.address contains "cfcdn.pdq.com" or url.address="*pdqinstallers.*.r2.cloudflarestorage.com") or (event.dns.request contains "app.pdq.com" or event.dns.request contains "cfcdn.pdq.com" or event.dns.request="*pdqinstallers.*.r2.cloudflarestorage.com")))
+// Translated content (automatically translated on 29-04-2025 00:50:13):
+(event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "app.pdq.com" or url.address contains "cfcdn.pdq.com") or (event.dns.request contains "app.pdq.com" or event.dns.request contains "cfcdn.pdq.com")))
 ```
 
 
@@ -15,7 +15,6 @@ detection:
     DestinationHostname|endswith:
     - app.pdq.com
     - cfcdn.pdq.com
-    - pdqinstallers.*.r2.cloudflarestorage.com
   condition: selection
 id: e27c6d0b-9d16-4eb3-9abd-8ba0a2cc0f6e
 status: experimental
