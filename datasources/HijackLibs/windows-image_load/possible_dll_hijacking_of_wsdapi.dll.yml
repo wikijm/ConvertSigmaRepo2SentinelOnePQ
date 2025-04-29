@@ -1,0 +1,26 @@
+title: Possible DLL Hijacking of wsdapi.dll
+id: 8287071b-2811-48a3-1599-5b9ff8397965
+status: experimental
+description: Detects possible DLL hijacking of wsdapi.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/wsdapi.html
+author: "Gary Lobermier"
+date: 2023-05-22
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\wsdapi.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

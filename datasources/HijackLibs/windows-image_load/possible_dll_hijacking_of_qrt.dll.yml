@@ -1,0 +1,26 @@
+title: Possible DLL Hijacking of qrt.dll
+id: 9810161b-1318-48a3-1317-5b9ff8680524
+status: experimental
+description: Detects possible DLL hijacking of qrt.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/f-secure/qrt.html
+author: "Wietze Beukema"
+date: 2022-06-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\qrt.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\F-Secure\Anti-Virus\*'
+            - 'c:\program files (x86)\F-Secure\Anti-Virus\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
