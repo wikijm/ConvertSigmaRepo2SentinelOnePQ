@@ -10,72 +10,72 @@ Next, modify the 'output_directory' to match whichever folder you want the rules
 
 ## Sigma coverage
 
-| 1st level            | 2nd level   | 3rd level            | Status                  |
-|----------------------|-------------|----------------------|-------------------------|
-| rules-threat-hunting | cloud       | 2 folders            | ❌ Not applicable      |
-| rules-threat-hunting | linux       | file_event           | ⚠️ Will be implemented |
-| rules-threat-hunting | linux       | process_creation     | ⚠️ Will be implemented |
-| rules-threat-hunting | macos       | file_event           | ⚠️ Will be implemented |
-| rules-threat-hunting | macos       | process_creation     | ⚠️ Will be implemented |
-| rules-threat-hunting | web         | proxy_generic        | ❌ Not applicable      |
-| rules-threat-hunting | windows     | builtin              | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | create_remote_threat | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | file                 | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | image_load           | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | network_connection   | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | pipe_created         | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | powershell           | ⚠️ Will be implemented |
-| rules-threat-hunting | windows     | process_access       | ✅ Implemented         |
-| rules-threat-hunting | windows     | process_creation     | ✅ Implemented         |
-| rules-threat-hunting | windows     | registry             | ⚠️ Will be implemented |
-| rules                | application | 10 folders           | ❌ Not applicable      |
-| rules                | category    | 2 folders            | ❌ Not applicable      |
-| rules                | cloud       | 9 folders            | ❌ Not applicable      |
-| rules                | compliance  | N/A                  | ❌ Not applicable      |
-| rules                | linux       | auditd               | ⚠️ Will be implemented |
-| rules                | linux       | builtin              | ⚠️ Will be implemented |
-| rules                | linux       | file_event           | ⚠️ Will be implemented |
-| rules                | linux       | network_connection   | ⚠️ Will be implemented |
-| rules                | linux       | process_creation     | ✅ Implemented         |
-| rules                | macos       | file_event           | ✅ Implemented         |
-| rules                | macos       | process_creation     | ✅ Implemented         |
-| rules                | network     | cisco                | ❌ Not applicable      |
-| rules                | network     | dns                  | ⚠️ Will be implemented |
-| rules                | network     | firewall             | ⚠️ Will be implemented |
-| rules                | network     | huawei               | ❌ Not applicable      |
-| rules                | network     | juniper              | ❌ Not applicable      |
-| rules                | network     | zeek                 | ❌ Not applicable      |
-| rules                | web         | 3 folders            | ❌ Not applicable      |
-| rules                | windows     | builtin              | ⚠️ Will be implemented |
-| rules                | windows     | create_remote_threat | ⚠️ Will be implemented |
-| rules                | windows     | dns_query            | ✅ Implemented         |
-| rules                | windows     | driver_load          | ❌ Not applicable      |
-| rules                | windows     | file                 | ⚠️ Will be implemented |
-| rules                | windows     | image_load           | ✅ Implemented         |
-| rules                | windows     | network_connection   | ⚠️ Will be implemented |
-| rules                | windows     | pipe_created         | ⚠️ Will be implemented |
-| rules                | windows     | powershell           | ⚠️ Will be implemented |
-| rules                | windows     | process_access       | ⚠️ Will be implemented |
-| rules                | windows     | process_creation     | ✅ Implemented         |
-| rules                | windows     | process_tampering    | ⚠️ Will be implemented |
-| rules                | windows     | raw_access_thread    | ⚠️ Will be implemented |
-| rules                | windows     | registry             | ✅ Implemented         |
-| rules                | windows     | sysmon               | ❌ Not applicable      |
-| rules                | windows     | wmi_event            | ❌ Not applicable      |
+| Datasource           | Rule type            | Platform    | 3rd level            | Status                  |
+|----------------------|----------------------|-------------|----------------------|-------------------------|
+| SigmaHQ              | rules-threat-hunting | cloud       | 2 folders            | ❌ Not applicable      |
+| SigmaHQ              | rules-threat-hunting | linux       | file_event           | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | linux       | process_creation     | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | macos       | file_event           | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | macos       | process_creation     | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | web         | proxy_generic        | ❌ Not applicable      |
+| SigmaHQ              | rules-threat-hunting | windows     | builtin              | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | create_remote_threat | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | file                 | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | image_load           | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | network_connection   | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | pipe_created         | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | powershell           | ⚠️ Will be implemented |
+| SigmaHQ              | rules-threat-hunting | windows     | process_access       | ✅ Implemented         |
+| SigmaHQ              | rules-threat-hunting | windows     | process_creation     | ✅ Implemented         |
+| SigmaHQ              | rules-threat-hunting | windows     | registry             | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | application | 10 folders           | ❌ Not applicable      |
+| SigmaHQ              | rules                | category    | 2 folders            | ❌ Not applicable      |
+| SigmaHQ              | rules                | cloud       | 9 folders            | ❌ Not applicable      |
+| SigmaHQ              | rules                | compliance  | N/A                  | ❌ Not applicable      |
+| SigmaHQ              | rules                | linux       | auditd               | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | linux       | builtin              | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | linux       | file_event           | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | linux       | network_connection   | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | linux       | process_creation     | ✅ Implemented         |
+| SigmaHQ              | rules                | macos       | file_event           | ✅ Implemented         |
+| SigmaHQ              | rules                | macos       | process_creation     | ✅ Implemented         |
+| SigmaHQ              | rules                | network     | cisco                | ❌ Not applicable      |
+| SigmaHQ              | rules                | network     | dns                  | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | network     | firewall             | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | network     | huawei               | ❌ Not applicable      |
+| SigmaHQ              | rules                | network     | juniper              | ❌ Not applicable      |
+| SigmaHQ              | rules                | network     | zeek                 | ❌ Not applicable      |
+| SigmaHQ              | rules                | web         | 3 folders            | ❌ Not applicable      |
+| SigmaHQ              | rules                | windows     | builtin              | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | create_remote_threat | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | dns_query            | ✅ Implemented         |
+| SigmaHQ              | rules                | windows     | driver_load          | ❌ Not applicable      |
+| SigmaHQ              | rules                | windows     | file                 | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | image_load           | ✅ Implemented         |
+| SigmaHQ              | rules                | windows     | network_connection   | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | pipe_created         | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | powershell           | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | process_access       | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | process_creation     | ✅ Implemented         |
+| SigmaHQ              | rules                | windows     | process_tampering    | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | raw_access_thread    | ⚠️ Will be implemented |
+| SigmaHQ              | rules                | windows     | registry             | ✅ Implemented         |
+| SigmaHQ              | rules                | windows     | sysmon               | ❌ Not applicable      |
+| SigmaHQ              | rules                | windows     | wmi_event            | ❌ Not applicable      |
 
 
 ## GitHub Workflows status
 | Category             | Operating System | Destination Folder                                 | Last GitHub Actions execution status                                                                                                                                                                                                                                                                                                                                                                            |
 |----------------------|------------------|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| rules-threat-hunting | Windows          | S1PQ - Threat Hunting - Windows - Process Creation | [![Transform "sigma/rules-threat-hunting/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml) |
-| rules                | Linux            | S1PQ - Linux - Network Connection                  | [![Transform "sigma/rules/linux/network_connection/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml)                            |
-| rules                | Linux            | S1PQ - Linux - Process Creation                    | [![Transform "sigma/rules/linux/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml)                                            |
-| rules                | MacOS            | S1PQ - MacOS - File Event                          | [![Transform "sigma/rules/macos/file_event" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml)                                                              |
-| rules                | MacOS            | S1PQ - MacOS - Process Creation                    | [![Transform "sigma/rules/macos/process_creation" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-process_creation-markdown.yml)                                            |
-| rules                | Windows          | S1PQ - Windows - DNS Query                         | [![Transform "sigma/rules/windows/dns_query/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml)                                                      |
-| rules                | Windows          | S1PQ - Windows - Image Load                        | [![Transform "sigma/rules/windows/image_load/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml)                                                    |
-| rules                | Windows          | S1PQ - Windows - Process Creation                  | [![Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml)                                        |
-| rules                | Windows          | S1PQ - Windows - Registry                          | [![Transform "sigma/rules/windows/registry/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml)                                                                |
+| SigmaHQ              | rules-threat-hunting | Windows          | S1PQ - Threat Hunting - Windows - Process Creation | [![Transform "sigma/rules-threat-hunting/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-threathunting-windows-process_create-markdown.yml) |
+| SigmaHQ              | rules                | Linux            | S1PQ - Linux - Network Connection                  | [![Transform "sigma/rules/linux/network_connection/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma_to_s1pq_converter-rules-linux-network_connection-markdown.yml)                            |
+| SigmaHQ              | rules                | Linux            | S1PQ - Linux - Process Creation                    | [![Transform "sigma/rules/linux/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-linux-process_creation-markdown.yml)                                            |
+| SigmaHQ              | rules                | MacOS            | S1PQ - MacOS - File Event                          | [![Transform "sigma/rules/macos/file_event" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-file_event-markdown.yml)                                                              |
+| SigmaHQ              | rules                | MacOS            | S1PQ - MacOS - Process Creation                    | [![Transform "sigma/rules/macos/process_creation" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-macos-process_creation-markdown.yml)                                            |
+| SigmaHQ              | rules                | Windows          | S1PQ - Windows - DNS Query                         | [![Transform "sigma/rules/windows/dns_query/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-dns_query-markdown.yml)                                                      |
+| SigmaHQ              | rules                | Windows          | S1PQ - Windows - Image Load                        | [![Transform "sigma/rules/windows/image_load/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-image_load-markdown.yml)                                                    |
+| SigmaHQ              | rules                | Windows          | S1PQ - Windows - Process Creation                  | [![Transform "sigma/rules/windows/process_creation/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-process_creation-markdown.yml)                                        |
+| SigmaHQ              | rules                | Windows          | S1PQ - Windows - Registry                          | [![Transform "sigma/rules/windows/registry/" Sigma rules to S1PQ](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml/badge.svg)](https://github.com/wikijm/ConvertSigmaRepo2SentinelOnePQ/actions/workflows/sigma-to-s1pq-converter-windows-registry-markdown.yml)                                                                |
 
 ## Example
 For GitHub Workflow, you can find an example of workflow here: [Example Workflow.md](Example Workflow.md)
