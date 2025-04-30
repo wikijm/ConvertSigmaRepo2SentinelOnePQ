@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-04-2025 01:59:57):
+// Translated content (automatically translated on 30-04-2025 01:59:37):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\chisel.exe" or ((tgt.process.cmdline contains "exe client " or tgt.process.cmdline contains "exe server ") and (tgt.process.cmdline contains "-socks5" or tgt.process.cmdline contains "-reverse" or tgt.process.cmdline contains " r:" or tgt.process.cmdline contains ":127.0.0.1:" or tgt.process.cmdline contains "-tls-skip-verify " or tgt.process.cmdline contains ":socks"))))
 ```
 
