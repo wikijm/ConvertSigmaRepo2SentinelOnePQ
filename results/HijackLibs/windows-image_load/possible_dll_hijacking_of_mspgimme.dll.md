@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-04-2025 11:34:01):
+// Translated content (automatically translated on 30-04-2025 01:42:11):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mspgimme.dll" and (not (module.path in ("c:\program files\Common Files\Microsoft Shared\MODI\11.0\*","c:\program files (x86)\Common Files\Microsoft Shared\MODI\11.0\*")))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-04-2025 11:34:01):
+// Translated content (automatically translated on 30-04-2025 01:42:11):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\libcurl.dll" and (not (module.path="c:\program files\Notepad++\updater\*" or module.path="c:\program files (x86)\Notepad++\updater\*" or module.path="c:\program files\WindowsApps\MSTeams_*\*" or module.path="c:\program files (x86)\WindowsApps\MSTeams_*\*"))))
 ```
 
