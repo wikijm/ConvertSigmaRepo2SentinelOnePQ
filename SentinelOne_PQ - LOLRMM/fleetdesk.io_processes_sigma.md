@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-04-2025 01:27:45):
+// Translated content (automatically translated on 01-05-2025 01:43:46):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "fleetdeck_agent_svc.exe" or src.process.image.path contains "fleetdeck_commander_svc.exe" or src.process.image.path contains "fleetdeck_installer.exe" or src.process.image.path contains "fleetdeck_agent.exe" or src.process.image.path contains "fleetdeck_commander_launcher.exe"))
 ```
 
