@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-05-2025 00:56:09):
+// Translated content (automatically translated on 02-05-2025 00:50:54):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*AcronisCyberProtectConnectQuickAssist*.exe" or src.process.image.path contains "AcronisCyberProtectConnectAgent.exe"))
 ```
 
