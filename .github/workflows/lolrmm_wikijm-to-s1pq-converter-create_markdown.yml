@@ -38,14 +38,16 @@ jobs:
             mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
             wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
             unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "LOLRMM-main/detections/sigma/*" -d "datasources/${{ env.SIGMACATEGORY }}"
-
+            mv "LOLRMM-main/detections/sigma/*.yml" "datasources/${{ env.SIGMACATEGORY }}/"
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
 
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
           mkdir -p "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Pull latest changes
         run: git pull origin main
