@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-05-2025 01:16:51):
+// Translated content (automatically translated on 03-05-2025 01:15:05):
 event.type="Process Creation" and (endpoint.os="osx" and tgt.process.image.path contains "/split")
 ```
 
