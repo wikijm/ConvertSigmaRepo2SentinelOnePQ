@@ -38,17 +38,6 @@ jobs:
             mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
             wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
             unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" -d "datasources/${{ env.SIGMACATEGORY }}"
-            
-            # Verify if the directory and .yaml files exist
-            if [ ! -d "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/" ]; then
-              echo "Error: Directory 'LOLRMM-main/yaml/' does not exist in the archive."
-              exit 1
-            fi
-            
-            if [ -z "$(ls -1 datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/*.yaml 2>/dev/null)" ]; then
-              echo "Error: No .yaml files found in the 'LOLRMM-main/yaml/' directory."
-              exit 1
-            fi
             python "transformers/sigma-name_to_title.py" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/" "datasources/${{ env.SIGMACATEGORY }}"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
