@@ -1,0 +1,38 @@
+Name: WebRDP
+Description: WebRDP is a remote monitoring and management (RMM) tool. More information
+  will be added as it becomes available.
+Author: ''
+Created: ''
+LastModified: 2-14-2024
+Details:
+  Website: ''
+  PEMetadata:
+    Filename: ''
+    OriginalFileName: ''
+    Description: ''
+  Privileges: ''
+  Free: ''
+  Verification: ''
+  SupportedOS: []
+  Capabilities: []
+  Vulnerabilities: []
+  InstallationPaths:
+  - webrdp.exe
+Artifacts:
+  Disk: []
+  EventLog: []
+  Registry: []
+  Network:
+  - Description: Known remote domains
+    Domains:
+    - user_managed
+    - github.com/Mikej81/WebRDP
+    Ports: []
+Detections:
+- Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/webrdp_network_sigma.yml
+  Description: Detects potential network activity of WebRDP RMM tool
+- Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/webrdp_processes_sigma.yml
+  Description: Detects potential processes activity of WebRDP RMM tool
+References:
+- github.com/Mikej81/WebRDP
+Acknowledgement: []
