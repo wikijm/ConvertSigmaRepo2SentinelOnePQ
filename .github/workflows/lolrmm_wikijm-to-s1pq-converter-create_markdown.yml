@@ -42,7 +42,7 @@ jobs:
           mkdir -p "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}" "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}"
+        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}" "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Pull latest changes
         run: git pull origin main
