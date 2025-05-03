@@ -35,7 +35,6 @@ jobs:
         
       - name: Get LOLRMM repository
         run: |
-          cd "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
           git clone "${{ env.SOURCEURL }}" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
 
       - name: Create destination folder "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
