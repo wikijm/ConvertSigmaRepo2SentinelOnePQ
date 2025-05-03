@@ -50,7 +50,7 @@ jobs:
               exit 1
             fi
             python "transformers/sigma-name_to_title.py" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/" "datasources/${{ env.SIGMACATEGORY }}"
-            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
 
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
