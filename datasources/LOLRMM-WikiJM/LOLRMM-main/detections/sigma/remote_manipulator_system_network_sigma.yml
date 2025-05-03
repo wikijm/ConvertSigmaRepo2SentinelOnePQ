@@ -1,0 +1,21 @@
+title: Potential Remote Manipulator System RMM Tool Network Activity
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    DestinationHostname|endswith:
+    - '*.internetid.ru'
+    - rmansys.ru
+  condition: selection
+id: ade1656e-2425-423d-ab31-d97438ed9c8f
+status: experimental
+description: Detects potential network activity of Remote Manipulator System RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Remote Manipulator System
+level: medium

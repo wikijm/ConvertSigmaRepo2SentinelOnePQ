@@ -1,0 +1,29 @@
+title: Potential Syncro RMM Tool Process Activity
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    ParentImage|endswith:
+    - Syncro.Installer.exe
+    - Kabuto.App.Runner.exe
+    - Syncro.Overmind.Service.exe
+    - Kabuto.Installer.exe
+    - KabutoSetup.exe
+    - Syncro.Service.exe
+    - Kabuto.Service.Runner.exe
+    - Syncro.App.Runner.exe
+    - SyncroLive.Service.exe
+    - SyncroLive.Agent.exe
+  condition: selection
+id: 1dae4fcd-efac-4f3a-8a66-9faa8db0f808
+status: experimental
+description: Detects potential processes activity of Syncro RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Syncro
+level: medium

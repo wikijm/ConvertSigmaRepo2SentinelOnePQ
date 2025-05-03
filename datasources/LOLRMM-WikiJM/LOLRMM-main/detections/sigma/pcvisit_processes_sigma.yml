@@ -1,0 +1,23 @@
+title: Potential Pcvisit RMM Tool Process Activity
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    ParentImage|endswith:
+    - pcvisit.exe
+    - pcvisit_client.exe
+    - pcvisit-easysupport.exe
+    - pcvisit_service_client.exe
+  condition: selection
+id: da7aef8c-62ce-4abf-adf3-9df130d9dd30
+status: experimental
+description: Detects potential processes activity of Pcvisit RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Pcvisit
+level: medium
