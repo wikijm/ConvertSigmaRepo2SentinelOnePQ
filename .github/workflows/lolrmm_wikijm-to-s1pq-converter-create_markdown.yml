@@ -14,7 +14,7 @@ jobs:
     env:
         SIGMACATEGORY: "LOLRMM-WikiJM"
         PLATFORM: "global"
-        SOURCEURL: "https://github.com/wikijm/LOLRMM.git"
+        SOURCEURL: "https://codeload.github.com/wikijm/LOLRMM/zip/refs/heads/main"
 
     steps:
       - name: Checkout code
@@ -36,14 +36,15 @@ jobs:
       - name: Get LOLRMM repository
         run: |
           mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
-          git clone "${{ env.SOURCEURL }}" "datasources/${{ env.SIGMACATEGORY }}"
+          wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
+          unzip "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "LOLRMM-main/yaml/*" -d "datasources/${{ env.SIGMACATEGORY }}"
 
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
           mkdir -p "results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/yaml/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Pull latest changes
         run: git pull origin main
