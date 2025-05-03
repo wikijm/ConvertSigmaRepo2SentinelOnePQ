@@ -37,7 +37,7 @@ jobs:
         run: |
             mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
             wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
-            unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/" -d "datasources/${{ env.SIGMACATEGORY }}"
+            unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*.yml" -d "datasources/${{ env.SIGMACATEGORY }}"
             mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*.yml" "datasources/${{ env.SIGMACATEGORY }}/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
