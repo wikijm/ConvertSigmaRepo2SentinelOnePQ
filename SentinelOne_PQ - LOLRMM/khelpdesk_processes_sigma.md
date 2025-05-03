@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-05-2025 01:36:20):
+// Translated content (automatically translated on 03-05-2025 00:48:56):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "KHelpDesk.exe")
 ```
 
