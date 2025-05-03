@@ -35,7 +35,7 @@ jobs:
         
       - name: Get LOLRMM repository
         run: |
-          mkdir -p "/datasources/${{ env.SIGMACATEGORY }}"
+          mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
           git clone "${{ env.SOURCEURL }}" "datasources/${{ env.SIGMACATEGORY }}"
 
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
