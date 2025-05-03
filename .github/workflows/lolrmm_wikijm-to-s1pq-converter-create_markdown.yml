@@ -11,7 +11,11 @@ jobs:
     runs-on: ubuntu-latest  # Change value from 'self-hosted' to 'ubuntu-latest' if you want to host it on Github.
     permissions:
       contents: write
-    
+    env:
+        SIGMACATEGORY: "LOLRMM-WikiJM"
+        PLATFORM: "global"
+        SOURCEURL: "https://github.com/wikijm/LOLRMM.git"
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.0
@@ -19,9 +23,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4.7.1
         with:
-          python-version: '3.10'
+          python-version: '3.12'
         
-      - name: get sigma-cli # other parts of my CI/CD workflow use the sigma-cli - I've left it in, but you should be ok to remove this section and the plugin install steps too.
+      - name: get sigma-cli
         run: |
           python -m pip install sigma-cli 
       
@@ -31,14 +35,15 @@ jobs:
         
       - name: Get LOLRMM repository
         run: |
-          git clone https://github.com/wikijm/LOLRMM.git
+          cd "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
+          git clone "${{ env.SOURCEURL }}"
 
-      - name: Create destination folder 'S1PQ - LOLRMM WikiJM'
+      - name: Create destination folder "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
-          mkdir -p "${{ github.workspace }}/S1PQ - LOLRMM WikiJM"
+          mkdir -p "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
-      - name: Run 'LOLRMM to S1PQ - Creation script'
-        run: python lolrmm-to-s1pq-converter-create_markdown.py
+      - name: Run 'sigma-to-s1pq-converter.py' script
+        run: python "${{ github.workspace }}/transformers/sigma-to-s1pq-converter.py" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}" "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}/${{ env.PLATFORM }}"
 
       - name: Pull latest changes
         run: git pull origin main
