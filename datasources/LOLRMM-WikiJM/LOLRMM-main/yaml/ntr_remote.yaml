@@ -1,0 +1,37 @@
+Name: NTR Remote
+Description: NTR Remote is a remote monitoring and management (RMM) tool. More information
+  will be added as it becomes available.
+Author: ''
+Created: ''
+LastModified: 2-26-2024
+Details:
+  Website: ''
+  PEMetadata:
+    Filename: ''
+    OriginalFileName: ''
+    Description: ''
+  Privileges: ''
+  Free: ''
+  Verification: ''
+  SupportedOS: []
+  Capabilities: []
+  Vulnerabilities: []
+  InstallationPaths:
+  - NTRsupportPro_EN.exe
+Artifacts:
+  Disk: []
+  EventLog: []
+  Registry: []
+  Network:
+  - Description: Known remote domains
+    Domains:
+    - '*.ntrsupport.com'
+    Ports: []
+Detections:
+- Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/ntr_remote_network_sigma.yml
+  Description: Detects potential network activity of NTR Remote RMM tool
+- Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/ntr_remote_processes_sigma.yml
+  Description: Detects potential processes activity of NTR Remote RMM tool
+References:
+- DOA as of 2024
+Acknowledgement: []
