@@ -33,8 +33,8 @@ jobs:
         run: |
           sigma plugin install sentinelone-pq
         
-          - name: Get LOLRMM repository
-          run: |
+      - name: Get LOLRMM repository
+        run: |
             mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
             wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
             unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "LOLRMM-main/detections/sigma/*" -d "datasources/${{ env.SIGMACATEGORY }}"
