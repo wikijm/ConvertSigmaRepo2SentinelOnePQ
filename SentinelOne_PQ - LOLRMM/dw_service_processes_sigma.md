@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-05-2025 00:48:56):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "dwagsvc.exe" or src.process.image.path contains "dwagent.exe"))
+// Translated content (automatically translated on 03-05-2025 01:26:06):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "dwagsvc.exe" or src.process.image.path contains "dwagent.exe" or src.process.image.path contains "dwagsvc.exe"))
 ```
 
 
@@ -15,6 +15,7 @@ detection:
     ParentImage|endswith:
     - dwagsvc.exe
     - dwagent.exe
+    - dwagsvc.exe
   condition: selection
 id: 5652feeb-de11-4703-a3fb-1d43fc633ebc
 status: experimental
