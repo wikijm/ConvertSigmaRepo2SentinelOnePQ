@@ -35,15 +35,15 @@ jobs:
         
       - name: Get LOLRMM repository
         run: |
-          mkdir -p "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
+          mkdir -p "/datasources/${{ env.SIGMACATEGORY }}"
           git clone "${{ env.SOURCEURL }}" "datasources/${{ env.SIGMACATEGORY }}"
 
-      - name: Create destination folder "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+      - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
-          mkdir -p "${{ github.workspace }}/results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+          mkdir -p "results/S1PQ-${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Run 'sigma-to-s1pq-converter.py' script
-        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}" "${{ github.workspace }}/results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+        run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
 
       - name: Pull latest changes
         run: git pull origin main
