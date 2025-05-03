@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
           wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
-          unzip "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "LOLRMM-main/yaml/*" -d "datasources/${{ env.SIGMACATEGORY }}"
+          unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "LOLRMM-main/yaml/*" -d "datasources/${{ env.SIGMACATEGORY }}"
           mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/*.yaml" "datasources/${{ env.SIGMACATEGORY }}/"
           find "datasources/${{ env.SIGMACATEGORY }}/"" -type f ! -name '*.yaml' -exec rm -f {} + && find "datasources/${{ env.SIGMACATEGORY }}/" -type d -empty -delete
 
