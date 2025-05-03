@@ -49,9 +49,9 @@ jobs:
               echo "Error: No .yaml files found in the 'LOLRMM-main/yaml/' directory."
               exit 1
             fi
-            
-            mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/"*.yaml "datasources/${{ env.SIGMACATEGORY }}/"
-            find "datasources/${{ env.SIGMACATEGORY }}/" -type f ! -name '*.yaml' -exec rm -f {} + && find "datasources/${{ env.SIGMACATEGORY }}/" -type d -empty -delete
+            python "transformers/sigma-name_to_title.py" "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/yaml/" "datasources/${{ env.SIGMACATEGORY }}"
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
 
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
