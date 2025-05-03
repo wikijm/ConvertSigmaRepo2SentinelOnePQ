@@ -11,7 +11,7 @@ def main(rules_directory, output_directory, exclude_file=None):
     format, then write each translated rule + original YAML content to `output_directory`.
     """
     os.makedirs(output_directory, exist_ok=True)
-    yaml_files = [f for f in os.listdir(rules_directory) if f.endswith('.yml')]
+    yaml_files = [f for f in os.listdir(rules_directory) if f.endswith(('.yml', '.yaml'))]
 
     print(yaml_files)
 
