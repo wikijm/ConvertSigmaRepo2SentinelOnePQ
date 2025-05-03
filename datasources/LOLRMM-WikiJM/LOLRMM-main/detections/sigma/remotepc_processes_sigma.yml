@@ -1,0 +1,25 @@
+title: Potential RemotePC RMM Tool Process Activity
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    ParentImage|endswith:
+    - remotepcservice.exe
+    - RemotePC.exe
+    - remotepchost.exe
+    - rpcsuite.exe
+    - '*\RemotePCService.exe'
+    - RemotePCService.exe
+  condition: selection
+id: 5afe5393-d9b5-47e6-a332-a32ba5f07fea
+status: experimental
+description: Detects potential processes activity of RemotePC RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of RemotePC
+level: medium
