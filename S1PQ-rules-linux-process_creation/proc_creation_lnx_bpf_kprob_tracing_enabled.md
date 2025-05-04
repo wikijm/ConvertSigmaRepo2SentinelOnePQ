@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-05-2025 00:53:00):
+// Translated content (automatically translated on 04-05-2025 00:59:52):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "echo 1 >" and tgt.process.cmdline contains "/sys/kernel/debug/tracing/events/kprobes/") and (tgt.process.cmdline contains "/myprobe/enable" or tgt.process.cmdline contains "/myretprobe/enable")))
 ```
 
