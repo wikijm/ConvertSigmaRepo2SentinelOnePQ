@@ -1,0 +1,21 @@
+title: Potential Xeox RMM Tool Network Activity
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    DestinationHostname|endswith:
+    - '*.xeox.com'
+    - xeox.com
+  condition: selection
+id: 1ff42714-efb3-4550-81af-748ae2d1c526
+status: experimental
+description: Detects potential network activity of Xeox RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Xeox
+level: medium

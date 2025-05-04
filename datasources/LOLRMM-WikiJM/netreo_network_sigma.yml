@@ -1,0 +1,23 @@
+title: Potential Netreo RMM Tool Network Activity
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    DestinationHostname|endswith:
+    - charon.netreo.net
+    - activation.netreo.net
+    - '*.api.netreo.com'
+    - netreo.com
+  condition: selection
+id: bce122a6-0821-4d9a-953a-2b1e9d5b218b
+status: experimental
+description: Detects potential network activity of Netreo RMM tool
+author: LOLRMM Project
+date: 2024/08/07
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Netreo
+level: medium
