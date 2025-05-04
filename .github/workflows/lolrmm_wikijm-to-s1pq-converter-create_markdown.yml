@@ -40,7 +40,7 @@ jobs:
             unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" -d "datasources/${{ env.SIGMACATEGORY }}/"
             mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*" "datasources/${{ env.SIGMACATEGORY }}/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
-            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
+            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-WikiJM.zip"
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
           mkdir -p "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
