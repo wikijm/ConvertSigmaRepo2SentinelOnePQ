@@ -17,22 +17,20 @@ jobs:
         SOURCEURL: "https://codeload.github.com/wikijm/LOLRMM/zip/refs/heads/main"
 
     steps:
+      - name: Debugging with tmate
+        uses: mxschmitt/action-tmate@v3.22
       - name: Checkout code
         uses: actions/checkout@v4.2.0
-        
       - name: Set up Python
         uses: actions/setup-python@v4.7.1
         with:
           python-version: '3.12'
-        
       - name: get sigma-cli
         run: |
           python -m pip install sigma-cli 
-      
       - name: Install sigma-cli pipelines
         run: |
           sigma plugin install sentinelone-pq
-        
       - name: Get LOLRMM repository
         run: |
             mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
@@ -41,19 +39,14 @@ jobs:
             mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*" "datasources/${{ env.SIGMACATEGORY }}/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
             rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main.zip"
-
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
           mkdir -p "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
-
       - name: Run 'sigma-to-s1pq-converter.py' script
         run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
-
       - name: Pull latest changes
         run: git pull origin main
-
       - name: Push changes
         run: git push origin main
-        
       - name: Commit and push translated process creation rules
         uses: stefanzweifel/git-auto-commit-action@v5
