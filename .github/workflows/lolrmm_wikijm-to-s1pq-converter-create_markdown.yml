@@ -29,17 +29,7 @@ jobs:
       - name: Install sigma-cli pipelines
         run: |
           sigma plugin install sentinelone-pq
-      - name: Get LOLRMM repository
-        run: |
-            mkdir -p "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
-            wget -O "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
-            unzip -o "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" -d "datasources/${{ env.SIGMACATEGORY }}/"
-            mv "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/"
-            rm -fR "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
-            rm -fR "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-WikiJM.zip"
-      - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
-        run: |
-          mkdir -p "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
+
       - name: Run 'sigma-to-s1pq-converter.py' script
         run: python "transformers/sigma-to-s1pq-converter.py" "datasources/${{ env.SIGMACATEGORY }}/" "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
       - name: Pull latest changes
