@@ -35,12 +35,12 @@ jobs:
           sigma plugin install sentinelone-pq
       - name: Get LOLRMM repository
         run: |
-            mkdir -p "datasources/${{ env.SIGMACATEGORY }}"
-            wget -O "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
-            unzip -o "datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" -d "datasources/${{ env.SIGMACATEGORY }}/"
-            mv "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*" "datasources/${{ env.SIGMACATEGORY }}/"
-            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
-            rm -fR "datasources/${{ env.SIGMACATEGORY }}/LOLRMM-WikiJM.zip"
+            mkdir -p "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}"
+            wget -O "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" "${{ env.SOURCEURL }}"
+            unzip -o "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/${{ env.SIGMACATEGORY }}.zip" -d "datasources/${{ env.SIGMACATEGORY }}/"
+            mv "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/detections/sigma/*" "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/"
+            rm -fR "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-main/"
+            rm -fR "${{ github.workspace }}/datasources/${{ env.SIGMACATEGORY }}/LOLRMM-WikiJM.zip"
       - name: Create destination folder "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
         run: |
           mkdir -p "results/${{ env.SIGMACATEGORY }}-${{ env.PLATFORM }}"
