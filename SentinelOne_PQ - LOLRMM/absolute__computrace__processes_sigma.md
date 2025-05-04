@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-05-2025 10:24:52):
+// Translated content (automatically translated on 04-05-2025 00:56:05):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "rpcnet.exe" or src.process.image.path contains "ctes.exe" or src.process.image.path contains "ctespersitence.exe" or src.process.image.path contains "cteshostsvc.exe" or src.process.image.path contains "rpcld.exe"))
 ```
 
