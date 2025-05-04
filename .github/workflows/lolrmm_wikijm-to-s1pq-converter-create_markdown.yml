@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Debugging with tmate
         uses: mxschmitt/action-tmate@v3.22
+        with:
+          detached: true
       - name: Checkout code
         uses: actions/checkout@v4.2.0
       - name: Set up Python
