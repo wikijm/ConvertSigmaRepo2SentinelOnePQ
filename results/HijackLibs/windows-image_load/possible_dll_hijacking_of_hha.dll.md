@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-05-2025 01:51:19):
+// Translated content (automatically translated on 05-05-2025 01:46:58):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\hha.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*","c:\program files\HTML Help Workshop\*","c:\program files (x86)\HTML Help Workshop\*")))))
 ```
 
