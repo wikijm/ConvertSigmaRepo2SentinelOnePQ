@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-05-2025 02:09:58):
+// Translated content (automatically translated on 05-05-2025 02:04:46):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\"\system32\cleanmgr.exe /autoclean /d C:" and src.process.cmdline="C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
