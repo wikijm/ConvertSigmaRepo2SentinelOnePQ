@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-05-2025 02:04:46):
+// Translated content (automatically translated on 06-05-2025 02:01:13):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\sqlcmd.exe" and (tgt.process.cmdline contains "SELECT" and tgt.process.cmdline contains "TOP" and tgt.process.cmdline contains "[VeeamBackup].[dbo].[Credentials]")))
 ```
 
