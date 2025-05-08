@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-05-2025 00:55:19):
+// Translated content (automatically translated on 08-05-2025 00:55:37):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/arp" and tgt.process.cmdline contains "-a") or (tgt.process.image.path contains "/ping" and (tgt.process.cmdline contains " 10." or tgt.process.cmdline contains " 192.168." or tgt.process.cmdline contains " 172.16." or tgt.process.cmdline contains " 172.17." or tgt.process.cmdline contains " 172.18." or tgt.process.cmdline contains " 172.19." or tgt.process.cmdline contains " 172.20." or tgt.process.cmdline contains " 172.21." or tgt.process.cmdline contains " 172.22." or tgt.process.cmdline contains " 172.23." or tgt.process.cmdline contains " 172.24." or tgt.process.cmdline contains " 172.25." or tgt.process.cmdline contains " 172.26." or tgt.process.cmdline contains " 172.27." or tgt.process.cmdline contains " 172.28." or tgt.process.cmdline contains " 172.29." or tgt.process.cmdline contains " 172.30." or tgt.process.cmdline contains " 172.31." or tgt.process.cmdline contains " 127." or tgt.process.cmdline contains " 169.254."))))
 ```
 
