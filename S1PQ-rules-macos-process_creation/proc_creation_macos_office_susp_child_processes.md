@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-05-2025 01:18:18):
+// Translated content (automatically translated on 09-05-2025 01:17:40):
 event.type="Process Creation" and (endpoint.os="osx" and ((src.process.image.path contains "Microsoft Word" or src.process.image.path contains "Microsoft Excel" or src.process.image.path contains "Microsoft PowerPoint" or src.process.image.path contains "Microsoft OneNote") and (tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/curl" or tgt.process.image.path contains "/dash" or tgt.process.image.path contains "/fish" or tgt.process.image.path contains "/osacompile" or tgt.process.image.path contains "/osascript" or tgt.process.image.path contains "/sh" or tgt.process.image.path contains "/zsh" or tgt.process.image.path contains "/python" or tgt.process.image.path contains "/python3" or tgt.process.image.path contains "/wget")))
 ```
 
