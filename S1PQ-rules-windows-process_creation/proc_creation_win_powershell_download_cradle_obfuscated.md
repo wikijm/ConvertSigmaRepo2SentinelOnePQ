@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-05-2025 02:02:58):
+// Translated content (automatically translated on 09-05-2025 02:01:42):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\powershell.exe" and (tgt.process.cmdline contains "http://127.0.0.1" and tgt.process.cmdline contains "%{(IRM $_)}" and tgt.process.cmdline contains "Invoke")))
 ```
 
