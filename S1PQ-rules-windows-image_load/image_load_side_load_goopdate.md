@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-05-2025 01:17:06):
+// Translated content (automatically translated on 10-05-2025 01:14:31):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\goopdate.dll" and (not (module.path contains "C:\Program Files (x86)\" or module.path contains "C:\Program Files\")) and (not ((src.process.image.path contains "\AppData\Local\Temp\GUM" and src.process.image.path contains ".tmp\Dropbox") and (module.path contains "\AppData\Local\Temp\GUM" and module.path contains ".tmp\goopdate.dll")))))
 ```
 
