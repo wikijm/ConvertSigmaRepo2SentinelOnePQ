@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-05-2025 01:37:35):
+// Translated content (automatically translated on 10-05-2025 01:26:16):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remobo.exe" or src.process.image.path contains "remobo_client.exe" or src.process.image.path contains "remobo_tracker.exe"))
 ```
 
