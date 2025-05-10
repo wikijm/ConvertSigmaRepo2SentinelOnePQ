@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-05-2025 01:44:05):
+// Translated content (automatically translated on 10-05-2025 01:40:09):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\faultrep.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
