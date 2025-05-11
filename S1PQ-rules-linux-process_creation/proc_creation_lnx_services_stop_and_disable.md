@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-05-2025 00:52:48):
+// Translated content (automatically translated on 11-05-2025 00:58:52):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/service" or tgt.process.image.path contains "/systemctl" or tgt.process.image.path contains "/chkconfig") and (tgt.process.cmdline contains "stop" or tgt.process.cmdline contains "disable")))
 ```
 
