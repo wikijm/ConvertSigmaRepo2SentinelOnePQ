@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-05-2025 02:07:55):
+// Translated content (automatically translated on 12-05-2025 02:05:52):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\EdgeTransport.exe" and (not (tgt.process.image.path="C:\Windows\System32\conhost.exe" or (tgt.process.image.path contains "C:\Program Files\Microsoft\Exchange Server\" and tgt.process.image.path contains "\Bin\OleConverter.exe")))))
 ```
 

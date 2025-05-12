@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-05-2025 02:07:55):
+// Translated content (automatically translated on 12-05-2025 02:05:52):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\pcwrun.exe") | columns ComputerName,tgt.process.user,src.process.cmdline,tgt.process.cmdline
 ```
 
