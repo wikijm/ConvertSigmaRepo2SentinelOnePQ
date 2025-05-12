@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-05-2025 00:54:56):
+// Translated content (automatically translated on 12-05-2025 00:53:53):
 event.category="Registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\SOFTWARE\ATERA Networks\AlphaAgent" or registry.keyPath contains "HKLM\SYSTEM\CurrentControlSet\Services\AteraAgent" or registry.keyPath contains "KLM\SOFTWARE\WOW6432Node\Splashtop Inc." or registry.keyPath contains "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Splashtop Software Updater" or registry.keyPath contains "HKLM\SYSTEM\ControlSet\Services\EventLog\Application\AlphaAgent" or registry.keyPath contains "HKLM\SYSTEM\ControlSet\Services\EventLog\Application\AteraAgent" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Tracing\AteraAgent_RASAPI32" or registry.keyPath contains "HKLM\SOFTWARE\Microsoft\Tracing\AteraAgent_RASMANCS" or registry.keyPath contains "HKLM\SOFTWARE\ATERA Networks\*"))
 ```
 
