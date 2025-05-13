@@ -1,0 +1,26 @@
+title: Possible preparation for common.dll DLL Hijacking
+id: 1355322b-4266-48a3-3778-5b9ff8480154
+status: experimental
+description: Detects possible DLL hijacking of common.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/iroot/common.html
+author: "Jai Minton"
+date: 2025-05-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\common.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\iroot\*'
+            - 'c:\program files (x86)\iroot\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
