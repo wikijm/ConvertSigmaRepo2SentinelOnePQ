@@ -21,6 +21,8 @@ detection:
             - 'c:\program files (x86)\Notepad++\updater\*'
             - 'c:\program files\WindowsApps\MSTeams_*\*'
             - 'c:\program files (x86)\WindowsApps\MSTeams_*\*'
+            - 'c:\program files\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
+            - 'c:\program files (x86)\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
 
     condition: selection and not filter
 falsepositives:

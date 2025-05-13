@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 12-05-2025 01:48:04):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\libcurl.dll" and (not (module.path="c:\program files\Notepad++\updater\*" or module.path="c:\program files (x86)\Notepad++\updater\*" or module.path="c:\program files\WindowsApps\MSTeams_*\*" or module.path="c:\program files (x86)\WindowsApps\MSTeams_*\*"))))
+// Translated content (automatically translated on 13-05-2025 01:45:28):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\libcurl.dll" and (not (module.path="c:\program files\Notepad++\updater\*" or module.path="c:\program files (x86)\Notepad++\updater\*" or module.path="c:\program files\WindowsApps\MSTeams_*\*" or module.path="c:\program files (x86)\WindowsApps\MSTeams_*\*" or module.path="c:\program files\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*" or module.path="c:\program files (x86)\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*"))))
 ```
 
 
@@ -29,6 +29,8 @@ detection:
             - 'c:\program files (x86)\Notepad++\updater\*'
             - 'c:\program files\WindowsApps\MSTeams_*\*'
             - 'c:\program files (x86)\WindowsApps\MSTeams_*\*'
+            - 'c:\program files\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
+            - 'c:\program files (x86)\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
 
     condition: selection and not filter
 falsepositives:

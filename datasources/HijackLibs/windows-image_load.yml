@@ -649,6 +649,8 @@ detection:
             - 'c:\program files (x86)\Notepad++\updater\*'
             - 'c:\program files\WindowsApps\MSTeams_*\*'
             - 'c:\program files (x86)\WindowsApps\MSTeams_*\*'
+            - 'c:\program files\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
+            - 'c:\program files (x86)\Coolmuster\Coolmuster PDF Creator Pro\*\Bin\*'
 
     condition: selection and not filter
 falsepositives:
@@ -1069,6 +1071,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of common.dll
+id: 1355321b-4266-48a3-3778-5b9ff8480154
+status: experimental
+description: Detects possible DLL hijacking of common.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/iroot/common.html
+author: "Jai Minton"
+date: 2025-05-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\common.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\iroot\*'
+            - 'c:\program files (x86)\iroot\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of rtl120.dll
 id: 1106121b-1146-48a3-9461-5b9ff8861492
 status: experimental
@@ -1447,6 +1476,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of tutil32.dll
+id: 4335961b-9675-48a3-8026-5b9ff8245961
+status: experimental
+description: Detects possible DLL hijacking of tutil32.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/mitec/tutil32.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\tutil32.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\PDE\*'
+            - 'c:\program files (x86)\PDE\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of libxfont-1.dll
 id: 4954711b-9809-48a3-9172-5b9ff8180439
 status: experimental
@@ -1633,6 +1689,33 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\users\*\appdata\local\programs\opera\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of launcher.dll
+id: 1948171b-6085-48a3-6339-5b9ff8262762
+status: experimental
+description: Detects possible DLL hijacking of launcher.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/oracle/launcher.html
+author: "Jai Minton"
+date: 2025-05-07
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\launcher.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\SQL Developer\ide\bin\*'
+            - 'c:\program files (x86)\SQL Developer\ide\bin\*'
 
     condition: selection and not filter
 falsepositives:
@@ -1927,6 +2010,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of asfbncor.dll
+id: 3362011b-9675-48a3-8026-5b9ff8248289
+status: experimental
+description: Detects possible DLL hijacking of asfbncor.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/radioactive/asfbncor.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\asfbncor.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Replay Media Splitter\*'
+            - 'c:\program files (x86)\Replay Media Splitter\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of rzlog4cpp_logger.dll
 id: 3158221b-7740-48a3-2257-5b9ff8164996
 status: experimental
@@ -1973,6 +2083,33 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\users\*\appdata\local\rustdesk\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of epnsm.dll
+id: 7315301b-9675-48a3-8026-5b9ff8960613
+status: experimental
+description: Detects possible DLL hijacking of epnsm.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/seiko/epnsm.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\epnsm.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Epson Software\Document Capture Server\*'
+            - 'c:\program files (x86)\Epson Software\Document Capture Server\*'
 
     condition: selection and not filter
 falsepositives:
@@ -2681,6 +2818,33 @@ detection:
         ImageLoaded:
             - 'c:\program files\Wireshark\*'
             - 'c:\program files (x86)\Wireshark\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of wxmsw313u_aui_vc_custom.dll
+id: 7670461b-9675-48a3-8026-5b9ff8778295
+status: experimental
+description: Detects possible DLL hijacking of wxmsw313u_aui_vc_custom.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/wxwidgets/wxmsw313u_aui_vc_custom.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\wxmsw313u_aui_vc_custom.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Audacity\*'
+            - 'c:\program files (x86)\Audacity\*'
 
     condition: selection and not filter
 falsepositives:
