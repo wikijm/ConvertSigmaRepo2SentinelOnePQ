@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 12-05-2025 02:05:52):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\reg.exe" and tgt.process.cmdline contains "add") and (tgt.process.cmdline contains "\software\Microsoft\Windows\CurrentVersion\Run" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Windows" or tgt.process.cmdline contains "\software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" or tgt.process.cmdline contains "\system\CurrentControlSet\Control\SafeBoot\AlternateShell"))) | columns tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 13-05-2025 02:03:22):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\reg.exe" and tgt.process.cmdline contains "add") and (tgt.process.cmdline contains "\software\Microsoft\Windows\CurrentVersion\Run" or tgt.process.cmdline contains "\software\WOW6432Node\Microsoft\Windows\CurrentVersion\Run" or tgt.process.cmdline contains "\software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell" or tgt.process.cmdline contains "\software\Microsoft\Windows NT\CurrentVersion\Windows" or tgt.process.cmdline contains "\software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" or tgt.process.cmdline contains "\system\CurrentControlSet\Control\SafeBoot\AlternateShell"))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
 
@@ -12,9 +12,10 @@ status: test
 description: Detects direct modification of autostart extensibility point (ASEP) in registry using reg.exe.
 references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1547.001/T1547.001.md
-author: Victor Sergeev, Daniil Yugoslavskiy, oscd.community
+    - https://github.com/HackTricks-wiki/hacktricks/blob/e4c7b21b8f36c97c35b7c622732b38a189ce18f7/src/windows-hardening/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries.md
+author: Victor Sergeev, Daniil Yugoslavskiy, oscd.community, Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2019-10-25
-modified: 2022-08-04
+modified: 2025-02-17
 tags:
     - attack.persistence
     - attack.t1547.001
@@ -28,6 +29,8 @@ detection:
     selection_2:
         CommandLine|contains:           # need to improve this list, there are plenty of ASEP reg keys
             - '\software\Microsoft\Windows\CurrentVersion\Run' # Also covers the strings "RunOnce", "RunOnceEx", "RunServices", "RunServicesOnce"
+            - '\software\WOW6432Node\Microsoft\Windows\CurrentVersion\Run'
+            - '\software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run'
             - '\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit'
             - '\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell'
             - '\software\Microsoft\Windows NT\CurrentVersion\Windows'

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-05-2025 02:05:52):
+// Translated content (automatically translated on 13-05-2025 02:03:22):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\gpg.exe" or tgt.process.image.path contains "\gpg2.exe") or tgt.process.displayName="GNU Privacy Guard (GnuPG)" or tgt.process.displayName="GnuPG’s OpenPGP tool") and tgt.process.cmdline contains "-passphrase" and (tgt.process.cmdline contains ":\PerfLogs\" or tgt.process.cmdline contains ":\Temp\" or tgt.process.cmdline contains ":\Users\Public\" or tgt.process.cmdline contains ":\Windows\Temp\" or tgt.process.cmdline contains "\AppData\Local\Temp\" or tgt.process.cmdline contains "\AppData\Roaming\")))
 ```
 

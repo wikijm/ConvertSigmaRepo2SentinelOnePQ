@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-05-2025 02:05:52):
+// Translated content (automatically translated on 13-05-2025 02:03:22):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\DumpStack.log" or tgt.process.cmdline contains " -o DumpStack.log"))
 ```
 
