@@ -29,6 +29,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possibly malicious versions of common.dll
+id: 1355323b-4266-48a3-3778-5b9ff8480154
+status: experimental
+description: Detects possible DLL hijacking of common.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/iroot/common.html
+author: "Jai Minton"
+date: 2025-05-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\common.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=WoSign Time Stamping Signer,O=WoSign CA Limited,C=CN'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possibly malicious versions of facesdk.dll
 id: 4818683b-4150-48a3-8413-5b9ff8954421
 status: experimental
@@ -232,6 +261,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possibly malicious versions of epnsm.dll
+id: 7315303b-9675-48a3-8026-5b9ff8960613
+status: experimental
+description: Detects possible DLL hijacking of epnsm.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/seiko/epnsm.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\epnsm.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=SEIKO EPSON CORPORATION,O=SEIKO EPSON CORPORATION,L=Suwa-Shi,ST=Nagano,C=JP'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possibly malicious versions of smadhook32c.dll
 id: 3416183b-4150-48a3-8413-5b9ff8316275
 status: experimental
@@ -400,6 +458,35 @@ detection:
             - SignatureStatus: 'signed'
             - Signature|contains:
                 - 'CN=VSO Software SARL, O=VSO Software SARL, L=Toulouse, S=Midi-Pyrenees, C=FR'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possibly malicious versions of wxmsw313u_aui_vc_custom.dll
+id: 7670463b-9675-48a3-8026-5b9ff8778295
+status: experimental
+description: Detects possible DLL hijacking of wxmsw313u_aui_vc_custom.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/wxwidgets/wxmsw313u_aui_vc_custom.html
+author: "Jai Minton"
+date: 2025-05-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\wxmsw313u_aui_vc_custom.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=Musecy SM ltd.,O=Musecy SM ltd.,S=Lemesos, C=CY'
 
     condition: selection and not filter
 falsepositives:
