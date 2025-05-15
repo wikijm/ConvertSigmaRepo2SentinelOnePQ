@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-05-2025 01:44:21):
+// Translated content (automatically translated on 15-05-2025 01:42:21):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\ci.dll" and (not (module.path in ("c:\program files\Digiarty\WinX Blu-ray Decrypter\*","c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\*","c:\windows\system32\*")))))
 ```
 
