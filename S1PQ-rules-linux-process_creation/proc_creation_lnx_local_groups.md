@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-05-2025 00:55:10):
+// Translated content (automatically translated on 15-05-2025 00:54:07):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/groups" or ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/tail" or tgt.process.image.path contains "/more") and tgt.process.cmdline contains "/etc/group")))
 ```
 
