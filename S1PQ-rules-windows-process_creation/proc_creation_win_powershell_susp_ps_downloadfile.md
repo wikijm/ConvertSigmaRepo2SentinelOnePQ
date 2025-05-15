@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-05-2025 02:02:01):
+// Translated content (automatically translated on 15-05-2025 02:00:45):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "powershell" and tgt.process.cmdline contains ".DownloadFile" and tgt.process.cmdline contains "System.Net.WebClient"))
 ```
 
