@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-05-2025 01:17:16):
+// Translated content (automatically translated on 15-05-2025 01:15:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\iviewers.dll" and (not (module.path contains "C:\Program Files (x86)\Windows Kits\" or module.path contains "C:\Program Files\Windows Kits\"))))
 ```
 
