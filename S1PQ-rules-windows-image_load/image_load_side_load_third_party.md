@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((module.path contains "\commfunc.dll" and (not (module.path contains "\AppData\local\Google\Chrome\Application\" or (module.path contains "C:\Program Files\Lenovo\Communications Utility\" or module.path contains "C:\Program Files (x86)\Lenovo\Communications Utility\")))) or (module.path contains "\tosbtkbd.dll" and (not (module.path contains "C:\Program Files\Toshiba\Bluetooth Toshiba Stack\" or module.path contains "C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\")))))
 ```
 
@@ -19,7 +19,6 @@ tags:
     - attack.persistence
     - attack.privilege-escalation
     - attack.t1574.001
-    - attack.t1574.002
 logsource:
     category: image_load
     product: windows

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\7za.dll" and (not ((src.process.image.path contains "C:\Program Files (x86)\" or src.process.image.path contains "C:\Program Files\") and (module.path contains "C:\Program Files (x86)\" or module.path contains "C:\Program Files\")))))
 ```
 
@@ -19,7 +19,6 @@ tags:
     - attack.persistence
     - attack.privilege-escalation
     - attack.t1574.001
-    - attack.t1574.002
 logsource:
     category: image_load
     product: windows

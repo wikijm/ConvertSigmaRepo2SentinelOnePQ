@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\outllib.dll" and (not (module.path contains "C:\Program Files\Microsoft Office\OFFICE" or module.path contains "C:\Program Files (x86)\Microsoft Office\OFFICE" or module.path contains "C:\Program Files\Microsoft Office\Root\OFFICE" or module.path contains "C:\Program Files (x86)\Microsoft Office\Root\OFFICE"))))
 ```
 
@@ -20,7 +20,6 @@ tags:
     - attack.persistence
     - attack.privilege-escalation
     - attack.t1574.001
-    - attack.t1574.002
 logsource:
     category: image_load
     product: windows

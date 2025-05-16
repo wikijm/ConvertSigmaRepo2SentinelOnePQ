@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mscorsvc.dll" and (not (module.path contains "C:\Windows\Microsoft.NET\Framework\" or module.path contains "C:\Windows\Microsoft.NET\Framework64\" or module.path contains "C:\Windows\WinSxS\"))))
 ```
 
@@ -16,7 +16,7 @@ author: Wietze Beukema
 date: 2024-07-11
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
 logsource:
     product: windows
     category: image_load

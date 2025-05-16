@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((src.process.image.path contains "\VMwareXferlogs.exe" and module.path contains "\glib-2.0.dll") and (not module.path contains "C:\Program Files\VMware\")))
 ```
 
@@ -17,7 +17,7 @@ date: 2022-08-02
 modified: 2023-02-17
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
 logsource:
     product: windows
     category: image_load

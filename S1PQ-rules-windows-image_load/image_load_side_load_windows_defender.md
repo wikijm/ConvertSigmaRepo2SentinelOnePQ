@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((module.path contains "\mpclient.dll" and (src.process.image.path contains "\MpCmdRun.exe" or src.process.image.path contains "\NisSrv.exe")) and (not (src.process.image.path contains "C:\Program Files (x86)\Windows Defender\" or src.process.image.path contains "C:\Program Files\Microsoft Security Client\" or src.process.image.path contains "C:\Program Files\Windows Defender\" or src.process.image.path contains "C:\ProgramData\Microsoft\Windows Defender\Platform\" or src.process.image.path contains "C:\Windows\WinSxS\"))))
 ```
 
@@ -20,7 +20,7 @@ date: 2022-08-02
 modified: 2023-08-04
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
 logsource:
     product: windows
     category: image_load

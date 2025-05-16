@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\MpSvc.dll" and (not (module.path contains "C:\Program Files\Windows Defender\" or module.path contains "C:\ProgramData\Microsoft\Windows Defender\Platform\" or module.path contains "C:\Windows\WinSxS\"))))
 ```
 
@@ -16,7 +16,7 @@ author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema
 date: 2024-07-11
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
 logsource:
     product: windows
     category: image_load

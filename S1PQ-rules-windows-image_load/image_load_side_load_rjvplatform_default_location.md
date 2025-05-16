@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:15:16):
+// Translated content (automatically translated on 16-05-2025 01:18:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path="C:\Windows\System32\SystemResetPlatform\SystemResetPlatform.exe" and module.path="C:\$SysReset\Framework\Stack\RjvPlatform.dll"))
 ```
 
@@ -18,7 +18,6 @@ tags:
     - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1574.001
-    - attack.t1574.002
 logsource:
     category: image_load
     product: windows
