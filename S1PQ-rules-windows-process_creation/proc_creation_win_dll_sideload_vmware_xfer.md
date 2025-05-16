@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 02:00:45):
+// Translated content (automatically translated on 16-05-2025 02:03:30):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\VMwareXferlogs.exe" and (not tgt.process.image.path contains "C:\Program Files\VMware\")))
 ```
 
@@ -16,7 +16,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-02
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
 logsource:
     product: windows
     category: process_creation

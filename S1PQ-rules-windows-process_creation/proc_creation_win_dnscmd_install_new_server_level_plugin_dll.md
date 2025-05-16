@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 02:00:45):
+// Translated content (automatically translated on 16-05-2025 02:03:30):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\dnscmd.exe" and (tgt.process.cmdline contains "/config" and tgt.process.cmdline contains "/serverlevelplugindll")))
 ```
 
@@ -23,7 +23,7 @@ date: 2017-05-08
 modified: 2023-02-05
 tags:
     - attack.defense-evasion
-    - attack.t1574.002
+    - attack.t1574.001
     - attack.t1112
 logsource:
     category: process_creation
