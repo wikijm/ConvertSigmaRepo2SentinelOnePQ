@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:42:21):
+// Translated content (automatically translated on 16-05-2025 01:45:50):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dal_keepalives.dll" and (not (module.path in ("c:\program files\audinate\shared files\*","c:\program files (x86)\audinate\shared files\*")))))
 ```
 
