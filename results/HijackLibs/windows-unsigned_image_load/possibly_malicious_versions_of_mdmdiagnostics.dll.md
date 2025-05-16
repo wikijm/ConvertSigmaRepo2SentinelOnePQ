@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-05-2025 01:24:10):
+// Translated content (automatically translated on 16-05-2025 01:27:07):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mdmdiagnostics.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
