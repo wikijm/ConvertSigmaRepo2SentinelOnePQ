@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-05-2025 02:03:30):
+// Translated content (automatically translated on 17-05-2025 01:59:48):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "/logon:none" or tgt.process.cmdline contains "/system:none" or tgt.process.cmdline contains "/sam:none" or tgt.process.cmdline contains "/privilege:none" or tgt.process.cmdline contains "/object:none" or tgt.process.cmdline contains "/process:none" or tgt.process.cmdline contains "/policy:none"))
 ```
 
