@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-05-2025 01:42:20):
+// Translated content (automatically translated on 18-05-2025 01:50:47):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\iertutil.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
