@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2025 00:55:43):
+// Translated content (automatically translated on 19-05-2025 00:54:43):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "TaniumClient.exe" or src.process.image.path contains "TaniumCX.exe" or src.process.image.path contains "TaniumExecWrapper.exe" or src.process.image.path contains "TaniumFileInfo.exe" or src.process.image.path contains "TPowerShell.exe"))
 ```
 

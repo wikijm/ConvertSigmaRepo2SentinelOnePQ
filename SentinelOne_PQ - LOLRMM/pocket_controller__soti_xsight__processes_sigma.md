@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2025 00:55:43):
+// Translated content (automatically translated on 19-05-2025 00:54:43):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "pocketcontroller.exe" or src.process.image.path contains "wysebrowser.exe" or src.process.image.path contains "XSightService.exe"))
 ```
 
