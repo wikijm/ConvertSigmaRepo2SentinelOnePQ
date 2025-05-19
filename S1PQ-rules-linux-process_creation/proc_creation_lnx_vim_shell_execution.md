@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2025 00:59:30):
+// Translated content (automatically translated on 19-05-2025 00:58:32):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rvim" or tgt.process.image.path contains "/vim" or tgt.process.image.path contains "/vimdiff") and (tgt.process.cmdline contains " --cmd" or tgt.process.cmdline contains " -c ")) and (tgt.process.cmdline contains ":!/" or tgt.process.cmdline contains ":lua " or tgt.process.cmdline contains ":py " or tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
