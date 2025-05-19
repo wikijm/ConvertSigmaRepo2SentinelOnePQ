@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-05-2025 01:50:47):
+// Translated content (automatically translated on 19-05-2025 01:49:59):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\fnp_act_installer.dll" and (not (module.path in ("c:\program files\InstallShield\*\System\*","c:\program files (x86)\InstallShield\*\System\*")))))
 ```
 
