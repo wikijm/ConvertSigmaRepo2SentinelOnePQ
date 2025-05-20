@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-05-2025 01:39:19):
+// Translated content (automatically translated on 20-05-2025 01:27:51):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\peerdistsh.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
