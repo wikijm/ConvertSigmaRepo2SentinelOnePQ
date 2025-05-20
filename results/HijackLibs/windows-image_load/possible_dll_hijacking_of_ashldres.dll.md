@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-05-2025 01:49:59):
+// Translated content (automatically translated on 20-05-2025 01:46:22):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\ashldres.dll" and (not (module.path in ("c:\program files\McAfee.com\VSO\*","c:\program files (x86)\McAfee.com\VSO\*")))))
 ```
 
