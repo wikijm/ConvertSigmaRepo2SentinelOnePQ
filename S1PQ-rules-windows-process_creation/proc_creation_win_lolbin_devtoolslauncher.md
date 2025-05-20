@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-05-2025 02:08:23):
+// Translated content (automatically translated on 20-05-2025 02:04:03):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\devtoolslauncher.exe" and tgt.process.cmdline contains "LaunchForDeploy"))
 ```
 
