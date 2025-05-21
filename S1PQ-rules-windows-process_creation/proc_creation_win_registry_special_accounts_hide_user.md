@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 02:04:03):
+// Translated content (automatically translated on 21-05-2025 02:03:38):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\reg.exe" and (tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" and tgt.process.cmdline contains "add" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "/d 0")))
 ```
 
@@ -23,6 +23,7 @@ author: '@Kostastsale, TheDFIRReport'
 date: 2022-05-14
 modified: 2024-08-23
 tags:
+    - attack.defense-evasion
     - attack.t1564.002
 logsource:
     category: process_creation

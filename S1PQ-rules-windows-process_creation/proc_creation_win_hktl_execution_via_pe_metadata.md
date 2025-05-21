@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 02:04:03):
+// Translated content (automatically translated on 21-05-2025 02:03:38):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.publisher="Cube0x0")
 ```
 
@@ -18,6 +18,7 @@ date: 2022-04-27
 modified: 2024-01-15
 tags:
     - attack.credential-access
+    - attack.resource-development
     - attack.t1588.002
     - attack.t1003
 logsource:

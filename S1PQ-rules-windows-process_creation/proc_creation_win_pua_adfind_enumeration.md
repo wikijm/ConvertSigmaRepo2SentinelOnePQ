@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 02:04:03):
+// Translated content (automatically translated on 21-05-2025 02:03:38):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "lockoutduration" or tgt.process.cmdline contains "lockoutthreshold" or tgt.process.cmdline contains "lockoutobservationwindow" or tgt.process.cmdline contains "maxpwdage" or tgt.process.cmdline contains "minpwdage" or tgt.process.cmdline contains "minpwdlength" or tgt.process.cmdline contains "pwdhistorylength" or tgt.process.cmdline contains "pwdproperties") or tgt.process.cmdline contains "-sc admincountdmp" or tgt.process.cmdline contains "-sc exchaddresses"))
 ```
 
@@ -10,6 +10,8 @@ title: PUA - Suspicious ActiveDirectory Enumeration Via AdFind.EXE
 id: 455b9d50-15a1-4b99-853f-8d37655a4c1b
 related:
     - id: 9a132afa-654e-11eb-ae93-0242ac130002
+      type: similar
+    - id: 514e7e3e-b3b4-4a67-af60-be20f139198b
       type: similar
 status: test
 description: Detects active directory enumeration activity using known AdFind CLI flags

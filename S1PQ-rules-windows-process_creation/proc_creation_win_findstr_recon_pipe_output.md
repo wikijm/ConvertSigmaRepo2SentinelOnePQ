@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 02:04:03):
+// Translated content (automatically translated on 21-05-2025 02:03:38):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*"))
 ```
 
@@ -11,7 +11,7 @@ id: ccb5742c-c248-4982-8c5c-5571b9275ad3
 related:
     - id: fe63010f-8823-4864-a96b-a7b4a0f7b929
       type: derived
-status: experimental
+status: test
 description: |
     Detects the execution of a potential recon command where the results are piped to "findstr". This is meant to trigger on inline calls of "cmd.exe" via the "/c" or "/k" for example.
     Attackers often time use this technique to extract specific information they require in their reconnaissance phase.

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 02:04:03):
+// Translated content (automatically translated on 21-05-2025 02:03:38):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\outlook.exe" and tgt.process.image.path contains "\\"))
 ```
 
@@ -22,6 +22,7 @@ date: 2018-12-27
 modified: 2023-02-09
 tags:
     - attack.execution
+    - attack.defense-evasion
     - attack.t1059
     - attack.t1202
 logsource:
