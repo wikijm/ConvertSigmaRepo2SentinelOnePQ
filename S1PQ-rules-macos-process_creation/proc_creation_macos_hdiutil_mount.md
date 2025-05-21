@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 01:19:49):
+// Translated content (automatically translated on 21-05-2025 01:19:29):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/hdiutil" and (tgt.process.cmdline contains "attach " or tgt.process.cmdline contains "mount ")))
 ```
 
@@ -18,6 +18,7 @@ author: Omar Khaled (@beacon_exe)
 date: 2024-08-10
 tags:
     - attack.initial-access
+    - attack.collection
     - attack.t1566.001
     - attack.t1560.001
 logsource:
