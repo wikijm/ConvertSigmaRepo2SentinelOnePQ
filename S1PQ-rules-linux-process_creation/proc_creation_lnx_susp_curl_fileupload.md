@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 00:56:43):
+// Translated content (automatically translated on 21-05-2025 00:56:10):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/curl" and ((tgt.process.cmdline contains " --form" or tgt.process.cmdline contains " --upload-file " or tgt.process.cmdline contains " --data " or tgt.process.cmdline contains " --data-") or tgt.process.cmdline matches "\\s-[FTd]\\s")) and (not (tgt.process.cmdline contains "://localhost" or tgt.process.cmdline contains "://127.0.0.1"))))
 ```
 
@@ -24,6 +24,7 @@ date: 2022-09-15
 modified: 2023-05-02
 tags:
     - attack.exfiltration
+    - attack.command-and-control
     - attack.t1567
     - attack.t1105
 logsource:

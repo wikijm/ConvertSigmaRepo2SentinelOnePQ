@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-05-2025 00:56:43):
+// Translated content (automatically translated on 21-05-2025 00:56:10):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "http_proxy=" or tgt.process.cmdline contains "https_proxy="))
 ```
 
@@ -17,6 +17,7 @@ date: 2020-06-17
 modified: 2022-10-05
 tags:
     - attack.defense-evasion
+    - attack.command-and-control
     - attack.t1090
 logsource:
     product: linux
