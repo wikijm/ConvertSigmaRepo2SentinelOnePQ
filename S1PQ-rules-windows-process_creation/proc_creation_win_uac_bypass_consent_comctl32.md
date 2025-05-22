@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2025 02:03:38):
+// Translated content (automatically translated on 22-05-2025 02:03:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\consent.exe" and tgt.process.image.path contains "\werfault.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
