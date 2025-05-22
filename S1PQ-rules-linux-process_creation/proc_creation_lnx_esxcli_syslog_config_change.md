@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2025 00:56:10):
+// Translated content (automatically translated on 22-05-2025 00:55:47):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/esxcli" and (tgt.process.cmdline contains "system" and tgt.process.cmdline contains "syslog" and tgt.process.cmdline contains "config") and tgt.process.cmdline contains " set"))
 ```
 
@@ -17,8 +17,10 @@ author: Cedric Maurugeon
 date: 2023-09-04
 tags:
     - attack.defense-evasion
+    - attack.execution
     - attack.t1562.001
     - attack.t1562.003
+    - attack.t1059.012
 logsource:
     category: process_creation
     product: linux

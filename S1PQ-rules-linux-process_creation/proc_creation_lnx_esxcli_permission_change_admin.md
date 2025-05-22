@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-05-2025 00:56:10):
+// Translated content (automatically translated on 22-05-2025 00:55:47):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/esxcli" and tgt.process.cmdline contains "system" and (tgt.process.cmdline contains " permission " and tgt.process.cmdline contains " set" and tgt.process.cmdline contains "Admin")))
 ```
 
@@ -16,6 +16,9 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-09-04
 tags:
     - attack.execution
+    - attack.privilege-escalation
+    - attack.t1059.012
+    - attack.t1098
 logsource:
     category: process_creation
     product: linux
