@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-05-2025 01:17:58):
+// Translated content (automatically translated on 23-05-2025 01:18:07):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((src.process.image.path="C:\Windows\SysWOW64\iscsicpl.exe" and module.path contains "\iscsiexe.dll") and (not (module.path contains "C:\Windows\" and module.path contains "iscsiexe.dll"))))
 ```
 
