@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-05-2025 01:45:06):
+// Translated content (automatically translated on 24-05-2025 01:41:22):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\avutil.dll" and (not (module.path in ("c:\program files\VSO\ConvertX\7\*","c:\program files (x86)\VSO\ConvertX\7\*","c:\program files\VSO\convertXtoDVD\*","c:\program files (x86)\VSO\convertXtoDVD\*","c:\program files\Common Files\Oracle\Java\javapath\*","c:\program files (x86)\Common Files\Oracle\Java\javapath\*")))))
 ```
 
