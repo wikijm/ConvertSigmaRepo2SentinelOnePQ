@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2025 01:45:59):
+// Translated content (automatically translated on 26-05-2025 01:41:37):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".api.jumpcloud.com" or url.address contains ".assist.jumpcloud.com") or (event.dns.request contains ".api.jumpcloud.com" or event.dns.request contains ".assist.jumpcloud.com")))
 ```
 
