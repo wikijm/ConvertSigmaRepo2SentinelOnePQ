@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2025 01:24:53):
+// Translated content (automatically translated on 26-05-2025 01:20:12):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\vivaldi_elf.dll" and (not (src.process.image.path contains "\Vivaldi\Application\vivaldi.exe" and module.path contains "\Vivaldi\Application\"))))
 ```
 
