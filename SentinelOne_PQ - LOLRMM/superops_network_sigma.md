@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-05-2025 00:57:07):
+// Translated content (automatically translated on 26-05-2025 00:53:47):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".superopsbeta.com" or url.address contains "superops.ai" or url.address contains "serv.superopsalpha.com" or url.address contains ".superops.ai" or url.address contains ".superopsalpha.com") or (event.dns.request contains ".superopsbeta.com" or event.dns.request contains "superops.ai" or event.dns.request contains "serv.superopsalpha.com" or event.dns.request contains ".superops.ai" or event.dns.request contains ".superopsalpha.com")))
 ```
 
