@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-05-2025 00:53:47):
+// Translated content (automatically translated on 27-05-2025 00:51:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "lmnoipserver.exe" or src.process.image.path contains "ROMFUSClient.exe" or src.process.image.path contains "romfusclient.exe" or src.process.image.path contains "romviewer.exe" or src.process.image.path contains "romserver.exe" or src.process.image.path contains "ROMServer.exe"))
 ```
 
