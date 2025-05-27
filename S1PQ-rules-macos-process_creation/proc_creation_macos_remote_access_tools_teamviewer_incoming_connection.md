@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-05-2025 01:20:44):
+// Translated content (automatically translated on 27-05-2025 01:18:01):
 event.type="Process Creation" and (endpoint.os="osx" and (src.process.image.path contains "/TeamViewer_Service" and tgt.process.image.path contains "/TeamViewer_Desktop" and tgt.process.cmdline contains "/TeamViewer_Desktop --IPCport 5939 --Module 1"))
 ```
 
