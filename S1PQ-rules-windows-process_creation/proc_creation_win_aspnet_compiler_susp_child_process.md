@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-05-2025 02:06:50):
+// Translated content (automatically translated on 27-05-2025 02:02:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\aspnet_compiler.exe" and ((tgt.process.image.path contains "\calc.exe" or tgt.process.image.path contains "\notepad.exe") or (tgt.process.image.path contains "\Users\Public\" or tgt.process.image.path contains "\AppData\Local\Temp\" or tgt.process.image.path contains "\AppData\Local\Roaming\" or tgt.process.image.path contains ":\Temp\" or tgt.process.image.path contains ":\Windows\Temp\" or tgt.process.image.path contains ":\Windows\System32\Tasks\" or tgt.process.image.path contains ":\Windows\Tasks\"))))
 ```
 
