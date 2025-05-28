@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-05-2025 02:02:15):
+// Translated content (automatically translated on 28-05-2025 02:04:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\setres.exe" and tgt.process.image.path contains "\choice") and (not (tgt.process.image.path contains "C:\Windows\System32\choice.exe" or tgt.process.image.path contains "C:\Windows\SysWOW64\choice.exe"))))
 ```
 

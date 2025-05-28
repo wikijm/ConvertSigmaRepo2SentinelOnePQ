@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-05-2025 02:02:15):
+// Translated content (automatically translated on 28-05-2025 02:04:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " --cpu-priority=" or tgt.process.cmdline contains "--donate-level=0" or tgt.process.cmdline contains " -o pool." or tgt.process.cmdline contains " --nicehash" or tgt.process.cmdline contains " --algo=rx/0 " or tgt.process.cmdline contains "stratum+tcp://" or tgt.process.cmdline contains "stratum+udp://" or tgt.process.cmdline contains "LS1kb25hdGUtbGV2ZWw9" or tgt.process.cmdline contains "0tZG9uYXRlLWxldmVsP" or tgt.process.cmdline contains "tLWRvbmF0ZS1sZXZlbD" or tgt.process.cmdline contains "c3RyYXR1bSt0Y3A6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdGNwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3RjcDovL" or tgt.process.cmdline contains "c3RyYXR1bSt1ZHA6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdWRwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3VkcDovL") and (not (tgt.process.cmdline contains " pool.c " or tgt.process.cmdline contains " pool.o " or tgt.process.cmdline contains "gcc -"))))
 ```
 
