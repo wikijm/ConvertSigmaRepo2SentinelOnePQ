@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-05-2025 00:51:11):
+// Translated content (automatically translated on 28-05-2025 00:52:25):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".action1.com" or url.address contains "a1-backend-packages.s3.amazonaws.com") or (event.dns.request contains ".action1.com" or event.dns.request contains "a1-backend-packages.s3.amazonaws.com")))
 ```
 
