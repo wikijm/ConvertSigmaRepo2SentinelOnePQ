@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-05-2025 00:52:25):
+// Translated content (automatically translated on 29-05-2025 00:52:31):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "sysdiag.exe")
 ```
 
