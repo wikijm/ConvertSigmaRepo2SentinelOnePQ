@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-05-2025 02:03:54):
+// Translated content (automatically translated on 30-05-2025 02:01:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "taskkill " and tgt.process.cmdline contains "RaccineSettings.exe") or (tgt.process.cmdline contains "reg.exe" and tgt.process.cmdline contains "delete" and tgt.process.cmdline contains "Raccine Tray") or (tgt.process.cmdline contains "schtasks" and tgt.process.cmdline contains "/DELETE" and tgt.process.cmdline contains "Raccine Rules Updater")))
 ```
 
