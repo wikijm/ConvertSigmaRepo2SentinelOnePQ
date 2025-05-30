@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-05-2025 01:18:42):
+// Translated content (automatically translated on 30-05-2025 01:16:40):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dbgcore.dll" and (not (module.path contains "C:\Program Files (x86)\" or module.path contains "C:\Program Files\" or module.path contains "C:\Windows\SoftwareDistribution\" or module.path contains "C:\Windows\System32\" or module.path contains "C:\Windows\SystemTemp\" or module.path contains "C:\Windows\SysWOW64\" or module.path contains "C:\Windows\WinSxS\")) and (not module.path contains "\Steam\bin\cef\cef.win7x64\dbgcore.dll")))
 ```
 
