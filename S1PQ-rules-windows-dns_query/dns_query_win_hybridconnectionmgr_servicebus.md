@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-05-2025 02:00:36):
+// Translated content (automatically translated on 31-05-2025 02:00:05):
 event.category="DNS" and (endpoint.os="windows" and (event.dns.request contains "servicebus.windows.net" and src.process.image.path contains "HybridConnectionManager"))
 ```
 
