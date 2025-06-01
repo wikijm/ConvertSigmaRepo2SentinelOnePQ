@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-05-2025 01:43:11):
+// Translated content (automatically translated on 01-06-2025 02:03:15):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\bootux.dll" and (not module.path="c:\windows\system32\*")))
 ```
 
