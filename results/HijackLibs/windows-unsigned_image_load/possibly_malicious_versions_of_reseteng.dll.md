@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-05-2025 01:25:41):
+// Translated content (automatically translated on 01-06-2025 01:51:33):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\reseteng.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
