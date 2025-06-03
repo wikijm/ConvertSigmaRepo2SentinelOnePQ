@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:21:57):
+// Translated content (automatically translated on 03-06-2025 01:20:10):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\MpSvc.dll" and (not (module.path contains "C:\Program Files\Windows Defender\" or module.path contains "C:\ProgramData\Microsoft\Windows Defender\Platform\" or module.path contains "C:\Windows\WinSxS\"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\M
 ```yaml
 title: Potential DLL Sideloading Of MpSvc.DLL
 id: 5ba243e5-8165-4cf7-8c69-e1d3669654c1
-status: experimental
+status: test
 description: Detects potential DLL sideloading of "MpSvc.dll".
 references:
     - https://hijacklibs.net/entries/microsoft/built-in/mpsvc.html

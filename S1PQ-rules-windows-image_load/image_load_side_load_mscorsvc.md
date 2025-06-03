@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:21:57):
+// Translated content (automatically translated on 03-06-2025 01:20:10):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mscorsvc.dll" and (not (module.path contains "C:\Windows\Microsoft.NET\Framework\" or module.path contains "C:\Windows\Microsoft.NET\Framework64\" or module.path contains "C:\Windows\WinSxS\"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\m
 ```yaml
 title: Potential DLL Sideloading Of MsCorSvc.DLL
 id: cdb15e19-c2d0-432a-928e-e49c8c60dcf2
-status: experimental
+status: test
 description: Detects potential DLL sideloading of "mscorsvc.dll".
 references:
     - https://hijacklibs.net/entries/microsoft/built-in/mscorsvc.html

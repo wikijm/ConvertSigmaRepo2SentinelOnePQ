@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:21:57):
+// Translated content (automatically translated on 03-06-2025 01:20:10):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dbgmodel.dll" and (not (module.path contains "C:\Windows\System32\" or module.path contains "C:\Windows\SysWOW64\" or module.path contains "C:\Windows\WinSxS\")) and (not (module.path contains "C:\Program Files\WindowsApps\Microsoft.WinDbg_" or (module.path contains "C:\Program Files (x86)\Windows Kits\" or module.path contains "C:\Program Files\Windows Kits\")))))
 ```
 
@@ -8,7 +8,7 @@ event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\d
 ```yaml
 title: Potential DLL Sideloading Of DbgModel.DLL
 id: fef394cd-f44d-4040-9b18-95d92fe278c0
-status: experimental
+status: test
 description: Detects potential DLL sideloading of "DbgModel.dll"
 references:
     - https://hijacklibs.net/entries/microsoft/built-in/dbgmodel.html
