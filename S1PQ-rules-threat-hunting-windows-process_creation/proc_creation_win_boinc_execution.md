@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 00:52:36):
+// Translated content (automatically translated on 03-06-2025 00:51:00):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.displayName="University of California, Berkeley")
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and tgt.process.display
 ```yaml
 title: Potential BOINC Software Execution (UC-Berkeley Signature)
 id: 0090b851-3543-42db-828c-02fee986ff0b
-status: experimental
+status: test
 description: |
     Detects the use of software that is related to the University of California, Berkeley via metadata information.
     This indicates it may be related to BOINC software and can be used maliciously if unauthorized.

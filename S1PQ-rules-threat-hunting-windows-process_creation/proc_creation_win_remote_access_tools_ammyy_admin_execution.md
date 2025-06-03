@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 00:52:36):
+// Translated content (automatically translated on 03-06-2025 00:51:00):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "AMMYY\aa_nts.dll\",run"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.
 ```yaml
 title: Remote Access Tool - Ammy Admin Agent Execution
 id: 7da7809e-f3d5-47a3-9d5d-fc9d019caf14
-status: experimental
+status: test
 description: Detects the execution of the Ammy Admin RMM agent for remote management.
 references:
     - https://www.ammyy.com/en/admin_features.html

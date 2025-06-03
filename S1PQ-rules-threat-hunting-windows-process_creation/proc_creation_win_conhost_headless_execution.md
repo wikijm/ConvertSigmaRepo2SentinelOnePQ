@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 00:52:36):
+// Translated content (automatically translated on 03-06-2025 00:51:00):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\conhost.exe" and src.process.cmdline contains "--headless"))
 ```
 
@@ -11,7 +11,7 @@ id: 00ca75ab-d5ce-43be-b86c-55ff39c6abfc
 related:
     - id: 056c7317-9a09-4bd4-9067-d051312752ea
       type: derived
-status: experimental
+status: test
 description: |
     Detects the launch of a child process via "conhost.exe" with the "--headless" flag.
     The "--headless" flag hides the windows from the user upon execution.
