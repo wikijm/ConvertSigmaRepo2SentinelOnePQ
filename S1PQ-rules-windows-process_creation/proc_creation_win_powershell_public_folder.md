@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 02:09:25):
+// Translated content (automatically translated on 03-06-2025 02:06:02):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and (tgt.process.cmdline contains "-f C:\Users\Public" or tgt.process.cmdline contains "-f \"C:\Users\Public" or tgt.process.cmdline contains "-f %Public%" or tgt.process.cmdline contains "-fi C:\Users\Public" or tgt.process.cmdline contains "-fi \"C:\Users\Public" or tgt.process.cmdline contains "-fi %Public%" or tgt.process.cmdline contains "-fil C:\Users\Public" or tgt.process.cmdline contains "-fil \"C:\Users\Public" or tgt.process.cmdline contains "-fil %Public%" or tgt.process.cmdline contains "-file C:\Users\Public" or tgt.process.cmdline contains "-file \"C:\Users\Public" or tgt.process.cmdline contains "-file %Public%"))) | columns tgt.process.cmdline
 ```
 

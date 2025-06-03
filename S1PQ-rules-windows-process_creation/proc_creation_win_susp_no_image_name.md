@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 02:09:25):
+// Translated content (automatically translated on 03-06-2025 02:06:02):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\.exe")
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.p
 ```yaml
 title: Process Launched Without Image Name
 id: f208d6d8-d83a-4c2c-960d-877c37da84e5
-status: experimental
+status: test
 description: Detect the use of processes with no name (".exe"), which can be used to evade Image-based detections.
 references:
     - https://www.huntress.com/blog/fake-browser-updates-lead-to-boinc-volunteer-computing-software

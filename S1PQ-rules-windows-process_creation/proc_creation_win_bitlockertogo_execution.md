@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 02:09:25):
+// Translated content (automatically translated on 03-06-2025 02:06:02):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\BitLockerToGo.exe")
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.p
 ```yaml
 title: BitLockerTogo.EXE Execution
 id: 7f2376f9-42ee-4dfc-9360-fecff9a88fc8
-status: experimental
+status: test
 description: |
     Detects the execution of "BitLockerToGo.EXE".
     BitLocker To Go is BitLocker Drive Encryption on removable data drives. This feature includes the encryption of, USB flash drives, SD cards, External hard disk drives, Other drives that are formatted by using the NTFS, FAT16, FAT32, or exFAT file system.
