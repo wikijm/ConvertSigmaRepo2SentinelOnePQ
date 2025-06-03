@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:40:20):
+// Translated content (automatically translated on 03-06-2025 01:37:22):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\wlanapi.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
