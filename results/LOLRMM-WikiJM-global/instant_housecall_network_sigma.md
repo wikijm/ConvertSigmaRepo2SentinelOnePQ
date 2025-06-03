@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:43:43):
+// Translated content (automatically translated on 03-06-2025 01:40:56):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains "secure.instanthousecall.com" or url.address contains ".instanthousecall.net" or url.address contains "instanthousecall.com") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains "secure.instanthousecall.com" or event.dns.request contains ".instanthousecall.net" or event.dns.request contains "instanthousecall.com")))
 ```
 
