@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-06-2025 01:51:06):
+// Translated content (automatically translated on 03-06-2025 01:47:54):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dhcpcmonitor.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
