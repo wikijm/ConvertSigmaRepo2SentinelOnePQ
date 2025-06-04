@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-06-2025 01:40:56):
+// Translated content (automatically translated on 04-06-2025 01:41:05):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "apc_host.exe")
 ```
 
