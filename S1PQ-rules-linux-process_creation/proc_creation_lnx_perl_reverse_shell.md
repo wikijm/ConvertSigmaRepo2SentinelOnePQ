@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-06-2025 00:57:23):
+// Translated content (automatically translated on 04-06-2025 00:57:09):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/perl" and tgt.process.cmdline contains " -e ") and ((tgt.process.cmdline contains "fdopen(" and tgt.process.cmdline contains "::Socket::INET") or (tgt.process.cmdline contains "Socket" and tgt.process.cmdline contains "connect" and tgt.process.cmdline contains "open" and tgt.process.cmdline contains "exec"))))
 ```
 
