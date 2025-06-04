@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-06-2025 01:37:22):
+// Translated content (automatically translated on 04-06-2025 01:37:36):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\ntshrui.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
