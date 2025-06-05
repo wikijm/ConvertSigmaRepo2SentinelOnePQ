@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 01:47:57):
+// Translated content (automatically translated on 05-06-2025 01:46:48):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\uiribbon.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
