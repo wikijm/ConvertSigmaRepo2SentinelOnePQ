@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
+// Translated content (automatically translated on 05-06-2025 02:04:50):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\ntvdm.exe" or tgt.process.image.path contains "\csrstub.exe"))
 ```
 
@@ -17,7 +17,6 @@ references:
     - https://app.any.run/tasks/214094a7-0abc-4a7b-a564-1b757faed79d/
 author: frack113
 date: 2022-07-16
-modified: 2022-07-16
 tags:
     - attack.defense-evasion
 logsource:

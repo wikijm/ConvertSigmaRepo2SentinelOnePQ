@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
+// Translated content (automatically translated on 05-06-2025 02:04:50):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\svchost.exe" and tgt.process.image.path contains "\mmc.exe" and tgt.process.cmdline contains "-Embedding"))
 ```
 
@@ -18,6 +18,7 @@ date: 2020-03-04
 modified: 2021-11-27
 tags:
     - attack.execution
+    - attack.lateral-movement
     - attack.t1021.003
 logsource:
     category: process_creation

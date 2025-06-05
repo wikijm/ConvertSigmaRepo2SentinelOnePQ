@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
+// Translated content (automatically translated on 05-06-2025 02:04:50):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "::FromBase64String(")
 ```
 
@@ -18,6 +18,7 @@ modified: 2023-01-26
 tags:
     - attack.t1027
     - attack.defense-evasion
+    - attack.execution
     - attack.t1140
     - attack.t1059.001
 logsource:

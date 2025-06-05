@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "C:\Windows\Microsoft.NET\Framework\" or tgt.process.image.path contains "C:\Windows\Microsoft.NET\Framework64\") and tgt.process.image.path contains "\aspnet_compiler.exe" and (tgt.process.cmdline contains "\Users\Public\" or tgt.process.cmdline contains "\AppData\Local\Temp\" or tgt.process.cmdline contains "\AppData\Local\Roaming\" or tgt.process.cmdline contains ":\Temp\" or tgt.process.cmdline contains ":\Windows\Temp\" or tgt.process.cmdline contains ":\Windows\System32\Tasks\" or tgt.process.cmdline contains ":\Windows\Tasks\")))
+// Translated content (automatically translated on 05-06-2025 02:04:50):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\Windows\Microsoft.NET\Framework\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\Framework64\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\FrameworkArm\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\FrameworkArm64\") and tgt.process.image.path contains "\aspnet_compiler.exe" and (tgt.process.cmdline contains "\Users\Public\" or tgt.process.cmdline contains "\AppData\Local\Temp\" or tgt.process.cmdline contains "\AppData\Local\Roaming\" or tgt.process.cmdline contains ":\Temp\" or tgt.process.cmdline contains ":\Windows\Temp\" or tgt.process.cmdline contains ":\Windows\System32\Tasks\" or tgt.process.cmdline contains ":\Windows\Tasks\")))
 ```
 
 
@@ -22,6 +22,7 @@ references:
     - https://ijustwannared.team/2020/08/01/the-curious-case-of-aspnet_compiler-exe/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-08-14
+modified: 2025-02-24
 tags:
     - attack.defense-evasion
     - attack.t1127
@@ -31,8 +32,10 @@ logsource:
 detection:
     selection:
         Image|contains:
-            - 'C:\Windows\Microsoft.NET\Framework\'
-            - 'C:\Windows\Microsoft.NET\Framework64\'
+            - ':\Windows\Microsoft.NET\Framework\'
+            - ':\Windows\Microsoft.NET\Framework64\'
+            - ':\Windows\Microsoft.NET\FrameworkArm\'
+            - ':\Windows\Microsoft.NET\FrameworkArm64\'
         Image|endswith: '\aspnet_compiler.exe'
         CommandLine|contains:
             # Note: add other potential suspicious paths

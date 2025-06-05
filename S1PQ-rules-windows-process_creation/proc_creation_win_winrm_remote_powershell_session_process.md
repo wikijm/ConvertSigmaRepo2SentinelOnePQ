@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
+// Translated content (automatically translated on 05-06-2025 02:04:50):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wsmprovhost.exe" or src.process.image.path contains "\wsmprovhost.exe")) | columns ComputerName,tgt.process.user,tgt.process.cmdline
 ```
 
@@ -17,6 +17,7 @@ date: 2019-09-12
 modified: 2022-10-09
 tags:
     - attack.execution
+    - attack.lateral-movement
     - attack.t1059.001
     - attack.t1021.006
 logsource:

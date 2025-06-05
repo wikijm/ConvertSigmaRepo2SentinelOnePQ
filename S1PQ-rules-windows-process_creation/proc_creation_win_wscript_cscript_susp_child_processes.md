@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:06:00):
+// Translated content (automatically translated on 05-06-2025 02:04:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\wscript.exe" or src.process.image.path contains "\cscript.exe") and (tgt.process.image.path contains "\rundll32.exe" or ((tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and ((tgt.process.cmdline contains "mshta" and tgt.process.cmdline contains "http") or (tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "msiexec")))) and (not (tgt.process.image.path contains "\rundll32.exe" and (tgt.process.cmdline contains "UpdatePerUserSystemParameters" or tgt.process.cmdline contains "PrintUIEntry" or tgt.process.cmdline contains "ClearMyTracksByProcess")))))
 ```
 
@@ -14,8 +14,8 @@ description: |
     Malware such as Pikabot and Qakbot were seen using similar techniques as well as many others.
 references:
     - Internal Research
-    - https://github.com/pr0xylife/Pikabot/blob/main/Pikabot_30.10.2023.txt
-    - https://github.com/pr0xylife/Pikabot/blob/main/Pikabot_22.12.2023.txt
+    - https://github.com/pr0xylife/Pikabot/blob/fc58126127adf0f65e78f4eec59675523f48f086/Pikabot_30.10.2023.txt
+    - https://github.com/pr0xylife/Pikabot/blob/fc58126127adf0f65e78f4eec59675523f48f086/Pikabot_22.12.2023.txt
 author: Nasreddine Bencherchali (Nextron Systems), Alejandro Houspanossian ('@lekz86')
 date: 2023-05-15
 modified: 2024-01-02
