@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 00:57:09):
+// Translated content (automatically translated on 05-06-2025 00:56:25):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "http_proxy=" or tgt.process.cmdline contains "https_proxy="))
 ```
 
@@ -10,8 +10,6 @@ title: Connection Proxy
 id: 72f4ab3f-787d-495d-a55d-68c2ff46cf4c
 status: test
 description: Detects setting proxy configuration
-references:
-    - https://attack.mitre.org/techniques/T1090/
 author: Ömer Günal
 date: 2020-06-17
 modified: 2022-10-05

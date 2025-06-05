@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 00:57:09):
+// Translated content (automatically translated on 05-06-2025 00:56:25):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "chown root" and (tgt.process.cmdline contains " chmod u+s" or tgt.process.cmdline contains " chmod g+s")))
 ```
 
@@ -12,12 +12,12 @@ status: test
 description: Detects suspicious change of file privileges with chown and chmod commands
 references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1548.001/T1548.001.md
-    - https://attack.mitre.org/techniques/T1548/001/
 author: Ömer Günal
 date: 2020-06-16
 modified: 2022-10-05
 tags:
     - attack.persistence
+    - attack.privilege-escalation
     - attack.t1548.001
 logsource:
     product: linux
