@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 01:37:36):
+// Translated content (automatically translated on 05-06-2025 01:27:46):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\msctf.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
