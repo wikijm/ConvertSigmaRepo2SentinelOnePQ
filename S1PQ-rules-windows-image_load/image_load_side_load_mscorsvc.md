@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 01:19:50):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mscorsvc.dll" and (not (module.path contains "C:\Windows\Microsoft.NET\Framework\" or module.path contains "C:\Windows\Microsoft.NET\Framework64\" or module.path contains "C:\Windows\WinSxS\"))))
+// Translated content (automatically translated on 05-06-2025 01:19:00):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mscorsvc.dll" and (not (module.path contains "C:\Windows\Microsoft.NET\Framework\" or module.path contains "C:\Windows\Microsoft.NET\Framework64\" or module.path contains "C:\Windows\Microsoft.NET\FrameworkArm\" or module.path contains "C:\Windows\Microsoft.NET\FrameworkArm64\" or module.path contains "C:\Windows\WinSxS\"))))
 ```
 
 
@@ -14,6 +14,7 @@ references:
     - https://hijacklibs.net/entries/microsoft/built-in/mscorsvc.html
 author: Wietze Beukema
 date: 2024-07-11
+modified: 2025-02-26
 tags:
     - attack.defense-evasion
     - attack.t1574.001
@@ -27,6 +28,8 @@ detection:
         ImageLoaded|startswith:
             - 'C:\Windows\Microsoft.NET\Framework\'
             - 'C:\Windows\Microsoft.NET\Framework64\'
+            - 'C:\Windows\Microsoft.NET\FrameworkArm\'
+            - 'C:\Windows\Microsoft.NET\FrameworkArm64\'
             - 'C:\Windows\WinSxS\'
     condition: selection and not 1 of filter_main_*
 falsepositives:
