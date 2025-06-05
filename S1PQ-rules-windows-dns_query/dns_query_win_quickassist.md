@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-06-2025 02:04:49):
+// Translated content (automatically translated on 05-06-2025 02:03:45):
 event.category="DNS" and (endpoint.os="windows" and (src.process.image.path contains "\QuickAssist.exe" and event.dns.request contains "remoteassistance.support.services.microsoft.com"))
 ```
 
@@ -21,6 +21,7 @@ date: 2024-12-19
 tags:
     - attack.command-and-control
     - attack.initial-access
+    - attack.lateral-movement
     - attack.t1071.001
     - attack.t1210
 logsource:
