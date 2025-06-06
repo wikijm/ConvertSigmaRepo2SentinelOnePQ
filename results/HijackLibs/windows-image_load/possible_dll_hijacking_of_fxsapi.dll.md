@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-06-2025 01:46:48):
+// Translated content (automatically translated on 06-06-2025 01:46:04):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\fxsapi.dll" and (not (module.path="c:\windows\system32\*" or module.path="c:\windows\system32\driverstore\filerepository\prnms002.inf_*\amd64\*" or module.path="c:\windows\syswow64\*"))))
 ```
 
