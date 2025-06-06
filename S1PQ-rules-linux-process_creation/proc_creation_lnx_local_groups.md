@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-06-2025 00:56:25):
-event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/groups" or ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/tail" or tgt.process.image.path contains "/more") and tgt.process.cmdline contains "/etc/group")))
+// Translated content (automatically translated on 06-06-2025 00:56:07):
+event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/groups" or ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/ed" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/less" or tgt.process.image.path contains "/more" or tgt.process.image.path contains "/nano" or tgt.process.image.path contains "/tail" or tgt.process.image.path contains "/vi" or tgt.process.image.path contains "/vim") and tgt.process.cmdline contains "/etc/group")))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1069.001/T1069.001.md
 author: Ömer Günal, Alejandro Ortuno, oscd.community
 date: 2020-10-11
-modified: 2022-11-27
+modified: 2025-06-04
 tags:
     - attack.discovery
     - attack.t1069.001
@@ -27,11 +27,16 @@ detection:
     selection_2:
         Image|endswith:
             - '/cat'
+            - '/ed'
             - '/head'
-            - '/tail'
+            - '/less'
             - '/more'
+            - '/nano'
+            - '/tail'
+            - '/vi'
+            - '/vim'
         CommandLine|contains: '/etc/group'
-    condition: 1 of selection*
+    condition: 1 of selection_*
 falsepositives:
     - Legitimate administration activities
 level: low
