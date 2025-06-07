@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2025 01:39:24):
+// Translated content (automatically translated on 07-06-2025 01:38:46):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "boot.net.anydesk.com" or url.address contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or url.address contains ".anydesk.com") or (event.dns.request contains "boot.net.anydesk.com" or event.dns.request contains "relay-[a-f0-9]{8}.net.anydesk.com:443" or event.dns.request contains ".anydesk.com")))
 ```
 
