@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2025 01:46:04):
+// Translated content (automatically translated on 07-06-2025 01:45:31):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\basicnetutils.dll" and (not (module.path in ("c:\users\*\appdata\local\Temp\*\Application2\*","c:\program files\BAIDU\BAIDUPINYIN\*\*","c:\program files (x86)\BAIDU\BAIDUPINYIN\*\*")))))
 ```
 
