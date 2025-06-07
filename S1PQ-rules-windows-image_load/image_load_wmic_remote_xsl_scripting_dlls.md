@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2025 01:18:48):
+// Translated content (automatically translated on 07-06-2025 01:18:24):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\wmic.exe" and (module.path contains "\jscript.dll" or module.path contains "\vbscript.dll")))
 ```
 
