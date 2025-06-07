@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-06-2025 00:52:20):
+// Translated content (automatically translated on 07-06-2025 00:52:27):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Online Backup.exe" or src.process.image.path contains "CBBackupPlan.exe" or src.process.image.path contains "Cloud.Backup.Scheduler.exe" or src.process.image.path contains "Cloud.Backup.RM.Service.exe" or src.process.image.path contains "cbb.exe" or src.process.image.path contains "CloudRaService.exe" or src.process.image.path contains "CloudRaSd.exe" or src.process.image.path contains "CloudRaCmd.exe" or src.process.image.path contains "CloudRaUtilities.exe" or src.process.image.path contains "Remote Desktop.exe" or src.process.image.path contains "Connect.exe"))
 ```
 
