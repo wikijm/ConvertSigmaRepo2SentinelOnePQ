@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-06-2025 01:44:13):
+// Translated content (automatically translated on 09-06-2025 01:42:11):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\vssapi.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
