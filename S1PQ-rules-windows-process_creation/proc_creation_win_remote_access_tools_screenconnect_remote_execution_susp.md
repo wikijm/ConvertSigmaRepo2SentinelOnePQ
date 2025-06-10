@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2025 02:13:13):
+// Translated content (automatically translated on 10-06-2025 02:08:00):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains ":\Windows\TEMP\ScreenConnect\" and src.process.cmdline contains "run.cmd") and (tgt.process.image.path contains "\bitsadmin.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\curl.exe" or tgt.process.image.path contains "\dllhost.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\nltest.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\wevtutil.exe")))
 ```
 
