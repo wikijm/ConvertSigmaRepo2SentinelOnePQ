@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-06-2025 01:42:11):
+// Translated content (automatically translated on 10-06-2025 01:38:28):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\directmanipulation.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
