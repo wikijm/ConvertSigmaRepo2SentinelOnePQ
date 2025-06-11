@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-06-2025 01:49:13):
+// Translated content (automatically translated on 11-06-2025 01:48:33):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\msidcrl40.dll" and (not (module.path in ("c:\program files\msn messenger\*","c:\program files (x86)\msn messenger\*")))))
 ```
 
