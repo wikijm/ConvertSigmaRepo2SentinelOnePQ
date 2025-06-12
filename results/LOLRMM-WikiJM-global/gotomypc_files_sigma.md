@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-06-2025 01:41:45):
+// Translated content (automatically translated on 12-06-2025 01:40:46):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%AppData%\GoTo\Logs\goto.log")
 ```
 
