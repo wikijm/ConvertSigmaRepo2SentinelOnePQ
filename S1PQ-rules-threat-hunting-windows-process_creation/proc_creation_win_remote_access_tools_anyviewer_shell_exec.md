@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-06-2025 00:50:39):
+// Translated content (automatically translated on 12-06-2025 00:50:04):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\AVCore.exe" and src.process.cmdline contains "AVCore.exe\" -d" and tgt.process.image.path contains "\cmd.exe"))
 ```
 
