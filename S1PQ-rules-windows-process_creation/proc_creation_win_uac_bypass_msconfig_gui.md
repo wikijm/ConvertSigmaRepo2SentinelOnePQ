@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-06-2025 02:06:45):
+// Translated content (automatically translated on 12-06-2025 02:05:20):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288")) and src.process.image.path contains "\AppData\Local\Temp\pkgmgr.exe" and tgt.process.cmdline="\"C:\Windows\system32\msconfig.exe\" -5"))
 ```
 
