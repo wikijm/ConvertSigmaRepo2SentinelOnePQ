@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-06-2025 01:48:33):
+// Translated content (automatically translated on 12-06-2025 01:47:24):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\bderepair.dll" and (not module.path="c:\windows\system32\*")))
 ```
 
