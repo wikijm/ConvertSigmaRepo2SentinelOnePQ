@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2025 02:05:20):
+// Translated content (automatically translated on 13-06-2025 02:06:53):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "grpconv.exe -o" or tgt.process.cmdline contains "grpconv -o"))
 ```
 
