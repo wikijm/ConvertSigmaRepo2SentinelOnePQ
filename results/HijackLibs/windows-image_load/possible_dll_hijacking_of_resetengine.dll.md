@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2025 01:47:24):
+// Translated content (automatically translated on 13-06-2025 01:48:18):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\resetengine.dll" and (not module.path="c:\windows\system32\*")))
 ```
 

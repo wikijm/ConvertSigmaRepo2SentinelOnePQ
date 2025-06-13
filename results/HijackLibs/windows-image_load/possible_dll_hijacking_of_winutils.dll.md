@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2025 01:47:24):
+// Translated content (automatically translated on 13-06-2025 01:48:18):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\winutils.dll" and (not (module.path in ("c:\program files\Palo Alto Networks\Traps\*","c:\program files (x86)\Palo Alto Networks\Traps\*")))))
 ```
 
