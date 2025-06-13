@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-06-2025 00:50:04):
+// Translated content (automatically translated on 13-06-2025 00:50:35):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\conhost.exe" and src.process.cmdline contains "--headless"))
 ```
 
@@ -23,6 +23,7 @@ tags:
     - attack.defense-evasion
     - attack.t1059.001
     - attack.t1059.003
+    - detection.threat-hunting
 logsource:
     category: process_creation
     product: windows
