@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 01:37:44):
+// Translated content (automatically translated on 14-06-2025 01:26:17):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\proximityservicepal.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
