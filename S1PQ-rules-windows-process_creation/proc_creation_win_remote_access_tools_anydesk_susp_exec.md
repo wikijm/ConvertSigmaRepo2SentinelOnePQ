@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 02:06:53):
+// Translated content (automatically translated on 14-06-2025 02:02:14):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\AnyDesk.exe" or tgt.process.image.path contains "\AnyDeskMSI.exe") or tgt.process.displayName="AnyDesk" or tgt.process.displayName="AnyDesk" or tgt.process.publisher="AnyDesk Software GmbH") and (not (tgt.process.image.path contains "\AppData\" or tgt.process.image.path contains "Program Files (x86)\AnyDesk" or tgt.process.image.path contains "Program Files\AnyDesk"))))
 ```
 
@@ -24,7 +24,7 @@ date: 2022-05-20
 modified: 2025-02-24
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
 logsource:
     category: process_creation
     product: windows

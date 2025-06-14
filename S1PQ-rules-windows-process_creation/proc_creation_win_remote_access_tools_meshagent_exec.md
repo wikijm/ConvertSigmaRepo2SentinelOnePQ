@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 02:06:53):
+// Translated content (automatically translated on 14-06-2025 02:02:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\meshagent.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe")))
 ```
 
@@ -20,7 +20,7 @@ author: '@Kostastsale'
 date: 2024-09-22
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
 logsource:
     product: windows
     category: process_creation

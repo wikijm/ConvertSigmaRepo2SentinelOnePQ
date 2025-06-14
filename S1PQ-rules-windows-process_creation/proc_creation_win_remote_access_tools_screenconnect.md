@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 02:06:53):
+// Translated content (automatically translated on 14-06-2025 02:02:14):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="ScreenConnect Service" or tgt.process.displayName="ScreenConnect" or tgt.process.publisher="ScreenConnect Software"))
 ```
 
@@ -20,7 +20,7 @@ date: 2022-02-13
 modified: 2023-03-05
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
 logsource:
     category: process_creation
     product: windows

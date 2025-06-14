@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 02:06:53):
+// Translated content (automatically translated on 14-06-2025 02:02:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains ":\Windows\TEMP\ScreenConnect\" and src.process.cmdline contains "run.cmd") and (tgt.process.image.path contains "\bitsadmin.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\curl.exe" or tgt.process.image.path contains "\dllhost.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\nltest.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\wevtutil.exe")))
 ```
 
@@ -24,7 +24,7 @@ date: 2022-02-25
 modified: 2024-02-28
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
 logsource:
     product: windows
     category: process_creation

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 02:06:53):
+// Translated content (automatically translated on 14-06-2025 02:02:14):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\QuickAssist.exe")
 ```
 
@@ -20,7 +20,7 @@ author: Muhammad Faisal (@faisalusuf)
 date: 2024-12-19
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
 logsource:
     category: process_creation
     product: windows
