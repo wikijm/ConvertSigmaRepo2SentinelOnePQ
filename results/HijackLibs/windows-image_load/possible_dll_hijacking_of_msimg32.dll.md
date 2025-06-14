@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 01:48:18):
+// Translated content (automatically translated on 14-06-2025 01:44:36):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\msimg32.dll" and (not (module.path in ("c:\program files\Haihaisoft PDF Reader\*","c:\program files (x86)\Haihaisoft PDF Reader\*","c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
