@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-06-2025 00:50:35):
+// Translated content (automatically translated on 14-06-2025 00:47:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\action1_agent.exe" and tgt.process.image.path contains "\Windows\Action1\package_downloads\") or ((src.process.image.path contains "\cmd.exe" or src.process.image.path contains "\powershell.exe") and (src.process.cmdline contains "\Action1\scripts\Run_Command_" or src.process.cmdline contains "\Action1\scripts\Run_PowerShell_")) or tgt.process.image.path contains "\agent1_remote.exe"))
 ```
 
@@ -33,7 +33,7 @@ author: '@kostastsale'
 date: 2023-04-13
 tags:
     - attack.command-and-control
-    - attack.t1219
+    - attack.t1219.002
     - detection.threat-hunting
 logsource:
     category: process_creation
