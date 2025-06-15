@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-06-2025 01:37:59):
+// Translated content (automatically translated on 15-06-2025 01:49:51):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log" or tgt.file.path contains "C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml" or tgt.file.path="*C:\Users\*\AppData\*\mRemoteNG\**10\user.config"))
 ```
 
