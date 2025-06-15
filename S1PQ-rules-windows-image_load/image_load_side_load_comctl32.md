@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-06-2025 01:17:22):
+// Translated content (automatically translated on 15-06-2025 01:28:11):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((module.path contains "C:\Windows\System32\logonUI.exe.local\" or module.path contains "C:\Windows\System32\werFault.exe.local\" or module.path contains "C:\Windows\System32\consent.exe.local\" or module.path contains "C:\Windows\System32\narrator.exe.local\" or module.path contains "C:\windows\system32\wermgr.exe.local\") and module.path contains "\comctl32.dll"))
 ```
 
