@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2025 01:45:54):
+// Translated content (automatically translated on 16-06-2025 01:41:10):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dpx.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
