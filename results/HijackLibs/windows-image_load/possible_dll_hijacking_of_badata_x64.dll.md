@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2025 01:57:41):
+// Translated content (automatically translated on 16-06-2025 01:52:14):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\badata_x64.dll" and (not (module.path in ("c:\program files\True Burner\*","c:\program files (x86)\True Burner\*")))))
 ```
 

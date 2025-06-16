@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2025 01:57:41):
+// Translated content (automatically translated on 16-06-2025 01:52:14):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\firewallapi.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 

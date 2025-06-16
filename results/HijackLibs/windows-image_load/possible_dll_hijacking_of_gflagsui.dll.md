@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-06-2025 01:57:41):
+// Translated content (automatically translated on 16-06-2025 01:52:14):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\gflagsui.dll" and (not (module.path in ("c:\program files\Windows Kits\10\Debuggers\*\*","c:\program files (x86)\Windows Kits\10\Debuggers\*\*")))))
 ```
 
