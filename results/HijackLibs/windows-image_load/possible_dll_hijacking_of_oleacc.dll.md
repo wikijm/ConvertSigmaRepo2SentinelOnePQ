@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-06-2025 01:52:14):
+// Translated content (automatically translated on 17-06-2025 01:49:06):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\oleacc.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
