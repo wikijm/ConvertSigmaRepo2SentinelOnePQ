@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-06-2025 02:06:06):
+// Translated content (automatically translated on 18-06-2025 02:05:06):
 event.category="DNS" and (endpoint.os="windows" and (src.process.image.path contains "\QuickAssist.exe" and event.dns.request contains "remoteassistance.support.services.microsoft.com"))
 ```
 
