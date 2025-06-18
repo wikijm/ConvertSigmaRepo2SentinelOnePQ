@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-06-2025 00:53:11):
+// Translated content (automatically translated on 18-06-2025 00:53:26):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*\clumsyleaf.cloudxplorer*.exe")
 ```
 
