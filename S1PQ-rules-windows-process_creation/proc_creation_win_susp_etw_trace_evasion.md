@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-06-2025 02:06:19):
+// Translated content (automatically translated on 19-06-2025 02:07:05):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "cl" and tgt.process.cmdline contains "/Trace") or (tgt.process.cmdline contains "clear-log" and tgt.process.cmdline contains "/Trace") or (tgt.process.cmdline contains "sl" and tgt.process.cmdline contains "/e:false") or (tgt.process.cmdline contains "set-log" and tgt.process.cmdline contains "/e:false") or (tgt.process.cmdline contains "logman" and tgt.process.cmdline contains "update" and tgt.process.cmdline contains "trace" and tgt.process.cmdline contains "--p" and tgt.process.cmdline contains "-ets") or tgt.process.cmdline contains "Remove-EtwTraceProvider" or (tgt.process.cmdline contains "Set-EtwTraceProvider" and tgt.process.cmdline contains "0x11")))
 ```
 
