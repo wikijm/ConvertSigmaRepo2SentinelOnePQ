@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2025 00:53:31):
+// Translated content (automatically translated on 20-06-2025 00:53:08):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "awhost32.exe" or src.process.image.path contains "awrem32.exe" or src.process.image.path contains "pcaquickconnect.exe" or src.process.image.path contains "winaw32.exe"))
 ```
 
