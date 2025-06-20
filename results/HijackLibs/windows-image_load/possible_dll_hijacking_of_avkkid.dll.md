@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2025 01:49:07):
+// Translated content (automatically translated on 20-06-2025 01:48:01):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\avkkid.dll" and (not (module.path in ("c:\program files\G DATA\TotalSecurity\avkkid\*","c:\program files (x86)\G DATA\TotalSecurity\avkkid\*")))))
 ```
 
