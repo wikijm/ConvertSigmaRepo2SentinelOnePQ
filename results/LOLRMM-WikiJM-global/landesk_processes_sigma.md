@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2025 01:42:08):
+// Translated content (automatically translated on 20-06-2025 01:41:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "issuser.exe" or src.process.image.path contains "landeskagentbootstrap.exe" or src.process.image.path contains "LANDeskPortalManager.exe" or src.process.image.path contains "ldinv32.exe" or src.process.image.path contains "ldsensors.exe" or src.process.image.path contains "\issuser.exe" or src.process.image.path contains "\softmon.exe" or src.process.image.path contains "\tmcsvc.exe"))
 ```
 
