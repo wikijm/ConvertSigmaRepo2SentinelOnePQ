@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2025 00:50:53):
+// Translated content (automatically translated on 20-06-2025 00:50:31):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\ScreenConnect.ClientService.exe")
 ```
 
