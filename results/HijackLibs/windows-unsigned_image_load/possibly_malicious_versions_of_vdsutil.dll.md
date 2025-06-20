@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-06-2025 01:38:28):
+// Translated content (automatically translated on 20-06-2025 01:37:35):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\vdsutil.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
