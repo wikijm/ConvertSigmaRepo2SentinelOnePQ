@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-06-2025 02:06:09):
+// Translated content (automatically translated on 21-06-2025 02:03:51):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\AnyDesk.exe" or tgt.process.image.path contains "\AnyDeskMSI.exe") or tgt.process.displayName="AnyDesk" or tgt.process.displayName="AnyDesk" or tgt.process.publisher="AnyDesk Software GmbH") and (not (tgt.process.image.path contains "\AppData\" or tgt.process.image.path contains "Program Files (x86)\AnyDesk" or tgt.process.image.path contains "Program Files\AnyDesk"))))
 ```
 
