@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-06-2025 01:19:00):
+// Translated content (automatically translated on 22-06-2025 01:27:26):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((module.path contains "\commfunc.dll" and (not (module.path contains "\AppData\local\Google\Chrome\Application\" or (module.path contains "C:\Program Files\Lenovo\Communications Utility\" or module.path contains "C:\Program Files (x86)\Lenovo\Communications Utility\")))) or (module.path contains "\tosbtkbd.dll" and (not (module.path contains "C:\Program Files\Toshiba\Bluetooth Toshiba Stack\" or module.path contains "C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\")))))
 ```
 
