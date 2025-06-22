@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-06-2025 01:27:54):
+// Translated content (automatically translated on 22-06-2025 01:45:23):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\eappcfg.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
