@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-06-2025 02:03:51):
+// Translated content (automatically translated on 22-06-2025 02:21:59):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\vsls-agent.exe" and tgt.process.cmdline contains "--agentExtensionPath") and (not tgt.process.cmdline contains "Microsoft.VisualStudio.LiveShare.Agent."))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
