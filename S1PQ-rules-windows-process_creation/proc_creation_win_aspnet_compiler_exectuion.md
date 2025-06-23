@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-06-2025 02:21:59):
+// Translated content (automatically translated on 23-06-2025 02:20:12):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains ":\Windows\Microsoft.NET\Framework\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\Framework64\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\FrameworkArm\" or tgt.process.image.path contains ":\Windows\Microsoft.NET\FrameworkArm64\") and tgt.process.image.path contains "\aspnet_compiler.exe"))
 ```
 
