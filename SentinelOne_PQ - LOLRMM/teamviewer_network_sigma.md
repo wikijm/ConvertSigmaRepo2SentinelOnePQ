@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-06-2025 00:57:05):
+// Translated content (automatically translated on 24-06-2025 00:53:52):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".teamviewer.com" or url.address contains "router15.teamviewer.com" or url.address contains "client.teamviewer.com" or url.address contains "taf.teamviewer.com") or (event.dns.request contains ".teamviewer.com" or event.dns.request contains "router15.teamviewer.com" or event.dns.request contains "client.teamviewer.com" or event.dns.request contains "taf.teamviewer.com")))
 ```
 
