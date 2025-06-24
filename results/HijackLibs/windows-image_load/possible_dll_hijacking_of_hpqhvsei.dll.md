@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-06-2025 01:55:31):
+// Translated content (automatically translated on 24-06-2025 01:49:44):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\hpqhvsei.dll" and (not (module.path in ("c:\program files\HP\*","c:\program files (x86)\HP\*")))))
 ```
 
