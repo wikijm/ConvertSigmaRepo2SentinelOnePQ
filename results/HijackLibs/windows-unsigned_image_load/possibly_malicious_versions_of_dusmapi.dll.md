@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-06-2025 01:38:42):
+// Translated content (automatically translated on 25-06-2025 01:39:10):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dusmapi.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
