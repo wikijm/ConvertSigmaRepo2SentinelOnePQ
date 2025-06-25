@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-06-2025 02:07:51):
+// Translated content (automatically translated on 25-06-2025 02:08:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\meshagent.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe")))
 ```
 
@@ -33,6 +33,6 @@ detection:
             - '\pwsh.exe'
     condition: selection
 falsepositives:
-    - False positives can be found in environments using MessAgent for remote management, analysis should prioritize the grandparent process, MessAgent.exe, and scrutinize the resulting child processes triggered by any suspicious interactive commands directed at the target host.
+    - False positives can be found in environments using MeshAgent for remote management, analysis should prioritize the grandparent process, MeshAgent.exe, and scrutinize the resulting child processes triggered by any suspicious interactive commands directed at the target host.
 level: medium
 ```
