@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-06-2025 01:42:44):
+// Translated content (automatically translated on 26-06-2025 01:41:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\Users\<username>\AppData\Local\Temp\TeamViewer\TV15Install.log" or tgt.file.path contains "TeamViewer\d\d_Logfile\.log" or tgt.file.path contains "C:\Program Files\TeamViewer\Connections_incoming.txt" or tgt.file.path contains "C:\Program Files\TeamViewer\TVNetwork.log" or tgt.file.path contains "%LOCALAPPDATA%\Temp\TeamViewer\TV15Install.log" or tgt.file.path contains "%APPDATA%\TeamViewer\TeamViewer\d\d_Logfile\.log" or tgt.file.path contains "teamviewerqs.exe" or tgt.file.path contains "tv_w32.exe" or tgt.file.path contains "tv_w64.exe" or tgt.file.path contains "tv_x64.exe" or tgt.file.path contains "teamviewer.exe" or tgt.file.path contains "teamviewer_service.exe" or tgt.file.path contains "%LOCALAPPDATA%\TeamViewer\Database\tvchatfilecache.db" or tgt.file.path contains "%LOCALAPPDATA%\TeamViewer\RemotePrinting\tvprint.db" or tgt.file.path contains "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\TeamViewer.lnk" or tgt.file.path="*C:\Program Files*\TeamViewer\connections*.txt" or tgt.file.path contains "C:\Users\*\AppData\Roaming\TeamViewer\MRU\RemoteSupport\*tvc"))
 ```
 
