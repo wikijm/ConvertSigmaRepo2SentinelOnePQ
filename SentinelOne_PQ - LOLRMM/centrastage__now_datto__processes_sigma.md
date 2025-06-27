@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-06-2025 00:53:35):
+// Translated content (automatically translated on 27-06-2025 00:54:12):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "CagService.exe" or src.process.image.path contains "AEMAgent.exe"))
 ```
 
