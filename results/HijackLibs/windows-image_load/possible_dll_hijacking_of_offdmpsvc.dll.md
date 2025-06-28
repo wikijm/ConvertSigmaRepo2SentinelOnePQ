@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-06-2025 01:49:43):
+// Translated content (automatically translated on 28-06-2025 01:45:40):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\offdmpsvc.dll" and (not module.path="c:\windows\system32\*")))
 ```
 
