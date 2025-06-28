@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-06-2025 00:54:12):
+// Translated content (automatically translated on 28-06-2025 00:52:10):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "charon.netreo.net" or url.address contains "activation.netreo.net" or url.address contains ".api.netreo.com" or url.address contains "netreo.com") or (event.dns.request contains "charon.netreo.net" or event.dns.request contains "activation.netreo.net" or event.dns.request contains ".api.netreo.com" or event.dns.request contains "netreo.com")))
 ```
 
