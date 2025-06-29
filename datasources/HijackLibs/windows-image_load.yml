@@ -208,6 +208,8 @@ detection:
         ImageLoaded:
             - 'c:\program files\Common Files\Apple\Apple Application Support\*'
             - 'c:\program files (x86)\Common Files\Apple\Apple Application Support\*'
+            - 'c:\program files\iTunes\*'
+            - 'c:\program files (x86)\iTunes\*'
             - 'c:\windows\system32\*'
 
     condition: selection and not filter
@@ -346,6 +348,10 @@ detection:
         ImageLoaded:
             - 'c:\program files\AVAST Software\Avast\*'
             - 'c:\program files (x86)\AVAST Software\Avast\*'
+            - 'c:\program files\Norton\Suite\*'
+            - 'c:\program files (x86)\Norton\Suite\*'
+            - 'c:\program files\AVG\Antivirus\*'
+            - 'c:\program files (x86)\AVG\Antivirus\*'
 
     condition: selection and not filter
 falsepositives:
@@ -560,6 +566,9 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\users\*\appdata\local\CiscoSparkLauncher\*'
+            - 'c:\users\*\appdata\local\Programs\Cisco Spark\*'
+            - 'c:\program files\Cisco Spark\*'
+            - 'c:\program files (x86)\Cisco Spark\*'
 
     condition: selection and not filter
 falsepositives:
@@ -1038,6 +1047,33 @@ detection:
         ImageLoaded:
             - 'c:\program files\ICQLite\*'
             - 'c:\program files (x86)\ICQLite\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of tbb.dll
+id: 3106521b-4746-48a3-1019-5b9ff8256030
+status: experimental
+description: Detects possible DLL hijacking of tbb.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/intel/tbb.html
+author: "Jai Minton"
+date: 2025-06-24
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\tbb.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Adobe\Adobe Photoshop CC *\*'
+            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\*'
 
     condition: selection and not filter
 falsepositives:
@@ -1688,7 +1724,10 @@ detection:
         ImageLoaded: '*\opera_elf.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\programs\opera\*\*'
+            - 'c:\users\*\appdata\local\Programs\Opera\*\*'
+            - 'c:\users\*\appdata\local\Programs\Opera GX\*\*'
+            - 'c:\program files\Opera\*\*'
+            - 'c:\program files (x86)\Opera\*\*'
 
     condition: selection and not filter
 falsepositives:
@@ -1716,6 +1755,8 @@ detection:
         ImageLoaded:
             - 'c:\program files\SQL Developer\ide\bin\*'
             - 'c:\program files (x86)\SQL Developer\ide\bin\*'
+            - 'c:\program files\sqldeveloper\ide\bin\*'
+            - 'c:\program files (x86)\sqldeveloper\ide\bin\*'
 
     condition: selection and not filter
 falsepositives:
@@ -2128,6 +2169,8 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\users\*\appdata\local\rustdesk\*'
+            - 'c:\program files\RustDesk\*'
+            - 'c:\program files (x86)\RustDesk\*'
 
     condition: selection and not filter
 falsepositives:
@@ -2155,6 +2198,8 @@ detection:
         ImageLoaded:
             - 'c:\program files\Epson Software\Document Capture Server\*'
             - 'c:\program files (x86)\Epson Software\Document Capture Server\*'
+            - 'c:\program files\Epson Software\Event Manager\*'
+            - 'c:\program files (x86)\Epson Software\Event Manager\*'
 
     condition: selection and not filter
 falsepositives:
@@ -2635,6 +2680,7 @@ detection:
         ImageLoaded:
             - 'c:\users\*\appdata\local\Vivaldi\Application\*'
             - 'c:\users\*\appdata\local\Vivaldi\Application\*\*'
+            - 'c:\users\*\appdata\local\Programs\Vivaldi\Application\*\*'
 
     condition: selection and not filter
 falsepositives:
@@ -3430,6 +3476,29 @@ detection:
             - 'c:\windows\syswow64\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of axeonoffhelper.dll
+id: 7616971b-8288-48a3-2577-5b9ff8451750
+status: experimental
+description: Detects possible DLL hijacking of axeonoffhelper.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/axeonoffhelper.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-06-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\axeonoffhelper.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -8450,6 +8519,8 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+            - 'c:\program files\Windows Defender\*\*'
+            - 'c:\program files (x86)\Windows Defender\*\*'
 
     condition: selection and not filter
 falsepositives:
@@ -8780,6 +8851,7 @@ detection:
             - 'c:\program files (x86)\Microsoft\EdgeUpdate\*\*'
             - 'c:\program files\Microsoft\Temp\*\*'
             - 'c:\program files (x86)\Microsoft\Temp\*\*'
+            - 'c:\users\*\appdata\local\Microsoft\EdgeUpdate\*\*'
 
     condition: selection and not filter
 falsepositives:
@@ -9881,11 +9953,8 @@ logsource:
 detection:
     selection:
         ImageLoaded: '*\offdmpsvc.dll'
-    filter:
-        ImageLoaded:
-            - 'c:\windows\system32\*'
 
-    condition: selection and not filter
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 

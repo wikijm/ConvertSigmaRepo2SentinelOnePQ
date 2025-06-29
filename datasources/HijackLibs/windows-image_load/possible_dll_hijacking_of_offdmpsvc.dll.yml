@@ -15,11 +15,8 @@ logsource:
 detection:
     selection:
         ImageLoaded: '*\offdmpsvc.dll'
-    filter:
-        ImageLoaded:
-            - 'c:\windows\system32\*'
 
-    condition: selection and not filter
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 

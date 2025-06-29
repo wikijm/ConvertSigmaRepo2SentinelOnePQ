@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 01:45:40):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\opera_elf.dll" and (not module.path="c:\users\*\appdata\local\programs\opera\*\*")))
+// Translated content (automatically translated on 29-06-2025 01:59:08):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\opera_elf.dll" and (not (module.path in ("c:\users\*\appdata\local\Programs\Opera\*\*","c:\users\*\appdata\local\Programs\Opera GX\*\*","c:\program files\Opera\*\*","c:\program files (x86)\Opera\*\*")))))
 ```
 
 
@@ -25,7 +25,10 @@ detection:
         ImageLoaded: '*\opera_elf.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\programs\opera\*\*'
+            - 'c:\users\*\appdata\local\Programs\Opera\*\*'
+            - 'c:\users\*\appdata\local\Programs\Opera GX\*\*'
+            - 'c:\program files\Opera\*\*'
+            - 'c:\program files (x86)\Opera\*\*'
 
     condition: selection and not filter
 falsepositives:

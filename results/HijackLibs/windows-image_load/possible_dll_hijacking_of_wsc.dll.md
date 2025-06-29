@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 01:45:40):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\wsc.dll" and (not (module.path in ("c:\program files\AVAST Software\Avast\*","c:\program files (x86)\AVAST Software\Avast\*")))))
+// Translated content (automatically translated on 29-06-2025 01:59:08):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\wsc.dll" and (not (module.path in ("c:\program files\AVAST Software\Avast\*","c:\program files (x86)\AVAST Software\Avast\*","c:\program files\Norton\Suite\*","c:\program files (x86)\Norton\Suite\*","c:\program files\AVG\Antivirus\*","c:\program files (x86)\AVG\Antivirus\*")))))
 ```
 
 
@@ -27,6 +27,10 @@ detection:
         ImageLoaded:
             - 'c:\program files\AVAST Software\Avast\*'
             - 'c:\program files (x86)\AVAST Software\Avast\*'
+            - 'c:\program files\Norton\Suite\*'
+            - 'c:\program files (x86)\Norton\Suite\*'
+            - 'c:\program files\AVG\Antivirus\*'
+            - 'c:\program files (x86)\AVG\Antivirus\*'
 
     condition: selection and not filter
 falsepositives:

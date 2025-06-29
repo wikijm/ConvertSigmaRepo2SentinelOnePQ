@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 01:45:40):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mpsvc.dll" and (not module.path="c:\programdata\Microsoft\Windows Defender\Platform\*\*")))
+// Translated content (automatically translated on 29-06-2025 01:59:08):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mpsvc.dll" and (not (module.path in ("c:\programdata\Microsoft\Windows Defender\Platform\*\*","c:\program files\Windows Defender\*\*","c:\program files (x86)\Windows Defender\*\*")))))
 ```
 
 
@@ -26,6 +26,8 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+            - 'c:\program files\Windows Defender\*\*'
+            - 'c:\program files (x86)\Windows Defender\*\*'
 
     condition: selection and not filter
 falsepositives:

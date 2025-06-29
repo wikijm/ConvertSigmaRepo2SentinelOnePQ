@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 01:45:40):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\offdmpsvc.dll" and (not module.path="c:\windows\system32\*")))
+// Translated content (automatically translated on 29-06-2025 01:59:08):
+event.type="ModuleLoad" and (endpoint.os="windows" and module.path contains "\offdmpsvc.dll")
 ```
 
 
@@ -23,11 +23,8 @@ logsource:
 detection:
     selection:
         ImageLoaded: '*\offdmpsvc.dll'
-    filter:
-        ImageLoaded:
-            - 'c:\windows\system32\*'
 
-    condition: selection and not filter
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 

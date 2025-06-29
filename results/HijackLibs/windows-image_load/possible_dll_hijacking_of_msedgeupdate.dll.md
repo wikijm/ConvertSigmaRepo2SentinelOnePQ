@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 01:45:40):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\msedgeupdate.dll" and (not (module.path in ("c:\program files\Microsoft\EdgeUpdate\*\*","c:\program files (x86)\Microsoft\EdgeUpdate\*\*","c:\program files\Microsoft\Temp\*\*","c:\program files (x86)\Microsoft\Temp\*\*")))))
+// Translated content (automatically translated on 29-06-2025 01:59:08):
+event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\msedgeupdate.dll" and (not (module.path in ("c:\program files\Microsoft\EdgeUpdate\*\*","c:\program files (x86)\Microsoft\EdgeUpdate\*\*","c:\program files\Microsoft\Temp\*\*","c:\program files (x86)\Microsoft\Temp\*\*","c:\users\*\appdata\local\Microsoft\EdgeUpdate\*\*")))))
 ```
 
 
@@ -29,6 +29,7 @@ detection:
             - 'c:\program files (x86)\Microsoft\EdgeUpdate\*\*'
             - 'c:\program files\Microsoft\Temp\*\*'
             - 'c:\program files (x86)\Microsoft\Temp\*\*'
+            - 'c:\users\*\appdata\local\Microsoft\EdgeUpdate\*\*'
 
     condition: selection and not filter
 falsepositives:

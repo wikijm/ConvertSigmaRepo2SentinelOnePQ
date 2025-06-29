@@ -19,6 +19,10 @@ detection:
         ImageLoaded:
             - 'c:\program files\AVAST Software\Avast\*'
             - 'c:\program files (x86)\AVAST Software\Avast\*'
+            - 'c:\program files\Norton\Suite\*'
+            - 'c:\program files (x86)\Norton\Suite\*'
+            - 'c:\program files\AVG\Antivirus\*'
+            - 'c:\program files (x86)\AVG\Antivirus\*'
 
     condition: selection and not filter
 falsepositives:
