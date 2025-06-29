@@ -1,0 +1,26 @@
+title: Possible preparation for tbb.dll DLL Hijacking
+id: 3106522b-4746-48a3-1019-5b9ff8256030
+status: experimental
+description: Detects possible DLL hijacking of tbb.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/intel/tbb.html
+author: "Jai Minton"
+date: 2025-06-24
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tbb.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Adobe\Adobe Photoshop CC *\*'
+            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

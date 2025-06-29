@@ -1,0 +1,22 @@
+title: Possible preparation for axeonoffhelper.dll DLL Hijacking
+id: 7616972b-8288-48a3-2577-5b9ff8451750
+status: experimental
+description: Detects possible DLL hijacking of axeonoffhelper.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/axeonoffhelper.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-06-18
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\axeonoffhelper.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -21,6 +21,7 @@ detection:
             - 'c:\program files (x86)\Microsoft\EdgeUpdate\*\*'
             - 'c:\program files\Microsoft\Temp\*\*'
             - 'c:\program files (x86)\Microsoft\Temp\*\*'
+            - 'c:\users\*\appdata\local\Microsoft\EdgeUpdate\*\*'
 
     condition: selection and not filter
 falsepositives:
