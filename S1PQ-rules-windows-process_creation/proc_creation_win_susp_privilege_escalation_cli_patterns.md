@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-06-2025 02:03:28):
+// Translated content (automatically translated on 29-06-2025 02:24:29):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -u system " or tgt.process.cmdline contains " --user system " or tgt.process.cmdline contains " -u NT" or tgt.process.cmdline contains " -u \"NT" or tgt.process.cmdline contains " -u 'NT" or tgt.process.cmdline contains " --system " or tgt.process.cmdline contains " -u administrator ") and (tgt.process.cmdline contains " -c cmd" or tgt.process.cmdline contains " -c \"cmd" or tgt.process.cmdline contains " -c powershell" or tgt.process.cmdline contains " -c \"powershell" or tgt.process.cmdline contains " --command cmd" or tgt.process.cmdline contains " --command powershell" or tgt.process.cmdline contains " -c whoami" or tgt.process.cmdline contains " -c wscript" or tgt.process.cmdline contains " -c cscript")))
 ```
 
