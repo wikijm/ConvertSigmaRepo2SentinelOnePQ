@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-06-2025 01:04:01):
+// Translated content (automatically translated on 30-06-2025 01:01:22):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/update-ca-certificates" or tgt.process.image.path contains "/update-ca-trust"))
 ```
 
