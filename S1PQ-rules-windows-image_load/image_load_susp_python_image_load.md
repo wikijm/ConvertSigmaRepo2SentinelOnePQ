@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-06-2025 01:37:07):
+// Translated content (automatically translated on 30-06-2025 01:25:12):
 event.type="ModuleLoad" and (endpoint.os="windows" and (Description="Python Core" and (not (src.process.image.path contains "Python" or (src.process.image.path contains "C:\Program Files\" or src.process.image.path contains "C:\Program Files (x86)\" or src.process.image.path contains "C:\ProgramData\Anaconda3\"))) and (not not (src.process.image.path matches "\.*"))))
 ```
 
