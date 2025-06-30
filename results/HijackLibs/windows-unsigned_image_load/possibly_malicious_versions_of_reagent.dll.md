@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-06-2025 01:47:28):
+// Translated content (automatically translated on 30-06-2025 01:43:23):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\reagent.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
