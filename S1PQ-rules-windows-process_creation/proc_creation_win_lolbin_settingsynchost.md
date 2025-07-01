@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-06-2025 02:19:12):
+// Translated content (automatically translated on 01-07-2025 02:25:33):
 event.type="Process Creation" and (endpoint.os="windows" and ((not (tgt.process.image.path contains "C:\Windows\System32\" or tgt.process.image.path contains "C:\Windows\SysWOW64\")) and (src.process.cmdline contains "cmd.exe /c" and src.process.cmdline contains "RoamDiag.cmd" and src.process.cmdline contains "-outputpath"))) | columns TargetFilename,tgt.process.image.path
 ```
 
