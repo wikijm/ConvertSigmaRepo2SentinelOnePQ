@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-06-2025 00:57:16):
+// Translated content (automatically translated on 01-07-2025 01:00:18):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "seetrolcenter.exe" or src.process.image.path contains "seetrolclient.exe" or src.process.image.path contains "seetrolmyservice.exe" or src.process.image.path contains "seetrolremote.exe" or src.process.image.path contains "seetrolsetting.exe"))
 ```
 
