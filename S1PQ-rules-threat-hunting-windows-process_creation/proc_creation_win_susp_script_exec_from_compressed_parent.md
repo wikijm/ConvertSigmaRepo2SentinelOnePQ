@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 00:57:31):
+// Translated content (automatically translated on 02-07-2025 00:51:19):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path="*\7z*.exe" and tgt.process.cmdline="*\AppData\local\temp\7z*\*") or (src.process.image.path contains "\winrar.exe" and tgt.process.cmdline="*\AppData\local\temp\rar*\*") or (src.process.image.path contains "\explorer.exe" and (tgt.process.cmdline contains "\AppData\local\temp\*.rar\" or tgt.process.cmdline contains "\AppData\local\temp\*.zip\"))) and ((tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\wscript.exe") and (tgt.process.cmdline contains ".hta" or tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".jse" or tgt.process.cmdline contains ".ps1" or tgt.process.cmdline contains ".vbe" or tgt.process.cmdline contains ".vbs" or tgt.process.cmdline contains ".wsf" or tgt.process.cmdline contains ".wsh"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (((src.process.imag
 ```yaml
 title: Manual Execution of Script Inside of a Compressed File
 id: 95724fc1-a258-4674-97db-a30351981c5a
-status: experimental
+status: test
 description: |
     This is a threat-hunting query to collect information related to the interactive execution of a script from inside a compressed file (zip/rar). Windows will automatically run the script using scripting interpreters such as wscript and cscript binaries.
 
