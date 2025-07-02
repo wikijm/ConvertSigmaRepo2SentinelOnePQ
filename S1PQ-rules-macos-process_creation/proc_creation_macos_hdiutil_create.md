@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:39:29):
+// Translated content (automatically translated on 02-07-2025 01:21:28):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/hdiutil" and tgt.process.cmdline contains "create"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path
 ```yaml
 title: Disk Image Creation Via Hdiutil - MacOS
 id: 1cf98dc2-fcb0-47c9-8aea-654c9284d1ae
-status: experimental
+status: test
 description: Detects the execution of the hdiutil utility in order to create a disk image.
 references:
     - https://www.loobins.io/binaries/hdiutil/

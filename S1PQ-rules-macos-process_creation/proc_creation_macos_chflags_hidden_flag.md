@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:39:29):
+// Translated content (automatically translated on 02-07-2025 01:21:28):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/chflags" and tgt.process.cmdline contains "hidden "))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path
 ```yaml
 title: Hidden Flag Set On File/Directory Via Chflags - MacOS
 id: 3b2c1059-ae5f-40b6-b5d4-6106d3ac20fe
-status: experimental
+status: test
 description: |
     Detects the execution of the "chflags" utility with the "hidden" flag, in order to hide files on MacOS.
     When a file or directory has this hidden flag set, it becomes invisible to the default file listing commands and in graphical file browsers.

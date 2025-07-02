@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:39:29):
+// Translated content (automatically translated on 02-07-2025 01:21:28):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/hdiutil" and (tgt.process.cmdline contains "attach " or tgt.process.cmdline contains "mount ")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path
 ```yaml
 title: Disk Image Mounting Via Hdiutil - MacOS
 id: bf241472-f014-4f01-a869-96f99330ca8c
-status: experimental
+status: test
 description: Detects the execution of the hdiutil utility in order to mount disk images.
 references:
     - https://www.loobins.io/binaries/hdiutil/
