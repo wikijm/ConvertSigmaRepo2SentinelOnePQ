@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/flock" and tgt.process.cmdline contains " -u ") and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.p
 ```yaml
 title: Shell Execution via Flock - Linux
 id: 4b09c71e-4269-4111-9cdd-107d8867f0cc
-status: experimental
+status: test
 description: |
     Detects the use of the "flock" command to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
 references:

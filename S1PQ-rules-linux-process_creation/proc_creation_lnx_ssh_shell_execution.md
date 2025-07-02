@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/ssh" and (tgt.process.cmdline contains "ProxyCommand=;" or tgt.process.cmdline contains "permitlocalcommand=yes" or tgt.process.cmdline contains "localhost")) and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh" or tgt.process.cmdline contains "sh 0<&2 1>&2" or tgt.process.cmdline contains "sh 1>&2 0<&2")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.p
 ```yaml
 title: Shell Invocation Via Ssh - Linux
 id: 8737b7f6-8df3-4bb7-b1da-06019b99b687
-status: experimental
+status: test
 description: |
     Detects the use of the "ssh" utility to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
 references:

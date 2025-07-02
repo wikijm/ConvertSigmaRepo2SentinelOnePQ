@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/find" and (tgt.process.cmdline contains " . " and tgt.process.cmdline contains "-exec")) and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.p
 ```yaml
 title: Shell Execution via Find - Linux
 id: 6adfbf8f-52be-4444-9bac-81b539624146
-status: experimental
+status: test
 description: |
     Detects the use of the find command to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or exploitation attempt.
 references:

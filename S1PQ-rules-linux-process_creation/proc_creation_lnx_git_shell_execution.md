@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and (src.process.image.path contains "/git" and (src.process.cmdline contains " -p " and src.process.cmdline contains "help") and (tgt.process.cmdline contains "bash 0<&1" or tgt.process.cmdline contains "dash 0<&1" or tgt.process.cmdline contains "sh 0<&1")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and (src.process.image.pa
 ```yaml
 title: Shell Execution via Git - Linux
 id: 47b3bbd4-1bf7-48cc-84ab-995362aaa75a
-status: experimental
+status: test
 description: |
     Detects the use of the "git" utility to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
 references:

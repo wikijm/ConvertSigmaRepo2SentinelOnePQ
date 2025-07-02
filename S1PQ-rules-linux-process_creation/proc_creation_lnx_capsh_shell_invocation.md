@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/capsh" and tgt.process.cmdline contains " --"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.pa
 ```yaml
 title: Capsh Shell Invocation - Linux
 id: db1ac3be-f606-4e3a-89e0-9607cbe6b98a
-status: experimental
+status: test
 description: |
     Detects the use of the "capsh" utility to invoke a shell.
 references:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/python" or tgt.process.image.path contains "/python2" or tgt.process.image.path contains "/python3") or (tgt.process.image.path contains "/python2." or tgt.process.image.path contains "/python3.")) and ((tgt.process.cmdline contains " -c " and tgt.process.cmdline contains "os.system(") and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh"))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.
 ```yaml
 title: Inline Python Execution - Spawn Shell Via OS System Library
 id: 2d2f44ff-4611-4778-a8fc-323a0e9850cc
-status: experimental
+status: test
 description: |
     Detects execution of inline Python code via the "-c" in order to call the "system" function from the "os" library, and spawn a shell.
 references:

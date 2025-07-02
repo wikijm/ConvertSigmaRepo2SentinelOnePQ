@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 01:04:32):
+// Translated content (automatically translated on 02-07-2025 00:57:57):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/c89" or tgt.process.image.path contains "/c99" or tgt.process.image.path contains "/gcc") and tgt.process.cmdline contains "-wrapper") and (tgt.process.cmdline contains "/bin/bash,-s" or tgt.process.cmdline contains "/bin/dash,-s" or tgt.process.cmdline contains "/bin/fish,-s" or tgt.process.cmdline contains "/bin/sh,-s" or tgt.process.cmdline contains "/bin/zsh,-s")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.
 ```yaml
 title: Shell Execution GCC  - Linux
 id: 9b5de532-a757-4d70-946c-1f3e44f48b4d
-status: experimental
+status: test
 description: |
     Detects the use of the "gcc" utility to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
 references:
