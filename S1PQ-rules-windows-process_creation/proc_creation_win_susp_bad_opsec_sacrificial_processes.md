@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\WerFault.exe" and tgt.process.cmdline contains "WerFault.exe") or (tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or (tgt.process.image.path contains "\regsvcs.exe" and tgt.process.cmdline contains "regsvcs.exe") or (tgt.process.image.path contains "\regasm.exe" and tgt.process.cmdline contains "regasm.exe") or (tgt.process.image.path contains "\regsvr32.exe" and tgt.process.cmdline contains "regsvr32.exe")) and (not ((src.process.image.path contains "\AppData\Local\Microsoft\EdgeUpdate\Install\{" and tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe") or ((src.process.image.path contains "\AppData\Local\BraveSoftware\Brave-Browser\Application\" or src.process.image.path contains "\AppData\Local\Google\Chrome\Application\") and src.process.image.path contains "\Installer\setup.exe" and src.process.cmdline contains "--uninstall " and tgt.process.image.path contains "\rundll32.exe" and tgt.process.cmdline contains "rundll32.exe")))))
 ```
 
@@ -11,7 +11,7 @@ id: a7c3d773-caef-227e-a7e7-c2f13c622329
 related:
     - id: f5647edc-a7bf-4737-ab50-ef8c60dc3add
       type: obsolete
-status: experimental
+status: test
 description: |
     Detects attackers using tooling with bad opsec defaults.
     E.g. spawning a sacrificial process to inject a capability into the process without taking into account how the process is normally run.

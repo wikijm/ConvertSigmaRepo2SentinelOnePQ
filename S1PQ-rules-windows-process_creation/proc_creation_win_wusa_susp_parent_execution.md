@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\wusa.exe" and ((src.process.image.path contains ":\Perflogs\" or src.process.image.path contains ":\Users\Public\" or src.process.image.path contains ":\Windows\Temp\" or src.process.image.path contains "\Appdata\Local\Temp\" or src.process.image.path contains "\Temporary Internet") or ((src.process.image.path contains ":\Users\" and src.process.image.path contains "\Favorites\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Favourites\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Contacts\") or (src.process.image.path contains ":\Users\" and src.process.image.path contains "\Pictures\"))) and (not tgt.process.cmdline contains ".msu")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.
 ```yaml
 title: Wusa.EXE Executed By Parent Process Located In Suspicious Location
 id: ef64fc9c-a45e-43cc-8fd8-7d75d73b4c99
-status: experimental
+status: test
 description: |
     Detects execution of the "wusa.exe" (Windows Update Standalone Installer) utility by a parent process that is located in a suspicious location.
     Attackers could instantiate an instance of "wusa.exe" in order to bypass User Account Control (UAC). They can duplicate the access token from "wusa.exe" to gain elevated privileges.

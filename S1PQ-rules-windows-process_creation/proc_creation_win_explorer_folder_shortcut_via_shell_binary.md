@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\cmd.exe" or src.process.image.path contains "\powershell.exe" or src.process.image.path contains "\pwsh.exe") and tgt.process.image.path contains "\explorer.exe" and tgt.process.cmdline contains "shell:mycomputerfolder"))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image
 ```yaml
 title: File Explorer Folder Opened Using Explorer Folder Shortcut Via Shell
 id: c3d76afc-93df-461e-8e67-9b2bad3f2ac4
-status: experimental
+status: test
 description: |
     Detects the initial execution of "cmd.exe" which spawns "explorer.exe" with the appropriate command line arguments for opening the "My Computer" folder.
 author: '@Kostastsale'

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\reg.exe" and (tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" and tgt.process.cmdline contains "add" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "/d 0")))
 ```
 
@@ -11,7 +11,7 @@ id: 9ec9fb1b-e059-4489-9642-f270c207923d
 related:
     - id: f8aebc67-a56d-4ec9-9fbe-7b0e8b7b4efd
       type: similar
-status: experimental
+status: test
 description: |
     Detects changes to the registry key "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist" where the value is set to "0" in order to hide user account from being listed on the logon screen.
 references:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -Inject " and (tgt.process.cmdline contains " -PayloadArgs " or tgt.process.cmdline contains " -PayloadFile ")) or ((tgt.process.cmdline contains " approve " or tgt.process.cmdline contains " create " or tgt.process.cmdline contains " check " or tgt.process.cmdline contains " delete ") and (tgt.process.cmdline contains " /payload:" or tgt.process.cmdline contains " /payload=" or tgt.process.cmdline contains " /updateid:" or tgt.process.cmdline contains " /updateid="))))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdli
 ```yaml
 title: HackTool - SharpWSUS/WSUSpendu Execution
 id: b0ce780f-10bd-496d-9067-066d23dc3aa5
-status: experimental
+status: test
 description: |
     Detects the execution of SharpWSUS or WSUSpendu, utilities that allow for lateral movement through WSUS.
     Windows Server Update Services (WSUS) is a critical component of Windows systems and is frequently configured in a way that allows an attacker to circumvent internal networking limitations.

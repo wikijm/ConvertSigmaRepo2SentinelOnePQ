@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "IEX ((New-Object Net.WebClient).DownloadString" or tgt.process.cmdline contains "IEX (New-Object Net.WebClient).DownloadString" or tgt.process.cmdline contains "IEX((New-Object Net.WebClient).DownloadString" or tgt.process.cmdline contains "IEX(New-Object Net.WebClient).DownloadString" or tgt.process.cmdline contains " -command (New-Object System.Net.WebClient).DownloadFile(" or tgt.process.cmdline contains " -c (New-Object System.Net.WebClient).DownloadFile("))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-07-2025 02:25:33):
+// Translated content (automatically translated on 02-07-2025 02:07:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\wermgr.exe" and (tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\cscript.exe" or tgt.process.image.path contains "\ipconfig.exe" or tgt.process.image.path contains "\mshta.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\net1.exe" or tgt.process.image.path contains "\netstat.exe" or tgt.process.image.path contains "\nslookup.exe" or tgt.process.image.path contains "\powershell_ise.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\regsvr32.exe" or tgt.process.image.path contains "\rundll32.exe" or tgt.process.image.path contains "\systeminfo.exe" or tgt.process.image.path contains "\whoami.exe" or tgt.process.image.path contains "\wscript.exe")) and (not (tgt.process.image.path contains "\rundll32.exe" and (tgt.process.cmdline contains "C:\Windows\system32\WerConCpl.dll" and tgt.process.cmdline contains "LaunchErcApp ") and (tgt.process.cmdline contains "-queuereporting" or tgt.process.cmdline contains "-responsepester")))))
 ```
 
@@ -11,7 +11,7 @@ id: 396f6630-f3ac-44e3-bfc8-1b161bc00c4e
 related:
     - id: 5394fcc7-aeb2-43b5-9a09-cac9fc5edcd5
       type: similar
-status: experimental
+status: test
 description: Detects suspicious Windows Error Reporting manager (wermgr.exe) child process
 references:
     - https://www.trendmicro.com/en_us/research/22/j/black-basta-infiltrates-networks-via-qakbot-brute-ratel-and-coba.html
