@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-07-2025 02:07:36):
+// Translated content (automatically translated on 03-07-2025 02:07:59):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\cmd.exe") and (src.process.cmdline contains "MsiExec.exe" and src.process.cmdline contains "-Embedding ")) and (not ((tgt.process.image.path contains ":\Windows\System32\cmd.exe" and tgt.process.cmdline contains "C:\Program Files\SplunkUniversalForwarder\bin\") or (tgt.process.cmdline contains "\DismFoDInstall.cmd" or (src.process.cmdline contains "\MsiExec.exe -Embedding " and src.process.cmdline contains "Global\MSI0000"))))))
 ```
 
