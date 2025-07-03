@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-07-2025 01:49:11):
+// Translated content (automatically translated on 03-07-2025 01:49:33):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\atltracetoolui.dll" and (not (module.path in ("c:\program files\Microsoft Visual Studio 11.0\Common7\Tools\*","c:\program files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\*")))))
 ```
 
