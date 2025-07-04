@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2025 01:42:29):
+// Translated content (automatically translated on 04-07-2025 01:42:00):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\MEGAsyncSetup64.exe" or src.process.image.path contains "\MEGAupdater.exe"))
 ```
 
