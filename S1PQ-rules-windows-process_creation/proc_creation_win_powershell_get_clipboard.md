@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2025 02:07:59):
+// Translated content (automatically translated on 04-07-2025 02:07:20):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "Get-Clipboard")
 ```
 
