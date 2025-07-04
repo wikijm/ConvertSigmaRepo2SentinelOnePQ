@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-07-2025 00:57:44):
+// Translated content (automatically translated on 04-07-2025 00:57:18):
 event.type="Process Creation" and (endpoint.os="linux" and ((((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/echo" or tgt.process.image.path contains "/grep" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/more" or tgt.process.image.path contains "/tail") and tgt.process.cmdline contains ">") or (tgt.process.image.path contains "/emacs" or tgt.process.image.path contains "/nano" or tgt.process.image.path contains "/sed" or tgt.process.image.path contains "/vi" or tgt.process.image.path contains "/vim")) and (tgt.process.cmdline contains "/bin/login" or tgt.process.cmdline contains "/bin/passwd" or tgt.process.cmdline contains "/boot/" or tgt.process.cmdline="*/etc/*.conf*" or tgt.process.cmdline contains "/etc/cron." or tgt.process.cmdline contains "/etc/crontab" or tgt.process.cmdline contains "/etc/hosts" or tgt.process.cmdline contains "/etc/init.d" or tgt.process.cmdline contains "/etc/sudoers" or tgt.process.cmdline contains "/opt/bin/" or tgt.process.cmdline contains "/sbin" or tgt.process.cmdline contains "/usr/bin/" or tgt.process.cmdline contains "/usr/local/bin/")))
 ```
 
