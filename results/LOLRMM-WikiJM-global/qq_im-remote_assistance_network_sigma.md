@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2025 01:42:00):
+// Translated content (automatically translated on 05-07-2025 01:38:23):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".mdt.qq.com" or url.address contains ".desktop.qq.com" or url.address contains "upload_data.qq.com" or url.address contains "qq-messenger.en.softonic.com") or (event.dns.request contains ".mdt.qq.com" or event.dns.request contains ".desktop.qq.com" or event.dns.request contains "upload_data.qq.com" or event.dns.request contains "qq-messenger.en.softonic.com")))
 ```
 
