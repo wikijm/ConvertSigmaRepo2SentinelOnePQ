@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-07-2025 01:49:14):
+// Translated content (automatically translated on 05-07-2025 01:45:13):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\tbb.dll" and (not (module.path="c:\program files\Adobe\Adobe Photoshop CC *\*" or module.path="c:\program files (x86)\Adobe\Adobe Photoshop CC *\*"))))
 ```
 
