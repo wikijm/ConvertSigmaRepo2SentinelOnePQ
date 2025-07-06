@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2025 00:55:20):
+// Translated content (automatically translated on 06-07-2025 01:03:09):
 event.type="Process Creation" and (endpoint.os="linux" and (src.process.image.path contains "/java" and (tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "bash" or tgt.process.cmdline contains "dash" or tgt.process.cmdline contains "ksh" or tgt.process.cmdline contains "zsh" or tgt.process.cmdline contains "csh" or tgt.process.cmdline contains "fish" or tgt.process.cmdline contains "curl" or tgt.process.cmdline contains "wget" or tgt.process.cmdline contains "python")))
 ```
 

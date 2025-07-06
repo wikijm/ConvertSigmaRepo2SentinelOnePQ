@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2025 00:55:20):
+// Translated content (automatically translated on 06-07-2025 01:03:09):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/php" and (tgt.process.cmdline contains " -r " and tgt.process.cmdline contains "fsockopen") and (tgt.process.cmdline contains "ash" or tgt.process.cmdline contains "bash" or tgt.process.cmdline contains "bsh" or tgt.process.cmdline contains "csh" or tgt.process.cmdline contains "ksh" or tgt.process.cmdline contains "pdksh" or tgt.process.cmdline contains "sh" or tgt.process.cmdline contains "tcsh" or tgt.process.cmdline contains "zsh")))
 ```
 
