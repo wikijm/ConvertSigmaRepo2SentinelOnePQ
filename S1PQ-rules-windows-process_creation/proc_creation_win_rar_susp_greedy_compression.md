@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2025 02:03:16):
+// Translated content (automatically translated on 06-07-2025 02:22:55):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\rar.exe" or tgt.process.displayName="Command line RAR") or (tgt.process.cmdline contains ".exe a " or tgt.process.cmdline contains " a -m")) and ((tgt.process.cmdline contains " -hp" and tgt.process.cmdline contains " -r ") and (tgt.process.cmdline="* *:\\*.*" or tgt.process.cmdline="* *:\\\*.*" or tgt.process.cmdline="* *:\$Recycle.bin\*" or tgt.process.cmdline="* *:\PerfLogs\*" or tgt.process.cmdline="* *:\Temp*" or tgt.process.cmdline="* *:\Users\Public\*" or tgt.process.cmdline="* *:\Windows\*" or tgt.process.cmdline contains " %public%"))))
 ```
 
