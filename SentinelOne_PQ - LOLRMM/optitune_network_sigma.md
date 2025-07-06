@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-07-2025 00:51:33):
+// Translated content (automatically translated on 06-07-2025 00:59:01):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".optitune.us" or url.address contains ".opti-tune.com") or (event.dns.request contains ".optitune.us" or event.dns.request contains ".opti-tune.com")))
 ```
 
