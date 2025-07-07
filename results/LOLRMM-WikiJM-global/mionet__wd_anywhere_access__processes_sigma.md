@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-07-2025 01:49:49):
+// Translated content (automatically translated on 07-07-2025 01:47:41):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mionet.exe" or src.process.image.path contains "mionetmanager.exe"))
 ```
 
