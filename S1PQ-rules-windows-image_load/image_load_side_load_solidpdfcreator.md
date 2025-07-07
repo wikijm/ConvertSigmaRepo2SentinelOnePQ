@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-07-2025 01:27:48):
+// Translated content (automatically translated on 07-07-2025 01:25:21):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\SolidPDFCreator.dll" and (not (src.process.image.path contains "\SolidPDFCreator.exe" and (module.path contains "C:\Program Files (x86)\SolidDocuments\SolidPDFCreator\" or module.path contains "C:\Program Files\SolidDocuments\SolidPDFCreator\")))))
 ```
 
