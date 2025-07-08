@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-07-2025 00:58:06):
+// Translated content (automatically translated on 08-07-2025 00:54:02):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe" or src.process.image.path contains "Users\*\AppData\Roaming\Insync\App\Insync.exe" or src.process.image.path contains "\Insync.exe"))
 ```
 
