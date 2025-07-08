@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-07-2025 01:25:21):
+// Translated content (automatically translated on 08-07-2025 01:21:35):
 event.type="ModuleLoad" and (endpoint.os="windows" and ((src.process.image.path contains "\dism.exe" and module.path contains "\dismcore.dll") and (not module.path="C:\Windows\System32\Dism\dismcore.dll")))
 ```
 
