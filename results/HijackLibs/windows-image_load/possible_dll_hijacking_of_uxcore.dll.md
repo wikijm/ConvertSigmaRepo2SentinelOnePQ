@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2025 01:50:13):
+// Translated content (automatically translated on 09-07-2025 01:51:23):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\uxcore.dll" and (not (module.path in ("c:\program files\windows live\installer\*","c:\program files (x86)\windows live\installer\*")))))
 ```
 
