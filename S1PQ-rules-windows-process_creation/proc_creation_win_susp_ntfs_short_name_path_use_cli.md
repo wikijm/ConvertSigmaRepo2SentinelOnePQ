@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 08-07-2025 02:08:40):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1\" or tgt.process.cmdline contains "~2\") and (not ((src.process.image.path in ("C:\Windows\System32\Dism.exe","C:\Windows\System32\cleanmgr.exe","C:\Program Files\GPSoftware\Directory Opus\dopus.exe")) or (src.process.image.path contains "\WebEx\WebexHost.exe" or src.process.image.path contains "\thor\thor64.exe" or src.process.image.path contains "\veam.backup.shell.exe" or src.process.image.path contains "\winget.exe" or src.process.image.path contains "\Everything\Everything.exe") or src.process.image.path contains "\AppData\Local\Temp\WinGet\" or (tgt.process.cmdline contains "\appdata\local\webex\webex64\meetings\wbxreport.exe" or tgt.process.cmdline contains "C:\Program Files\Git\post-install.bat" or tgt.process.cmdline contains "C:\Program Files\Git\cmd\scalar.exe")))))
+// Translated content (automatically translated on 09-07-2025 02:10:04):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1\" or tgt.process.cmdline contains "~2\") and (not ((src.process.image.path in ("C:\Windows\System32\Dism.exe","C:\Windows\System32\cleanmgr.exe","C:\Program Files\GPSoftware\Directory Opus\dopus.exe")) or (src.process.image.path contains "\WebEx\WebexHost.exe" or src.process.image.path contains "\thor\thor64.exe" or src.process.image.path contains "\veam.backup.shell.exe" or src.process.image.path contains "\winget.exe" or src.process.image.path contains "\Everything\Everything.exe" or src.process.image.path contains "\aurora-agent-64.exe" or src.process.image.path contains "\aurora-agent.exe") or src.process.image.path contains "\AppData\Local\Temp\WinGet\" or (tgt.process.cmdline contains "\appdata\local\webex\webex64\meetings\wbxreport.exe" or tgt.process.cmdline contains "C:\Program Files\Git\post-install.bat" or tgt.process.cmdline contains "C:\Program Files\Git\cmd\scalar.exe")))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://twitter.com/frack113/status/1555830623633375232
 author: frack113, Nasreddine Bencherchali
 date: 2022-08-07
-modified: 2022-10-26
+modified: 2025-07-04
 tags:
     - attack.defense-evasion
     - attack.t1564.004
@@ -42,6 +42,8 @@ detection:
               - '\veam.backup.shell.exe'
               - '\winget.exe'
               - '\Everything\Everything.exe'
+              - '\aurora-agent-64.exe'
+              - '\aurora-agent.exe'
         - ParentImage|contains: '\AppData\Local\Temp\WinGet\'
         - CommandLine|contains:
               - '\appdata\local\webex\webex64\meetings\wbxreport.exe'
