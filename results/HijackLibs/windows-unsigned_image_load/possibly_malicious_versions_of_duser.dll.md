@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-07-2025 01:39:19):
+// Translated content (automatically translated on 09-07-2025 01:40:36):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\duser.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
