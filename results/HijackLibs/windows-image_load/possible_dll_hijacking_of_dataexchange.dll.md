@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-07-2025 01:51:23):
+// Translated content (automatically translated on 10-07-2025 01:51:40):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dataexchange.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 

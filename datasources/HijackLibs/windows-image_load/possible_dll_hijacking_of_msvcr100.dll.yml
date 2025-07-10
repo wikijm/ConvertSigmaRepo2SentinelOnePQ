@@ -9,6 +9,7 @@ date: 2022-09-26
 tags:
     - attack.defense_evasion
     - attack.T1574.001
+    - attack.T1574.001
 logsource:
     product: windows
     category: image_load
