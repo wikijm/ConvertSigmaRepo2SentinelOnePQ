@@ -1,0 +1,29 @@
+title: Possible preparation for jli.dll DLL Hijacking
+id: 3307532b-4890-48a3-2757-5b9ff8183967
+status: experimental
+description: Detects possible DLL hijacking of jli.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/oracle/jli.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-07-09
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\jli.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Java\*\bin\*'
+            - 'c:\program files (x86)\Java\*\bin\*'
+            - 'c:\program files\*\jre\bin\*'
+            - 'c:\program files (x86)\*\jre\bin\*'
+            - 'c:\users\*\appdata\local\Temp\*\bin\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
