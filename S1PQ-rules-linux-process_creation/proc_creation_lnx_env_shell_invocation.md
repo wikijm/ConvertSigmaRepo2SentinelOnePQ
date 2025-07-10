@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-07-2025 00:58:55):
+// Translated content (automatically translated on 10-07-2025 00:58:48):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/env" and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
