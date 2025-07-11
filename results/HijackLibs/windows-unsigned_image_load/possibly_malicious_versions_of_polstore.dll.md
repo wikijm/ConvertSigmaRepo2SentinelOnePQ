@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-07-2025 01:40:35):
+// Translated content (automatically translated on 11-07-2025 01:41:43):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\polstore.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
