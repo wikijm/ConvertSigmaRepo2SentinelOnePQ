@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-07-2025 00:54:39):
+// Translated content (automatically translated on 11-07-2025 00:55:19):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ngrok.exe")
 ```
 
