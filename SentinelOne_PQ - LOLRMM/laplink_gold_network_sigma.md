@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-07-2025 00:55:19):
+// Translated content (automatically translated on 12-07-2025 00:56:39):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "wen.laplink.com/product/laplink-gold") or (event.dns.request contains "user_managed" or event.dns.request contains "wen.laplink.com/product/laplink-gold")))
 ```
 
