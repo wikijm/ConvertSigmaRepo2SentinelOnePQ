@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-07-2025 02:19:13):
+// Translated content (automatically translated on 12-07-2025 02:19:27):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\dnx.exe")
 ```
 
