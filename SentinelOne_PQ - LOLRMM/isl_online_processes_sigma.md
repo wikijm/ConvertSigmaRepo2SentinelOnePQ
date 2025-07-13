@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-07-2025 00:56:39):
+// Translated content (automatically translated on 13-07-2025 01:00:54):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "islalwaysonmonitor.exe" or src.process.image.path contains "isllight.exe" or src.process.image.path contains "isllightservice.exe" or src.process.image.path contains "ISLLightClient.exe" or src.process.image.path contains "\ISLLight.exe"))
 ```
 

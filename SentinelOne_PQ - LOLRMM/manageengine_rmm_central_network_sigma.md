@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-07-2025 00:56:39):
+// Translated content (automatically translated on 13-07-2025 01:00:54):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and (url.address contains "manageengine.com/remote-monitoring-management/" or event.dns.request contains "manageengine.com/remote-monitoring-management/"))
 ```
 
