@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-07-2025 01:54:48):
+// Translated content (automatically translated on 13-07-2025 02:02:58):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\cabview.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
