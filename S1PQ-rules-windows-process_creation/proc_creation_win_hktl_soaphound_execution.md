@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-07-2025 02:22:54):
+// Translated content (automatically translated on 16-07-2025 02:19:39):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " --buildcache " or tgt.process.cmdline contains " --bhdump " or tgt.process.cmdline contains " --certdump " or tgt.process.cmdline contains " --dnsdump ") and (tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " --cachefilename " or tgt.process.cmdline contains " -o " or tgt.process.cmdline contains " --outputdirectory")))
 ```
 
