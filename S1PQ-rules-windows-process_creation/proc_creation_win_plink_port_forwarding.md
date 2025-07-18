@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2025 02:20:20):
+// Translated content (automatically translated on 18-07-2025 02:21:46):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Command-line SSH, Telnet, and Rlogin client" and tgt.process.cmdline contains " -R "))
 ```
 
