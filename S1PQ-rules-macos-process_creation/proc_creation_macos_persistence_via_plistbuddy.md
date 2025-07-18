@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2025 01:25:59):
+// Translated content (automatically translated on 18-07-2025 01:25:29):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/PlistBuddy" and (tgt.process.cmdline contains "RunAtLoad" and tgt.process.cmdline contains "true") and (tgt.process.cmdline contains "LaunchAgents" or tgt.process.cmdline contains "LaunchDaemons")))
 ```
 
