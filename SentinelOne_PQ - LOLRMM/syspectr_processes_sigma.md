@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2025 00:56:45):
+// Translated content (automatically translated on 18-07-2025 00:55:56):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*oo-syspectr*.exe" or src.process.image.path contains "OOSysAgent.exe"))
 ```
 
