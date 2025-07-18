@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-07-2025 01:47:55):
+// Translated content (automatically translated on 18-07-2025 01:49:20):
 (event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains ".rudesktop.ru" or url.address contains "rudesktop.ru") or (event.dns.request contains ".rudesktop.ru" or event.dns.request contains "rudesktop.ru")))
 ```
 
