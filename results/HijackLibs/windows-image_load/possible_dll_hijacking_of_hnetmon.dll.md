@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-07-2025 01:57:20):
+// Translated content (automatically translated on 19-07-2025 01:51:14):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\hnetmon.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
