@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-07-2025 02:21:46):
+// Translated content (automatically translated on 19-07-2025 02:09:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*"))
 ```
 

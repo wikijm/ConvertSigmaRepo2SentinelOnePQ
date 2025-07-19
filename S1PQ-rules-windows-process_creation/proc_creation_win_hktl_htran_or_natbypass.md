@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-07-2025 02:21:46):
+// Translated content (automatically translated on 19-07-2025 02:09:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\htran.exe" or tgt.process.image.path contains "\lcx.exe") or (tgt.process.cmdline contains ".exe -tran " or tgt.process.cmdline contains ".exe -slave ")))
 ```
 
