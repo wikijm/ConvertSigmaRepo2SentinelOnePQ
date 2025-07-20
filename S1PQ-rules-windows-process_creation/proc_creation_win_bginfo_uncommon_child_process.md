@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-07-2025 02:09:51):
+// Translated content (automatically translated on 20-07-2025 02:30:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\bginfo.exe" or src.process.image.path contains "\bginfo64.exe"))
 ```
 
