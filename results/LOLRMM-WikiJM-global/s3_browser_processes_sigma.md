@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-07-2025 01:44:19):
+// Translated content (automatically translated on 20-07-2025 01:56:05):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*\s3browser*.exe")
 ```
 
