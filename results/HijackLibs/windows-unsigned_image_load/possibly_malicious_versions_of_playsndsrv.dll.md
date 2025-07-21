@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2025 01:51:57):
+// Translated content (automatically translated on 21-07-2025 01:49:31):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\playsndsrv.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
