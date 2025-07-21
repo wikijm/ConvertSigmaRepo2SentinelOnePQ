@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2025 02:30:22):
+// Translated content (automatically translated on 21-07-2025 02:27:06):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\WINWORD.EXE" or src.process.image.path contains "\EXCEL.EXE" or src.process.image.path contains "\POWERPNT.exe" or src.process.image.path contains "\MSPUB.exe" or src.process.image.path contains "\VISIO.exe" or src.process.image.path contains "\MSACCESS.exe" or src.process.image.path contains "\EQNEDT32.exe") and tgt.process.image.path contains "C:\users\" and tgt.process.image.path contains ".exe") and (not tgt.process.image.path contains "\Teams.exe"))) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
