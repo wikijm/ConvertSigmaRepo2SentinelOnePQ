@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2025 01:41:11):
+// Translated content (automatically translated on 21-07-2025 01:39:08):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\dbgmodel.dll" and (not (module.path contains "C:\Windows\System32\" or module.path contains "C:\Windows\SysWOW64\" or module.path contains "C:\Windows\WinSxS\")) and (not (module.path contains "C:\Program Files\WindowsApps\Microsoft.WinDbg_" or (module.path contains "C:\Program Files (x86)\Windows Kits\" or module.path contains "C:\Program Files\Windows Kits\")))))
 ```
 
