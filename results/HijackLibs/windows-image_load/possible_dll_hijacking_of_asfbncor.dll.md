@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-07-2025 02:04:10):
+// Translated content (automatically translated on 21-07-2025 02:01:39):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\asfbncor.dll" and (not (module.path in ("c:\program files\Replay Media Splitter\*","c:\program files (x86)\Replay Media Splitter\*")))))
 ```
 
