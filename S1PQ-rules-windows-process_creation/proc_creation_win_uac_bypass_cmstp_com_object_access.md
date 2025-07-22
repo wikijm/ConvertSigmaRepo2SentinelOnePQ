@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-07-2025 02:27:06):
+// Translated content (automatically translated on 22-07-2025 02:21:01):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\DllHost.exe" and (src.process.cmdline contains " /Processid:{3E5FC7F9-9A51-4367-9063-A120244FBEC7}" or src.process.cmdline contains " /Processid:{3E000D72-A845-4CD9-BD83-80C07C3B881F}" or src.process.cmdline contains " /Processid:{BD54C901-076B-434E-B6C7-17C531F4AB41}" or src.process.cmdline contains " /Processid:{D2E7041B-2927-42FB-8E9F-7CE93B6DC937}" or src.process.cmdline contains " /Processid:{E9495B87-D950-4AB5-87A5-FF6D70BF3E90}") and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
