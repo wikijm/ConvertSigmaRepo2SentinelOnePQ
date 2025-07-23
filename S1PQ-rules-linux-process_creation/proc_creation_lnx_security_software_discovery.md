@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-07-2025 01:00:42):
+// Translated content (automatically translated on 23-07-2025 01:01:30):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/grep" or tgt.process.image.path contains "/egrep") and (tgt.process.cmdline contains "nessusd" or tgt.process.cmdline contains "td-agent" or tgt.process.cmdline contains "packetbeat" or tgt.process.cmdline contains "filebeat" or tgt.process.cmdline contains "auditbeat" or tgt.process.cmdline contains "osqueryd" or tgt.process.cmdline contains "cbagentd" or tgt.process.cmdline contains "falcond")))
 ```
 
