@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-07-2025 01:57:03):
+// Translated content (automatically translated on 24-07-2025 01:56:06):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\cmutil.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
