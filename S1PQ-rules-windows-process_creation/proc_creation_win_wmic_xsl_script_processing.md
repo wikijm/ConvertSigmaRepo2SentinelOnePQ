@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-07-2025 02:21:27):
+// Translated content (automatically translated on 25-07-2025 02:20:54):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\wmic.exe" and (tgt.process.cmdline contains "-format" or tgt.process.cmdline contains "/format" or tgt.process.cmdline contains "–format" or tgt.process.cmdline contains "—format" or tgt.process.cmdline contains "―format")) and (not (tgt.process.cmdline contains "Format:List" or tgt.process.cmdline contains "Format:htable" or tgt.process.cmdline contains "Format:hform" or tgt.process.cmdline contains "Format:table" or tgt.process.cmdline contains "Format:mof" or tgt.process.cmdline contains "Format:value" or tgt.process.cmdline contains "Format:rawxml" or tgt.process.cmdline contains "Format:xml" or tgt.process.cmdline contains "Format:csv"))))
 ```
 
