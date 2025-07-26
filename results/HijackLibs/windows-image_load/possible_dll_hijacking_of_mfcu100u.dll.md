@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2025 01:55:51):
+// Translated content (automatically translated on 26-07-2025 01:52:26):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\mfcu100u.dll" and (not (module.path in ("c:\program files\TechSmith\Camtasia Studio 8\*","c:\program files (x86)\TechSmith\Camtasia Studio 8\*")))))
 ```
 

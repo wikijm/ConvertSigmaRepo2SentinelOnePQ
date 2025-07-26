@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-07-2025 01:55:51):
+// Translated content (automatically translated on 26-07-2025 01:52:26):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\miracastview.dll" and (not module.path="c:\windows\Miracast\*")))
 ```
 
