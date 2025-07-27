@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-07-2025 01:52:26):
+// Translated content (automatically translated on 27-07-2025 02:05:16):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\windowsperformancerecorderui.dll" and (not (module.path in ("c:\program files\Windows Kits\10\Windows Performance Toolkit\*","c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\*")))))
 ```
 
@@ -31,4 +31,5 @@ detection:
     condition: selection and not filter
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
 ```
