@@ -2323,6 +2323,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for libsqlite3-0.dll DLL Hijacking
+id: 2620602b-3119-48a3-1242-5b9ff8266048
+status: experimental
+description: Detects possible DLL hijacking of libsqlite3-0.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sqlite/libsqlite3-0.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-07-12
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libsqlite3-0.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\*'
+            - 'c:\program files (x86)\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for ldvpocx.ocx DLL Hijacking
 id: 2888912b-2523-48a3-4236-5b9ff8872802
 status: experimental
@@ -9454,6 +9481,37 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for msedge.dll DLL Hijacking
+id: 8987612b-6939-48a3-6071-5b9ff8509508
+status: experimental
+description: Detects possible DLL hijacking of msedge.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/msedge.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2024-07-25
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msedge.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Microsoft\Edge\Application\*\*'
+            - 'c:\program files (x86)\Microsoft\Edge\Application\*\*'
+            - 'c:\program files\Microsoft\Edgewebview\Application\*\*'
+            - 'c:\program files (x86)\Microsoft\Edgewebview\Application\*\*'
+            - 'c:\program files\Microsoft\EdgeCore\*\*'
+            - 'c:\program files (x86)\Microsoft\EdgeCore\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for msedge_elf.dll DLL Hijacking
 id: 3135232b-6795-48a3-8155-5b9ff8191152
 status: experimental
@@ -9680,6 +9738,38 @@ detection:
         TargetFileName:
             - 'c:\windows\system32\*'
             - 'c:\windows\syswow64\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for msvcp140.dll DLL Hijacking
+id: 3432362b-3119-48a3-1242-5b9ff8554273
+status: experimental
+description: Detects possible DLL hijacking of msvcp140.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/msvcp140.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-07-12
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\msvcp140.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\*'
+            - 'c:\windows\syswow64\*'
+            - 'c:\program files\*'
+            - 'c:\program files (x86)\*'
             - 'c:\windows\winsxs\*'
             - 'c:\$windows.~bt\*'
             - 'c:\windows\softwaredistribution\*'
@@ -16352,6 +16442,33 @@ detection:
         TargetFileName:
             - 'c:\program files\Windows Kits\10\Windows Performance Toolkit\*'
             - 'c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for wmicodegen.dll DLL Hijacking
+id: 2340122b-6939-48a3-6071-5b9ff8311072
+status: experimental
+description: Detects possible DLL hijacking of wmicodegen.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/wmicodegen.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2024-07-25
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\wmicodegen.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\windows kits\*\bin\*\*'
+            - 'c:\program files (x86)\windows kits\*\bin\*\*'
 
     condition: selection and not filter
 falsepositives:

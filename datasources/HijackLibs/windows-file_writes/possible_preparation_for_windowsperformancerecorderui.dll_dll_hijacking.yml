@@ -23,3 +23,4 @@ detection:
     condition: selection and not filter
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

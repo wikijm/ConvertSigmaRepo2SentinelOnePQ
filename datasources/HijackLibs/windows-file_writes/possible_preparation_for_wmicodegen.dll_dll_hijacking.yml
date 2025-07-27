@@ -1,0 +1,25 @@
+title: Possible preparation for wmicodegen.dll DLL Hijacking
+id: 2340122b-6939-48a3-6071-5b9ff8311072
+status: experimental
+description: Detects possible DLL hijacking of wmicodegen.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/wmicodegen.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2024-07-25
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\wmicodegen.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\windows kits\*\bin\*\*'
+            - 'c:\program files (x86)\windows kits\*\bin\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
