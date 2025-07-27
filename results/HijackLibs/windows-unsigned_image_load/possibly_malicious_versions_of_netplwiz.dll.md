@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-07-2025 01:41:17):
+// Translated content (automatically translated on 27-07-2025 01:52:30):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\netplwiz.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
