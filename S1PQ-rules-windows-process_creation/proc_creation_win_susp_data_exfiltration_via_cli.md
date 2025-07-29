@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 02:27:57):
-event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\cmd.exe") and (tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "curl ") and (tgt.process.cmdline contains " -ur" and tgt.process.cmdline contains " -me" and tgt.process.cmdline contains " -b" and tgt.process.cmdline contains " POST ")) or ((tgt.process.image.path contains "\curl.exe" and tgt.process.cmdline contains "--ur") and (tgt.process.cmdline contains " -d " or tgt.process.cmdline contains " --data ")) or (tgt.process.image.path contains "\wget.exe" and (tgt.process.cmdline contains "--post-data" or tgt.process.cmdline contains "--post-file"))) and ((tgt.process.cmdline contains "Get-Content" or tgt.process.cmdline contains "GetBytes" or tgt.process.cmdline contains "hostname" or tgt.process.cmdline contains "ifconfig" or tgt.process.cmdline contains "ipconfig" or tgt.process.cmdline contains "net view" or tgt.process.cmdline contains "netstat" or tgt.process.cmdline contains "nltest" or tgt.process.cmdline contains "qprocess" or tgt.process.cmdline contains "sc query" or tgt.process.cmdline contains "systeminfo" or tgt.process.cmdline contains "tasklist" or tgt.process.cmdline contains "ToBase64String" or tgt.process.cmdline contains "whoami") or (tgt.process.cmdline contains "type " and tgt.process.cmdline contains " > " and tgt.process.cmdline contains " C:\"))))
+// Translated content (automatically translated on 29-07-2025 02:32:58):
+event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\powershell_ise.exe" or tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe" or tgt.process.image.path contains "\cmd.exe") and (tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "Invoke-RestMethod" or tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "irm " or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "wget ") and (tgt.process.cmdline contains " -ur" and tgt.process.cmdline contains " -me" and tgt.process.cmdline contains " -b" and tgt.process.cmdline contains " POST ")) or ((tgt.process.image.path contains "\curl.exe" and tgt.process.cmdline contains "--ur") and (tgt.process.cmdline contains " -d " or tgt.process.cmdline contains " --data ")) or (tgt.process.image.path contains "\wget.exe" and (tgt.process.cmdline contains "--post-data" or tgt.process.cmdline contains "--post-file"))) and ((tgt.process.cmdline contains "Get-Content" or tgt.process.cmdline contains "GetBytes" or tgt.process.cmdline contains "hostname" or tgt.process.cmdline contains "ifconfig" or tgt.process.cmdline contains "ipconfig" or tgt.process.cmdline contains "net view" or tgt.process.cmdline contains "netstat" or tgt.process.cmdline contains "nltest" or tgt.process.cmdline contains "qprocess" or tgt.process.cmdline contains "sc query" or tgt.process.cmdline contains "systeminfo" or tgt.process.cmdline contains "tasklist" or tgt.process.cmdline contains "ToBase64String" or tgt.process.cmdline contains "whoami") or (tgt.process.cmdline contains "type " and tgt.process.cmdline contains " > " and tgt.process.cmdline contains " C:\"))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-02
-modified: 2023-07-27
+modified: 2025-07-18
 tags:
     - attack.execution
     - attack.t1059.001
@@ -24,14 +24,17 @@ logsource:
 detection:
     selection_iwr:
         Image|endswith:
+            - '\powershell_ise.exe'
             - '\powershell.exe'
             - '\pwsh.exe'
             - '\cmd.exe'
         CommandLine|contains:
+            - 'curl '
+            - 'Invoke-RestMethod'
             - 'Invoke-WebRequest'
+            - 'irm '
             - 'iwr '
             - 'wget '
-            - 'curl '
         CommandLine|contains|all:
             - ' -ur' # Shortest possible version of the -uri flag
             - ' -me' # Shortest possible version of the -method flag

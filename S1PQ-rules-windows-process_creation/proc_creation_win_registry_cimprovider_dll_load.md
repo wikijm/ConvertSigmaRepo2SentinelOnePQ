@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 02:27:57):
+// Translated content (automatically translated on 29-07-2025 02:32:58):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\register-cimprovider.exe" and (tgt.process.cmdline contains "-path" and tgt.process.cmdline contains "dll"))) | columns tgt.process.cmdline
 ```
 
