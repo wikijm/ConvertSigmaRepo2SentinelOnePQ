@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 02:02:55):
+// Translated content (automatically translated on 29-07-2025 02:08:18):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\vender.dll" and (not (module.path in ("c:\program files\ASUS\GPU TweakII\*","c:\program files (x86)\ASUS\GPU TweakII\*","c:\program files\ASUS\VGA COM\*\*","c:\program files (x86)\ASUS\VGA COM\*\*")))))
 ```
 
