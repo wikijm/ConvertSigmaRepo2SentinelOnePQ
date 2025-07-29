@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-07-2025 01:05:24):
+// Translated content (automatically translated on 29-07-2025 01:07:19):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/nc" or tgt.process.image.path contains "/ncat" or tgt.process.image.path contains "/netcat" or tgt.process.image.path contains "/socat") and (not (tgt.process.cmdline contains " --listen " or tgt.process.cmdline contains " -l "))) or (tgt.process.image.path contains "/autorecon" or tgt.process.image.path contains "/hping" or tgt.process.image.path contains "/hping2" or tgt.process.image.path contains "/hping3" or tgt.process.image.path contains "/naabu" or tgt.process.image.path contains "/nmap" or tgt.process.image.path contains "/nping" or tgt.process.image.path contains "/telnet" or tgt.process.image.path contains "/zenmap")))
 ```
 
