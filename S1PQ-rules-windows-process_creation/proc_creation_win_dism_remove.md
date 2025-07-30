@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2025 02:32:58):
+// Translated content (automatically translated on 30-07-2025 02:24:30):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\DismHost.exe" and (src.process.cmdline contains "/Online" and src.process.cmdline contains "/Disable-Feature")) or (tgt.process.image.path contains "\Dism.exe" and (tgt.process.cmdline contains "/Online" and tgt.process.cmdline contains "/Disable-Feature"))))
 ```
 

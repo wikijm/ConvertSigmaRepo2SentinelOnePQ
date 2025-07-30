@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2025 02:32:58):
+// Translated content (automatically translated on 30-07-2025 02:24:30):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "REG" and tgt.process.cmdline contains "ADD" and tgt.process.cmdline contains "\SOFTWARE\Policies\Microsoft\FVE" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "/f") and (tgt.process.cmdline contains "EnableBDEWithNoTPM" or tgt.process.cmdline contains "UseAdvancedStartup" or tgt.process.cmdline contains "UseTPM" or tgt.process.cmdline contains "UseTPMKey" or tgt.process.cmdline contains "UseTPMKeyPIN" or tgt.process.cmdline contains "RecoveryKeyMessageSource" or tgt.process.cmdline contains "UseTPMPIN" or tgt.process.cmdline contains "RecoveryKeyMessage")))
 ```
 
