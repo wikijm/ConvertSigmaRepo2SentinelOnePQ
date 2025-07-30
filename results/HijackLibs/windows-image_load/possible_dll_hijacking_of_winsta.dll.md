@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-07-2025 02:08:18):
+// Translated content (automatically translated on 30-07-2025 01:58:51):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\winsta.dll" and (not (module.path in ("c:\windows\system32\*","c:\windows\syswow64\*")))))
 ```
 
