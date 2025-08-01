@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-07-2025 01:46:10):
+// Translated content (automatically translated on 01-08-2025 01:56:17):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\xmllite.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
