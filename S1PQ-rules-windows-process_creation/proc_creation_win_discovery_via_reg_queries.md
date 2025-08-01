@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-07-2025 02:23:44):
+// Translated content (automatically translated on 01-08-2025 02:35:24):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\reg.exe" and tgt.process.cmdline contains "query" and (tgt.process.cmdline contains "-v" or tgt.process.cmdline contains "/v" or tgt.process.cmdline contains "–v" or tgt.process.cmdline contains "—v" or tgt.process.cmdline contains "―v")) or ((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and (tgt.process.cmdline contains "Get-ItemPropertyValue" or tgt.process.cmdline contains "gpv"))) and (tgt.process.cmdline contains "\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" or tgt.process.cmdline contains "\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces" or tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" or tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows Defender" or tgt.process.cmdline contains "\SYSTEM\CurrentControlSet\Services" or tgt.process.cmdline contains "\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks")))
 ```
 
