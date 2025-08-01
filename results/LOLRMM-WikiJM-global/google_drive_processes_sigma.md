@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-07-2025 01:50:27):
+// Translated content (automatically translated on 01-08-2025 02:00:35):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\GoogleDriveFS.exe")
 ```
 
