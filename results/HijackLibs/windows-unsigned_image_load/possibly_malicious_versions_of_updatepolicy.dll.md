@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-08-2025 01:56:17):
+// Translated content (automatically translated on 02-08-2025 01:41:33):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\updatepolicy.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
