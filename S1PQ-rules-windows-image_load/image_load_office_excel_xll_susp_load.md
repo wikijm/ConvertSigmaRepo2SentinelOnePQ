@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-08-2025 01:45:23):
+// Translated content (automatically translated on 02-08-2025 01:23:14):
 event.type="ModuleLoad" and (endpoint.os="windows" and (src.process.image.path contains "\excel.exe" and (module.path contains "\Desktop\" or module.path contains "\Downloads\" or module.path contains "\Perflogs\" or module.path contains "\Temp\" or module.path contains "\Users\Public\" or module.path contains "\Windows\Tasks\") and module.path contains ".xll"))
 ```
 
