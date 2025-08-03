@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-08-2025 00:55:07):
+// Translated content (automatically translated on 03-08-2025 01:03:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\Windows\System32\mstsc.exe" or src.process.image.path contains "Windows\System32\mstsc.exe"))
 ```
 
