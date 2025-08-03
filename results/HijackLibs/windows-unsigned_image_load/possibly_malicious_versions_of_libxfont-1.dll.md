@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-08-2025 01:41:33):
+// Translated content (automatically translated on 03-08-2025 01:54:09):
 event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\libxfont-1.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
