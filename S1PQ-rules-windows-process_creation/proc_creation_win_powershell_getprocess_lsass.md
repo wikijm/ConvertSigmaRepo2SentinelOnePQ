@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-08-2025 02:18:11):
+// Translated content (automatically translated on 03-08-2025 02:33:43):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Get-Process lsas" or tgt.process.cmdline contains "ps lsas" or tgt.process.cmdline contains "gps lsas"))
 ```
 
