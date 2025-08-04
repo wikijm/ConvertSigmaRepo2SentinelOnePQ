@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:54:09):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\powrprof.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
+// Translated content (automatically translated on 04-08-2025 01:54:18):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\powrprof.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
 
