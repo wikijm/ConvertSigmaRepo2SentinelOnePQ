@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:07:52):
+// Translated content (automatically translated on 04-08-2025 01:06:57):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/awk" or tgt.process.image.path contains "/gawk" or tgt.process.image.path contains "/mawk" or tgt.process.image.path contains "/nawk") and tgt.process.cmdline contains "BEGIN {system") and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 
