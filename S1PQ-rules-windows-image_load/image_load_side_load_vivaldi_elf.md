@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:43:19):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\vivaldi_elf.dll" and (not (src.process.image.path contains "\Vivaldi\Application\vivaldi.exe" and module.path contains "\Vivaldi\Application\"))))
+// Translated content (automatically translated on 04-08-2025 01:43:10):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vivaldi_elf.dll" and (not (src.process.image.path contains "\\Vivaldi\\Application\\vivaldi.exe" and module.path contains "\\Vivaldi\\Application\\"))))
 ```
 
 

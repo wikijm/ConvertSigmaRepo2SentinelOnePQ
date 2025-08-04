@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:43:19):
-event.type="ModuleLoad" and (endpoint.os="windows" and ((module.path contains "\coreclr.dll" or module.path contains "\facesdk.dll" or module.path contains "\HPCustPartUI.dll" or module.path contains "\libcef.dll" or module.path contains "\ZIPDLL.dll") and ((module.path contains ":\Perflogs\" or module.path contains ":\Users\Public\" or module.path contains "\Temporary Internet" or module.path contains "\Windows\Temp\") or ((module.path contains ":\Users\" and module.path contains "\Favorites\") or (module.path contains ":\Users\" and module.path contains "\Favourites\") or (module.path contains ":\Users\" and module.path contains "\Contacts\") or (module.path contains ":\Users\" and module.path contains "\Pictures\")))))
+// Translated content (automatically translated on 04-08-2025 01:43:10):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\coreclr.dll" or module.path contains "\\facesdk.dll" or module.path contains "\\HPCustPartUI.dll" or module.path contains "\\libcef.dll" or module.path contains "\\ZIPDLL.dll") and ((module.path contains ":\\Perflogs\\" or module.path contains ":\\Users\\Public\\" or module.path contains "\\Temporary Internet" or module.path contains "\\Windows\\Temp\\") or ((module.path contains ":\\Users\\" and module.path contains "\\Favorites\\") or (module.path contains ":\\Users\\" and module.path contains "\\Favourites\\") or (module.path contains ":\\Users\\" and module.path contains "\\Contacts\\") or (module.path contains ":\\Users\\" and module.path contains "\\Pictures\\")))))
 ```
 
 
