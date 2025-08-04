@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:06:41):
-event.type="ModuleLoad" and (endpoint.os="windows" and (module.path contains "\rcdll.dll" and (not (module.path in ("c:\program files\Windows Kits\10\bin\*\*\*","c:\program files (x86)\Windows Kits\10\bin\*\*\*")))))
+// Translated content (automatically translated on 04-08-2025 02:07:01):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rcdll.dll" and (not (module.path in ("c:\\program files\\Windows Kits\\10\\bin\*\*\*","c:\\program files (x86)\\Windows Kits\\10\\bin\*\*\*")))))
 ```
 
 
