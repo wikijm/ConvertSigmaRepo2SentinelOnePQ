@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:03:14):
+// Translated content (automatically translated on 04-08-2025 01:02:28):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "desktopnow.exe")
 ```
 

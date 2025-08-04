@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:03:14):
-(event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "eset.com/me/business/remote-management/remote-administrator/") or (event.dns.request contains "user_managed" or event.dns.request contains "eset.com/me/business/remote-management/remote-administrator/")))
+// Translated content (automatically translated on 04-08-2025 01:02:28):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "eset.com/me/business/remote-management/remote-administrator/") or (event.dns.request contains "user_managed" or event.dns.request contains "eset.com/me/business/remote-management/remote-administrator/")))
 ```
 
 
