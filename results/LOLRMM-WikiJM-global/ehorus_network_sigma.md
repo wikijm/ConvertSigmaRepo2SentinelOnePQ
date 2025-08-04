@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:58:22):
-(event.category in ("DNS","Url","IP")) and (endpoint.os="windows" and (url.address contains "ehorus.com" or event.dns.request contains "ehorus.com"))
+// Translated content (automatically translated on 04-08-2025 01:58:38):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "ehorus.com" or event.dns.request contains "ehorus.com"))
 ```
 
 

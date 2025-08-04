@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 01:58:22):
+// Translated content (automatically translated on 04-08-2025 01:58:38):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "rfusclient.exe" or src.process.image.path contains "rutserv.exe"))
 ```
 
