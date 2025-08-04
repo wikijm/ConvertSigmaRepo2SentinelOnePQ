@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\WmiPrvSE.exe" or src.process.image.path contains "\svchost.exe" or src.process.image.path contains "\dllhost.exe") and (tgt.process.image.path contains "\wab.exe" or tgt.process.image.path contains "\wabmig.exe")) or (src.process.image.path contains "\wab.exe" or src.process.image.path contains "\wabmig.exe")))
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\WmiPrvSE.exe" or src.process.image.path contains "\\svchost.exe" or src.process.image.path contains "\\dllhost.exe") and (tgt.process.image.path contains "\\wab.exe" or tgt.process.image.path contains "\\wabmig.exe")) or (src.process.image.path contains "\\wab.exe" or src.process.image.path contains "\\wabmig.exe")))
 ```
 
 

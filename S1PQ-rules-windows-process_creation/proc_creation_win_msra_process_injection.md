@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\msra.exe" and src.process.cmdline contains "msra.exe" and (tgt.process.image.path contains "\arp.exe" or tgt.process.image.path contains "\cmd.exe" or tgt.process.image.path contains "\net.exe" or tgt.process.image.path contains "\netstat.exe" or tgt.process.image.path contains "\nslookup.exe" or tgt.process.image.path contains "\route.exe" or tgt.process.image.path contains "\schtasks.exe" or tgt.process.image.path contains "\whoami.exe")))
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\msra.exe" and src.process.cmdline contains "msra.exe" and (tgt.process.image.path contains "\\arp.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\net.exe" or tgt.process.image.path contains "\\netstat.exe" or tgt.process.image.path contains "\\nslookup.exe" or tgt.process.image.path contains "\\route.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\whoami.exe")))
 ```
 
 

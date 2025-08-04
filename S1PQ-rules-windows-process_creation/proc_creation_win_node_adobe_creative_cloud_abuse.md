@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\Adobe Creative Cloud Experience\libs\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\js"))) | columns tgt.process.image.path,tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js"))) | columns tgt.process.image.path,tgt.process.cmdline,src.process.cmdline
 ```
 
 

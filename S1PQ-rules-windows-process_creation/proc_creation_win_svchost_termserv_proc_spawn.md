@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains "\svchost.exe" and src.process.cmdline contains "termsvcs") and (not ((tgt.process.image.path contains "\rdpclip.exe" or tgt.process.image.path contains ":\Windows\System32\csrss.exe" or tgt.process.image.path contains ":\Windows\System32\wininit.exe" or tgt.process.image.path contains ":\Windows\System32\winlogon.exe") or not (tgt.process.image.path matches "\.*")))))
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains "\\svchost.exe" and src.process.cmdline contains "termsvcs") and (not ((tgt.process.image.path contains "\\rdpclip.exe" or tgt.process.image.path contains ":\\Windows\\System32\\csrss.exe" or tgt.process.image.path contains ":\\Windows\\System32\\wininit.exe" or tgt.process.image.path contains ":\\Windows\\System32\\winlogon.exe") or not (tgt.process.image.path matches "\.*")))))
 ```
 
 

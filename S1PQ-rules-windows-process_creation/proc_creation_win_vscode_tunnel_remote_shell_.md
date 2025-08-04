@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\servers\Stable-" and src.process.image.path contains "\server\node.exe" and src.process.cmdline contains ".vscode-server") and (((tgt.process.image.path contains "\powershell.exe" or tgt.process.image.path contains "\pwsh.exe") and tgt.process.cmdline contains "\terminal\browser\media\shellIntegration.ps1") or (tgt.process.image.path contains "\wsl.exe" or tgt.process.image.path contains "\bash.exe"))))
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\servers\\Stable-" and src.process.image.path contains "\\server\\node.exe" and src.process.cmdline contains ".vscode-server") and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and tgt.process.cmdline contains "\\terminal\\browser\\media\\shellIntegration.ps1") or (tgt.process.image.path contains "\\wsl.exe" or tgt.process.image.path contains "\\bash.exe"))))
 ```
 
 

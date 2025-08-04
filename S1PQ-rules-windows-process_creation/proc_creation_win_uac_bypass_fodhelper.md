@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 03-08-2025 02:33:43):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\fodhelper.exe") | columns ComputerName,tgt.process.user,tgt.process.cmdline
+// Translated content (automatically translated on 04-08-2025 02:33:13):
+event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\fodhelper.exe") | columns ComputerName,tgt.process.user,tgt.process.cmdline
 ```
 
 
