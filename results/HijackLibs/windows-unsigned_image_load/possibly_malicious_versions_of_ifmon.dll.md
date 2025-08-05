@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-08-2025 01:54:18):
+// Translated content (automatically translated on 05-08-2025 01:49:11):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ifmon.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
