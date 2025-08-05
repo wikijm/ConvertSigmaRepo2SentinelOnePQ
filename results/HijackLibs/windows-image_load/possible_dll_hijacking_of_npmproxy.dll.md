@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-08-2025 02:07:01):
+// Translated content (automatically translated on 05-08-2025 02:01:30):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\npmproxy.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
