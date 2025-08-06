@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2025 01:53:21):
+// Translated content (automatically translated on 06-08-2025 01:51:45):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "clientmrinit.exe" or src.process.image.path contains "mgntsvc.exe" or src.process.image.path contains "routernt.exe"))
 ```
 
