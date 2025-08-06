@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2025 00:59:01):
+// Translated content (automatically translated on 06-08-2025 00:58:00):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\UVNC_Launch.exe" or src.process.image.path contains "\\winvnc.exe" or src.process.image.path contains "\\vncviewer.exe"))
 ```
 

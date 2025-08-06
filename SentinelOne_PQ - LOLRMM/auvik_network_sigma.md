@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2025 00:59:01):
+// Translated content (automatically translated on 06-08-2025 00:58:00):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".my.auvik.com" or url.address contains ".auvik.com" or url.address contains "auvik.com") or (event.dns.request contains ".my.auvik.com" or event.dns.request contains ".auvik.com" or event.dns.request contains "auvik.com")))
 ```
 
