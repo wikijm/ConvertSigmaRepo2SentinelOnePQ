@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-08-2025 01:49:11):
+// Translated content (automatically translated on 06-08-2025 01:47:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\defragproxy.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
