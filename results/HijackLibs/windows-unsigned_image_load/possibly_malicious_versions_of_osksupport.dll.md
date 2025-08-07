@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-08-2025 01:47:41):
+// Translated content (automatically translated on 07-08-2025 01:47:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\osksupport.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
