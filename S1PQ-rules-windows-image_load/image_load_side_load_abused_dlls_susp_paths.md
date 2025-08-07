@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-08-2025 01:27:19):
+// Translated content (automatically translated on 07-08-2025 01:27:50):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\coreclr.dll" or module.path contains "\\facesdk.dll" or module.path contains "\\HPCustPartUI.dll" or module.path contains "\\libcef.dll" or module.path contains "\\ZIPDLL.dll") and ((module.path contains ":\\Perflogs\\" or module.path contains ":\\Users\\Public\\" or module.path contains "\\Temporary Internet" or module.path contains "\\Windows\\Temp\\") or ((module.path contains ":\\Users\\" and module.path contains "\\Favorites\\") or (module.path contains ":\\Users\\" and module.path contains "\\Favourites\\") or (module.path contains ":\\Users\\" and module.path contains "\\Contacts\\") or (module.path contains ":\\Users\\" and module.path contains "\\Pictures\\")))))
 ```
 
