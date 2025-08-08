@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-08-2025 01:27:50):
+// Translated content (automatically translated on 08-08-2025 01:27:20):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsstrace.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\ProgramData\\Package Cache\\{")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\")))))
 ```
 
