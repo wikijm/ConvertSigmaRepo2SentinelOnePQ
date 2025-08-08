@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-08-2025 01:52:01):
+// Translated content (automatically translated on 08-08-2025 01:51:21):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "cloudflared.exe")
 ```
 
