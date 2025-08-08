@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-08-2025 02:25:21):
+// Translated content (automatically translated on 08-08-2025 02:25:12):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "sc " and tgt.process.cmdline contains "config " and tgt.process.cmdline contains "binpath=") or (tgt.process.cmdline contains "sc " and tgt.process.cmdline contains "failure" and tgt.process.cmdline contains "command=")) or (((tgt.process.cmdline contains "reg " and tgt.process.cmdline contains "add " and tgt.process.cmdline contains "FailureCommand") or (tgt.process.cmdline contains "reg " and tgt.process.cmdline contains "add " and tgt.process.cmdline contains "ImagePath")) and (tgt.process.cmdline contains ".sh" or tgt.process.cmdline contains ".exe" or tgt.process.cmdline contains ".dll" or tgt.process.cmdline contains ".bin$" or tgt.process.cmdline contains ".bat" or tgt.process.cmdline contains ".cmd" or tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".msh$" or tgt.process.cmdline contains ".reg$" or tgt.process.cmdline contains ".scr" or tgt.process.cmdline contains ".ps" or tgt.process.cmdline contains ".vb" or tgt.process.cmdline contains ".jar" or tgt.process.cmdline contains ".pl"))))
 ```
 

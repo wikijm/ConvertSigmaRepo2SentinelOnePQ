@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-08-2025 02:25:21):
+// Translated content (automatically translated on 08-08-2025 02:25:12):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\java.exe" or src.process.image.path contains "\\javaw.exe") and src.process.cmdline contains "SysAidServer"))
 ```
 
