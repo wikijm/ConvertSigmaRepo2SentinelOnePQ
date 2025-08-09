@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-08-2025 02:25:12):
+// Translated content (automatically translated on 09-08-2025 02:07:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Add-MpPreference " or tgt.process.cmdline contains "Set-MpPreference ") and (tgt.process.cmdline contains " -ExclusionPath " or tgt.process.cmdline contains " -ExclusionExtension " or tgt.process.cmdline contains " -ExclusionProcess " or tgt.process.cmdline contains " -ExclusionIpAddress ")))
 ```
 

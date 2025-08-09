@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-08-2025 02:25:12):
+// Translated content (automatically translated on 09-08-2025 02:07:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\\ShellIds\\Microsoft.PowerShell\\ExecutionPolicy" or tgt.process.cmdline contains "\\Policies\\Microsoft\\Windows\\PowerShell\\ExecutionPolicy") and (tgt.process.cmdline contains "Bypass" or tgt.process.cmdline contains "RemoteSigned" or tgt.process.cmdline contains "Unrestricted")))
 ```
 
