@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-08-2025 01:28:01):
+// Translated content (automatically translated on 09-08-2025 01:21:07):
 event.type="Process Creation" and (endpoint.os="osx" and ((src.process.image.path contains "/package_script_service" or src.process.image.path contains "/installer") and (tgt.process.image.path contains "/sh" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/dash" or tgt.process.image.path contains "/python" or tgt.process.image.path contains "/ruby" or tgt.process.image.path contains "/perl" or tgt.process.image.path contains "/php" or tgt.process.image.path contains "/javascript" or tgt.process.image.path contains "/osascript" or tgt.process.image.path contains "/tclsh" or tgt.process.image.path contains "/curl" or tgt.process.image.path contains "/wget") and (tgt.process.cmdline contains "preinstall" or tgt.process.cmdline contains "postinstall")))
 ```
 
