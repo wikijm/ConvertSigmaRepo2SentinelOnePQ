@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-08-2025 01:48:50):
+// Translated content (automatically translated on 10-08-2025 02:03:11):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ciscosparklauncher.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\CiscoSparkLauncher\*","c:\\users\*\\appdata\\local\\Programs\\Cisco Spark\*","c:\\program files\\Cisco Spark\*","c:\\program files (x86)\\Cisco Spark\*")))))
 ```
 
