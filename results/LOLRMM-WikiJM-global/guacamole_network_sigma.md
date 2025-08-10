@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-08-2025 01:41:43):
+// Translated content (automatically translated on 10-08-2025 01:54:53):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "guacamole.apache.org") or (event.dns.request contains "user_managed" or event.dns.request contains "guacamole.apache.org")))
 ```
 
