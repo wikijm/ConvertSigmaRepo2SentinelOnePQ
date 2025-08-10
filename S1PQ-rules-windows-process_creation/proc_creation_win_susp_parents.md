@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-08-2025 02:07:24):
+// Translated content (automatically translated on 10-08-2025 02:29:05):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\minesweeper.exe" or src.process.image.path contains "\\winver.exe" or src.process.image.path contains "\\bitsadmin.exe") or ((src.process.image.path contains "\\csrss.exe" or src.process.image.path contains "\\certutil.exe" or src.process.image.path contains "\\eventvwr.exe" or src.process.image.path contains "\\calc.exe" or src.process.image.path contains "\\notepad.exe") and (not ((tgt.process.image.path contains "\\WerFault.exe" or tgt.process.image.path contains "\\wermgr.exe" or tgt.process.image.path contains "\\conhost.exe" or tgt.process.image.path contains "\\mmc.exe" or tgt.process.image.path contains "\\win32calc.exe" or tgt.process.image.path contains "\\notepad.exe") or not (tgt.process.image.path matches "\.*"))))))
 ```
 
