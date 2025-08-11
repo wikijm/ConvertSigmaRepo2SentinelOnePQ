@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2025 01:50:39):
+// Translated content (automatically translated on 11-08-2025 01:47:43):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rtworkq.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
