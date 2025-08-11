@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2025 02:29:05):
+// Translated content (automatically translated on 11-08-2025 02:24:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\SyncAppvPublishingServer.vbs" and tgt.process.cmdline contains ";")) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
