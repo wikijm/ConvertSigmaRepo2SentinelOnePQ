@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2025 01:05:47):
+// Translated content (automatically translated on 11-08-2025 01:03:21):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/find" and (tgt.process.cmdline contains "-perm -4000" or tgt.process.cmdline contains "-perm -2000" or tgt.process.cmdline contains "-perm 0777" or tgt.process.cmdline contains "-perm -222" or tgt.process.cmdline contains "-perm -o w" or tgt.process.cmdline contains "-perm -o x" or tgt.process.cmdline contains "-perm -u=s" or tgt.process.cmdline contains "-perm -g=s")))
 ```
 

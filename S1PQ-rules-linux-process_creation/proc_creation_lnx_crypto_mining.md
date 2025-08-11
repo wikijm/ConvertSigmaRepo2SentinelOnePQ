@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2025 01:05:47):
+// Translated content (automatically translated on 11-08-2025 01:03:21):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains " --cpu-priority=" or tgt.process.cmdline contains "--donate-level=0" or tgt.process.cmdline contains " -o pool." or tgt.process.cmdline contains " --nicehash" or tgt.process.cmdline contains " --algo=rx/0 " or tgt.process.cmdline contains "stratum+tcp://" or tgt.process.cmdline contains "stratum+udp://" or tgt.process.cmdline contains "sh -c /sbin/modprobe msr allow_writes=on" or tgt.process.cmdline contains "LS1kb25hdGUtbGV2ZWw9" or tgt.process.cmdline contains "0tZG9uYXRlLWxldmVsP" or tgt.process.cmdline contains "tLWRvbmF0ZS1sZXZlbD" or tgt.process.cmdline contains "c3RyYXR1bSt0Y3A6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdGNwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3RjcDovL" or tgt.process.cmdline contains "c3RyYXR1bSt1ZHA6Ly" or tgt.process.cmdline contains "N0cmF0dW0rdWRwOi8v" or tgt.process.cmdline contains "zdHJhdHVtK3VkcDovL"))
 ```
 
