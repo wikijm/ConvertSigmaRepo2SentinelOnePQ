@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-08-2025 01:40:59):
+// Translated content (automatically translated on 11-08-2025 01:28:35):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/dscl" and (tgt.process.cmdline contains "list" and tgt.process.cmdline contains "/users")) or (tgt.process.image.path contains "/dscacheutil" and (tgt.process.cmdline contains "-q" and tgt.process.cmdline contains "user")) or tgt.process.cmdline contains "'x:0:'" or (tgt.process.image.path contains "/cat" and (tgt.process.cmdline contains "/etc/passwd" or tgt.process.cmdline contains "/etc/sudoers")) or tgt.process.image.path contains "/id" or (tgt.process.image.path contains "/lsof" and tgt.process.cmdline contains "-u")))
 ```
 
