@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-08-2025 01:47:43):
+// Translated content (automatically translated on 12-08-2025 01:37:32):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dxcore.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
