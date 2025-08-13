@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 02:06:47):
+// Translated content (automatically translated on 13-08-2025 02:08:20):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "--install" and tgt.process.cmdline contains "--start-with-win" and tgt.process.cmdline contains "--silent")) | columns tgt.process.cmdline,src.process.cmdline,tgt.process.image.path
 ```
 

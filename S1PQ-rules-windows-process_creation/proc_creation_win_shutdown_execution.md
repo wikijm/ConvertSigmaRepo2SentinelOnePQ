@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 02:06:47):
+// Translated content (automatically translated on 13-08-2025 02:08:20):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\shutdown.exe" and (tgt.process.cmdline contains "/r " or tgt.process.cmdline contains "/s ")))
 ```
 

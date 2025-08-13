@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 02:06:47):
+// Translated content (automatically translated on 13-08-2025 02:08:20):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -Inject " and (tgt.process.cmdline contains " -PayloadArgs " or tgt.process.cmdline contains " -PayloadFile ")) or ((tgt.process.cmdline contains " approve " or tgt.process.cmdline contains " create " or tgt.process.cmdline contains " check " or tgt.process.cmdline contains " delete ") and (tgt.process.cmdline contains " /payload:" or tgt.process.cmdline contains " /payload=" or tgt.process.cmdline contains " /updateid:" or tgt.process.cmdline contains " /updateid="))))
 ```
 
