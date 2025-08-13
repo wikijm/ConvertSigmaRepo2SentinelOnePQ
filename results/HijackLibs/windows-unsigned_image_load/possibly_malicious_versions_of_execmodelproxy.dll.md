@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 01:37:32):
+// Translated content (automatically translated on 13-08-2025 01:39:03):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\execmodelproxy.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
