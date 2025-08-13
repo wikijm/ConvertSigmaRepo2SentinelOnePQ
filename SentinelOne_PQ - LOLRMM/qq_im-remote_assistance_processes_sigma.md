@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 00:53:10):
+// Translated content (automatically translated on 13-08-2025 00:54:28):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "qq.exe" or src.process.image.path contains "QQProtect.exe" or src.process.image.path contains "qqpcmgr.exe"))
 ```
 
