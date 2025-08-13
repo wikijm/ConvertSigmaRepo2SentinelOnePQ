@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-08-2025 00:57:06):
+// Translated content (automatically translated on 13-08-2025 00:58:15):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/uname" or tgt.process.image.path contains "/hostname" or tgt.process.image.path contains "/uptime" or tgt.process.image.path contains "/lspci" or tgt.process.image.path contains "/dmidecode" or tgt.process.image.path contains "/lscpu" or tgt.process.image.path contains "/lsmod"))
 ```
 
