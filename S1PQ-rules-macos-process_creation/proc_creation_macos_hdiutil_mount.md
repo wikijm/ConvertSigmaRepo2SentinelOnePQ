@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2025 01:21:52):
+// Translated content (automatically translated on 14-08-2025 01:22:03):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/hdiutil" and (tgt.process.cmdline contains "attach " or tgt.process.cmdline contains "mount ")))
 ```
 
