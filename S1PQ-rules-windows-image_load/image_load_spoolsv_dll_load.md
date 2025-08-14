@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2025 01:21:12):
+// Translated content (automatically translated on 14-08-2025 01:21:33):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\spoolsv.exe" and (module.path contains "\\Windows\\System32\\spool\\drivers\\x64\\3\\" or module.path contains "\\Windows\\System32\\spool\\drivers\\x64\\4\\") and module.path contains ".dll"))
 ```
 
