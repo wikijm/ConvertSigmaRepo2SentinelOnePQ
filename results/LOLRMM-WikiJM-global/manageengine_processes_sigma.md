@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-08-2025 01:42:43):
+// Translated content (automatically translated on 14-08-2025 01:43:22):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "InstallShield Setup.exe" or src.process.image.path contains "ManageEngine_Remote_Access_Plus.exe" or src.process.image.path contains "\\dcagentservice.exe"))
 ```
 
