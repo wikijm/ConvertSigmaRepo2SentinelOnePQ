@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:07:58):
+// Translated content (automatically translated on 15-08-2025 02:08:40):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains ".v2.argotunnel.com" or event.dns.request contains "protocol-v2.argotunnel.com" or event.dns.request contains "trycloudflare.com" or event.dns.request contains "update.argotunnel.com"))
 ```
 
@@ -23,6 +23,7 @@ date: 2023-12-20
 tags:
     - attack.command-and-control
     - attack.t1071.001
+    - attack.t1572
 logsource:
     category: dns_query
     product: windows
