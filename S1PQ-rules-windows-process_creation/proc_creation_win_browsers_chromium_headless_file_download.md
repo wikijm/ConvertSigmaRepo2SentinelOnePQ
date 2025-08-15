@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and (tgt.process.cmdline contains "--headless" and tgt.process.cmdline contains "dump-dom" and tgt.process.cmdline contains "http")))
 ```
 
@@ -22,6 +22,7 @@ modified: 2023-05-12
 tags:
     - attack.command-and-control
     - attack.t1105
+    - attack.t1564.003
 logsource:
     category: process_creation
     product: windows

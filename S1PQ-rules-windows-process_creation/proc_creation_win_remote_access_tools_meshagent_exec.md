@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\meshagent.exe" and (tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.
 ```yaml
 title: Remote Access Tool - MeshAgent Command Execution via MeshCentral
 id: 74a2b202-73e0-4693-9a3a-9d36146d0775
-status: experimental
+status: test
 description: |
     Detects the use of MeshAgent to execute commands on the target host, particularly when threat actors might abuse it to execute commands directly.
     MeshAgent can execute commands on the target host by leveraging win-console to obscure their activities and win-dispatcher to run malicious code through IPC with child processes.

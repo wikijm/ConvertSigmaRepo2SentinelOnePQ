@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\splwow64.exe" and tgt.process.cmdline contains "splwow64.exe"))
 ```
 

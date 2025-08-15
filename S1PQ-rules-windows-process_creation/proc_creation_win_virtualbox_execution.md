@@ -1,12 +1,12 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "VBoxRT.dll,RTR3Init" or tgt.process.cmdline contains "VBoxC.dll" or tgt.process.cmdline contains "VBoxDrv.sys") or (tgt.process.cmdline contains "startvm" or tgt.process.cmdline contains "controlvm"))) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
 
 # Original Sigma Rule:
 ```yaml
-title: Detect Virtualbox Driver Installation OR Starting Of VMs
+title: Virtualbox Driver Installation or Starting of VMs
 id: bab049ca-7471-4828-9024-38279a4c04da
 status: test
 description: Adversaries can carry out malicious operations using a virtual instance to avoid detection. This rule is built to detect the registration of the Virtualbox driver or start of a Virtualbox VM.
@@ -15,7 +15,7 @@ references:
     - https://threatpost.com/maze-ransomware-ragnar-locker-virtual-machine/159350/
 author: Janantha Marasinghe
 date: 2020-09-26
-modified: 2022-07-14
+modified: 2025-07-29
 tags:
     - attack.defense-evasion
     - attack.t1564.006

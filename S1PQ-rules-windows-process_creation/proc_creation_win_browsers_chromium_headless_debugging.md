@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "--remote-debugging-" and tgt.process.cmdline contains "--user-data-dir" and tgt.process.cmdline contains "--headless"))
 ```
 
@@ -24,6 +24,7 @@ tags:
     - attack.credential-access
     - attack.collection
     - attack.t1185
+    - attack.t1564.003
 logsource:
     category: process_creation
     product: windows

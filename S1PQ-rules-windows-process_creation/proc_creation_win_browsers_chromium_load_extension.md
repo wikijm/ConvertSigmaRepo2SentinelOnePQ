@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 02:09:10):
+// Translated content (automatically translated on 15-08-2025 02:09:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "--load-extension="))
 ```
 
@@ -22,7 +22,7 @@ date: 2022-06-19
 modified: 2023-11-28
 tags:
     - attack.persistence
-    - attack.t1176
+    - attack.t1176.001
 logsource:
     category: process_creation
     product: windows
