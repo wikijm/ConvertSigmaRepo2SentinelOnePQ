@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-08-2025 01:22:03):
+// Translated content (automatically translated on 15-08-2025 01:22:34):
 event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path contains "/dscl" and tgt.process.cmdline contains "create") and (tgt.process.cmdline contains "UniqueID" and tgt.process.cmdline matches "([0-9]|[1-9][0-9]|[1-4][0-9]{2})")) or ((tgt.process.image.path contains "/dscl" and tgt.process.cmdline contains "create") and (tgt.process.cmdline contains "IsHidden" and (tgt.process.cmdline contains "true" or tgt.process.cmdline contains "yes" or tgt.process.cmdline contains "1")))))
 ```
 
