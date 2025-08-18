@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-08-2025 02:21:33):
+// Translated content (automatically translated on 18-08-2025 02:21:52):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\GUP.exe" and (not ((tgt.process.image.path contains "\\Program Files\\Notepad++\\updater\\GUP.exe" or tgt.process.image.path contains "\\Program Files (x86)\\Notepad++\\updater\\GUP.exe") or (tgt.process.image.path contains "\\Users\\" and (tgt.process.image.path contains "\\AppData\\Local\\Notepad++\\updater\\GUP.exe" or tgt.process.image.path contains "\\AppData\\Roaming\\Notepad++\\updater\\GUP.exe"))))))
 ```
 
