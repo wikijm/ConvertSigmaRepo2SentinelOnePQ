@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-08-2025 02:02:38):
+// Translated content (automatically translated on 20-08-2025 02:00:31):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\msdt.exe" and tgt.process.cmdline contains "\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml") and (tgt.process.cmdline contains " -af " or tgt.process.cmdline contains " /af ")) and (not src.process.image.path contains "\\pcwrun.exe")))
 ```
 

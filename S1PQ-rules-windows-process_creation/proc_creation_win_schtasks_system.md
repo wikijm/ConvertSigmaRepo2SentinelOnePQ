@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-08-2025 02:02:38):
+// Translated content (automatically translated on 20-08-2025 02:00:31):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains " /change " or tgt.process.cmdline contains " /create ")) and tgt.process.cmdline contains "/ru " and (tgt.process.cmdline contains "NT AUT" or tgt.process.cmdline contains " SYSTEM ")) and (not ((tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains "/TN TVInstallRestore" and tgt.process.cmdline contains "\\TeamViewer_.exe")) or (tgt.process.cmdline contains "Subscription Heartbeat" and tgt.process.cmdline contains "\\HeartbeatConfig.xml" and tgt.process.cmdline contains "\\Microsoft Shared\\OFFICE") or (tgt.process.cmdline contains "/Create /F /RU System /SC WEEKLY /TN AviraSystemSpeedupVerify /TR " or tgt.process.cmdline contains ":\\Program Files (x86)\\Avira\\System Speedup\\setup\\avira_speedup_setup.exe" or tgt.process.cmdline contains "/VERIFY /VERYSILENT /NOSTART /NODOTNET /NORESTART\" /RL HIGHEST")))))
 ```
 
