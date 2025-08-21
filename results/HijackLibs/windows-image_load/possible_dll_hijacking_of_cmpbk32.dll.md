@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-08-2025 01:43:02):
+// Translated content (automatically translated on 21-08-2025 01:42:05):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cmpbk32.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
