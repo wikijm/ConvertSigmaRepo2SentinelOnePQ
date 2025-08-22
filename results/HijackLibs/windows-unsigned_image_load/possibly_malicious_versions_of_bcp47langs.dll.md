@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-08-2025 01:24:03):
+// Translated content (automatically translated on 22-08-2025 01:24:44):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\bcp47langs.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
