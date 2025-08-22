@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-08-2025 01:42:05):
+// Translated content (automatically translated on 22-08-2025 01:42:25):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\unityplayer.dll" and (not module.path="c:\\users\*\\appdata\\local\\Temp\*\\Windows\*")))
 ```
 
