@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-08-2025 01:59:08):
+// Translated content (automatically translated on 22-08-2025 01:59:59):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "add" and tgt.process.cmdline contains "hkcu\\software\\classes\\ms-settings\\shell\\open\\command" and tgt.process.cmdline contains "/ve " and tgt.process.cmdline contains "/d") or (tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "add" and tgt.process.cmdline contains "hkcu\\software\\classes\\ms-settings\\shell\\open\\command" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "DelegateExecute") or (tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "delete" and tgt.process.cmdline contains "hkcu\\software\\classes\\ms-settings")))
 ```
 
