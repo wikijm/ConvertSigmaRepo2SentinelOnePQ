@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-08-2025 01:41:27):
+// Translated content (automatically translated on 25-08-2025 01:27:56):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\sti.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
