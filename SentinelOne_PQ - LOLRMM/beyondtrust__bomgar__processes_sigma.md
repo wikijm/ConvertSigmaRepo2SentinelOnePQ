@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-08-2025 00:52:58):
+// Translated content (automatically translated on 26-08-2025 00:50:57):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*bomgar-scc-*.exe" or src.process.image.path contains "bomgar-scc.exe" or src.process.image.path="*bomgar-pac-*.exe" or src.process.image.path contains "bomgar-pac.exe" or src.process.image.path contains "bomgar-rdp.exe"))
 ```
 
