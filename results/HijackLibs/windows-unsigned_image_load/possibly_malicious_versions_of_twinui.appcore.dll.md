@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-08-2025 01:27:56):
+// Translated content (automatically translated on 26-08-2025 01:25:32):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\twinui.appcore.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
