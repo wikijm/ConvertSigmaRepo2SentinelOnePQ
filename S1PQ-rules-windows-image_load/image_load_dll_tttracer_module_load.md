@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-08-2025 01:19:18):
+// Translated content (automatically translated on 26-08-2025 01:17:04):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ttdrecord.dll" or module.path contains "\\ttdwriter.dll" or module.path contains "\\ttdloader.dll"))
 ```
 
