@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-c" or tgt.process.cmdline contains "/c" or tgt.process.cmdline contains "–c" or tgt.process.cmdline contains "—c" or tgt.process.cmdline contains "―c")))
 ```
 
@@ -28,7 +28,7 @@ detection:
               - \Sysmon.exe
         - Description: 'System activity monitor'
     selection_cli:
-        CommandLine|contains|windash: '-c'
+        CommandLine|windash|contains: '-c'
     condition: all of selection_*
 falsepositives:
     - Legitimate administrators might use this command to update Sysmon configuration.

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "/factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b}" or ((tgt.process.cmdline contains "explorer.exe") and (tgt.process.cmdline contains " -root," or tgt.process.cmdline contains " /root," or tgt.process.cmdline contains " –root," or tgt.process.cmdline contains " —root," or tgt.process.cmdline contains " ―root,"))))
 ```
 
@@ -32,7 +32,7 @@ detection:
         - CommandLine|contains: '/factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b}' # This will catch, the new explorer spawning which indicates a process/tree break. But you won't be able to catch the executing process. For that you need historical data
         # There exists almost infinite possibilities to spawn from explorer. The "/root" flag is just an example
         # It's better to have the ability to look at the process tree and look for explorer processes with "weird" flags to be able to catch this technique.
-        - CommandLine|contains|all|windash:
+        - CommandLine|windash|contains|all:
               - 'explorer.exe'
               - ' /root,'
     condition: selection

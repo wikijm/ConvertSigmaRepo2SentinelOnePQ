@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -c " or tgt.process.cmdline contains " /c " or tgt.process.cmdline contains " –c " or tgt.process.cmdline contains " —c " or tgt.process.cmdline contains " ―c ") and (tgt.process.cmdline contains "curl " and tgt.process.cmdline contains "http" and tgt.process.cmdline contains "-o" and tgt.process.cmdline contains "&")))
 ```
 
@@ -25,7 +25,7 @@ logsource:
     product: windows
 detection:
     selection:
-        CommandLine|contains|windash: ' -c '
+        CommandLine|windash|contains: ' -c '
         CommandLine|contains|all:
             - 'curl '
             - 'http'

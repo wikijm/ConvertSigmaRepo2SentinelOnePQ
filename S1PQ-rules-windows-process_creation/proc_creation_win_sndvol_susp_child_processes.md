@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\SndVol.exe" and (not (tgt.process.image.path contains "\\rundll32.exe" and tgt.process.cmdline contains " shell32.dll,Control_RunDLL "))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.cmdline contains " -y" or tgt.process.cmdline contains " /y" or tgt.process.cmdline contains " –y" or tgt.process.cmdline contains " —y" or tgt.process.cmdline contains " ―y")) and (not (tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Apple Software Update\\ScriptingObjectModel.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Program Files (x86)\\Apple Software Update\\SoftwareUpdateAdmin.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y \"C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" /Y C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Bonjour\\mdnsNSP.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Apple Software Update\\ScriptingObjectModel.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Program Files (x86)\\Apple Software Update\\SoftwareUpdateAdmin.dll" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y \"C:\\Windows\\CCM\\" or tgt.process.cmdline contains "\\MsiExec.exe\" -Y C:\\Windows\\CCM\\"))))
 ```
 
@@ -28,7 +28,7 @@ logsource:
 detection:
     selection:
         Image|endswith: '\msiexec.exe'
-        CommandLine|contains|windash: ' -y'
+        CommandLine|windash|contains: ' -y'
     filter_apple:
         CommandLine|contains:
             - '\MsiExec.exe" /Y "C:\Program Files\Bonjour\mdnsNSP.dll'

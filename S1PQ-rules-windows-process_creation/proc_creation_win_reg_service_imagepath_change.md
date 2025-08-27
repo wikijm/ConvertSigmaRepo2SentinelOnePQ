@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "add " and tgt.process.cmdline contains "SYSTEM\\CurrentControlSet\\Services\\" and tgt.process.cmdline contains " ImagePath ")) and (tgt.process.cmdline contains " -d " or tgt.process.cmdline contains " /d " or tgt.process.cmdline contains " –d " or tgt.process.cmdline contains " —d " or tgt.process.cmdline contains " ―d ")))
 ```
 
@@ -32,7 +32,7 @@ detection:
             - 'SYSTEM\CurrentControlSet\Services\'
             - ' ImagePath '
     selection_value:
-        CommandLine|contains|windash: ' -d '
+        CommandLine|windash|contains: ' -d '
     condition: all of selection*
 falsepositives:
     - Unknown

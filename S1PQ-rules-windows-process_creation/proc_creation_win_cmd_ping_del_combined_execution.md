@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -n " or tgt.process.cmdline contains " /n " or tgt.process.cmdline contains " –n " or tgt.process.cmdline contains " —n " or tgt.process.cmdline contains " ―n ") and tgt.process.cmdline contains "Nul" and (tgt.process.cmdline contains " -f " or tgt.process.cmdline contains " /f " or tgt.process.cmdline contains " –f " or tgt.process.cmdline contains " —f " or tgt.process.cmdline contains " ―f " or tgt.process.cmdline contains " -q " or tgt.process.cmdline contains " /q " or tgt.process.cmdline contains " –q " or tgt.process.cmdline contains " —q " or tgt.process.cmdline contains " ―q ") and (tgt.process.cmdline contains "ping" and tgt.process.cmdline contains "del ")))
 ```
 
@@ -28,11 +28,11 @@ detection:
     # Note: In the case of sysmon and similar logging utilities, see this discussion https://github.com/SigmaHQ/sigma/discussions/4277
     # Example: "C:\Windows\System32\cmd.exe"  /C ping 127.0.0.7 -n 3 > Nul & fsutil file setZeroData offset=0 length=524288 "C:\Users\User\Desktop\lockbit\lockbit.exe" & Del /f /q "C:\Users\User\Desktop\lockbit\lockbit.exe".
     selection_count:
-        CommandLine|contains|windash: ' -n '
+        CommandLine|windash|contains: ' -n '
     selection_nul:
         CommandLine|contains: 'Nul' # Covers "> Nul" and ">Nul "
     selection_del_param:
-        CommandLine|contains|windash:
+        CommandLine|windash|contains:
             - ' -f '
             - ' -q '
     selection_all:

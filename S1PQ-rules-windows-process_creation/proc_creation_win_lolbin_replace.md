@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 02:00:59):
+// Translated content (automatically translated on 27-08-2025 01:57:17):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\replace.exe" and (tgt.process.cmdline contains "-a" or tgt.process.cmdline contains "/a" or tgt.process.cmdline contains "–a" or tgt.process.cmdline contains "—a" or tgt.process.cmdline contains "―a")))
 ```
 
@@ -26,7 +26,7 @@ detection:
     selection:
         Image|endswith: '\replace.exe'
     argument:
-        CommandLine|contains|windash: '-a'
+        CommandLine|windash|contains: '-a'
     condition: selection and argument
 falsepositives:
     - Unknown
