@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 00:50:57):
+// Translated content (automatically translated on 27-08-2025 00:49:48):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "einstaller.exe" or src.process.image.path contains "era.exe" or src.process.image.path contains "ERAAgent.exe" or src.process.image.path="*ezhelp*.exe" or src.process.image.path contains "eratool.exe"))
 ```
 

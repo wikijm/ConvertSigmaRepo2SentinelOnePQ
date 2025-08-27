@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 00:50:57):
+// Translated content (automatically translated on 27-08-2025 00:49:48):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Windows\\SysWOW64\\rserver30\\Radm_log.htm" or tgt.file.path contains "C:\\Windows\\System32\\rserver30\\Radm_log.htm" or tgt.file.path contains "C:\\Windows\\System32\\rserver30\\CHATLOGS\*\*.htm" or tgt.file.path contains "C:\\Users\*\\Documents\\ChatLogs\*\*.htm"))
 ```
 
