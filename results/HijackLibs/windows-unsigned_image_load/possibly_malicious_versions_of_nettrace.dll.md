@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 01:25:32):
+// Translated content (automatically translated on 27-08-2025 01:23:01):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nettrace.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
