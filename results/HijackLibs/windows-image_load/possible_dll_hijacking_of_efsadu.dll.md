@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-08-2025 01:43:28):
+// Translated content (automatically translated on 27-08-2025 01:40:13):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\efsadu.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
