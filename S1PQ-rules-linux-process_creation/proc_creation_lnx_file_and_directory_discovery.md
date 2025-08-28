@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-08-2025 00:53:32):
+// Translated content (automatically translated on 28-08-2025 00:52:48):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/file" and tgt.process.cmdline matches "(.){200,}") or (tgt.process.image.path contains "/ls" and tgt.process.cmdline contains "-R") or tgt.process.image.path contains "/find" or tgt.process.image.path contains "/tree" or tgt.process.image.path contains "/findmnt" or tgt.process.image.path contains "/mlocate"))
 ```
 
