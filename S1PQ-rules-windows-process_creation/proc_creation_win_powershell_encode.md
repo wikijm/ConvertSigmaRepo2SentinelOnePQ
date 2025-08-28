@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-08-2025 01:57:17):
+// Translated content (automatically translated on 28-08-2025 01:56:22):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains " -e " or tgt.process.cmdline contains " -en " or tgt.process.cmdline contains " -enc " or tgt.process.cmdline contains " -enco" or tgt.process.cmdline contains " -ec ")) and (not (tgt.process.cmdline contains " -Encoding " or (src.process.image.path contains "C:\\Packages\\Plugins\\Microsoft.GuestConfiguration.ConfigurationforWindows\\" or src.process.image.path contains "\\gc_worker.exe")))))
 ```
 
