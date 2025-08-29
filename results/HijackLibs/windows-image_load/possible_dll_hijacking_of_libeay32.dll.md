@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:39:47):
+// Translated content (automatically translated on 29-08-2025 01:39:49):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libeay32.dll" and (not (module.path in ("c:\\program files\\PSPad editor\*","c:\\program files (x86)\\PSPad editor\*")))))
 ```
 
