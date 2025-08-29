@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 00:52:48):
+// Translated content (automatically translated on 29-08-2025 00:52:52):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/getcap" and (tgt.process.cmdline contains " -r " or tgt.process.cmdline contains " /r " or tgt.process.cmdline contains " –r " or tgt.process.cmdline contains " —r " or tgt.process.cmdline contains " ―r ")))
 ```
 
@@ -26,7 +26,7 @@ logsource:
 detection:
     selection:
         Image|endswith: '/getcap'
-        CommandLine|windash|contains: ' -r '
+        CommandLine|contains|windash: ' -r '
     condition: selection
 falsepositives:
     - Unknown
