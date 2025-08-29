@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ssh.exe" and (tgt.process.cmdline contains " -R " or tgt.process.cmdline contains " /R " or tgt.process.cmdline contains " –R " or tgt.process.cmdline contains " —R " or tgt.process.cmdline contains " ―R ")))
 ```
 
@@ -27,7 +27,7 @@ logsource:
 detection:
     selection:
         Image|endswith: '\ssh.exe'
-        CommandLine|windash|contains: ' -R '
+        CommandLine|contains|windash: ' -R '
     condition: selection
 falsepositives:
     - Administrative activity using a remote port forwarding to a local port

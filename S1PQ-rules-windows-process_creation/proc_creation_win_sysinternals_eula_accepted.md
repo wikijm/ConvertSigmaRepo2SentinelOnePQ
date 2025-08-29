@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " -accepteula" or tgt.process.cmdline contains " /accepteula" or tgt.process.cmdline contains " –accepteula" or tgt.process.cmdline contains " —accepteula" or tgt.process.cmdline contains " ―accepteula"))
 ```
 
@@ -26,7 +26,7 @@ logsource:
     product: windows
 detection:
     selection:
-        CommandLine|windash|contains: ' -accepteula'
+        CommandLine|contains|windash: ' -accepteula'
     condition: selection
 falsepositives:
     - Legitimate use of SysInternals tools

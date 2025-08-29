@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\rpcping.exe" and (tgt.process.cmdline contains "-s" or tgt.process.cmdline contains "/s" or tgt.process.cmdline contains "–s" or tgt.process.cmdline contains "—s" or tgt.process.cmdline contains "―s") and (((tgt.process.cmdline contains "-u" or tgt.process.cmdline contains "/u" or tgt.process.cmdline contains "–u" or tgt.process.cmdline contains "—u" or tgt.process.cmdline contains "―u") and (tgt.process.cmdline contains "NTLM")) or ((tgt.process.cmdline contains "-t" or tgt.process.cmdline contains "/t" or tgt.process.cmdline contains "–t" or tgt.process.cmdline contains "—t" or tgt.process.cmdline contains "―t") and (tgt.process.cmdline contains "ncacn_np")))))
 ```
 
@@ -28,12 +28,12 @@ detection:
     use_rpcping:
         Image|endswith: '\rpcping.exe'
     remote_server:
-        CommandLine|windash|contains: '-s'
+        CommandLine|contains|windash: '-s'
     ntlm_auth:
-        - CommandLine|windash|contains|all:
+        - CommandLine|contains|all|windash:
               - '-u'
               - 'NTLM'
-        - CommandLine|windash|contains|all:
+        - CommandLine|contains|all|windash:
               - '-t'
               - 'ncacn_np'
     condition: use_rpcping and remote_server and ntlm_auth

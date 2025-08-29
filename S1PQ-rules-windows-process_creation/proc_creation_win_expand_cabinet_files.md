@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\expand.exe" and (tgt.process.cmdline contains "-F:" or tgt.process.cmdline contains "/F:" or tgt.process.cmdline contains "–F:" or tgt.process.cmdline contains "—F:" or tgt.process.cmdline contains "―F:")) and ((tgt.process.cmdline contains ":\\Perflogs\\" or tgt.process.cmdline contains ":\\ProgramData" or tgt.process.cmdline contains ":\\Users\\Public\\" or tgt.process.cmdline contains ":\\Windows\\Temp\\" or tgt.process.cmdline contains "\\Admin$\\" or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" or tgt.process.cmdline contains "\\AppData\\Roaming\\" or tgt.process.cmdline contains "\\C$\\" or tgt.process.cmdline contains "\\Temporary Internet") or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\Favorites\\") or (tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\Favourites\\") or (tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\Contacts\\"))) and (not (src.process.image.path="C:\\Program Files (x86)\\Dell\\UpdateService\\ServiceShell.exe" and tgt.process.cmdline contains "C:\\ProgramData\\Dell\\UpdateService\\Temp\\"))))
 ```
 
@@ -25,7 +25,7 @@ logsource:
 detection:
     selection_cmd:
         Image|endswith: '\expand.exe'
-        CommandLine|windash|contains: '-F:'
+        CommandLine|contains|windash: '-F:'
     selection_folders_1:
         CommandLine|contains:
             - ':\Perflogs\'

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " -ma " or tgt.process.cmdline contains " /ma " or tgt.process.cmdline contains " –ma " or tgt.process.cmdline contains " —ma " or tgt.process.cmdline contains " ―ma ") and tgt.process.cmdline contains " ls"))
 ```
 
@@ -28,7 +28,7 @@ logsource:
     product: windows
 detection:
     selection_flags:
-        CommandLine|windash|contains: ' -ma '
+        CommandLine|contains|windash: ' -ma '
     selection_process:
         CommandLine|contains: ' ls' # Short for lsass
     condition: all of selection*

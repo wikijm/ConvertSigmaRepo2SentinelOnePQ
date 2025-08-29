@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-u" or tgt.process.cmdline contains "/u" or tgt.process.cmdline contains "–u" or tgt.process.cmdline contains "—u" or tgt.process.cmdline contains "―u")))
 ```
 
@@ -28,7 +28,7 @@ detection:
               - \Sysmon.exe
         - Description: 'System activity monitor'
     selection_cli:
-        CommandLine|windash|contains: '-u'
+        CommandLine|contains|windash: '-u'
     condition: all of selection_*
 falsepositives:
     - Legitimate administrators might use this command to remove Sysmon for debugging purposes

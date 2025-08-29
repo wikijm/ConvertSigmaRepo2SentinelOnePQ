@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\regsvr32.exe" and (tgt.process.cmdline contains " -i:" or tgt.process.cmdline contains " /i:" or tgt.process.cmdline contains " –i:" or tgt.process.cmdline contains " —i:" or tgt.process.cmdline contains " ―i:")) and (not tgt.process.cmdline contains " -n " or tgt.process.cmdline contains " /n " or tgt.process.cmdline contains " –n " or tgt.process.cmdline contains " —n " or tgt.process.cmdline contains " ―n ")))
 ```
 
@@ -24,9 +24,9 @@ logsource:
 detection:
     selection:
         Image|endswith: '\regsvr32.exe'
-        CommandLine|windash|contains: ' -i:'
+        CommandLine|contains|windash: ' -i:'
     filter_main_flag:
-        CommandLine|windash|contains: ' -n '
+        CommandLine|contains|windash: ' -n '
     condition: selection and not 1 of filter_main_*
 falsepositives:
     - Administrator typo might cause some false positives

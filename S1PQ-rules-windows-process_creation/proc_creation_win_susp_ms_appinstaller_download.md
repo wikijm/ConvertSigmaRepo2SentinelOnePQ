@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-08-2025 01:56:22):
+// Translated content (automatically translated on 29-08-2025 01:56:24):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*ms-appinstaller://*source=*" and tgt.process.cmdline contains "http"))
 ```
 
