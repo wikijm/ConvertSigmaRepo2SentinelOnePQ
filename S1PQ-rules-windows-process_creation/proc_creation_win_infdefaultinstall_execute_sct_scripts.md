@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2025 01:56:24):
+// Translated content (automatically translated on 30-08-2025 01:50:47):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "InfDefaultInstall.exe " and tgt.process.cmdline contains ".inf")) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
 ```
 
