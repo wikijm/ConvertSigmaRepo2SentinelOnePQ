@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2025 01:39:49):
+// Translated content (automatically translated on 30-08-2025 01:27:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\webui.dll" and (not (module.path in ("c:\\program files\\iTop Screen Recorder\*","c:\\program files (x86)\\iTop Screen Recorder\*")))))
 ```
 
