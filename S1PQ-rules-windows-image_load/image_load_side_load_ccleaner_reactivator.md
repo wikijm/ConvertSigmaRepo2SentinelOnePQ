@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2025 01:14:07):
+// Translated content (automatically translated on 30-08-2025 01:10:27):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\CCleanerReactivator.dll" and (not ((src.process.image.path contains "C:\\Program Files\\CCleaner\\" or src.process.image.path contains "C:\\Program Files (x86)\\CCleaner\\") and src.process.image.path contains "\\CCleanerReactivator.exe"))))
 ```
 
