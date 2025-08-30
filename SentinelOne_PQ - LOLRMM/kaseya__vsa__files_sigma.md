@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2025 00:49:18):
+// Translated content (automatically translated on 30-08-2025 00:45:30):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "%localappdata%\\Kaseya\\Log\\KaseyaLiveConnect\*" or tgt.file.path contains "~/Library/Logs/com.kaseya/KaseyaLiveConnect/" or tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\Endpoint\*" or tgt.file.path="*C:\\Program Files*\\Kaseya\*\\agentmon.log" or tgt.file.path contains "/var/log/system.log" or tgt.file.path="* ~/opt/kaseya/*/logs*" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Temp\\KASetup.log" or tgt.file.path contains "C:\\Windows\\Temp\\KASetup.log" or tgt.file.path contains "C:\\ProgramData\\Kaseya\\Log\\KaseyaEdgeServices\*" or tgt.file.path contains "C:\\Kaseya\\api\\v1.0\\logs\\" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoint\\logs" or tgt.file.path contains "C:\\Kaseya\\api\\v1.5\\endpoints\\logs" or tgt.file.path contains "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Kaseya\\Log\\MakeSelfSignedCert.exe\\" or tgt.file.path contains "C:\\Kaseya\\WebPages\\install\\makecert.txt" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\KaseyaEndpoint*" or tgt.file.path="*C:\\ProgramData\\Kaseya\\Log\\Endpoint\\Instance_*\\Session_*"))
 ```
 
