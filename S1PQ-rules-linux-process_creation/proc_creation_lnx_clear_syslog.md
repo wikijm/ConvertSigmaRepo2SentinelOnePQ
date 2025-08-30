@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-08-2025 00:52:52):
+// Translated content (automatically translated on 30-08-2025 00:50:01):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "rm /var/log/syslog" or tgt.process.cmdline contains "rm -r /var/log/syslog" or tgt.process.cmdline contains "rm -f /var/log/syslog" or tgt.process.cmdline contains "rm -rf /var/log/syslog" or tgt.process.cmdline contains "unlink /var/log/syslog" or tgt.process.cmdline contains "unlink -r /var/log/syslog" or tgt.process.cmdline contains "unlink -f /var/log/syslog" or tgt.process.cmdline contains "unlink -rf /var/log/syslog" or tgt.process.cmdline contains "mv /var/log/syslog" or tgt.process.cmdline contains " >/var/log/syslog" or tgt.process.cmdline contains " > /var/log/syslog" or tgt.process.cmdline contains "journalctl --vacuum"))
 ```
 
