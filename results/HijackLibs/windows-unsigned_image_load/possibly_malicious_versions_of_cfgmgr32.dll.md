@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2025 01:27:28):
+// Translated content (automatically translated on 01-09-2025 01:43:43):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cfgmgr32.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
