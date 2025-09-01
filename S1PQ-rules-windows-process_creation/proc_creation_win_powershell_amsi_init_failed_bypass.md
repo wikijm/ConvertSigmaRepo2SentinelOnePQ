@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2025 02:02:20):
+// Translated content (automatically translated on 01-09-2025 02:18:29):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "System.Management.Automation.AmsiUtils" and tgt.process.cmdline contains "amsiInitFailed") or (tgt.process.cmdline contains "[Ref].Assembly.GetType" and tgt.process.cmdline contains "SetValue($null,$true)" and tgt.process.cmdline contains "NonPublic,Static")))
 ```
 
