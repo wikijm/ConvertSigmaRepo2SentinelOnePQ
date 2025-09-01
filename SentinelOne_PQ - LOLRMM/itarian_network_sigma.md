@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-08-2025 00:53:14):
+// Translated content (automatically translated on 01-09-2025 00:59:17):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "mdmsupport.comodo.com" or url.address contains ".itsm-us1.comodo.com" or url.address contains ".cmdm.comodo.com" or url.address contains "remoteaccess.itarian.com" or url.address contains "servicedesk.itarian.com") or (event.dns.request contains "mdmsupport.comodo.com" or event.dns.request contains ".itsm-us1.comodo.com" or event.dns.request contains ".cmdm.comodo.com" or event.dns.request contains "remoteaccess.itarian.com" or event.dns.request contains "servicedesk.itarian.com")))
 ```
 
