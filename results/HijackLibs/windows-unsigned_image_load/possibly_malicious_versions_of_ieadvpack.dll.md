@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-09-2025 01:43:43):
+// Translated content (automatically translated on 02-09-2025 01:23:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ieadvpack.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
