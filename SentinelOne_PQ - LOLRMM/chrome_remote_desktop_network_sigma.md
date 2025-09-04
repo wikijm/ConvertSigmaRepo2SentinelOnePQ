@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-09-2025 00:45:48):
+// Translated content (automatically translated on 04-09-2025 00:46:02):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "remotedesktop-pa.googleapis.com" or url.address contains "remotedesktop.google.com" or url.address contains "remotedesktop.google.com") or (event.dns.request contains "remotedesktop-pa.googleapis.com" or event.dns.request contains "remotedesktop.google.com" or event.dns.request contains "remotedesktop.google.com")))
 ```
 
