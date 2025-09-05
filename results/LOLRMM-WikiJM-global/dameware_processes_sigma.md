@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-09-2025 01:21:43):
+// Translated content (automatically translated on 05-09-2025 01:23:54):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*SolarWinds-Dameware-DRS*.exe" or src.process.image.path="*DameWare Mini Remote Control*.exe" or src.process.image.path contains "dwrcs.exe" or src.process.image.path contains "\\dwrcst.exe" or src.process.image.path contains "DameWare Remote Support.exe" or src.process.image.path="*SolarWinds-Dameware-MRC*.exe"))
 ```
 
