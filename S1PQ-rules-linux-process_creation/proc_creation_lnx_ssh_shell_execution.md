@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-09-2025 00:50:45):
+// Translated content (automatically translated on 05-09-2025 00:51:48):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/ssh" and (tgt.process.cmdline contains "ProxyCommand=;" or tgt.process.cmdline contains "permitlocalcommand=yes" or tgt.process.cmdline contains "localhost")) and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh" or tgt.process.cmdline contains "sh 0<&2 1>&2" or tgt.process.cmdline contains "sh 1>&2 0<&2")))
 ```
 
