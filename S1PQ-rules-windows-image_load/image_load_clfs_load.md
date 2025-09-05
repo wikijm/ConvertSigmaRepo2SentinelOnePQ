@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-09-2025 01:10:42):
+// Translated content (automatically translated on 05-09-2025 01:12:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\clfs.sys" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\Temporary Internet" or src.process.image.path contains "\\Windows\\Temp\\") or ((src.process.image.path contains ":\\Users\\" and src.process.image.path contains "\\Favorites\\") or (src.process.image.path contains ":\\Users\\" and src.process.image.path contains "\\Favourites\\") or (src.process.image.path contains ":\\Users\\" and src.process.image.path contains "\\Contacts\\") or (src.process.image.path contains ":\\Users\\" and src.process.image.path contains "\\Pictures\\")))))
 ```
 
