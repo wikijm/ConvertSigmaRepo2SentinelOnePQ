@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2025 01:12:22):
+// Translated content (automatically translated on 06-09-2025 01:10:23):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\waveedit.dll" and (not ((src.process.image.path in ("C:\\Program Files (x86)\\Nero\\Nero Apps\\Nero WaveEditor\\waveedit.exe","C:\\Program Files\\Nero\\Nero Apps\\Nero WaveEditor\\waveedit.exe")) and (module.path contains "C:\\Program Files (x86)\\Nero\\Nero Apps\\Nero WaveEditor\\" or module.path contains "C:\\Program Files\\Nero\\Nero Apps\\Nero WaveEditor\\")))))
 ```
 
