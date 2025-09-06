@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2025 01:37:31):
+// Translated content (automatically translated on 06-09-2025 01:27:09):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\classicexplorer32.dll" and (not (module.path in ("c:\\program files\\Classic Shell\*","c:\\program files (x86)\\Classic Shell\*","c:\\program files\\Open-Shell\*","c:\\program files (x86)\\Open-Shell\*")))))
 ```
 
