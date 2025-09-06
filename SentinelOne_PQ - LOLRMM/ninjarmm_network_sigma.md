@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 05-09-2025 00:47:20):
-(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ninjarmm.com" or url.address contains ".ninjaone.com" or url.address contains "resources.ninjarmm.com" or url.address contains "ninjaone.com") or (event.dns.request contains ".ninjarmm.com" or event.dns.request contains ".ninjaone.com" or event.dns.request contains "resources.ninjarmm.com" or event.dns.request contains "ninjaone.com")))
+// Translated content (automatically translated on 06-09-2025 00:45:33):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ninjarmm.com" or url.address contains ".ninjaone.com" or url.address contains "resources.ninjarmm.com" or url.address contains "ninjaone.com" or url.address contains "ninjarmm.net" or url.address contains ".ninjarmm.net" or url.address contains "rmmservice.eu" or url.address contains ".rmmservice.eu" or url.address contains "rmmservice.eu" or url.address contains ".rmmservice.eu" or url.address contains "rmmservice.com.au" or url.address contains ".rmmservice.com.au" or url.address contains "rmmservice.ca" or url.address contains ".rmmservice.ca" or url.address contains "ninja-backup.com" or url.address contains ".ninja-backup.com") or (event.dns.request contains ".ninjarmm.com" or event.dns.request contains ".ninjaone.com" or event.dns.request contains "resources.ninjarmm.com" or event.dns.request contains "ninjaone.com" or event.dns.request contains "ninjarmm.net" or event.dns.request contains ".ninjarmm.net" or event.dns.request contains "rmmservice.eu" or event.dns.request contains ".rmmservice.eu" or event.dns.request contains "rmmservice.eu" or event.dns.request contains ".rmmservice.eu" or event.dns.request contains "rmmservice.com.au" or event.dns.request contains ".rmmservice.com.au" or event.dns.request contains "rmmservice.ca" or event.dns.request contains ".rmmservice.ca" or event.dns.request contains "ninja-backup.com" or event.dns.request contains ".ninja-backup.com")))
 ```
 
 
@@ -17,6 +17,18 @@ detection:
     - '*.ninjaone.com'
     - resources.ninjarmm.com
     - ninjaone.com
+    - ninjarmm.net
+    - '*.ninjarmm.net'
+    - rmmservice.eu
+    - '*.rmmservice.eu'
+    - rmmservice.eu
+    - '*.rmmservice.eu'
+    - rmmservice.com.au
+    - '*.rmmservice.com.au'
+    - rmmservice.ca
+    - '*.rmmservice.ca'
+    - ninja-backup.com
+    - '*.ninja-backup.com'
   condition: selection
 id: 36fd47e6-13f9-4eb0-a826-8f34e3e1dc0e
 status: experimental
