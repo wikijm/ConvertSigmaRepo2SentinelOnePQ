@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2025 01:20:33):
+// Translated content (automatically translated on 06-09-2025 01:18:44):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\framedynos.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
