@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2025 01:50:31):
+// Translated content (automatically translated on 07-09-2025 01:59:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","S-1-16-12288")) and (tgt.process.cmdline contains "conhost.exe" and tgt.process.cmdline contains "0xffffffff" and tgt.process.cmdline contains "-ForceV1")))
 ```
 

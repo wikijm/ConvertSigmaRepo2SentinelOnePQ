@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2025 01:50:31):
+// Translated content (automatically translated on 07-09-2025 01:59:44):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\wscript.exe" or tgt.process.image.path contains "\\cscript.exe") and (tgt.process.cmdline contains "\\Windows\\Temp" or tgt.process.cmdline contains "\\Temporary Internet" or tgt.process.cmdline contains "\\AppData\\Local\\Temp" or tgt.process.cmdline contains "\\AppData\\Roaming\\Temp" or tgt.process.cmdline contains "%TEMP%" or tgt.process.cmdline contains "%TMP%" or tgt.process.cmdline contains "%LocalAppData%\\Temp")) and (not (tgt.process.cmdline contains " >" or tgt.process.cmdline contains "Out-File" or tgt.process.cmdline contains "ConvertTo-Json" or tgt.process.cmdline contains "-WindowStyle hidden -Verb runAs" or tgt.process.cmdline contains "\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Temp\\Amazon\\EC2-Windows\\"))))
 ```
 

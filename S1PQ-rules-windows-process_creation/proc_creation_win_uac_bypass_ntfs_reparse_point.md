@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2025 01:50:31):
+// Translated content (automatically translated on 07-09-2025 01:59:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "\"C:\\Windows\\system32\\wusa.exe\"  /quiet C:\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Temp\\update.msu" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))) or (src.process.cmdline="\"C:\\Windows\\system32\\dism.exe\" /online /quiet /norestart /add-package /packagepath:\"C:\\Windows\\system32\\pe386\" /ignorecheck" and (tgt.process.integrityLevel in ("High","System")) and (tgt.process.cmdline contains "C:\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" and tgt.process.cmdline contains "\\dismhost.exe {") and tgt.process.image.path contains "\\DismHost.exe")))
 ```
 
