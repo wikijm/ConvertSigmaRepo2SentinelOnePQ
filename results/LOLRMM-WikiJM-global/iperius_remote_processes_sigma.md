@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2025 01:22:24):
+// Translated content (automatically translated on 11-09-2025 01:24:36):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "iperius.exe" or src.process.image.path contains "iperiusremote.exe"))
 ```
 
