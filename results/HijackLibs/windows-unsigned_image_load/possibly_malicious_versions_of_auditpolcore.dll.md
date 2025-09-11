@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2025 01:19:45):
+// Translated content (automatically translated on 11-09-2025 01:21:37):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\auditpolcore.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
