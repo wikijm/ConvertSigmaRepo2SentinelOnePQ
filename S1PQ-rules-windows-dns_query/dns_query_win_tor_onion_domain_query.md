@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2025 01:50:31):
+// Translated content (automatically translated on 11-09-2025 01:53:45):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains ".onion")
 ```
 
