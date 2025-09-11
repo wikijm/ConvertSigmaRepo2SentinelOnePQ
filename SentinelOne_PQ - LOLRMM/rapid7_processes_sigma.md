@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2025 00:46:48):
+// Translated content (automatically translated on 11-09-2025 00:47:55):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ir_agent.exe" or src.process.image.path contains "rapid7_agent_core.exe" or src.process.image.path contains "rapid7_endpoint_broker.exe"))
 ```
 
