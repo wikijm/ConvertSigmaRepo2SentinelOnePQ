@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-09-2025 01:28:06):
+// Translated content (automatically translated on 11-09-2025 01:38:27):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mozglue.dll" and (not (module.path in ("c:\\program files\\SeaMonkey\*","c:\\program files (x86)\\SeaMonkey\*","c:\\program files\\Mozilla Firefox\*","c:\\program files (x86)\\Mozilla Firefox\*","c:\\program files\\Mozilla Thunderbird\*","c:\\program files (x86)\\Mozilla Thunderbird\*")))))
 ```
 
