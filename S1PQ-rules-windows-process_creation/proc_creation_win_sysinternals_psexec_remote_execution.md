@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2025 01:50:03):
+// Translated content (automatically translated on 13-09-2025 01:45:23):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "accepteula" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " \\\\"))
 ```
 

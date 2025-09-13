@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2025 01:50:03):
+// Translated content (automatically translated on 13-09-2025 01:45:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " tcp 139" or tgt.process.cmdline contains " tcp 445" or tgt.process.cmdline contains " tcp 3389" or tgt.process.cmdline contains " tcp 5985" or tgt.process.cmdline contains " tcp 5986") or (tgt.process.cmdline contains " start " and tgt.process.cmdline contains "--all" and tgt.process.cmdline contains "--config" and tgt.process.cmdline contains ".yml") or (tgt.process.image.path contains "ngrok.exe" and (tgt.process.cmdline contains " tcp " or tgt.process.cmdline contains " http " or tgt.process.cmdline contains " authtoken ")) or (tgt.process.cmdline contains ".exe authtoken " or tgt.process.cmdline contains ".exe start --all")))
 ```
 
