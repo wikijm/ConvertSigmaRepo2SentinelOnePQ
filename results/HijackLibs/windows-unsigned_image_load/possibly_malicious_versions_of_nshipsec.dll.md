@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2025 01:18:14):
+// Translated content (automatically translated on 13-09-2025 01:15:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nshipsec.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
