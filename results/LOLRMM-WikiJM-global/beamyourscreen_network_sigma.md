@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2025 01:21:22):
+// Translated content (automatically translated on 13-09-2025 01:18:00):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "beamyourscreen.com" or url.address contains ".beamyourscreen.com") or (event.dns.request contains "beamyourscreen.com" or event.dns.request contains ".beamyourscreen.com")))
 ```
 
