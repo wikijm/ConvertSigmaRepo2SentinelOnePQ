@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-09-2025 00:50:26):
+// Translated content (automatically translated on 13-09-2025 00:47:42):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/iptables" or tgt.process.image.path contains "/xtables-legacy-multi" or tgt.process.image.path contains "/iptables-legacy-multi" or tgt.process.image.path contains "/ip6tables" or tgt.process.image.path contains "/ip6tables-legacy-multi") and (tgt.process.cmdline contains "-F" or tgt.process.cmdline contains "-Z" or tgt.process.cmdline contains "-X") and (tgt.process.cmdline contains "ufw-logging-deny" or tgt.process.cmdline contains "ufw-logging-allow" or tgt.process.cmdline contains "ufw6-logging-deny" or tgt.process.cmdline contains "ufw6-logging-allow")))
 ```
 
