@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-09-2025 01:15:22):
+// Translated content (automatically translated on 14-09-2025 01:25:39):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cscobj.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
