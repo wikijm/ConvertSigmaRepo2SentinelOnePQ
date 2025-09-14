@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-09-2025 00:41:14):
+// Translated content (automatically translated on 14-09-2025 00:48:33):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\dfsvc.exe" and tgt.process.image.path contains "\\AppData\\Local\\Apps\\2.0\\"))
 ```
 
