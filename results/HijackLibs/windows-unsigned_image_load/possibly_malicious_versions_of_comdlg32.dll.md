@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-09-2025 01:25:39):
+// Translated content (automatically translated on 15-09-2025 01:25:37):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\comdlg32.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
