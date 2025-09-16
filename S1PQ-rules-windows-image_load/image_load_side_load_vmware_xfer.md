@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-09-2025 01:17:17):
+// Translated content (automatically translated on 16-09-2025 01:11:20):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\VMwareXferlogs.exe" and module.path contains "\\glib-2.0.dll") and (not module.path contains "C:\\Program Files\\VMware\\")))
 ```
 
