@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-09-2025 01:25:37):
+// Translated content (automatically translated on 16-09-2025 01:19:24):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\pla.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
