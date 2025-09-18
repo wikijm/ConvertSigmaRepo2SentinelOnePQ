@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 01:27:42):
+// Translated content (automatically translated on 18-09-2025 01:27:36):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dwrite.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 

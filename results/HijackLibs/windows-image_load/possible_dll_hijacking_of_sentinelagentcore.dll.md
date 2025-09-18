@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 01:27:42):
+// Translated content (automatically translated on 18-09-2025 01:27:36):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\sentinelagentcore.dll" and (not (module.path="c:\\program files\\SentinelOne\\Sentinel Agent *\*" or module.path="c:\\program files (x86)\\SentinelOne\\Sentinel Agent *\*"))))
 ```
 
