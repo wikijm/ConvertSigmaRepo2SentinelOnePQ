@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 01:22:18):
+// Translated content (automatically translated on 18-09-2025 01:22:12):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\BvSshServer-Inst.exe")
 ```
 
