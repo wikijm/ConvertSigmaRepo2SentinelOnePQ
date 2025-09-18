@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 01:19:24):
+// Translated content (automatically translated on 18-09-2025 01:19:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ksuser.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
