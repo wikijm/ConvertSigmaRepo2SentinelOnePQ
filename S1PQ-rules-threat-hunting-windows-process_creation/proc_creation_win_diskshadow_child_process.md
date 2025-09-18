@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 00:44:04):
+// Translated content (automatically translated on 18-09-2025 00:43:43):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\diskshadow.exe" and (not tgt.process.image.path contains ":\\Windows\\System32\\WerFault.exe")))
 ```
 
