@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-09-2025 01:51:14):
+// Translated content (automatically translated on 18-09-2025 01:51:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "powershell.exe" or tgt.process.cmdline contains "\\powershell" or tgt.process.cmdline contains "\\pwsh" or tgt.process.cmdline contains "pwsh.exe") and ((tgt.process.cmdline contains "/c " and tgt.process.cmdline contains "\\AppData\\") and (tgt.process.cmdline contains "Local\\" or tgt.process.cmdline contains "Roaming\\"))))
 ```
 
