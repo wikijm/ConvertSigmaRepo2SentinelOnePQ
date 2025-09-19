@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-09-2025 01:22:12):
+// Translated content (automatically translated on 19-09-2025 01:24:26):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "FixMeit Client.exe" or src.process.image.path contains "TiExpertStandalone.exe" or src.process.image.path="*FixMeitClient*.exe" or src.process.image.path contains "TiExpertCore.exe" or src.process.image.path contains "FixMeit Unattended Access Setup.exe" or src.process.image.path contains "FixMeit Expert Setup.exe"))
 ```
 
