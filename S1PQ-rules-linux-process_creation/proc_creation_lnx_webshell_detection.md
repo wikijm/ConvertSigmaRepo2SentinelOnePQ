@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-09-2025 00:50:45):
+// Translated content (automatically translated on 19-09-2025 00:53:03):
 event.type="Process Creation" and (endpoint.os="linux" and (((src.process.image.path contains "/httpd" or src.process.image.path contains "/lighttpd" or src.process.image.path contains "/nginx" or src.process.image.path contains "/apache2" or src.process.image.path contains "/node" or src.process.image.path contains "/caddy") or (src.process.cmdline contains "/bin/java" and src.process.cmdline contains "tomcat") or (src.process.cmdline contains "/bin/java" and src.process.cmdline contains "websphere")) and (tgt.process.image.path contains "/whoami" or tgt.process.image.path contains "/ifconfig" or tgt.process.image.path contains "/ip" or tgt.process.image.path contains "/bin/uname" or tgt.process.image.path contains "/bin/cat" or tgt.process.image.path contains "/bin/crontab" or tgt.process.image.path contains "/hostname" or tgt.process.image.path contains "/iptables" or tgt.process.image.path contains "/netstat" or tgt.process.image.path contains "/pwd" or tgt.process.image.path contains "/route")))
 ```
 
