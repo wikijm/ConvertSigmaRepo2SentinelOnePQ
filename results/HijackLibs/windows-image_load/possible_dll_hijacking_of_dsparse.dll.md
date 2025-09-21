@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-09-2025 01:26:33):
+// Translated content (automatically translated on 21-09-2025 01:44:49):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dsparse.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
