@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-09-2025 00:44:54):
+// Translated content (automatically translated on 21-09-2025 00:53:03):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "rdp.exe" or src.process.image.path="*Pilixo_Installer*.exe"))
 ```
 
