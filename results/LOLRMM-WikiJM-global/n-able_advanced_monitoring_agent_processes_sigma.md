@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-09-2025 01:20:49):
+// Translated content (automatically translated on 21-09-2025 01:38:02):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "BASupSrvc.exe" or src.process.image.path contains "winagent.exe" or src.process.image.path contains "BASupApp.exe" or src.process.image.path contains "BASupTSHelper.exe" or src.process.image.path="*Agent_*_RW.exe" or src.process.image.path contains "BASEClient.exe" or src.process.image.path contains "BASupSrvcCnfg.exe"))
 ```
 
