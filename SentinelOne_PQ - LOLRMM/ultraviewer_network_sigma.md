@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-09-2025 00:53:03):
+// Translated content (automatically translated on 22-09-2025 00:53:07):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains " .ultraviewer.net" or url.address contains "ultraviewer.net") or (event.dns.request contains " .ultraviewer.net" or event.dns.request contains "ultraviewer.net")))
 ```
 
