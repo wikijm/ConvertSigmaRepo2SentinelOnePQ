@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-09-2025 01:44:49):
+// Translated content (automatically translated on 22-09-2025 01:44:52):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcef.dll" and (not (module.path in ("c:\\program files\\NVIDIA Corporation\\NVIDIA GeForce Experience\*","c:\\program files (x86)\\NVIDIA Corporation\\NVIDIA GeForce Experience\*")))))
 ```
 
