@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-09-2025 02:02:30):
+// Translated content (automatically translated on 22-09-2025 02:02:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "for " or tgt.process.cmdline contains "foreach ") and (tgt.process.cmdline contains "nslookup" or tgt.process.cmdline contains "ping")))
 ```
 
