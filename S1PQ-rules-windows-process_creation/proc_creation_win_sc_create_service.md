@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2025 02:02:40):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" and tgt.process.cmdline contains "binPath")))
+// Translated content (automatically translated on 23-09-2025 01:52:14):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" and tgt.process.cmdline contains "binPath")) and (not ((src.process.image.path contains "C:\\Program Files (x86)\\Dropbox\\Client\\" or src.process.image.path contains "C:\\Program Files\\Dropbox\\Client\\") and src.process.image.path contains "\\Dropbox.exe"))))
 ```
 
 
@@ -17,6 +17,7 @@ references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1543.003/T1543.003.md
 author: Timur Zinniatullin, Daniil Yugoslavskiy, oscd.community
 date: 2023-02-20
+modified: 2025-09-01
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -30,7 +31,12 @@ detection:
         CommandLine|contains|all:
             - 'create'
             - 'binPath'
-    condition: selection
+    filter_optional_dropbox:
+        ParentImage|startswith:
+            - 'C:\Program Files (x86)\Dropbox\Client\'
+            - 'C:\Program Files\Dropbox\Client\'
+        ParentImage|endswith: '\Dropbox.exe'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Legitimate administrator or user creates a service for legitimate reasons.
     - Software installation

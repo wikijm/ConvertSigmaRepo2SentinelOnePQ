@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2025 02:02:40):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "accepteula" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " \\\\"))
+// Translated content (automatically translated on 23-09-2025 01:52:14):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "accepteula" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " \\\\") and (not (tgt.process.cmdline contains "\\\\localhost" or tgt.process.cmdline contains "\\\\127."))))
 ```
 
 
@@ -16,6 +16,7 @@ references:
     - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html
 author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-02-28
+modified: 2025-09-01
 tags:
     - attack.resource-development
     - attack.t1587.001
@@ -30,7 +31,11 @@ detection:
             - ' -u '
             - ' -p '
             - ' \\\\'
-    condition: selection
+    filter_main_localhost:
+        CommandLine|contains:
+            - '\\\\localhost'
+            - '\\\\127.'
+    condition: selection and not 1 of filter_main_*
 falsepositives:
     - Unknown
 level: high

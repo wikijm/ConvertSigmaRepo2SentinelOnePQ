@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2025 02:02:40):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control\\Lsa\\" and tgt.process.cmdline contains "DisableRestrictedAdmin"))
+// Translated content (automatically translated on 23-09-2025 01:52:14):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control\\Lsa" and tgt.process.cmdline contains "DisableRestrictedAdmin"))
 ```
 
 
@@ -22,7 +22,7 @@ references:
     - https://thedfirreport.com/2022/05/09/seo-poisoning-a-gootloader-story/
 author: frack113
 date: 2023-01-13
-modified: 2023-12-15
+modified: 2025-08-28
 tags:
     - attack.defense-evasion
     - attack.t1112
@@ -32,7 +32,7 @@ logsource:
 detection:
     selection:
         CommandLine|contains|all:
-            - '\System\CurrentControlSet\Control\Lsa\'
+            - '\System\CurrentControlSet\Control\Lsa'
             - 'DisableRestrictedAdmin'
     condition: selection
 falsepositives:

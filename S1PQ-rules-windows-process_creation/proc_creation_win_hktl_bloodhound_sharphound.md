@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-09-2025 02:02:40):
+// Translated content (automatically translated on 23-09-2025 01:52:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.displayName contains "SharpHound" or tgt.process.displayName contains "SharpHound" or (tgt.process.publisher contains "SpecterOps" or tgt.process.publisher contains "evil corp") or (tgt.process.image.path contains "\\Bloodhound.exe" or tgt.process.image.path contains "\\SharpHound.exe")) or (tgt.process.cmdline contains " -CollectionMethod All " or tgt.process.cmdline contains " --CollectionMethods Session " or tgt.process.cmdline contains " --Loop --Loopduration " or tgt.process.cmdline contains " --PortScanTimeout " or tgt.process.cmdline contains ".exe -c All -d " or tgt.process.cmdline contains "Invoke-Bloodhound" or tgt.process.cmdline contains "Get-BloodHoundData") or (tgt.process.cmdline contains " -JsonFolder " and tgt.process.cmdline contains " -ZipFileName ") or (tgt.process.cmdline contains " DCOnly " and tgt.process.cmdline contains " --NoSaveCache ")))
 ```
 
