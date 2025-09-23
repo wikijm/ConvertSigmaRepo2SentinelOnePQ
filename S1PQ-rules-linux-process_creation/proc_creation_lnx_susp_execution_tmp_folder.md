@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-09-2025 00:56:33):
-event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/tmp/")
+// Translated content (automatically translated on 23-09-2025 00:51:29):
+event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/tmp/" and (not tgt.process.image.path contains "/usr/bin/nextcloud")))
 ```
 
 
@@ -17,6 +17,7 @@ references:
     - https://www.virustotal.com/gui/file/3e44c807a25a56f4068b5b8186eee5002eed6f26d665a8b791c472ad154585d1/detection
 author: Joseliyo Sanchez, @Joseliyo_Jstnk
 date: 2023-06-02
+modified: 2025-08-05
 tags:
     - attack.defense-evasion
     - attack.t1036
@@ -26,8 +27,10 @@ logsource:
 detection:
     selection:
         Image|startswith: '/tmp/'
-    condition: selection
+    filter_optional_nextcloud:
+        Image|endswith: '/usr/bin/nextcloud'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Unknown
-level: high
+level: medium
 ```
