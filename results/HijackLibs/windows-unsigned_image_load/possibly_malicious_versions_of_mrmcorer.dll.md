@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-09-2025 01:19:59):
+// Translated content (automatically translated on 24-09-2025 01:20:21):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mrmcorer.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
