@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-09-2025 01:36:32):
+// Translated content (automatically translated on 24-09-2025 01:37:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\madhcnet32.dll" and (not (module.path in ("c:\\program files\\Multimedia\\K-Lite Codec Pack\\Filters\\madVR\*","c:\\program files (x86)\\Multimedia\\K-Lite Codec Pack\\Filters\\madVR\*","c:\\program files\\K-Lite Codec Pack\\Filters\\madVR\*","c:\\program files (x86)\\K-Lite Codec Pack\\Filters\\madVR\*")))))
 ```
 
