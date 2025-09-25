@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-09-2025 01:53:42):
+// Translated content (automatically translated on 25-09-2025 01:54:36):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Set-MpPreference" and (tgt.process.cmdline contains "-LowThreatDefaultAction" or tgt.process.cmdline contains "-ModerateThreatDefaultAction" or tgt.process.cmdline contains "-HighThreatDefaultAction" or tgt.process.cmdline contains "-SevereThreatDefaultAction" or tgt.process.cmdline contains "-ltdefac " or tgt.process.cmdline contains "-mtdefac " or tgt.process.cmdline contains "-htdefac " or tgt.process.cmdline contains "-stdefac ") and (tgt.process.cmdline contains "Allow" or tgt.process.cmdline contains "6" or tgt.process.cmdline contains "NoAction" or tgt.process.cmdline contains "9")))
 ```
 
