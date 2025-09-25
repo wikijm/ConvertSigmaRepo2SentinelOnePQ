@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-09-2025 01:23:38):
+// Translated content (automatically translated on 25-09-2025 01:24:28):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "UltraViewer_Service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer.exe" or src.process.image.path contains "C:\\Program Files (x86)\\UltraViewer\\UltraViewer_Desktop.exe" or src.process.image.path contains "\\UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer_desktop.exe" or src.process.image.path contains "ultraviewer_service.exe"))
 ```
 
