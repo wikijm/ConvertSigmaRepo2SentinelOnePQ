@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-09-2025 01:21:13):
+// Translated content (automatically translated on 26-09-2025 01:20:42):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dmenrollengine.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
