@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-09-2025 01:54:36):
+// Translated content (automatically translated on 26-09-2025 01:53:48):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\wscript.exe" or tgt.process.image.path contains "\\cscript.exe") and (tgt.process.cmdline contains ":\\Temp\\" or tgt.process.cmdline contains ":\\Tmp\\" or tgt.process.cmdline contains ":\\Users\\Public\\" or tgt.process.cmdline contains ":\\Windows\\Temp\\" or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\") and (tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".jse" or tgt.process.cmdline contains ".vba" or tgt.process.cmdline contains ".vbe" or tgt.process.cmdline contains ".vbs" or tgt.process.cmdline contains ".wsf")))
 ```
 
