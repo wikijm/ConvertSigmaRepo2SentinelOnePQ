@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-09-2025 00:46:44):
+// Translated content (automatically translated on 27-09-2025 00:45:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*ConnectAppSetup*.exe" or src.process.image.path="*ConnectShellSetup*.exe" or src.process.image.path contains "Connect.exe" or src.process.image.path contains "ConnectDetector.exe"))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-09-2025 00:46:44):
+// Translated content (automatically translated on 27-09-2025 00:45:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "laplink.exe" or src.process.image.path="*laplink-everywhere-setup*.exe" or src.process.image.path contains "laplinkeverywhere.exe" or src.process.image.path contains "llrcservice.exe" or src.process.image.path contains "serverproxyservice.exe" or src.process.image.path contains "OOSysAgent.exe"))
 ```
 
