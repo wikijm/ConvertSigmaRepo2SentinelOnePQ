@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-09-2025 01:53:48):
+// Translated content (automatically translated on 27-09-2025 01:49:20):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\brave.exe" or src.process.image.path contains "\\chrome.exe" or src.process.image.path contains "\\firefox.exe" or src.process.image.path contains "\\msedge.exe") and (tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\certutil.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe") and tgt.process.cmdline contains "#"))
 ```
 
