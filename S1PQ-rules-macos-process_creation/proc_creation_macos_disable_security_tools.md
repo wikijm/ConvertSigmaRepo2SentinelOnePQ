@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2025 01:10:23):
+// Translated content (automatically translated on 28-09-2025 01:20:28):
 event.type="Process Creation" and (endpoint.os="osx" and (((tgt.process.image.path="/bin/launchctl" and tgt.process.cmdline contains "unload") and (tgt.process.cmdline contains "com.objective-see.lulu.plist" or tgt.process.cmdline contains "com.objective-see.blockblock.plist" or tgt.process.cmdline contains "com.google.santad.plist" or tgt.process.cmdline contains "com.carbonblack.defense.daemon.plist" or tgt.process.cmdline contains "com.carbonblack.daemon.plist" or tgt.process.cmdline contains "at.obdev.littlesnitchd.plist" or tgt.process.cmdline contains "com.tenablesecurity.nessusagent.plist" or tgt.process.cmdline contains "com.opendns.osx.RoamingClientConfigUpdater.plist" or tgt.process.cmdline contains "com.crowdstrike.falcond.plist" or tgt.process.cmdline contains "com.crowdstrike.userdaemon.plist" or tgt.process.cmdline contains "osquery" or tgt.process.cmdline contains "filebeat" or tgt.process.cmdline contains "auditbeat" or tgt.process.cmdline contains "packetbeat" or tgt.process.cmdline contains "td-agent")) or (tgt.process.image.path="/usr/sbin/spctl" and tgt.process.cmdline contains "disable")))
 ```
 
