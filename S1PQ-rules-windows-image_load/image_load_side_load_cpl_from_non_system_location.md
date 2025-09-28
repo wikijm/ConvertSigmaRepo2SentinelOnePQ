@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-09-2025 01:09:51):
+// Translated content (automatically translated on 28-09-2025 01:19:44):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\hdwwiz.cpl" or module.path contains "\\appwiz.cpl") and (not (module.path contains ":\\Windows\\System32\\" or module.path contains ":\\Windows\\SysWOW64\\" or module.path contains ":\\Windows\\WinSxS\\"))))
 ```
 
