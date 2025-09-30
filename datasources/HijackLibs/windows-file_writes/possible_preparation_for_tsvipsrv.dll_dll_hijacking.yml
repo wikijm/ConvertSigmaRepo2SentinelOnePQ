@@ -1,0 +1,22 @@
+title: Possible preparation for tsvipsrv.dll DLL Hijacking
+id: 9320322b-3647-48a3-1087-5b9ff8824480
+status: experimental
+description: Detects possible DLL hijacking of tsvipsrv.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/tsvipsrv.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-09-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tsvipsrv.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -472,6 +472,34 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for cnmpaui.dll DLL Hijacking
+id: 6937482b-1876-48a3-1767-5b9ff8172694
+status: experimental
+description: Detects possible DLL hijacking of cnmpaui.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/canon/cnmpaui.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-09-08
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\cnmpaui.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Canon\Canon IJ Printer Assistant Tool\\*'
+            - 'c:\program files (x86)\Canon\Canon IJ Printer Assistant Tool\\*'
+            - '%USERPROFILE%\AppData\Roaming\SamsungDriver\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for relay.dll DLL Hijacking
 id: 4509562b-2773-48a3-5383-5b9ff8502377
 status: experimental
@@ -13352,6 +13380,52 @@ detection:
             - 'c:\windows\softwaredistribution\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for tsmsisrv.dll DLL Hijacking
+id: 1524792b-3647-48a3-1087-5b9ff8891530
+status: experimental
+description: Detects possible DLL hijacking of tsmsisrv.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/tsmsisrv.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-09-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tsmsisrv.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for tsvipsrv.dll DLL Hijacking
+id: 9320322b-3647-48a3-1087-5b9ff8824480
+status: experimental
+description: Detects possible DLL hijacking of tsvipsrv.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/tsvipsrv.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-09-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tsvipsrv.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 

@@ -1,0 +1,22 @@
+title: Possible preparation for tsmsisrv.dll DLL Hijacking
+id: 1524792b-3647-48a3-1087-5b9ff8891530
+status: experimental
+description: Detects possible DLL hijacking of tsmsisrv.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/tsmsisrv.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2025-09-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\tsmsisrv.dll'
+
+    condition: selection 
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
