@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2025 01:24:00):
+// Translated content (automatically translated on 01-10-2025 01:41:07):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "pcvisit.exe" or src.process.image.path contains "pcvisit_client.exe" or src.process.image.path contains "pcvisit-easysupport.exe" or src.process.image.path contains "pcvisit_service_client.exe"))
 ```
 
