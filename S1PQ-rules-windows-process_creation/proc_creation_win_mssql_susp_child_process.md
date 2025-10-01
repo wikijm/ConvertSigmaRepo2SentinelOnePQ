@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2025 01:51:54):
+// Translated content (automatically translated on 01-10-2025 02:04:24):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\sqlservr.exe" and (tgt.process.image.path contains "\\bash.exe" or tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\netstat.exe" or tgt.process.image.path contains "\\nltest.exe" or tgt.process.image.path contains "\\ping.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\sh.exe" or tgt.process.image.path contains "\\systeminfo.exe" or tgt.process.image.path contains "\\tasklist.exe" or tgt.process.image.path contains "\\wsl.exe")) and (not (src.process.image.path contains "C:\\Program Files\\Microsoft SQL Server\\" and src.process.image.path contains "DATEV_DBENGINE\\MSSQL\\Binn\\sqlservr.exe" and tgt.process.image.path="C:\\Windows\\System32\\cmd.exe" and tgt.process.cmdline contains "\"C:\\Windows\\system32\\cmd.exe\" "))))
 ```
 
