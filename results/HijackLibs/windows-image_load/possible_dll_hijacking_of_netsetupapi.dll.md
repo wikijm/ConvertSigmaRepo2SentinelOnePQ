@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-09-2025 01:35:42):
+// Translated content (automatically translated on 01-10-2025 01:47:01):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\netsetupapi.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
