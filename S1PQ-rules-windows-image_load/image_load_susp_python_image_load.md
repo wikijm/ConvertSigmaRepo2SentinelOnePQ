@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-10-2025 01:21:08):
+// Translated content (automatically translated on 02-10-2025 01:11:29):
 event.type="Module Load" and (endpoint.os="windows" and (Description="Python Core" and (not (src.process.image.path contains "Python" or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\" or src.process.image.path contains "C:\\ProgramData\\Anaconda3\\"))) and (not not (src.process.image.path matches "\.*"))))
 ```
 
@@ -9,13 +9,16 @@ event.type="Module Load" and (endpoint.os="windows" and (Description="Python Cor
 title: Python Image Load By Non-Python Process
 id: cbb56d62-4060-40f7-9466-d8aaf3123f83
 status: test
-description: Detects the image load of "Python Core" by a non-Python process. This might be indicative of a Python script bundled with Py2Exe.
+description: |
+    Detects the image load of "Python Core" by a non-Python process. This might be indicative of a execution of executable that has been bundled from Python code.
+    Various tools like Py2Exe, PyInstaller, and cx_Freeze are used to bundle Python code into standalone executables.
+    Threat actors often use these tools to bundle malicious Python scripts into executables, sometimes to obfuscate the code or to bypass security measures.
 references:
     - https://www.py2exe.org/
     - https://unit42.paloaltonetworks.com/unit-42-technical-analysis-seaduke/
 author: Patrick St. John, OTR (Open Threat Research)
 date: 2020-05-03
-modified: 2023-09-18
+modified: 2025-08-18
 tags:
     - attack.defense-evasion
     - attack.t1027.002
@@ -31,11 +34,12 @@ detection:
               - 'C:\Program Files\'
               - 'C:\Program Files (x86)\'
               - 'C:\ProgramData\Anaconda3\' # Comment out if you don't use Anaconda in your environment
-    filter_optional_aurora:
+    filter_optional_null_image:
         Image: null
     condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Legitimate Py2Exe Binaries
     - Known false positive caused with Python Anaconda
-level: medium
+    - Various legitimate software is bundled from Python code into executables
+level: low
 ```
