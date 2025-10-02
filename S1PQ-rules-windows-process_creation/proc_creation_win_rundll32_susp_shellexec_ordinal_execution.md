@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-10-2025 02:04:24):
+// Translated content (automatically translated on 02-10-2025 01:52:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.cmdline contains "SHELL32.DLL" and (src.process.cmdline contains "#568" or src.process.cmdline contains "#570" or src.process.cmdline contains "#572" or src.process.cmdline contains "#576")) and (((src.process.cmdline contains "comspec" or src.process.cmdline contains "iex" or src.process.cmdline contains "Invoke-" or src.process.cmdline contains "msiexec" or src.process.cmdline contains "odbcconf" or src.process.cmdline contains "regsvr32") or (src.process.cmdline contains "\\Desktop\\" or src.process.cmdline contains "\\ProgramData\\" or src.process.cmdline contains "\\Temp\\" or src.process.cmdline contains "\\Users\\Public\\")) or (tgt.process.image.path contains "\\bash.exe" or tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\curl.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\msxsl.exe" or tgt.process.image.path contains "\\odbcconf.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe"))))
 ```
 
@@ -11,7 +11,7 @@ id: 8823e85d-31d8-473e-b7f4-92da070f0fc6
 related:
     - id: d87bd452-6da1-456e-8155-7dc988157b7d
       type: derived
-status: experimental
+status: test
 description: |
     Detects suspicious call to the "ShellExec_RunDLL" exported function of SHELL32.DLL through the ordinal number to launch other commands.
     Adversary might only use the ordinal number in order to bypass existing detection that alert on usage of ShellExec_RunDLL on CommandLine.

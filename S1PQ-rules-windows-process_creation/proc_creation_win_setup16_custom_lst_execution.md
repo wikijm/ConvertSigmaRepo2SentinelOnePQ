@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-10-2025 02:04:24):
+// Translated content (automatically translated on 02-10-2025 01:52:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="C:\\Windows\\SysWOW64\\setup16.exe" and src.process.cmdline contains " -m ") and (not tgt.process.image.path contains "C:\\~MSSETUP.T\\")))
 ```
 
@@ -8,7 +8,7 @@ event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image
 ```yaml
 title: Setup16.EXE Execution With Custom .Lst File
 id: 99c8be4f-3087-4f9f-9c24-8c7e257b442e
-status: experimental
+status: test
 description: |
     Detects the execution of "Setup16.EXE" and old installation utility with a custom ".lst" file.
     These ".lst" file can contain references to external program that "Setup16.EXE" will execute.

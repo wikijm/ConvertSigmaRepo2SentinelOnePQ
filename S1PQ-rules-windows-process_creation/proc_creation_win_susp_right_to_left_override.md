@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 01-10-2025 02:04:24):
-event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "‮")
+// Translated content (automatically translated on 02-10-2025 01:52:18):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\u202e" or tgt.process.cmdline contains "[U+202E]"))
 ```
 
 
@@ -21,8 +21,10 @@ references:
     - https://redcanary.com/blog/right-to-left-override/
     - https://www.malwarebytes.com/blog/news/2014/01/the-rtlo-method
     - https://unicode-explorer.com/c/202E
-author: Micah Babinski, @micahbabinski
+    - https://tria.ge/241015-l98snsyeje/behavioral2
+author: Micah Babinski, @micahbabinski, Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2023-02-15
+modified: 2025-02-06
 tags:
     - attack.defense-evasion
     - attack.t1036.002
@@ -31,7 +33,9 @@ logsource:
     product: windows
 detection:
     selection:
-        CommandLine|contains: "\u202e"
+        CommandLine|contains:
+            - '\u202e'  # Unicode RTLO character
+            - '[U+202E]'
     condition: selection
 falsepositives:
     - Commandlines that contains scriptures such as arabic or hebrew might make use of this character
