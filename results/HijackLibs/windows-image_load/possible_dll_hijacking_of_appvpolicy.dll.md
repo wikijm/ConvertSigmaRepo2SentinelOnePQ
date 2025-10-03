@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-10-2025 01:28:07):
+// Translated content (automatically translated on 03-10-2025 01:27:31):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvpolicy.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\program files\\Common Files\\Microsoft Shared\\ClickToRun\*","c:\\program files (x86)\\Common Files\\Microsoft Shared\\ClickToRun\*")))))
 ```
 
