@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-10-2025 01:22:07):
+// Translated content (automatically translated on 04-10-2025 01:19:42):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc\\GuestInvite" or registry.keyPath contains "HKEY_CURRENT_USER\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history" or registry.keyPath contains "HKEY_USERS\\<SID>\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history"))
 ```
 

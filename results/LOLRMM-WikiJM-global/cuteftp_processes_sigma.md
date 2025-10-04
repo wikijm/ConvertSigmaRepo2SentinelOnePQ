@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-10-2025 01:22:07):
+// Translated content (automatically translated on 04-10-2025 01:19:42):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\cuteftppro.exe")
 ```
 
