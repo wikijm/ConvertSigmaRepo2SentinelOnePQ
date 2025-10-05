@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-10-2025 01:16:53):
+// Translated content (automatically translated on 05-10-2025 01:27:44):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\netiohlp.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
