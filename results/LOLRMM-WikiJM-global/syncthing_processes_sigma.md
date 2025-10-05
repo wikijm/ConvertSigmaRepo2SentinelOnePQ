@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-10-2025 01:19:42):
+// Translated content (automatically translated on 05-10-2025 01:38:21):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Syncthing.exe")
 ```
 
