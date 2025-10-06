@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-10-2025 01:19:13):
+// Translated content (automatically translated on 06-10-2025 01:13:19):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\edputil.dll" and (not (module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C\\Windows\\WinSxS\\"))))
 ```
 
