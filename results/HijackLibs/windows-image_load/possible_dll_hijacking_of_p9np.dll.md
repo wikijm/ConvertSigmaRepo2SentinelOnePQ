@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-10-2025 01:38:41):
+// Translated content (automatically translated on 07-10-2025 01:36:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\p9np.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
