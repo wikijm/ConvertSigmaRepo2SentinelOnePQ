@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-10-2025 01:36:33):
+// Translated content (automatically translated on 08-10-2025 01:37:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\lmiguardiandll.dll" and (not (module.path in ("c:\\program files\\LogMeIn\*","c:\\program files (x86)\\LogMeIn\*","c:\\program files\\LogMeIn\\x86\*","c:\\program files (x86)\\LogMeIn\\x86\*","c:\\program files\\LogMeIn\\x64\*","c:\\program files (x86)\\LogMeIn\\x64\*")))))
 ```
 
