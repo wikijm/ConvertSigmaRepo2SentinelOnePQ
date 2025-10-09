@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2025 01:37:07):
+// Translated content (automatically translated on 09-10-2025 01:37:27):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fwbase.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
