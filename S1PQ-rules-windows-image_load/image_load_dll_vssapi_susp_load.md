@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2025 01:12:11):
+// Translated content (automatically translated on 09-10-2025 01:12:59):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vssapi.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or src.process.image.path contains "C:\\ProgramData\\Package Cache\\"))))
 ```
 
