@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-10-2025 01:12:39):
+// Translated content (automatically translated on 09-10-2025 01:13:25):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/bash" and (tgt.process.cmdline contains "tail" and tgt.process.cmdline contains "-c") and (tgt.process.cmdline contains "base64" and tgt.process.cmdline contains "-d" and tgt.process.cmdline contains ">") and (tgt.process.cmdline contains ".avif" or tgt.process.cmdline contains ".gif" or tgt.process.cmdline contains ".jfif" or tgt.process.cmdline contains ".jpeg" or tgt.process.cmdline contains ".jpg" or tgt.process.cmdline contains ".pjp" or tgt.process.cmdline contains ".pjpeg" or tgt.process.cmdline contains ".png" or tgt.process.cmdline contains ".svg" or tgt.process.cmdline contains ".webp")))
 ```
 
