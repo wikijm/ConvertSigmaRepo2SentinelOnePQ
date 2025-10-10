@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:12:59):
-event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\log.dll" and (not ((module.path contains "C:\\Program Files\\Bitdefender Antivirus Free\\" or module.path contains "C:\\Program Files (x86)\\Bitdefender Antivirus Free\\") or (src.process.image.path="C:\\Program Files\\Dell\\SARemediation\\audit\\TelemetryUtility.exe" and (module.path in ("C:\\Program Files\\Dell\\SARemediation\\plugin\\log.dll","C:\\Program Files\\Dell\\SARemediation\\audit\\log.dll"))) or module.path contains "C:\\Program Files\\Canon\\MyPrinter\\"))) or (module.path contains "\\qrt.dll" and (not (module.path contains "C:\\Program Files\\F-Secure\\Anti-Virus\\" or module.path contains "C:\\Program Files (x86)\\F-Secure\\Anti-Virus\\"))) or ((module.path contains "\\ashldres.dll" or module.path contains "\\lockdown.dll" or module.path contains "\\vsodscpl.dll") and (not (module.path contains "C:\\Program Files\\McAfee\\" or module.path contains "C:\\Program Files (x86)\\McAfee\\"))) or (module.path contains "\\vftrace.dll" and (not (module.path contains "C:\\Program Files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "C:\\Program Files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\"))) or (module.path contains "\\wsc.dll" and (not (module.path contains "C:\\program Files\\AVAST Software\\Avast\\" or module.path contains "C:\\program Files (x86)\\AVAST Software\\Avast\\"))) or (module.path contains "\\tmdbglog.dll" and (not (module.path contains "C:\\program Files\\Trend Micro\\Titanium\\" or module.path contains "C:\\program Files (x86)\\Trend Micro\\Titanium\\"))) or (module.path contains "\\DLPPREM32.dll" and (not (module.path contains "C:\\program Files\\ESET" or module.path contains "C:\\program Files (x86)\\ESET")))))
+// Translated content (automatically translated on 10-10-2025 01:12:49):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\log.dll" and (not ((module.path contains "C:\\Program Files\\Bitdefender Antivirus Free\\" or module.path contains "C:\\Program Files (x86)\\Bitdefender Antivirus Free\\") or (src.process.image.path="C:\\Program Files\\Dell\\SARemediation\\audit\\TelemetryUtility.exe" and (module.path in ("C:\\Program Files\\Dell\\SARemediation\\plugin\\log.dll","C:\\Program Files\\Dell\\SARemediation\\audit\\log.dll"))) or module.path contains "C:\\Program Files\\Canon\\MyPrinter\\" or (module.path in ("C:\\Program Files\\AVAST Software\\Avast\\log.dll","C:\\Program Files (x86)\\AVAST Software\\Avast\\log.dll")) or (module.path in ("C:\\Program Files\\AVG\\Antivirus\\log.dll","C:\\Program Files (x86)\\AVG\\Antivirus\\log.dll"))))) or (module.path contains "\\qrt.dll" and (not (module.path contains "C:\\Program Files\\F-Secure\\Anti-Virus\\" or module.path contains "C:\\Program Files (x86)\\F-Secure\\Anti-Virus\\"))) or ((module.path contains "\\ashldres.dll" or module.path contains "\\lockdown.dll" or module.path contains "\\vsodscpl.dll") and (not (module.path contains "C:\\Program Files\\McAfee\\" or module.path contains "C:\\Program Files (x86)\\McAfee\\"))) or (module.path contains "\\vftrace.dll" and (not (module.path contains "C:\\Program Files\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\" or module.path contains "C:\\Program Files (x86)\\CyberArk\\Endpoint Privilege Manager\\Agent\\x32\\"))) or (module.path contains "\\wsc.dll" and (not ((module.path contains "C:\\program Files\\AVAST Software\\Avast\\" or module.path contains "C:\\program Files (x86)\\AVAST Software\\Avast\\") or (module.path contains "C:\\Program Files\\AVG\\Antivirus\\" or module.path contains "C:\\Program Files (x86)\\AVG\\Antivirus\\")))) or (module.path contains "\\tmdbglog.dll" and (not (module.path contains "C:\\program Files\\Trend Micro\\Titanium\\" or module.path contains "C:\\program Files (x86)\\Trend Micro\\Titanium\\"))) or (module.path contains "\\DLPPREM32.dll" and (not (module.path contains "C:\\program Files\\ESET" or module.path contains "C:\\program Files (x86)\\ESET")))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://hijacklibs.net/ # For list of DLLs that could be sideloaded (search for dlls mentioned here in there)
 author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
 date: 2022-08-17
-modified: 2023-03-13
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
     - attack.persistence
@@ -38,6 +38,14 @@ detection:
             - 'C:\Program Files\Dell\SARemediation\audit\log.dll'
     filter_log_dll_canon:
         ImageLoaded|startswith: 'C:\Program Files\Canon\MyPrinter\'
+    filter_log_dll_avast:
+        ImageLoaded:
+            - 'C:\Program Files\AVAST Software\Avast\log.dll'
+            - 'C:\Program Files (x86)\AVAST Software\Avast\log.dll'
+    filter_log_dll_avg:
+        ImageLoaded:
+            - 'C:\Program Files\AVG\Antivirus\log.dll'
+            - 'C:\Program Files (x86)\AVG\Antivirus\log.dll'
     # F-Secure
     selection_fsecure:
         ImageLoaded|endswith: '\qrt.dll'
@@ -65,10 +73,14 @@ detection:
     # Avast
     selection_avast:
         ImageLoaded|endswith: '\wsc.dll'
-    filter_avast:
+    filter_wsc_dll_avast:
         ImageLoaded|startswith:
             - 'C:\program Files\AVAST Software\Avast\'
             - 'C:\program Files (x86)\AVAST Software\Avast\'
+    filter_wsc_dll_avg:
+        ImageLoaded|startswith:
+            - 'C:\Program Files\AVG\Antivirus\'
+            - 'C:\Program Files (x86)\AVG\Antivirus\'
     # ESET
     selection_eset_deslock:
         ImageLoaded|endswith: '\DLPPREM32.dll'
@@ -87,7 +99,7 @@ detection:
                or (selection_fsecure and not filter_fsecure)
                or (selection_mcafee and not filter_mcafee)
                or (selection_cyberark and not filter_cyberark)
-               or (selection_avast and not filter_avast)
+               or (selection_avast and not 1 of filter_wsc_dll_*)
                or (selection_titanium and not filter_titanium)
                or (selection_eset_deslock and not filter_eset_deslock)
 falsepositives:

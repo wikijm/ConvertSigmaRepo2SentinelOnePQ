@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:12:59):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\goopdate.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\")) and (not ((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" and src.process.image.path contains ".tmp\\Dropbox") and (module.path contains "\\AppData\\Local\\Temp\\GUM" and module.path contains ".tmp\\goopdate.dll")))))
+// Translated content (automatically translated on 10-10-2025 01:12:49):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\goopdate.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\")) and (not (((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" and src.process.image.path contains ".tmp\\Dropbox") and (module.path contains "\\AppData\\Local\\Temp\\GUM" and module.path contains ".tmp\\goopdate.dll")) or ((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" or src.process.image.path contains ":\\Windows\\SystemTemp\\GUM") and src.process.image.path contains ".tmp\\GoogleUpdate.exe" and (module.path contains "\\AppData\\Local\\Temp\\GUM" or module.path contains ":\\Windows\\SystemTemp\\GUM"))))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/goofy-guineapig/NCSC-MAR-Goofy-Guineapig.pdf
 author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-15
-modified: 2023-05-20
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
     - attack.privilege-escalation
@@ -36,7 +36,15 @@ detection:
             - '.tmp\Dropbox'
         ImageLoaded|contains|all:
             - '\AppData\Local\Temp\GUM'
-            - '.tmp\\goopdate.dll'
+            - '.tmp\goopdate.dll'
+    filter_optional_googleupdate_temp:
+        Image|contains:
+            - '\AppData\Local\Temp\GUM'
+            - ':\Windows\SystemTemp\GUM'
+        Image|endswith: '.tmp\GoogleUpdate.exe'
+        ImageLoaded|contains:
+            - '\AppData\Local\Temp\GUM'
+            - ':\Windows\SystemTemp\GUM'
     condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - False positives are expected from Google Chrome installations running from user locations (AppData) and other custom locations. Apply additional filters accordingly.

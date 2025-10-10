@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:12:59):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amsi.dll" and (src.process.image.path contains "\\ExtExport.exe" or src.process.image.path contains "\\odbcconf.exe" or src.process.image.path contains "\\regsvr32.exe" or src.process.image.path contains "\\rundll32.exe")))
+// Translated content (automatically translated on 10-10-2025 01:12:49):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amsi.dll" and (src.process.image.path contains "\\ExtExport.exe" or src.process.image.path contains "\\odbcconf.exe" or src.process.image.path contains "\\rundll32.exe")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://www.paloaltonetworks.com/blog/security-operations/stopping-powershell-without-powershell/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-06-01
-modified: 2023-09-20
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
 logsource:
@@ -28,7 +28,7 @@ detection:
             # TODO: Add more interesting processes
             - '\ExtExport.exe'
             - '\odbcconf.exe'
-            - '\regsvr32.exe'
+            # - '\regsvr32.exe' # legitimately calls amsi.dll
             - '\rundll32.exe'
     condition: selection
 falsepositives:

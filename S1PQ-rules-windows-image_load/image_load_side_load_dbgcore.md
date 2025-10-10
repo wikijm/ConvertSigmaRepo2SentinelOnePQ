@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:12:59):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbgcore.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\" or module.path contains "C:\\Windows\\SoftwareDistribution\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SystemTemp\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")) and (not module.path contains "\\Steam\\bin\\cef\\cef.win7x64\\dbgcore.dll")))
+// Translated content (automatically translated on 10-10-2025 01:12:49):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbgcore.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\" or module.path contains "C:\\Windows\\SoftwareDistribution\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SystemTemp\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")) and (not (module.path contains "\\Steam\\bin\\cef\\cef.win7x64\\dbgcore.dll" or (module.path contains "opera\\Opera Installer Temp\\opera_package" and module.path contains "\\assistant\\dbgcore.dll")))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://hijacklibs.net/ # For list of DLLs that could be sideloaded (search for dlls mentioned here in there)
 author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
 date: 2022-10-25
-modified: 2023-05-05
+modified: 2025-10-06
 tags:
     - attack.defense-evasion
     - attack.persistence
@@ -37,6 +37,10 @@ detection:
             - 'C:\Windows\WinSxS\'
     filter_optional_steam:
         ImageLoaded|endswith: '\Steam\bin\cef\cef.win7x64\dbgcore.dll'
+    filter_optional_opera:
+        # C:\\Users\\User\\AppData\\Local\\Temp\\.opera\\Opera Installer Temp\\opera_package_202311051506321\\assistant\\dbgcore.dll
+        ImageLoaded|contains: 'opera\Opera Installer Temp\opera_package'
+        ImageLoaded|endswith: '\assistant\dbgcore.dll'
     condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Legitimate applications loading their own versions of the DLL mentioned in this rule

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:12:59):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbghelp.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\" or module.path contains "C:\\Windows\\SoftwareDistribution\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SystemTemp\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")) and (not ((module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\amd64\\dbghelp.dll" or module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\i386\\dbghelp.dll") or (module.path contains "\\Epic Games\\Launcher\\Engine\\Binaries\\ThirdParty\\DbgHelp\\dbghelp.dll" or module.path contains "\\Epic Games\\MagicLegends\\x86\\dbghelp.dll")))))
+// Translated content (automatically translated on 10-10-2025 01:12:49):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbghelp.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\" or module.path contains "C:\\Windows\\SoftwareDistribution\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SystemTemp\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")) and (not ((module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\amd64\\dbghelp.dll" or module.path contains "\\Anaconda3\\Lib\\site-packages\\vtrace\\platforms\\windll\\i386\\dbghelp.dll") or (module.path contains "\\Epic Games\\Launcher\\Engine\\Binaries\\ThirdParty\\DbgHelp\\dbghelp.dll" or module.path contains "\\Epic Games\\MagicLegends\\x86\\dbghelp.dll") or (module.path contains "opera\\Opera Installer Temp\\opera_package" and module.path contains "\\assistant\\dbghelp.dll")))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://hijacklibs.net/ # For list of DLLs that could be sideloaded (search for dlls mentioned here in there)
 author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
 date: 2022-10-25
-modified: 2023-05-05
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
     - attack.persistence
@@ -43,6 +43,9 @@ detection:
         ImageLoaded|endswith:
             - '\Epic Games\Launcher\Engine\Binaries\ThirdParty\DbgHelp\dbghelp.dll'
             - '\Epic Games\MagicLegends\x86\dbghelp.dll'
+    filter_optional_opera:
+        ImageLoaded|contains: 'opera\Opera Installer Temp\opera_package'
+        ImageLoaded|endswith: '\assistant\dbghelp.dll'
     condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Legitimate applications loading their own versions of the DLL mentioned in this rule
