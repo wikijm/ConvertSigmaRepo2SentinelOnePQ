@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Acrobat Reader" or src.process.image.path contains "Microsoft Office" or src.process.image.path contains "PDF Reader") and (tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\firefox.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\maxthon.exe" or tgt.process.image.path contains "\\seamonkey.exe" or tgt.process.image.path contains "\\vivaldi.exe" or tgt.process.image.path contains "") and tgt.process.cmdline contains "http"))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "Acrobat Reader" or src.process.image.path contains "Microsoft Office" or src.process.image.path contains "PDF Reader") and (tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\firefox.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\maxthon.exe" or tgt.process.image.path contains "\\seamonkey.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "http") and (not tgt.process.cmdline contains "https://go.microsoft.com/fwlink/") and (not (tgt.process.cmdline="*http://ad.foxitsoftware.com/adlog.php**" or tgt.process.cmdline="*https://globe-map.foxitservice.com/go.php*do=redirect*"))))
 ```
 
 
@@ -16,6 +16,7 @@ references:
     - https://app.any.run/tasks/64043a79-165f-4052-bcba-e6e49f847ec1/ # Office Document
 author: Joseph Kamau
 date: 2024-05-27
+modified: 2025-10-07
 tags:
     - attack.execution
     - attack.t1204.002
@@ -37,9 +38,14 @@ detection:
             - '\maxthon.exe'
             - '\seamonkey.exe'
             - '\vivaldi.exe'
-            - ''
         CommandLine|contains: 'http'
-    condition: selection
+    filter_main_microsoft_help:
+        CommandLine|contains: 'https://go.microsoft.com/fwlink/'
+    filter_optional_foxit:
+        CommandLine|contains:
+            - 'http://ad.foxitsoftware.com/adlog.php?'
+            - 'https://globe-map.foxitservice.com/go.php?do=redirect'
+    condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Unlikely in most cases, further investigation should be done in the commandline of the browser process to determine the context of the URL accessed.
 level: medium

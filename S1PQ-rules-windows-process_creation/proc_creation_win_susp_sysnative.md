@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains ":\\Windows\\Sysnative\\" or tgt.process.image.path contains ":\\Windows\\Sysnative\\"))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains ":\\Windows\\Sysnative\\" or tgt.process.image.path contains ":\\Windows\\Sysnative\\") and (not ((tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\Framework64\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\Framework\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm64\\v") and tgt.process.image.path contains "\\ngen.exe" and tgt.process.cmdline contains "install")) and (not (tgt.process.cmdline contains "\"C:\\Windows\\sysnative\\cmd.exe\"" and tgt.process.cmdline contains "\\xampp\\" and tgt.process.cmdline contains "\\catalina_start.bat"))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://thedfirreport.com/2021/08/29/cobalt-strike-a-defenders-guide/
 author: Max Altgelt (Nextron Systems)
 date: 2022-08-23
-modified: 2023-12-14
+modified: 2025-10-08
 tags:
     - attack.defense-evasion
     - attack.privilege-escalation
@@ -23,10 +23,23 @@ logsource:
     category: process_creation
     product: windows
 detection:
-    sysnative:
+    selection:
         - CommandLine|contains: ':\Windows\Sysnative\'
         - Image|contains: ':\Windows\Sysnative\'
-    condition: sysnative
+    filter_main_ngen:
+        Image|contains:
+            - 'C:\Windows\Microsoft.NET\Framework64\v'
+            - 'C:\Windows\Microsoft.NET\Framework\v'
+            - 'C:\Windows\Microsoft.NET\FrameworkArm\v'
+            - 'C:\Windows\Microsoft.NET\FrameworkArm64\v'
+        Image|endswith: '\ngen.exe'
+        CommandLine|contains: 'install'
+    filter_optional_xampp:
+        CommandLine|contains|all:
+            - '"C:\Windows\sysnative\cmd.exe"'
+            - '\xampp\'
+            - '\catalina_start.bat'
+    condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Unknown
 level: medium

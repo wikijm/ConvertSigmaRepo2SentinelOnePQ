@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains " /create ") and (tgt.process.cmdline contains ":\\Perflogs" or tgt.process.cmdline contains ":\\Users\\All Users\\" or tgt.process.cmdline contains ":\\Users\\Default\\" or tgt.process.cmdline contains ":\\Users\\Public" or tgt.process.cmdline contains ":\\Windows\\Temp" or tgt.process.cmdline contains "\\AppData\\Local\\" or tgt.process.cmdline contains "\\AppData\\Roaming\\" or tgt.process.cmdline contains "%AppData%" or tgt.process.cmdline contains "%Public%")) or (src.process.cmdline contains "\\svchost.exe -k netsvcs -p -s Schedule" and (tgt.process.cmdline contains ":\\Perflogs" or tgt.process.cmdline contains ":\\Windows\\Temp" or tgt.process.cmdline contains "\\Users\\Public" or tgt.process.cmdline contains "%Public%"))) and (not ((src.process.cmdline contains "unattended.ini" or tgt.process.cmdline contains "update_task.xml") or tgt.process.cmdline contains "/Create /TN TVInstallRestore /TR" or (tgt.process.cmdline contains "/Create /Xml \"C:\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Temp\\.CR." and tgt.process.cmdline contains "Avira_Security_Installation.xml") or ((tgt.process.cmdline contains "/Create /F /TN" and tgt.process.cmdline contains "/Xml " and tgt.process.cmdline contains "\\AppData\\Local\\Temp\\is-" and tgt.process.cmdline contains "Avira_") and (tgt.process.cmdline contains ".tmp\\UpdateFallbackTask.xml" or tgt.process.cmdline contains ".tmp\\WatchdogServiceControlManagerTimeout.xml" or tgt.process.cmdline contains ".tmp\\SystrayAutostart.xml" or tgt.process.cmdline contains ".tmp\\MaintenanceTask.xml")) or (tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" and tgt.process.cmdline contains "/Create /TN \"klcp_update\" /XML " and tgt.process.cmdline contains "\\klcp_update_task.xml")))))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains " -create " or tgt.process.cmdline contains " /create " or tgt.process.cmdline contains " –create " or tgt.process.cmdline contains " —create " or tgt.process.cmdline contains " ―create ")) and (tgt.process.cmdline contains ":\\Perflogs" or tgt.process.cmdline contains ":\\Users\\All Users\\" or tgt.process.cmdline contains ":\\Users\\Default\\" or tgt.process.cmdline contains ":\\Users\\Public" or tgt.process.cmdline contains ":\\Windows\\Temp" or tgt.process.cmdline contains "\\AppData\\Local\\" or tgt.process.cmdline contains "\\AppData\\Roaming\\" or tgt.process.cmdline contains "%AppData%" or tgt.process.cmdline contains "%Public%")) or (src.process.cmdline contains "\\svchost.exe -k netsvcs -p -s Schedule" and (tgt.process.cmdline contains ":\\Perflogs" or tgt.process.cmdline contains ":\\Windows\\Temp" or tgt.process.cmdline contains "\\Users\\Public" or tgt.process.cmdline contains "%Public%"))) and (not ((src.process.cmdline contains "unattended.ini" or tgt.process.cmdline contains "update_task.xml") or tgt.process.cmdline contains "/Create /TN TVInstallRestore /TR" or (tgt.process.cmdline contains "/Create /Xml " and tgt.process.cmdline contains "\\Temp\\.CR." and tgt.process.cmdline contains "\\Avira_Security_Installation.xml") or ((tgt.process.cmdline contains "/Create /F /TN" and tgt.process.cmdline contains "/Xml " and tgt.process.cmdline contains "\\Temp\\" and tgt.process.cmdline contains "Avira_") and (tgt.process.cmdline contains ".tmp\\UpdateFallbackTask.xml" or tgt.process.cmdline contains ".tmp\\WatchdogServiceControlManagerTimeout.xml" or tgt.process.cmdline contains ".tmp\\SystrayAutostart.xml" or tgt.process.cmdline contains ".tmp\\MaintenanceTask.xml")) or (tgt.process.cmdline contains "\\Temp\\" and tgt.process.cmdline contains "/Create /TN \"klcp_update\" /XML " and tgt.process.cmdline contains "\\klcp_update_task.xml")))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://blog.talosintelligence.com/gophish-powerrat-dcrat/
 author: Florian Roth (Nextron Systems)
 date: 2022-02-21
-modified: 2024-10-28
+modified: 2025-10-07
 tags:
     - attack.execution
     - attack.t1053.005
@@ -29,7 +29,7 @@ logsource:
 detection:
     selection_1_create:
         Image|endswith: '\schtasks.exe'
-        CommandLine|contains: ' /create '
+        CommandLine|contains|windash: ' /create '
     selection_1_all_folders:
         CommandLine|contains:
             - ':\Perflogs'
@@ -57,15 +57,15 @@ detection:
     filter_optional_avira_install:
         # Comment out this filter if you dont use AVIRA
         CommandLine|contains|all:
-            - '/Create /Xml "C:\Users\'
-            - '\AppData\Local\Temp\.CR.'
-            - 'Avira_Security_Installation.xml'
+            - '/Create /Xml '
+            - '\Temp\.CR.'
+            - '\Avira_Security_Installation.xml'
     filter_optional_avira_other:
         # Comment out this filter if you dont use AVIRA
         CommandLine|contains|all:
             - '/Create /F /TN'
             - '/Xml '
-            - '\AppData\Local\Temp\is-'
+            - '\Temp\'
             - 'Avira_'
         CommandLine|contains:
             - '.tmp\UpdateFallbackTask.xml'
@@ -74,7 +74,7 @@ detection:
             - '.tmp\MaintenanceTask.xml'
     filter_optional_klite_codec:
         CommandLine|contains|all:
-            - '\AppData\Local\Temp\'
+            - '\Temp\'
             - '/Create /TN "klcp_update" /XML '
             - '\klcp_update_task.xml'
     condition: ( all of selection_1_* or all of selection_2_* ) and not 1 of filter_optional_*

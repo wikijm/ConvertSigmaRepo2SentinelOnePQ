@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\squirrel.exe" or tgt.process.image.path contains "\\update.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--processStartAndWait" or tgt.process.cmdline contains "--createShortcut")) and (not ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Discord\\Update.exe" and tgt.process.cmdline contains " --processStart" and tgt.process.cmdline contains "Discord.exe") or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\GitHubDesktop\\Update.exe" and tgt.process.cmdline contains "GitHubDesktop.exe") and (tgt.process.cmdline contains "--createShortcut" or tgt.process.cmdline contains "--processStartAndWait")) or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Microsoft\\Teams\\Update.exe" and tgt.process.cmdline contains "Teams.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--createShortcut")) or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\yammerdesktop\\Update.exe" and tgt.process.cmdline contains "Yammer.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--createShortcut"))))))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\squirrel.exe" or tgt.process.image.path contains "\\update.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--processStartAndWait" or tgt.process.cmdline contains "--createShortcut")) and (not (((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Discord\\Update.exe" and tgt.process.cmdline contains "Discord.exe") and (tgt.process.cmdline contains "--createShortcut" or tgt.process.cmdline contains "--processStart")) or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\GitHubDesktop\\Update.exe" and tgt.process.cmdline contains "GitHubDesktop.exe") and (tgt.process.cmdline contains "--createShortcut" or tgt.process.cmdline contains "--processStartAndWait")) or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\Microsoft\\Teams\\Update.exe" and tgt.process.cmdline contains "Teams.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--createShortcut")) or ((tgt.process.cmdline contains ":\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\yammerdesktop\\Update.exe" and tgt.process.cmdline contains "Yammer.exe") and (tgt.process.cmdline contains "--processStart" or tgt.process.cmdline contains "--createShortcut"))))))
 ```
 
 
@@ -22,7 +22,7 @@ references:
     - http://www.hexacorn.com/blog/2018/08/16/squirrel-as-a-lolbin/
 author: Nasreddine Bencherchali (Nextron Systems), Karneades / Markus Neis, Jonhnathan Ribeiro, oscd.community
 date: 2022-06-09
-modified: 2023-11-09
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
     - attack.execution
@@ -44,8 +44,10 @@ detection:
         CommandLine|contains|all:
             - ':\Users\'
             - '\AppData\Local\Discord\Update.exe'
-            - ' --processStart'
             - 'Discord.exe'
+        CommandLine|contains:
+            - '--createShortcut'
+            - '--processStart'
     filter_optional_github_desktop:
         CommandLine|contains|all:
             - ':\Users\'

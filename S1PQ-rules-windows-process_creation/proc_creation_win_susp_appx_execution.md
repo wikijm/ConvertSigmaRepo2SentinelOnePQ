@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files\\WindowsApps\\" and ((tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.cmdline contains "cmd /c" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "Base64")) and (not (src.process.image.path contains ":\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal" and src.process.image.path contains "\\WindowsTerminal.exe" and (tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\pwsh.exe")))))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files\\WindowsApps\\" and ((tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.cmdline contains "cmd /c" or tgt.process.cmdline contains "Invoke-" or tgt.process.cmdline contains "Base64")) and (not ((src.process.image.path contains ":\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal" and src.process.image.path contains "\\WindowsTerminal.exe" and (tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\pwsh.exe")) or (src.process.image.path contains "C:\\Program Files\\WindowsApps\\Microsoft.SysinternalsSuite" and tgt.process.image.path contains "\\cmd.exe")))))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-01-12
-modified: 2023-08-31
+modified: 2025-10-07
 tags:
     - attack.defense-evasion
 logsource:
@@ -32,6 +32,7 @@ detection:
             - '\cscript.exe'
             - '\mshta.exe'
             - '\powershell.exe'
+            - '\powershell_ise.exe'
             - '\pwsh.exe'
             - '\regsvr32.exe'
             - '\rundll32.exe'
@@ -50,6 +51,9 @@ detection:
             - '\powershell.exe'
             - '\cmd.exe'
             - '\pwsh.exe'
+    filter_optional_sysinternals:
+        ParentImage|startswith: 'C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite'
+        Image|endswith: '\cmd.exe'
     condition: selection_parent and 1 of selection_susp_* and not 1 of filter_optional_*
 falsepositives:
     - Legitimate packages that make use of external binaries such as Windows Terminal

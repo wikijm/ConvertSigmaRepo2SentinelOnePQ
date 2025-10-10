@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" or tgt.process.cmdline contains "config") and (tgt.process.cmdline contains "binPath" and tgt.process.cmdline contains "type" and tgt.process.cmdline contains "kernel")))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" or tgt.process.cmdline contains "config") and (tgt.process.cmdline contains "binPath" and tgt.process.cmdline contains "type" and tgt.process.cmdline contains "kernel")) and (not ((tgt.process.cmdline contains "create netprotection_network_filter" and tgt.process.cmdline contains "type= kernel start= " and tgt.process.cmdline contains "binPath= System32\\drivers\\netprotection_network_filter" and tgt.process.cmdline contains "DisplayName= netprotection_network_filter" and tgt.process.cmdline contains "group= PNP_TDI tag= yes") or (tgt.process.cmdline contains "create avelam binpath=C:\\Windows\\system32\\drivers\\avelam.sys" and tgt.process.cmdline contains "type=kernel start=boot error=critical group=Early-Launch")))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.aon.com/cyber-solutions/aon_cyber_labs/yours-truly-signed-av-driver-weaponizing-an-antivirus-driver/
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-07-14
-modified: 2022-08-08
+modified: 2025-10-07
 tags:
     - attack.persistence
     - attack.privilege-escalation
@@ -32,7 +32,17 @@ detection:
             - 'binPath'
             - 'type'
             - 'kernel'
-    condition: selection
+    filter_optional_avira_driver:
+        - CommandLine|contains|all:
+              - 'create netprotection_network_filter'
+              - 'type= kernel start= '
+              - 'binPath= System32\drivers\netprotection_network_filter'
+              - 'DisplayName= netprotection_network_filter'
+              - 'group= PNP_TDI tag= yes'
+        - CommandLine|contains|all:
+              - 'create avelam binpath=C:\Windows\system32\drivers\avelam.sys'
+              - 'type=kernel start=boot error=critical group=Early-Launch'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Rare legitimate installation of kernel drivers via sc.exe
 level: medium

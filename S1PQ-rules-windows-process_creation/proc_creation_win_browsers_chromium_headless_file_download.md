@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and (tgt.process.cmdline contains "--headless" and tgt.process.cmdline contains "dump-dom" and tgt.process.cmdline contains "http")))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and (tgt.process.cmdline contains "--headless" and tgt.process.cmdline contains "dump-dom" and tgt.process.cmdline contains "http")) and (not (((tgt.process.image.path contains "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\" or tgt.process.image.path contains "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\" or tgt.process.image.path contains "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\" or tgt.process.image.path contains "C:\\Program Files\\Microsoft\\Edge\\Application\\" or tgt.process.image.path contains "C:\\Program Files\\Microsoft\\EdgeCore\\" or tgt.process.image.path contains "C:\\Program Files\\Microsoft\\EdgeWebView\\" or tgt.process.image.path contains "C:\\Program Files\\WindowsApps\\Microsoft.MicrosoftEdge") and (tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\msedgewebview2.exe" or tgt.process.image.path contains "\\MicrosoftEdge.exe") and tgt.process.cmdline contains "--headless --disable-gpu --disable-extensions --disable-plugins --mute-audio --no-first-run --incognito --aggressive-cache-discard --dump-dom") or ((tgt.process.image.path contains "\\AppData\\Local\\Microsoft\\WindowsApps\\" or tgt.process.image.path contains "\\Windows\\SystemApps\\Microsoft.MicrosoftEdge") and (tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\MicrosoftEdge.exe") and tgt.process.cmdline contains "--headless --disable-gpu --disable-extensions --disable-plugins --mute-audio --no-first-run --incognito --aggressive-cache-discard --dump-dom")))))
 ```
 
 
@@ -18,7 +18,7 @@ references:
     - https://www.trendmicro.com/en_us/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
 author: Sreeman, Florian Roth (Nextron Systems)
 date: 2022-01-04
-modified: 2023-05-12
+modified: 2025-10-07
 tags:
     - attack.command-and-control
     - attack.t1105
@@ -38,7 +38,29 @@ detection:
             - '--headless'
             - 'dump-dom'
             - 'http'
-    condition: selection
+    filter_optional_edge_1:
+        Image|startswith:
+            - 'C:\Program Files (x86)\Microsoft\Edge\Application\'
+            - 'C:\Program Files (x86)\Microsoft\EdgeCore\'
+            - 'C:\Program Files (x86)\Microsoft\EdgeWebView\'
+            - 'C:\Program Files\Microsoft\Edge\Application\'
+            - 'C:\Program Files\Microsoft\EdgeCore\'
+            - 'C:\Program Files\Microsoft\EdgeWebView\'
+            - 'C:\Program Files\WindowsApps\Microsoft.MicrosoftEdge'
+        Image|endswith:
+            - '\msedge.exe'
+            - '\msedgewebview2.exe'
+            - '\MicrosoftEdge.exe'
+        CommandLine|contains: '--headless --disable-gpu --disable-extensions --disable-plugins --mute-audio --no-first-run --incognito --aggressive-cache-discard --dump-dom'
+    filter_optional_edge_2:
+        Image|contains:
+            - '\AppData\Local\Microsoft\WindowsApps\'
+            - '\Windows\SystemApps\Microsoft.MicrosoftEdge'
+        Image|endswith:
+            - '\msedge.exe'
+            - '\MicrosoftEdge.exe'
+        CommandLine|contains: '--headless --disable-gpu --disable-extensions --disable-plugins --mute-audio --no-first-run --incognito --aggressive-cache-discard --dump-dom'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Unknown
 level: high

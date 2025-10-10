@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-10-2025 01:53:45):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*"))
+// Translated content (automatically translated on 10-10-2025 01:54:13):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*") and (not (tgt.process.cmdline contains "cmd.exe /c TASKLIST /V |" and tgt.process.cmdline contains "FIND /I" and tgt.process.cmdline contains "\\xampp\\" and tgt.process.cmdline contains "\\catalina_start.bat"))))
 ```
 
 
@@ -21,7 +21,7 @@ references:
     - https://www.trendmicro.com/en_us/research/22/d/spring4shell-exploited-to-deploy-cryptocurrency-miners.html
 author: Nasreddine Bencherchali (Nextron Systems), frack113
 date: 2023-07-06
-modified: 2024-06-27
+modified: 2025-10-08
 tags:
     - attack.discovery
     - attack.t1057
@@ -40,7 +40,13 @@ detection:
             - 'systeminfo*|*find'
             - 'tasklist*|*find'
             - 'whoami*|*find'
-    condition: selection
+    filter_optional_xampp:
+        CommandLine|contains|all:
+            - 'cmd.exe /c TASKLIST /V |'
+            - 'FIND /I'
+            - '\xampp\'
+            - '\catalina_start.bat'
+    condition: selection and not 1 of filter_optional_*
 falsepositives:
     - Unknown
 level: medium
