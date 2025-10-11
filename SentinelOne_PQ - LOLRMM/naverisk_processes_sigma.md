@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-10-2025 00:47:28):
+// Translated content (automatically translated on 11-10-2025 00:44:45):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*AgentSetup-*.exe")
 ```
 
