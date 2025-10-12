@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-10-2025 00:44:45):
+// Translated content (automatically translated on 12-10-2025 00:50:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "cloud.tanium.com" or url.address contains ".cloud.tanium.com") or (event.dns.request contains "cloud.tanium.com" or event.dns.request contains ".cloud.tanium.com")))
 ```
 
