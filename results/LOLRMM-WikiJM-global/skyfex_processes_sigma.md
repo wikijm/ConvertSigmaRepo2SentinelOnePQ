@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-10-2025 01:20:45):
+// Translated content (automatically translated on 12-10-2025 01:27:42):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Deskroll.exe" or src.process.image.path contains "DeskRollUA.exe"))
 ```
 
