@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-10-2025 00:50:59):
+// Translated content (automatically translated on 13-10-2025 00:52:23):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "pcictlui.exe" or src.process.image.path contains "client32.exe" or src.process.image.path contains "pcicfgui.exe"))
 ```
 
