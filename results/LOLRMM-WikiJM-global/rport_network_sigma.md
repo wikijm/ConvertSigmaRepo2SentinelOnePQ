@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-10-2025 01:37:54):
+// Translated content (automatically translated on 14-10-2025 01:23:56):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "rport.io") or (event.dns.request contains "user_managed" or event.dns.request contains "rport.io")))
 ```
 
