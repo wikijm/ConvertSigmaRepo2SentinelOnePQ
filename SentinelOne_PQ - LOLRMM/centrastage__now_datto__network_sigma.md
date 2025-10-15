@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-10-2025 00:47:46):
+// Translated content (automatically translated on 15-10-2025 00:49:50):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".rmm.datto.com" or url.address contains "cc.centrastage.net" or url.address contains "datto.com/au/products/rmm/") or (event.dns.request contains ".rmm.datto.com" or event.dns.request contains "cc.centrastage.net" or event.dns.request contains "datto.com/au/products/rmm/")))
 ```
 
