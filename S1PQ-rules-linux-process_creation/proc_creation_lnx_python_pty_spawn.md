@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2025 00:53:47):
+// Translated content (automatically translated on 16-10-2025 00:53:36):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/python" or tgt.process.image.path contains "/python2" or tgt.process.image.path contains "/python3") or (tgt.process.image.path contains "/python2." or tgt.process.image.path contains "/python3.")) and (tgt.process.cmdline contains "import pty" or tgt.process.cmdline contains "from pty ") and tgt.process.cmdline contains "spawn"))
 ```
 
