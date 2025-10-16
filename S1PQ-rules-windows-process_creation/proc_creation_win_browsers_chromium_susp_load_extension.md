@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2025 01:57:35):
+// Translated content (automatically translated on 16-10-2025 01:56:13):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\cmd.exe" or src.process.image.path contains "\\cscript.exe" or src.process.image.path contains "\\mshta.exe" or src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe" or src.process.image.path contains "\\regsvr32.exe" or src.process.image.path contains "\\rundll32.exe" or src.process.image.path contains "\\wscript.exe") and (tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "--load-extension="))
 ```
 

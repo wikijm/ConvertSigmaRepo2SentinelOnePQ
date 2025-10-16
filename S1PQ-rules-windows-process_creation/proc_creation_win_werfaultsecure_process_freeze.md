@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-10-2025 01:57:35):
+// Translated content (automatically translated on 16-10-2025 01:56:13):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="C:\\Windows\\System32\\WerFaultSecure.exe" and (tgt.process.cmdline contains " /h " and tgt.process.cmdline contains " /pid " and tgt.process.cmdline contains " /tid " and tgt.process.cmdline contains " /encfile " and tgt.process.cmdline contains " /cancel " and tgt.process.cmdline contains " /type " and tgt.process.cmdline contains " 268310")))
 ```
 
