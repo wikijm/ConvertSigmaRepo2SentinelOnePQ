@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-10-2025 01:56:13):
+// Translated content (automatically translated on 17-10-2025 01:55:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ConsoleHost_history.txt" or tgt.process.cmdline contains "(Get-PSReadLineOption).HistorySavePath"))
 ```
 
