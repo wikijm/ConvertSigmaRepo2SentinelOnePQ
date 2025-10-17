@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-10-2025 00:49:45):
+// Translated content (automatically translated on 17-10-2025 00:48:51):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remotepcservice.exe" or src.process.image.path contains "RemotePC.exe" or src.process.image.path contains "remotepchost.exe" or src.process.image.path contains "rpcsuite.exe" or src.process.image.path contains "\\RemotePCService.exe" or src.process.image.path contains "RemotePCService.exe"))
 ```
 
