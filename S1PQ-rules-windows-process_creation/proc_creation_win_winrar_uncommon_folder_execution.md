@@ -1,20 +1,20 @@
 ```sql
-// Translated content (automatically translated on 17-10-2025 01:55:11):
-event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\rar.exe" or tgt.process.image.path contains "\\winrar.exe") or tgt.process.displayName="Command line RAR") and (not (tgt.process.image.path contains "\\UnRAR.exe" or (tgt.process.image.path contains ":\\Program Files (x86)\\WinRAR\\" or tgt.process.image.path contains ":\\Program Files\\WinRAR\\"))) and (not tgt.process.image.path contains ":\\Windows\\Temp\\")))
+// Translated content (automatically translated on 18-10-2025 01:50:01):
+event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\rar.exe" or tgt.process.image.path contains "\\winrar.exe") or (tgt.process.displayName in ("Command line RAR","WinRAR"))) and (not (tgt.process.image.path contains "\\UnRAR.exe" or (tgt.process.image.path contains ":\\Program Files (x86)\\WinRAR\\" or tgt.process.image.path contains ":\\Program Files\\WinRAR\\"))) and (not tgt.process.image.path contains ":\\Windows\\Temp\\")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
-title: Winrar Execution in Non-Standard Folder
+title: WinRAR Execution in Non-Standard Folder
 id: 4ede543c-e098-43d9-a28f-dd784a13132f
 status: test
-description: Detects a suspicious winrar execution in a folder which is not the default installation folder
+description: Detects a suspicious WinRAR execution in a folder which is not the default installation folder
 references:
     - https://twitter.com/cyb3rops/status/1460978167628406785
 author: Florian Roth (Nextron Systems), Tigzy
 date: 2021-11-17
-modified: 2023-08-31
+modified: 2025-07-16
 tags:
     - attack.collection
     - attack.t1560.001
@@ -26,7 +26,9 @@ detection:
         - Image|endswith:
               - '\rar.exe'
               - '\winrar.exe'
-        - Description: 'Command line RAR'
+        - Description:
+              - 'Command line RAR'
+              - 'WinRAR'
     filter_main_unrar:
         # Note: we filter unrar as it has the same description as the other utilities, and we're only interested in compression
         Image|endswith: '\UnRAR.exe'

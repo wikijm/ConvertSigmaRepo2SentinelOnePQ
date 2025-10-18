@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 17-10-2025 01:55:11):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ping.exe" and tgt.process.cmdline contains "0x")) | columns src.process.cmdline
+// Translated content (automatically translated on 18-10-2025 01:50:01):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ping.exe" and tgt.process.cmdline matches "0x[a-fA-F0-9]{8}")) | columns src.process.cmdline
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://twitter.com/vysecurity/status/977198418354491392
 author: Florian Roth (Nextron Systems)
 date: 2018-03-23
-modified: 2022-01-07
+modified: 2025-10-17
 tags:
     - attack.defense-evasion
     - attack.t1140
@@ -26,7 +26,7 @@ logsource:
 detection:
     selection:
         Image|endswith: '\ping.exe'
-        CommandLine|contains: '0x'
+        CommandLine|re: '0x[a-fA-F0-9]{8}'
     condition: selection
 fields:
     - ParentCommandLine
