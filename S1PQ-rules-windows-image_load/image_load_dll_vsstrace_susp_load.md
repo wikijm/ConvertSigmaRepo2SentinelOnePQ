@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 17-10-2025 01:13:58):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsstrace.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\ProgramData\\Package Cache\\{")) or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\"))) and (not (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp"))))
+// Translated content (automatically translated on 18-10-2025 01:10:45):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsstrace.dll" and (not (((src.process.image.path in ("C:\\Windows\\explorer.exe","C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe")) or (src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\Temp\\{" or src.process.image.path contains "C:\\Windows\\WinSxS\\" or src.process.image.path contains "C:\\ProgramData\\Package Cache\\{")) or not (src.process.image.path matches "\.*") or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\"))) and (not (src.process.image.path contains "\\temp\\is-" and src.process.image.path contains "\\avira_system_speedup.tmp"))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://github.com/ORCx41/DeleteShadowCopies
 author: frack113
 date: 2023-02-17
-modified: 2025-10-07
+modified: 2025-10-17
 tags:
     - attack.defense-evasion
     - attack.impact
@@ -40,6 +40,8 @@ detection:
               - 'C:\Windows\Temp\{' # Installers
               - 'C:\Windows\WinSxS\'
               - 'C:\ProgramData\Package Cache\{'  # Microsoft Visual Redistributable installer  VC_redist/vcredist EXE
+    filter_main_null_image:
+        Image: null # Observed through Aurora
     filter_main_program_files:
         # When using this rule in your environment replace the "Program Files" folder by the exact applications you know use this. Examples would be software such as backup solutions
         Image|startswith:
