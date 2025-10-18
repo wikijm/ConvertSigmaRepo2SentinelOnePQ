@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-10-2025 00:48:51):
+// Translated content (automatically translated on 18-10-2025 00:45:10):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "saazapsc.exe")
 ```
 
