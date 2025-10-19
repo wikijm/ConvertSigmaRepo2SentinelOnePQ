@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2025 01:50:01):
+// Translated content (automatically translated on 19-10-2025 02:08:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\dtrace.exe" and tgt.process.cmdline contains "lkd(0)") or (tgt.process.cmdline contains "syscall:::return" and tgt.process.cmdline contains "lkd(")))
 ```
 
