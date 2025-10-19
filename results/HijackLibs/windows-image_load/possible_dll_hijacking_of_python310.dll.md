@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-10-2025 01:26:46):
+// Translated content (automatically translated on 19-10-2025 01:49:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python310.dll" and (not (module.path in ("c:\\program files\\Python310\*","c:\\program files (x86)\\Python310\*","c:\\users\*\\appdata\\local\\Temp\*\*","c:\\program files\\DWAgent\\runtime\*","c:\\program files (x86)\\DWAgent\\runtime\*","%USERPROFILE%\\anaconda3\*")))))
 ```
 
