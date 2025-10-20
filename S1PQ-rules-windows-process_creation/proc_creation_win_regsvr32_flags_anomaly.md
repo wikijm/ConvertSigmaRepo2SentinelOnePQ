@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-10-2025 02:08:22):
+// Translated content (automatically translated on 20-10-2025 02:04:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\regsvr32.exe" and (tgt.process.cmdline contains " -i:" or tgt.process.cmdline contains " /i:" or tgt.process.cmdline contains " –i:" or tgt.process.cmdline contains " —i:" or tgt.process.cmdline contains " ―i:")) and (not tgt.process.cmdline contains " -n " or tgt.process.cmdline contains " /n " or tgt.process.cmdline contains " –n " or tgt.process.cmdline contains " —n " or tgt.process.cmdline contains " ―n ")))
 ```
 
