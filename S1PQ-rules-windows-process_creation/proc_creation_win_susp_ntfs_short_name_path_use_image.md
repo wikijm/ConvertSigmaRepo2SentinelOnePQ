@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 20-10-2025 02:04:56):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "~1\\" or tgt.process.image.path contains "~2\\") and (not (((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or (src.process.image.path contains "\\WebEx\\WebexHost.exe" or src.process.image.path contains "\\thor\\thor64.exe") or tgt.process.displayName="InstallShield (R)" or tgt.process.displayName="InstallShield (R) Setup Engine" or tgt.process.publisher="InstallShield Software Corporation") or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or (tgt.process.image.path contains "~1\\unzip.exe" or tgt.process.image.path contains "~1\\7zG.exe"))))))
+// Translated content (automatically translated on 21-10-2025 01:58:29):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "~1\\" or tgt.process.image.path contains "~2\\") and (not ((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or (tgt.process.image.path contains "~1\\unzip.exe" or tgt.process.image.path contains "~1\\7zG.exe")))) and (not (src.process.image.path contains "\\WebEx\\WebexHost.exe" or src.process.image.path contains "\\thor\\thor64.exe" or (tgt.process.displayName="InstallShield (R)" or tgt.process.displayName="InstallShield (R) Setup Engine" or tgt.process.publisher="InstallShield Software Corporation")))))
 ```
 
 
@@ -19,7 +19,7 @@ references:
     - https://twitter.com/frack113/status/1555830623633375232
 author: frack113, Nasreddine Bencherchali
 date: 2022-08-07
-modified: 2023-03-21
+modified: 2025-10-20
 tags:
     - attack.defense-evasion
     - attack.t1564.004
@@ -31,24 +31,26 @@ detection:
         Image|contains:
             - '~1\'
             - '~2\'
-    filter1:
-        - ParentImage:
-              - C:\Windows\System32\Dism.exe
-              - C:\Windows\System32\cleanmgr.exe  # Spawns DismHost.exe with a shortened username (if too long)
-        - ParentImage|endswith:
-              - '\WebEx\WebexHost.exe'  # Spawns a shortened version of the CLI and Image processes
-              - '\thor\thor64.exe'
-        - Product: 'InstallShield (R)'
-        - Description: 'InstallShield (R) Setup Engine'
-        - Company: 'InstallShield Software Corporation'
-    filter_installers:
+    filter_main_system_process:
+        ParentImage:
+            - 'C:\Windows\System32\Dism.exe'
+            - 'C:\Windows\System32\cleanmgr.exe'  # Spawns DismHost.exe with a shortened username (if too long)
+    filter_main_installers:
         - Image|contains|all:
               - '\AppData\'
               - '\Temp\'
         - Image|endswith:
               - '~1\unzip.exe'
               - '~1\7zG.exe'
-    condition: selection and not 1 of filter*
+    filter_optional_webex:
+        ParentImage|endswith: '\WebEx\WebexHost.exe' # Spawns a shortened version of the CLI and Image processes
+    filter_optional_thor:
+        ParentImage|endswith: '\thor\thor64.exe'
+    filter_optional_installshield:
+        - Product: 'InstallShield (R)'
+        - Description: 'InstallShield (R) Setup Engine'
+        - Company: 'InstallShield Software Corporation'
+    condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Applications could use this notation occasionally which might generate some false positives. In that case Investigate the parent and child process.
 level: medium
