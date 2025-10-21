@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-10-2025 01:28:28):
+// Translated content (automatically translated on 21-10-2025 01:24:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\inproclogger.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
