@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-10-2025 00:54:37):
+// Translated content (automatically translated on 22-10-2025 00:55:44):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/trufflehog" or ((tgt.process.cmdline contains " docker --image " or tgt.process.cmdline contains " Git " or tgt.process.cmdline contains " GitHub " or tgt.process.cmdline contains " Jira " or tgt.process.cmdline contains " Slack " or tgt.process.cmdline contains " Confluence " or tgt.process.cmdline contains " SharePoint " or tgt.process.cmdline contains " s3 " or tgt.process.cmdline contains " gcs ") and tgt.process.cmdline contains " --results=verified")))
 ```
 
@@ -23,6 +23,7 @@ author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-09-24
 tags:
     - attack.discovery
+    - attack.credential-access
     - attack.t1083
     - attack.t1552.001
 logsource:
