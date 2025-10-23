@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2025 00:51:53):
+// Translated content (automatically translated on 23-10-2025 00:50:16):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mikogo.exe" or src.process.image.path contains "mikogo-starter.exe" or src.process.image.path contains "mikogo-service.exe" or src.process.image.path contains "mikogolauncher.exe" or src.process.image.path contains "\\Mikogo-Service.exe" or src.process.image.path contains "\\Mikogo-Screen-Service.exe"))
 ```
 
