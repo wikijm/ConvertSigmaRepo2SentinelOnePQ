@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-10-2025 02:01:37):
+// Translated content (automatically translated on 23-10-2025 01:57:02):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\SharPersist.exe" or tgt.process.displayName="SharPersist") or (tgt.process.cmdline contains " -t schtask -c " or tgt.process.cmdline contains " -t startupfolder -c ") or (tgt.process.cmdline contains " -t reg -c " and tgt.process.cmdline contains " -m add") or (tgt.process.cmdline contains " -t service -c " and tgt.process.cmdline contains " -m add") or (tgt.process.cmdline contains " -t schtask -c " and tgt.process.cmdline contains " -m add")))
 ```
 
