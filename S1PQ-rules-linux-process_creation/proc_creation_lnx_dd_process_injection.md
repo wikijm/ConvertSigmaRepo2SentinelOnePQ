@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:54:06):
+// Translated content (automatically translated on 24-10-2025 00:50:48):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/dd" and (tgt.process.cmdline contains "of=" and tgt.process.cmdline contains "/proc/" and tgt.process.cmdline contains "/mem")))
 ```
 
@@ -16,6 +16,7 @@ references:
 author: Joseph Kamau
 date: 2023-12-01
 tags:
+    - attack.privilege-escalation
     - attack.defense-evasion
     - attack.t1055.009
 logsource:

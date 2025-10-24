@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:54:06):
+// Translated content (automatically translated on 24-10-2025 00:50:48):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "chown root" and (tgt.process.cmdline contains " chmod u+s" or tgt.process.cmdline contains " chmod g+s")))
 ```
 
@@ -16,6 +16,7 @@ author: Ömer Günal
 date: 2020-06-16
 modified: 2022-10-05
 tags:
+    - attack.defense-evasion
     - attack.persistence
     - attack.privilege-escalation
     - attack.t1548.001

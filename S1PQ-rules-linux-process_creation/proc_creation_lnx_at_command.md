@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:54:06):
+// Translated content (automatically translated on 24-10-2025 00:50:48):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/at" or tgt.process.image.path contains "/atd"))
 ```
 
@@ -18,6 +18,8 @@ author: Ömer Günal, oscd.community
 date: 2020-10-06
 modified: 2022-07-07
 tags:
+    - attack.privilege-escalation
+    - attack.execution
     - attack.persistence
     - attack.t1053.002
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:54:06):
+// Translated content (automatically translated on 24-10-2025 00:50:48):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.cmdline contains " -u#")
 ```
 
@@ -18,6 +18,7 @@ author: Florian Roth (Nextron Systems)
 date: 2019-10-15
 modified: 2022-10-05
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1068
     - attack.t1548.003
