@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:16:15):
+// Translated content (automatically translated on 24-10-2025 01:12:39):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/dsenableroot" and (not tgt.process.cmdline contains " -d ")))
 ```
 
@@ -17,6 +17,8 @@ references:
 author: Sohan G (D4rkCiph3r)
 date: 2023-08-22
 tags:
+    - attack.privilege-escalation
+    - attack.defense-evasion
     - attack.t1078
     - attack.t1078.001
     - attack.t1078.003

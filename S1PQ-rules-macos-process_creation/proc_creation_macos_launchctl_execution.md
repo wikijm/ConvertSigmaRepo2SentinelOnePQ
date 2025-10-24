@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:16:15):
+// Translated content (automatically translated on 24-10-2025 01:12:39):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/launchctl" and (tgt.process.cmdline contains "submit" or tgt.process.cmdline contains "load" or tgt.process.cmdline contains "start")))
 ```
 
@@ -19,6 +19,7 @@ references:
 author: Pratinav Chandra
 date: 2024-05-13
 tags:
+    - attack.privilege-escalation
     - attack.execution
     - attack.persistence
     - attack.t1569.001

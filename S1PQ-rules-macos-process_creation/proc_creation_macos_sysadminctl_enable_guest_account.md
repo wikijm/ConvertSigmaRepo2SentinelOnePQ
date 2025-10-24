@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:16:15):
+// Translated content (automatically translated on 24-10-2025 01:12:39):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/sysadminctl" and (tgt.process.cmdline contains " -guestAccount" and tgt.process.cmdline contains " on")))
 ```
 
@@ -15,6 +15,9 @@ references:
 author: Sohan G (D4rkCiph3r)
 date: 2023-02-18
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
+    - attack.defense-evasion
     - attack.initial-access
     - attack.t1078
     - attack.t1078.001
