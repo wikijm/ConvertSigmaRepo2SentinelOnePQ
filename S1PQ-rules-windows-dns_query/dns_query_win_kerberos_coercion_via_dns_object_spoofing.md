@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:55:56):
+// Translated content (automatically translated on 24-10-2025 01:51:56):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request contains "UWhRCA" and event.dns.request contains "BAAAA"))
 ```
 
@@ -26,6 +26,7 @@ references:
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-06-20
 tags:
+    - attack.collection
     - attack.credential-access
     - attack.persistence
     - attack.privilege-escalation
