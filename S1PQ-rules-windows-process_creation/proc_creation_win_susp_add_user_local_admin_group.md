@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "localgroup " and tgt.process.cmdline contains " /add") or (tgt.process.cmdline contains "Add-LocalGroupMember " and tgt.process.cmdline contains " -Group ")) and (tgt.process.cmdline contains " administrators " or tgt.process.cmdline contains " administrateur")))
 ```
 
@@ -21,6 +21,7 @@ author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems
 date: 2022-08-12
 modified: 2023-03-02
 tags:
+    - attack.privilege-escalation
     - attack.persistence
     - attack.t1098
 logsource:

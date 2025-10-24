@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\at.exe" and tgt.process.cmdline contains "interactive"))
 ```
 
@@ -17,6 +17,8 @@ author: E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.comm
 date: 2019-10-24
 modified: 2021-11-27
 tags:
+    - attack.persistence
+    - attack.execution
     - attack.privilege-escalation
     - attack.t1053.002
 logsource:

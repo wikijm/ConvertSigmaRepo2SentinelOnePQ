@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\sdclt.exe")
 ```
 
@@ -17,6 +17,7 @@ author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
 date: 2020-05-02
 modified: 2021-11-27
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

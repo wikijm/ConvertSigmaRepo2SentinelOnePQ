@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "UserInitMprLogonScript")
 ```
 
@@ -19,6 +19,7 @@ author: Tom Ueltschi (@c_APT_ure)
 date: 2019-01-12
 modified: 2023-06-09
 tags:
+    - attack.privilege-escalation
     - attack.persistence
     - attack.t1037.001
 logsource:

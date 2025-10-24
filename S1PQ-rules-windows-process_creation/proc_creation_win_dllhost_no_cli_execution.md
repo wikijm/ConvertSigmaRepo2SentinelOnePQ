@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\dllhost.exe" and (tgt.process.cmdline in ("dllhost.exe","dllhost"))) and (not not (tgt.process.cmdline matches "\.*"))))
 ```
 
@@ -18,6 +18,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-06-27
 modified: 2023-05-15
 tags:
+    - attack.privilege-escalation
     - attack.defense-evasion
     - attack.t1055
 logsource:

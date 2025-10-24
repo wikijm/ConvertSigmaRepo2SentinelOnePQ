@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains "/Create ") and (((tgt.process.cmdline contains "/sc minute " or tgt.process.cmdline contains "/ru system ") and (tgt.process.cmdline contains "cmd /c" or tgt.process.cmdline contains "cmd /k" or tgt.process.cmdline contains "cmd /r" or tgt.process.cmdline contains "cmd.exe /c " or tgt.process.cmdline contains "cmd.exe /k " or tgt.process.cmdline contains "cmd.exe /r ")) or (tgt.process.cmdline contains " -decode " or tgt.process.cmdline contains " -enc " or tgt.process.cmdline contains " -w hidden " or tgt.process.cmdline contains " bypass " or tgt.process.cmdline contains " IEX" or tgt.process.cmdline contains ".DownloadData" or tgt.process.cmdline contains ".DownloadFile" or tgt.process.cmdline contains ".DownloadString" or tgt.process.cmdline contains "/c start /min " or tgt.process.cmdline contains "FromBase64String" or tgt.process.cmdline contains "mshta http" or tgt.process.cmdline contains "mshta.exe http") or ((tgt.process.cmdline contains ":\\ProgramData\\" or tgt.process.cmdline contains ":\\Temp\\" or tgt.process.cmdline contains ":\\Tmp\\" or tgt.process.cmdline contains ":\\Users\\Public\\" or tgt.process.cmdline contains ":\\Windows\\Temp\\" or tgt.process.cmdline contains "\\AppData\\" or tgt.process.cmdline contains "%AppData%" or tgt.process.cmdline contains "%Temp%" or tgt.process.cmdline contains "%tmp%") and (tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "curl" or tgt.process.cmdline contains "wscript")))))
 ```
 
@@ -18,6 +18,8 @@ author: Florian Roth (Nextron Systems)
 date: 2022-02-23
 modified: 2024-03-19
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
     - attack.execution
     - attack.t1053.005
 logsource:

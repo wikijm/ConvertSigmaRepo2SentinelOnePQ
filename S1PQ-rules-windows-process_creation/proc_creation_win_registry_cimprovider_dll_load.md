@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\register-cimprovider.exe" and (tgt.process.cmdline contains "-path" and tgt.process.cmdline contains "dll"))) | columns tgt.process.cmdline
 ```
 
@@ -17,6 +17,8 @@ author: Ivan Dyachkov, Yulia Fomina, oscd.community
 date: 2020-10-07
 modified: 2021-11-27
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1574
 logsource:

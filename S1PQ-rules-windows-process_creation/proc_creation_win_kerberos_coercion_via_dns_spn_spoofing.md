@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "UWhRCA" and tgt.process.cmdline contains "BAAAA"))
 ```
 
@@ -26,6 +26,7 @@ references:
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-06-20
 tags:
+    - attack.collection
     - attack.credential-access
     - attack.persistence
     - attack.privilege-escalation

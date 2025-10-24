@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control\\Lsa" and tgt.process.cmdline contains "DisableRestrictedAdmin"))
 ```
 
@@ -24,6 +24,7 @@ author: frack113
 date: 2023-01-13
 modified: 2025-08-28
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1112
 logsource:

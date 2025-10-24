@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\mmc.exe" and src.process.cmdline contains "WF.msc") and (not tgt.process.image.path contains "\\WerFault.exe")))
 ```
 
@@ -15,6 +15,7 @@ references:
 author: Tim Rauch, Elastic (idea)
 date: 2022-09-27
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548
 logsource:

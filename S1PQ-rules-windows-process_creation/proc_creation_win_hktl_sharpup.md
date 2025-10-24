@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\SharpUp.exe" or tgt.process.displayName="SharpUp" or (tgt.process.cmdline contains "HijackablePaths" or tgt.process.cmdline contains "UnquotedServicePath" or tgt.process.cmdline contains "ProcessDLLHijack" or tgt.process.cmdline contains "ModifiableServiceBinaries" or tgt.process.cmdline contains "ModifiableScheduledTask" or tgt.process.cmdline contains "DomainGPPPassword" or tgt.process.cmdline contains "CachedGPPPassword")))
 ```
 
@@ -16,6 +16,8 @@ author: Florian Roth (Nextron Systems)
 date: 2022-08-20
 modified: 2023-02-13
 tags:
+    - attack.persistence
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.discovery
     - attack.execution

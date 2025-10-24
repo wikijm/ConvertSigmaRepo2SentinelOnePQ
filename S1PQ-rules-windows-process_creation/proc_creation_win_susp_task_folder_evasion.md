@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "echo " or tgt.process.cmdline contains "copy " or tgt.process.cmdline contains "type " or tgt.process.cmdline contains "file createnew") and (tgt.process.cmdline contains " C:\\Windows\\System32\\Tasks\\" or tgt.process.cmdline contains " C:\\Windows\\SysWow64\\Tasks\\"))) | columns tgt.process.cmdline,ParentProcess
 ```
 
@@ -20,6 +20,7 @@ author: Sreeman
 date: 2020-01-13
 modified: 2022-12-25
 tags:
+    - attack.privilege-escalation
     - attack.defense-evasion
     - attack.persistence
     - attack.execution

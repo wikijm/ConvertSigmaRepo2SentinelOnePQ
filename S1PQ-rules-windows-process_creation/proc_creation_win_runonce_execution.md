@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\runonce.exe" or tgt.process.displayName="Run Once Wrapper") and (tgt.process.cmdline contains "/AlternateShellStartup" or tgt.process.cmdline contains "/r")))
 ```
 
@@ -18,6 +18,7 @@ author: 'Avneet Singh @v3t0_, oscd.community, Christopher Peacock @SecurePeacock
 date: 2020-10-18
 modified: 2022-12-13
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1112
 logsource:

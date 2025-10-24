@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline="*cmd.exe /Q /c * 1> \\\\*\\*\\* 2>&1*" or tgt.process.cmdline="*cmd.exe /C * > \\\\*\\*\\* 2>&1*" or tgt.process.cmdline="*cmd.exe /C * > *\\Temp\\* 2>&1*" or tgt.process.cmdline contains "powershell.exe -exec bypass -noni -nop -w 1 -C \"" or tgt.process.cmdline contains "powershell.exe -noni -nop -w 1 -enc "))
 ```
 
@@ -16,6 +16,8 @@ author: Thomas Patzke
 date: 2020-05-22
 modified: 2023-11-06
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
     - attack.execution
     - attack.t1047
     - attack.t1053

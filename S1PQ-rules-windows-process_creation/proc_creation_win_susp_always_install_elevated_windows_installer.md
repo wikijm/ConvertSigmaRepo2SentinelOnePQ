@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\Windows\\Installer\\" and tgt.process.image.path contains "msi") and tgt.process.image.path contains "tmp") or (tgt.process.image.path contains "\\msiexec.exe" and (tgt.process.integrityLevel in ("System","S-1-16-16384")))) and (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI") and (not (src.process.image.path="C:\\Windows\\System32\\services.exe" or (tgt.process.cmdline contains "\\system32\\msiexec.exe /V" or src.process.cmdline contains "\\system32\\msiexec.exe /V") or src.process.image.path contains "C:\\ProgramData\\Sophos\\" or src.process.image.path contains "C:\\ProgramData\\Avira\\" or (src.process.image.path contains "C:\\Program Files\\Avast Software\\" or src.process.image.path contains "C:\\Program Files (x86)\\Avast Software\\") or (src.process.image.path contains "C:\\Program Files\\Google\\Update\\" or src.process.image.path contains "C:\\Program Files (x86)\\Google\\Update\\")))))
 ```
 
@@ -16,6 +16,7 @@ author: Teymur Kheirkhabarov (idea), Mangatas Tondang (rule), oscd.community
 date: 2020-10-13
 modified: 2024-12-01
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

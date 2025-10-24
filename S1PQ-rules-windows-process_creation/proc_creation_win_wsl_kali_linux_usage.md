@@ -1,0 +1,56 @@
+```sql
+// Translated content (automatically translated on 24-10-2025 01:53:11):
+event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains ":\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\packages\\KaliLinux") or (tgt.process.image.path contains ":\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\Microsoft\\WindowsApps\\kali.exe")) or (tgt.process.image.path contains ":\\Program Files\\WindowsApps\\KaliLinux." and tgt.process.image.path contains "\\kali.exe")) or (((src.process.image.path contains "\\wsl.exe" or src.process.image.path contains "\\wslhost.exe") and ((tgt.process.image.path contains "\\kali.exe" or tgt.process.image.path contains "\\KaliLinux") or (tgt.process.cmdline contains "Kali.exe" or tgt.process.cmdline contains "Kali-linux" or tgt.process.cmdline contains "kalilinux"))) and (not (tgt.process.cmdline contains " -i " or tgt.process.cmdline contains " --install " or tgt.process.cmdline contains " --unregister ")))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: WSL Kali-Linux Usage
+id: 6f1a11aa-4b8a-4b7f-9e13-4d3e4ff0e0d4
+status: experimental
+description: Detects the use of Kali Linux through Windows Subsystem for Linux
+references:
+    - https://medium.com/@redfanatic7/running-kali-linux-on-windows-51ad95166e6e
+    - https://learn.microsoft.com/en-us/windows/wsl/install
+author: Swachchhanda Shrawan Poudel (Nextron Systems)
+date: 2025-10-10
+tags:
+    - attack.defense-evasion
+    - attack.t1202
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_img_appdata:
+        - Image|contains|all:
+              - ':\Users\'
+              - '\AppData\Local\packages\KaliLinux'
+        - Image|contains|all:
+              - ':\Users\'
+              - '\AppData\Local\Microsoft\WindowsApps\kali.exe'
+    selection_img_windowsapps:
+        Image|contains: ':\Program Files\WindowsApps\KaliLinux.'
+        Image|endswith: '\kali.exe'
+    selection_kali_wsl_parent:
+        ParentImage|endswith:
+            - '\wsl.exe'
+            - '\wslhost.exe'
+    selection_kali_wsl_child:
+        - Image|contains:
+              - '\kali.exe'
+              - '\KaliLinux'
+        - CommandLine|contains:
+              - 'Kali.exe'
+              - 'Kali-linux'
+              - 'kalilinux'
+    filter_main_install_uninstall:
+        CommandLine|contains:
+            - ' -i '
+            - ' --install '
+            - ' --unregister '
+    condition: 1 of selection_img_* or all of selection_kali_* and not 1 of filter_main_*
+falsepositives:
+    - Legitimate installation or usage of Kali Linux WSL by administrators or security teams
+level: high
+```

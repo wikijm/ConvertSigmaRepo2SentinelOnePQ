@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "HKEY_CURRENT_USER\\Control Panel\\Desktop" or tgt.process.cmdline contains "HKCU\\Control Panel\\Desktop")) and ((tgt.process.cmdline contains "/v ScreenSaveActive" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d 1" and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v ScreenSaveTimeout" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v ScreenSaverIsSecure" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d 0" and tgt.process.cmdline contains "/f") or (tgt.process.cmdline contains "/v SCRNSAVE.EXE" and tgt.process.cmdline contains "/t REG_SZ" and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains ".scr" and tgt.process.cmdline contains "/f"))))
 ```
 
@@ -19,6 +19,7 @@ author: frack113
 date: 2021-08-19
 modified: 2022-06-02
 tags:
+    - attack.persistence
     - attack.privilege-escalation
     - attack.t1546.002
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains " /create " and tgt.process.cmdline contains " /sc once " and tgt.process.cmdline contains "\\Temp\\")))
 ```
 
@@ -16,6 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-03-11
 modified: 2022-10-09
 tags:
+    - attack.privilege-escalation
     - attack.execution
     - attack.persistence
     - attack.t1053.005

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "copy " and tgt.process.cmdline contains "/y " and tgt.process.cmdline contains "C:\\windows\\system32\\cmd.exe C:\\windows\\system32\\sethc.exe"))
 ```
 
@@ -20,6 +20,7 @@ author: Sreeman
 date: 2020-02-18
 modified: 2023-03-07
 tags:
+    - attack.persistence
     - attack.t1546.008
     - attack.privilege-escalation
 logsource:

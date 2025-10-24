@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\Velociraptor.exe" and ((tgt.process.cmdline contains "code.exe" and tgt.process.cmdline contains "tunnel" and tgt.process.cmdline contains "--accept-server-license-terms") or (tgt.process.cmdline contains "msiexec" and tgt.process.cmdline contains "/i" and tgt.process.cmdline contains "http") or ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Invoke-WebRequest " or tgt.process.cmdline contains "IWR " or tgt.process.cmdline contains ".DownloadFile" or tgt.process.cmdline contains ".DownloadString")))))
 ```
 
@@ -15,6 +15,7 @@ references:
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-08-29
 tags:
+    - attack.command-and-control
     - attack.persistence
     - attack.defense-evasion
     - attack.t1219

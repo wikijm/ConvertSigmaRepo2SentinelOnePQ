@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control\\Lsa" and tgt.process.cmdline contains "NoLMHash" and tgt.process.cmdline contains " 0"))
 ```
 
@@ -23,6 +23,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-12-15
 modified: 2023-12-22
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1112
 logsource:

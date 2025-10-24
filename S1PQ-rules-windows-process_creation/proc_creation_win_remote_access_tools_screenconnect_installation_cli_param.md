@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "e=Access&" and tgt.process.cmdline contains "y=Guest&" and tgt.process.cmdline contains "&p=" and tgt.process.cmdline contains "&c=" and tgt.process.cmdline contains "&k="))
 ```
 
@@ -16,6 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-02-11
 modified: 2024-02-26
 tags:
+    - attack.persistence
     - attack.initial-access
     - attack.t1133
 logsource:

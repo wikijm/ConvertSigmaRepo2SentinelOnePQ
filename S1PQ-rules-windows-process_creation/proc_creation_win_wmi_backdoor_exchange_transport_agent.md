@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\EdgeTransport.exe" and (not (tgt.process.image.path="C:\\Windows\\System32\\conhost.exe" or (tgt.process.image.path contains "C:\\Program Files\\Microsoft\\Exchange Server\\" and tgt.process.image.path contains "\\Bin\\OleConverter.exe")))))
 ```
 
@@ -17,6 +17,7 @@ author: Florian Roth (Nextron Systems)
 date: 2019-10-11
 modified: 2023-02-08
 tags:
+    - attack.privilege-escalation
     - attack.persistence
     - attack.t1546.003
 logsource:

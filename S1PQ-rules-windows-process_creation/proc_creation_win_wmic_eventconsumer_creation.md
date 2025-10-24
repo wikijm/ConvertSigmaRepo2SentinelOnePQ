@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ActiveScriptEventConsumer" and tgt.process.cmdline contains " CREATE ")) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
@@ -17,6 +17,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-06-25
 modified: 2023-02-14
 tags:
+    - attack.privilege-escalation
     - attack.persistence
     - attack.t1546.003
 logsource:

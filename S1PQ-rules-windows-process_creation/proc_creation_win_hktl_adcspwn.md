@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " --adcs " and tgt.process.cmdline contains " --port "))
 ```
 
@@ -16,6 +16,7 @@ author: Florian Roth (Nextron Systems)
 date: 2021-07-31
 modified: 2023-02-04
 tags:
+    - attack.collection
     - attack.credential-access
     - attack.t1557.001
 logsource:

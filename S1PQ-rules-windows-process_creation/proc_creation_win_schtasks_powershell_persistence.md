@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="C:\\WINDOWS\\System32\\svchost.exe" and (src.process.cmdline contains "-k netsvcs" and src.process.cmdline contains "-s Schedule") and (tgt.process.cmdline contains " -windowstyle hidden" or tgt.process.cmdline contains " -w hidden" or tgt.process.cmdline contains " -ep bypass" or tgt.process.cmdline contains " -noni")))
 ```
 
@@ -19,6 +19,7 @@ author: pH-T (Nextron Systems), Florian Roth (Nextron Systems)
 date: 2022-04-08
 modified: 2023-02-03
 tags:
+    - attack.privilege-escalation
     - attack.execution
     - attack.persistence
     - attack.t1053.005

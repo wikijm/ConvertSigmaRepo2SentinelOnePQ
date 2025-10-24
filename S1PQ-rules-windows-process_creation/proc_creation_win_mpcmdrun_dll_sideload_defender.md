@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\MpCmdRun.exe" or tgt.process.image.path contains "\\NisSrv.exe") and (not (tgt.process.image.path contains "C:\\Program Files (x86)\\Windows Defender\\" or tgt.process.image.path contains "C:\\Program Files\\Microsoft Security Client\\" or tgt.process.image.path contains "C:\\Program Files\\Windows Defender\\" or tgt.process.image.path contains "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\" or tgt.process.image.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
@@ -19,6 +19,8 @@ author: Bhabesh Raj
 date: 2022-08-01
 modified: 2023-08-04
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1574.001
 logsource:

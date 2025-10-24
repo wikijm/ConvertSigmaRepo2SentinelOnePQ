@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\userinit.exe" and (not tgt.process.image.path contains ":\\WINDOWS\\explorer.exe") and (not ((tgt.process.cmdline contains "netlogon.bat" or tgt.process.cmdline contains "UsrLogon.cmd") or tgt.process.cmdline="PowerShell.exe" or (tgt.process.image.path contains ":\\Windows\\System32\\proquota.exe" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\proquota.exe") or (tgt.process.image.path contains ":\\Program Files (x86)\\Citrix\\HDX\\bin\\cmstart.exe" or tgt.process.image.path contains ":\\Program Files (x86)\\Citrix\\HDX\\bin\\icast.exe" or tgt.process.image.path contains ":\\Program Files (x86)\\Citrix\\System32\\icast.exe" or tgt.process.image.path contains ":\\Program Files\\Citrix\\HDX\\bin\\cmstart.exe" or tgt.process.image.path contains ":\\Program Files\\Citrix\\HDX\\bin\\icast.exe" or tgt.process.image.path contains ":\\Program Files\\Citrix\\System32\\icast.exe") or not (tgt.process.image.path matches "\.*")))))
 ```
 
@@ -20,6 +20,7 @@ author: Tom Ueltschi (@c_APT_ure), Tim Shelton
 date: 2019-01-12
 modified: 2023-11-14
 tags:
+    - attack.privilege-escalation
     - attack.t1037.001
     - attack.persistence
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\dns.exe" and (not tgt.process.image.path contains "\\conhost.exe")))
 ```
 
@@ -16,6 +16,7 @@ author: Tim Rauch, Elastic (idea)
 date: 2022-09-27
 modified: 2023-02-05
 tags:
+    - attack.persistence
     - attack.initial-access
     - attack.t1133
 logsource:

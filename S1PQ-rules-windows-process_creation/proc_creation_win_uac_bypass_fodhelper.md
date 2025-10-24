@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\fodhelper.exe") | columns ComputerName,tgt.process.user,tgt.process.cmdline
 ```
 
@@ -17,6 +17,7 @@ author: E.M. Anhaus (originally from Atomic Blue Detections, Tony Lambert), oscd
 date: 2019-10-24
 modified: 2021-11-27
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1548.002
 logsource:

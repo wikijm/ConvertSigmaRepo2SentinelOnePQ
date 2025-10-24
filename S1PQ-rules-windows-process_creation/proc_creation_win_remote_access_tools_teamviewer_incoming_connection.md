@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:57:02):
+// Translated content (automatically translated on 24-10-2025 01:53:11):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path="TeamViewer_Desktop.exe" and src.process.image.path="TeamViewer_Service.exe" and tgt.process.cmdline contains "TeamViewer_Desktop.exe --IPCport 5939 --Module 1"))
 ```
 
@@ -22,6 +22,7 @@ references:
 author: Josh Nickels, Qi Nan
 date: 2024-03-11
 tags:
+    - attack.persistence
     - attack.initial-access
     - attack.t1133
 logsource:
