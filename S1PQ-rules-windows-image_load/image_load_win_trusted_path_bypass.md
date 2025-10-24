@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains ":\\Windows \\System32\\" or module.path contains ":\\Windows \\SysWOW64\\"))
 ```
 
@@ -20,6 +20,7 @@ references:
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-06-17
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1574.007

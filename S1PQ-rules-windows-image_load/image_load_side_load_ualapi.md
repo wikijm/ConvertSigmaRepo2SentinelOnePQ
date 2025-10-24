@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\fxssvc.exe" and module.path contains "ualapi.dll") and (not module.path contains "C:\\Windows\\WinSxS\\")))
 ```
 
@@ -16,6 +16,7 @@ author: NVISO
 date: 2020-05-04
 modified: 2022-06-02
 tags:
+    - attack.privilege-escalation
     - attack.persistence
     - attack.defense-evasion
     - attack.t1574.001

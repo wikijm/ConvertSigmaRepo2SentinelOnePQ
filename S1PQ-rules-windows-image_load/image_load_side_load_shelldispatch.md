@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ShellDispatch.dll" and (not ((module.path contains ":\\Users\\" and module.path contains "\\AppData\\Local\\Temp\\") or module.path contains ":\\Windows\\Temp\\"))))
 ```
 
@@ -15,6 +15,7 @@ references:
 author: X__Junior (Nextron Systems)
 date: 2023-06-20
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1574.001

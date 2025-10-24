@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\VMwareXferlogs.exe" and module.path contains "\\glib-2.0.dll") and (not module.path contains "C:\\Program Files\\VMware\\")))
 ```
 
@@ -16,6 +16,8 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-08-02
 modified: 2023-02-17
 tags:
+    - attack.privilege-escalation
+    - attack.persistence
     - attack.defense-evasion
     - attack.t1574.001
 logsource:

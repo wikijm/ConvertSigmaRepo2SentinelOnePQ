@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\arubanetsvc.exe" and (module.path contains "\\wtsapi32.dll" or module.path contains "\\msvcr100.dll" or module.path contains "\\msvcp100.dll" or module.path contains "\\dbghelp.dll" or module.path contains "\\dbgcore.dll" or module.path contains "\\wininet.dll" or module.path contains "\\iphlpapi.dll" or module.path contains "\\version.dll" or module.path contains "\\cryptsp.dll" or module.path contains "\\cryptbase.dll" or module.path contains "\\wldp.dll" or module.path contains "\\profapi.dll" or module.path contains "\\sspicli.dll" or module.path contains "\\winsta.dll" or module.path contains "\\dpapi.dll")) and (not (module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
@@ -16,6 +16,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023-01-22
 modified: 2023-03-15
 tags:
+    - attack.defense-evasion
     - attack.privilege-escalation
     - attack.persistence
     - attack.t1574.001

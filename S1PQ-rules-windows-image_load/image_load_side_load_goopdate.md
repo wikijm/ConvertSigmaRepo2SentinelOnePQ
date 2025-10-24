@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\goopdate.dll" and (not (module.path contains "C:\\Program Files (x86)\\" or module.path contains "C:\\Program Files\\")) and (not (((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" and src.process.image.path contains ".tmp\\Dropbox") and (module.path contains "\\AppData\\Local\\Temp\\GUM" and module.path contains ".tmp\\goopdate.dll")) or ((src.process.image.path contains "\\AppData\\Local\\Temp\\GUM" or src.process.image.path contains ":\\Windows\\SystemTemp\\GUM") and src.process.image.path contains ".tmp\\GoogleUpdate.exe" and (module.path contains "\\AppData\\Local\\Temp\\GUM" or module.path contains ":\\Windows\\SystemTemp\\GUM"))))))
 ```
 
@@ -16,6 +16,7 @@ author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
 date: 2023-05-15
 modified: 2025-10-07
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1574.001

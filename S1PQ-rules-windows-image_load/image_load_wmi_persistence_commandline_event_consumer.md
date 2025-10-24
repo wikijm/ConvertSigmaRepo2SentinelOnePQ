@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path="C:\\Windows\\System32\\wbem\\WmiPrvSE.exe" and module.path contains "\\wbemcons.dll"))
 ```
 
@@ -16,6 +16,7 @@ author: Thomas Patzke
 date: 2018-03-07
 modified: 2021-11-27
 tags:
+    - attack.privilege-escalation
     - attack.t1546.003
     - attack.persistence
 logsource:

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 01:15:44):
+// Translated content (automatically translated on 24-10-2025 01:12:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rcdll.dll" and (not (module.path contains "C:\\Program Files (x86)\\Microsoft Visual Studio\\" or module.path contains "C:\\Program Files (x86)\\Windows Kits\\"))))
 ```
 
@@ -16,6 +16,7 @@ author: X__Junior (Nextron Systems)
 date: 2023-03-13
 modified: 2023-03-15
 tags:
+    - attack.persistence
     - attack.defense-evasion
     - attack.privilege-escalation
     - attack.t1574.001
