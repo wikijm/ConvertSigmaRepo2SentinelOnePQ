@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:46:37):
+// Translated content (automatically translated on 24-10-2025 00:43:20):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\conhost.exe" and src.process.cmdline contains "--headless"))
 ```
 
@@ -21,6 +21,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2024-07-23
 tags:
     - attack.defense-evasion
+    - attack.execution
     - attack.t1059.001
     - attack.t1059.003
     - detection.threat-hunting

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-10-2025 00:46:37):
+// Translated content (automatically translated on 24-10-2025 00:43:20):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains ":\\Temp\\" or src.process.image.path contains "\\AppData\\Local\\" or src.process.image.path contains "\\AppData\\Roaming\\" or src.process.image.path contains "\\Temporary Internet" or src.process.image.path contains "\\Users\\Public\\" or src.process.image.path contains "\\Windows\\Temp\\") and tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains "/Create ") and (not (tgt.process.cmdline contains "update_task.xml" or tgt.process.cmdline contains "unattended.ini"))))
 ```
 
@@ -19,6 +19,8 @@ date: 2022-02-23
 modified: 2024-05-13
 tags:
     - attack.execution
+    - attack.persistence
+    - attack.privilege-escalation
     - attack.t1053.005
     - detection.threat-hunting
 logsource:
