@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2025 01:53:11):
+// Translated content (automatically translated on 25-10-2025 01:54:54):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains " /account=system " or tgt.process.cmdline contains " /account=ti ") and tgt.process.cmdline contains "/exec=")) | columns tgt.process.cmdline,src.process.cmdline
 ```
 
