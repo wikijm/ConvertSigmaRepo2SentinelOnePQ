@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-10-2025 01:23:13):
+// Translated content (automatically translated on 25-10-2025 01:24:38):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\A1Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\Windows Error Reporting\\LocalDumps\\action1_agent.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Action1"))
 ```
 
