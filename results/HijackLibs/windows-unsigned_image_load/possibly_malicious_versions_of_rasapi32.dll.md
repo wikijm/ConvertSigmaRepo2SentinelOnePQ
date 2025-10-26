@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-10-2025 01:21:42):
+// Translated content (automatically translated on 26-10-2025 01:36:22):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rasapi32.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
