@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2025 01:46:14):
+// Translated content (automatically translated on 27-10-2025 01:50:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpclient.dll" and (not (module.path in ("c:\\program files\\Windows Defender\*","c:\\program files (x86)\\Windows Defender\*","c:\\programdata\\Microsoft\\Windows Defender\\Platform\*\*")))))
 ```
 
