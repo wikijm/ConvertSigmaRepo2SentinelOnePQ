@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-10-2025 01:36:22):
+// Translated content (automatically translated on 27-10-2025 01:39:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\snmpapi.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
