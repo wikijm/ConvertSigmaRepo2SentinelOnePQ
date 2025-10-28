@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-10-2025 01:39:41):
+// Translated content (automatically translated on 28-10-2025 01:22:51):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wpdshext.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
