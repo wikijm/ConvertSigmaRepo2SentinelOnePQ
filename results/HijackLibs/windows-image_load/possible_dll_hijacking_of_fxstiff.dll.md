@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-10-2025 01:50:10):
+// Translated content (automatically translated on 28-10-2025 01:40:29):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fxstiff.dll" and (not (module.path="c:\\windows\\system32\*" or module.path="c:\\windows\\system32\\driverstore\\filerepository\\prnms002.inf_*\\amd64\*"))))
 ```
 
