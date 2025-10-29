@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2025 01:26:02):
+// Translated content (automatically translated on 29-10-2025 01:40:15):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ocsinventory.exe" or src.process.image.path contains "ocsservice.exe"))
 ```
 
