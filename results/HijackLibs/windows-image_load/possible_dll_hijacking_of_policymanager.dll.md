@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2025 01:40:29):
+// Translated content (automatically translated on 29-10-2025 01:46:46):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\policymanager.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
