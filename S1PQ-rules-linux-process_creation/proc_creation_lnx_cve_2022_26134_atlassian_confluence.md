@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-10-2025 00:53:18):
+// Translated content (automatically translated on 29-10-2025 00:57:03):
 event.type="Process Creation" and (endpoint.os="linux" and (src.process.image.path contains "/opt/atlassian/confluence/" and src.process.image.path contains "/java" and (tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "bash" or tgt.process.cmdline contains "dash" or tgt.process.cmdline contains "ksh" or tgt.process.cmdline contains "zsh" or tgt.process.cmdline contains "csh" or tgt.process.cmdline contains "fish" or tgt.process.cmdline contains "curl" or tgt.process.cmdline contains "wget" or tgt.process.cmdline contains "python")))
 ```
 
