@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 29-10-2025 02:04:41):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ipconfig /all" or tgt.process.cmdline contains "netsh interface show interface" or tgt.process.cmdline contains "arp -a" or tgt.process.cmdline contains "nbtstat -n" or tgt.process.cmdline contains "net config" or tgt.process.cmdline contains "route print"))
+// Translated content (automatically translated on 30-10-2025 02:03:44):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline matches "ipconfig\\s+/all" or tgt.process.cmdline matches "netsh\\s+interface show interface" or tgt.process.cmdline matches "arp\\s+-a" or tgt.process.cmdline matches "nbtstat\\s+-n" or tgt.process.cmdline matches "net\\s+config" or tgt.process.cmdline matches "route\\s+print"))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1016/T1016.md#atomic-test-1---system-network-configuration-discovery-on-windows
 author: frack113, Christopher Peacock '@securepeacock', SCYTHE '@scythe_io'
 date: 2021-12-07
-modified: 2022-04-11
+modified: 2025-10-19
 tags:
     - attack.discovery
     - attack.t1016
@@ -23,13 +23,13 @@ logsource:
     product: windows
 detection:
     selection:
-        CommandLine|contains:
-            - 'ipconfig /all'
-            - 'netsh interface show interface'
-            - 'arp -a'
-            - 'nbtstat -n'
-            - 'net config'
-            - 'route print'
+        CommandLine|re:
+            - 'ipconfig\s+/all'
+            - 'netsh\s+interface show interface'
+            - 'arp\s+-a'
+            - 'nbtstat\s+-n'
+            - 'net\s+config'
+            - 'route\s+print'
     condition: selection
 falsepositives:
     - Administrator, hotline ask to user

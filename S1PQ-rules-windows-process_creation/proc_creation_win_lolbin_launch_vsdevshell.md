@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2025 02:04:41):
+// Translated content (automatically translated on 30-10-2025 02:03:44):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Launch-VsDevShell.ps1" and (tgt.process.cmdline contains "VsWherePath " or tgt.process.cmdline contains "VsInstallationPath ")))
 ```
 

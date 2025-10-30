@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-10-2025 02:04:41):
+// Translated content (automatically translated on 30-10-2025 02:03:44):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "FromBase64String" and tgt.process.cmdline contains "MemoryStream" and tgt.process.cmdline contains "H4sI"))
 ```
 
