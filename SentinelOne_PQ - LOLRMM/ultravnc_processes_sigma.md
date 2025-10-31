@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-10-2025 00:52:45):
+// Translated content (automatically translated on 31-10-2025 00:51:02):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*UltraVNC*.exe")
 ```
 
