@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2025 01:25:27):
+// Translated content (automatically translated on 01-11-2025 01:37:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dmpushproxy.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
