@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2025 01:43:05):
+// Translated content (automatically translated on 01-11-2025 01:46:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avdevice-54.dll" and (not (module.path in ("c:\\program files\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\*","c:\\program files (x86)\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\*")))))
 ```
 

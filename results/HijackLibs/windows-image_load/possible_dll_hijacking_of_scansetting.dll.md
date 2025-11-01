@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-10-2025 01:43:05):
+// Translated content (automatically translated on 01-11-2025 01:46:40):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\scansetting.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
