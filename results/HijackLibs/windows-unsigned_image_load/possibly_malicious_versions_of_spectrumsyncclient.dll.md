@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2025 01:37:10):
+// Translated content (automatically translated on 02-11-2025 01:38:11):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\spectrumsyncclient.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
