@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-11-2025 01:46:40):
+// Translated content (automatically translated on 02-11-2025 01:48:39):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\facesdk.dll" and (not (module.path in ("c:\\program files\\luxand\\facesdk\\bin\\win64\*","c:\\program files (x86)\\luxand\\facesdk\\bin\\win64\*")))))
 ```
 
