@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2025 02:06:59):
+// Translated content (automatically translated on 03-11-2025 02:06:10):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "-NoExit -Command [Console]::OutputEncoding=[Text.UTF8Encoding]::UTF8")
 ```
 
