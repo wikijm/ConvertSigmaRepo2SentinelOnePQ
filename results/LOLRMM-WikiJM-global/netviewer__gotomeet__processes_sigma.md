@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2025 01:41:52):
+// Translated content (automatically translated on 03-11-2025 01:41:20):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "nvClient.exe" or src.process.image.path contains "netviewer.exe"))
 ```
 
