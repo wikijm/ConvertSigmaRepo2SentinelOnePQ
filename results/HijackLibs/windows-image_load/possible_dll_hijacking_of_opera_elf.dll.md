@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-11-2025 01:48:39):
+// Translated content (automatically translated on 03-11-2025 01:48:03):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\opera_elf.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Programs\\Opera\*\*","c:\\users\*\\appdata\\local\\Programs\\Opera GX\*\*","c:\\program files\\Opera\*\*","c:\\program files (x86)\\Opera\*\*")))))
 ```
 
