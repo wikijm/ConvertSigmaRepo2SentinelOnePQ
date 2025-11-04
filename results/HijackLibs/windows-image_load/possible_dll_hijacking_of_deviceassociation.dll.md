@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2025 01:48:03):
+// Translated content (automatically translated on 04-11-2025 01:43:50):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\deviceassociation.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
