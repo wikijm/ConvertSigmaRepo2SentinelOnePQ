@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2025 02:06:10):
+// Translated content (automatically translated on 04-11-2025 02:01:06):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\wermgr.exe" and (not (tgt.process.image.path contains "C:\\Windows\\System32\\" or tgt.process.image.path contains "C:\\Windows\\SysWOW64\\" or tgt.process.image.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
