@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2025 00:54:17):
+// Translated content (automatically translated on 04-11-2025 00:51:14):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "SMPCSetup.exe" or src.process.image.path="*showmypc*.exe" or src.process.image.path contains "showmypc.exe" or src.process.image.path contains "smpcsetup.exe"))
 ```
 
