@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2025 01:41:20):
+// Translated content (automatically translated on 04-11-2025 01:37:42):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".crossloop.com" or url.address contains "crossloop.en.softonic.com") or (event.dns.request contains ".crossloop.com" or event.dns.request contains "crossloop.en.softonic.com")))
 ```
 
