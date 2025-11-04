@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-11-2025 01:38:09):
+// Translated content (automatically translated on 04-11-2025 01:26:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\d3dcompiler_47.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
