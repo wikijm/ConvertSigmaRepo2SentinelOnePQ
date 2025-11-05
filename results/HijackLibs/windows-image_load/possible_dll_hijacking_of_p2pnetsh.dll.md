@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2025 01:43:50):
+// Translated content (automatically translated on 05-11-2025 01:44:50):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\p2pnetsh.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
