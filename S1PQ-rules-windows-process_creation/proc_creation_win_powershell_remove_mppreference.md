@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-11-2025 02:01:06):
+// Translated content (automatically translated on 05-11-2025 02:02:34):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Remove-MpPreference" and (tgt.process.cmdline contains "-ControlledFolderAccessProtectedFolders " or tgt.process.cmdline contains "-AttackSurfaceReductionRules_Ids " or tgt.process.cmdline contains "-AttackSurfaceReductionRules_Actions " or tgt.process.cmdline contains "-CheckForSignaturesBeforeRunningScan ")))
 ```
 
