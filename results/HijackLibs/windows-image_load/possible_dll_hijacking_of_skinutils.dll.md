@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2025 01:44:50):
+// Translated content (automatically translated on 06-11-2025 01:45:03):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\skinutils.dll" and (not (module.path in ("c:\\program files\\ICQLite\*","c:\\program files (x86)\\ICQLite\*")))))
 ```
 
