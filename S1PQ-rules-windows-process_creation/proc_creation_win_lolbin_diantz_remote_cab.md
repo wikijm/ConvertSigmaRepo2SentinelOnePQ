@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-11-2025 02:02:34):
+// Translated content (automatically translated on 06-11-2025 02:02:43):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "diantz.exe" and tgt.process.cmdline contains " \\\\" and tgt.process.cmdline contains ".cab"))
 ```
 
