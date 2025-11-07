@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-11-2025 02:02:43):
+// Translated content (automatically translated on 07-11-2025 02:01:19):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="ScreenConnect Service" or tgt.process.displayName="ScreenConnect" or tgt.process.publisher="ScreenConnect Software"))
 ```
 
