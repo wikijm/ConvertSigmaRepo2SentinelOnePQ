@@ -1,0 +1,26 @@
+title: Possible DLL Hijacking of ccleanerreactivator.dll
+id: 1706911b-4079-48a3-9089-5b9ff8649362
+status: experimental
+description: Detects possible DLL hijacking of ccleanerreactivator.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/gendigital/ccleanerreactivator.html
+author: "Still Hsu"
+date: 2025-10-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\ccleanerreactivator.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\CCleaner\*'
+            - 'c:\program files (x86)\CCleaner\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

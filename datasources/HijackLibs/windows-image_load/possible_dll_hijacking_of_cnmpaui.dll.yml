@@ -19,7 +19,6 @@ detection:
         ImageLoaded:
             - 'c:\program files\Canon\Canon IJ Printer Assistant Tool\\*'
             - 'c:\program files (x86)\Canon\Canon IJ Printer Assistant Tool\\*'
-            - '%USERPROFILE%\AppData\Roaming\SamsungDriver\\*'
 
     condition: selection and not filter
 falsepositives:

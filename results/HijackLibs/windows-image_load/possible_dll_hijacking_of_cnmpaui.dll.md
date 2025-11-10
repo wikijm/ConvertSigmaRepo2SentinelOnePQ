@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-11-2025 01:47:31):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cnmpaui.dll" and (not (module.path contains "c:\\program files\\Canon\\Canon IJ Printer Assistant Tool\\" or module.path contains "c:\\program files (x86)\\Canon\\Canon IJ Printer Assistant Tool\\" or module.path contains "%USERPROFILE%\\AppData\\Roaming\\SamsungDriver\\"))))
+// Translated content (automatically translated on 10-11-2025 01:49:04):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cnmpaui.dll" and (not (module.path contains "c:\\program files\\Canon\\Canon IJ Printer Assistant Tool\\" or module.path contains "c:\\program files (x86)\\Canon\\Canon IJ Printer Assistant Tool\\"))))
 ```
 
 
@@ -27,7 +27,6 @@ detection:
         ImageLoaded:
             - 'c:\program files\Canon\Canon IJ Printer Assistant Tool\\*'
             - 'c:\program files (x86)\Canon\Canon IJ Printer Assistant Tool\\*'
-            - '%USERPROFILE%\AppData\Roaming\SamsungDriver\\*'
 
     condition: selection and not filter
 falsepositives:
