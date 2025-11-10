@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-11-2025 02:04:42):
+// Translated content (automatically translated on 10-11-2025 02:05:58):
 event.category="dns" and (endpoint.os="windows" and ((event.dns.request contains "aaa.stage." or event.dns.request contains "post.1") or event.dns.request contains ".stage.123456.")) | columns src.process.image.path,src.process.cmdline
 ```
 
