@@ -1,0 +1,34 @@
+title: Possible preparation for appvisvsubsystems64.dll DLL Hijacking
+id: 3016172b-4079-48a3-9089-5b9ff8997109
+status: experimental
+description: Detects possible DLL hijacking of appvisvsubsystems64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/appvisvsubsystems64.html
+author: "Still Hsu"
+date: 2025-10-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\appvisvsubsystems64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Common Files\microsoft shared\ClickToRun\*'
+            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\*'
+            - 'c:\program files\Common Files\microsoft shared\ClickToRun\Updates\*\*'
+            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\Updates\*\*'
+            - 'c:\program files\Microsoft Office\root\Client\*'
+            - 'c:\program files (x86)\Microsoft Office\root\Client\*'
+            - 'c:\program files\Microsoft Office\root\Office*\*'
+            - 'c:\program files (x86)\Microsoft Office\root\Office*\*'
+            - 'c:\program files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\*'
+            - 'c:\program files (x86)\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
