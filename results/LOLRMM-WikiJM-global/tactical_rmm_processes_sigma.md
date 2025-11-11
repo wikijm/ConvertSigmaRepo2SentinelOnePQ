@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2025 01:42:17):
+// Translated content (automatically translated on 11-11-2025 01:39:15):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "tacticalrmm.exe")
 ```
 
