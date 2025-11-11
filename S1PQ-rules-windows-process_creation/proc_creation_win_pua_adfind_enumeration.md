@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-11-2025 02:07:16):
+// Translated content (automatically translated on 11-11-2025 02:03:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "lockoutduration" or tgt.process.cmdline contains "lockoutthreshold" or tgt.process.cmdline contains "lockoutobservationwindow" or tgt.process.cmdline contains "maxpwdage" or tgt.process.cmdline contains "minpwdage" or tgt.process.cmdline contains "minpwdlength" or tgt.process.cmdline contains "pwdhistorylength" or tgt.process.cmdline contains "pwdproperties") or tgt.process.cmdline contains "-sc admincountdmp" or tgt.process.cmdline contains "-sc exchaddresses"))
 ```
 

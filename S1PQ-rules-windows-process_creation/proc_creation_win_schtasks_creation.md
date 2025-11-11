@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 10-11-2025 02:07:16):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains " /create ") and (not (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI"))))
+// Translated content (automatically translated on 11-11-2025 02:03:18):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains " /create ") and (not (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI")) and (not ((src.process.image.path in ("C:\\Program Files\\Microsoft Office\\root\\integration\\integrator.exe","C:\\Program Files (x86)\\Microsoft Office\\root\\integration\\integrator.exe")) and (tgt.process.image.path in ("C:\\Windows\\System32\\schtasks.exe","C:\\Windows\\SysWOW64\\schtasks.exe")) and tgt.process.cmdline contains "Microsoft\\Office\\Office Performance Monitor"))))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks-create
 author: Florian Roth (Nextron Systems)
 date: 2019-01-16
-modified: 2024-01-18
+modified: 2025-10-22
 tags:
     - attack.execution
     - attack.persistence
@@ -34,7 +34,16 @@ detection:
         User|contains: # covers many language settings
             - 'AUTHORI'
             - 'AUTORI'
-    condition: selection and not 1 of filter_main_*
+    filter_optional_msoffice:
+        #  schtasks.exe /Create /tn "Microsoft\Office\Office Performance Monitor" /XML "C:\ProgramData\Microsoft\ClickToRun\{9AC08E99-230B-47e8-9721-4577B7F124EA}\Microsoft_Office_Office Performance Monitor.xml"
+        ParentImage:
+            - 'C:\Program Files\Microsoft Office\root\integration\integrator.exe'
+            - 'C:\Program Files (x86)\Microsoft Office\root\integration\integrator.exe'
+        Image:
+            - 'C:\Windows\System32\schtasks.exe'
+            - 'C:\Windows\SysWOW64\schtasks.exe'
+        CommandLine|contains: 'Microsoft\Office\Office Performance Monitor'
+    condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
 falsepositives:
     - Administrative activity
     - Software installation
