@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 10-11-2025 00:52:15):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1\\" or tgt.process.cmdline contains "~2\\") and (not ((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or (src.process.image.path contains "\\winget.exe" or src.process.image.path contains "\\AppData\\Local\\Temp\\WinGet\\") or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\"))) and (not (src.process.image.path="C:\\Program Files\\GPSoftware\\Directory Opus\\dopus.exe" or (src.process.image.path contains "\\aurora-agent-64.exe" or src.process.image.path contains "\\aurora-agent.exe") or src.process.image.path contains "\\thor\\thor64.exe" or (tgt.process.cmdline contains "C:\\Program Files\\Git\\post-install.bat" or tgt.process.cmdline contains "C:\\Program Files\\Git\\cmd\\scalar.exe") or (src.process.image.path contains "\\WebEx\\webexhost.exe" or tgt.process.cmdline contains "\\appdata\\local\\webex\\webex64\\meetings\\wbxreport.exe") or src.process.image.path contains "\\veeam.backup.shell.exe" or src.process.image.path contains "\\Everything\\Everything.exe"))))
+// Translated content (automatically translated on 11-11-2025 00:50:06):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "~1\\" or tgt.process.cmdline contains "~2\\") and (not ((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or (src.process.image.path contains "\\winget.exe" or src.process.image.path contains "\\AppData\\Local\\Temp\\WinGet\\") or (src.process.image.path contains "C:\\Windows\\Microsoft.NET\\Framework64\\v" and src.process.image.path contains "\\csc.exe") or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\"))) and (not (src.process.image.path="C:\\Program Files\\GPSoftware\\Directory Opus\\dopus.exe" or (src.process.image.path contains "\\aurora-agent-64.exe" or src.process.image.path contains "\\aurora-agent.exe") or src.process.image.path contains "\\thor\\thor64.exe" or (tgt.process.cmdline contains "C:\\Program Files\\Git\\post-install.bat" or tgt.process.cmdline contains "C:\\Program Files\\Git\\cmd\\scalar.exe") or (src.process.image.path contains "\\WebEx\\webexhost.exe" or tgt.process.cmdline contains "\\appdata\\local\\webex\\webex64\\meetings\\wbxreport.exe") or src.process.image.path contains "\\veeam.backup.shell.exe" or src.process.image.path contains "\\Everything\\Everything.exe"))))
 ```
 
 
@@ -26,7 +26,7 @@ references:
     - https://twitter.com/frack113/status/1555830623633375232
 author: frack113, Nasreddine Bencherchali
 date: 2022-08-07
-modified: 2025-10-07
+modified: 2025-10-22
 tags:
     - attack.defense-evasion
     - attack.t1564.004
@@ -46,6 +46,9 @@ detection:
     filter_main_winget:
         - ParentImage|endswith: '\winget.exe'
         - ParentImage|contains: '\AppData\Local\Temp\WinGet\'
+    filter_main_csc:
+        ParentImage|startswith: 'C:\Windows\Microsoft.NET\Framework64\v'
+        ParentImage|endswith: '\csc.exe'
     filter_main_installers:
         - Image|contains|all:
               - '\AppData\'
