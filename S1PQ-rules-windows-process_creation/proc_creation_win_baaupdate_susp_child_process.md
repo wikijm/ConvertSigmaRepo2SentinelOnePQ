@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-11-2025 02:03:18):
+// Translated content (automatically translated on 12-11-2025 02:02:27):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\baaupdate.exe" and (tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe")))
 ```
 
