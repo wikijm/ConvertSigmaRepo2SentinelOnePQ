@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-11-2025 01:18:07):
+// Translated content (automatically translated on 13-11-2025 01:18:45):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\excel.exe" or src.process.image.path contains "\\mspub.exe" or src.process.image.path contains "\\onenote.exe" or src.process.image.path contains "\\onenoteim.exe" or src.process.image.path contains "\\outlook.exe" or src.process.image.path contains "\\powerpnt.exe" or src.process.image.path contains "\\winword.exe") and module.path contains "C:\\Windows\\assembly\\"))
 ```
 
