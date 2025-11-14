@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2025 01:27:30):
+// Translated content (automatically translated on 14-11-2025 01:27:24):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iumsdk.dll" and (not (not (module.path matches "\.*") or not (module.path matches "\.*") or not (module.path matches "\.*")))))
 ```
 
