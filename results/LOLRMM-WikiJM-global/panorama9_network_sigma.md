@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-11-2025 09:02:34):
+// Translated content (automatically translated on 14-11-2025 01:39:04):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "trusted.panorama9.com" or url.address contains "changes.panorama9.com" or url.address contains "panorama9.com") or (event.dns.request contains "trusted.panorama9.com" or event.dns.request contains "changes.panorama9.com" or event.dns.request contains "panorama9.com")))
 ```
 
