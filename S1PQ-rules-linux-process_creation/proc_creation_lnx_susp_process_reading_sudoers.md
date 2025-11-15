@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2025 00:56:07):
+// Translated content (automatically translated on 15-11-2025 00:54:44):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/ed" or tgt.process.image.path contains "/egrep" or tgt.process.image.path contains "/emacs" or tgt.process.image.path contains "/fgrep" or tgt.process.image.path contains "/grep" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/less" or tgt.process.image.path contains "/more" or tgt.process.image.path contains "/nano" or tgt.process.image.path contains "/tail") and tgt.process.cmdline contains " /etc/sudoers"))
 ```
 
