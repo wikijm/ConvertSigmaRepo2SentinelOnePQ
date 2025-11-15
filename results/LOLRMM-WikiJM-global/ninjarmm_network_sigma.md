@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2025 01:39:04):
+// Translated content (automatically translated on 15-11-2025 01:27:33):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".ninjarmm.com" or url.address contains ".ninjaone.com" or url.address contains "resources.ninjarmm.com" or url.address contains "ninjaone.com") or (event.dns.request contains ".ninjarmm.com" or event.dns.request contains ".ninjaone.com" or event.dns.request contains "resources.ninjarmm.com" or event.dns.request contains "ninjaone.com")))
 ```
 
