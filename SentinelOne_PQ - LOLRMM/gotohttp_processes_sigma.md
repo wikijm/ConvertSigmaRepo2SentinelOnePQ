@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-11-2025 00:52:27):
+// Translated content (automatically translated on 15-11-2025 00:51:26):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "GotoHTTP_x64.exe" or src.process.image.path contains "gotohttp.exe" or src.process.image.path="*GotoHTTP*.exe"))
 ```
 
