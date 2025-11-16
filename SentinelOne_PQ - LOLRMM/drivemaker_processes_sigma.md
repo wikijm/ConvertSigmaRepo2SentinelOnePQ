@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-11-2025 00:51:26):
+// Translated content (automatically translated on 16-11-2025 00:55:59):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\*\\DriveMaker.exe" or src.process.image.path contains "\\DriveMaker.exe"))
 ```
 
