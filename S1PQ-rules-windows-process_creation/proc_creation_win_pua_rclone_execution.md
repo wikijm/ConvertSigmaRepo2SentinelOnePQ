@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-11-2025 02:09:03):
+// Translated content (automatically translated on 17-11-2025 02:04:17):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "--config " and tgt.process.cmdline contains "--no-check-certificate " and tgt.process.cmdline contains " copy ") or ((tgt.process.image.path contains "\\rclone.exe" or tgt.process.displayName="Rsync for cloud storage") and (tgt.process.cmdline contains "pass" or tgt.process.cmdline contains "user" or tgt.process.cmdline contains "copy" or tgt.process.cmdline contains "sync" or tgt.process.cmdline contains "config" or tgt.process.cmdline contains "lsd" or tgt.process.cmdline contains "remote" or tgt.process.cmdline contains "ls" or tgt.process.cmdline contains "mega" or tgt.process.cmdline contains "pcloud" or tgt.process.cmdline contains "ftp" or tgt.process.cmdline contains "ignore-existing" or tgt.process.cmdline contains "auto-confirm" or tgt.process.cmdline contains "transfers" or tgt.process.cmdline contains "multi-thread-streams" or tgt.process.cmdline contains "no-check-certificate ")))) | columns tgt.process.cmdline,src.process.cmdline,Details
 ```
 
