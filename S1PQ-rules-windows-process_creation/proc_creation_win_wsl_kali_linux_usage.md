@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-11-2025 02:04:17):
+// Translated content (automatically translated on 18-11-2025 02:02:28):
 event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains ":\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\packages\\KaliLinux") or (tgt.process.image.path contains ":\\Users\\" and tgt.process.image.path contains "\\AppData\\Local\\Microsoft\\WindowsApps\\kali.exe")) or (tgt.process.image.path contains ":\\Program Files\\WindowsApps\\KaliLinux." and tgt.process.image.path contains "\\kali.exe")) or (((src.process.image.path contains "\\wsl.exe" or src.process.image.path contains "\\wslhost.exe") and ((tgt.process.image.path contains "\\kali.exe" or tgt.process.image.path contains "\\KaliLinux") or (tgt.process.cmdline contains "Kali.exe" or tgt.process.cmdline contains "Kali-linux" or tgt.process.cmdline contains "kalilinux"))) and (not (tgt.process.cmdline contains " -i " or tgt.process.cmdline contains " --install " or tgt.process.cmdline contains " --unregister ")))))
 ```
 
