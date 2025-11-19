@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2025 00:51:57):
+// Translated content (automatically translated on 19-11-2025 00:52:16):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".beinsync.net" or url.address contains ".beinsync.com") or (event.dns.request contains ".beinsync.net" or event.dns.request contains ".beinsync.com")))
 ```
 
