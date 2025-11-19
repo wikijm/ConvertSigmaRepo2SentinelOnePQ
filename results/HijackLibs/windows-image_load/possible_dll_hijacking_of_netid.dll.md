@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2025 01:44:26):
+// Translated content (automatically translated on 19-11-2025 01:44:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\netid.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
