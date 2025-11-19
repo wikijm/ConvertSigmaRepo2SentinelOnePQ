@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2025 02:02:28):
+// Translated content (automatically translated on 19-11-2025 02:02:07):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "New-MailboxExportRequest" and tgt.process.cmdline contains " -Mailbox " and tgt.process.cmdline contains " -FilePath \\\\")) | columns tgt.process.cmdline,src.process.cmdline
 ```
 

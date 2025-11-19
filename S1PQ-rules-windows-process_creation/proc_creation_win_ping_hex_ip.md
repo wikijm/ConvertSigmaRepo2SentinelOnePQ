@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-11-2025 02:02:28):
+// Translated content (automatically translated on 19-11-2025 02:02:07):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\ping.exe" and tgt.process.cmdline matches "0x[a-fA-F0-9]{8}")) | columns src.process.cmdline
 ```
 
