@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-11-2025 00:52:16):
+// Translated content (automatically translated on 20-11-2025 00:51:15):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "quickassist.exe")
 ```
 
