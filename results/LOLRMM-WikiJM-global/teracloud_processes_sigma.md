@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2025 01:36:55):
+// Translated content (automatically translated on 21-11-2025 01:37:56):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Livedrive-Setup.exe")
 ```
 
