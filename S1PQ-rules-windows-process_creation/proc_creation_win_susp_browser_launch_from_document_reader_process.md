@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-11-2025 02:00:32):
+// Translated content (automatically translated on 21-11-2025 02:01:27):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "Acrobat Reader" or src.process.image.path contains "Microsoft Office" or src.process.image.path contains "PDF Reader") and (tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\firefox.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\maxthon.exe" or tgt.process.image.path contains "\\seamonkey.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "http") and (not tgt.process.cmdline contains "https://go.microsoft.com/fwlink/") and (not (tgt.process.cmdline="*http://ad.foxitsoftware.com/adlog.php**" or tgt.process.cmdline="*https://globe-map.foxitservice.com/go.php*do=redirect*"))))
 ```
 
