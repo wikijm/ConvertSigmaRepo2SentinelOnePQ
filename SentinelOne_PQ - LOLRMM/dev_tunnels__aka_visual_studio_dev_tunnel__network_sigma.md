@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2025 00:51:44):
+// Translated content (automatically translated on 22-11-2025 00:49:50):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview" or event.dns.request contains "learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview"))
 ```
 
