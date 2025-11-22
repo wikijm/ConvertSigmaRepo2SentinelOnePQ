@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2025 02:01:27):
+// Translated content (automatically translated on 22-11-2025 01:57:31):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\explorer.exe" or src.process.cmdline contains ".lnk") and ((tgt.process.cmdline contains "                 " or tgt.process.cmdline contains "\\u0009" or tgt.process.cmdline contains "\\u000A" or tgt.process.cmdline contains "\\u0011" or tgt.process.cmdline contains "\\u0012" or tgt.process.cmdline contains "\\u0013" or tgt.process.cmdline contains "\\u000B" or tgt.process.cmdline contains "\\u000C" or tgt.process.cmdline contains "\\u000D") or tgt.process.cmdline matches "\\n\\n\\n\\n\\n\\n")))
 ```
 

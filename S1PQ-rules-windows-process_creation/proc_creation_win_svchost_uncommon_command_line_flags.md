@@ -1,0 +1,51 @@
+```sql
+// Translated content (automatically translated on 22-11-2025 01:57:31):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\svchost.exe" and (not (tgt.process.cmdline matches "-k\\s\\w{1,64}(\\s?(-p|-s))?" or tgt.process.cmdline="" or not (tgt.process.cmdline matches "\.*"))) and (not ((src.process.image.path contains "\\MsMpEng.exe" and tgt.process.cmdline contains "svchost.exe") or (src.process.image.path contains "\\MRT.exe" and tgt.process.cmdline="svchost.exe")))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Uncommon Svchost Command Line Parameter
+id: f17211f1-1f24-4d0c-829f-31e28dc93cdd
+status: experimental
+description: |
+    Detects instances of svchost.exe running with an unusual or uncommon command line parameter by excluding known legitimate or common patterns.
+    This could point at a file masquerading as svchost, a process injection, or hollowing of a legitimate svchost instance.
+references:
+    - https://cardinalops.com/blog/the-art-of-anomaly-hunting-patterns-detection/
+    - https://www.security.com/threat-intelligence/blackbyte-exbyte-ransomware
+    - https://cloud.google.com/blog/topics/threat-intelligence/apt41-initiates-global-intrusion-campaign-using-multiple-exploits/
+    - https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064518/Carbanak_APT_eng.pdf
+author: Liran Ravich
+date: 2025-11-14
+tags:
+    - attack.defense-evasion
+    - attack.privilege-escalation
+    - attack.t1036.005
+    - attack.t1055
+    - attack.t1055.012
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        # Example of command to simulate: "C:\Windows\System32\svchost.exe" calc.exe
+        Image|endswith: '\svchost.exe'
+    filter_main_flags:
+        CommandLine|re: '-k\s\w{1,64}(\s?(-p|-s))?'
+    filter_main_empty:
+        CommandLine: ''
+    filter_main_null:
+        CommandLine: null
+    filter_optional_defender:
+        ParentImage|endswith: '\MsMpEng.exe'
+        CommandLine|contains: 'svchost.exe'
+    filter_optional_mrt:
+        ParentImage|endswith: '\MRT.exe'
+        CommandLine: 'svchost.exe'
+    condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+falsepositives:
+    - Unlikely
+level: high
+```
