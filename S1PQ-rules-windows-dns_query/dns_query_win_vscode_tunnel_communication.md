@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-11-2025 02:00:16):
+// Translated content (automatically translated on 22-11-2025 01:56:15):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains ".tunnels.api.visualstudio.com")
 ```
 
@@ -29,8 +29,8 @@ tags:
     - attack.command-and-control
     - attack.t1071.001
 logsource:
-    category: dns_query
     product: windows
+    category: dns_query
 detection:
     selection:
         QueryName|endswith: '.tunnels.api.visualstudio.com'
