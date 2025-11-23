@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-11-2025 00:49:50):
+// Translated content (automatically translated on 23-11-2025 00:59:12):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*ultimate_*.exe")
 ```
 
