@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-11-2025 01:40:38):
+// Translated content (automatically translated on 23-11-2025 01:57:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vntfxf32.dll" and (not (module.path in ("c:\\program files\\Venta\\VentaFax & Voice\*","c:\\program files (x86)\\Venta\\VentaFax & Voice\*")))))
 ```
 
