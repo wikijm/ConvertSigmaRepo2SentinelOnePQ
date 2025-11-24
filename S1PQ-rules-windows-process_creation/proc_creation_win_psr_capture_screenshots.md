@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2025 02:22:34):
+// Translated content (automatically translated on 24-11-2025 02:10:29):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Psr.exe" and (tgt.process.cmdline contains "/start" or tgt.process.cmdline contains "-start")))
 ```
 
