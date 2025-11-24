@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-11-2025 00:59:12):
+// Translated content (automatically translated on 24-11-2025 00:55:59):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Radmin\\v3.0\\Server\\Parameters\\Radmin Security")
 ```
 
