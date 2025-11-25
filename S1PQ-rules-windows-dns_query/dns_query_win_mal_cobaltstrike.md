@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:09:23):
-event.category="dns" and (endpoint.os="windows" and ((event.dns.request contains "aaa.stage." or event.dns.request contains "post.1") or event.dns.request contains ".stage.123456.")) | columns src.process.image.path,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:02:26):
+event.category="dns" and (endpoint.os="windows" and ((event.dns.request contains "aaa.stage." or event.dns.request contains "post.1") or event.dns.request contains ".stage.123456."))
 ```
 
 
@@ -35,8 +35,5 @@ detection:
     condition: 1 of selection*
 falsepositives:
     - Unknown
-fields:
-    - Image
-    - CommandLine
 level: critical
 ```
