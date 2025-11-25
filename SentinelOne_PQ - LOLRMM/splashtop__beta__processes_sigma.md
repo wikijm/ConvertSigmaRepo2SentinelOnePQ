@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 00:55:59):
+// Translated content (automatically translated on 25-11-2025 00:51:18):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "SRServer.exe" or src.process.image.path contains "SplashtopSOS.exe" or src.process.image.path="*Splashtop_Streamer_Windows*.exe" or src.process.image.path contains "SRManager.exe"))
 ```
 
