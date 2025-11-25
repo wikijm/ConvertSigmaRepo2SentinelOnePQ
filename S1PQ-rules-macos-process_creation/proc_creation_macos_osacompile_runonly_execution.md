@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 01:23:36):
-event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains "osacompile" and tgt.process.cmdline contains " -x " and tgt.process.cmdline contains " -e ")) | columns tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 01:18:51):
+event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains "osacompile" and tgt.process.cmdline contains " -x " and tgt.process.cmdline contains " -e "))
 ```
 
 
@@ -28,8 +28,6 @@ detection:
             - ' -x '
             - ' -e '
     condition: selection
-fields:
-    - CommandLine
 falsepositives:
     - Unknown
 level: high
