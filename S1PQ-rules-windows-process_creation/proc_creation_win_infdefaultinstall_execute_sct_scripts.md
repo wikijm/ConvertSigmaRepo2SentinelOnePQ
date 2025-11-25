@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "InfDefaultInstall.exe " and tgt.process.cmdline contains ".inf")) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "InfDefaultInstall.exe " and tgt.process.cmdline contains ".inf"))
 ```
 
 
@@ -28,11 +28,6 @@ detection:
             - 'InfDefaultInstall.exe '
             - '.inf'
     condition: selection
-fields:
-    - ComputerName
-    - User
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Unknown
 level: medium

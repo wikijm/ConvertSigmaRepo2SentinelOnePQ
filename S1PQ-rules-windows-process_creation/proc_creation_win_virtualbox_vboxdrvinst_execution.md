@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\VBoxDrvInst.exe" and (tgt.process.cmdline contains "driver" and tgt.process.cmdline contains "executeinf"))) | columns ComputerName,tgt.process.user,tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\VBoxDrvInst.exe" and (tgt.process.cmdline contains "driver" and tgt.process.cmdline contains "executeinf")))
 ```
 
 
@@ -33,11 +33,6 @@ detection:
             - 'driver'
             - 'executeinf'
     condition: selection
-fields:
-    - ComputerName
-    - User
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Legitimate use of VBoxDrvInst.exe utility by VirtualBox Guest Additions installation process
 level: medium

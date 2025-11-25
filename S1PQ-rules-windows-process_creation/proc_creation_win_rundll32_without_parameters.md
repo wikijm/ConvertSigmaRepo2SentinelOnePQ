@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline in ("rundll32.exe","rundll32"))) | columns ComputerName,SubjectUserName,tgt.process.cmdline,tgt.process.image.path,src.process.image.path
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline in ("rundll32.exe","rundll32")))
 ```
 
 
@@ -30,12 +30,6 @@ detection:
             - 'rundll32.exe'
             - 'rundll32'
     condition: selection
-fields:
-    - ComputerName
-    - SubjectUserName
-    - CommandLine
-    - Image
-    - ParentImage
 falsepositives:
     - False positives may occur if a user called rundll32 from CLI with no options
 level: high

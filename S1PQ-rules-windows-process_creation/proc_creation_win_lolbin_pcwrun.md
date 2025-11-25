@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\pcwrun.exe") | columns ComputerName,tgt.process.user,src.process.cmdline,tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\pcwrun.exe")
 ```
 
 
@@ -27,11 +27,6 @@ detection:
     selection:
         ParentImage|endswith: '\pcwrun.exe'
     condition: selection
-fields:
-    - ComputerName
-    - User
-    - ParentCommandLine
-    - CommandLine
 falsepositives:
     - Need to use extra processing with 'unique_count' / 'filter' to focus on outliers as opposed to commonly seen artifacts
     - Legit usage of scripts

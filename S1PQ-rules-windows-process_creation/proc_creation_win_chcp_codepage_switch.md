@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\chcp.com" and (tgt.process.cmdline contains " 936" or tgt.process.cmdline contains " 1258"))) | columns src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\chcp.com" and (tgt.process.cmdline contains " 936" or tgt.process.cmdline contains " 1258")))
 ```
 
 
@@ -33,8 +33,6 @@ detection:
             # - ' 866'  # Russian
             # - ' 864'  # Arabic
     condition: selection
-fields:
-    - ParentCommandLine
 falsepositives:
     - Administrative activity (adjust code pages according to your organization's region)
 level: medium

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Get-LocalGroupMember " and (tgt.process.cmdline contains "domain admins" or tgt.process.cmdline contains " administrator" or tgt.process.cmdline contains " administrateur" or tgt.process.cmdline contains "enterprise admins" or tgt.process.cmdline contains "Exchange Trusted Subsystem" or tgt.process.cmdline contains "Remote Desktop Users" or tgt.process.cmdline contains "Utilisateurs du Bureau à distance" or tgt.process.cmdline contains "Usuarios de escritorio remoto"))) | columns tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "Get-LocalGroupMember " and (tgt.process.cmdline contains "domain admins" or tgt.process.cmdline contains " administrator" or tgt.process.cmdline contains " administrateur" or tgt.process.cmdline contains "enterprise admins" or tgt.process.cmdline contains "Exchange Trusted Subsystem" or tgt.process.cmdline contains "Remote Desktop Users" or tgt.process.cmdline contains "Utilisateurs du Bureau à distance" or tgt.process.cmdline contains "Usuarios de escritorio remoto")))
 ```
 
 
@@ -39,9 +39,6 @@ detection:
             - 'Utilisateurs du Bureau à distance' # French for "Remote Desktop Users"
             - 'Usuarios de escritorio remoto' # Spanish for "Remote Desktop Users"
     condition: all of selection_*
-fields:
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Administrative activity
 level: medium

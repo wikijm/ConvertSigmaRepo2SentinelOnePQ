@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "esentutl" and tgt.process.cmdline contains " /p")) | columns tgt.process.user,tgt.process.cmdline,src.process.cmdline,tgt.process.image.path
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "esentutl" and tgt.process.cmdline contains " /p"))
 ```
 
 
@@ -30,11 +30,6 @@ detection:
             - 'esentutl'
             - ' /p'
     condition: selection
-fields:
-    - User
-    - CommandLine
-    - ParentCommandLine
-    - CurrentDirectory
 falsepositives:
     - To be determined
 level: medium

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "Install-TransportAgent") | columns AssemblyPath
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline contains "Install-TransportAgent")
 ```
 
 
@@ -28,8 +28,6 @@ detection:
     selection:
         CommandLine|contains: 'Install-TransportAgent'
     condition: selection
-fields:
-    - AssemblyPath
 falsepositives:
     - Legitimate installations of exchange TransportAgents. AssemblyPath is a good indicator for this.
 level: medium

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ActiveScriptEventConsumer" and tgt.process.cmdline contains " CREATE ")) | columns tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "ActiveScriptEventConsumer" and tgt.process.cmdline contains " CREATE "))
 ```
 
 
@@ -29,9 +29,6 @@ detection:
             - 'ActiveScriptEventConsumer'
             - ' CREATE '
     condition: selection
-fields:
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Legitimate software creating script event consumers
 level: high

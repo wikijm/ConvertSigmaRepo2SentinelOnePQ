@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Runscripthelper.exe" and tgt.process.cmdline contains "surfacecheck")) | columns tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Runscripthelper.exe" and tgt.process.cmdline contains "surfacecheck"))
 ```
 
 
@@ -28,8 +28,6 @@ detection:
         Image|endswith: '\Runscripthelper.exe'
         CommandLine|contains: 'surfacecheck'
     condition: selection
-fields:
-    - CommandLine
 falsepositives:
     - Unknown
 level: medium

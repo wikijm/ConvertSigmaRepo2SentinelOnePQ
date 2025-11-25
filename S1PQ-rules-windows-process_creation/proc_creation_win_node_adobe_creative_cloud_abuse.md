@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js"))) | columns tgt.process.image.path,tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js")))
 ```
 
 
@@ -28,10 +28,6 @@ detection:
     filter:
         CommandLine|contains: 'Adobe Creative Cloud Experience\js' # Folder where Creative Cloud's JS resources are located
     condition: selection and not filter
-fields:
-    - Image
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Unknown
 level: medium

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\crackmapexec.exe" or tgt.process.cmdline contains " -M pe_inject " or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -x ") or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -H 'NTHASH'") or (tgt.process.cmdline contains " mssql " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -d ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -H " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -o ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " --local-auth")) or ((tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p ") and (tgt.process.cmdline contains " 10." and tgt.process.cmdline contains " 192.168." and tgt.process.cmdline contains "/24 ")))) | columns ComputerName,tgt.process.user,tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\crackmapexec.exe" or tgt.process.cmdline contains " -M pe_inject " or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -x ") or (tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -H 'NTHASH'") or (tgt.process.cmdline contains " mssql " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -d ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -H " and tgt.process.cmdline contains " -M " and tgt.process.cmdline contains " -o ") or (tgt.process.cmdline contains " smb " and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p " and tgt.process.cmdline contains " --local-auth")) or ((tgt.process.cmdline contains " --local-auth" and tgt.process.cmdline contains " -u " and tgt.process.cmdline contains " -p ") and (tgt.process.cmdline contains " 10." and tgt.process.cmdline contains " 192.168." and tgt.process.cmdline contains "/24 "))))
 ```
 
 
@@ -80,10 +80,6 @@ detection:
             - ' 192.168.'
             - '/24 '
     condition: 1 of selection_* or all of part_localauth*
-fields:
-    - ComputerName
-    - User
-    - CommandLine
 falsepositives:
     - Unknown
 level: high

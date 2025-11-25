@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\cmstp.exe") | columns tgt.process.cmdline,src.process.cmdline,Details
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\cmstp.exe")
 ```
 
 
@@ -29,10 +29,6 @@ detection:
     selection:
         ParentImage|endswith: '\cmstp.exe'
     condition: selection
-fields:
-    - CommandLine
-    - ParentCommandLine
-    - Details
 falsepositives:
     - Legitimate CMSTP use (unlikely in modern enterprise environments)
 level: high

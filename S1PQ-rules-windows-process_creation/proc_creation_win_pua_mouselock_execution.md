@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName contains "Mouse Lock" or tgt.process.publisher contains "Misc314" or tgt.process.cmdline contains "Mouse Lock_")) | columns tgt.process.displayName,tgt.process.publisher,tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName contains "Mouse Lock" or tgt.process.publisher contains "Misc314" or tgt.process.cmdline contains "Mouse Lock_"))
 ```
 
 
@@ -29,10 +29,6 @@ detection:
         - Company|contains: 'Misc314'
         - CommandLine|contains: 'Mouse Lock_'
     condition: selection
-fields:
-    - Product
-    - Company
-    - CommandLine
 falsepositives:
     - Legitimate uses of Mouse Lock software
 level: medium

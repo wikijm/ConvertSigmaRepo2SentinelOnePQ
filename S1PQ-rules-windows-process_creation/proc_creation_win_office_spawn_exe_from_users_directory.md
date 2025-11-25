@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\WINWORD.EXE" or src.process.image.path contains "\\EXCEL.EXE" or src.process.image.path contains "\\POWERPNT.exe" or src.process.image.path contains "\\MSPUB.exe" or src.process.image.path contains "\\VISIO.exe" or src.process.image.path contains "\\MSACCESS.exe" or src.process.image.path contains "\\EQNEDT32.exe") and tgt.process.image.path contains "C:\\users\\" and tgt.process.image.path contains ".exe") and (not tgt.process.image.path contains "\\Teams.exe"))) | columns tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\WINWORD.EXE" or src.process.image.path contains "\\EXCEL.EXE" or src.process.image.path contains "\\POWERPNT.exe" or src.process.image.path contains "\\MSPUB.exe" or src.process.image.path contains "\\VISIO.exe" or src.process.image.path contains "\\MSACCESS.exe" or src.process.image.path contains "\\EQNEDT32.exe") and tgt.process.image.path contains "C:\\users\\" and tgt.process.image.path contains ".exe") and (not tgt.process.image.path contains "\\Teams.exe")))
 ```
 
 
@@ -40,9 +40,6 @@ detection:
     filter:
         Image|endswith: '\Teams.exe'
     condition: selection and not filter
-fields:
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Unknown
 level: high

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\wsmprovhost.exe" or src.process.image.path contains "\\wsmprovhost.exe")) | columns ComputerName,tgt.process.user,tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\wsmprovhost.exe" or src.process.image.path contains "\\wsmprovhost.exe"))
 ```
 
 
@@ -28,10 +28,6 @@ detection:
         - Image|endswith: '\wsmprovhost.exe'
         - ParentImage|endswith: '\wsmprovhost.exe'
     condition: selection
-fields:
-    - ComputerName
-    - User
-    - CommandLine
 falsepositives:
     - Legitimate usage of remote Powershell, e.g. for monitoring purposes.
 level: medium

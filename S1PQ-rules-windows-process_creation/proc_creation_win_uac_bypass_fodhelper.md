@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 02:10:29):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\fodhelper.exe") | columns ComputerName,tgt.process.user,tgt.process.cmdline
+// Translated content (automatically translated on 25-11-2025 02:03:46):
+event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\fodhelper.exe")
 ```
 
 
@@ -27,10 +27,6 @@ detection:
     selection:
         ParentImage|endswith: '\fodhelper.exe'
     condition: selection
-fields:
-    - ComputerName
-    - User
-    - CommandLine
 falsepositives:
     - Legitimate use of fodhelper.exe utility by legitimate user
 level: high
