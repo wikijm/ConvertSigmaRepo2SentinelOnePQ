@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 00:53:25):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\curl.exe" or tgt.process.displayName="The curl executable") and (tgt.process.cmdline contains " -A " or tgt.process.cmdline contains " --user-agent "))) | columns tgt.process.cmdline,src.process.cmdline
+// Translated content (automatically translated on 25-11-2025 00:48:20):
+event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\curl.exe" or tgt.process.displayName="The curl executable") and (tgt.process.cmdline contains " -A " or tgt.process.cmdline contains " --user-agent ")))
 ```
 
 
@@ -32,9 +32,6 @@ detection:
             - ' -A '
             - ' --user-agent '
     condition: all of selection_*
-fields:
-    - CommandLine
-    - ParentCommandLine
 falsepositives:
     - Scripts created by developers and admins
     - Administrative activity
