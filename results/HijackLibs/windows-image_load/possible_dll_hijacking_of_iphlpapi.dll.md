@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-11-2025 01:52:22):
+// Translated content (automatically translated on 25-11-2025 01:46:15):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iphlpapi.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
