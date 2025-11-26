@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "/EXEFilename" or tgt.process.cmdline contains "/CommandLine") and ((tgt.process.cmdline contains " /RunAs 8 " or tgt.process.cmdline contains " /RunAs 4 " or tgt.process.cmdline contains " /RunAs 10 " or tgt.process.cmdline contains " /RunAs 11 ") or (tgt.process.cmdline contains "/RunAs 8" or tgt.process.cmdline contains "/RunAs 4" or tgt.process.cmdline contains "/RunAs 10" or tgt.process.cmdline contains "/RunAs 11"))))
 ```
 
@@ -48,4 +48,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_pua_advancedrun_priv_user/info.yml
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*") and (not (tgt.process.cmdline contains "cmd.exe /c TASKLIST /V |" and tgt.process.cmdline contains "FIND /I" and tgt.process.cmdline contains "\\xampp\\" and tgt.process.cmdline contains "\\catalina_start.bat"))))
 ```
 
@@ -50,4 +50,5 @@ detection:
 falsepositives:
     - Unknown
 level: medium
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_findstr_recon_pipe_output/info.yml
 ```

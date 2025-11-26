@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\runonce.exe" and src.process.image.path contains "\\rundll32.exe" and (src.process.cmdline contains "setupapi.dll" and src.process.cmdline contains "InstallHinfSection")))
 ```
 

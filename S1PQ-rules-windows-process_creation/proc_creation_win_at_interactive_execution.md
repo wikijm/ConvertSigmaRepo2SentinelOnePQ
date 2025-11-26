@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\at.exe" and tgt.process.cmdline contains "interactive"))
 ```
 
@@ -32,4 +32,9 @@ detection:
 falsepositives:
     - Unlikely (at.exe deprecated as of Windows 8)
 level: high
+simulation:
+    - type: atomic-red-team
+      name: At.exe Scheduled task
+      technique: T1053.002
+      atomic_guid: 4a6c0dc4-0f2a-4203-9298-a5a9bdc21ed8
 ```

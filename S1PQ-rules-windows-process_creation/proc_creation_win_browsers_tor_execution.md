@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
-event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\tor.exe" or tgt.process.image.path contains "\\Tor Browser\\Browser\\firefox.exe"))
+// Translated content (automatically translated on 26-11-2025 02:03:57):
+event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Tor Browser" or tgt.process.displayName="Tor Browser" or (tgt.process.image.path contains "\\tor.exe" or tgt.process.image.path contains "\\Tor Browser\\Browser\\firefox.exe")))
 ```
 
 
@@ -14,7 +14,7 @@ references:
     - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
 author: frack113
 date: 2022-02-20
-modified: 2023-02-13
+modified: 2025-10-27
 tags:
     - attack.command-and-control
     - attack.t1090.003
@@ -23,11 +23,14 @@ logsource:
     product: windows
 detection:
     selection:
-        Image|endswith:
-            - '\tor.exe'
-            - '\Tor Browser\Browser\firefox.exe'
+        - Description: 'Tor Browser'
+        - Product: 'Tor Browser'
+        - Image|endswith:
+              - '\tor.exe'
+              - '\Tor Browser\Browser\firefox.exe'
     condition: selection
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_browsers_tor_execution/info.yml
 ```

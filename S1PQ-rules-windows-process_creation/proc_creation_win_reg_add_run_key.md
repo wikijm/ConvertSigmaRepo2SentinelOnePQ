@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "reg" and tgt.process.cmdline contains " add ") and (tgt.process.cmdline contains "Software\\Microsoft\\Windows\\CurrentVersion\\Run" or tgt.process.cmdline contains "\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run" or tgt.process.cmdline contains "\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run")))
 ```
 
@@ -40,4 +40,5 @@ falsepositives:
     - Legitimate administrator sets up autorun keys for legitimate reasons.
     - Discord
 level: medium
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_reg_add_run_key/info.yml
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\DismHost.exe" and (src.process.cmdline contains "/Online" and src.process.cmdline contains "/Disable-Feature")) or (tgt.process.image.path contains "\\Dism.exe" and (tgt.process.cmdline contains "/Online" and tgt.process.cmdline contains "/Disable-Feature"))))
 ```
 
@@ -45,4 +45,10 @@ detection:
 falsepositives:
     - Legitimate script
 level: medium
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_dism_remove/info.yml
+simulation:
+    - type: atomic-red-team
+      name: Disable Windows Defender with DISM
+      technique: T1562.001
+      atomic_guid: 871438ac-7d6e-432a-b27d-3e7db69faf58
 ```

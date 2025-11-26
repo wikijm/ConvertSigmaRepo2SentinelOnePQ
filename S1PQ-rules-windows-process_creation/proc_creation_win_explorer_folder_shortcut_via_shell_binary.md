@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\cmd.exe" or src.process.image.path contains "\\powershell.exe" or src.process.image.path contains "\\pwsh.exe") and tgt.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "shell:mycomputerfolder"))
 ```
 
@@ -34,4 +34,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_explorer_folder_shortcut_via_shell_binary/info.yml
 ```

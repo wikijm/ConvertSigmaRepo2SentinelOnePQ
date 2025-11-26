@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\cmd.exe" and (src.process.cmdline contains " -c " or src.process.cmdline contains " /c " or src.process.cmdline contains " –c " or src.process.cmdline contains " —c " or src.process.cmdline contains " ―c " or src.process.cmdline contains " -r " or src.process.cmdline contains " /r " or src.process.cmdline contains " –r " or src.process.cmdline contains " —r " or src.process.cmdline contains " ―r " or src.process.cmdline contains " -k " or src.process.cmdline contains " /k " or src.process.cmdline contains " –k " or src.process.cmdline contains " —k " or src.process.cmdline contains " ―k ") and tgt.process.image.path contains "\\chcp.com" and (tgt.process.cmdline contains "chcp" or tgt.process.cmdline contains "chcp " or tgt.process.cmdline contains "chcp  ")))
 ```
 
@@ -39,4 +39,5 @@ falsepositives:
     - During Anaconda update the 'conda.exe' process will eventually execution the 'chcp' command.
     - Discord was seen using chcp to look up code pages
 level: medium
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_chcp_codepage_lookup/info.yml
 ```

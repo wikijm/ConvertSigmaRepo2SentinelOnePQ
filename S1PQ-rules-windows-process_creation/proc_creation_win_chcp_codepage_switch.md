@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 02:03:46):
+// Translated content (automatically translated on 26-11-2025 02:03:57):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\chcp.com" and (tgt.process.cmdline contains " 936" or tgt.process.cmdline contains " 1258")))
 ```
 
@@ -36,4 +36,5 @@ detection:
 falsepositives:
     - Administrative activity (adjust code pages according to your organization's region)
 level: medium
+regression_tests_path: regression_data/windows/process_creation/proc_creation_win_chcp_codepage_switch/info.yml
 ```
