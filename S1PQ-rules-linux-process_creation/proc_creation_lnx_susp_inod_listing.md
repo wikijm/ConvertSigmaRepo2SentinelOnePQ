@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 25-11-2025 00:55:36):
-event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/ls" and (tgt.process.cmdline="* -*i*" and tgt.process.cmdline="* -*d*") and tgt.process.cmdline contains " /"))
+// Translated content (automatically translated on 26-11-2025 00:56:12):
+event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/ls" and (tgt.process.cmdline contains " /" or tgt.process.cmdline contains " / ") and tgt.process.cmdline matches "(?:\\s-[^-\\s]{0,20}i|\\s--inode\\s)" and tgt.process.cmdline matches "(?:\\s-[^-\\s]{0,20}d|\\s--directory\\s)"))
 ```
 
 
@@ -18,18 +18,21 @@ tags:
     - attack.t1082
 author: Seth Hanford
 date: 2023-08-23
+modified: 2025-11-24
 logsource:
     category: process_creation
     product: linux
 detection:
-    selection:
-        # inode outside containers low, inside high
-        Image|endswith: '/ls'
-        CommandLine|contains|all:
-            - ' -*i'              # -i finds inode number
-            - ' -*d'              # -d gets directory itself, not contents
-        CommandLine|endswith: ' /'
-    condition: selection
+    selection_ls_img:
+        Image|endswith: '/ls'    # inode outside containers low, inside high
+    selection_ls_cli:
+        - CommandLine|endswith: ' /'
+        - CommandLine|contains: ' / '
+    selection_regex_inode:
+        CommandLine|re: '(?:\s-[^-\s]{0,20}i|\s--inode\s)'      # -i finds inode number
+    selection_regex_dir:
+        CommandLine|re: '(?:\s-[^-\s]{0,20}d|\s--directory\s)'  # -d gets directory itself, not contents
+    condition: all of selection_*
 falsepositives:
     - Legitimate system administrator usage of these commands
     - Some container tools or deployments may use these techniques natively to determine how they proceed with execution, and will need to be filtered
