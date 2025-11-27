@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2025 02:03:57):
+// Translated content (automatically translated on 27-11-2025 02:01:20):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\gpresult.exe" and (tgt.process.cmdline contains "/z" or tgt.process.cmdline contains "/v")))
 ```
 
@@ -38,5 +38,5 @@ simulation:
       name: Display group policy information via gpresult
       technique: T1615
       atomic_guid: 0976990f-53b1-4d3f-a185-6df5be429d3b
-regression_tests_path: regression_data/windows/process_creation/proc_creation_win_gpresult_execution/info.yml
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_gpresult_execution/info.yml
 ```

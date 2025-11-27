@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2025 02:03:57):
+// Translated content (automatically translated on 27-11-2025 02:01:20):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "--load-extension="))
 ```
 
@@ -39,5 +39,5 @@ detection:
 falsepositives:
     - Usage of Chrome Extensions in testing tools such as BurpSuite will trigger this alert
 level: medium
-regression_tests_path: regression_data/windows/process_creation/proc_creation_win_browsers_chromium_load_extension/info.yml
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_browsers_chromium_load_extension/info.yml
 ```

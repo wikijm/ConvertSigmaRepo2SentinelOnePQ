@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2025 02:03:57):
+// Translated content (automatically translated on 27-11-2025 02:01:20):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\reg.exe" and tgt.process.cmdline contains "query" and (tgt.process.cmdline contains "-v" or tgt.process.cmdline contains "/v" or tgt.process.cmdline contains "–v" or tgt.process.cmdline contains "—v" or tgt.process.cmdline contains "―v")) or ((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains "Get-ItemPropertyValue" or tgt.process.cmdline contains "gpv"))) and (tgt.process.cmdline contains "\\SOFTWARE\\Microsoft\\Windows Defender" or tgt.process.cmdline contains "\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion" or tgt.process.cmdline contains "\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall" or tgt.process.cmdline contains "\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation" or tgt.process.cmdline contains "\\SYSTEM\\CurrentControlSet\\Services")))
 ```
 
@@ -46,7 +46,7 @@ detection:
 falsepositives:
     - Unlikely
 level: low
-regression_tests_path: regression_data/windows/process_creation/proc_creation_win_discovery_via_reg_queries/info.yml
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_discovery_via_reg_queries/info.yml
 simulation:
     - type: atomic-red-team
       name: System Information Discovery

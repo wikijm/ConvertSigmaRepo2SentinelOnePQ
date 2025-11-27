@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2025 02:03:57):
+// Translated content (automatically translated on 27-11-2025 02:01:20):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName="Tor Browser" or tgt.process.displayName="Tor Browser" or (tgt.process.image.path contains "\\tor.exe" or tgt.process.image.path contains "\\Tor Browser\\Browser\\firefox.exe")))
 ```
 
@@ -32,5 +32,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
-regression_tests_path: regression_data/windows/process_creation/proc_creation_win_browsers_tor_execution/info.yml
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_browsers_tor_execution/info.yml
 ```

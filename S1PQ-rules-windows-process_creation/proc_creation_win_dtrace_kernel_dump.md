@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-11-2025 02:03:57):
+// Translated content (automatically translated on 27-11-2025 02:01:20):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\dtrace.exe" and tgt.process.cmdline contains "lkd(0)") or (tgt.process.cmdline contains "syscall:::return" and tgt.process.cmdline contains "lkd(")))
 ```
 
@@ -33,5 +33,5 @@ detection:
 falsepositives:
     - Unknown
 level: high
-regression_tests_path: regression_data/windows/process_creation/proc_creation_win_dtrace_kernel_dump/info.yml
+regression_tests_path: regression_data/rules/windows/process_creation/proc_creation_win_dtrace_kernel_dump/info.yml
 ```
