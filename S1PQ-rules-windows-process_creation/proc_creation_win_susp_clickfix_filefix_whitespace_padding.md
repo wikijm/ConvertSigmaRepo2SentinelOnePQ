@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 27-11-2025 02:01:20):
-event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "#") and (tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            ")))
+// Translated content (automatically translated on 28-11-2025 02:01:10):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "#") and (tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            " or tgt.process.cmdline contains "            ")))
 ```
 
 
@@ -23,6 +23,7 @@ references:
     - https://mrd0x.com/filefix-clickfix-alternative/
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-11-04
+modified: 2025-11-26
 tags:
     - attack.execution
     - attack.t1204.004
@@ -33,7 +34,7 @@ logsource:
     product: windows
 detection:
     selection_explorer:
-        Image|endswith: '\explorer.exe'
+        ParentImage|endswith: '\explorer.exe'
         CommandLine|contains: '#'
     selection_space_variation:
         CommandLine|contains:
