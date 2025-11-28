@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-11-2025 00:48:34):
+// Translated content (automatically translated on 28-11-2025 00:47:28):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\svchost.exe" and (tgt.process.image.path contains "\\eqnedt32.exe" or tgt.process.image.path contains "\\excel.exe" or tgt.process.image.path contains "\\msaccess.exe" or tgt.process.image.path contains "\\mspub.exe" or tgt.process.image.path contains "\\powerpnt.exe" or tgt.process.image.path contains "\\visio.exe" or tgt.process.image.path contains "\\winword.exe")))
 ```
 
