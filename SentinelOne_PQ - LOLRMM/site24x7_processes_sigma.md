@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-11-2025 00:50:39):
+// Translated content (automatically translated on 29-11-2025 00:50:54):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "MEAgentHelper.exe" or src.process.image.path contains "MonitoringAgent.exe" or src.process.image.path contains "Site24x7WindowsAgentTrayIcon.exe" or src.process.image.path contains "Site24x7PluginAgent.exe"))
 ```
 
