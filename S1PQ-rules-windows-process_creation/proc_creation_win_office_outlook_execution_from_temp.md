@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-11-2025 02:00:51):
+// Translated content (automatically translated on 30-11-2025 02:21:28):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.image.path contains "\\Temporary Internet Files\\Content.Outlook\\")
 ```
 
