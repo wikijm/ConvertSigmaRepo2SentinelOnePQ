@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:56:23):
+// Translated content (automatically translated on 01-12-2025 01:00:27):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains ":\\Temp\\" or src.process.image.path contains "\\AppData\\Local\\" or src.process.image.path contains "\\AppData\\Roaming\\" or src.process.image.path contains "\\Temporary Internet" or src.process.image.path contains "\\Users\\Public\\" or src.process.image.path contains "\\Windows\\Temp\\") and tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains "/Create ") and (not (tgt.process.cmdline contains "update_task.xml" or tgt.process.cmdline contains "unattended.ini"))))
 ```
 
