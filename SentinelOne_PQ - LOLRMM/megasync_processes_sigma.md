@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\MEGAsyncSetup64.exe" or src.process.image.path contains "\\MEGAupdater.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "MEGAsyncSetup64.exe" or src.process.image.path contains "MEGAupdater.exe") or (tgt.process.image.path contains "MEGAsyncSetup64.exe" or tgt.process.image.path contains "MEGAupdater.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential MEGAsync RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\MEGAsyncSetup64.exe'
-    - '*\MEGAupdater.exe'
-  condition: selection
-id: a0026069-13de-49ef-be27-1951aecc3581
+id: cbf08552-4899-4a63-b019-d100a6f9036d
 status: experimental
-description: Detects potential processes activity of MEGAsync RMM tool
+description: |
+    Detects potential processes activity of MEGAsync RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - MEGAsyncSetup64.exe
+            - MEGAupdater.exe
+    selection_image:
+        Image|endswith:
+            - MEGAsyncSetup64.exe
+            - MEGAupdater.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of MEGAsync
+    - Legitimate use of MEGAsync
 level: medium
 ```

@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "aspia_client.exe" or tgt.process.image.path contains "aspia_client.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Aspia RMM Tool Process Activity
+id: e99e5977-1f68-48e8-9fd5-5e67840021d1
+status: experimental
+description: |
+    Detects potential processes activity of Aspia RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: aspia_client.exe
+    selection_image:
+        Image|endswith: aspia_client.exe
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Aspia
+level: medium
+```

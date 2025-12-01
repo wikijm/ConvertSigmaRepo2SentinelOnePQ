@@ -1,0 +1,31 @@
+```sql
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+(event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "electric.ai" or event.dns.request contains "electric.ai"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Electric AI (Kaseya) RMM Tool Network Activity
+id: bef256ea-20de-413d-86c4-c6b6c825b233
+status: experimental
+description: |
+    Detects potential network activity of Electric AI (Kaseya) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: electric.ai
+    condition: selection
+falsepositives:
+    - Legitimate use of Electric AI (Kaseya)
+level: medium
+```

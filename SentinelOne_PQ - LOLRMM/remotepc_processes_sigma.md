@@ -1,34 +1,45 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remotepcservice.exe" or src.process.image.path contains "RemotePC.exe" or src.process.image.path contains "remotepchost.exe" or src.process.image.path contains "rpcsuite.exe" or src.process.image.path contains "\\RemotePCService.exe" or src.process.image.path contains "RemotePCService.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remotepcservice.exe" or src.process.image.path contains "RemotePC.exe" or src.process.image.path contains "remotepchost.exe" or src.process.image.path contains "rpcsuite.exe" or src.process.image.path contains "RemotePCService.exe" or src.process.image.path contains "RemotePCService.exe") or (tgt.process.image.path contains "remotepcservice.exe" or tgt.process.image.path contains "RemotePC.exe" or tgt.process.image.path contains "remotepchost.exe" or tgt.process.image.path contains "rpcsuite.exe" or tgt.process.image.path contains "RemotePCService.exe" or tgt.process.image.path contains "RemotePCService.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential RemotePC RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - remotepcservice.exe
-    - RemotePC.exe
-    - remotepchost.exe
-    - rpcsuite.exe
-    - '*\RemotePCService.exe'
-    - RemotePCService.exe
-  condition: selection
-id: 5afe5393-d9b5-47e6-a332-a32ba5f07fea
+id: 5b7c22f4-9bd6-4ec1-8624-6a0798fee565
 status: experimental
-description: Detects potential processes activity of RemotePC RMM tool
+description: |
+    Detects potential processes activity of RemotePC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - remotepcservice.exe
+            - RemotePC.exe
+            - remotepchost.exe
+            - rpcsuite.exe
+            - RemotePCService.exe
+            - RemotePCService.exe
+    selection_image:
+        Image|endswith:
+            - remotepcservice.exe
+            - RemotePC.exe
+            - remotepchost.exe
+            - rpcsuite.exe
+            - RemotePCService.exe
+            - RemotePCService.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of RemotePC
+    - Legitimate use of RemotePC
 level: medium
 ```

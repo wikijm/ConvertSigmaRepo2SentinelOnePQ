@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "mygreenpc.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mygreenpc.exe" or tgt.process.image.path contains "mygreenpc.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential MyGreenPC RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - mygreenpc.exe
-  condition: selection
-id: b31936e6-2ba0-4eaf-9965-ceadb135f6c3
+id: 3400131e-9dfe-488c-b132-cbcd02f58ded
 status: experimental
-description: Detects potential processes activity of MyGreenPC RMM tool
+description: |
+    Detects potential processes activity of MyGreenPC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: mygreenpc.exe
+    selection_image:
+        Image|endswith: mygreenpc.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of MyGreenPC
+    - Legitimate use of MyGreenPC
 level: medium
 ```

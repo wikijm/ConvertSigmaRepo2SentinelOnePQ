@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "user_managed" or event.dns.request contains "user_managed"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential TigerVNC RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - user_managed
-  condition: selection
-id: d40e408b-1732-48a3-8d81-88409cd9ebfe
+id: 659e4ee1-b114-4246-be15-50355953d8cd
 status: experimental
-description: Detects potential network activity of TigerVNC RMM tool
+description: |
+    Detects potential network activity of TigerVNC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: user_managed
+    condition: selection
 falsepositives:
-- Legitimate use of TigerVNC
+    - Legitimate use of TigerVNC
 level: medium
 ```

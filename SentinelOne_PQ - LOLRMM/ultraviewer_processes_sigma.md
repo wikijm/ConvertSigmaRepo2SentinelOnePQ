@@ -1,35 +1,51 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "UltraViewer_Service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer.exe" or src.process.image.path contains "C:\\Program Files (x86)\\UltraViewer\\UltraViewer_Desktop.exe" or src.process.image.path contains "\\UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer_desktop.exe" or src.process.image.path contains "ultraviewer_service.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "UltraViewer_Service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "ultraviewer_desktop.exe" or src.process.image.path contains "ultraviewer_service.exe" or src.process.image.path contains "UltraViewer_Desktop.exe" or src.process.image.path contains "UltraViewer_Service.exe") or (tgt.process.image.path contains "UltraViewer_Service.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "ultraviewer_desktop.exe" or tgt.process.image.path contains "ultraviewer_service.exe" or tgt.process.image.path contains "UltraViewer_Desktop.exe" or tgt.process.image.path contains "UltraViewer_Service.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential UltraViewer RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - UltraViewer_Service.exe
-    - UltraViewer_Desktop.exe
-    - ultraviewer.exe
-    - C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe
-    - '*\UltraViewer_Desktop.exe'
-    - ultraviewer_desktop.exe
-    - ultraviewer_service.exe
-  condition: selection
-id: 71b5a484-76c9-4341-9267-f4b7eb8fd8a3
+id: 28310552-4d99-4da6-96cd-f9ac9258f564
 status: experimental
-description: Detects potential processes activity of UltraViewer RMM tool
+description: |
+    Detects potential processes activity of UltraViewer RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - UltraViewer_Service.exe
+            - UltraViewer_Desktop.exe
+            - ultraviewer.exe
+            - UltraViewer_Desktop.exe
+            - UltraViewer_Desktop.exe
+            - ultraviewer_desktop.exe
+            - ultraviewer_service.exe
+            - UltraViewer_Desktop.exe
+            - UltraViewer_Service.exe
+    selection_image:
+        Image|endswith:
+            - UltraViewer_Service.exe
+            - UltraViewer_Desktop.exe
+            - ultraviewer.exe
+            - UltraViewer_Desktop.exe
+            - UltraViewer_Desktop.exe
+            - ultraviewer_desktop.exe
+            - ultraviewer_service.exe
+            - UltraViewer_Desktop.exe
+            - UltraViewer_Service.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of UltraViewer
+    - Legitimate use of UltraViewer
 level: medium
 ```

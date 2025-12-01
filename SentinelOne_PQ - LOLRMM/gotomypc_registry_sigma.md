@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc" or registry.keyPath contains "HKEY_LOCAL_MACHINE\\WOW6432Node\\Citrix\\GoToMyPc\\GuestInvite" or registry.keyPath contains "HKEY_CURRENT_USER\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history" or registry.keyPath contains "HKEY_USERS\\<SID>\\SOFTWARE\\Citrix\\GoToMyPc\\FileTransfer\\history"))
 ```
 
@@ -7,26 +7,29 @@ event.category="registry" and (endpoint.os="windows" and (registry.keyPath conta
 # Original Sigma Rule:
 ```yaml
 title: Potential GoToMyPC RMM Tool Registry Activity
-logsource:
-  product: windows
-  category: registry_event
-detection:
-  selection:
-    TargetObject|contains:
-    - HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc
-    - HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc\GuestInvite
-    - HKEY_CURRENT_USER\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history
-    - HKEY_USERS\<SID>\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history
-  condition: selection
-id: 19774fdd-89fd-43eb-9871-30c5930f1af4
+id: beb98caf-9df0-4cc4-a8b8-80bc6a7e7e31
 status: experimental
-description: Detects potential registry activity of GoToMyPC RMM tool
+description: |
+    Detects potential registry activity of GoToMyPC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc
+            - HKEY_LOCAL_MACHINE\WOW6432Node\Citrix\GoToMyPc\GuestInvite
+            - HKEY_CURRENT_USER\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history
+            - HKEY_USERS\<SID>\SOFTWARE\Citrix\GoToMyPc\FileTransfer\history
+    condition: selection
 falsepositives:
-- Legitimate use of GoToMyPC
+    - Legitimate use of GoToMyPC
 level: medium
 ```

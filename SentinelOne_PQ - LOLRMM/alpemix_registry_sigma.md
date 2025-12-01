@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="registry" and (endpoint.os="windows" and registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\AlpemixSrvcx")
 ```
 
@@ -7,23 +7,25 @@ event.category="registry" and (endpoint.os="windows" and registry.keyPath contai
 # Original Sigma Rule:
 ```yaml
 title: Potential Alpemix RMM Tool Registry Activity
-logsource:
-  product: windows
-  category: registry_event
-detection:
-  selection:
-    TargetObject|contains:
-    - HKLM\SYSTEM\CurrentControlSet\Services\AlpemixSrvcx
-  condition: selection
-id: 69e8d2cb-44e6-478e-9fc5-73daa1bb78c2
+id: bc21f832-b65a-428e-9692-764f20b24731
 status: experimental
-description: Detects potential registry activity of Alpemix RMM tool
+description: |
+    Detects potential registry activity of Alpemix RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: HKLM\SYSTEM\CurrentControlSet\Services\AlpemixSrvcx
+    condition: selection
 falsepositives:
-- Legitimate use of Alpemix
+    - Legitimate use of Alpemix
 level: medium
 ```

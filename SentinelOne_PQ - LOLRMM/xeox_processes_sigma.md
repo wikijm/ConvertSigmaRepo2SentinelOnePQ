@@ -1,32 +1,41 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "xeox-agent_x64.exe" or src.process.image.path contains "xeox_service_windows.exe" or src.process.image.path="*xeox-agent_*.exe" or src.process.image.path contains "xeox-agent_x86.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "xeox-agent_x64.exe" or src.process.image.path contains "xeox_service_windows.exe" or src.process.image.path="*xeox-agent_*.exe" or src.process.image.path contains "xeox-agent_x86.exe") or (tgt.process.image.path contains "xeox-agent_x64.exe" or tgt.process.image.path contains "xeox_service_windows.exe" or tgt.process.image.path="*xeox-agent_*.exe" or tgt.process.image.path contains "xeox-agent_x86.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Xeox RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - xeox-agent_x64.exe
-    - xeox_service_windows.exe
-    - xeox-agent_*.exe
-    - xeox-agent_x86.exe
-  condition: selection
-id: 9063ed28-7fb7-4ea6-af24-e51e6d0cbb09
+id: 5ea7cf79-3d87-4576-a46d-793783a0acb7
 status: experimental
-description: Detects potential processes activity of Xeox RMM tool
+description: |
+    Detects potential processes activity of Xeox RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - xeox-agent_x64.exe
+            - xeox_service_windows.exe
+            - xeox-agent_*.exe
+            - xeox-agent_x86.exe
+    selection_image:
+        Image|endswith:
+            - xeox-agent_x64.exe
+            - xeox_service_windows.exe
+            - xeox-agent_*.exe
+            - xeox-agent_x86.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Xeox
+    - Legitimate use of Xeox
 level: medium
 ```

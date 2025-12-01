@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\log.txt" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\*" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\AteraAgent.exe" or tgt.file.path contains "C:\\Program Files\\Atera Networks\\AlphaAgent.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageSTRemote\\AgentPackageSTRemote.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageMonitoring\\AgentPackageMonitoring.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageHeartbeat\\AgentPackageHeartbeat.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageFileExplorer\\AgentPackageFileExplorer.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\AgentPackageRunCommandInteractive.exe"))
 ```
 
@@ -7,31 +7,34 @@ event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:
 # Original Sigma Rule:
 ```yaml
 title: Potential Atera RMM Tool File Activity
-logsource:
-  product: windows
-  category: file_event
-detection:
-  selection:
-    TargetFilename|endswith:
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\*
-    - C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe
-    - C:\Program Files\Atera Networks\AlphaAgent.exe
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe
-    - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe
-  condition: selection
-id: a08c1267-edce-4af3-8f48-bf74bb4f52c6
+id: b7910581-e65f-4a2c-ae44-0edb2479154d
 status: experimental
-description: Detects potential files activity of Atera RMM tool
+description: |
+    Detects potential files activity of Atera RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\*
+            - C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe
+            - C:\Program Files\Atera Networks\AlphaAgent.exe
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe
+            - C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe
+    condition: selection
 falsepositives:
-- Legitimate use of Atera
+    - Legitimate use of Atera
 level: medium
 ```

@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*UltraVNC*.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*UltraVNC*.exe" or tgt.process.image.path="*UltraVNC*.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential UltraVNC RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - UltraVNC*.exe
-  condition: selection
-id: c956baf8-4414-4b19-97cc-edfe477cec0f
+id: 5d95a95f-430b-49da-881c-01b48b6615da
 status: experimental
-description: Detects potential processes activity of UltraVNC RMM tool
+description: |
+    Detects potential processes activity of UltraVNC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: UltraVNC*.exe
+    selection_image:
+        Image|endswith: UltraVNC*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of UltraVNC
+    - Legitimate use of UltraVNC
 level: medium
 ```

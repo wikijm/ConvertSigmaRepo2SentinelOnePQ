@@ -1,31 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*tailscale-*.exe" or src.process.image.path contains "tailscaled.exe" or src.process.image.path contains "tailscale-ipn.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*tailscale-*.exe" or src.process.image.path contains "tailscaled.exe" or src.process.image.path contains "tailscale-ipn.exe") or (tgt.process.image.path="*tailscale-*.exe" or tgt.process.image.path contains "tailscaled.exe" or tgt.process.image.path contains "tailscale-ipn.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Tailscale RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - tailscale-*.exe
-    - tailscaled.exe
-    - tailscale-ipn.exe
-  condition: selection
-id: 0b2d2c36-e382-49d8-982a-9805d7c50f67
+id: 9e0cab82-8204-40d4-85ce-73915b1c7c61
 status: experimental
-description: Detects potential processes activity of Tailscale RMM tool
+description: |
+    Detects potential processes activity of Tailscale RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - tailscale-*.exe
+            - tailscaled.exe
+            - tailscale-ipn.exe
+    selection_image:
+        Image|endswith:
+            - tailscale-*.exe
+            - tailscaled.exe
+            - tailscale-ipn.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Tailscale
+    - Legitimate use of Tailscale
 level: medium
 ```

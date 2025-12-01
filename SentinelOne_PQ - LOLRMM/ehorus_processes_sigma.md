@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ehorus standalone.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ehorus standalone.exe" or tgt.process.image.path contains "ehorus standalone.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential eHorus RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ehorus standalone.exe
-  condition: selection
-id: 006d9c2f-3eaf-4b59-b8c3-b9ee5ad5ba47
+id: 740d017e-89db-4f2e-9cbe-74e08503bb76
 status: experimental
-description: Detects potential processes activity of eHorus RMM tool
+description: |
+    Detects potential processes activity of eHorus RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: ehorus standalone.exe
+    selection_image:
+        Image|endswith: ehorus standalone.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of eHorus
+    - Legitimate use of eHorus
 level: medium
 ```

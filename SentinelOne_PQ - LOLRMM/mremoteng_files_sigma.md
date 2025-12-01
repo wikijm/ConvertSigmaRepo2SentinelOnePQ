@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\mRemoteNG\\mRemoteNG.log" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\mRemoteNG\\confCons.xml" or tgt.file.path="*C:\\Users\*\\AppData\*\\mRemoteNG\**10\\user.config"))
 ```
 
@@ -7,25 +7,28 @@ event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:
 # Original Sigma Rule:
 ```yaml
 title: Potential mRemoteNG RMM Tool File Activity
-logsource:
-  product: windows
-  category: file_event
-detection:
-  selection:
-    TargetFilename|endswith:
-    - C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log
-    - C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml
-    - C:\Users\*\AppData\*\mRemoteNG\**10\user.config
-  condition: selection
-id: f05be463-6a61-4a89-ab8b-f17bf9b879e3
+id: 453adbd6-da18-4d1f-b7f6-ef5cdbc43684
 status: experimental
-description: Detects potential files activity of mRemoteNG RMM tool
+description: |
+    Detects potential files activity of mRemoteNG RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log
+            - C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml
+            - C:\Users\*\AppData\*\mRemoteNG\**10\user.config
+    condition: selection
 falsepositives:
-- Legitimate use of mRemoteNG
+    - Legitimate use of mRemoteNG
 level: medium
 ```

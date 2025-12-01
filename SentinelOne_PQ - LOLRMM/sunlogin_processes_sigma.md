@@ -1,31 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "OrayRemoteShell.exe" or src.process.image.path contains "OrayRemoteService.exe" or src.process.image.path="*sunlogin*.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "OrayRemoteShell.exe" or src.process.image.path contains "OrayRemoteService.exe" or src.process.image.path="*sunlogin*.exe") or (tgt.process.image.path contains "OrayRemoteShell.exe" or tgt.process.image.path contains "OrayRemoteService.exe" or tgt.process.image.path="*sunlogin*.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential SunLogin RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - OrayRemoteShell.exe
-    - OrayRemoteService.exe
-    - sunlogin*.exe
-  condition: selection
-id: 820431ec-1186-4462-b809-17dbc4603614
+id: e3facbfa-0474-406e-a800-91a4ddf1b08e
 status: experimental
-description: Detects potential processes activity of SunLogin RMM tool
+description: |
+    Detects potential processes activity of SunLogin RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - OrayRemoteShell.exe
+            - OrayRemoteService.exe
+            - sunlogin*.exe
+    selection_image:
+        Image|endswith:
+            - OrayRemoteShell.exe
+            - OrayRemoteService.exe
+            - sunlogin*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of SunLogin
+    - Legitimate use of SunLogin
 level: medium
 ```

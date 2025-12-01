@@ -1,34 +1,45 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "mikogo.exe" or src.process.image.path contains "mikogo-starter.exe" or src.process.image.path contains "mikogo-service.exe" or src.process.image.path contains "mikogolauncher.exe" or src.process.image.path contains "\\Mikogo-Service.exe" or src.process.image.path contains "\\Mikogo-Screen-Service.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "mikogo.exe" or src.process.image.path contains "mikogo-starter.exe" or src.process.image.path contains "mikogo-service.exe" or src.process.image.path contains "mikogolauncher.exe" or src.process.image.path contains "Mikogo-Service.exe" or src.process.image.path contains "Mikogo-Screen-Service.exe") or (tgt.process.image.path contains "mikogo.exe" or tgt.process.image.path contains "mikogo-starter.exe" or tgt.process.image.path contains "mikogo-service.exe" or tgt.process.image.path contains "mikogolauncher.exe" or tgt.process.image.path contains "Mikogo-Service.exe" or tgt.process.image.path contains "Mikogo-Screen-Service.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Mikogo RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - mikogo.exe
-    - mikogo-starter.exe
-    - mikogo-service.exe
-    - mikogolauncher.exe
-    - '*\Mikogo-Service.exe'
-    - '*\Mikogo-Screen-Service.exe'
-  condition: selection
-id: 2d03f8d5-126b-4b10-8e69-c7408a861cc0
+id: bf492f20-25e6-4891-867d-2da09dbe45ab
 status: experimental
-description: Detects potential processes activity of Mikogo RMM tool
+description: |
+    Detects potential processes activity of Mikogo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - mikogo.exe
+            - mikogo-starter.exe
+            - mikogo-service.exe
+            - mikogolauncher.exe
+            - Mikogo-Service.exe
+            - Mikogo-Screen-Service.exe
+    selection_image:
+        Image|endswith:
+            - mikogo.exe
+            - mikogo-starter.exe
+            - mikogo-service.exe
+            - mikogolauncher.exe
+            - Mikogo-Service.exe
+            - Mikogo-Screen-Service.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Mikogo
+    - Legitimate use of Mikogo
 level: medium
 ```

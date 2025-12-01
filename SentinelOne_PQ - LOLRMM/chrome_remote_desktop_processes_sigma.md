@@ -1,31 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remote_host.exe" or src.process.image.path contains "remoting_host.exe" or src.process.image.path contains "\\remoting_host.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remote_host.exe" or src.process.image.path contains "remoting_host.exe" or src.process.image.path contains "remoting_host.exe") or (tgt.process.image.path contains "remote_host.exe" or tgt.process.image.path contains "remoting_host.exe" or tgt.process.image.path contains "remoting_host.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Chrome Remote Desktop RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - remote_host.exe
-    - remoting_host.exe
-    - '*\remoting_host.exe'
-  condition: selection
-id: 9ba8e1a9-1a5f-4297-bc82-712f5427355a
+id: bc915205-3ead-4c5b-9cfc-5858b9370aeb
 status: experimental
-description: Detects potential processes activity of Chrome Remote Desktop RMM tool
+description: |
+    Detects potential processes activity of Chrome Remote Desktop RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - remote_host.exe
+            - remoting_host.exe
+            - remoting_host.exe
+    selection_image:
+        Image|endswith:
+            - remote_host.exe
+            - remoting_host.exe
+            - remoting_host.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Chrome Remote Desktop
+    - Legitimate use of Chrome Remote Desktop
 level: medium
 ```

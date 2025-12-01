@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "app.pdq.com" or url.address contains "cfcdn.pdq.com" or url.address="*pdqinstallers.*.r2.cloudflarestorage.com") or (event.dns.request contains "app.pdq.com" or event.dns.request contains "cfcdn.pdq.com" or event.dns.request="*pdqinstallers.*.r2.cloudflarestorage.com")))
 ```
 
@@ -7,25 +7,28 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential PDQ Connect RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - app.pdq.com
-    - cfcdn.pdq.com
-    - pdqinstallers.*.r2.cloudflarestorage.com
-  condition: selection
-id: e27c6d0b-9d16-4eb3-9abd-8ba0a2cc0f6e
+id: 89443d65-866c-4fde-8873-7e740f53c46a
 status: experimental
-description: Detects potential network activity of PDQ Connect RMM tool
+description: |
+    Detects potential network activity of PDQ Connect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - app.pdq.com
+            - cfcdn.pdq.com
+            - pdqinstallers.*.r2.cloudflarestorage.com
+    condition: selection
 falsepositives:
-- Legitimate use of PDQ Connect
+    - Legitimate use of PDQ Connect
 level: medium
 ```

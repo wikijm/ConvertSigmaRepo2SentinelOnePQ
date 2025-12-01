@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files (x86)\\Radmin Viewer 3\\Radmin.exe" or src.process.image.path contains "C:\\Windows\\SysWOW64\\rserver30\\rserver3.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Radmin.exe" or src.process.image.path contains "rserver3.exe") or (tgt.process.image.path contains "Radmin.exe" or tgt.process.image.path contains "rserver3.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential RAdmin RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe
-    - C:\Windows\SysWOW64\rserver30\rserver3.exe
-  condition: selection
-id: b47e3faf-70e8-4067-b211-000156df756b
+id: c1830a71-6799-4206-98f6-225a833a569c
 status: experimental
-description: Detects potential processes activity of RAdmin RMM tool
+description: |
+    Detects potential processes activity of RAdmin RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - Radmin.exe
+            - rserver3.exe
+    selection_image:
+        Image|endswith:
+            - Radmin.exe
+            - rserver3.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of RAdmin
+    - Legitimate use of RAdmin
 level: medium
 ```

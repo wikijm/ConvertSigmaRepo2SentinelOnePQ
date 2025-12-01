@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*meshcentral*.exe" or src.process.image.path="*mesh*.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*meshcentral*.exe" or src.process.image.path="*meshagent*.exe") or (tgt.process.image.path="*meshcentral*.exe" or tgt.process.image.path="*meshagent*.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential MeshCentral RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - meshcentral*.exe
-    - mesh*.exe
-  condition: selection
-id: 86eb4e28-14e7-4dfa-8d6d-3e35db4f7d2e
+id: 14c902eb-2fb2-4fa9-a2da-adbd83861c1c
 status: experimental
-description: Detects potential processes activity of MeshCentral RMM tool
+description: |
+    Detects potential processes activity of MeshCentral RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - meshcentral*.exe
+            - meshagent*.exe
+    selection_image:
+        Image|endswith:
+            - meshcentral*.exe
+            - meshagent*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of MeshCentral
+    - Legitimate use of MeshCentral
 level: medium
 ```

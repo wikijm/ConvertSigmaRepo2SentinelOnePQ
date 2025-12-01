@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ocsinventory.exe" or src.process.image.path contains "ocsservice.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ocsinventory.exe" or src.process.image.path contains "ocsservice.exe") or (tgt.process.image.path contains "ocsinventory.exe" or tgt.process.image.path contains "ocsservice.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential OCS inventory RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ocsinventory.exe
-    - ocsservice.exe
-  condition: selection
-id: 9da56624-e193-40ca-85a3-831343f5b797
+id: 7751f589-527f-4ada-ad90-ac026b8e6183
 status: experimental
-description: Detects potential processes activity of OCS inventory RMM tool
+description: |
+    Detects potential processes activity of OCS inventory RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - ocsinventory.exe
+            - ocsservice.exe
+    selection_image:
+        Image|endswith:
+            - ocsinventory.exe
+            - ocsservice.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of OCS inventory
+    - Legitimate use of OCS inventory
 level: medium
 ```

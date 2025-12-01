@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Windows\\System32\\mstsc.exe" or src.process.image.path contains "Windows\\System32\\mstsc.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "mstsc.exe" or src.process.image.path contains "mstsc.exe") or (tgt.process.image.path contains "mstsc.exe" or tgt.process.image.path contains "mstsc.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential mstsc RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - C:\Windows\System32\mstsc.exe
-    - '*Windows\System32\mstsc.exe'
-  condition: selection
-id: 95a522bd-aa12-4d0b-9e44-37381ef561c0
+id: 62ff9712-e354-40f9-91ad-f2983a08b301
 status: experimental
-description: Detects potential processes activity of mstsc RMM tool
+description: |
+    Detects potential processes activity of mstsc RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - mstsc.exe
+            - mstsc.exe
+    selection_image:
+        Image|endswith:
+            - mstsc.exe
+            - mstsc.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of mstsc
+    - Legitimate use of mstsc
 level: medium
 ```

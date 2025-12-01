@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Solar-PuTTY.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Solar-PuTTY.exe" or tgt.process.image.path contains "Solar-PuTTY.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Solar-PuTTY RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\Solar-PuTTY.exe'
-  condition: selection
-id: f97f2561-15d9-4649-a34c-ca25cb71ad2e
+id: 2c96b3a9-21f3-4c0d-9f4f-f587b639c0f5
 status: experimental
-description: Detects potential processes activity of Solar-PuTTY RMM tool
+description: |
+    Detects potential processes activity of Solar-PuTTY RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: Solar-PuTTY.exe
+    selection_image:
+        Image|endswith: Solar-PuTTY.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Solar-PuTTY
+    - Legitimate use of Solar-PuTTY
 level: medium
 ```

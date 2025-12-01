@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Clients\\Media\\AnyDesk" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\AnyDesk" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\.anydesk\\shell\\open\\command" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\AnyDesk\\shell\\open\\command" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Print\\Printers\\AnyDesk Printer\*" or registry.keyPath contains "HKLM\\DRIVERS\\DriverDatabase\\DeviceIds\\USBPRINT\\AnyDesk" or registry.keyPath contains "HKLM\\DRIVERS\\DriverDatabase\\DeviceIds\\WSDPRINT\\AnyDesk" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\AnyDesk"))
 ```
 
@@ -7,30 +7,33 @@ event.category="registry" and (endpoint.os="windows" and (registry.keyPath conta
 # Original Sigma Rule:
 ```yaml
 title: Potential AnyDesk RMM Tool Registry Activity
-logsource:
-  product: windows
-  category: registry_event
-detection:
-  selection:
-    TargetObject|contains:
-    - HKLM\SOFTWARE\Clients\Media\AnyDesk
-    - HKLM\SYSTEM\CurrentControlSet\Services\AnyDesk
-    - HKLM\SOFTWARE\Classes\.anydesk\shell\open\command
-    - HKLM\SOFTWARE\Classes\AnyDesk\shell\open\command
-    - HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\AnyDesk Printer\*
-    - HKLM\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk
-    - HKLM\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk
-    - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\AnyDesk
-  condition: selection
-id: cd914a84-51f3-4342-be98-4e5bc1b7a55e
+id: 3313d179-78b1-41d3-afe0-40dfc5dc794f
 status: experimental
-description: Detects potential registry activity of AnyDesk RMM tool
+description: |
+    Detects potential registry activity of AnyDesk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - HKLM\SOFTWARE\Clients\Media\AnyDesk
+            - HKLM\SYSTEM\CurrentControlSet\Services\AnyDesk
+            - HKLM\SOFTWARE\Classes\.anydesk\shell\open\command
+            - HKLM\SOFTWARE\Classes\AnyDesk\shell\open\command
+            - HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\AnyDesk Printer\*
+            - HKLM\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk
+            - HKLM\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk
+            - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\AnyDesk
+    condition: selection
 falsepositives:
-- Legitimate use of AnyDesk
+    - Legitimate use of AnyDesk
 level: medium
 ```

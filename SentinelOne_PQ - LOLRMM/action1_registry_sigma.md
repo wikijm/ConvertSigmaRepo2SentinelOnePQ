@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\System\\CurrentControlSet\\Services\\A1Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\Windows Error Reporting\\LocalDumps\\action1_agent.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Action1"))
 ```
 
@@ -7,25 +7,28 @@ event.category="registry" and (endpoint.os="windows" and (registry.keyPath conta
 # Original Sigma Rule:
 ```yaml
 title: Potential Action1 RMM Tool Registry Activity
-logsource:
-  product: windows
-  category: registry_event
-detection:
-  selection:
-    TargetObject|contains:
-    - HKLM\System\CurrentControlSet\Services\A1Agent
-    - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\Windows Error Reporting\LocalDumps\action1_agent.exe
-    - HKLM\SOFTWARE\WOW6432Node\Action1
-  condition: selection
-id: 178e38f0-33b9-4ff3-a3a5-62cbb073bc45
+id: 641f0d60-932c-45c2-8feb-03143209c7ee
 status: experimental
-description: Detects potential registry activity of Action1 RMM tool
+description: |
+    Detects potential registry activity of Action1 RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - HKLM\System\CurrentControlSet\Services\A1Agent
+            - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\Windows Error Reporting\LocalDumps\action1_agent.exe
+            - HKLM\SOFTWARE\WOW6432Node\Action1
+    condition: selection
 falsepositives:
-- Legitimate use of Action1
+    - Legitimate use of Action1
 level: medium
 ```

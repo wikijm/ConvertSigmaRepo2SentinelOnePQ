@@ -1,38 +1,53 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ITSMAgent.exe" or src.process.image.path contains "RViewer.exe" or src.process.image.path contains "ItsmRsp.exe" or src.process.image.path contains "RAccess.exe" or src.process.image.path contains "RmmService.exe" or src.process.image.path contains "ITarianRemoteAccessSetup.exe" or src.process.image.path contains "RDesktop.exe" or src.process.image.path contains "ComodoRemoteControl.exe" or src.process.image.path contains "ITSMService.exe" or src.process.image.path contains "RHost.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ITSMAgent.exe" or src.process.image.path contains "RViewer.exe" or src.process.image.path contains "ItsmRsp.exe" or src.process.image.path contains "RAccess.exe" or src.process.image.path contains "RmmService.exe" or src.process.image.path contains "ITarianRemoteAccessSetup.exe" or src.process.image.path contains "RDesktop.exe" or src.process.image.path contains "ComodoRemoteControl.exe" or src.process.image.path contains "ITSMService.exe" or src.process.image.path contains "RHost.exe") or (tgt.process.image.path contains "ITSMAgent.exe" or tgt.process.image.path contains "RViewer.exe" or tgt.process.image.path contains "ItsmRsp.exe" or tgt.process.image.path contains "RAccess.exe" or tgt.process.image.path contains "RmmService.exe" or tgt.process.image.path contains "ITarianRemoteAccessSetup.exe" or tgt.process.image.path contains "RDesktop.exe" or tgt.process.image.path contains "ComodoRemoteControl.exe" or tgt.process.image.path contains "ITSMService.exe" or tgt.process.image.path contains "RHost.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Itarian RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ITSMAgent.exe
-    - RViewer.exe
-    - ItsmRsp.exe
-    - RAccess.exe
-    - RmmService.exe
-    - ITarianRemoteAccessSetup.exe
-    - RDesktop.exe
-    - ComodoRemoteControl.exe
-    - ITSMService.exe
-    - RHost.exe
-  condition: selection
-id: 57c6e0df-6077-4f29-b48d-2999d628c549
+id: c3e4f4a8-5086-404b-a03c-4e679e12125d
 status: experimental
-description: Detects potential processes activity of Itarian RMM tool
+description: |
+    Detects potential processes activity of Itarian RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - ITSMAgent.exe
+            - RViewer.exe
+            - ItsmRsp.exe
+            - RAccess.exe
+            - RmmService.exe
+            - ITarianRemoteAccessSetup.exe
+            - RDesktop.exe
+            - ComodoRemoteControl.exe
+            - ITSMService.exe
+            - RHost.exe
+    selection_image:
+        Image|endswith:
+            - ITSMAgent.exe
+            - RViewer.exe
+            - ItsmRsp.exe
+            - RAccess.exe
+            - RmmService.exe
+            - ITarianRemoteAccessSetup.exe
+            - RDesktop.exe
+            - ComodoRemoteControl.exe
+            - ITSMService.exe
+            - RHost.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Itarian
+    - Legitimate use of Itarian
 level: medium
 ```

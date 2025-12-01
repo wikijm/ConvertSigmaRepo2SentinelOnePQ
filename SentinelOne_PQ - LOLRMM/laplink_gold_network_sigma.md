@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "wen.laplink.com/product/laplink-gold") or (event.dns.request contains "user_managed" or event.dns.request contains "wen.laplink.com/product/laplink-gold")))
 ```
 
@@ -7,24 +7,27 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Laplink Gold RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - user_managed
-    - wen.laplink.com/product/laplink-gold
-  condition: selection
-id: 6e659208-d21e-4981-af48-79bf35b52b87
+id: bf3f2291-9d6d-43f2-bbd3-751b3a6b76b7
 status: experimental
-description: Detects potential network activity of Laplink Gold RMM tool
+description: |
+    Detects potential network activity of Laplink Gold RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - user_managed
+            - wen.laplink.com/product/laplink-gold
+    condition: selection
 falsepositives:
-- Legitimate use of Laplink Gold
+    - Legitimate use of Laplink Gold
 level: medium
 ```

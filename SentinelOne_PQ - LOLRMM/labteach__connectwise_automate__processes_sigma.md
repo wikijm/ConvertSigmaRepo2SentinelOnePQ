@@ -1,30 +1,33 @@
 ```sql
-// Translated content (automatically translated on 03-05-2025 01:26:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ltsvc.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ltsvc.exe" or tgt.process.image.path contains "ltsvc.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential LabTeach (Connectwise Automate) RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ltsvc.exe
-  condition: selection
-id: 3696a0f8-c8a0-417a-a408-e9bdf4caf318
+id: de783c6d-027e-41eb-b53d-6875cd09a7f1
 status: experimental
-description: Detects potential processes activity of LabTeach (Connectwise Automate)
-  RMM tool
+description: |
+    Detects potential processes activity of LabTeach (Connectwise Automate) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: ltsvc.exe
+    selection_image:
+        Image|endswith: ltsvc.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of LabTeach (Connectwise Automate)
+    - Legitimate use of LabTeach (Connectwise Automate)
 level: medium
 ```

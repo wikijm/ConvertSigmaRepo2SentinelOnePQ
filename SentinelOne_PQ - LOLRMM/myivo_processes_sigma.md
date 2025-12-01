@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "myivomgr.exe" or src.process.image.path contains "myivomanager.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "myivomgr.exe" or src.process.image.path contains "myivomanager.exe") or (tgt.process.image.path contains "myivomgr.exe" or tgt.process.image.path contains "myivomanager.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential MyIVO RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - myivomgr.exe
-    - myivomanager.exe
-  condition: selection
-id: ebbf3afb-cee4-4024-8da8-48e156b003d1
+id: 4af16164-365b-47f0-9b15-37ad38073d3a
 status: experimental
-description: Detects potential processes activity of MyIVO RMM tool
+description: |
+    Detects potential processes activity of MyIVO RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - myivomgr.exe
+            - myivomanager.exe
+    selection_image:
+        Image|endswith:
+            - myivomgr.exe
+            - myivomanager.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of MyIVO
+    - Legitimate use of MyIVO
 level: medium
 ```

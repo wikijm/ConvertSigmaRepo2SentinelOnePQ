@@ -1,30 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*rustdesk*.exe" or src.process.image.path contains "rustdesk.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*rustdesk*.exe" or src.process.image.path contains "rustdesk.exe" or src.process.image.path contains "rustdesk.exe") or (tgt.process.image.path="*rustdesk*.exe" or tgt.process.image.path contains "rustdesk.exe" or tgt.process.image.path contains "rustdesk.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential RustDesk RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - rustdesk*.exe
-    - rustdesk.exe
-  condition: selection
-id: c586fb90-dabc-4b16-b0b3-f6b0f6024b91
+id: c6a0e6ff-7653-446a-930e-d1c6f39629fa
 status: experimental
-description: Detects potential processes activity of RustDesk RMM tool
+description: |
+    Detects potential processes activity of RustDesk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - rustdesk*.exe
+            - rustdesk.exe
+            - rustdesk.exe
+    selection_image:
+        Image|endswith:
+            - rustdesk*.exe
+            - rustdesk.exe
+            - rustdesk.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of RustDesk
+    - Legitimate use of RustDesk
 level: medium
 ```

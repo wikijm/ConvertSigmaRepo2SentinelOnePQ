@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*Beinsync*.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*Beinsync*.exe" or tgt.process.image.path="*Beinsync*.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential BeInSync RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - Beinsync*.exe
-  condition: selection
-id: 354d1441-64c5-4429-9e43-ae376256f426
+id: 608f00ea-10b2-49c6-8b5f-7a0ca2c31d4f
 status: experimental
-description: Detects potential processes activity of BeInSync RMM tool
+description: |
+    Detects potential processes activity of BeInSync RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: Beinsync*.exe
+    selection_image:
+        Image|endswith: Beinsync*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of BeInSync
+    - Legitimate use of BeInSync
 level: medium
 ```

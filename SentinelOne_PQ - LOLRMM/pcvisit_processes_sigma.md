@@ -1,32 +1,41 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "pcvisit.exe" or src.process.image.path contains "pcvisit_client.exe" or src.process.image.path contains "pcvisit-easysupport.exe" or src.process.image.path contains "pcvisit_service_client.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcvisit.exe" or src.process.image.path contains "pcvisit_client.exe" or src.process.image.path contains "pcvisit-easysupport.exe" or src.process.image.path contains "pcvisit_service_client.exe") or (tgt.process.image.path contains "pcvisit.exe" or tgt.process.image.path contains "pcvisit_client.exe" or tgt.process.image.path contains "pcvisit-easysupport.exe" or tgt.process.image.path contains "pcvisit_service_client.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Pcvisit RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - pcvisit.exe
-    - pcvisit_client.exe
-    - pcvisit-easysupport.exe
-    - pcvisit_service_client.exe
-  condition: selection
-id: da7aef8c-62ce-4abf-adf3-9df130d9dd30
+id: 257a4755-f13b-48c6-bab0-f2566315df94
 status: experimental
-description: Detects potential processes activity of Pcvisit RMM tool
+description: |
+    Detects potential processes activity of Pcvisit RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - pcvisit.exe
+            - pcvisit_client.exe
+            - pcvisit-easysupport.exe
+            - pcvisit_service_client.exe
+    selection_image:
+        Image|endswith:
+            - pcvisit.exe
+            - pcvisit_client.exe
+            - pcvisit-easysupport.exe
+            - pcvisit_service_client.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Pcvisit
+    - Legitimate use of Pcvisit
 level: medium
 ```

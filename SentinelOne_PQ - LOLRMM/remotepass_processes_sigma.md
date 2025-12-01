@@ -1,31 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remotepass-access.exe" or src.process.image.path contains "rpaccess.exe" or src.process.image.path contains "rpwhostscr.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remotepass-access.exe" or src.process.image.path contains "rpaccess.exe" or src.process.image.path contains "rpwhostscr.exe") or (tgt.process.image.path contains "remotepass-access.exe" or tgt.process.image.path contains "rpaccess.exe" or tgt.process.image.path contains "rpwhostscr.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential RemotePass RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - remotepass-access.exe
-    - rpaccess.exe
-    - rpwhostscr.exe
-  condition: selection
-id: f525d157-826e-472f-9800-9e5b08d3e430
+id: 86223db5-ec72-4fbb-8fa6-deca5afb0582
 status: experimental
-description: Detects potential processes activity of RemotePass RMM tool
+description: |
+    Detects potential processes activity of RemotePass RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - remotepass-access.exe
+            - rpaccess.exe
+            - rpwhostscr.exe
+    selection_image:
+        Image|endswith:
+            - remotepass-access.exe
+            - rpaccess.exe
+            - rpwhostscr.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of RemotePass
+    - Legitimate use of RemotePass
 level: medium
 ```

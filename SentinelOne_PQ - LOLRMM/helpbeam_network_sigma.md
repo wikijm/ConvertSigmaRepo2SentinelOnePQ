@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "helpbeam.software.informer.com" or event.dns.request contains "helpbeam.software.informer.com"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential HelpBeam RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - helpbeam.software.informer.com
-  condition: selection
-id: c54ba54d-fc25-4501-89f8-ecebae615d7a
+id: 858bb23e-4c2b-45b7-9fa5-aae194a58eb1
 status: experimental
-description: Detects potential network activity of HelpBeam RMM tool
+description: |
+    Detects potential network activity of HelpBeam RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: helpbeam.software.informer.com
+    condition: selection
 falsepositives:
-- Legitimate use of HelpBeam
+    - Legitimate use of HelpBeam
 level: medium
 ```

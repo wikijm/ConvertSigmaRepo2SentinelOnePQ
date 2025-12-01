@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ehorus standalone.exe" or src.process.image.path contains "ehorus_agent.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ehorus standalone.exe" or src.process.image.path contains "ehorus_agent.exe") or (tgt.process.image.path contains "ehorus standalone.exe" or tgt.process.image.path contains "ehorus_agent.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Pandora RC (eHorus) RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ehorus standalone.exe
-    - ehorus_agent.exe
-  condition: selection
-id: 0a18fcba-4d6d-4a78-9e5a-81294907bc16
+id: e6720dbb-9fb8-47d9-9474-8364fa251cff
 status: experimental
-description: Detects potential processes activity of Pandora RC (eHorus) RMM tool
+description: |
+    Detects potential processes activity of Pandora RC (eHorus) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - ehorus standalone.exe
+            - ehorus_agent.exe
+    selection_image:
+        Image|endswith:
+            - ehorus standalone.exe
+            - ehorus_agent.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Pandora RC (eHorus)
+    - Legitimate use of Pandora RC (eHorus)
 level: medium
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "soti.net/products/soti-pocket-controller" or event.dns.request contains "soti.net/products/soti-pocket-controller"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Pocket Controller RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - soti.net/products/soti-pocket-controller
-  condition: selection
-id: bb79c471-cfa9-47cc-9325-b65101bbb1f5
+id: 25c4f226-68c3-4a5e-8b73-cac5e7261c05
 status: experimental
-description: Detects potential network activity of Pocket Controller RMM tool
+description: |
+    Detects potential network activity of Pocket Controller RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: soti.net/products/soti-pocket-controller
+    condition: selection
 falsepositives:
-- Legitimate use of Pocket Controller
+    - Legitimate use of Pocket Controller
 level: medium
 ```

@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "tdp2tcp.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "tdp2tcp.exe" or tgt.process.image.path contains "tdp2tcp.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential rdp2tcp RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - tdp2tcp.exe
-  condition: selection
-id: a4f71aeb-9561-4483-b35b-267093abd3a0
+id: 0037520d-ea12-4f04-94be-90c31c240a87
 status: experimental
-description: Detects potential processes activity of rdp2tcp RMM tool
+description: |
+    Detects potential processes activity of rdp2tcp RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: tdp2tcp.exe
+    selection_image:
+        Image|endswith: tdp2tcp.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of rdp2tcp
+    - Legitimate use of rdp2tcp
 level: medium
 ```

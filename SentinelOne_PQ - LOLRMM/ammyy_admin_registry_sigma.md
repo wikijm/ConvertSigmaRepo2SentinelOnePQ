@@ -1,0 +1,33 @@
+```sql
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKU\\.DEFAULT\\Software\\Ammyy\\Admin" or registry.keyPath contains "HKLM\\SYSTEM\\ControlSet001\\Control\\SafeBoot\\Network\\AmmyyAdmin"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Ammyy Admin RMM Tool Registry Activity
+id: b467222e-2511-4dc8-b7f2-6512e51f010f
+status: experimental
+description: |
+    Detects potential registry activity of Ammyy Admin RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains:
+            - HKU\.DEFAULT\Software\Ammyy\Admin
+            - HKLM\SYSTEM\ControlSet001\Control\SafeBoot\Network\AmmyyAdmin
+    condition: selection
+falsepositives:
+    - Legitimate use of Ammyy Admin
+level: medium
+```

@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\Syncthing.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Syncthing.exe" or tgt.process.image.path contains "Syncthing.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Syncthing RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\Syncthing.exe'
-  condition: selection
-id: 44dd04d8-4691-4d7f-9fb0-c4eb4a654465
+id: b7200f2a-41de-4da4-b20b-0b579e994623
 status: experimental
-description: Detects potential processes activity of Syncthing RMM tool
+description: |
+    Detects potential processes activity of Syncthing RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: Syncthing.exe
+    selection_image:
+        Image|endswith: Syncthing.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Syncthing
+    - Legitimate use of Syncthing
 level: medium
 ```

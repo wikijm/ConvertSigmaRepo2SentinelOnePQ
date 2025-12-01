@@ -1,32 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "pocketcontroller.exe" or src.process.image.path contains "wysebrowser.exe" or src.process.image.path contains "XSightService.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pocketcontroller.exe" or src.process.image.path contains "wysebrowser.exe" or src.process.image.path contains "XSightService.exe") or (tgt.process.image.path contains "pocketcontroller.exe" or tgt.process.image.path contains "wysebrowser.exe" or tgt.process.image.path contains "XSightService.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Pocket Controller (Soti Xsight) RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - pocketcontroller.exe
-    - wysebrowser.exe
-    - XSightService.exe
-  condition: selection
-id: 7e666c30-2204-4f07-8ba0-8e46e054c24b
+id: e2c69ebb-436c-41d7-ae09-f5ec7d4e1db5
 status: experimental
-description: Detects potential processes activity of Pocket Controller (Soti Xsight)
-  RMM tool
+description: |
+    Detects potential processes activity of Pocket Controller (Soti Xsight) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - pocketcontroller.exe
+            - wysebrowser.exe
+            - XSightService.exe
+    selection_image:
+        Image|endswith:
+            - pocketcontroller.exe
+            - wysebrowser.exe
+            - XSightService.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Pocket Controller (Soti Xsight)
+    - Legitimate use of Pocket Controller (Soti Xsight)
 level: medium
 ```

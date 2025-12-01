@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "superopsticket.exe" or src.process.image.path contains "superops.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "superopsticket.exe" or src.process.image.path contains "superops.exe") or (tgt.process.image.path contains "superopsticket.exe" or tgt.process.image.path contains "superops.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential SuperOps RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - superopsticket.exe
-    - superops.exe
-  condition: selection
-id: b40a28b6-6003-4142-a64e-e084556270b7
+id: a7d2caf4-7fed-4e47-9a33-34f59c288d3c
 status: experimental
-description: Detects potential processes activity of SuperOps RMM tool
+description: |
+    Detects potential processes activity of SuperOps RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - superopsticket.exe
+            - superops.exe
+    selection_image:
+        Image|endswith:
+            - superopsticket.exe
+            - superops.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of SuperOps
+    - Legitimate use of SuperOps
 level: medium
 ```

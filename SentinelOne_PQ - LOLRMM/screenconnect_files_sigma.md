@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\Session.db" or tgt.file.path="*C:\\Program Files*\\ScreenConnect\\App_Data\\User.xml" or tgt.file.path="*C:\\ProgramData\\ScreenConnect Client*\\user.config"))
 ```
 
@@ -7,25 +7,28 @@ event.category="file" and (endpoint.os="windows" and (tgt.file.path="*C:\\Progra
 # Original Sigma Rule:
 ```yaml
 title: Potential ScreenConnect RMM Tool File Activity
-logsource:
-  product: windows
-  category: file_event
-detection:
-  selection:
-    TargetFilename|endswith:
-    - C:\Program Files*\ScreenConnect\App_Data\Session.db
-    - C:\Program Files*\ScreenConnect\App_Data\User.xml
-    - C:\ProgramData\ScreenConnect Client*\user.config
-  condition: selection
-id: adb2440e-8700-4ab3-9a1a-6b761826955f
+id: fa0f2b6a-8f96-470e-b699-82e4c1bce912
 status: experimental
-description: Detects potential files activity of ScreenConnect RMM tool
+description: |
+    Detects potential files activity of ScreenConnect RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - C:\Program Files*\ScreenConnect\App_Data\Session.db
+            - C:\Program Files*\ScreenConnect\App_Data\User.xml
+            - C:\ProgramData\ScreenConnect Client*\user.config
+    condition: selection
 falsepositives:
-- Legitimate use of ScreenConnect
+    - Legitimate use of ScreenConnect
 level: medium
 ```

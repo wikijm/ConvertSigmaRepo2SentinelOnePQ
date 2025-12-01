@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "remotepass.com" or event.dns.request contains "remotepass.com"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential RemotePass RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - remotepass.com
-  condition: selection
-id: 82fd5bc7-0dad-4558-950d-1833b2325333
+id: f4461751-f222-4de0-9993-9f6b7c4a2e8b
 status: experimental
-description: Detects potential network activity of RemotePass RMM tool
+description: |
+    Detects potential network activity of RemotePass RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: remotepass.com
+    condition: selection
 falsepositives:
-- Legitimate use of RemotePass
+    - Legitimate use of RemotePass
 level: medium
 ```

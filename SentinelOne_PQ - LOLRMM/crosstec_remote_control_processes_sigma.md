@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "PCIVIDEO.EXE" or src.process.image.path contains "supporttool.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "PCIVIDEO.EXE" or src.process.image.path contains "supporttool.exe") or (tgt.process.image.path contains "PCIVIDEO.EXE" or tgt.process.image.path contains "supporttool.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential CrossTec Remote Control RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - PCIVIDEO.EXE
-    - supporttool.exe
-  condition: selection
-id: 97b2d8e4-652c-4722-b268-c21395609fbc
+id: 453cefc5-e656-4b6f-a421-03969acdeddd
 status: experimental
-description: Detects potential processes activity of CrossTec Remote Control RMM tool
+description: |
+    Detects potential processes activity of CrossTec Remote Control RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - PCIVIDEO.EXE
+            - supporttool.exe
+    selection_image:
+        Image|endswith:
+            - PCIVIDEO.EXE
+            - supporttool.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of CrossTec Remote Control
+    - Legitimate use of CrossTec Remote Control
 level: medium
 ```

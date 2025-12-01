@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "apc_host.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "apc_host.exe" or tgt.process.image.path contains "apc_host.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Anyplace Control RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - apc_host.exe
-  condition: selection
-id: b8b70d3d-58df-4a20-b4c0-e225f291f230
+id: 4a442359-e6f0-49fc-a0f2-ec14addb0994
 status: experimental
-description: Detects potential processes activity of Anyplace Control RMM tool
+description: |
+    Detects potential processes activity of Anyplace Control RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: apc_host.exe
+    selection_image:
+        Image|endswith: apc_host.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Anyplace Control
+    - Legitimate use of Anyplace Control
 level: medium
 ```

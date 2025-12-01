@@ -1,28 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "hoptodesk.exe" or src.process.image.path contains "HopToDesk.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "hoptodesk.exe" or tgt.process.image.path contains "hoptodesk.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential HopToDesk RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - hoptodesk.exe
-    - HopToDesk.exe
-  condition: selection
+id: 74d7f991-3e52-4c08-bb51-85cc7be4b484
 status: experimental
-description: Detects potential processes activity of HopToDesk RMM tool
+description: |
+    Detects potential processes activity of HopToDesk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/09/19
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: hoptodesk.exe
+    selection_image:
+        Image|endswith: hoptodesk.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of HopToDesk
-level: medium```
+    - Legitimate use of HopToDesk
+level: medium
+```

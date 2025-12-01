@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*netviewer*.exe" or src.process.image.path contains "netviewer.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*netviewer*.exe" or src.process.image.path contains "netviewer.exe") or (tgt.process.image.path="*netviewer*.exe" or tgt.process.image.path contains "netviewer.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Netviewer RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - netviewer*.exe
-    - netviewer.exe
-  condition: selection
-id: dcf2f0c3-4771-4020-ac33-97b1558997ff
+id: c79e9209-c485-45bf-af98-777c7b1040a2
 status: experimental
-description: Detects potential processes activity of Netviewer RMM tool
+description: |
+    Detects potential processes activity of Netviewer RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - netviewer*.exe
+            - netviewer.exe
+    selection_image:
+        Image|endswith:
+            - netviewer*.exe
+            - netviewer.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Netviewer
+    - Legitimate use of Netviewer
 level: medium
 ```

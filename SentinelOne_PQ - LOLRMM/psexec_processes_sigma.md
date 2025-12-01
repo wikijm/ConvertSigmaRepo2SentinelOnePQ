@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "psexec.exe" or src.process.image.path contains "psexecsvc.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "psexec.exe" or src.process.image.path contains "psexecsvc.exe") or (tgt.process.image.path contains "psexec.exe" or tgt.process.image.path contains "psexecsvc.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential PSEXEC RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - psexec.exe
-    - psexecsvc.exe
-  condition: selection
-id: 11340ea1-ca47-436e-a3ec-658556aa3615
+id: 411e84d4-b1af-418c-b1b0-83b09e8ada35
 status: experimental
-description: Detects potential processes activity of PSEXEC RMM tool
+description: |
+    Detects potential processes activity of PSEXEC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - psexec.exe
+            - psexecsvc.exe
+    selection_image:
+        Image|endswith:
+            - psexec.exe
+            - psexecsvc.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of PSEXEC
+    - Legitimate use of PSEXEC
 level: medium
 ```

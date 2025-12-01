@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "encapto.com" or event.dns.request contains "encapto.com"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Encapto RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - encapto.com
-  condition: selection
-id: 78836ae6-3dc5-4271-9643-7d6f02e60b4b
+id: e4ebc834-c565-481c-9738-403e98cf56ff
 status: experimental
-description: Detects potential network activity of Encapto RMM tool
+description: |
+    Detects potential network activity of Encapto RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: encapto.com
+    condition: selection
 falsepositives:
-- Legitimate use of Encapto
+    - Legitimate use of Encapto
 level: medium
 ```

@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\superputty.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "superputty.exe" or tgt.process.image.path contains "superputty.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential SuperPuTTY RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\superputty.exe'
-  condition: selection
-id: 41eff1f5-a23d-4545-bfd4-97cc71fb51fa
+id: 2c6cea3b-3a7e-466a-8a63-1d56929da07e
 status: experimental
-description: Detects potential processes activity of SuperPuTTY RMM tool
+description: |
+    Detects potential processes activity of SuperPuTTY RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: superputty.exe
+    selection_image:
+        Image|endswith: superputty.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of SuperPuTTY
+    - Legitimate use of SuperPuTTY
 level: medium
 ```

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "seetrol.co.kr" or event.dns.request contains "seetrol.co.kr"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential Seetrol RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - seetrol.co.kr
-  condition: selection
-id: 7c4f13a7-2112-432b-9ba4-bbcf9ed5d985
+id: 03eaba5a-6077-4d7e-a431-1a72cb0c49ba
 status: experimental
-description: Detects potential network activity of Seetrol RMM tool
+description: |
+    Detects potential network activity of Seetrol RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: seetrol.co.kr
+    condition: selection
 falsepositives:
-- Legitimate use of Seetrol
+    - Legitimate use of Seetrol
 level: medium
 ```

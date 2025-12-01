@@ -1,0 +1,34 @@
+```sql
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Parsec\\parsecd.exe" or tgt.file.path contains "C:\\Program Files\\Parsec\\pservice.exe" or tgt.file.path contains "C:\\Program Files\\Parsec\\teams.exe"))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Parsec RMM Tool File Activity
+id: 4bf000d7-7a91-470b-b42b-5593cf3307ed
+status: experimental
+description: |
+    Detects potential files activity of Parsec RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - C:\Program Files\Parsec\parsecd.exe
+            - C:\Program Files\Parsec\pservice.exe
+            - C:\Program Files\Parsec\teams.exe
+    condition: selection
+falsepositives:
+    - Legitimate use of Parsec
+level: medium
+```

@@ -1,32 +1,41 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remoteview.exe" or src.process.image.path contains "rv.exe" or src.process.image.path contains "rvagent.exe" or src.process.image.path contains "rvagtray.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remoteview.exe" or src.process.image.path contains "rv.exe" or src.process.image.path contains "rvagent.exe" or src.process.image.path contains "rvagtray.exe") or (tgt.process.image.path contains "remoteview.exe" or tgt.process.image.path contains "rv.exe" or tgt.process.image.path contains "rvagent.exe" or tgt.process.image.path contains "rvagtray.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential RemoteView RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - remoteview.exe
-    - rv.exe
-    - rvagent.exe
-    - rvagtray.exe
-  condition: selection
-id: 6f0bead3-a60a-4f69-934c-72de73a18d10
+id: b9bdfb4d-21b8-44d8-8ca7-624b60cec151
 status: experimental
-description: Detects potential processes activity of RemoteView RMM tool
+description: |
+    Detects potential processes activity of RemoteView RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - remoteview.exe
+            - rv.exe
+            - rvagent.exe
+            - rvagtray.exe
+    selection_image:
+        Image|endswith:
+            - remoteview.exe
+            - rv.exe
+            - rvagent.exe
+            - rvagtray.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of RemoteView
+    - Legitimate use of RemoteView
 level: medium
 ```

@@ -1,32 +1,41 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "supremo.exe" or src.process.image.path contains "supremoservice.exe" or src.process.image.path contains "supremosystem.exe" or src.process.image.path contains "supremohelper.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "supremo.exe" or src.process.image.path contains "supremoservice.exe" or src.process.image.path contains "supremosystem.exe" or src.process.image.path contains "supremohelper.exe") or (tgt.process.image.path contains "supremo.exe" or tgt.process.image.path contains "supremoservice.exe" or tgt.process.image.path contains "supremosystem.exe" or tgt.process.image.path contains "supremohelper.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Supremo RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - supremo.exe
-    - supremoservice.exe
-    - supremosystem.exe
-    - supremohelper.exe
-  condition: selection
-id: d00d2571-88c6-459e-a2e1-6c928b6be5e5
+id: 59402341-b4b2-4306-b9b5-d49d9c859700
 status: experimental
-description: Detects potential processes activity of Supremo RMM tool
+description: |
+    Detects potential processes activity of Supremo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - supremo.exe
+            - supremoservice.exe
+            - supremosystem.exe
+            - supremohelper.exe
+    selection_image:
+        Image|endswith:
+            - supremo.exe
+            - supremoservice.exe
+            - supremosystem.exe
+            - supremohelper.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Supremo
+    - Legitimate use of Supremo
 level: medium
 ```

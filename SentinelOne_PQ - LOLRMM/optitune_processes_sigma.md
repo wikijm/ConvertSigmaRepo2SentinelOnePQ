@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "OTService.exe" or src.process.image.path contains "OTPowerShell.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "OTService.exe" or src.process.image.path contains "OTPowerShell.exe") or (tgt.process.image.path contains "OTService.exe" or tgt.process.image.path contains "OTPowerShell.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential OptiTune RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - OTService.exe
-    - OTPowerShell.exe
-  condition: selection
-id: 6f92accd-69ed-4cea-a134-e55bb58f496a
+id: 7d5d3bff-8d0f-4a03-adca-6638af47a37a
 status: experimental
-description: Detects potential processes activity of OptiTune RMM tool
+description: |
+    Detects potential processes activity of OptiTune RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - OTService.exe
+            - OTPowerShell.exe
+    selection_image:
+        Image|endswith:
+            - OTService.exe
+            - OTPowerShell.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of OptiTune
+    - Legitimate use of OptiTune
 level: medium
 ```

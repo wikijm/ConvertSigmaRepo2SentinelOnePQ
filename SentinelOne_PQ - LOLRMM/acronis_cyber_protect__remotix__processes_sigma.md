@@ -1,31 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*AcronisCyberProtectConnectQuickAssist*.exe" or src.process.image.path contains "AcronisCyberProtectConnectAgent.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*AcronisCyberProtectConnectQuickAssist*.exe" or src.process.image.path contains "AcronisCyberProtectConnectAgent.exe") or (tgt.process.image.path="*AcronisCyberProtectConnectQuickAssist*.exe" or tgt.process.image.path contains "AcronisCyberProtectConnectAgent.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Acronis Cyber Protect (Remotix) RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - AcronisCyberProtectConnectQuickAssist*.exe
-    - AcronisCyberProtectConnectAgent.exe
-  condition: selection
-id: 9b9647ab-97cc-4c7c-8540-5c1c1c8000c4
+id: 1c52dfd5-39b5-4891-86be-b20a5dd5443d
 status: experimental
-description: Detects potential processes activity of Acronis Cyber Protect (Remotix)
-  RMM tool
+description: |
+    Detects potential processes activity of Acronis Cyber Protect (Remotix) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - AcronisCyberProtectConnectQuickAssist*.exe
+            - AcronisCyberProtectConnectAgent.exe
+    selection_image:
+        Image|endswith:
+            - AcronisCyberProtectConnectQuickAssist*.exe
+            - AcronisCyberProtectConnectAgent.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Acronis Cyber Protect (Remotix)
+    - Legitimate use of Acronis Cyber Protect (Remotix)
 level: medium
 ```

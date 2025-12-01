@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*Sorillus-Launcher*.exe" or src.process.image.path contains "Sorillus Launcher.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*Sorillus-Launcher*.exe" or src.process.image.path contains "Sorillus Launcher.exe") or (tgt.process.image.path="*Sorillus-Launcher*.exe" or tgt.process.image.path contains "Sorillus Launcher.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Sorillus RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - Sorillus-Launcher*.exe
-    - Sorillus Launcher.exe
-  condition: selection
-id: dd380a97-a692-4e46-90cd-aa151b207089
+id: cb2e9d91-8fe8-424f-8b99-bcba5dba14c2
 status: experimental
-description: Detects potential processes activity of Sorillus RMM tool
+description: |
+    Detects potential processes activity of Sorillus RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - Sorillus-Launcher*.exe
+            - Sorillus Launcher.exe
+    selection_image:
+        Image|endswith:
+            - Sorillus-Launcher*.exe
+            - Sorillus Launcher.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Sorillus
+    - Legitimate use of Sorillus
 level: medium
 ```

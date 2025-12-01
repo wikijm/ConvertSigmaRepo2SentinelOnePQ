@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
+// Translated content (automatically translated on 01-12-2025 01:03:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "user_managed" or event.dns.request contains "user_managed"))
 ```
 
@@ -7,23 +7,25 @@
 # Original Sigma Rule:
 ```yaml
 title: Potential PSEXEC (Clone) RMM Tool Network Activity
-logsource:
-  product: windows
-  category: network_connection
-detection:
-  selection:
-    DestinationHostname|endswith:
-    - user_managed
-  condition: selection
-id: 0e19d5d5-98be-43da-8498-9b25a7794086
+id: 68b4ff76-e552-4dbe-a835-04fcdf249d30
 status: experimental
-description: Detects potential network activity of PSEXEC (Clone) RMM tool
+description: |
+    Detects potential network activity of PSEXEC (Clone) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: user_managed
+    condition: selection
 falsepositives:
-- Legitimate use of PSEXEC (Clone)
+    - Legitimate use of PSEXEC (Clone)
 level: medium
 ```

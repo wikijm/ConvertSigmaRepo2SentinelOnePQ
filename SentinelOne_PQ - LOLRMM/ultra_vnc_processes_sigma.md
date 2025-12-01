@@ -1,31 +1,39 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\UVNC_Launch.exe" or src.process.image.path contains "\\winvnc.exe" or src.process.image.path contains "\\vncviewer.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "UVNC_Launch.exe" or src.process.image.path contains "winvnc.exe" or src.process.image.path contains "vncviewer.exe") or (tgt.process.image.path contains "UVNC_Launch.exe" or tgt.process.image.path contains "winvnc.exe" or tgt.process.image.path contains "vncviewer.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Ultra VNC RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\UVNC_Launch.exe'
-    - '*\winvnc.exe'
-    - '*\vncviewer.exe'
-  condition: selection
-id: dd1b2f4a-644e-4794-b261-917ac7e3046b
+id: d43e0555-49c5-4a10-bdda-7ed790de78e8
 status: experimental
-description: Detects potential processes activity of Ultra VNC RMM tool
+description: |
+    Detects potential processes activity of Ultra VNC RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - UVNC_Launch.exe
+            - winvnc.exe
+            - vncviewer.exe
+    selection_image:
+        Image|endswith:
+            - UVNC_Launch.exe
+            - winvnc.exe
+            - vncviewer.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Ultra VNC
+    - Legitimate use of Ultra VNC
 level: medium
 ```

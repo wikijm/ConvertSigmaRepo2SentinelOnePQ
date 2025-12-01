@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "remoteconsole.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "remoteconsole.exe" or tgt.process.image.path contains "remoteconsole.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential EMCO Remote Console RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - remoteconsole.exe
-  condition: selection
-id: 03128fb8-63b7-4c37-bebb-ed7f8fcc82ab
+id: e9d24069-d14f-4172-9d84-211e9ed6ae00
 status: experimental
-description: Detects potential processes activity of EMCO Remote Console RMM tool
+description: |
+    Detects potential processes activity of EMCO Remote Console RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: remoteconsole.exe
+    selection_image:
+        Image|endswith: remoteconsole.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of EMCO Remote Console
+    - Legitimate use of EMCO Remote Console
 level: medium
 ```

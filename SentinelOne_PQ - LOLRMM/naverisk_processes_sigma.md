@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*AgentSetup-*.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*AgentSetup-*.exe" or tgt.process.image.path="*AgentSetup-*.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Naverisk RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - AgentSetup-*.exe
-  condition: selection
-id: 937c6b2e-0b0f-4ebb-a5a5-6dbcf9e7bde2
+id: f25559ec-34d5-43b9-9e4a-e77ef6f218ef
 status: experimental
-description: Detects potential processes activity of Naverisk RMM tool
+description: |
+    Detects potential processes activity of Naverisk RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: AgentSetup-*.exe
+    selection_image:
+        Image|endswith: AgentSetup-*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Naverisk
+    - Legitimate use of Naverisk
 level: medium
 ```

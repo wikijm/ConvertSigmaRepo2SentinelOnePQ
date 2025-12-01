@@ -1,34 +1,43 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "iadmin.exe" or src.process.image.path contains "intelliadmin.exe" or src.process.image.path contains "agent32.exe" or src.process.image.path contains "agent64.exe" or src.process.image.path contains "agent_setup_5.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "iadmin.exe" or src.process.image.path contains "intelliadmin.exe" or src.process.image.path contains "agent32.exe" or src.process.image.path contains "agent64.exe" or src.process.image.path contains "agent_setup_5.exe") or (tgt.process.image.path contains "iadmin.exe" or tgt.process.image.path contains "intelliadmin.exe" or tgt.process.image.path contains "agent32.exe" or tgt.process.image.path contains "agent64.exe" or tgt.process.image.path contains "agent_setup_5.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential IntelliAdmin Remote Control RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - iadmin.exe
-    - intelliadmin.exe
-    - agent32.exe
-    - agent64.exe
-    - agent_setup_5.exe
-  condition: selection
-id: 92dd3c65-418e-4acf-802e-d1e2bf377863
+id: 75a46f4a-38f7-4d29-bcb4-56311293bbbc
 status: experimental
-description: Detects potential processes activity of IntelliAdmin Remote Control RMM
-  tool
+description: |
+    Detects potential processes activity of IntelliAdmin Remote Control RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - iadmin.exe
+            - intelliadmin.exe
+            - agent32.exe
+            - agent64.exe
+            - agent_setup_5.exe
+    selection_image:
+        Image|endswith:
+            - iadmin.exe
+            - intelliadmin.exe
+            - agent32.exe
+            - agent64.exe
+            - agent_setup_5.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of IntelliAdmin Remote Control
+    - Legitimate use of IntelliAdmin Remote Control
 level: medium
 ```

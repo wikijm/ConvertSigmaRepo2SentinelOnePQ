@@ -1,30 +1,37 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Deskroll.exe" or src.process.image.path contains "DeskRollUA.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Deskroll.exe" or src.process.image.path contains "DeskRollUA.exe") or (tgt.process.image.path contains "Deskroll.exe" or tgt.process.image.path contains "DeskRollUA.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential SkyFex RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - Deskroll.exe
-    - DeskRollUA.exe
-  condition: selection
-id: 6a2573e2-7550-4caf-927b-ed8f490a68b7
+id: b4da400d-cfa2-48df-b0df-3af0bd829b2a
 status: experimental
-description: Detects potential processes activity of SkyFex RMM tool
+description: |
+    Detects potential processes activity of SkyFex RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - Deskroll.exe
+            - DeskRollUA.exe
+    selection_image:
+        Image|endswith:
+            - Deskroll.exe
+            - DeskRollUA.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of SkyFex
+    - Legitimate use of SkyFex
 level: medium
 ```

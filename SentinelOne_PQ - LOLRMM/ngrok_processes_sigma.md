@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "ngrok.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "ngrok.exe" or tgt.process.image.path contains "ngrok.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential ngrok RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - ngrok.exe
-  condition: selection
-id: 5c6a492b-4f87-4f2f-8f1d-95b1c7c16ef1
+id: 9b44fabc-09e3-4205-8f07-fbf79aad5d7b
 status: experimental
-description: Detects potential processes activity of ngrok RMM tool
+description: |
+    Detects potential processes activity of ngrok RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: ngrok.exe
+    selection_image:
+        Image|endswith: ngrok.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of ngrok
+    - Legitimate use of ngrok
 level: medium
 ```

@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*zabbix_agent*.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*zabbix_agent*.exe" or tgt.process.image.path="*zabbix_agent*.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Zabbix Agent RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - zabbix_agent*.exe
-  condition: selection
-id: 415d6e06-ca39-4cbf-9a23-c14d720f92e4
+id: 708e407a-303b-4f30-9828-2ac83e94373b
 status: experimental
-description: Detects potential processes activity of Zabbix Agent RMM tool
+description: |
+    Detects potential processes activity of Zabbix Agent RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: zabbix_agent*.exe
+    selection_image:
+        Image|endswith: zabbix_agent*.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Zabbix Agent
+    - Legitimate use of Zabbix Agent
 level: medium
 ```

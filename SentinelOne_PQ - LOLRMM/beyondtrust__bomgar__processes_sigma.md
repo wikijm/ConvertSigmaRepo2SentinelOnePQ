@@ -1,33 +1,43 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path="*bomgar-scc-*.exe" or src.process.image.path contains "bomgar-scc.exe" or src.process.image.path="*bomgar-pac-*.exe" or src.process.image.path contains "bomgar-pac.exe" or src.process.image.path contains "bomgar-rdp.exe"))
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*bomgar-scc-*.exe" or src.process.image.path contains "bomgar-scc.exe" or src.process.image.path="*bomgar-pac-*.exe" or src.process.image.path contains "bomgar-pac.exe" or src.process.image.path contains "bomgar-rdp.exe") or (tgt.process.image.path="*bomgar-scc-*.exe" or tgt.process.image.path contains "bomgar-scc.exe" or tgt.process.image.path="*bomgar-pac-*.exe" or tgt.process.image.path contains "bomgar-pac.exe" or tgt.process.image.path contains "bomgar-rdp.exe")))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential BeyondTrust (Bomgar) RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - bomgar-scc-*.exe
-    - bomgar-scc.exe
-    - bomgar-pac-*.exe
-    - bomgar-pac.exe
-    - bomgar-rdp.exe
-  condition: selection
-id: 142b6802-88d2-4dbe-bde2-129487b63509
+id: 208d9aea-6137-4310-bd7c-2db02f30eb8a
 status: experimental
-description: Detects potential processes activity of BeyondTrust (Bomgar) RMM tool
+description: |
+    Detects potential processes activity of BeyondTrust (Bomgar) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - bomgar-scc-*.exe
+            - bomgar-scc.exe
+            - bomgar-pac-*.exe
+            - bomgar-pac.exe
+            - bomgar-rdp.exe
+    selection_image:
+        Image|endswith:
+            - bomgar-scc-*.exe
+            - bomgar-scc.exe
+            - bomgar-pac-*.exe
+            - bomgar-pac.exe
+            - bomgar-rdp.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of BeyondTrust (Bomgar)
+    - Legitimate use of BeyondTrust (Bomgar)
 level: medium
 ```

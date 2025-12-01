@@ -1,29 +1,33 @@
 ```sql
-// Translated content (automatically translated on 30-11-2025 00:59:06):
-event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\BvSshServer-Inst.exe")
+// Translated content (automatically translated on 01-12-2025 01:03:15):
+event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "BvSshServer-Inst.exe" or tgt.process.image.path contains "BvSshServer-Inst.exe"))
 ```
 
 
 # Original Sigma Rule:
 ```yaml
 title: Potential Bitvise SSH Server RMM Tool Process Activity
-logsource:
-  product: windows
-  category: process_creation
-detection:
-  selection:
-    ParentImage|endswith:
-    - '*\BvSshServer-Inst.exe'
-  condition: selection
-id: 3cae538e-c158-40e4-9ec0-9e49d92a63c4
+id: 037e22d4-9e7b-44ce-ab0f-30841dfc2b9b
 status: experimental
-description: Detects potential processes activity of Bitvise SSH Server RMM tool
+description: |
+    Detects potential processes activity of Bitvise SSH Server RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2024/08/07
+date: 2025-12-01
 tags:
-- attack.execution
-- attack.t1219
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith: BvSshServer-Inst.exe
+    selection_image:
+        Image|endswith: BvSshServer-Inst.exe
+    condition: 1 of selection_*
 falsepositives:
-- Legitimate use of Bitvise SSH Server
+    - Legitimate use of Bitvise SSH Server
 level: medium
 ```
