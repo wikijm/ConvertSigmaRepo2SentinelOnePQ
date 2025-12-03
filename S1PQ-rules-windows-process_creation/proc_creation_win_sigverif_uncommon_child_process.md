@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-12-2025 02:06:10):
+// Translated content (automatically translated on 03-12-2025 02:05:37):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\sigverif.exe" and (not (tgt.process.image.path in ("C:\\Windows\\System32\\WerFault.exe","C:\\Windows\\SysWOW64\\WerFault.exe")))))
 ```
 
