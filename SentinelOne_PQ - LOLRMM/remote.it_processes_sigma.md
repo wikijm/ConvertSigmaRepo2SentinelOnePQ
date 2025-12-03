@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-12-2025 00:53:55):
+// Translated content (automatically translated on 03-12-2025 00:53:26):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remote-it-installer.exe" or src.process.image.path contains "remote.it.exe" or src.process.image.path contains "remoteit.exe") or (tgt.process.image.path contains "remote-it-installer.exe" or tgt.process.image.path contains "remote.it.exe" or tgt.process.image.path contains "remoteit.exe")))
 ```
 
