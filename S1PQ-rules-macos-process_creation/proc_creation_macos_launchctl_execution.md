@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-12-2025 01:20:52):
+// Translated content (automatically translated on 04-12-2025 01:20:48):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/launchctl" and (tgt.process.cmdline contains "submit" or tgt.process.cmdline contains "load" or tgt.process.cmdline contains "start")))
 ```
 
