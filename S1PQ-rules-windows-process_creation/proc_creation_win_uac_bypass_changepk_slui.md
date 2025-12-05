@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-12-2025 02:06:40):
+// Translated content (automatically translated on 05-12-2025 02:06:43):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\changepk.exe" and src.process.image.path contains "\\slui.exe" and (tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288"))))
 ```
 
