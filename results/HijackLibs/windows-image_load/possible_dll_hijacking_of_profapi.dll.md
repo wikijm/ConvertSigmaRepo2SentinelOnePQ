@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-12-2025 01:48:38):
+// Translated content (automatically translated on 05-12-2025 01:49:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\profapi.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
