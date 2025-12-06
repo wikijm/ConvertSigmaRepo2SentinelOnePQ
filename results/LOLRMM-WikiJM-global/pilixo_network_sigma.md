@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-12-2025 01:42:24):
+// Translated content (automatically translated on 06-12-2025 01:36:23):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "pilixo.com" or url.address contains "download.pilixo.com" or url.address contains ".pilixo.com") or (event.dns.request contains "pilixo.com" or event.dns.request contains "download.pilixo.com" or event.dns.request contains ".pilixo.com")))
 ```
 
