@@ -1,0 +1,26 @@
+title: Possible preparation for comn.dll DLL Hijacking
+id: 9600522b-8101-48a3-6493-5b9ff8589893
+status: experimental
+description: Detects possible DLL hijacking of comn.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/aomei/comn.html
+author: "Still Hsu"
+date: 2025-12-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\comn.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

@@ -187,6 +187,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for comn.dll DLL Hijacking
+id: 9600522b-8101-48a3-6493-5b9ff8589893
+status: experimental
+description: Detects possible DLL hijacking of comn.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/aomei/comn.html
+author: "Still Hsu"
+date: 2025-12-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\comn.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for corefoundation.dll DLL Hijacking
 id: 2984082b-7750-48a3-4174-5b9ff8664569
 status: experimental
@@ -978,6 +1005,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible preparation for libcef.dll DLL Hijacking
+id: 6527072b-7750-48a3-4174-5b9ff8584870
+status: experimental
+description: Detects possible DLL hijacking of libcef.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/google/libcef.html
+author: "Matt Anderson - HuntressLabs"
+date: 2024-04-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libcef.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible preparation for iepdf32.dll DLL Hijacking
 id: 1171072b-1386-48a3-5209-5b9ff8410482
 status: experimental
@@ -1707,33 +1761,6 @@ detection:
         TargetFileName: '*\providers.dll'
 
     condition: selection 
-falsepositives:
-    - False positives are likely. This rule is more suitable for hunting than for generating detections.
-
----
-title: Possible preparation for libcef.dll DLL Hijacking
-id: 6527072b-7750-48a3-4174-5b9ff8584870
-status: experimental
-description: Detects possible DLL hijacking of libcef.dll by looking for suspicious file writes of this DLL, to unexpected locations.
-references:
-    - https://hijacklibs.net/entries/3rd_party/nvidia/libcef.html
-author: "Matt Anderson - HuntressLabs"
-date: 2024-04-13
-tags:
-    - attack.defense_evasion
-    - attack.T1574.001
-logsource:
-    product: windows
-    category: file_event
-detection:
-    selection:
-        TargetFileName: '*\libcef.dll'
-    filter:
-        TargetFileName:
-            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-
-    condition: selection and not filter
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -2774,6 +2801,33 @@ detection:
     filter:
         TargetFileName:
             - 'c:\users\*\appdata\local\Temp\*\Windows\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible preparation for crashhandler.dll DLL Hijacking
+id: 7629772b-9776-48a3-1796-5b9ff8671439
+status: experimental
+description: Detects possible DLL hijacking of crashhandler.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/valve/crashhandler.html
+author: "Still Hsu"
+date: 2025-11-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\crashhandler.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Steam\*'
+            - 'c:\program files (x86)\Steam\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,0 +1,26 @@
+title: Possible preparation for crashhandler.dll DLL Hijacking
+id: 7629772b-9776-48a3-1796-5b9ff8671439
+status: experimental
+description: Detects possible DLL hijacking of crashhandler.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/valve/crashhandler.html
+author: "Still Hsu"
+date: 2025-11-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\crashhandler.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Steam\*'
+            - 'c:\program files (x86)\Steam\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
