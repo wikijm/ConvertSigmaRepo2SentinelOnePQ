@@ -187,6 +187,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of comn.dll
+id: 9600521b-8101-48a3-6493-5b9ff8589893
+status: experimental
+description: Detects possible DLL hijacking of comn.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/aomei/comn.html
+author: "Still Hsu"
+date: 2025-12-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\comn.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of corefoundation.dll
 id: 2984081b-7750-48a3-4174-5b9ff8664569
 status: experimental
@@ -972,6 +999,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of libcef.dll
+id: 6527071b-7750-48a3-4174-5b9ff8584870
+status: experimental
+description: Detects possible DLL hijacking of libcef.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/google/libcef.html
+author: "Matt Anderson - HuntressLabs"
+date: 2024-04-13
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\libcef.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of iepdf32.dll
 id: 1171071b-1386-48a3-5209-5b9ff8410482
 status: experimental
@@ -1701,33 +1755,6 @@ detection:
         ImageLoaded: '*\providers.dll'
 
     condition: selection 
-falsepositives:
-    - False positives are likely. This rule is more suitable for hunting than for generating detections.
-
----
-title: Possible DLL Hijacking of libcef.dll
-id: 6527071b-7750-48a3-4174-5b9ff8584870
-status: experimental
-description: Detects possible DLL hijacking of libcef.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
-references:
-    - https://hijacklibs.net/entries/3rd_party/nvidia/libcef.html
-author: "Matt Anderson - HuntressLabs"
-date: 2024-04-13
-tags:
-    - attack.defense_evasion
-    - attack.T1574.001
-logsource:
-    product: windows
-    category: image_load
-detection:
-    selection:
-        ImageLoaded: '*\libcef.dll'
-    filter:
-        ImageLoaded:
-            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-
-    condition: selection and not filter
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -2765,6 +2792,33 @@ detection:
     filter:
         ImageLoaded:
             - 'c:\users\*\appdata\local\Temp\*\Windows\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of crashhandler.dll
+id: 7629771b-9776-48a3-1796-5b9ff8671439
+status: experimental
+description: Detects possible DLL hijacking of crashhandler.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/valve/crashhandler.html
+author: "Still Hsu"
+date: 2025-11-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\crashhandler.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Steam\*'
+            - 'c:\program files (x86)\Steam\*'
 
     condition: selection and not filter
 falsepositives:

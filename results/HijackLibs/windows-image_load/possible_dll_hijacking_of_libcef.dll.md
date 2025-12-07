@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2025 01:42:38):
+// Translated content (automatically translated on 07-12-2025 01:57:02):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcef.dll" and (not (module.path in ("c:\\program files\\NVIDIA Corporation\\NVIDIA GeForce Experience\*","c:\\program files (x86)\\NVIDIA Corporation\\NVIDIA GeForce Experience\*")))))
 ```
 
@@ -11,7 +11,7 @@ id: 6527071b-7750-48a3-4174-5b9ff8584870
 status: experimental
 description: Detects possible DLL hijacking of libcef.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
 references:
-    - https://hijacklibs.net/entries/3rd_party/nvidia/libcef.html
+    - https://hijacklibs.net/entries/3rd_party/google/libcef.html
 author: "Matt Anderson - HuntressLabs"
 date: 2024-04-13
 tags:
