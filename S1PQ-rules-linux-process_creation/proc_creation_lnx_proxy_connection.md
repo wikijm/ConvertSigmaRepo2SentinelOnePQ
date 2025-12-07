@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2025 00:55:01):
+// Translated content (automatically translated on 07-12-2025 01:03:19):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "http_proxy=" or tgt.process.cmdline contains "https_proxy="))
 ```
 
