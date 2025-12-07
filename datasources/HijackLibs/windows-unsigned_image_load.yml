@@ -1,5 +1,34 @@
 
 ---
+title: Possibly malicious versions of comn.dll
+id: 9600523b-8101-48a3-6493-5b9ff8589893
+status: experimental
+description: Detects possible DLL hijacking of comn.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/aomei/comn.html
+author: "Still Hsu"
+date: 2025-12-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\comn.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=COMODO RSA Extended Validation Code Signing CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possibly malicious versions of basicnetutils.dll
 id: 8230313b-8028-48a3-7945-5b9ff8500209
 status: experimental
@@ -429,6 +458,35 @@ detection:
             - SignatureStatus: 'signed'
             - Signature|contains:
                 - 'C=DK, L=København, O=Unity Technologies ApS, OU=Developer Services, CN=Unity Technologies ApS'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possibly malicious versions of crashhandler.dll
+id: 7629773b-9776-48a3-1796-5b9ff8671439
+status: experimental
+description: Detects possible DLL hijacking of crashhandler.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/valve/crashhandler.html
+author: "Still Hsu"
+date: 2025-11-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\crashhandler.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US'
 
     condition: selection and not filter
 falsepositives:

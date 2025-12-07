@@ -1,0 +1,28 @@
+title: Possibly malicious versions of crashhandler.dll
+id: 7629773b-9776-48a3-1796-5b9ff8671439
+status: experimental
+description: Detects possible DLL hijacking of crashhandler.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/valve/crashhandler.html
+author: "Still Hsu"
+date: 2025-11-20
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\crashhandler.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+

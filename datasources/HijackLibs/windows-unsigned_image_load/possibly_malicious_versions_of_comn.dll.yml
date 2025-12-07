@@ -1,0 +1,28 @@
+title: Possibly malicious versions of comn.dll
+id: 9600523b-8101-48a3-6493-5b9ff8589893
+status: experimental
+description: Detects possible DLL hijacking of comn.dll by looking for versions not meeting the known signature data.
+references:
+    - https://hijacklibs.net/entries/3rd_party/aomei/comn.html
+author: "Still Hsu"
+date: 2025-12-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\comn.dll'
+    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+                - 'CN=COMODO RSA Extended Validation Code Signing CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
