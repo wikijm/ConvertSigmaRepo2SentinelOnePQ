@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2025 00:51:14):
+// Translated content (automatically translated on 07-12-2025 00:58:57):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "atled.syspectr.com" or url.address contains "app.syspectr.com") or (event.dns.request contains "atled.syspectr.com" or event.dns.request contains "app.syspectr.com")))
 ```
 
