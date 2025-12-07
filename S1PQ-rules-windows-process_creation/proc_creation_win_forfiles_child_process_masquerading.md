@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2025 02:00:00):
+// Translated content (automatically translated on 07-12-2025 02:21:46):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.cmdline contains ".exe" or src.process.cmdline contains ".exe\"") and tgt.process.image.path contains "\\cmd.exe" and tgt.process.cmdline contains "/c echo \"") and (not ((src.process.image.path contains ":\\Windows\\System32\\" or src.process.image.path contains ":\\Windows\\SysWOW64\\") and src.process.image.path contains "\\forfiles.exe" and (tgt.process.image.path contains ":\\Windows\\System32\\" or tgt.process.image.path contains ":\\Windows\\SysWOW64\\") and tgt.process.image.path contains "\\cmd.exe"))))
 ```
 

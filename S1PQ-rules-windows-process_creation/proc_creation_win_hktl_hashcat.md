@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-12-2025 02:00:00):
+// Translated content (automatically translated on 07-12-2025 02:21:46):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\hashcat.exe" or (tgt.process.cmdline contains "-a " and tgt.process.cmdline contains "-m 1000 " and tgt.process.cmdline contains "-r ")))
 ```
 
