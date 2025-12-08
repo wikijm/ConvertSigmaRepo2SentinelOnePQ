@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 01:03:19):
+// Translated content (automatically translated on 08-12-2025 00:58:05):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.cmdline contains "-ufw-init" and tgt.process.cmdline contains "force-stop") or (tgt.process.cmdline contains "ufw" and tgt.process.cmdline contains "disable")))
 ```
 
