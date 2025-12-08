@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 01:49:30):
+// Translated content (automatically translated on 08-12-2025 01:42:44):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "%localappdata%\\Alpemix\\Alpemix.ini")
 ```
 

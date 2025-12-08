@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 01:49:30):
+// Translated content (automatically translated on 08-12-2025 01:42:44):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "supremocontrol.com" or url.address contains ".supremocontrol.com" or url.address contains " .nanosystems.it") or (event.dns.request contains "supremocontrol.com" or event.dns.request contains ".supremocontrol.com" or event.dns.request contains " .nanosystems.it")))
 ```
 
