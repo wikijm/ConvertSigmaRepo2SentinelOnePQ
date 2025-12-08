@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 01:57:02):
+// Translated content (automatically translated on 08-12-2025 01:49:49):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libglib-2.0-0.dll" and (not (module.path in ("c:\\program files\\Wireshark\*","c:\\program files (x86)\\Wireshark\*")))))
 ```
 

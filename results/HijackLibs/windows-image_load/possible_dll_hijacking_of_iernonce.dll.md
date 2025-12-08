@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 01:57:02):
+// Translated content (automatically translated on 08-12-2025 01:49:49):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iernonce.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
