@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 00:58:57):
+// Translated content (automatically translated on 08-12-2025 00:54:15):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*rustdesk*.exe" or src.process.image.path contains "rustdesk.exe" or src.process.image.path contains "rustdesk.exe") or (tgt.process.image.path="*rustdesk*.exe" or tgt.process.image.path contains "rustdesk.exe" or tgt.process.image.path contains "rustdesk.exe")))
 ```
 

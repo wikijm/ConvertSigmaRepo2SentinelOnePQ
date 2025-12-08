@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 00:58:57):
+// Translated content (automatically translated on 08-12-2025 00:54:15):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\ProgramData\\PDQ\\PDQConnectAgent\\PDQConnectAgent.db-journal")
 ```
 

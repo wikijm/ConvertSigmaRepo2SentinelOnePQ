@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 00:58:57):
+// Translated content (automatically translated on 08-12-2025 00:54:15):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "app.gorelo.io" or url.address contains "gorelo-rmm.azurewebsites.net" or url.address contains "gw.usw.gorelo.tech" or url.address contains "lr.rmm.pod1.usw.gorelo.tech" or url.address contains "public.rmm.pod1.usw.gorelo.tech" or url.address contains "r1.rmm.uw.gorelo.tech" or url.address contains "sr.rmm.pod1.usw.gorelo.tech") or (event.dns.request contains "app.gorelo.io" or event.dns.request contains "gorelo-rmm.azurewebsites.net" or event.dns.request contains "gw.usw.gorelo.tech" or event.dns.request contains "lr.rmm.pod1.usw.gorelo.tech" or event.dns.request contains "public.rmm.pod1.usw.gorelo.tech" or event.dns.request contains "r1.rmm.uw.gorelo.tech" or event.dns.request contains "sr.rmm.pod1.usw.gorelo.tech")))
 ```
 

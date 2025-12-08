@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 00:58:57):
+// Translated content (automatically translated on 08-12-2025 00:54:15):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Mesh Agent\\MeshAgent.exe" or tgt.file.path contains "C:\\Program Files\\Mesh Agent\\MeshAgent.msh" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent/meshagent" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent/meshagent.db" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent/meshagent.msh" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent.db" or tgt.file.path contains "/usr/local/mesh_services/meshagent/meshagent.msh"))
 ```
 
