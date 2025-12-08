@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-12-2025 02:21:46):
+// Translated content (automatically translated on 08-12-2025 02:07:48):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline matches "\\$PSHome\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$PSHome\\[" or tgt.process.cmdline matches "\\$ShellId\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$ShellId\\[" or tgt.process.cmdline matches "\\$env:Public\\[\\s*\\d{1,3}\\s*\\]\\s*\\+\\s*\\$env:Public\\[" or tgt.process.cmdline matches "\\$env:ComSpec\\[(\\s*\\d{1,3}\\s*,){2}" or tgt.process.cmdline matches "\\*mdr\\*\\W\\s*\\)\\.Name" or tgt.process.cmdline matches "\\$VerbosePreference\\.ToString\\(" or tgt.process.cmdline matches "\\[String\\]\\s*\\$VerbosePreference"))
 ```
 
