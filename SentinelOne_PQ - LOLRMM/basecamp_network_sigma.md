@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-12-2025 00:54:15):
+// Translated content (automatically translated on 09-12-2025 00:53:50):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "basecamp.com" or event.dns.request contains "basecamp.com"))
 ```
 
