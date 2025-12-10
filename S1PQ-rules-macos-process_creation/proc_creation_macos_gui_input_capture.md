@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 09-12-2025 01:20:57):
-event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path="/usr/sbin/osascript" and (tgt.process.cmdline contains "-e" and tgt.process.cmdline contains "display" and tgt.process.cmdline contains "dialog" and tgt.process.cmdline contains "answer") and (tgt.process.cmdline contains "admin" or tgt.process.cmdline contains "administrator" or tgt.process.cmdline contains "authenticate" or tgt.process.cmdline contains "authentication" or tgt.process.cmdline contains "credentials" or tgt.process.cmdline contains "pass" or tgt.process.cmdline contains "password" or tgt.process.cmdline contains "unlock")))
+// Translated content (automatically translated on 10-12-2025 01:22:35):
+event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/osascript" and (tgt.process.cmdline contains "-e" and tgt.process.cmdline contains "display" and tgt.process.cmdline contains "dialog" and tgt.process.cmdline contains "answer") and (tgt.process.cmdline contains "admin" or tgt.process.cmdline contains "administrator" or tgt.process.cmdline contains "authenticate" or tgt.process.cmdline contains "authentication" or tgt.process.cmdline contains "credentials" or tgt.process.cmdline contains "pass" or tgt.process.cmdline contains "password" or tgt.process.cmdline contains "unlock")))
 ```
 
 
@@ -15,7 +15,7 @@ references:
     - https://scriptingosx.com/2018/08/user-interaction-from-bash-scripts/
 author: remotephone, oscd.community
 date: 2020-10-13
-modified: 2022-12-25
+modified: 2025-12-05
 tags:
     - attack.collection
     - attack.credential-access
@@ -24,15 +24,15 @@ logsource:
     product: macos
     category: process_creation
 detection:
-    selection1:
-        Image: '/usr/sbin/osascript'
-    selection2:
+    selection_img:
+        Image|endswith: '/osascript'
+    selection_cli_1:
         CommandLine|contains|all:
             - '-e'
             - 'display'
             - 'dialog'
             - 'answer'
-    selection3:
+    selection_cli_2:
         CommandLine|contains:
             - 'admin'
             - 'administrator'
@@ -42,7 +42,7 @@ detection:
             - 'pass'
             - 'password'
             - 'unlock'
-    condition: all of selection*
+    condition: all of selection_*
 falsepositives:
     - Legitimate administration tools and activities
 level: low
