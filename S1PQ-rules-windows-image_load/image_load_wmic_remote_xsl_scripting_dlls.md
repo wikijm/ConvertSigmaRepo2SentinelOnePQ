@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-12-2025 01:20:14):
+// Translated content (automatically translated on 10-12-2025 01:22:10):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\wmic.exe" and (module.path contains "\\jscript.dll" or module.path contains "\\vbscript.dll")))
 ```
 
@@ -31,8 +31,9 @@ detection:
             - '\vbscript.dll'
     condition: selection
 falsepositives:
-    - The command wmic os get lastboottuptime loads vbscript.dll
+    - The command wmic os get lastbootuptime loads vbscript.dll
     - The command wmic os get locale loads vbscript.dll
     - Since the ImageLoad event doesn't have enough information in this case. It's better to look at the recent process creation events that spawned the WMIC process and investigate the command line and parent/child processes to get more insights
+    - The command `wmic ntevent` loads vbscript.dll
 level: medium
 ```
