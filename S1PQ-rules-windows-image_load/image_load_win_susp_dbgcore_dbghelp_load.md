@@ -1,0 +1,61 @@
+```sql
+// Translated content (automatically translated on 11-12-2025 01:22:56):
+event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Temp\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\$Recycle.Bin\\" or src.process.image.path contains "\\Contacts\\" or src.process.image.path contains "\\Desktop\\" or src.process.image.path contains "\\Documents\\" or src.process.image.path contains "\\Downloads\\" or src.process.image.path contains "\\Favorites\\" or src.process.image.path contains "\\Favourites\\" or src.process.image.path contains "\\inetpub\\wwwroot\\" or src.process.image.path contains "\\Music\\" or src.process.image.path contains "\\Pictures\\" or src.process.image.path contains "\\Start Menu\\Programs\\Startup\\" or src.process.image.path contains "\\Users\\Default\\" or src.process.image.path contains "\\Videos\\") and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Suspicious Loading of Dbgcore/Dbghelp DLLs from Uncommon Location
+id: 416bc4a2-7217-4519-8dc7-c3271817f1d5
+related:
+    - id: 9f5c1d59-33be-4e60-bcab-85d2f566effd
+      type: similar
+status: experimental
+description: |
+    Detects loading of dbgcore.dll or dbghelp.dll from uncommon locations such as user directories.
+    These DLLs contain the MiniDumpWriteDump function, which can be abused for credential dumping purposes or in some cases for evading EDR/AV detection by suspending processes.
+references:
+    - https://blog.axelarator.net/hunting-for-edr-freeze/
+    - https://www.zerosalarium.com/2025/09/EDR-Freeze-Puts-EDRs-Antivirus-Into-Coma.html
+    - https://www.splunk.com/en_us/blog/security/you-bet-your-lsass-hunting-lsass-access.html
+author: Swachchhanda Shrawan Poudel (Nextron Systems)
+date: 2025-11-27
+tags:
+    - attack.credential-access
+    - attack.t1003
+    - attack.defense-evasion
+    - attack.t1562.001
+logsource:
+    category: image_load
+    product: windows
+detection:
+    selection_img:
+        Image|contains:
+            - ':\Perflogs\'
+            - ':\Temp\'
+            - ':\Users\Public\'
+            - '\$Recycle.Bin\'
+            - '\Contacts\'
+            - '\Desktop\'
+            - '\Documents\'
+            - '\Downloads\'
+            - '\Favorites\'
+            - '\Favourites\'
+            - '\inetpub\wwwroot\'
+            - '\Music\'
+            - '\Pictures\'
+            - '\Start Menu\Programs\Startup\'
+            - '\Users\Default\'
+            - '\Videos\'
+            #  - '\AppData\Local\Temp\' some installers may load from here
+    selection_dll:
+        ImageLoaded|endswith:
+            - '\dbgcore.dll'
+            - '\dbghelp.dll'
+    condition: all of selection_*
+falsepositives:
+    - Possibly during software installation or update processes
+level: high
+regression_tests_path: regression_data/rules/windows/image_load/image_load_win_susp_dbgcore_dbghelp_load/info.yml
+```
