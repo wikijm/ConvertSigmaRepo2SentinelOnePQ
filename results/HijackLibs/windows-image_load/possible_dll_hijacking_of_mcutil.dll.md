@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-12-2025 01:50:50):
+// Translated content (automatically translated on 11-12-2025 01:52:19):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mcutil.dll" and (not (module.path in ("c:\\program files\\McAfee Inc.\\McAfee Total Protection 2009\*","c:\\program files (x86)\\McAfee Inc.\\McAfee Total Protection 2009\*")))))
 ```
 
