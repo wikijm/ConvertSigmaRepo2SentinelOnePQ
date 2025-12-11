@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-12-2025 00:59:01):
+// Translated content (automatically translated on 11-12-2025 00:59:45):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "ruby" and (tgt.process.cmdline contains " -e" and tgt.process.cmdline contains "rsocket" and tgt.process.cmdline contains "TCPSocket") and (tgt.process.cmdline contains " ash" or tgt.process.cmdline contains " bash" or tgt.process.cmdline contains " bsh" or tgt.process.cmdline contains " csh" or tgt.process.cmdline contains " ksh" or tgt.process.cmdline contains " pdksh" or tgt.process.cmdline contains " sh" or tgt.process.cmdline contains " tcsh")))
 ```
 
