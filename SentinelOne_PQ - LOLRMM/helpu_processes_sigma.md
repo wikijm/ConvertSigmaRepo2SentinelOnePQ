@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-12-2025 00:55:12):
+// Translated content (automatically translated on 11-12-2025 00:55:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "helpu_install.exe" or src.process.image.path contains "HelpuUpdater.exe" or src.process.image.path contains "HelpuManager.exe") or (tgt.process.image.path contains "helpu_install.exe" or tgt.process.image.path contains "HelpuUpdater.exe" or tgt.process.image.path contains "HelpuManager.exe")))
 ```
 

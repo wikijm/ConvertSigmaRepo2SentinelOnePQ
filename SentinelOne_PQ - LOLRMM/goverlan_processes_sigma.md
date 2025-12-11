@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-12-2025 00:55:12):
+// Translated content (automatically translated on 11-12-2025 00:55:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "goverrmc.exe" or src.process.image.path="*govsrv*.exe" or src.process.image.path contains "GovAgentInstallHelper.exe" or src.process.image.path contains "GovAgentx64.exe" or src.process.image.path contains "GovReachClient.exe" or src.process.image.path contains "GovSrv.exe") or (tgt.process.image.path contains "goverrmc.exe" or tgt.process.image.path="*govsrv*.exe" or tgt.process.image.path contains "GovAgentInstallHelper.exe" or tgt.process.image.path contains "GovAgentx64.exe" or tgt.process.image.path contains "GovReachClient.exe" or tgt.process.image.path contains "GovSrv.exe")))
 ```
 
