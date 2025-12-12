@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-12-2025 00:55:40):
+// Translated content (automatically translated on 12-12-2025 00:55:07):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "fleetdeck.io" or event.dns.request contains "fleetdeck.io"))
 ```
 
