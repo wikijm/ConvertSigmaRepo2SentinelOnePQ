@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-12-2025 02:10:29):
+// Translated content (automatically translated on 12-12-2025 02:10:07):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline matches "cmd.{0,5}(?:/c|/r).+powershell.+(?:\\$\\{?input\\}?|noexit).+\\"")
 ```
 
