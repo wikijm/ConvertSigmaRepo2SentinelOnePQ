@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-12-2025 00:55:07):
+// Translated content (automatically translated on 13-12-2025 00:52:02):
 event.category="file" and (endpoint.os="windows" and tgt.file.path contains "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\RustDesk\*")
 ```
 

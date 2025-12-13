@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-12-2025 00:55:07):
+// Translated content (automatically translated on 13-12-2025 00:52:02):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "auvik.engine.exe" or src.process.image.path contains "auvik.agent.exe") or (tgt.process.image.path contains "auvik.engine.exe" or tgt.process.image.path contains "auvik.agent.exe")))
 ```
 
