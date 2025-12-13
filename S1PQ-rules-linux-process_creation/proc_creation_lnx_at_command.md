@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-12-2025 00:59:30):
+// Translated content (automatically translated on 13-12-2025 00:55:51):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/at" or tgt.process.image.path contains "/atd"))
 ```
 
