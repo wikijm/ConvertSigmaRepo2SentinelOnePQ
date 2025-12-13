@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-12-2025 01:27:51):
+// Translated content (automatically translated on 13-12-2025 01:23:08):
 (event.category in ("dns","url","ip")) and (endpoint.os="linux" and ((url.address in ("pool.minexmr.com","fr.minexmr.com","de.minexmr.com","sg.minexmr.com","ca.minexmr.com","us-west.minexmr.com","pool.supportxmr.com","mine.c3pool.com","xmr-eu1.nanopool.org","xmr-eu2.nanopool.org","xmr-us-east1.nanopool.org","xmr-us-west1.nanopool.org","xmr-asia1.nanopool.org","xmr-jp1.nanopool.org","xmr-au1.nanopool.org","xmr.2miners.com","xmr.hashcity.org","xmr.f2pool.com","xmrpool.eu","pool.hashvault.pro","moneroocean.stream","monerocean.stream")) or (event.dns.request in ("pool.minexmr.com","fr.minexmr.com","de.minexmr.com","sg.minexmr.com","ca.minexmr.com","us-west.minexmr.com","pool.supportxmr.com","mine.c3pool.com","xmr-eu1.nanopool.org","xmr-eu2.nanopool.org","xmr-us-east1.nanopool.org","xmr-us-west1.nanopool.org","xmr-asia1.nanopool.org","xmr-jp1.nanopool.org","xmr-au1.nanopool.org","xmr.2miners.com","xmr.hashcity.org","xmr.f2pool.com","xmrpool.eu","pool.hashvault.pro","moneroocean.stream","monerocean.stream"))))
 ```
 
