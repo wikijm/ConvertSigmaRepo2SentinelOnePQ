@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-12-2025 01:42:44):
+// Translated content (automatically translated on 15-12-2025 01:41:00):
 event.category="file" and (endpoint.os="osx" and ((tgt.file.path contains "/etc/emond.d/rules/" and tgt.file.path contains ".plist") or tgt.file.path contains "/private/var/db/emondClients/"))
 ```
 
