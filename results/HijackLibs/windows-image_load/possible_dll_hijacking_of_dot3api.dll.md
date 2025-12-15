@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-12-2025 01:57:41):
+// Translated content (automatically translated on 15-12-2025 01:55:20):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dot3api.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
