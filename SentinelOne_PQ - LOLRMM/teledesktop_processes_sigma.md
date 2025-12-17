@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-12-2025 00:55:56):
+// Translated content (automatically translated on 17-12-2025 00:51:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pstlaunch.exe" or src.process.image.path contains "ptdskclient.exe" or src.process.image.path contains "ptdskhost.exe") or (tgt.process.image.path contains "pstlaunch.exe" or tgt.process.image.path contains "ptdskclient.exe" or tgt.process.image.path contains "ptdskhost.exe")))
 ```
 
