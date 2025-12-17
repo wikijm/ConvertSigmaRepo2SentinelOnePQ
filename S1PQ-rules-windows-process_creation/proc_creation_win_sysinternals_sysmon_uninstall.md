@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-12-2025 02:10:48):
+// Translated content (automatically translated on 17-12-2025 02:05:49):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\Sysmon64.exe" or tgt.process.image.path contains "\\Sysmon.exe") or tgt.process.displayName="System activity monitor") and (tgt.process.cmdline contains "-u" or tgt.process.cmdline contains "/u" or tgt.process.cmdline contains "–u" or tgt.process.cmdline contains "—u" or tgt.process.cmdline contains "―u")))
 ```
 
