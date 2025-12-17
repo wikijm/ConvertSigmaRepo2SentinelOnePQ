@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-12-2025 01:52:15):
+// Translated content (automatically translated on 17-12-2025 01:47:27):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcurl.dll" and (not (module.path="c:\\program files\\Notepad++\\updater\*" or module.path="c:\\program files (x86)\\Notepad++\\updater\*" or module.path="c:\\program files\\WindowsApps\\MSTeams_*\*" or module.path="c:\\program files (x86)\\WindowsApps\\MSTeams_*\*" or module.path="c:\\program files\\Coolmuster\\Coolmuster PDF Creator Pro\*\\Bin\*" or module.path="c:\\program files (x86)\\Coolmuster\\Coolmuster PDF Creator Pro\*\\Bin\*"))))
 ```
 
