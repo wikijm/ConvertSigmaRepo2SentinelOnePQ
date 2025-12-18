@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-12-2025 02:05:49):
+// Translated content (automatically translated on 18-12-2025 02:06:30):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "--password-file" and tgt.process.cmdline contains "init" and tgt.process.cmdline contains " -r ") or (tgt.process.cmdline contains "--use-fs-snapshot" and tgt.process.cmdline contains "backup" and tgt.process.cmdline contains " -r ")) or ((tgt.process.cmdline contains "sftp:" or tgt.process.cmdline contains "rest:http" or tgt.process.cmdline contains "s3:s3." or tgt.process.cmdline contains "s3.http" or tgt.process.cmdline contains "azure:" or tgt.process.cmdline contains " gs:" or tgt.process.cmdline contains "rclone:" or tgt.process.cmdline contains "swift:" or tgt.process.cmdline contains " b2:") and (tgt.process.cmdline contains " init " and tgt.process.cmdline contains " -r "))))
 ```
 
