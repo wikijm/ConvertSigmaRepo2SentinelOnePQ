@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-12-2025 01:41:03):
+// Translated content (automatically translated on 18-12-2025 01:41:10):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "rustdesk.com" or url.address contains "user_managed" or url.address contains "web.rustdesk.com") or (event.dns.request contains "rustdesk.com" or event.dns.request contains "user_managed" or event.dns.request contains "web.rustdesk.com")))
 ```
 
