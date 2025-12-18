@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-12-2025 00:51:18):
+// Translated content (automatically translated on 18-12-2025 00:51:59):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "deskday.ai" or url.address contains "app.deskday.ai") or (event.dns.request contains "deskday.ai" or event.dns.request contains "app.deskday.ai")))
 ```
 

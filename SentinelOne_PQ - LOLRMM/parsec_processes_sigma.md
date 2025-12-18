@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-12-2025 00:51:18):
+// Translated content (automatically translated on 18-12-2025 00:51:59):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "parsecd.exe" or src.process.image.path contains "pservice.exe") or (tgt.process.image.path contains "parsecd.exe" or tgt.process.image.path contains "pservice.exe")))
 ```
 
