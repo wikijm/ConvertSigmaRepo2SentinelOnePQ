@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-12-2025 01:44:09):
+// Translated content (automatically translated on 20-12-2025 01:38:58):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "helpbeam.software.informer.com" or event.dns.request contains "helpbeam.software.informer.com"))
 ```
 
