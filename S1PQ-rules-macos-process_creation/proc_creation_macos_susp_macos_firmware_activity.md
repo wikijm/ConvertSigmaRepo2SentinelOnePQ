@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2025 01:19:15):
+// Translated content (automatically translated on 21-12-2025 01:28:34):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path="/usr/sbin/firmwarepasswd" and (tgt.process.cmdline contains "setpasswd" or tgt.process.cmdline contains "full" or tgt.process.cmdline contains "delete" or tgt.process.cmdline contains "check")))
 ```
 
