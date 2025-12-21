@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2025 01:45:32):
+// Translated content (automatically translated on 21-12-2025 01:57:38):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\lockhostingframework.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 

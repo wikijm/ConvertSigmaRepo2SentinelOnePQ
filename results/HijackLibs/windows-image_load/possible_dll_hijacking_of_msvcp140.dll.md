@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2025 01:45:32):
+// Translated content (automatically translated on 21-12-2025 01:57:38):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msvcp140.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*","c:\\program files\*","c:\\program files (x86)\*")))))
 ```
 
