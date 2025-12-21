@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2025 00:52:07):
+// Translated content (automatically translated on 21-12-2025 00:59:13):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address="*plus*.site24x7.com" or url.address="*plus*.site24x7.eu" or url.address="*plus*.site24x7.in" or url.address="*plus*.site24x7.cn" or url.address="*plus*.site24x7.net.au" or url.address contains "site24x7.com/msp") or (event.dns.request="*plus*.site24x7.com" or event.dns.request="*plus*.site24x7.eu" or event.dns.request="*plus*.site24x7.in" or event.dns.request="*plus*.site24x7.cn" or event.dns.request="*plus*.site24x7.net.au" or event.dns.request contains "site24x7.com/msp")))
 ```
 
