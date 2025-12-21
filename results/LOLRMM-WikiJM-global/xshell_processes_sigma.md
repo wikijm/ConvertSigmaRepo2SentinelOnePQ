@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-12-2025 01:38:58):
+// Translated content (automatically translated on 21-12-2025 01:50:03):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\xShell.exe")
 ```
 
