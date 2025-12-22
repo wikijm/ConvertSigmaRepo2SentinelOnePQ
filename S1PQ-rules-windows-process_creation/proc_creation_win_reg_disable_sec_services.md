@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-12-2025 02:22:36):
+// Translated content (automatically translated on 22-12-2025 02:21:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "reg" and tgt.process.cmdline contains "add") and ((tgt.process.cmdline contains "d 4" and tgt.process.cmdline contains "v Start") and (tgt.process.cmdline contains "\\AppIDSvc" or tgt.process.cmdline contains "\\MsMpSvc" or tgt.process.cmdline contains "\\NisSrv" or tgt.process.cmdline contains "\\SecurityHealthService" or tgt.process.cmdline contains "\\Sense" or tgt.process.cmdline contains "\\UsoSvc" or tgt.process.cmdline contains "\\WdBoot" or tgt.process.cmdline contains "\\WdFilter" or tgt.process.cmdline contains "\\WdNisDrv" or tgt.process.cmdline contains "\\WdNisSvc" or tgt.process.cmdline contains "\\WinDefend" or tgt.process.cmdline contains "\\wscsvc" or tgt.process.cmdline contains "\\wuauserv"))))
 ```
 
