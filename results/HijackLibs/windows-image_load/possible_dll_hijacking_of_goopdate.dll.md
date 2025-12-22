@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-12-2025 01:57:38):
+// Translated content (automatically translated on 22-12-2025 01:56:59):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\goopdate.dll" and (not (module.path in ("c:\\program files\\Dropbox\\Update\*","c:\\program files (x86)\\Dropbox\\Update\*","c:\\program files\\Dropbox\\Update\*\*","c:\\program files (x86)\\Dropbox\\Update\*\*","c:\\users\*\\appdata\\local\\DropboxUpdate\\Update\*")))))
 ```
 

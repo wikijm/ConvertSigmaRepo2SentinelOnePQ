@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-12-2025 01:57:38):
+// Translated content (automatically translated on 22-12-2025 01:56:59):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dcntel.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 
