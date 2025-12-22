@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-12-2025 00:56:41):
+// Translated content (automatically translated on 22-12-2025 00:55:34):
 event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\cacls.exe" or tgt.process.image.path contains "\\icacls.exe" or tgt.process.image.path contains "\\net.exe" or tgt.process.image.path contains "\\net1.exe") and (tgt.process.cmdline contains "/grant" or tgt.process.cmdline contains "/setowner" or tgt.process.cmdline contains "/inheritance:r")) or (tgt.process.image.path contains "\\attrib.exe" and tgt.process.cmdline contains "-r") or tgt.process.image.path contains "\\takeown.exe") and (not (tgt.process.cmdline contains "ICACLS C:\\ProgramData\\dynatrace\\gateway\\config\\connectivity.history /reset" or (tgt.process.cmdline contains "ICACLS C:\\ProgramData\\dynatrace\\gateway\\config\\config.properties /grant :r " and tgt.process.cmdline contains "S-1-5-19:F") or (tgt.process.cmdline contains "\\AppData\\Local\\Programs\\Microsoft VS Code" or tgt.process.cmdline contains ":\\Program Files\\Microsoft VS Code") or (tgt.process.cmdline contains ":\\Program Files (x86)\\Avira" or tgt.process.cmdline contains ":\\Program Files\\Avira")))))
 ```
 
