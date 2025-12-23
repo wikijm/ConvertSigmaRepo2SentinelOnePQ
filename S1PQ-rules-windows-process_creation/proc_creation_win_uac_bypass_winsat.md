@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-12-2025 02:21:40):
+// Translated content (automatically translated on 23-12-2025 02:10:52):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.integrityLevel in ("High","System","S-1-16-16384","S-1-16-12288")) and src.process.image.path contains "\\AppData\\Local\\Temp\\system32\\winsat.exe" and src.process.cmdline contains "C:\\Windows \\system32\\winsat.exe"))
 ```
 

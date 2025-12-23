@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-12-2025 02:21:40):
+// Translated content (automatically translated on 23-12-2025 02:10:52):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "tasklist /fi " and tgt.process.cmdline contains "Imagename eq lsass.exe") and (tgt.process.cmdline contains "cmd.exe /c " or tgt.process.cmdline contains "cmd.exe /r " or tgt.process.cmdline contains "cmd.exe /k " or tgt.process.cmdline contains "cmd /c " or tgt.process.cmdline contains "cmd /r " or tgt.process.cmdline contains "cmd /k ") and (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI")) or (tgt.process.cmdline contains "do rundll32.exe C:\\windows\\System32\\comsvcs.dll, MiniDump" and tgt.process.cmdline contains "\\Windows\\Temp\\" and tgt.process.cmdline contains " full" and tgt.process.cmdline contains "%%B") or (tgt.process.cmdline contains "tasklist /v /fo csv" and tgt.process.cmdline contains "findstr /i \"lsass\"")))
 ```
 
