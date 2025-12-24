@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-12-2025 00:55:24):
+// Translated content (automatically translated on 24-12-2025 00:54:59):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Level\\level.exe" or tgt.file.path contains "C:\\Program Files\\Level\\osqueryi.exe" or tgt.file.path contains "C:\\Program Files\\Level\\level.log"))
 ```
 
