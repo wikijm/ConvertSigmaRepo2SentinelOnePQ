@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-12-2025 01:23:29):
+// Translated content (automatically translated on 24-12-2025 01:22:27):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/osascript" and (tgt.process.cmdline contains "-e" and tgt.process.cmdline contains "display" and tgt.process.cmdline contains "dialog" and tgt.process.cmdline contains "answer") and (tgt.process.cmdline contains "admin" or tgt.process.cmdline contains "administrator" or tgt.process.cmdline contains "authenticate" or tgt.process.cmdline contains "authentication" or tgt.process.cmdline contains "credentials" or tgt.process.cmdline contains "pass" or tgt.process.cmdline contains "password" or tgt.process.cmdline contains "unlock")))
 ```
 
