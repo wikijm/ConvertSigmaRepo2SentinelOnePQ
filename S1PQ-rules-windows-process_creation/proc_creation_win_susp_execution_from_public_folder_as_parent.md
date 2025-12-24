@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-12-2025 02:10:52):
+// Translated content (automatically translated on 24-12-2025 02:08:50):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains ":\\Users\\Public\\" and ((tgt.process.image.path contains "\\bitsadmin.exe" or tgt.process.image.path contains "\\certutil.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.cmdline contains "bitsadmin" or tgt.process.cmdline contains "certutil" or tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "mshta" or tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "wscript"))))
 ```
 
