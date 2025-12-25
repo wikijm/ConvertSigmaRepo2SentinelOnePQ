@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-12-2025 01:50:33):
+// Translated content (automatically translated on 25-12-2025 01:52:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\edgeiso.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
