@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-12-2025 00:52:49):
+// Translated content (automatically translated on 26-12-2025 00:53:07):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path="*\\7z*.exe" and tgt.process.cmdline="*\\AppData\\local\\temp\\7z*\\*") or (src.process.image.path contains "\\winrar.exe" and tgt.process.cmdline="*\\AppData\\local\\temp\\rar*\\*") or (src.process.image.path contains "\\explorer.exe" and (tgt.process.cmdline contains "\\AppData\\local\\temp\*.rar\\" or tgt.process.cmdline contains "\\AppData\\local\\temp\*.zip\\"))) and ((tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\wscript.exe") and (tgt.process.cmdline contains ".hta" or tgt.process.cmdline contains ".js" or tgt.process.cmdline contains ".jse" or tgt.process.cmdline contains ".ps1" or tgt.process.cmdline contains ".vbe" or tgt.process.cmdline contains ".vbs" or tgt.process.cmdline contains ".wsf" or tgt.process.cmdline contains ".wsh"))))
 ```
 
