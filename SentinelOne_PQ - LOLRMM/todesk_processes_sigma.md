@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-12-2025 00:55:27):
+// Translated content (automatically translated on 26-12-2025 00:55:47):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "todesk.exe" or src.process.image.path contains "ToDesk_Service.exe" or src.process.image.path contains "ToDesk_Setup.exe") or (tgt.process.image.path contains "todesk.exe" or tgt.process.image.path contains "ToDesk_Service.exe" or tgt.process.image.path contains "ToDesk_Setup.exe")))
 ```
 
