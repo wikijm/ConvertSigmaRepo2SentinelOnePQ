@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-12-2025 00:55:47):
+// Translated content (automatically translated on 27-12-2025 00:54:06):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "AMMYY_Admin.exe" or src.process.image.path="*aa_v*.exe" or src.process.image.path contains "AMMYY_Admin.exe" or src.process.image.path contains "AMMYY_Admin.exe") or (tgt.process.image.path contains "AMMYY_Admin.exe" or tgt.process.image.path="*aa_v*.exe" or tgt.process.image.path contains "AMMYY_Admin.exe" or tgt.process.image.path contains "AMMYY_Admin.exe")))
 ```
 
