@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-12-2025 01:51:58):
+// Translated content (automatically translated on 27-12-2025 01:49:31):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amindpdfcore.dll" and (not (module.path in ("c:\\program files\\GeekerPDF\\GeekerPDF\*","c:\\program files (x86)\\GeekerPDF\\GeekerPDF\*")))))
 ```
 
