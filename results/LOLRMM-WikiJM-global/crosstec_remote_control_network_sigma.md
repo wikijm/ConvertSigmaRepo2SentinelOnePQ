@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-12-2025 01:44:42):
+// Translated content (automatically translated on 27-12-2025 01:42:29):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "crosstecsoftware.com/remotecontrol") or (event.dns.request contains "user_managed" or event.dns.request contains "crosstecsoftware.com/remotecontrol")))
 ```
 
