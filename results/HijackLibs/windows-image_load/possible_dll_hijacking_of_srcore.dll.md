@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2025 01:49:31):
+// Translated content (automatically translated on 28-12-2025 02:02:58):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\srcore.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 
