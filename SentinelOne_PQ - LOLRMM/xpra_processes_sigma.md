@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2025 00:54:06):
+// Translated content (automatically translated on 28-12-2025 01:02:30):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "Xpra-Launcher.exe" or src.process.image.path contains "Xpra-x86_64_Setup.exe") or (tgt.process.image.path contains "Xpra-Launcher.exe" or tgt.process.image.path contains "Xpra-x86_64_Setup.exe")))
 ```
 

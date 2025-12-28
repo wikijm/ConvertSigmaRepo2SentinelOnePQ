@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-12-2025 00:54:06):
+// Translated content (automatically translated on 28-12-2025 01:02:30):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "desktopcentral.manageengine.com" or event.dns.request contains "desktopcentral.manageengine.com"))
 ```
 
