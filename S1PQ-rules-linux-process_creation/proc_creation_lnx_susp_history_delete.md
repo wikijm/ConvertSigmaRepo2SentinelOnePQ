@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-12-2025 01:07:03):
+// Translated content (automatically translated on 29-12-2025 01:04:47):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/rm" or tgt.process.image.path contains "/unlink" or tgt.process.image.path contains "/shred") and ((tgt.process.cmdline contains "/.bash_history" or tgt.process.cmdline contains "/.zsh_history") or (tgt.process.cmdline contains "_history" or tgt.process.cmdline contains ".history" or tgt.process.cmdline contains "zhistory"))))
 ```
 
