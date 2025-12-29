@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-12-2025 01:55:15):
+// Translated content (automatically translated on 29-12-2025 01:53:27):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "level.io" or url.address contains ".level.io") or (event.dns.request contains "level.io" or event.dns.request contains ".level.io")))
 ```
 
