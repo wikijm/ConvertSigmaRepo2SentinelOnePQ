@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-12-2025 01:41:36):
+// Translated content (automatically translated on 29-12-2025 01:40:19):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.cmdline contains "osascript" and tgt.process.cmdline contains " -e " and tgt.process.cmdline contains "clipboard"))
 ```
 
