@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-12-2025 01:00:36):
+// Translated content (automatically translated on 30-12-2025 00:55:47):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\AirLiveDrive.exe")
 ```
 
