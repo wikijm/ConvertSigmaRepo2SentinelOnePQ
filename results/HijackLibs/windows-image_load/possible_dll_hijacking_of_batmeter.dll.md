@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-12-2025 02:01:29):
+// Translated content (automatically translated on 30-12-2025 01:53:15):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\batmeter.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
