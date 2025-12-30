@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-12-2025 02:26:25):
+// Translated content (automatically translated on 30-12-2025 02:11:43):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains " -NoP -NonI -w Hidden -c $x=$((gp HKCU:Software\\Microsoft\\Windows Update).Update)" or tgt.process.cmdline contains " -NoP -NonI -c $x=$((gp HKCU:Software\\Microsoft\\Windows Update).Update);"))
 ```
 
