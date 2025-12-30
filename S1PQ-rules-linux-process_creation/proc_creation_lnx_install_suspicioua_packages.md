@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-12-2025 01:04:47):
+// Translated content (automatically translated on 30-12-2025 00:59:42):
 event.type="Process Creation" and (endpoint.os="linux" and ((((tgt.process.image.path contains "/apt" or tgt.process.image.path contains "/apt-get") and tgt.process.cmdline contains "install") or (tgt.process.image.path contains "/yum" and (tgt.process.cmdline contains "localinstall" or tgt.process.cmdline contains "install")) or (tgt.process.image.path contains "/rpm" and tgt.process.cmdline contains "-i") or (tgt.process.image.path contains "/dpkg" and (tgt.process.cmdline contains "--install" or tgt.process.cmdline contains "-i"))) and (tgt.process.cmdline contains "nmap" or tgt.process.cmdline contains " nc" or tgt.process.cmdline contains "netcat" or tgt.process.cmdline contains "wireshark" or tgt.process.cmdline contains "tshark" or tgt.process.cmdline contains "openconnect" or tgt.process.cmdline contains "proxychains")))
 ```
 
