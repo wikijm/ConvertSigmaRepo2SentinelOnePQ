@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-12-2025 00:55:47):
+// Translated content (automatically translated on 31-12-2025 00:57:18):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "imperosoftware.com/impero-connect/" or event.dns.request contains "imperosoftware.com/impero-connect/"))
 ```
 
