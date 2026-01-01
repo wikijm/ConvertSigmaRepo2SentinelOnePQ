@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-12-2025 01:53:33):
+// Translated content (automatically translated on 01-01-2026 02:03:50):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dwmcore.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 
