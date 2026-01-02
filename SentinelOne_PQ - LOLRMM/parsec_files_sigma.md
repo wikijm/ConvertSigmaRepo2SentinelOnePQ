@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-01-2026 01:02:34):
+// Translated content (automatically translated on 02-01-2026 00:57:16):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Parsec\\parsecd.exe" or tgt.file.path contains "C:\\Program Files\\Parsec\\pservice.exe" or tgt.file.path contains "C:\\Program Files\\Parsec\\teams.exe"))
 ```
 
