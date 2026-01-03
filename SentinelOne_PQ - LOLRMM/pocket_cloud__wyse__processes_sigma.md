@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-01-2026 00:57:16):
+// Translated content (automatically translated on 03-01-2026 00:53:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*pocketcloud*.exe" or src.process.image.path contains "pocketcloudservice.exe") or (tgt.process.image.path="*pocketcloud*.exe" or tgt.process.image.path contains "pocketcloudservice.exe")))
 ```
 
