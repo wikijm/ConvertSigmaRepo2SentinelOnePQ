@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-01-2026 02:18:39):
+// Translated content (automatically translated on 03-01-2026 02:05:53):
 event.category="dns" and (endpoint.os="windows" and ((event.dns.request in ("taf.teamviewer.com","udp.ping.teamviewer.com")) and (not src.process.image.path contains "TeamViewer")))
 ```
 
