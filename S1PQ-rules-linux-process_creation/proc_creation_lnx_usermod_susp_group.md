@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2026 00:57:16):
+// Translated content (automatically translated on 04-01-2026 01:07:22):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/usermod" and (tgt.process.cmdline contains "-aG root" or tgt.process.cmdline contains "-aG sudoers")))
 ```
 
