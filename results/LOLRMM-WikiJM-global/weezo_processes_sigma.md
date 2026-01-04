@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2026 01:41:49):
+// Translated content (automatically translated on 04-01-2026 01:56:48):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "weezohttpd.exe" or src.process.image.path contains "weezo.exe" or src.process.image.path="*weezo setup*.exe"))
 ```
 
