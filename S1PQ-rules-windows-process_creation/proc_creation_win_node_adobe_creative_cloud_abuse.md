@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2026 02:07:13):
+// Translated content (automatically translated on 04-01-2026 02:30:42):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\Adobe Creative Cloud Experience\\libs\\node.exe" and (not tgt.process.cmdline contains "Adobe Creative Cloud Experience\\js")))
 ```
 

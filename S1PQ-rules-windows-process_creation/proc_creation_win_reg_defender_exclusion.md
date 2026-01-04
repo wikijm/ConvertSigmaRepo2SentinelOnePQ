@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-01-2026 02:07:13):
+// Translated content (automatically translated on 04-01-2026 02:30:42):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\Paths" or tgt.process.cmdline contains "SOFTWARE\\Microsoft\\Microsoft Antimalware\\Exclusions\\Paths") and (tgt.process.cmdline contains "ADD " and tgt.process.cmdline contains "/t " and tgt.process.cmdline contains "REG_DWORD " and tgt.process.cmdline contains "/v " and tgt.process.cmdline contains "/d " and tgt.process.cmdline contains "0")))
 ```
 
