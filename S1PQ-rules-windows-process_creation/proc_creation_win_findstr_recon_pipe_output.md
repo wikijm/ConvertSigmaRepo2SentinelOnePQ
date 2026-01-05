@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-01-2026 02:30:42):
+// Translated content (automatically translated on 05-01-2026 02:30:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline="*ipconfig*|*find*" or tgt.process.cmdline="*net*|*find*" or tgt.process.cmdline="*netstat*|*find*" or tgt.process.cmdline="*ping*|*find*" or tgt.process.cmdline="*systeminfo*|*find*" or tgt.process.cmdline="*tasklist*|*find*" or tgt.process.cmdline="*whoami*|*find*") and (not (tgt.process.cmdline contains "cmd.exe /c TASKLIST /V |" and tgt.process.cmdline contains "FIND /I" and tgt.process.cmdline contains "\\xampp\\" and tgt.process.cmdline contains "\\catalina_start.bat"))))
 ```
 
