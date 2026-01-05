@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-01-2026 02:29:27):
+// Translated content (automatically translated on 05-01-2026 02:28:53):
 event.category="dns" and (endpoint.os="windows" and event.dns.request contains ".tunnels.api.visualstudio.com")
 ```
 
