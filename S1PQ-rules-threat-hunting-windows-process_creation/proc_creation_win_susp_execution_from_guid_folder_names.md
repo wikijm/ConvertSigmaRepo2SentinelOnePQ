@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-01-2026 00:59:48):
+// Translated content (automatically translated on 05-01-2026 00:58:58):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "\\AppData\\Roaming\\" or tgt.process.cmdline contains "\\AppData\\Local\\Temp\\") and (tgt.process.cmdline contains "\\{" and tgt.process.cmdline contains "}\\")) and (not ((tgt.process.image.path contains "\\{" and tgt.process.image.path contains "}\\") or not (tgt.process.image.path matches "\.*") or tgt.process.image.path="C:\\Windows\\System32\\drvinst.exe" or (tgt.process.image.path in ("C:\\Windows\\System32\\msiexec.exe","C:\\Windows\\SysWOW64\\msiexec.exe"))))))
 ```
 
