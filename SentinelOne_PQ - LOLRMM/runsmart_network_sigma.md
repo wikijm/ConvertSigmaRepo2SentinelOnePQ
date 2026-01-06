@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-01-2026 01:01:51):
+// Translated content (automatically translated on 06-01-2026 00:56:55):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "runsmart.io" or event.dns.request contains "runsmart.io"))
 ```
 

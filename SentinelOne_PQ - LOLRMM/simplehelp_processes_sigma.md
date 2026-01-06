@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-01-2026 01:01:51):
+// Translated content (automatically translated on 06-01-2026 00:56:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "simplehelpcustomer.exe" or src.process.image.path contains "simpleservice.exe" or src.process.image.path contains "simplegatewayservice.exe" or src.process.image.path contains "remote access.exe" or src.process.image.path contains "windowslauncher.exe" or src.process.image.path contains "spsrv.exe") or (tgt.process.image.path contains "simplehelpcustomer.exe" or tgt.process.image.path contains "simpleservice.exe" or tgt.process.image.path contains "simplegatewayservice.exe" or tgt.process.image.path contains "remote access.exe" or tgt.process.image.path contains "windowslauncher.exe" or tgt.process.image.path contains "spsrv.exe")))
 ```
 
