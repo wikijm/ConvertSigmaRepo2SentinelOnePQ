@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-01-2026 01:06:30):
+// Translated content (automatically translated on 06-01-2026 01:01:03):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/yum" and (tgt.process.cmdline contains "erase" or tgt.process.cmdline contains "remove")) or ((tgt.process.image.path contains "/apt" or tgt.process.image.path contains "/apt-get") and (tgt.process.cmdline contains "remove" or tgt.process.cmdline contains "purge")) or (tgt.process.image.path contains "/dpkg" and (tgt.process.cmdline contains "--remove " or tgt.process.cmdline contains " -r ")) or (tgt.process.image.path contains "/rpm" and tgt.process.cmdline contains " -e ")))
 ```
 
