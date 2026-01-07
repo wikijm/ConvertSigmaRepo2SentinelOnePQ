@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-01-2026 01:54:47):
+// Translated content (automatically translated on 07-01-2026 01:54:48):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\acrodistdll.dll" and (not (module.path="c:\\program files\\Adobe\\Acrobat *\\Acrobat\*" or module.path="c:\\program files (x86)\\Adobe\\Acrobat *\\Acrobat\*"))))
 ```
 
