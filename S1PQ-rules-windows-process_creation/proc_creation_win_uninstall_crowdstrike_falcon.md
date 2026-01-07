@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-01-2026 02:19:37):
+// Translated content (automatically translated on 07-01-2026 02:19:16):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\WindowsSensor.exe" and tgt.process.cmdline contains " /uninstall" and tgt.process.cmdline contains " /quiet"))
 ```
 
