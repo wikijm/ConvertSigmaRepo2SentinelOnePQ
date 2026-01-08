@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-01-2026 01:01:19):
+// Translated content (automatically translated on 08-01-2026 01:01:04):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/ls" and (tgt.process.cmdline contains " /" or tgt.process.cmdline contains " / ") and tgt.process.cmdline matches "(?:\\s-[^-\\s]{0,20}i|\\s--inode\\s)" and tgt.process.cmdline matches "(?:\\s-[^-\\s]{0,20}d|\\s--directory\\s)"))
 ```
 

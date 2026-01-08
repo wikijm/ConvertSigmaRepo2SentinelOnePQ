@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-01-2026 01:01:19):
+// Translated content (automatically translated on 08-01-2026 01:01:04):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "xterm" and tgt.process.cmdline contains "-display" and tgt.process.cmdline contains ":1"))
 ```
 
