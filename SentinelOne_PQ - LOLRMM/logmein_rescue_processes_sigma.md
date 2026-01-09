@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-01-2026 00:57:02):
+// Translated content (automatically translated on 09-01-2026 00:57:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*support-logmeinrescue*.exe" or src.process.image.path contains "support-logmeinrescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue.exe" or src.process.image.path contains "lmi_rescue_srv.exe" or src.process.image.path contains "lmi_rescue.exe") or (tgt.process.image.path="*support-logmeinrescue*.exe" or tgt.process.image.path contains "support-logmeinrescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue.exe" or tgt.process.image.path contains "lmi_rescue_srv.exe" or tgt.process.image.path contains "lmi_rescue.exe")))
 ```
 
