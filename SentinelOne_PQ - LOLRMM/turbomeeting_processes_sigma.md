@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-01-2026 00:57:51):
+// Translated content (automatically translated on 10-01-2026 00:55:36):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "pcstarter.exe" or src.process.image.path contains "turbomeeting.exe" or src.process.image.path contains "turbomeetingstarter.exe") or (tgt.process.image.path contains "pcstarter.exe" or tgt.process.image.path contains "turbomeeting.exe" or tgt.process.image.path contains "turbomeetingstarter.exe")))
 ```
 

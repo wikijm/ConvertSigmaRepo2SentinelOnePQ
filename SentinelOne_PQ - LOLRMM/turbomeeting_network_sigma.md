@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-01-2026 00:57:51):
+// Translated content (automatically translated on 10-01-2026 00:55:36):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "user_managed" or url.address contains "acceo.com/turbomeeting/") or (event.dns.request contains "user_managed" or event.dns.request contains "acceo.com/turbomeeting/")))
 ```
 
