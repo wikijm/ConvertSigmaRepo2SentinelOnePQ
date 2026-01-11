@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-01-2026 01:52:04):
+// Translated content (automatically translated on 11-01-2026 02:04:21):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\systemsettingsthresholdadminflowui.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 

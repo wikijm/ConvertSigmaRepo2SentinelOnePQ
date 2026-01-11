@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-01-2026 01:52:04):
+// Translated content (automatically translated on 11-01-2026 02:04:21):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\formdll.dll" and (not (module.path in ("c:\\program files\\Common Files\\Microsoft Shared\\NoteSync Forms\*","c:\\program files (x86)\\Common Files\\Microsoft Shared\\NoteSync Forms\*")))))
 ```
 
