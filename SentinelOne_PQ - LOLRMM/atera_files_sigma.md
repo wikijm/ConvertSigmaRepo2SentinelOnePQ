@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-01-2026 00:55:36):
+// Translated content (automatically translated on 11-01-2026 01:02:35):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\log.txt" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\*" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\AteraAgent.exe" or tgt.file.path contains "C:\\Program Files\\Atera Networks\\AlphaAgent.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageSTRemote\\AgentPackageSTRemote.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageMonitoring\\AgentPackageMonitoring.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageHeartbeat\\AgentPackageHeartbeat.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageFileExplorer\\AgentPackageFileExplorer.exe" or tgt.file.path contains "C:\\Program Files\\ATERA Networks\\AteraAgent\\Packages\\AgentPackageRunCommandInteractive\\AgentPackageRunCommandInteractive.exe"))
 ```
 
