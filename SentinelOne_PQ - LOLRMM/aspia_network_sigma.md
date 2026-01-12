@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-01-2026 01:02:35):
+// Translated content (automatically translated on 12-01-2026 01:00:01):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "https://github.com/dchapyshev/aspia" or event.dns.request contains "https://github.com/dchapyshev/aspia"))
 ```
 
