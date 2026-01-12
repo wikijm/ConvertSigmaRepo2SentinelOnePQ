@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-01-2026 02:04:21):
+// Translated content (automatically translated on 12-01-2026 02:01:07):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wimgapi.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*","c:\\program files\\Windows Kits\\10\\Assessment and Deployment Kit\\Deployment Tools\\arm64\\DISM\*","c:\\program files (x86)\\Windows Kits\\10\\Assessment and Deployment Kit\\Deployment Tools\\arm64\\DISM\*")))))
 ```
 
