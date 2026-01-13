@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-01-2026 02:01:07):
+// Translated content (automatically translated on 13-01-2026 01:52:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avupdate.dll" and (not (module.path in ("c:\\program files\\Confer\\scanner\\upd.exe\*","c:\\program files (x86)\\Confer\\scanner\\upd.exe\*")))))
 ```
 
