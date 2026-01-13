@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-01-2026 02:26:06):
+// Translated content (automatically translated on 13-01-2026 02:11:32):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\pcwrun.exe")
 ```
 
