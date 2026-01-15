@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-01-2026 02:24:52):
+// Translated content (automatically translated on 15-01-2026 02:19:21):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\OUTLOOK.EXE" and (tgt.process.image.path contains "\\AppVLP.exe" or tgt.process.image.path contains "\\bash.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\forfiles.exe" or tgt.process.image.path contains "\\hh.exe" or tgt.process.image.path contains "\\mftrace.exe" or tgt.process.image.path contains "\\msbuild.exe" or tgt.process.image.path contains "\\msdt.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\schtasks.exe" or tgt.process.image.path contains "\\scrcons.exe" or tgt.process.image.path contains "\\scriptrunner.exe" or tgt.process.image.path contains "\\sh.exe" or tgt.process.image.path contains "\\svchost.exe" or tgt.process.image.path contains "\\wmic.exe" or tgt.process.image.path contains "\\wscript.exe")))
 ```
 
