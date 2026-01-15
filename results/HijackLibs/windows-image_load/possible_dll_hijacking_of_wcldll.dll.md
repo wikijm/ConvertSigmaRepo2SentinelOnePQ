@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-01-2026 01:59:37):
+// Translated content (automatically translated on 15-01-2026 01:54:47):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wcldll.dll" and (not (module.path in ("c:\\program files\\Cisco Systems\\Cisco Jabber\*","c:\\program files (x86)\\Cisco Systems\\Cisco Jabber\*","c:\\program files\\Webex\\Applications\*","c:\\program files (x86)\\Webex\\Applications\*","c:\\program files\\Webex\\Plugins\*","c:\\program files (x86)\\Webex\\Plugins\*")))))
 ```
 
