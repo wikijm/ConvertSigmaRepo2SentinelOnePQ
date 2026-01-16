@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-01-2026 00:55:17):
+// Translated content (automatically translated on 16-01-2026 00:57:46):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ninjarmmagent.exe" or src.process.image.path contains "NinjaRMMAgent.exe" or src.process.image.path contains "NinjaRMMAgenPatcher.exe" or src.process.image.path contains "ninjarmm-cli.exe") or (tgt.process.image.path contains "ninjarmmagent.exe" or tgt.process.image.path contains "NinjaRMMAgent.exe" or tgt.process.image.path contains "NinjaRMMAgenPatcher.exe" or tgt.process.image.path contains "ninjarmm-cli.exe")))
 ```
 
