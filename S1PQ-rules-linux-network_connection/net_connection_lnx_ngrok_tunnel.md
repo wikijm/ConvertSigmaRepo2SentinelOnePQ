@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-01-2026 01:39:00):
+// Translated content (automatically translated on 16-01-2026 01:41:04):
 (event.category in ("dns","url","ip")) and (endpoint.os="linux" and ((url.address contains "tunnel.us.ngrok.com" or url.address contains "tunnel.eu.ngrok.com" or url.address contains "tunnel.ap.ngrok.com" or url.address contains "tunnel.au.ngrok.com" or url.address contains "tunnel.sa.ngrok.com" or url.address contains "tunnel.jp.ngrok.com" or url.address contains "tunnel.in.ngrok.com") or (event.dns.request contains "tunnel.us.ngrok.com" or event.dns.request contains "tunnel.eu.ngrok.com" or event.dns.request contains "tunnel.ap.ngrok.com" or event.dns.request contains "tunnel.au.ngrok.com" or event.dns.request contains "tunnel.sa.ngrok.com" or event.dns.request contains "tunnel.jp.ngrok.com" or event.dns.request contains "tunnel.in.ngrok.com")))
 ```
 
