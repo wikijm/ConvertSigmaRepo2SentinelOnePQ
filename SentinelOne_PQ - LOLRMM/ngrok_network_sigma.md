@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-01-2026 00:57:46):
+// Translated content (automatically translated on 17-01-2026 00:55:11):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "connect.ngrok-agent.com" or url.address contains "connect.us.ngrok-agent.com" or url.address contains "connect.eu.ngrok-agent.com" or url.address contains "connect.ap.ngrok-agent.com" or url.address contains "connect.au.ngrok-agent.com" or url.address contains "connect.sa.ngrok-agent.com" or url.address contains "connect.jp.ngrok-agent.com" or url.address contains "connect.in.ngrok-agent.com" or url.address contains "ngrok.com") or (event.dns.request contains "connect.ngrok-agent.com" or event.dns.request contains "connect.us.ngrok-agent.com" or event.dns.request contains "connect.eu.ngrok-agent.com" or event.dns.request contains "connect.ap.ngrok-agent.com" or event.dns.request contains "connect.au.ngrok-agent.com" or event.dns.request contains "connect.sa.ngrok-agent.com" or event.dns.request contains "connect.jp.ngrok-agent.com" or event.dns.request contains "connect.in.ngrok-agent.com" or event.dns.request contains "ngrok.com")))
 ```
 
