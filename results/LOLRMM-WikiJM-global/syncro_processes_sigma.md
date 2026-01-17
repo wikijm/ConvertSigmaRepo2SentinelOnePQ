@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-01-2026 01:49:11):
+// Translated content (automatically translated on 17-01-2026 01:43:17):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "Syncro.Installer.exe" or src.process.image.path contains "Kabuto.App.Runner.exe" or src.process.image.path contains "Syncro.Overmind.Service.exe" or src.process.image.path contains "Kabuto.Installer.exe" or src.process.image.path contains "KabutoSetup.exe" or src.process.image.path contains "Syncro.Service.exe" or src.process.image.path contains "Kabuto.Service.Runner.exe" or src.process.image.path contains "Syncro.App.Runner.exe" or src.process.image.path contains "SyncroLive.Service.exe" or src.process.image.path contains "SyncroLive.Agent.exe"))
 ```
 
