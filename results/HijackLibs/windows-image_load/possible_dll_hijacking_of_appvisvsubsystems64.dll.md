@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-01-2026 01:56:31):
+// Translated content (automatically translated on 17-01-2026 01:50:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvisvsubsystems64.dll" and (not (module.path="c:\\program files\\Common Files\\microsoft shared\\ClickToRun\*" or module.path="c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\*" or module.path="c:\\program files\\Common Files\\microsoft shared\\ClickToRun\\Updates\*\*" or module.path="c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\\Updates\*\*" or module.path="c:\\program files\\Microsoft Office\\root\\Client\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\Client\*" or module.path="c:\\program files\\Microsoft Office\\root\\Office*\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\Office*\*" or module.path="c:\\program files\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\*"))))
 ```
 
