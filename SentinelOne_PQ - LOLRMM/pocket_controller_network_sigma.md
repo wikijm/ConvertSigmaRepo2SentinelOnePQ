@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-01-2026 00:55:11):
+// Translated content (automatically translated on 18-01-2026 01:01:46):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "soti.net/products/soti-pocket-controller" or event.dns.request contains "soti.net/products/soti-pocket-controller"))
 ```
 
