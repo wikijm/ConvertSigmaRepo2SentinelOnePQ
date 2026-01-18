@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-01-2026 02:08:38):
+// Translated content (automatically translated on 18-01-2026 02:29:09):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "mklink" and tgt.process.cmdline contains "HarddiskVolumeShadowCopy"))
 ```
 
