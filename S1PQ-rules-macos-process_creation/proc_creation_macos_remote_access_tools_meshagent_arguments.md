@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-01-2026 01:22:43):
+// Translated content (automatically translated on 18-01-2026 01:41:38):
 event.type="Process Creation" and (endpoint.os="osx" and tgt.process.cmdline contains "--meshServiceName")
 ```
 
