@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-01-2026 02:29:09):
+// Translated content (automatically translated on 19-01-2026 02:26:32):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\wermgr.exe" and (tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\ipconfig.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\net.exe" or tgt.process.image.path contains "\\net1.exe" or tgt.process.image.path contains "\\netstat.exe" or tgt.process.image.path contains "\\nslookup.exe" or tgt.process.image.path contains "\\powershell_ise.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\systeminfo.exe" or tgt.process.image.path contains "\\whoami.exe" or tgt.process.image.path contains "\\wscript.exe")) and (not (tgt.process.image.path contains "\\rundll32.exe" and (tgt.process.cmdline contains "C:\\Windows\\system32\\WerConCpl.dll" and tgt.process.cmdline contains "LaunchErcApp ") and (tgt.process.cmdline contains "-queuereporting" or tgt.process.cmdline contains "-responsepester")))))
 ```
 

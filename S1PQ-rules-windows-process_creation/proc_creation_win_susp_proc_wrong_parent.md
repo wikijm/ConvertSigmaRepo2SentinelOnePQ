@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-01-2026 02:29:09):
+// Translated content (automatically translated on 19-01-2026 02:26:32):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\svchost.exe" or tgt.process.image.path contains "\\taskhost.exe" or tgt.process.image.path contains "\\lsm.exe" or tgt.process.image.path contains "\\lsass.exe" or tgt.process.image.path contains "\\services.exe" or tgt.process.image.path contains "\\lsaiso.exe" or tgt.process.image.path contains "\\csrss.exe" or tgt.process.image.path contains "\\wininit.exe" or tgt.process.image.path contains "\\winlogon.exe") and (not (((src.process.image.path contains "\\SavService.exe" or src.process.image.path contains "\\ngen.exe") or (src.process.image.path contains "\\System32\\" or src.process.image.path contains "\\SysWOW64\\")) or ((src.process.image.path contains "\\Windows Defender\\" or src.process.image.path contains "\\Microsoft Security Client\\") and src.process.image.path contains "\\MsMpEng.exe") or (not (src.process.image.path matches "\.*") or (src.process.image.path in ("","-")))))))
 ```
 
