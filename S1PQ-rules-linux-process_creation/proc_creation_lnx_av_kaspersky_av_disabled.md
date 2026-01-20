@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-01-2026 01:05:44):
+// Translated content (automatically translated on 20-01-2026 01:00:30):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/systemctl" or tgt.process.image.path contains "/bash" or tgt.process.image.path contains "/sh") and (tgt.process.cmdline contains "stop" and tgt.process.cmdline contains "kesl")))
 ```
 
