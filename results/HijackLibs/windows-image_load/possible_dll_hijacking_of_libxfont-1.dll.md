@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-01-2026 01:56:24):
+// Translated content (automatically translated on 21-01-2026 01:59:12):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libxfont-1.dll" and (not (module.path in ("c:\\program files\\Mobatek\\MobaXterm Personal Edition\*","c:\\program files (x86)\\Mobatek\\MobaXterm Personal Edition\*","c:\\program files\\Mobatek\\MobaXterm\*","c:\\program files (x86)\\Mobatek\\MobaXterm\*")))))
 ```
 
