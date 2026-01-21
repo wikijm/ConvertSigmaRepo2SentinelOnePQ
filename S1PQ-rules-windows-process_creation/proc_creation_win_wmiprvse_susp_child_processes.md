@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-01-2026 02:21:23):
+// Translated content (automatically translated on 21-01-2026 02:24:13):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\wbem\\WmiPrvSE.exe" and ((tgt.process.image.path contains "\\certutil.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\mshta.exe" or tgt.process.image.path contains "\\msiexec.exe" or tgt.process.image.path contains "\\regsvr32.exe" or tgt.process.image.path contains "\\rundll32.exe" or tgt.process.image.path contains "\\verclsid.exe" or tgt.process.image.path contains "\\wscript.exe") or (tgt.process.image.path contains "\\cmd.exe" and (tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "mshta" or tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "pwsh" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "wscript"))) and (not (tgt.process.image.path contains "\\WerFault.exe" or tgt.process.image.path contains "\\WmiPrvSE.exe" or (tgt.process.image.path contains "\\msiexec.exe" and tgt.process.cmdline contains "/i ")))))
 ```
 
