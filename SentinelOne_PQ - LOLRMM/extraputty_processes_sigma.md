@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-01-2026 00:58:46):
+// Translated content (automatically translated on 22-01-2026 00:57:45):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe" or src.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe" or src.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe") or (tgt.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe" or tgt.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe" or tgt.process.image.path contains "ExtraPuTTY-0.30-2016-01-28-installer.exe")))
 ```
 
