@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-01-2026 01:51:28):
+// Translated content (automatically translated on 22-01-2026 01:51:51):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "gotoassist.exe" or src.process.image.path="*g2a*.exe" or src.process.image.path contains "GoTo Assist Opener.exe"))
 ```
 
