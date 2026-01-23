@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-01-2026 00:57:45):
+// Translated content (automatically translated on 23-01-2026 00:58:23):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "strwinclt.exe" or src.process.image.path="*Splashtop_Streamer_Windows*.exe" or src.process.image.path contains "SplashtopSOS.exe" or src.process.image.path contains "sragent.exe" or src.process.image.path contains "srmanager.exe" or src.process.image.path contains "srserver.exe" or src.process.image.path contains "srservice.exe") or (tgt.process.image.path contains "strwinclt.exe" or tgt.process.image.path="*Splashtop_Streamer_Windows*.exe" or tgt.process.image.path contains "SplashtopSOS.exe" or tgt.process.image.path contains "sragent.exe" or tgt.process.image.path contains "srmanager.exe" or tgt.process.image.path contains "srserver.exe" or tgt.process.image.path contains "srservice.exe")))
 ```
 
