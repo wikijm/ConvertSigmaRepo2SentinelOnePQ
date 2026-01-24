@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-01-2026 00:58:23):
+// Translated content (automatically translated on 24-01-2026 00:55:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "SecureCRT.EXE" or src.process.image.path contains "SecureCRT.EXE") or (tgt.process.image.path contains "SecureCRT.EXE" or tgt.process.image.path contains "SecureCRT.EXE")))
 ```
 
