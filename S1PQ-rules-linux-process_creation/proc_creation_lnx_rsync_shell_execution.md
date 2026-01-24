@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-01-2026 01:02:42):
+// Translated content (automatically translated on 24-01-2026 00:59:35):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/rsync" or tgt.process.image.path contains "/rsyncd") and tgt.process.cmdline contains " -e ") and (tgt.process.cmdline contains "/ash " or tgt.process.cmdline contains "/bash " or tgt.process.cmdline contains "/dash " or tgt.process.cmdline contains "/csh " or tgt.process.cmdline contains "/sh " or tgt.process.cmdline contains "/zsh " or tgt.process.cmdline contains "/tcsh " or tgt.process.cmdline contains "/ksh " or tgt.process.cmdline contains "'ash " or tgt.process.cmdline contains "'bash " or tgt.process.cmdline contains "'dash " or tgt.process.cmdline contains "'csh " or tgt.process.cmdline contains "'sh " or tgt.process.cmdline contains "'zsh " or tgt.process.cmdline contains "'tcsh " or tgt.process.cmdline contains "'ksh ")))
 ```
 
