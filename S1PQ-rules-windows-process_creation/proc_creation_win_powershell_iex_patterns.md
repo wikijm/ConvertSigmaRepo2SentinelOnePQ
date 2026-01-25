@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-01-2026 02:11:05):
+// Translated content (automatically translated on 25-01-2026 02:33:01):
 event.type="Process Creation" and (endpoint.os="windows" and ((((tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe") and (tgt.process.cmdline contains " | iex;" or tgt.process.cmdline contains " | iex " or tgt.process.cmdline contains " | iex}" or tgt.process.cmdline contains " | IEX ;" or tgt.process.cmdline contains " | IEX -Error" or tgt.process.cmdline contains " | IEX (new" or tgt.process.cmdline contains ");IEX ")) and (tgt.process.cmdline contains "::FromBase64String" or tgt.process.cmdline contains ".GetString([System.Convert]::")) or (tgt.process.cmdline contains ")|iex;$" or tgt.process.cmdline contains ");iex($" or tgt.process.cmdline contains ");iex $" or tgt.process.cmdline contains " | IEX | " or tgt.process.cmdline contains " | iex\\\"")))
 ```
 

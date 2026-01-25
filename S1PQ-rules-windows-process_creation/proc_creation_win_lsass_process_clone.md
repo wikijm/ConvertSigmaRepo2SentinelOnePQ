@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-01-2026 02:11:05):
+// Translated content (automatically translated on 25-01-2026 02:33:01):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\Windows\\System32\\lsass.exe" and tgt.process.image.path contains "\\Windows\\System32\\lsass.exe"))
 ```
 
