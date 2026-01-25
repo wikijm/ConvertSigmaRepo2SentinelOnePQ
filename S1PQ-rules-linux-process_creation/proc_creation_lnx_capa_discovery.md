@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 24-01-2026 00:59:35):
-event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/getcap" and (tgt.process.cmdline contains " -r " or tgt.process.cmdline contains " /r " or tgt.process.cmdline contains " –r " or tgt.process.cmdline contains " —r " or tgt.process.cmdline contains " ―r ")))
+// Translated content (automatically translated on 25-01-2026 01:08:07):
+event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/getcap" and tgt.process.cmdline contains " -r "))
 ```
 
 
@@ -16,7 +16,7 @@ references:
     - https://github.com/diego-treitos/linux-smart-enumeration
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-12-28
-modified: 2024-03-05
+modified: 2026-01-24
 tags:
     - attack.discovery
     - attack.t1083
@@ -26,7 +26,7 @@ logsource:
 detection:
     selection:
         Image|endswith: '/getcap'
-        CommandLine|contains|windash: ' -r '
+        CommandLine|contains: ' -r '
     condition: selection
 falsepositives:
     - Unknown
