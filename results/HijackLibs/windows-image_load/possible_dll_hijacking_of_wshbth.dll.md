@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-01-2026 01:52:37):
+// Translated content (automatically translated on 25-01-2026 02:06:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wshbth.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
 ```
 
