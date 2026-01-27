@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-01-2026 00:59:27):
+// Translated content (automatically translated on 27-01-2026 00:58:03):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\wusa.exe" and tgt.process.cmdline contains "/extract:"))
 ```
 
