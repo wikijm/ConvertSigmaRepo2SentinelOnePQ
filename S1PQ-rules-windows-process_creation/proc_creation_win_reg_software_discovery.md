@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-01-2026 02:32:02):
+// Translated content (automatically translated on 27-01-2026 02:27:28):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\reg.exe" and (tgt.process.cmdline contains "query" and tgt.process.cmdline contains "\\software\\" and tgt.process.cmdline contains "/v" and tgt.process.cmdline contains "svcversion")))
 ```
 

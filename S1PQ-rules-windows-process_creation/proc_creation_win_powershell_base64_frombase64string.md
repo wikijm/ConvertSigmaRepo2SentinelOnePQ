@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-01-2026 02:32:02):
+// Translated content (automatically translated on 27-01-2026 02:27:28):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "OjpGcm9tQmFzZTY0U3RyaW5n" or tgt.process.cmdline contains "o6RnJvbUJhc2U2NFN0cmluZ" or tgt.process.cmdline contains "6OkZyb21CYXNlNjRTdHJpbm" or (tgt.process.cmdline contains "OgA6AEYAcgBvAG0AQgBhAHMAZQA2ADQAUwB0AHIAaQBuAGcA" or tgt.process.cmdline contains "oAOgBGAHIAbwBtAEIAYQBzAGUANgA0AFMAdAByAGkAbgBnA" or tgt.process.cmdline contains "6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZw")))
 ```
 
