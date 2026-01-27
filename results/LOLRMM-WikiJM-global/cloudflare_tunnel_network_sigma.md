@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-01-2026 01:58:14):
+// Translated content (automatically translated on 27-01-2026 01:54:53):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "cloudflare.com/products/tunnel/" or event.dns.request contains "cloudflare.com/products/tunnel/"))
 ```
 
