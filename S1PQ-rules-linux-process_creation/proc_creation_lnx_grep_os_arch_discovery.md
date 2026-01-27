@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-01-2026 01:06:50):
+// Translated content (automatically translated on 27-01-2026 01:05:44):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/grep" and (tgt.process.cmdline contains "aarch64" or tgt.process.cmdline contains "arm" or tgt.process.cmdline contains "i386" or tgt.process.cmdline contains "i686" or tgt.process.cmdline contains "mips" or tgt.process.cmdline contains "x86_64")))
 ```
 
