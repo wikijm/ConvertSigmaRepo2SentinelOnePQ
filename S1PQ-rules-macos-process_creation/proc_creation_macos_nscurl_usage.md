@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2026 01:41:30):
+// Translated content (automatically translated on 28-01-2026 01:28:21):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/nscurl" and (tgt.process.cmdline contains "--download " or tgt.process.cmdline contains "--download-directory " or tgt.process.cmdline contains "--output " or tgt.process.cmdline contains "-dir " or tgt.process.cmdline contains "-dl " or tgt.process.cmdline contains "-ld" or tgt.process.cmdline contains "-o ")))
 ```
 
