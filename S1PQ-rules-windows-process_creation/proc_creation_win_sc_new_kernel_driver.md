@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2026 02:27:28):
+// Translated content (automatically translated on 28-01-2026 02:23:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" or tgt.process.cmdline contains "config") and (tgt.process.cmdline contains "binPath" and tgt.process.cmdline contains "type" and tgt.process.cmdline contains "kernel")) and (not ((tgt.process.cmdline contains "create netprotection_network_filter" and tgt.process.cmdline contains "type= kernel start= " and tgt.process.cmdline contains "binPath= System32\\drivers\\netprotection_network_filter" and tgt.process.cmdline contains "DisplayName= netprotection_network_filter" and tgt.process.cmdline contains "group= PNP_TDI tag= yes") or (tgt.process.cmdline contains "create avelam binpath=C:\\Windows\\system32\\drivers\\avelam.sys" and tgt.process.cmdline contains "type=kernel start=boot error=critical group=Early-Launch")))))
 ```
 

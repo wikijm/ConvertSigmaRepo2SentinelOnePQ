@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2026 02:27:28):
+// Translated content (automatically translated on 28-01-2026 02:23:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains "/Create" and tgt.process.cmdline contains "/RU" and tgt.process.cmdline contains "/TR" and tgt.process.cmdline contains "C:\\Users\\" and tgt.process.cmdline contains "\\AppData\\Local\\") and (tgt.process.cmdline contains "NT AUT" or tgt.process.cmdline contains " SYSTEM ")) and (not ((src.process.image.path contains "\\AppData\\Local\\Temp\\" and src.process.image.path contains "TeamViewer_.exe") and tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains "/TN TVInstallRestore"))))
 ```
 

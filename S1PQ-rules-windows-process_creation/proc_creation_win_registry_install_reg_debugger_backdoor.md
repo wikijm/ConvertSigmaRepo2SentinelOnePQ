@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2026 02:27:28):
+// Translated content (automatically translated on 28-01-2026 02:23:44):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\CurrentVersion\\Image File Execution Options\\" and (tgt.process.cmdline contains "sethc.exe" or tgt.process.cmdline contains "utilman.exe" or tgt.process.cmdline contains "osk.exe" or tgt.process.cmdline contains "magnify.exe" or tgt.process.cmdline contains "narrator.exe" or tgt.process.cmdline contains "displayswitch.exe" or tgt.process.cmdline contains "atbroker.exe" or tgt.process.cmdline contains "HelpPane.exe")))
 ```
 
