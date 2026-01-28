@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-01-2026 01:00:51):
+// Translated content (automatically translated on 28-01-2026 00:58:05):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "rcengmgru.exe" or src.process.image.path contains "rcmgrsvc.exe" or src.process.image.path contains "rxstartsupport.exe" or src.process.image.path contains "rcstartsupport.exe" or src.process.image.path contains "raautoup.exe" or src.process.image.path contains "agentu.exe" or src.process.image.path contains "remotesupportplayeru.exe") or (tgt.process.image.path contains "rcengmgru.exe" or tgt.process.image.path contains "rcmgrsvc.exe" or tgt.process.image.path contains "rxstartsupport.exe" or tgt.process.image.path contains "rcstartsupport.exe" or tgt.process.image.path contains "raautoup.exe" or tgt.process.image.path contains "agentu.exe" or tgt.process.image.path contains "remotesupportplayeru.exe")))
 ```
 
