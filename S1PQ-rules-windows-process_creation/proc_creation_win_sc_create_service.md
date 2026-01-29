@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-01-2026 02:23:44):
+// Translated content (automatically translated on 29-01-2026 02:40:50):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" and tgt.process.cmdline contains "binPath")) and (not ((src.process.image.path contains "C:\\Program Files (x86)\\Dropbox\\Client\\" or src.process.image.path contains "C:\\Program Files\\Dropbox\\Client\\") and src.process.image.path contains "\\Dropbox.exe"))))
 ```
 
