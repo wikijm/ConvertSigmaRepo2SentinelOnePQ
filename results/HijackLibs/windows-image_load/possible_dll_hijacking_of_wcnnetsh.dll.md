@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-01-2026 01:58:37):
+// Translated content (automatically translated on 29-01-2026 02:12:59):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wcnnetsh.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 
