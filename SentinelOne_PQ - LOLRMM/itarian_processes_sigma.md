@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-01-2026 00:58:05):
+// Translated content (automatically translated on 29-01-2026 01:06:00):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ITSMAgent.exe" or src.process.image.path contains "RViewer.exe" or src.process.image.path contains "ItsmRsp.exe" or src.process.image.path contains "RAccess.exe" or src.process.image.path contains "RmmService.exe" or src.process.image.path contains "ITarianRemoteAccessSetup.exe" or src.process.image.path contains "RDesktop.exe" or src.process.image.path contains "ComodoRemoteControl.exe" or src.process.image.path contains "ITSMService.exe" or src.process.image.path contains "RHost.exe") or (tgt.process.image.path contains "ITSMAgent.exe" or tgt.process.image.path contains "RViewer.exe" or tgt.process.image.path contains "ItsmRsp.exe" or tgt.process.image.path contains "RAccess.exe" or tgt.process.image.path contains "RmmService.exe" or tgt.process.image.path contains "ITarianRemoteAccessSetup.exe" or tgt.process.image.path contains "RDesktop.exe" or tgt.process.image.path contains "ComodoRemoteControl.exe" or tgt.process.image.path contains "ITSMService.exe" or tgt.process.image.path contains "RHost.exe")))
 ```
 
