@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 29-01-2026 01:48:47):
+// Translated content (automatically translated on 30-01-2026 01:49:31):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ShellDispatch.dll" and (not ((module.path contains ":\\Users\\" and module.path contains "\\AppData\\Local\\Temp\\") or module.path contains ":\\Windows\\Temp\\"))))
 ```
 
