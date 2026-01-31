@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-01-2026 01:05:53):
+// Translated content (automatically translated on 31-01-2026 01:03:07):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ddsystem.exe" or src.process.image.path contains "dd.exe" or src.process.image.path contains "distant-desktop.exe") or (tgt.process.image.path contains "ddsystem.exe" or tgt.process.image.path contains "dd.exe" or tgt.process.image.path contains "distant-desktop.exe")))
 ```
 
