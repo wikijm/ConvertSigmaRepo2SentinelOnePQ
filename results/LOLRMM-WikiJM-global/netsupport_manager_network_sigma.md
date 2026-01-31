@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 30-01-2026 02:05:01):
+// Translated content (automatically translated on 31-01-2026 02:00:45):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "geo.netsupportsoftware.com" or url.address contains "netsupportmanager.com" or url.address contains ".netsupportmanager.com") or (event.dns.request contains "geo.netsupportsoftware.com" or event.dns.request contains "netsupportmanager.com" or event.dns.request contains ".netsupportmanager.com")))
 ```
 
