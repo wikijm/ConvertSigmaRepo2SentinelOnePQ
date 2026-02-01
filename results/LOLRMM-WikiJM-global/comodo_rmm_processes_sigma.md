@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 02:00:45):
+// Translated content (automatically translated on 01-02-2026 02:29:19):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "itsmagent.exe" or src.process.image.path contains "rviewer.exe"))
 ```
 
