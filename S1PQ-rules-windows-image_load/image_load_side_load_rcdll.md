@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 01:45:09):
+// Translated content (automatically translated on 01-02-2026 02:04:04):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rcdll.dll" and (not (module.path contains "C:\\Program Files (x86)\\Microsoft Visual Studio\\" or module.path contains "C:\\Program Files (x86)\\Windows Kits\\"))))
 ```
 

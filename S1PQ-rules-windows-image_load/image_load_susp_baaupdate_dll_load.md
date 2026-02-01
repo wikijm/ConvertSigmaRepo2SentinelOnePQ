@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 01:45:09):
+// Translated content (automatically translated on 01-02-2026 02:04:04):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\BaaUpdate.exe" and module.path contains ".dll" and (module.path contains ":\\Perflogs\\" or module.path contains ":\\Users\\Default\\" or module.path contains ":\\Users\\Public\\" or module.path contains ":\\Windows\\Temp\\" or module.path contains "\\AppData\\Local\\Temp\\" or module.path contains "\\AppData\\Roaming\\" or module.path contains "\\Contacts\\" or module.path contains "\\Favorites\\" or module.path contains "\\Favourites\\" or module.path contains "\\Links\\" or module.path contains "\\Music\\" or module.path contains "\\Pictures\\" or module.path contains "\\ProgramData\\" or module.path contains "\\Temporary Internet" or module.path contains "\\Videos\\")))
 ```
 

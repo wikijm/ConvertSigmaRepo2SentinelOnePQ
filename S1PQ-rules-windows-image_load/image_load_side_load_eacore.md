@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 01:45:09):
+// Translated content (automatically translated on 01-02-2026 02:04:04):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\EACore.dll" and (not ((src.process.image.path contains "C:\\Program Files\\Electronic Arts\\EA Desktop\\" and src.process.image.path contains "\\EACoreServer.exe") and module.path contains "C:\\Program Files\\Electronic Arts\\EA Desktop\\"))))
 ```
 
