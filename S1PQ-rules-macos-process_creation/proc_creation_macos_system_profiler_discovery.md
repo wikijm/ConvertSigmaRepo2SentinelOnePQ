@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 01:46:05):
+// Translated content (automatically translated on 01-02-2026 02:04:52):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/system_profiler" or tgt.process.cmdline contains "system_profiler") and (tgt.process.cmdline contains "SPApplicationsDataType" or tgt.process.cmdline contains "SPHardwareDataType" or tgt.process.cmdline contains "SPNetworkDataType" or tgt.process.cmdline contains "SPUSBDataType")))
 ```
 
