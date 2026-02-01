@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 31-01-2026 02:36:25):
+// Translated content (automatically translated on 01-02-2026 03:18:33):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline matches "ipconfig\\s+/all" or tgt.process.cmdline matches "netsh\\s+interface show interface" or tgt.process.cmdline matches "arp\\s+-a" or tgt.process.cmdline matches "nbtstat\\s+-n" or tgt.process.cmdline matches "net\\s+config" or tgt.process.cmdline matches "route\\s+print"))
 ```
 
