@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 01-02-2026 01:17:45):
+// Translated content (automatically translated on 02-02-2026 01:10:03):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "hsloader.exe" or src.process.image.path contains "ihcserver.exe" or src.process.image.path contains "instanthousecall.exe" or src.process.image.path contains "instanthousecall.exe") or (tgt.process.image.path contains "hsloader.exe" or tgt.process.image.path contains "ihcserver.exe" or tgt.process.image.path contains "instanthousecall.exe" or tgt.process.image.path contains "instanthousecall.exe")))
 ```
 
