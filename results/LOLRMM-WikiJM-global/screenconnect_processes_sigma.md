@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-02-2026 02:10:50):
+// Translated content (automatically translated on 04-02-2026 02:06:13):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files (x86)\\ScreenConnect Client (Random)\\ScreenConnect.ClientService.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path contains "\*\\ScreenConnect.ClientService.exe" or src.process.image.path contains "\*\\ScreenConnect.WindowsClient.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path contains "Remote Workforce Client.exe" or src.process.image.path="*screenconnect*.exe" or src.process.image.path="*ConnectWiseControl*.exe" or src.process.image.path="*connectwise*.exe" or src.process.image.path contains "screenconnect.windowsclient.exe" or src.process.image.path contains "screenconnect.clientservice.exe"))
 ```
 
