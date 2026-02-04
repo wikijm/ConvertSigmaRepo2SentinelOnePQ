@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-02-2026 02:26:50):
+// Translated content (automatically translated on 04-02-2026 02:21:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cc3260mt.dll" and (not (module.path in ("c:\\program files\\TiVo\\Desktop\*","c:\\program files (x86)\\TiVo\\Desktop\*")))))
 ```
 

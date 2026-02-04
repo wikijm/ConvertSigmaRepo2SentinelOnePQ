@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-02-2026 02:26:50):
+// Translated content (automatically translated on 04-02-2026 02:21:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\imjp14k.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\windows\\syswow64\*","c:\\program files\\Common Files\\Microsoft Shared\\IME14\\SHARED\*","c:\\program files (x86)\\Common Files\\Microsoft Shared\\IME14\\SHARED\*")))))
 ```
 
