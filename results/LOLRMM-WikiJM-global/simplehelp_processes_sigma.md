@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-02-2026 02:06:13):
+// Translated content (automatically translated on 05-02-2026 02:06:59):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "simplehelpcustomer.exe" or src.process.image.path contains "simpleservice.exe" or src.process.image.path contains "simplegatewayservice.exe" or src.process.image.path contains "remote access.exe" or src.process.image.path contains "windowslauncher.exe"))
 ```
 
