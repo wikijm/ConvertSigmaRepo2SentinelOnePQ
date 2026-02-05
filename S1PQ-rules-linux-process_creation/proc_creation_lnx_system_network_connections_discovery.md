@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-02-2026 01:10:36):
+// Translated content (automatically translated on 05-02-2026 01:11:17):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/who" or tgt.process.image.path contains "/w" or tgt.process.image.path contains "/last" or tgt.process.image.path contains "/lsof" or tgt.process.image.path contains "/netstat") and (not (src.process.cmdline contains "/usr/bin/landscape-sysinfo" and tgt.process.image.path contains "/who"))))
 ```
 
