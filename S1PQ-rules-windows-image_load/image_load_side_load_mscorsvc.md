@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-02-2026 01:51:23):
+// Translated content (automatically translated on 06-02-2026 01:50:26):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mscorsvc.dll" and (not (module.path contains "C:\\Windows\\Microsoft.NET\\Framework\\" or module.path contains "C:\\Windows\\Microsoft.NET\\Framework64\\" or module.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm\\" or module.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm64\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
