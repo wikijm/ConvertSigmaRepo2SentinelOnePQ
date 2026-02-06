@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-02-2026 01:11:17):
+// Translated content (automatically translated on 06-02-2026 01:10:51):
 event.type="Process Creation" and (endpoint.os="linux" and tgt.process.image.path contains "/userdel")
 ```
 
