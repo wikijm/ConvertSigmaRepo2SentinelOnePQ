@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-02-2026 01:52:22):
+// Translated content (automatically translated on 06-02-2026 01:51:12):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/ioreg" or tgt.process.cmdline contains "ioreg") and (tgt.process.cmdline contains "-l" or tgt.process.cmdline contains "-c") and (tgt.process.cmdline contains "AppleAHCIDiskDriver" or tgt.process.cmdline contains "IOPlatformExpertDevice" or tgt.process.cmdline contains "Oracle" or tgt.process.cmdline contains "Parallels" or tgt.process.cmdline contains "USB Vendor Name" or tgt.process.cmdline contains "VirtualBox" or tgt.process.cmdline contains "VMware")))
 ```
 
