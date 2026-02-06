@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-02-2026 02:44:22):
+// Translated content (automatically translated on 06-02-2026 02:44:39):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.displayName contains "Mouse Lock" or tgt.process.publisher contains "Misc314" or tgt.process.cmdline contains "Mouse Lock_"))
 ```
 
