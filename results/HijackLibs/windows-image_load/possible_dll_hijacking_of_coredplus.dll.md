@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-02-2026 02:23:18):
+// Translated content (automatically translated on 07-02-2026 02:11:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\coredplus.dll" and (not module.path="c:\\windows\\system32\*")))
 ```
 

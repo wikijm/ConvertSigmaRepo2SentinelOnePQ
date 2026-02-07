@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-02-2026 02:23:18):
+// Translated content (automatically translated on 07-02-2026 02:11:35):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cc32290mt.dll" and (not (module.path in ("c:\\program files\\Ahnenblatt4\\Ahnenblatt4.exe\*","c:\\program files (x86)\\Ahnenblatt4\\Ahnenblatt4.exe\*")))))
 ```
 
