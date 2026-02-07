@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-02-2026 02:44:39):
+// Translated content (automatically translated on 07-02-2026 02:40:12):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\explorer.exe" and tgt.process.cmdline contains "#") and (tgt.process.cmdline contains "account" or tgt.process.cmdline contains "anti-bot" or tgt.process.cmdline contains "botcheck" or tgt.process.cmdline contains "captcha" or tgt.process.cmdline contains "challenge" or tgt.process.cmdline contains "confirmation" or tgt.process.cmdline contains "fraud" or tgt.process.cmdline contains "human" or tgt.process.cmdline contains "identification" or tgt.process.cmdline contains "identificator" or tgt.process.cmdline contains "identity" or tgt.process.cmdline contains "robot" or tgt.process.cmdline contains "validation" or tgt.process.cmdline contains "verification" or tgt.process.cmdline contains "verify")))
 ```
 
