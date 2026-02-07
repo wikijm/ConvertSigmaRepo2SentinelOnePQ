@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-02-2026 01:05:46):
+// Translated content (automatically translated on 07-02-2026 01:04:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*tigervnc*.exe" or src.process.image.path contains "winvnc4.exe" or src.process.image.path contains "tvnserver.exe") or (tgt.process.image.path="*tigervnc*.exe" or tgt.process.image.path contains "winvnc4.exe" or tgt.process.image.path contains "tvnserver.exe")))
 ```
 
