@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-02-2026 02:11:35):
+// Translated content (automatically translated on 08-02-2026 02:45:10):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rtl120.dll" and (not (module.path in ("c:\\program files\\DualSafe Password Manager\*","c:\\program files (x86)\\DualSafe Password Manager\*")))))
 ```
 
