@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-02-2026 01:28:05):
+// Translated content (automatically translated on 09-02-2026 01:11:58):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*neturo*.exe" or src.process.image.path contains "ntrntservice.exe" or src.process.image.path contains "neturo.exe") or (tgt.process.image.path="*neturo*.exe" or tgt.process.image.path contains "ntrntservice.exe" or tgt.process.image.path contains "neturo.exe")))
 ```
 
