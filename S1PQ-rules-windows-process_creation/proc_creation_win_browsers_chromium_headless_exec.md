@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-02-2026 02:52:10):
+// Translated content (automatically translated on 10-02-2026 03:17:10):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\brave.exe" or tgt.process.image.path contains "\\chrome.exe" or tgt.process.image.path contains "\\msedge.exe" or tgt.process.image.path contains "\\opera.exe" or tgt.process.image.path contains "\\vivaldi.exe") and tgt.process.cmdline contains "--headless"))
 ```
 

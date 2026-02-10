@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-02-2026 02:52:10):
+// Translated content (automatically translated on 10-02-2026 03:17:10):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "extrac32.exe" and tgt.process.cmdline contains ".cab") and tgt.process.cmdline matches ":[^\\\\]"))
 ```
 

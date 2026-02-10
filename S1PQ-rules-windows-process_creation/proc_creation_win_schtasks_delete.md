@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-02-2026 02:52:10):
+// Translated content (automatically translated on 10-02-2026 03:17:10):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\schtasks.exe" and (tgt.process.cmdline contains "/delete" and tgt.process.cmdline contains "/tn") and (tgt.process.cmdline contains "\\Windows\\BitLocker" or tgt.process.cmdline contains "\\Windows\\ExploitGuard" or tgt.process.cmdline contains "\\Windows\\SystemRestore\\SR" or tgt.process.cmdline contains "\\Windows\\UpdateOrchestrator\\" or tgt.process.cmdline contains "\\Windows\\Windows Defender\\" or tgt.process.cmdline contains "\\Windows\\WindowsBackup\\" or tgt.process.cmdline contains "\\Windows\\WindowsUpdate\\")))
 ```
 
