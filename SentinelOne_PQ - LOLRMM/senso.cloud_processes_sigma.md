@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-02-2026 01:11:58):
+// Translated content (automatically translated on 10-02-2026 01:20:40):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "SensoClient.exe" or src.process.image.path contains "SensoService.exe" or src.process.image.path contains "aadg.exe") or (tgt.process.image.path contains "SensoClient.exe" or tgt.process.image.path contains "SensoService.exe" or tgt.process.image.path contains "aadg.exe")))
 ```
 
