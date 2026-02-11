@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2026 01:20:40):
+// Translated content (automatically translated on 11-02-2026 01:18:47):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\temp\\netlock rmm\\installer\\logs\*" or tgt.file.path contains "C:\\ProgramData\\0x101 Cyber Security\\NetLock RMM\\Comm Agent\\server_config.json" or tgt.file.path contains "/etc/systemd/system/netlock-rmm-agent-comm.service" or tgt.file.path contains "/Library/LaunchDaemons/com.netlock.rmm.agentcomm.plist" or tgt.file.path contains "/var/log/netlock-rmm-agent-comm.log"))
 ```
 
