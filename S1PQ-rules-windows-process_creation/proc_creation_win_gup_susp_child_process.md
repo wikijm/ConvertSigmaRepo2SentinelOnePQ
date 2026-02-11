@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2026 03:17:10):
+// Translated content (automatically translated on 11-02-2026 03:14:41):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\gup.exe" and ((tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe" or tgt.process.image.path contains "\\cscript.exe" or tgt.process.image.path contains "\\wscript.exe" or tgt.process.image.path contains "\\mshta.exe") or (tgt.process.cmdline contains "bitsadmin" or tgt.process.cmdline contains "certutil" or tgt.process.cmdline contains "curl" or tgt.process.cmdline contains "finger" or tgt.process.cmdline contains "forfiles" or tgt.process.cmdline contains "regsvr32" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "wget"))))
 ```
 

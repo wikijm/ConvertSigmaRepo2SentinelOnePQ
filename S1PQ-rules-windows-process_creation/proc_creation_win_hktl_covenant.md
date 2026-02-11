@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2026 03:17:10):
+// Translated content (automatically translated on 11-02-2026 03:14:41):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.cmdline contains "-Sta" and tgt.process.cmdline contains "-Nop" and tgt.process.cmdline contains "-Window" and tgt.process.cmdline contains "Hidden") and (tgt.process.cmdline contains "-Command" or tgt.process.cmdline contains "-EncodedCommand")) or (tgt.process.cmdline contains "sv o (New-Object IO.MemorySteam);sv d " or tgt.process.cmdline contains "mshta file.hta" or tgt.process.cmdline contains "GruntHTTP" or tgt.process.cmdline contains "-EncodedCommand cwB2ACAAbwAgA")))
 ```
 

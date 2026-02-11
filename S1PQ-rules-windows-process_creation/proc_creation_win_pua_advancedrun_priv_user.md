@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2026 03:17:10):
+// Translated content (automatically translated on 11-02-2026 03:14:41):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "/EXEFilename" or tgt.process.cmdline contains "/CommandLine") and ((tgt.process.cmdline contains " /RunAs 8 " or tgt.process.cmdline contains " /RunAs 4 " or tgt.process.cmdline contains " /RunAs 10 " or tgt.process.cmdline contains " /RunAs 11 ") or (tgt.process.cmdline contains "/RunAs 8" or tgt.process.cmdline contains "/RunAs 4" or tgt.process.cmdline contains "/RunAs 10" or tgt.process.cmdline contains "/RunAs 11"))))
 ```
 

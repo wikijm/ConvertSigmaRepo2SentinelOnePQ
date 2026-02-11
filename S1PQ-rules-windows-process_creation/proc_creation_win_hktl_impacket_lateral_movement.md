@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-02-2026 03:17:10):
+// Translated content (automatically translated on 11-02-2026 03:14:41):
 event.type="Process Creation" and (endpoint.os="windows" and (((src.process.image.path contains "\\wmiprvse.exe" or src.process.image.path contains "\\mmc.exe" or src.process.image.path contains "\\explorer.exe" or src.process.image.path contains "\\services.exe") and (tgt.process.cmdline contains "cmd.exe" and tgt.process.cmdline contains "/Q" and tgt.process.cmdline contains "/c" and tgt.process.cmdline contains "\\\\127.0.0.1\\" and tgt.process.cmdline contains "&1")) or ((src.process.cmdline contains "svchost.exe -k netsvcs" or src.process.cmdline contains "taskeng.exe") and (tgt.process.cmdline contains "cmd.exe" and tgt.process.cmdline contains "/C" and tgt.process.cmdline contains "Windows\\Temp\\" and tgt.process.cmdline contains "&1"))))
 ```
 
