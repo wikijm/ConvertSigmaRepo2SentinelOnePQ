@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-02-2026 02:35:48):
+// Translated content (automatically translated on 12-02-2026 02:30:51):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\chrome_frame_helper.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Google\\Chrome\\Application\*","c:\\program files\\Google\\Chrome\\Application\*","c:\\program files (x86)\\Google\\Chrome\\Application\*")))))
 ```
 
