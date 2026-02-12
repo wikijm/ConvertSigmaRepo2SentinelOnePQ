@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-02-2026 03:14:41):
+// Translated content (automatically translated on 12-02-2026 02:54:11):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\schtasks.exe" and tgt.process.cmdline contains " /create ") and (not (tgt.process.user contains "AUTHORI" or tgt.process.user contains "AUTORI")) and (not ((src.process.image.path in ("C:\\Program Files\\Microsoft Office\\root\\integration\\integrator.exe","C:\\Program Files (x86)\\Microsoft Office\\root\\integration\\integrator.exe")) and (tgt.process.image.path in ("C:\\Windows\\System32\\schtasks.exe","C:\\Windows\\SysWOW64\\schtasks.exe")) and tgt.process.cmdline contains "Microsoft\\Office\\Office Performance Monitor"))))
 ```
 
