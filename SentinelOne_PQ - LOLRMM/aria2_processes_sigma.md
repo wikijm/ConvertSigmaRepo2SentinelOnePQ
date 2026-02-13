@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-02-2026 01:11:16):
+// Translated content (automatically translated on 13-02-2026 01:14:38):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\aria2c.exe")
 ```
 
