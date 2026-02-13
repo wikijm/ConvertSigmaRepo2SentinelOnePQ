@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-02-2026 02:54:11):
+// Translated content (automatically translated on 13-02-2026 02:54:23):
 event.type="Process Creation" and (endpoint.os="windows" and (((tgt.process.image.path contains "\\sc.exe" and (tgt.process.cmdline contains "create" and tgt.process.cmdline contains "binPath=")) or (tgt.process.cmdline contains "New-Service" and tgt.process.cmdline contains "-BinaryPathName")) and (tgt.process.cmdline contains "powershell" or tgt.process.cmdline contains "mshta" or tgt.process.cmdline contains "wscript" or tgt.process.cmdline contains "cscript" or tgt.process.cmdline contains "svchost" or tgt.process.cmdline contains "dllhost" or tgt.process.cmdline contains "cmd " or tgt.process.cmdline contains "cmd.exe /c" or tgt.process.cmdline contains "cmd.exe /k" or tgt.process.cmdline contains "cmd.exe /r" or tgt.process.cmdline contains "rundll32" or tgt.process.cmdline contains "C:\\Users\\Public" or tgt.process.cmdline contains "\\Downloads\\" or tgt.process.cmdline contains "\\Desktop\\" or tgt.process.cmdline contains "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" or tgt.process.cmdline contains "C:\\Windows\\TEMP\\" or tgt.process.cmdline contains "\\AppData\\Local\\Temp")))
 ```
 
