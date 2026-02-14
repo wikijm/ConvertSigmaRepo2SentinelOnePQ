@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-02-2026 02:00:15):
+// Translated content (automatically translated on 14-02-2026 01:49:32):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\libwazuhshared.dll" or module.path contains "\\libwinpthread-1.dll") and (not (module.path contains "C:\\Program Files\\" or module.path contains "C:\\Program Files (x86)\\")) and (not ((module.path contains "\\AppData\\Local\\" or module.path contains "\\ProgramData\\") and module.path contains "\\mingw64\\bin\\libwinpthread-1.dll"))))
 ```
 
