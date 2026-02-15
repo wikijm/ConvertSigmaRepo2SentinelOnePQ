@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-02-2026 01:07:43):
+// Translated content (automatically translated on 15-02-2026 01:13:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "remoteview.exe" or src.process.image.path contains "rv.exe" or src.process.image.path contains "rvagent.exe" or src.process.image.path contains "rvagtray.exe") or (tgt.process.image.path contains "remoteview.exe" or tgt.process.image.path contains "rv.exe" or tgt.process.image.path contains "rvagent.exe" or tgt.process.image.path contains "rvagtray.exe")))
 ```
 

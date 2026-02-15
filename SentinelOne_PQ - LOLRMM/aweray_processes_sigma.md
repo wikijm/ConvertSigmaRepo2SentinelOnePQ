@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-02-2026 01:07:43):
+// Translated content (automatically translated on 15-02-2026 01:13:51):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*aweray_remote*.exe" or src.process.image.path contains "AweSun.exe") or (tgt.process.image.path="*aweray_remote*.exe" or tgt.process.image.path contains "AweSun.exe")))
 ```
 
