@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-02-2026 02:20:46):
+// Translated content (automatically translated on 15-02-2026 02:32:17):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vmtools.dll" and (not (module.path in ("c:\\program files\\VMware\\VMware Tools\*","c:\\program files (x86)\\VMware\\VMware Tools\*","c:\\program files\\VMware\\VMware Workstation\*","c:\\program files (x86)\\VMware\\VMware Workstation\*","c:\\program files\\VMware\\VMware Player\*","c:\\program files (x86)\\VMware\\VMware Player\*")))))
 ```
 
