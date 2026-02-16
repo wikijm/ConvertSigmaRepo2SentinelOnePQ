@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 15-02-2026 02:32:17):
+// Translated content (automatically translated on 16-02-2026 02:28:11):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vsodscpl.dll" and (not (module.path in ("c:\\program files\\McAfee\\VirusScan Enterprise\*","c:\\program files (x86)\\McAfee\\VirusScan Enterprise\*")))))
 ```
 
