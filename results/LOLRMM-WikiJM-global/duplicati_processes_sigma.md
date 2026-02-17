@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-02-2026 02:12:04):
+// Translated content (automatically translated on 17-02-2026 02:09:28):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "c:\\Program Files\*\\Duplicati.Server.exe" or src.process.image.path contains "\*\\Duplicati.Server.exe"))
 ```
 
