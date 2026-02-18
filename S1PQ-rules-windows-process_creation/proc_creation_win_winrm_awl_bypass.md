@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-02-2026 02:47:27):
+// Translated content (automatically translated on 18-02-2026 02:50:31):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "winrm" and ((tgt.process.cmdline contains "format:pretty" or tgt.process.cmdline contains "format:\"pretty\"" or tgt.process.cmdline contains "format:\"text\"" or tgt.process.cmdline contains "format:text") and (not (tgt.process.image.path contains "C:\\Windows\\System32\\" or tgt.process.image.path contains "C:\\Windows\\SysWOW64\\")))))
 ```
 

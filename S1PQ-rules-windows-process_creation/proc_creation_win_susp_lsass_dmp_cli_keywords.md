@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 17-02-2026 02:47:27):
+// Translated content (automatically translated on 18-02-2026 02:50:31):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "lsass.dmp" or tgt.process.cmdline contains "lsass.zip" or tgt.process.cmdline contains "lsass.rar" or tgt.process.cmdline contains "Andrew.dmp" or tgt.process.cmdline contains "Coredump.dmp" or tgt.process.cmdline contains "NotLSASS.zip" or tgt.process.cmdline contains "lsass_2" or tgt.process.cmdline contains "lsassdump" or tgt.process.cmdline contains "lsassdmp") or (tgt.process.cmdline contains "lsass" and tgt.process.cmdline contains ".dmp") or (tgt.process.cmdline contains "SQLDmpr" and tgt.process.cmdline contains ".mdmp") or (tgt.process.cmdline contains "nanodump" and tgt.process.cmdline contains ".dmp")))
 ```
 
