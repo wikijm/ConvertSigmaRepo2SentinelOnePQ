@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-02-2026 01:09:11):
+// Translated content (automatically translated on 19-02-2026 01:08:26):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.image.path contains "\\httptunnel.exe" or tgt.process.image.path contains "\\plink.exe" or tgt.process.image.path contains "\\socat.exe" or tgt.process.image.path contains "\\stunnel.exe"))
 ```
 
