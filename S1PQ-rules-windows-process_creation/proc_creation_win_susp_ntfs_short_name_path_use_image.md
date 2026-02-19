@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 18-02-2026 02:50:31):
+// Translated content (automatically translated on 19-02-2026 02:49:32):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "~1\\" or tgt.process.image.path contains "~2\\") and (not ((src.process.image.path in ("C:\\Windows\\System32\\Dism.exe","C:\\Windows\\System32\\cleanmgr.exe")) or ((tgt.process.image.path contains "\\AppData\\" and tgt.process.image.path contains "\\Temp\\") or (tgt.process.image.path contains "~1\\unzip.exe" or tgt.process.image.path contains "~1\\7zG.exe")))) and (not (src.process.image.path contains "\\WebEx\\WebexHost.exe" or src.process.image.path contains "\\thor\\thor64.exe" or (tgt.process.displayName="InstallShield (R)" or tgt.process.displayName="InstallShield (R) Setup Engine" or tgt.process.publisher="InstallShield Software Corporation")))))
 ```
 
