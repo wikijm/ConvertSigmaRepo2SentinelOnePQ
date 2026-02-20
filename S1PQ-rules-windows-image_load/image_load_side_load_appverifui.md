@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-02-2026 01:56:19):
+// Translated content (automatically translated on 20-02-2026 01:52:00):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appverifUI.dll" and (not ((src.process.image.path in ("C:\\Windows\\SysWOW64\\appverif.exe","C:\\Windows\\System32\\appverif.exe")) and (module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\")))))
 ```
 

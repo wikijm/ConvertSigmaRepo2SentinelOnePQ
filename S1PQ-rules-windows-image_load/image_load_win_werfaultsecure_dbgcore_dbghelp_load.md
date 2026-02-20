@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-02-2026 01:56:19):
+// Translated content (automatically translated on 20-02-2026 01:52:00):
 event.type="Module Load" and (endpoint.os="windows" and (src.process.image.path contains "\\WerFaultSecure.exe" and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
 ```
 
