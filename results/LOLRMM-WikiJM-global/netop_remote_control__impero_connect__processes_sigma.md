@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 20-02-2026 02:07:46):
+// Translated content (automatically translated on 21-02-2026 02:02:28):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "nhostsvc.exe" or src.process.image.path contains "nhstw32.exe" or src.process.image.path contains "ngstw32.exe" or src.process.image.path contains "Netop Ondemand.exe" or src.process.image.path contains "nldrw32.exe" or src.process.image.path contains "rmserverconsolemediator.exe" or src.process.image.path contains "ImperoInit.exe" or src.process.image.path="*Connect.Backdrop.cloud*.exe" or src.process.image.path contains "ImperoClientSVC.exe"))
 ```
 
