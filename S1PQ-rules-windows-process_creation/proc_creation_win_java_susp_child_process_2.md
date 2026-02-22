@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-02-2026 02:38:16):
+// Translated content (automatically translated on 22-02-2026 02:50:56):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\java.exe" and (tgt.process.image.path contains "\\bash.exe" or tgt.process.image.path contains "\\cmd.exe" or tgt.process.image.path contains "\\powershell.exe" or tgt.process.image.path contains "\\pwsh.exe")) and (not (src.process.image.path contains "build" and tgt.process.cmdline contains "build"))))
 ```
 
