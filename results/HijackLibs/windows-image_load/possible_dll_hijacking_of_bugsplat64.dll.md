@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-02-2026 02:10:15):
+// Translated content (automatically translated on 22-02-2026 02:27:47):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\bugsplat64.dll" and (not (module.path contains "c:\\program files\\Nitro\\PDF Pro\\" or module.path contains "c:\\program files (x86)\\Nitro\\PDF Pro\\" or module.path="c:\\program files\\Nitro\\Pro\*" or module.path="c:\\program files (x86)\\Nitro\\Pro\*"))))
 ```
 
