@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-02-2026 01:10:11):
+// Translated content (automatically translated on 22-02-2026 01:15:24):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/trufflehog" or ((tgt.process.cmdline contains " docker --image " or tgt.process.cmdline contains " Git " or tgt.process.cmdline contains " GitHub " or tgt.process.cmdline contains " Jira " or tgt.process.cmdline contains " Slack " or tgt.process.cmdline contains " Confluence " or tgt.process.cmdline contains " SharePoint " or tgt.process.cmdline contains " s3 " or tgt.process.cmdline contains " gcs ") and tgt.process.cmdline contains " --results=verified")))
 ```
 
