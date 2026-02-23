@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:50:56):
+// Translated content (automatically translated on 23-02-2026 02:51:12):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Import-Certificate" and tgt.process.cmdline contains " -FilePath " and tgt.process.cmdline contains "Cert:\\LocalMachine\\Root") and (tgt.process.cmdline contains "\\AppData\\Local\\Temp\\" or tgt.process.cmdline contains ":\\Windows\\TEMP\\" or tgt.process.cmdline contains "\\Desktop\\" or tgt.process.cmdline contains "\\Downloads\\" or tgt.process.cmdline contains "\\Perflogs\\" or tgt.process.cmdline contains ":\\Users\\Public\\")))
 ```
 
