@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vivaldi_elf.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Vivaldi\\Application\*","c:\\users\*\\appdata\\local\\Vivaldi\\Application\*\*","c:\\users\*\\appdata\\local\\Programs\\Vivaldi\\Application\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vivaldi_elf.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\Vivaldi\\Application\\*" or module.path="c:\\users\\*\\appdata\\local\\Vivaldi\\Application\\*\\*" or module.path="c:\\users\\*\\appdata\\local\\Programs\\Vivaldi\\Application\\*\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\vivaldi_elf.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Vivaldi\Application\*'
-            - 'c:\users\*\appdata\local\Vivaldi\Application\*\*'
-            - 'c:\users\*\appdata\local\Programs\Vivaldi\Application\*\*'
+            - 'c:\users\\*\appdata\local\Vivaldi\Application\\*'
+            - 'c:\users\\*\appdata\local\Vivaldi\Application\\*\\*'
+            - 'c:\users\\*\appdata\local\Programs\Vivaldi\Application\\*\\*'
 
     condition: selection and not filter
 falsepositives:

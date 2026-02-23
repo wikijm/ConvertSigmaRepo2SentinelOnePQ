@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\cc3260mt.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\TiVo\Desktop\*'
-            - 'c:\program files (x86)\TiVo\Desktop\*'
+            - 'c:\program files\TiVo\Desktop\\*'
+            - 'c:\program files (x86)\TiVo\Desktop\\*'
 
     condition: selection and not filter
 falsepositives:

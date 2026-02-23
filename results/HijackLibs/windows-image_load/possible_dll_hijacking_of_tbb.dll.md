@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tbb.dll" and (not (module.path="c:\\program files\\Adobe\\Adobe Photoshop CC *\*" or module.path="c:\\program files (x86)\\Adobe\\Adobe Photoshop CC *\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tbb.dll" and (not (module.path="c:\\program files\\Adobe\\Adobe Photoshop CC *\\*" or module.path="c:\\program files (x86)\\Adobe\\Adobe Photoshop CC *\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\tbb.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Adobe\Adobe Photoshop CC *\*'
-            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\*'
+            - 'c:\program files\Adobe\Adobe Photoshop CC *\\*'
+            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\\*'
 
     condition: selection and not filter
 falsepositives:

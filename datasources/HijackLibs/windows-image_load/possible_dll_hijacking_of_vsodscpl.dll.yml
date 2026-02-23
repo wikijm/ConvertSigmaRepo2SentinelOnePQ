@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\vsodscpl.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\McAfee\VirusScan Enterprise\*'
-            - 'c:\program files (x86)\McAfee\VirusScan Enterprise\*'
+            - 'c:\program files\McAfee\VirusScan Enterprise\\*'
+            - 'c:\program files (x86)\McAfee\VirusScan Enterprise\\*'
 
     condition: selection and not filter
 falsepositives:

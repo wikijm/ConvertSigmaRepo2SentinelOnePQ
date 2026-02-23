@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\tosbtkbd.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Toshiba\Bluetooth Toshiba Stack\*'
-            - 'c:\program files (x86)\Toshiba\Bluetooth Toshiba Stack\*'
+            - 'c:\program files\Toshiba\Bluetooth Toshiba Stack\\*'
+            - 'c:\program files (x86)\Toshiba\Bluetooth Toshiba Stack\\*'
 
     condition: selection and not filter
 falsepositives:

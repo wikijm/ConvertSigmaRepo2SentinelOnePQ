@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\mfcu100u.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\TechSmith\Camtasia Studio 8\*'
-            - 'c:\program files (x86)\TechSmith\Camtasia Studio 8\*'
+            - 'c:\program files\TechSmith\Camtasia Studio 8\\*'
+            - 'c:\program files (x86)\TechSmith\Camtasia Studio 8\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\madhcnet32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Multimedia\K-Lite Codec Pack\Filters\madVR\*'
-            - 'c:\program files (x86)\Multimedia\K-Lite Codec Pack\Filters\madVR\*'
-            - 'c:\program files\K-Lite Codec Pack\Filters\madVR\*'
-            - 'c:\program files (x86)\K-Lite Codec Pack\Filters\madVR\*'
+            - 'c:\program files\Multimedia\K-Lite Codec Pack\Filters\madVR\\*'
+            - 'c:\program files (x86)\Multimedia\K-Lite Codec Pack\Filters\madVR\\*'
+            - 'c:\program files\K-Lite Codec Pack\Filters\madVR\\*'
+            - 'c:\program files (x86)\K-Lite Codec Pack\Filters\madVR\\*'
 
     condition: selection and not filter
 falsepositives:

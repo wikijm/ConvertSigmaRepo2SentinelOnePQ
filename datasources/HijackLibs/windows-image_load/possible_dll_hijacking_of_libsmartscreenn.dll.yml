@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libsmartscreenn.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*'
-            - 'c:\program files (x86)\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*'
+            - 'c:\program files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
+            - 'c:\program files (x86)\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -18,8 +18,8 @@ detection:
         ImageLoaded: '*\mscorsvc.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\Microsoft.NET\Framework\v*\*'
-            - 'c:\windows\Microsoft.NET\Framework64\v*\*'
+            - 'c:\windows\Microsoft.NET\Framework\v*\\*'
+            - 'c:\windows\Microsoft.NET\Framework64\v*\\*'
 
     condition: selection and not filter
 falsepositives:

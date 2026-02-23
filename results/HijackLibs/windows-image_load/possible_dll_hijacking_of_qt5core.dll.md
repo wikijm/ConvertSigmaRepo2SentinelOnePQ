@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qt5core.dll" and (not (module.path in ("c:\\program files\\Electronic Arts\\EA Desktop\\EA Desktop\*","c:\\program files (x86)\\Electronic Arts\\EA Desktop\\EA Desktop\*","c:\\program files\\Microsoft Onedrive\*\*","c:\\program files (x86)\\Microsoft Onedrive\*\*","c:\\users\*\\appdata\\local\\Microsoft\\Onedrive\*\*","c:\\program files\\Dropbox\\Client\*\*","c:\\program files (x86)\\Dropbox\\Client\*\*","c:\\program files\\LogiOptionsPlus\*","c:\\program files (x86)\\LogiOptionsPlus\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qt5core.dll" and (not (module.path contains "c:\\program files\\Electronic Arts\\EA Desktop\\EA Desktop\\" or module.path contains "c:\\program files (x86)\\Electronic Arts\\EA Desktop\\EA Desktop\\" or module.path="c:\\program files\\Microsoft Onedrive\\*\\*" or module.path="c:\\program files (x86)\\Microsoft Onedrive\\*\\*" or module.path="c:\\users\\*\\appdata\\local\\Microsoft\\Onedrive\\*\\*" or module.path="c:\\program files\\Dropbox\\Client\\*\\*" or module.path="c:\\program files (x86)\\Dropbox\\Client\\*\\*" or module.path contains "c:\\program files\\LogiOptionsPlus\\" or module.path contains "c:\\program files (x86)\\LogiOptionsPlus\\"))))
 ```
 
 
@@ -25,15 +25,15 @@ detection:
         ImageLoaded: '*\qt5core.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Electronic Arts\EA Desktop\EA Desktop\*'
-            - 'c:\program files (x86)\Electronic Arts\EA Desktop\EA Desktop\*'
-            - 'c:\program files\Microsoft Onedrive\*\*'
-            - 'c:\program files (x86)\Microsoft Onedrive\*\*'
-            - 'c:\users\*\appdata\local\Microsoft\Onedrive\*\*'
-            - 'c:\program files\Dropbox\Client\*\*'
-            - 'c:\program files (x86)\Dropbox\Client\*\*'
-            - 'c:\program files\LogiOptionsPlus\*'
-            - 'c:\program files (x86)\LogiOptionsPlus\*'
+            - 'c:\program files\Electronic Arts\EA Desktop\EA Desktop\\*'
+            - 'c:\program files (x86)\Electronic Arts\EA Desktop\EA Desktop\\*'
+            - 'c:\program files\Microsoft Onedrive\\*\\*'
+            - 'c:\program files (x86)\Microsoft Onedrive\\*\\*'
+            - 'c:\users\\*\appdata\local\Microsoft\Onedrive\\*\\*'
+            - 'c:\program files\Dropbox\Client\\*\\*'
+            - 'c:\program files (x86)\Dropbox\Client\\*\\*'
+            - 'c:\program files\LogiOptionsPlus\\*'
+            - 'c:\program files (x86)\LogiOptionsPlus\\*'
 
     condition: selection and not filter
 falsepositives:

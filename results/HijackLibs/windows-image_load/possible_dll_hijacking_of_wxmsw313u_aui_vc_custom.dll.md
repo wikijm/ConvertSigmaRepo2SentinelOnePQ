@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wxmsw313u_aui_vc_custom.dll" and (not (module.path in ("c:\\program files\\Audacity\*","c:\\program files (x86)\\Audacity\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wxmsw313u_aui_vc_custom.dll" and (not (module.path contains "c:\\program files\\Audacity\\" or module.path contains "c:\\program files (x86)\\Audacity\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\wxmsw313u_aui_vc_custom.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Audacity\*'
-            - 'c:\program files (x86)\Audacity\*'
+            - 'c:\program files\Audacity\\*'
+            - 'c:\program files (x86)\Audacity\\*'
 
     condition: selection and not filter
 falsepositives:

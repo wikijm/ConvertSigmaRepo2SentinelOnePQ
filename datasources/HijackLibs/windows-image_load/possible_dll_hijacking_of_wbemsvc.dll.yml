@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\wbemsvc.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\wbem\*'
-            - 'c:\windows\syswow64\wbem\*'
+            - 'c:\windows\system32\wbem\\*'
+            - 'c:\windows\syswow64\wbem\\*'
 
     condition: selection and not filter
 falsepositives:

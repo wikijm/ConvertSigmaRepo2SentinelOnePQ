@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tedutil.dll" and (not (module.path in ("c:\\program files\\Microsoft SDKs\\Windows\*\\Bin\*","c:\\program files (x86)\\Microsoft SDKs\\Windows\*\\Bin\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tedutil.dll" and (not (module.path="c:\\program files\\Microsoft SDKs\\Windows\\*\\Bin\\*" or module.path="c:\\program files (x86)\\Microsoft SDKs\\Windows\\*\\Bin\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\tedutil.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft SDKs\Windows\*\Bin\*'
-            - 'c:\program files (x86)\Microsoft SDKs\Windows\*\Bin\*'
+            - 'c:\program files\Microsoft SDKs\Windows\\*\Bin\\*'
+            - 'c:\program files (x86)\Microsoft SDKs\Windows\\*\Bin\\*'
 
     condition: selection and not filter
 falsepositives:

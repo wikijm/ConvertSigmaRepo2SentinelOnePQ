@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libvlccore.dll" and (not (module.path in ("c:\\program files\\VideoLAN\\VLC\*","c:\\program files (x86)\\VideoLAN\\VLC\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libvlccore.dll" and (not (module.path contains "c:\\program files\\VideoLAN\\VLC\\" or module.path contains "c:\\program files (x86)\\VideoLAN\\VLC\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\libvlccore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\VideoLAN\VLC\*'
-            - 'c:\program files (x86)\VideoLAN\VLC\*'
+            - 'c:\program files\VideoLAN\VLC\\*'
+            - 'c:\program files (x86)\VideoLAN\VLC\\*'
 
     condition: selection and not filter
 falsepositives:

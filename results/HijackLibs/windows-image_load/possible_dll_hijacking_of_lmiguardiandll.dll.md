@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\lmiguardiandll.dll" and (not (module.path in ("c:\\program files\\LogMeIn\*","c:\\program files (x86)\\LogMeIn\*","c:\\program files\\LogMeIn\\x86\*","c:\\program files (x86)\\LogMeIn\\x86\*","c:\\program files\\LogMeIn\\x64\*","c:\\program files (x86)\\LogMeIn\\x64\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\lmiguardiandll.dll" and (not (module.path contains "c:\\program files\\LogMeIn\\" or module.path contains "c:\\program files (x86)\\LogMeIn\\" or module.path contains "c:\\program files\\LogMeIn\\x86\\" or module.path contains "c:\\program files (x86)\\LogMeIn\\x86\\" or module.path contains "c:\\program files\\LogMeIn\\x64\\" or module.path contains "c:\\program files (x86)\\LogMeIn\\x64\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\lmiguardiandll.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\LogMeIn\*'
-            - 'c:\program files (x86)\LogMeIn\*'
-            - 'c:\program files\LogMeIn\x86\*'
-            - 'c:\program files (x86)\LogMeIn\x86\*'
-            - 'c:\program files\LogMeIn\x64\*'
-            - 'c:\program files (x86)\LogMeIn\x64\*'
+            - 'c:\program files\LogMeIn\\*'
+            - 'c:\program files (x86)\LogMeIn\\*'
+            - 'c:\program files\LogMeIn\x86\\*'
+            - 'c:\program files (x86)\LogMeIn\x86\\*'
+            - 'c:\program files\LogMeIn\x64\\*'
+            - 'c:\program files (x86)\LogMeIn\x64\\*'
 
     condition: selection and not filter
 falsepositives:

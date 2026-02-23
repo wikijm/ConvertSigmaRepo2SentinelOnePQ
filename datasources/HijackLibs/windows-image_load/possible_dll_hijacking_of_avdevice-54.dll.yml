@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\avdevice-54.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
-            - 'c:\program files (x86)\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
+            - 'c:\program files\AnyMP4 Studio\AnyMP4 Blu-ray Creator\\*'
+            - 'c:\program files (x86)\AnyMP4 Studio\AnyMP4 Blu-ray Creator\\*'
 
     condition: selection and not filter
 falsepositives:

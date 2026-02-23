@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avdevice-54.dll" and (not (module.path in ("c:\\program files\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\*","c:\\program files (x86)\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avdevice-54.dll" and (not (module.path contains "c:\\program files\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\\" or module.path contains "c:\\program files (x86)\\AnyMP4 Studio\\AnyMP4 Blu-ray Creator\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\avdevice-54.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
-            - 'c:\program files (x86)\AnyMP4 Studio\AnyMP4 Blu-ray Creator\*'
+            - 'c:\program files\AnyMP4 Studio\AnyMP4 Blu-ray Creator\\*'
+            - 'c:\program files (x86)\AnyMP4 Studio\AnyMP4 Blu-ray Creator\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\bugsplat64.dll" and (not (module.path contains "c:\\program files\\Nitro\\PDF Pro\\" or module.path contains "c:\\program files (x86)\\Nitro\\PDF Pro\\" or module.path="c:\\program files\\Nitro\\Pro\*" or module.path="c:\\program files (x86)\\Nitro\\Pro\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\bugsplat64.dll" and (not (module.path="c:\\program files\\Nitro\\PDF Pro\\\*" or module.path="c:\\program files (x86)\\Nitro\\PDF Pro\\\*" or module.path contains "c:\\program files\\Nitro\\Pro\\" or module.path contains "c:\\program files (x86)\\Nitro\\Pro\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\bugsplat64.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Nitro\PDF Pro\\*'
-            - 'c:\program files (x86)\Nitro\PDF Pro\\*'
-            - 'c:\program files\Nitro\Pro\*'
-            - 'c:\program files (x86)\Nitro\Pro\*'
+            - 'c:\program files\Nitro\PDF Pro\\\*'
+            - 'c:\program files (x86)\Nitro\PDF Pro\\\*'
+            - 'c:\program files\Nitro\Pro\\*'
+            - 'c:\program files (x86)\Nitro\Pro\\*'
 
     condition: selection and not filter
 falsepositives:

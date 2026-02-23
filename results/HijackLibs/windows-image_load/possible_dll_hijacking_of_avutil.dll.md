@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avutil.dll" and (not (module.path in ("c:\\program files\\VSO\\ConvertX\\7\*","c:\\program files (x86)\\VSO\\ConvertX\\7\*","c:\\program files\\VSO\\convertXtoDVD\*","c:\\program files (x86)\\VSO\\convertXtoDVD\*","c:\\program files\\Common Files\\Oracle\\Java\\javapath\*","c:\\program files (x86)\\Common Files\\Oracle\\Java\\javapath\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\avutil.dll" and (not (module.path contains "c:\\program files\\VSO\\ConvertX\\7\\" or module.path contains "c:\\program files (x86)\\VSO\\ConvertX\\7\\" or module.path contains "c:\\program files\\VSO\\convertXtoDVD\\" or module.path contains "c:\\program files (x86)\\VSO\\convertXtoDVD\\" or module.path contains "c:\\program files\\Common Files\\Oracle\\Java\\javapath\\" or module.path contains "c:\\program files (x86)\\Common Files\\Oracle\\Java\\javapath\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\avutil.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\VSO\ConvertX\7\*'
-            - 'c:\program files (x86)\VSO\ConvertX\7\*'
-            - 'c:\program files\VSO\convertXtoDVD\*'
-            - 'c:\program files (x86)\VSO\convertXtoDVD\*'
-            - 'c:\program files\Common Files\Oracle\Java\javapath\*'
-            - 'c:\program files (x86)\Common Files\Oracle\Java\javapath\*'
+            - 'c:\program files\VSO\ConvertX\7\\*'
+            - 'c:\program files (x86)\VSO\ConvertX\7\\*'
+            - 'c:\program files\VSO\convertXtoDVD\\*'
+            - 'c:\program files (x86)\VSO\convertXtoDVD\\*'
+            - 'c:\program files\Common Files\Oracle\Java\javapath\\*'
+            - 'c:\program files (x86)\Common Files\Oracle\Java\javapath\\*'
 
     condition: selection and not filter
 falsepositives:

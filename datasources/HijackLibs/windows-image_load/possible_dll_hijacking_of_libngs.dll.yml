@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libngs.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Sangfor\SSL\RemoteAppClient\\*'
-            - 'c:\program files (x86)\Sangfor\SSL\RemoteAppClient\\*'
+            - 'c:\program files\Sangfor\SSL\RemoteAppClient\\\*'
+            - 'c:\program files (x86)\Sangfor\SSL\RemoteAppClient\\\*'
 
     condition: selection and not filter
 falsepositives:

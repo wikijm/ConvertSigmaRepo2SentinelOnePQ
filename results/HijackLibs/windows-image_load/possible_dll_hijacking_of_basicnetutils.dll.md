@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\basicnetutils.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Temp\*\\Application2\*","c:\\program files\\BAIDU\\BAIDUPINYIN\*\*","c:\\program files (x86)\\BAIDU\\BAIDUPINYIN\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\basicnetutils.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\Temp\\*\\Application2\\*" or module.path="c:\\program files\\BAIDU\\BAIDUPINYIN\\*\\*" or module.path="c:\\program files (x86)\\BAIDU\\BAIDUPINYIN\\*\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\basicnetutils.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Temp\*\Application2\*'
-            - 'c:\program files\BAIDU\BAIDUPINYIN\*\*'
-            - 'c:\program files (x86)\BAIDU\BAIDUPINYIN\*\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\Application2\\*'
+            - 'c:\program files\BAIDU\BAIDUPINYIN\\*\\*'
+            - 'c:\program files (x86)\BAIDU\BAIDUPINYIN\\*\\*'
 
     condition: selection and not filter
 falsepositives:

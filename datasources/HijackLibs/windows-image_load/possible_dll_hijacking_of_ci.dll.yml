@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\ci.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Digiarty\WinX Blu-ray Decrypter\*'
-            - 'c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Digiarty\WinX Blu-ray Decrypter\\*'
+            - 'c:\program files (x86)\Digiarty\WinX Blu-ray Decrypter\\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

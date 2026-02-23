@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mimetools.dll" and (not (module.path in ("c:\\program files\\Notepad++\\plugins\*","c:\\program files (x86)\\Notepad++\\plugins\*","c:\\program files\\Notepad++\\plugins\\mimetools\*","c:\\program files (x86)\\Notepad++\\plugins\\mimetools\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mimetools.dll" and (not (module.path contains "c:\\program files\\Notepad++\\plugins\\" or module.path contains "c:\\program files (x86)\\Notepad++\\plugins\\" or module.path contains "c:\\program files\\Notepad++\\plugins\\mimetools\\" or module.path contains "c:\\program files (x86)\\Notepad++\\plugins\\mimetools\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\mimetools.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Notepad++\plugins\*'
-            - 'c:\program files (x86)\Notepad++\plugins\*'
-            - 'c:\program files\Notepad++\plugins\mimetools\*'
-            - 'c:\program files (x86)\Notepad++\plugins\mimetools\*'
+            - 'c:\program files\Notepad++\plugins\\*'
+            - 'c:\program files (x86)\Notepad++\plugins\\*'
+            - 'c:\program files\Notepad++\plugins\mimetools\\*'
+            - 'c:\program files (x86)\Notepad++\plugins\mimetools\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\hpqhvsei.dll" and (not (module.path in ("c:\\program files\\HP\*","c:\\program files (x86)\\HP\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\hpqhvsei.dll" and (not (module.path contains "c:\\program files\\HP\\" or module.path contains "c:\\program files (x86)\\HP\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\hpqhvsei.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\HP\*'
-            - 'c:\program files (x86)\HP\*'
+            - 'c:\program files\HP\\*'
+            - 'c:\program files (x86)\HP\\*'
 
     condition: selection and not filter
 falsepositives:

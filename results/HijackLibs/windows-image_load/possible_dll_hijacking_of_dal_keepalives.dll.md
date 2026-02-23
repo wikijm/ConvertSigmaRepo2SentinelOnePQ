@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dal_keepalives.dll" and (not (module.path in ("c:\\program files\\audinate\\shared files\*","c:\\program files (x86)\\audinate\\shared files\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dal_keepalives.dll" and (not (module.path contains "c:\\program files\\audinate\\shared files\\" or module.path contains "c:\\program files (x86)\\audinate\\shared files\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\dal_keepalives.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\audinate\shared files\*'
-            - 'c:\program files (x86)\audinate\shared files\*'
+            - 'c:\program files\audinate\shared files\\*'
+            - 'c:\program files (x86)\audinate\shared files\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\avkkid.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\G DATA\TotalSecurity\avkkid\*'
-            - 'c:\program files (x86)\G DATA\TotalSecurity\avkkid\*'
+            - 'c:\program files\G DATA\TotalSecurity\avkkid\\*'
+            - 'c:\program files (x86)\G DATA\TotalSecurity\avkkid\\*'
 
     condition: selection and not filter
 falsepositives:

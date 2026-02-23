@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\imjp14k.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
-            - 'c:\program files\Common Files\Microsoft Shared\IME14\SHARED\*'
-            - 'c:\program files (x86)\Common Files\Microsoft Shared\IME14\SHARED\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\program files\Common Files\Microsoft Shared\IME14\SHARED\\*'
+            - 'c:\program files (x86)\Common Files\Microsoft Shared\IME14\SHARED\\*'
 
     condition: selection and not filter
 falsepositives:

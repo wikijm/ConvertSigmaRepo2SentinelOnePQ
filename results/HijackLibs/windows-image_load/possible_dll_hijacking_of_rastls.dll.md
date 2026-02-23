@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rastls.dll" and (not (module.path in ("c:\\program files\\Symantec\\Network Connected Devices Auto Setup\*","c:\\program files (x86)\\Symantec\\Network Connected Devices Auto Setup\*","c:\\windows\\system32\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rastls.dll" and (not (module.path contains "c:\\program files\\Symantec\\Network Connected Devices Auto Setup\\" or module.path contains "c:\\program files (x86)\\Symantec\\Network Connected Devices Auto Setup\\" or module.path contains "c:\\windows\\system32\\"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\rastls.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

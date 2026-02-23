@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbg64.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Temp\\ClnExtor\\PCCNT\*","c:\\program files\\Trend Micro\\Security Agent\*","c:\\program files (x86)\\Trend Micro\\Security Agent\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbg64.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\Temp\\ClnExtor\\PCCNT\\*" or module.path contains "c:\\program files\\Trend Micro\\Security Agent\\" or module.path contains "c:\\program files (x86)\\Trend Micro\\Security Agent\\"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\tmdbg64.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Temp\ClnExtor\PCCNT\*'
-            - 'c:\program files\Trend Micro\Security Agent\*'
-            - 'c:\program files (x86)\Trend Micro\Security Agent\*'
+            - 'c:\users\\*\appdata\local\Temp\ClnExtor\PCCNT\\*'
+            - 'c:\program files\Trend Micro\Security Agent\\*'
+            - 'c:\program files (x86)\Trend Micro\Security Agent\\*'
 
     condition: selection and not filter
 falsepositives:

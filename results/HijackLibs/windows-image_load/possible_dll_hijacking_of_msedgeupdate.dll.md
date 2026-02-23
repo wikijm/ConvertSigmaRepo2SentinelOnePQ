@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msedgeupdate.dll" and (not (module.path in ("c:\\program files\\Microsoft\\EdgeUpdate\*\*","c:\\program files (x86)\\Microsoft\\EdgeUpdate\*\*","c:\\program files\\Microsoft\\Temp\*\*","c:\\program files (x86)\\Microsoft\\Temp\*\*","c:\\users\*\\appdata\\local\\Microsoft\\EdgeUpdate\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msedgeupdate.dll" and (not (module.path="c:\\program files\\Microsoft\\EdgeUpdate\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeUpdate\\*\\*" or module.path="c:\\program files\\Microsoft\\Temp\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\Temp\\*\\*" or module.path="c:\\users\\*\\appdata\\local\\Microsoft\\EdgeUpdate\\*\\*"))))
 ```
 
 
@@ -25,11 +25,11 @@ detection:
         ImageLoaded: '*\msedgeupdate.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft\EdgeUpdate\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeUpdate\*\*'
-            - 'c:\program files\Microsoft\Temp\*\*'
-            - 'c:\program files (x86)\Microsoft\Temp\*\*'
-            - 'c:\users\*\appdata\local\Microsoft\EdgeUpdate\*\*'
+            - 'c:\program files\Microsoft\EdgeUpdate\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeUpdate\\*\\*'
+            - 'c:\program files\Microsoft\Temp\\*\\*'
+            - 'c:\program files (x86)\Microsoft\Temp\\*\\*'
+            - 'c:\users\\*\appdata\local\Microsoft\EdgeUpdate\\*\\*'
 
     condition: selection and not filter
 falsepositives:

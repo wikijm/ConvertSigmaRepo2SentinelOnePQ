@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wsc.dll" and (not (module.path in ("c:\\program files\\AVAST Software\\Avast\*","c:\\program files (x86)\\AVAST Software\\Avast\*","c:\\program files\\Norton\\Suite\*","c:\\program files (x86)\\Norton\\Suite\*","c:\\program files\\AVG\\Antivirus\*","c:\\program files (x86)\\AVG\\Antivirus\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wsc.dll" and (not (module.path contains "c:\\program files\\AVAST Software\\Avast\\" or module.path contains "c:\\program files (x86)\\AVAST Software\\Avast\\" or module.path contains "c:\\program files\\Norton\\Suite\\" or module.path contains "c:\\program files (x86)\\Norton\\Suite\\" or module.path contains "c:\\program files\\AVG\\Antivirus\\" or module.path contains "c:\\program files (x86)\\AVG\\Antivirus\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\wsc.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\AVAST Software\Avast\*'
-            - 'c:\program files (x86)\AVAST Software\Avast\*'
-            - 'c:\program files\Norton\Suite\*'
-            - 'c:\program files (x86)\Norton\Suite\*'
-            - 'c:\program files\AVG\Antivirus\*'
-            - 'c:\program files (x86)\AVG\Antivirus\*'
+            - 'c:\program files\AVAST Software\Avast\\*'
+            - 'c:\program files (x86)\AVAST Software\Avast\\*'
+            - 'c:\program files\Norton\Suite\\*'
+            - 'c:\program files (x86)\Norton\Suite\\*'
+            - 'c:\program files\AVG\Antivirus\\*'
+            - 'c:\program files (x86)\AVG\Antivirus\\*'
 
     condition: selection and not filter
 falsepositives:

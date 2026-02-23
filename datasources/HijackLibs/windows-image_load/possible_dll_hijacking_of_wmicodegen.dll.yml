@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\wmicodegen.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\windows kits\*\bin\*\*'
-            - 'c:\program files (x86)\windows kits\*\bin\*\*'
+            - 'c:\program files\windows kits\\*\bin\\*\\*'
+            - 'c:\program files (x86)\windows kits\\*\bin\\*\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\windowsperformancerecordercontrol.dll" and (not (module.path in ("c:\\program files\\windows kits\\10\\windows performance toolkit\*","c:\\program files (x86)\\windows kits\\10\\windows performance toolkit\*","c:\\windows\\system32\*","c:\\windows\\syswow64\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\windowsperformancerecordercontrol.dll" and (not (module.path contains "c:\\program files\\windows kits\\10\\windows performance toolkit\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\windows performance toolkit\\" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\windowsperformancerecordercontrol.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\windows kits\10\windows performance toolkit\*'
-            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\windows kits\10\windows performance toolkit\\*'
+            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

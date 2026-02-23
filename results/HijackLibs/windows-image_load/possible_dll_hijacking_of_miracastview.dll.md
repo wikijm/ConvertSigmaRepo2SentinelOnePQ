@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\miracastview.dll" and (not module.path="c:\\windows\\Miracast\*")))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\miracastview.dll" and (not module.path contains "c:\\windows\\Miracast\\")))
 ```
 
 
@@ -25,7 +25,7 @@ detection:
         ImageLoaded: '*\miracastview.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\Miracast\*'
+            - 'c:\windows\Miracast\\*'
 
     condition: selection and not filter
 falsepositives:

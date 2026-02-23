@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\sentinelagentcore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SentinelOne\Sentinel Agent *\*'
-            - 'c:\program files (x86)\SentinelOne\Sentinel Agent *\*'
+            - 'c:\program files\SentinelOne\Sentinel Agent *\\*'
+            - 'c:\program files (x86)\SentinelOne\Sentinel Agent *\\*'
 
     condition: selection and not filter
 falsepositives:

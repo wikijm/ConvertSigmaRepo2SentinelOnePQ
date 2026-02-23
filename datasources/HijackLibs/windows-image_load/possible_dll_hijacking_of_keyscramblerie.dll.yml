@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\keyscramblerie.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\KeyScrambler\*'
-            - 'c:\program files (x86)\KeyScrambler\*'
+            - 'c:\program files\KeyScrambler\\*'
+            - 'c:\program files (x86)\KeyScrambler\\*'
 
     condition: selection and not filter
 falsepositives:

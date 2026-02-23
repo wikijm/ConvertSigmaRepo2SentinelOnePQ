@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tutil32.dll" and (not (module.path in ("c:\\program files\\PDE\*","c:\\program files (x86)\\PDE\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tutil32.dll" and (not (module.path contains "c:\\program files\\PDE\\" or module.path contains "c:\\program files (x86)\\PDE\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\tutil32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\PDE\*'
-            - 'c:\program files (x86)\PDE\*'
+            - 'c:\program files\PDE\\*'
+            - 'c:\program files (x86)\PDE\\*'
 
     condition: selection and not filter
 falsepositives:

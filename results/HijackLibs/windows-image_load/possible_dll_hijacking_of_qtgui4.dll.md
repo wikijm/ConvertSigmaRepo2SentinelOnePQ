@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qtgui4.dll" and (not (module.path in ("c:\\program files\\Audacity\*","c:\\program files (x86)\\Audacity\*","c:\\program files\\AOMEI\\AOMEI Backupper\*\*","c:\\program files (x86)\\AOMEI\\AOMEI Backupper\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qtgui4.dll" and (not (module.path contains "c:\\program files\\Audacity\\" or module.path contains "c:\\program files (x86)\\Audacity\\" or module.path="c:\\program files\\AOMEI\\AOMEI Backupper\\*\\*" or module.path="c:\\program files (x86)\\AOMEI\\AOMEI Backupper\\*\\*"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\qtgui4.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Audacity\*'
-            - 'c:\program files (x86)\Audacity\*'
-            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
-            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files\Audacity\\*'
+            - 'c:\program files (x86)\Audacity\\*'
+            - 'c:\program files\AOMEI\AOMEI Backupper\\*\\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\\*\\*'
 
     condition: selection and not filter
 falsepositives:

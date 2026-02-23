@@ -17,7 +17,7 @@ detection:
         ImageLoaded: '*\kdstub.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

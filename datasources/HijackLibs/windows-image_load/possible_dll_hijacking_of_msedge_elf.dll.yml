@@ -17,12 +17,12 @@ detection:
         ImageLoaded: '*\msedge_elf.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft\Edge\Application\*\*'
-            - 'c:\program files (x86)\Microsoft\Edge\Application\*\*'
-            - 'c:\program files\Microsoft\EdgeCore\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeCore\*\*'
-            - 'c:\program files\Microsoft\EdgeWebView\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeWebView\*\*'
+            - 'c:\program files\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files (x86)\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files\Microsoft\EdgeCore\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeCore\\*\\*'
+            - 'c:\program files\Microsoft\EdgeWebView\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeWebView\\*\\*'
 
     condition: selection and not filter
 falsepositives:

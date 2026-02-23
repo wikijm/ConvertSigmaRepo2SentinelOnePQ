@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\corefoundation.dll" and (not (module.path in ("c:\\program files\\Common Files\\Apple\\Apple Application Support\*","c:\\program files (x86)\\Common Files\\Apple\\Apple Application Support\*","c:\\program files\\iTunes\*","c:\\program files (x86)\\iTunes\*","c:\\windows\\system32\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\corefoundation.dll" and (not (module.path contains "c:\\program files\\Common Files\\Apple\\Apple Application Support\\" or module.path contains "c:\\program files (x86)\\Common Files\\Apple\\Apple Application Support\\" or module.path contains "c:\\program files\\iTunes\\" or module.path contains "c:\\program files (x86)\\iTunes\\" or module.path contains "c:\\windows\\system32\\"))))
 ```
 
 
@@ -25,11 +25,11 @@ detection:
         ImageLoaded: '*\corefoundation.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Common Files\Apple\Apple Application Support\*'
-            - 'c:\program files (x86)\Common Files\Apple\Apple Application Support\*'
-            - 'c:\program files\iTunes\*'
-            - 'c:\program files (x86)\iTunes\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Common Files\Apple\Apple Application Support\\*'
+            - 'c:\program files (x86)\Common Files\Apple\Apple Application Support\\*'
+            - 'c:\program files\iTunes\\*'
+            - 'c:\program files (x86)\iTunes\\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\uxcore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\windows live\installer\*'
-            - 'c:\program files (x86)\windows live\installer\*'
+            - 'c:\program files\windows live\installer\\*'
+            - 'c:\program files (x86)\windows live\installer\\*'
 
     condition: selection and not filter
 falsepositives:

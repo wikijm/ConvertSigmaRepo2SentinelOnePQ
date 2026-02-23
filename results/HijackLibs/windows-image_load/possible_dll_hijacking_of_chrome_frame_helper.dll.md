@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\chrome_frame_helper.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\Google\\Chrome\\Application\*","c:\\program files\\Google\\Chrome\\Application\*","c:\\program files (x86)\\Google\\Chrome\\Application\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\chrome_frame_helper.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\Google\\Chrome\\Application\\*" or module.path contains "c:\\program files\\Google\\Chrome\\Application\\" or module.path contains "c:\\program files (x86)\\Google\\Chrome\\Application\\"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\chrome_frame_helper.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Google\Chrome\Application\*'
-            - 'c:\program files\Google\Chrome\Application\*'
-            - 'c:\program files (x86)\Google\Chrome\Application\*'
+            - 'c:\users\\*\appdata\local\Google\Chrome\Application\\*'
+            - 'c:\program files\Google\Chrome\Application\\*'
+            - 'c:\program files (x86)\Google\Chrome\Application\\*'
 
     condition: selection and not filter
 falsepositives:

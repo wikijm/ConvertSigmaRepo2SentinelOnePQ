@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mscorsvc.dll" and (not (module.path="c:\\windows\\Microsoft.NET\\Framework\\v*\*" or module.path="c:\\windows\\Microsoft.NET\\Framework64\\v*\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mscorsvc.dll" and (not (module.path="c:\\windows\\Microsoft.NET\\Framework\\v*\\*" or module.path="c:\\windows\\Microsoft.NET\\Framework64\\v*\\*"))))
 ```
 
 
@@ -26,8 +26,8 @@ detection:
         ImageLoaded: '*\mscorsvc.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\Microsoft.NET\Framework\v*\*'
-            - 'c:\windows\Microsoft.NET\Framework64\v*\*'
+            - 'c:\windows\Microsoft.NET\Framework\v*\\*'
+            - 'c:\windows\Microsoft.NET\Framework64\v*\\*'
 
     condition: selection and not filter
 falsepositives:

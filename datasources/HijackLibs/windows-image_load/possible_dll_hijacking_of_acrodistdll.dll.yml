@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\acrodistdll.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Adobe\Acrobat *\Acrobat\*'
-            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\*'
+            - 'c:\program files\Adobe\Acrobat *\Acrobat\\*'
+            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\\*'
 
     condition: selection and not filter
 falsepositives:

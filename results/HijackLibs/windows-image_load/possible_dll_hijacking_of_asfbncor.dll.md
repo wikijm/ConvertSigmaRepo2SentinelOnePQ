@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\asfbncor.dll" and (not (module.path in ("c:\\program files\\Replay Media Splitter\*","c:\\program files (x86)\\Replay Media Splitter\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\asfbncor.dll" and (not (module.path contains "c:\\program files\\Replay Media Splitter\\" or module.path contains "c:\\program files (x86)\\Replay Media Splitter\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\asfbncor.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Replay Media Splitter\*'
-            - 'c:\program files (x86)\Replay Media Splitter\*'
+            - 'c:\program files\Replay Media Splitter\\*'
+            - 'c:\program files (x86)\Replay Media Splitter\\*'
 
     condition: selection and not filter
 falsepositives:

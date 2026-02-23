@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\badata_x64.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\True Burner\*'
-            - 'c:\program files (x86)\True Burner\*'
+            - 'c:\program files\True Burner\\*'
+            - 'c:\program files (x86)\True Burner\\*'
 
     condition: selection and not filter
 falsepositives:

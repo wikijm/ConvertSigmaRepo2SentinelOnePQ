@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\zlibwapi.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\DS Clock\*'
-            - 'c:\program files (x86)\DS Clock\*'
+            - 'c:\program files\DS Clock\\*'
+            - 'c:\program files (x86)\DS Clock\\*'
 
     condition: selection and not filter
 falsepositives:

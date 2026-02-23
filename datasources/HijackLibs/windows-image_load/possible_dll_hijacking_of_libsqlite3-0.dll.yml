@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libsqlite3-0.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\*'
-            - 'c:\program files (x86)\*'
+            - 'c:\program files\\*'
+            - 'c:\program files (x86)\\*'
 
     condition: selection and not filter
 falsepositives:

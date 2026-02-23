@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iepdf32.dll" and (not (module.path in ("c:\\program files\\Handy Viewer\*","c:\\program files (x86)\\Handy Viewer\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iepdf32.dll" and (not (module.path contains "c:\\program files\\Handy Viewer\\" or module.path contains "c:\\program files (x86)\\Handy Viewer\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\iepdf32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Handy Viewer\*'
-            - 'c:\program files (x86)\Handy Viewer\*'
+            - 'c:\program files\Handy Viewer\\*'
+            - 'c:\program files (x86)\Handy Viewer\\*'
 
     condition: selection and not filter
 falsepositives:

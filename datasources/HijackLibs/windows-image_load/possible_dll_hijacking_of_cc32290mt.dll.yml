@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\cc32290mt.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Ahnenblatt4\Ahnenblatt4.exe\*'
-            - 'c:\program files (x86)\Ahnenblatt4\Ahnenblatt4.exe\*'
+            - 'c:\program files\Ahnenblatt4\Ahnenblatt4.exe\\*'
+            - 'c:\program files (x86)\Ahnenblatt4\Ahnenblatt4.exe\\*'
 
     condition: selection and not filter
 falsepositives:

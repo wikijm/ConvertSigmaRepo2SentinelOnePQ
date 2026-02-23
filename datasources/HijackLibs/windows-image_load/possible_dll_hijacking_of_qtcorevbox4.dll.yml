@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\qtcorevbox4.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Oracle\VirtualBox\*'
-            - 'c:\program files (x86)\Oracle\VirtualBox\*'
+            - 'c:\program files\Oracle\VirtualBox\\*'
+            - 'c:\program files (x86)\Oracle\VirtualBox\\*'
 
     condition: selection and not filter
 falsepositives:

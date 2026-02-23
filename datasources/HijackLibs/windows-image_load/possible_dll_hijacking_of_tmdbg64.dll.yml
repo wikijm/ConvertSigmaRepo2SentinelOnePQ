@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\tmdbg64.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Temp\ClnExtor\PCCNT\*'
-            - 'c:\program files\Trend Micro\Security Agent\*'
-            - 'c:\program files (x86)\Trend Micro\Security Agent\*'
+            - 'c:\users\\*\appdata\local\Temp\ClnExtor\PCCNT\\*'
+            - 'c:\program files\Trend Micro\Security Agent\\*'
+            - 'c:\program files (x86)\Trend Micro\Security Agent\\*'
 
     condition: selection and not filter
 falsepositives:

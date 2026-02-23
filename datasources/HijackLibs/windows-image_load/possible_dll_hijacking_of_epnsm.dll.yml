@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\epnsm.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Epson Software\Document Capture Server\*'
-            - 'c:\program files (x86)\Epson Software\Document Capture Server\*'
-            - 'c:\program files\Epson Software\Event Manager\*'
-            - 'c:\program files (x86)\Epson Software\Event Manager\*'
+            - 'c:\program files\Epson Software\Document Capture Server\\*'
+            - 'c:\program files (x86)\Epson Software\Document Capture Server\\*'
+            - 'c:\program files\Epson Software\Event Manager\\*'
+            - 'c:\program files (x86)\Epson Software\Event Manager\\*'
 
     condition: selection and not filter
 falsepositives:

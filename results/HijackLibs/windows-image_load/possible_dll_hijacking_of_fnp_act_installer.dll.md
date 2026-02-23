@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fnp_act_installer.dll" and (not (module.path in ("c:\\program files\\InstallShield\*\\System\*","c:\\program files (x86)\\InstallShield\*\\System\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fnp_act_installer.dll" and (not (module.path="c:\\program files\\InstallShield\\*\\System\\*" or module.path="c:\\program files (x86)\\InstallShield\\*\\System\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\fnp_act_installer.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\InstallShield\*\System\*'
-            - 'c:\program files (x86)\InstallShield\*\System\*'
+            - 'c:\program files\InstallShield\\*\System\\*'
+            - 'c:\program files (x86)\InstallShield\\*\System\\*'
 
     condition: selection and not filter
 falsepositives:

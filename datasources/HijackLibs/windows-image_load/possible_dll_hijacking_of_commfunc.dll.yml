@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\commfunc.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Lenovo\Communications Utility\*'
-            - 'c:\program files (x86)\Lenovo\Communications Utility\*'
+            - 'c:\program files\Lenovo\Communications Utility\\*'
+            - 'c:\program files (x86)\Lenovo\Communications Utility\\*'
 
     condition: selection and not filter
 falsepositives:

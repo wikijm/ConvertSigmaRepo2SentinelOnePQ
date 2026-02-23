@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tosbtkbd.dll" and (not (module.path in ("c:\\program files\\Toshiba\\Bluetooth Toshiba Stack\*","c:\\program files (x86)\\Toshiba\\Bluetooth Toshiba Stack\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tosbtkbd.dll" and (not (module.path contains "c:\\program files\\Toshiba\\Bluetooth Toshiba Stack\\" or module.path contains "c:\\program files (x86)\\Toshiba\\Bluetooth Toshiba Stack\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\tosbtkbd.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Toshiba\Bluetooth Toshiba Stack\*'
-            - 'c:\program files (x86)\Toshiba\Bluetooth Toshiba Stack\*'
+            - 'c:\program files\Toshiba\Bluetooth Toshiba Stack\\*'
+            - 'c:\program files (x86)\Toshiba\Bluetooth Toshiba Stack\\*'
 
     condition: selection and not filter
 falsepositives:

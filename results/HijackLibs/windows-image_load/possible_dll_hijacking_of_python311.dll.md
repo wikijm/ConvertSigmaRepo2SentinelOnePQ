@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python311.dll" and (not (module.path in ("c:\\program files\\Python311\*","c:\\program files (x86)\\Python311\*","c:\\users\*\\appdata\\local\\Programs\\Python\\Python311\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python311.dll" and (not (module.path contains "c:\\program files\\Python311\\" or module.path contains "c:\\program files (x86)\\Python311\\" or module.path="c:\\users\\*\\appdata\\local\\Programs\\Python\\Python311\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\python311.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Python311\*'
-            - 'c:\program files (x86)\Python311\*'
-            - 'c:\users\*\appdata\local\Programs\Python\Python311\*'
+            - 'c:\program files\Python311\\*'
+            - 'c:\program files (x86)\Python311\\*'
+            - 'c:\users\\*\appdata\local\Programs\Python\Python311\\*'
 
     condition: selection and not filter
 falsepositives:

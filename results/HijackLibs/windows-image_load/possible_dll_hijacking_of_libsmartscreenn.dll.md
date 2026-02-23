@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libsmartscreenn.dll" and (not (module.path="c:\\program files\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libsmartscreenn.dll" and (not (module.path="c:\\program files\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\libsmartscreenn.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*'
-            - 'c:\program files (x86)\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\*'
+            - 'c:\program files\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
+            - 'c:\program files (x86)\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*'
 
     condition: selection and not filter
 falsepositives:

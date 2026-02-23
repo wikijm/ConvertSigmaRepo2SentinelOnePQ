@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\chrome_frame_helper.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Google\Chrome\Application\*'
-            - 'c:\program files\Google\Chrome\Application\*'
-            - 'c:\program files (x86)\Google\Chrome\Application\*'
+            - 'c:\users\\*\appdata\local\Google\Chrome\Application\\*'
+            - 'c:\program files\Google\Chrome\Application\\*'
+            - 'c:\program files (x86)\Google\Chrome\Application\\*'
 
     condition: selection and not filter
 falsepositives:

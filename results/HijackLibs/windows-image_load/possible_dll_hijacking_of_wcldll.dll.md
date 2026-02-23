@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wcldll.dll" and (not (module.path in ("c:\\program files\\Cisco Systems\\Cisco Jabber\*","c:\\program files (x86)\\Cisco Systems\\Cisco Jabber\*","c:\\program files\\Webex\\Applications\*","c:\\program files (x86)\\Webex\\Applications\*","c:\\program files\\Webex\\Plugins\*","c:\\program files (x86)\\Webex\\Plugins\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\wcldll.dll" and (not (module.path contains "c:\\program files\\Cisco Systems\\Cisco Jabber\\" or module.path contains "c:\\program files (x86)\\Cisco Systems\\Cisco Jabber\\" or module.path contains "c:\\program files\\Webex\\Applications\\" or module.path contains "c:\\program files (x86)\\Webex\\Applications\\" or module.path contains "c:\\program files\\Webex\\Plugins\\" or module.path contains "c:\\program files (x86)\\Webex\\Plugins\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\wcldll.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Cisco Systems\Cisco Jabber\*'
-            - 'c:\program files (x86)\Cisco Systems\Cisco Jabber\*'
-            - 'c:\program files\Webex\Applications\*'
-            - 'c:\program files (x86)\Webex\Applications\*'
-            - 'c:\program files\Webex\Plugins\*'
-            - 'c:\program files (x86)\Webex\Plugins\*'
+            - 'c:\program files\Cisco Systems\Cisco Jabber\\*'
+            - 'c:\program files (x86)\Cisco Systems\Cisco Jabber\\*'
+            - 'c:\program files\Webex\Applications\\*'
+            - 'c:\program files (x86)\Webex\Applications\\*'
+            - 'c:\program files\Webex\Plugins\\*'
+            - 'c:\program files (x86)\Webex\Plugins\\*'
 
     condition: selection and not filter
 falsepositives:

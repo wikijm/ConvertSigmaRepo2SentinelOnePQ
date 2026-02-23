@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nvsmartmax.dll" and (not (module.path in ("c:\\program files\\NVIDIA Corporation\\Display\*","c:\\program files (x86)\\NVIDIA Corporation\\Display\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\nvsmartmax.dll" and (not (module.path contains "c:\\program files\\NVIDIA Corporation\\Display\\" or module.path contains "c:\\program files (x86)\\NVIDIA Corporation\\Display\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\nvsmartmax.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\NVIDIA Corporation\Display\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\Display\*'
+            - 'c:\program files\NVIDIA Corporation\Display\\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\Display\\*'
 
     condition: selection and not filter
 falsepositives:

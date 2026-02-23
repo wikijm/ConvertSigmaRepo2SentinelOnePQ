@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\zlibwapi.dll" and (not (module.path in ("c:\\program files\\DS Clock\*","c:\\program files (x86)\\DS Clock\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\zlibwapi.dll" and (not (module.path contains "c:\\program files\\DS Clock\\" or module.path contains "c:\\program files (x86)\\DS Clock\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\zlibwapi.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\DS Clock\*'
-            - 'c:\program files (x86)\DS Clock\*'
+            - 'c:\program files\DS Clock\\*'
+            - 'c:\program files (x86)\DS Clock\\*'
 
     condition: selection and not filter
 falsepositives:

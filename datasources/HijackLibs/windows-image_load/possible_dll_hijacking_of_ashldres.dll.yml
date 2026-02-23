@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\ashldres.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\McAfee.com\VSO\*'
-            - 'c:\program files (x86)\McAfee.com\VSO\*'
+            - 'c:\program files\McAfee.com\VSO\\*'
+            - 'c:\program files (x86)\McAfee.com\VSO\\*'
 
     condition: selection and not filter
 falsepositives:

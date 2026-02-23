@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\register.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\IObit\Driver Booster\*\*'
-            - 'c:\program files (x86)\IObit\Driver Booster\*\*'
+            - 'c:\program files\IObit\Driver Booster\\*\\*'
+            - 'c:\program files (x86)\IObit\Driver Booster\\*\\*'
 
     condition: selection and not filter
 falsepositives:

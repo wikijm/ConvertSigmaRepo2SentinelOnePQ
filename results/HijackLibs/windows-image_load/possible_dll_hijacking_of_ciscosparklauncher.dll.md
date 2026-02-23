@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ciscosparklauncher.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\CiscoSparkLauncher\*","c:\\users\*\\appdata\\local\\Programs\\Cisco Spark\*","c:\\program files\\Cisco Spark\*","c:\\program files (x86)\\Cisco Spark\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ciscosparklauncher.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\CiscoSparkLauncher\\*" or module.path="c:\\users\\*\\appdata\\local\\Programs\\Cisco Spark\\*" or module.path contains "c:\\program files\\Cisco Spark\\" or module.path contains "c:\\program files (x86)\\Cisco Spark\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\ciscosparklauncher.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\CiscoSparkLauncher\*'
-            - 'c:\users\*\appdata\local\Programs\Cisco Spark\*'
-            - 'c:\program files\Cisco Spark\*'
-            - 'c:\program files (x86)\Cisco Spark\*'
+            - 'c:\users\\*\appdata\local\CiscoSparkLauncher\\*'
+            - 'c:\users\\*\appdata\local\Programs\Cisco Spark\\*'
+            - 'c:\program files\Cisco Spark\\*'
+            - 'c:\program files (x86)\Cisco Spark\\*'
 
     condition: selection and not filter
 falsepositives:

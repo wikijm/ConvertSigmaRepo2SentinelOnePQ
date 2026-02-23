@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\libxfont-1.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Mobatek\MobaXterm Personal Edition\*'
-            - 'c:\program files (x86)\Mobatek\MobaXterm Personal Edition\*'
-            - 'c:\program files\Mobatek\MobaXterm\*'
-            - 'c:\program files (x86)\Mobatek\MobaXterm\*'
+            - 'c:\program files\Mobatek\MobaXterm Personal Edition\\*'
+            - 'c:\program files (x86)\Mobatek\MobaXterm Personal Edition\\*'
+            - 'c:\program files\Mobatek\MobaXterm\\*'
+            - 'c:\program files (x86)\Mobatek\MobaXterm\\*'
 
     condition: selection and not filter
 falsepositives:

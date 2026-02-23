@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\winutils.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Palo Alto Networks\Traps\*'
-            - 'c:\program files (x86)\Palo Alto Networks\Traps\*'
+            - 'c:\program files\Palo Alto Networks\Traps\\*'
+            - 'c:\program files (x86)\Palo Alto Networks\Traps\\*'
 
     condition: selection and not filter
 falsepositives:

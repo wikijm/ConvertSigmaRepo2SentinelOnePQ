@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mediainfo_i386.dll" and (not (module.path in ("c:\\program files\\MediaInfo\*","c:\\program files (x86)\\MediaInfo\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mediainfo_i386.dll" and (not (module.path contains "c:\\program files\\MediaInfo\\" or module.path contains "c:\\program files (x86)\\MediaInfo\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\mediainfo_i386.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\MediaInfo\*'
-            - 'c:\program files (x86)\MediaInfo\*'
+            - 'c:\program files\MediaInfo\\*'
+            - 'c:\program files (x86)\MediaInfo\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\appvpolicy.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\*'
-            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\\*'
+            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\\*'
 
     condition: selection and not filter
 falsepositives:

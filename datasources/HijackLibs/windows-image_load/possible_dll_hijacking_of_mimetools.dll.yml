@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\mimetools.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Notepad++\plugins\*'
-            - 'c:\program files (x86)\Notepad++\plugins\*'
-            - 'c:\program files\Notepad++\plugins\mimetools\*'
-            - 'c:\program files (x86)\Notepad++\plugins\mimetools\*'
+            - 'c:\program files\Notepad++\plugins\\*'
+            - 'c:\program files (x86)\Notepad++\plugins\\*'
+            - 'c:\program files\Notepad++\plugins\mimetools\\*'
+            - 'c:\program files (x86)\Notepad++\plugins\mimetools\\*'
 
     condition: selection and not filter
 falsepositives:

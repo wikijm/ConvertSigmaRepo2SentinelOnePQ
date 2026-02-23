@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mozglue.dll" and (not (module.path in ("c:\\program files\\SeaMonkey\*","c:\\program files (x86)\\SeaMonkey\*","c:\\program files\\Mozilla Firefox\*","c:\\program files (x86)\\Mozilla Firefox\*","c:\\program files\\Mozilla Thunderbird\*","c:\\program files (x86)\\Mozilla Thunderbird\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mozglue.dll" and (not (module.path contains "c:\\program files\\SeaMonkey\\" or module.path contains "c:\\program files (x86)\\SeaMonkey\\" or module.path contains "c:\\program files\\Mozilla Firefox\\" or module.path contains "c:\\program files (x86)\\Mozilla Firefox\\" or module.path contains "c:\\program files\\Mozilla Thunderbird\\" or module.path contains "c:\\program files (x86)\\Mozilla Thunderbird\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\mozglue.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SeaMonkey\*'
-            - 'c:\program files (x86)\SeaMonkey\*'
-            - 'c:\program files\Mozilla Firefox\*'
-            - 'c:\program files (x86)\Mozilla Firefox\*'
-            - 'c:\program files\Mozilla Thunderbird\*'
-            - 'c:\program files (x86)\Mozilla Thunderbird\*'
+            - 'c:\program files\SeaMonkey\\*'
+            - 'c:\program files (x86)\SeaMonkey\\*'
+            - 'c:\program files\Mozilla Firefox\\*'
+            - 'c:\program files (x86)\Mozilla Firefox\\*'
+            - 'c:\program files\Mozilla Thunderbird\\*'
+            - 'c:\program files (x86)\Mozilla Thunderbird\\*'
 
     condition: selection and not filter
 falsepositives:

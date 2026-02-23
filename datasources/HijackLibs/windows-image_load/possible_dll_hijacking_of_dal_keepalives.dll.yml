@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\dal_keepalives.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\audinate\shared files\*'
-            - 'c:\program files (x86)\audinate\shared files\*'
+            - 'c:\program files\audinate\shared files\\*'
+            - 'c:\program files (x86)\audinate\shared files\\*'
 
     condition: selection and not filter
 falsepositives:

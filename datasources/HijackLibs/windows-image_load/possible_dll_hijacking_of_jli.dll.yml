@@ -17,11 +17,11 @@ detection:
         ImageLoaded: '*\jli.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Java\*\bin\*'
-            - 'c:\program files (x86)\Java\*\bin\*'
-            - 'c:\program files\*\jre\bin\*'
-            - 'c:\program files (x86)\*\jre\bin\*'
-            - 'c:\users\*\appdata\local\Temp\*\bin\*'
+            - 'c:\program files\Java\\*\bin\\*'
+            - 'c:\program files (x86)\Java\\*\bin\\*'
+            - 'c:\program files\\*\jre\bin\\*'
+            - 'c:\program files (x86)\\*\jre\bin\\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\bin\\*'
 
     condition: selection and not filter
 falsepositives:

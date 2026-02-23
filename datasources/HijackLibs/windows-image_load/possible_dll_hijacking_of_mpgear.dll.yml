@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\mpgear.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Windows Defender Advanced Threat Protection\Classification\*'
-            - 'c:\program files (x86)\Windows Defender Advanced Threat Protection\Classification\*'
-            - 'c:\windows\system32\MRT\*\*'
+            - 'c:\program files\Windows Defender Advanced Threat Protection\Classification\\*'
+            - 'c:\program files (x86)\Windows Defender Advanced Threat Protection\Classification\\*'
+            - 'c:\windows\system32\MRT\\*\\*'
 
     condition: selection and not filter
 falsepositives:

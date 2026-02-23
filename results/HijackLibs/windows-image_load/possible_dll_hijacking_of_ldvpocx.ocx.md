@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ldvpocx.ocx" and (not (module.path in ("c:\\program files\\Symantec_Client_Security\\Symantec AntiVirus\*","c:\\program files (x86)\\Symantec_Client_Security\\Symantec AntiVirus\*","c:\\program files\\Symantec AntiVirus\*","c:\\program files (x86)\\Symantec AntiVirus\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ldvpocx.ocx" and (not (module.path contains "c:\\program files\\Symantec_Client_Security\\Symantec AntiVirus\\" or module.path contains "c:\\program files (x86)\\Symantec_Client_Security\\Symantec AntiVirus\\" or module.path contains "c:\\program files\\Symantec AntiVirus\\" or module.path contains "c:\\program files (x86)\\Symantec AntiVirus\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\ldvpocx.ocx'
     filter:
         ImageLoaded:
-            - 'c:\program files\Symantec_Client_Security\Symantec AntiVirus\*'
-            - 'c:\program files (x86)\Symantec_Client_Security\Symantec AntiVirus\*'
-            - 'c:\program files\Symantec AntiVirus\*'
-            - 'c:\program files (x86)\Symantec AntiVirus\*'
+            - 'c:\program files\Symantec_Client_Security\Symantec AntiVirus\\*'
+            - 'c:\program files (x86)\Symantec_Client_Security\Symantec AntiVirus\\*'
+            - 'c:\program files\Symantec AntiVirus\\*'
+            - 'c:\program files (x86)\Symantec AntiVirus\\*'
 
     condition: selection and not filter
 falsepositives:

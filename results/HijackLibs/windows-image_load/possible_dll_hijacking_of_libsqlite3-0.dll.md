@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libsqlite3-0.dll" and (not (module.path in ("c:\\program files\*","c:\\program files (x86)\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libsqlite3-0.dll" and (not (module.path contains "c:\\program files\\" or module.path contains "c:\\program files (x86)\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\libsqlite3-0.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\*'
-            - 'c:\program files (x86)\*'
+            - 'c:\program files\\*'
+            - 'c:\program files (x86)\\*'
 
     condition: selection and not filter
 falsepositives:

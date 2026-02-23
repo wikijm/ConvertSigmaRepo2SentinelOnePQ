@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcef.dll" and (not (module.path in ("c:\\program files\\NVIDIA Corporation\\NVIDIA GeForce Experience\*","c:\\program files (x86)\\NVIDIA Corporation\\NVIDIA GeForce Experience\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcef.dll" and (not (module.path contains "c:\\program files\\NVIDIA Corporation\\NVIDIA GeForce Experience\\" or module.path contains "c:\\program files (x86)\\NVIDIA Corporation\\NVIDIA GeForce Experience\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\libcef.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\*'
-            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\*'
+            - 'c:\program files\NVIDIA Corporation\NVIDIA GeForce Experience\\*'
+            - 'c:\program files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\\*'
 
     condition: selection and not filter
 falsepositives:

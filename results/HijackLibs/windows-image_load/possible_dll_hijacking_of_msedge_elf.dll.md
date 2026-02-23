@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msedge_elf.dll" and (not (module.path in ("c:\\program files\\Microsoft\\Edge\\Application\*\*","c:\\program files (x86)\\Microsoft\\Edge\\Application\*\*","c:\\program files\\Microsoft\\EdgeCore\*\*","c:\\program files (x86)\\Microsoft\\EdgeCore\*\*","c:\\program files\\Microsoft\\EdgeWebView\*\*","c:\\program files (x86)\\Microsoft\\EdgeWebView\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\msedge_elf.dll" and (not (module.path="c:\\program files\\Microsoft\\Edge\\Application\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\Edge\\Application\\*\\*" or module.path="c:\\program files\\Microsoft\\EdgeCore\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeCore\\*\\*" or module.path="c:\\program files\\Microsoft\\EdgeWebView\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeWebView\\*\\*"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\msedge_elf.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft\Edge\Application\*\*'
-            - 'c:\program files (x86)\Microsoft\Edge\Application\*\*'
-            - 'c:\program files\Microsoft\EdgeCore\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeCore\*\*'
-            - 'c:\program files\Microsoft\EdgeWebView\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeWebView\*\*'
+            - 'c:\program files\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files (x86)\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files\Microsoft\EdgeCore\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeCore\\*\\*'
+            - 'c:\program files\Microsoft\EdgeWebView\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeWebView\\*\\*'
 
     condition: selection and not filter
 falsepositives:

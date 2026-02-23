@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\safestore32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Sophos\Sophos Anti-Virus\*'
-            - 'c:\program files (x86)\Sophos\Sophos Anti-Virus\*'
+            - 'c:\program files\Sophos\Sophos Anti-Virus\\*'
+            - 'c:\program files (x86)\Sophos\Sophos Anti-Virus\\*'
 
     condition: selection and not filter
 falsepositives:

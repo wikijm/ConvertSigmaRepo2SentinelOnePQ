@@ -17,12 +17,12 @@ detection:
         ImageLoaded: '*\mozglue.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SeaMonkey\*'
-            - 'c:\program files (x86)\SeaMonkey\*'
-            - 'c:\program files\Mozilla Firefox\*'
-            - 'c:\program files (x86)\Mozilla Firefox\*'
-            - 'c:\program files\Mozilla Thunderbird\*'
-            - 'c:\program files (x86)\Mozilla Thunderbird\*'
+            - 'c:\program files\SeaMonkey\\*'
+            - 'c:\program files (x86)\SeaMonkey\\*'
+            - 'c:\program files\Mozilla Firefox\\*'
+            - 'c:\program files (x86)\Mozilla Firefox\\*'
+            - 'c:\program files\Mozilla Thunderbird\\*'
+            - 'c:\program files (x86)\Mozilla Thunderbird\\*'
 
     condition: selection and not filter
 falsepositives:

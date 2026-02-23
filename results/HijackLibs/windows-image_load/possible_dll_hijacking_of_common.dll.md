@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\common.dll" and (not (module.path in ("c:\\program files\\iroot\*","c:\\program files (x86)\\iroot\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\common.dll" and (not (module.path contains "c:\\program files\\iroot\\" or module.path contains "c:\\program files (x86)\\iroot\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\common.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\iroot\*'
-            - 'c:\program files (x86)\iroot\*'
+            - 'c:\program files\iroot\\*'
+            - 'c:\program files (x86)\iroot\\*'
 
     condition: selection and not filter
 falsepositives:

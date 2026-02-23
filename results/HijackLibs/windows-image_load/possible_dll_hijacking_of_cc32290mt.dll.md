@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cc32290mt.dll" and (not (module.path in ("c:\\program files\\Ahnenblatt4\\Ahnenblatt4.exe\*","c:\\program files (x86)\\Ahnenblatt4\\Ahnenblatt4.exe\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\cc32290mt.dll" and (not (module.path contains "c:\\program files\\Ahnenblatt4\\Ahnenblatt4.exe\\" or module.path contains "c:\\program files (x86)\\Ahnenblatt4\\Ahnenblatt4.exe\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\cc32290mt.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Ahnenblatt4\Ahnenblatt4.exe\*'
-            - 'c:\program files (x86)\Ahnenblatt4\Ahnenblatt4.exe\*'
+            - 'c:\program files\Ahnenblatt4\Ahnenblatt4.exe\\*'
+            - 'c:\program files (x86)\Ahnenblatt4\Ahnenblatt4.exe\\*'
 
     condition: selection and not filter
 falsepositives:

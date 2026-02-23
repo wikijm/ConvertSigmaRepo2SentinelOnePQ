@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\asfbncor.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Replay Media Splitter\*'
-            - 'c:\program files (x86)\Replay Media Splitter\*'
+            - 'c:\program files\Replay Media Splitter\\*'
+            - 'c:\program files (x86)\Replay Media Splitter\\*'
 
     condition: selection and not filter
 falsepositives:

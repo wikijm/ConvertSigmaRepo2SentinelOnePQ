@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\launcher.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SQL Developer\ide\bin\*'
-            - 'c:\program files (x86)\SQL Developer\ide\bin\*'
-            - 'c:\program files\sqldeveloper\ide\bin\*'
-            - 'c:\program files (x86)\sqldeveloper\ide\bin\*'
+            - 'c:\program files\SQL Developer\ide\bin\\*'
+            - 'c:\program files (x86)\SQL Developer\ide\bin\\*'
+            - 'c:\program files\sqldeveloper\ide\bin\\*'
+            - 'c:\program files (x86)\sqldeveloper\ide\bin\\*'
 
     condition: selection and not filter
 falsepositives:

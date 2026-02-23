@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vender.dll" and (not (module.path in ("c:\\program files\\ASUS\\GPU TweakII\*","c:\\program files (x86)\\ASUS\\GPU TweakII\*","c:\\program files\\ASUS\\VGA COM\*\*","c:\\program files (x86)\\ASUS\\VGA COM\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\vender.dll" and (not (module.path contains "c:\\program files\\ASUS\\GPU TweakII\\" or module.path contains "c:\\program files (x86)\\ASUS\\GPU TweakII\\" or module.path="c:\\program files\\ASUS\\VGA COM\\*\\*" or module.path="c:\\program files (x86)\\ASUS\\VGA COM\\*\\*"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\vender.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\ASUS\GPU TweakII\*'
-            - 'c:\program files (x86)\ASUS\GPU TweakII\*'
-            - 'c:\program files\ASUS\VGA COM\*\*'
-            - 'c:\program files (x86)\ASUS\VGA COM\*\*'
+            - 'c:\program files\ASUS\GPU TweakII\\*'
+            - 'c:\program files (x86)\ASUS\GPU TweakII\\*'
+            - 'c:\program files\ASUS\VGA COM\\*\\*'
+            - 'c:\program files (x86)\ASUS\VGA COM\\*\\*'
 
     condition: selection and not filter
 falsepositives:

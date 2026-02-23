@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\mpclient.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Windows Defender\*'
-            - 'c:\program files (x86)\Windows Defender\*'
-            - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+            - 'c:\program files\Windows Defender\\*'
+            - 'c:\program files (x86)\Windows Defender\\*'
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
 
     condition: selection and not filter
 falsepositives:

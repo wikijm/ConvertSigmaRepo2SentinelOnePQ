@@ -17,12 +17,12 @@ detection:
         ImageLoaded: '*\wcldll.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Cisco Systems\Cisco Jabber\*'
-            - 'c:\program files (x86)\Cisco Systems\Cisco Jabber\*'
-            - 'c:\program files\Webex\Applications\*'
-            - 'c:\program files (x86)\Webex\Applications\*'
-            - 'c:\program files\Webex\Plugins\*'
-            - 'c:\program files (x86)\Webex\Plugins\*'
+            - 'c:\program files\Cisco Systems\Cisco Jabber\\*'
+            - 'c:\program files (x86)\Cisco Systems\Cisco Jabber\\*'
+            - 'c:\program files\Webex\Applications\\*'
+            - 'c:\program files (x86)\Webex\Applications\\*'
+            - 'c:\program files\Webex\Plugins\\*'
+            - 'c:\program files (x86)\Webex\Plugins\\*'
 
     condition: selection and not filter
 falsepositives:

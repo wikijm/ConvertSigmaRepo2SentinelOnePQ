@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\ciscosparklauncher.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\CiscoSparkLauncher\*'
-            - 'c:\users\*\appdata\local\Programs\Cisco Spark\*'
-            - 'c:\program files\Cisco Spark\*'
-            - 'c:\program files (x86)\Cisco Spark\*'
+            - 'c:\users\\*\appdata\local\CiscoSparkLauncher\\*'
+            - 'c:\users\\*\appdata\local\Programs\Cisco Spark\\*'
+            - 'c:\program files\Cisco Spark\\*'
+            - 'c:\program files (x86)\Cisco Spark\\*'
 
     condition: selection and not filter
 falsepositives:

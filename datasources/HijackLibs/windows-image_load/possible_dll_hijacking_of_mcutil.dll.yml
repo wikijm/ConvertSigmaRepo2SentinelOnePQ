@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\mcutil.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\McAfee Inc.\McAfee Total Protection 2009\*'
-            - 'c:\program files (x86)\McAfee Inc.\McAfee Total Protection 2009\*'
+            - 'c:\program files\McAfee Inc.\McAfee Total Protection 2009\\*'
+            - 'c:\program files (x86)\McAfee Inc.\McAfee Total Protection 2009\\*'
 
     condition: selection and not filter
 falsepositives:

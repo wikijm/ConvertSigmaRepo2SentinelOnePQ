@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\rastls.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\*'
-            - 'c:\windows\system32\*'
+            - 'c:\program files\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\program files (x86)\Symantec\Network Connected Devices Auto Setup\\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qrt.dll" and (not (module.path in ("c:\\program files\\F-Secure\\Anti-Virus\*","c:\\program files (x86)\\F-Secure\\Anti-Virus\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qrt.dll" and (not (module.path contains "c:\\program files\\F-Secure\\Anti-Virus\\" or module.path contains "c:\\program files (x86)\\F-Secure\\Anti-Virus\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\qrt.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\F-Secure\Anti-Virus\*'
-            - 'c:\program files (x86)\F-Secure\Anti-Virus\*'
+            - 'c:\program files\F-Secure\Anti-Virus\\*'
+            - 'c:\program files (x86)\F-Secure\Anti-Virus\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libvlccore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\VideoLAN\VLC\*'
-            - 'c:\program files (x86)\VideoLAN\VLC\*'
+            - 'c:\program files\VideoLAN\VLC\\*'
+            - 'c:\program files (x86)\VideoLAN\VLC\\*'
 
     condition: selection and not filter
 falsepositives:

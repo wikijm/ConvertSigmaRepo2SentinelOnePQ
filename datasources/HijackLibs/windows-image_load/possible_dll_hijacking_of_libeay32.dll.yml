@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libeay32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\PSPad editor\*'
-            - 'c:\program files (x86)\PSPad editor\*'
+            - 'c:\program files\PSPad editor\\*'
+            - 'c:\program files (x86)\PSPad editor\\*'
 
     condition: selection and not filter
 falsepositives:

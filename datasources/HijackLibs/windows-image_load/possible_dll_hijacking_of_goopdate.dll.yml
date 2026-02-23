@@ -17,11 +17,11 @@ detection:
         ImageLoaded: '*\goopdate.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Dropbox\Update\*'
-            - 'c:\program files (x86)\Dropbox\Update\*'
-            - 'c:\program files\Dropbox\Update\*\*'
-            - 'c:\program files (x86)\Dropbox\Update\*\*'
-            - 'c:\users\*\appdata\local\DropboxUpdate\Update\*'
+            - 'c:\program files\Dropbox\Update\\*'
+            - 'c:\program files (x86)\Dropbox\Update\\*'
+            - 'c:\program files\Dropbox\Update\\*\\*'
+            - 'c:\program files (x86)\Dropbox\Update\\*\\*'
+            - 'c:\users\\*\appdata\local\DropboxUpdate\Update\\*'
 
     condition: selection and not filter
 falsepositives:

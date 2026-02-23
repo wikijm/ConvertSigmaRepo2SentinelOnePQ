@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\sqlite.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\NetWorx\*'
-            - 'c:\program files (x86)\NetWorx\*'
+            - 'c:\program files\NetWorx\\*'
+            - 'c:\program files (x86)\NetWorx\\*'
 
     condition: selection and not filter
 falsepositives:

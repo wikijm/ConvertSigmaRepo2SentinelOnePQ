@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fastprox.dll" and (not (module.path in ("c:\\windows\\system32\\wbem\*","c:\\windows\\syswow64\\wbem\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\fastprox.dll" and (not (module.path contains "c:\\windows\\system32\\wbem\\" or module.path contains "c:\\windows\\syswow64\\wbem\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\fastprox.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\wbem\*'
-            - 'c:\windows\syswow64\wbem\*'
+            - 'c:\windows\system32\wbem\\*'
+            - 'c:\windows\syswow64\wbem\\*'
 
     condition: selection and not filter
 falsepositives:

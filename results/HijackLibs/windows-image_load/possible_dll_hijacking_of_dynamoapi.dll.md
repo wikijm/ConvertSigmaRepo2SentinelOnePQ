@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dynamoapi.dll" and (not module.path="c:\\windows\\system32\*")))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dynamoapi.dll" and (not module.path contains "c:\\windows\\system32\\")))
 ```
 
 
@@ -25,7 +25,7 @@ detection:
         ImageLoaded: '*\dynamoapi.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
+            - 'c:\windows\system32\\*'
 
     condition: selection and not filter
 falsepositives:

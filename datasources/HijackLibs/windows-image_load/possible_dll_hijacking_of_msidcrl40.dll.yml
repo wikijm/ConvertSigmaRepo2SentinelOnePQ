@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\msidcrl40.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\msn messenger\*'
-            - 'c:\program files (x86)\msn messenger\*'
+            - 'c:\program files\msn messenger\\*'
+            - 'c:\program files (x86)\msn messenger\\*'
 
     condition: selection and not filter
 falsepositives:

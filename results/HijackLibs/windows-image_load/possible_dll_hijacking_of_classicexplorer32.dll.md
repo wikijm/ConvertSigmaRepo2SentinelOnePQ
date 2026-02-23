@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\classicexplorer32.dll" and (not (module.path in ("c:\\program files\\Classic Shell\*","c:\\program files (x86)\\Classic Shell\*","c:\\program files\\Open-Shell\*","c:\\program files (x86)\\Open-Shell\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\classicexplorer32.dll" and (not (module.path contains "c:\\program files\\Classic Shell\\" or module.path contains "c:\\program files (x86)\\Classic Shell\\" or module.path contains "c:\\program files\\Open-Shell\\" or module.path contains "c:\\program files (x86)\\Open-Shell\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\classicexplorer32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Classic Shell\*'
-            - 'c:\program files (x86)\Classic Shell\*'
-            - 'c:\program files\Open-Shell\*'
-            - 'c:\program files (x86)\Open-Shell\*'
+            - 'c:\program files\Classic Shell\\*'
+            - 'c:\program files (x86)\Classic Shell\\*'
+            - 'c:\program files\Open-Shell\\*'
+            - 'c:\program files (x86)\Open-Shell\\*'
 
     condition: selection and not filter
 falsepositives:

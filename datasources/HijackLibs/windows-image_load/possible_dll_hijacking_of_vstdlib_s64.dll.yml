@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\vstdlib_s64.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Steam\*'
-            - 'c:\program files (x86)\Steam\*'
+            - 'c:\program files\Steam\\*'
+            - 'c:\program files (x86)\Steam\\*'
 
     condition: selection and not filter
 falsepositives:

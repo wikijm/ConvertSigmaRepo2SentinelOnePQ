@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\facesdk.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\luxand\facesdk\bin\win64\*'
-            - 'c:\program files (x86)\luxand\facesdk\bin\win64\*'
+            - 'c:\program files\luxand\facesdk\bin\win64\\*'
+            - 'c:\program files (x86)\luxand\facesdk\bin\win64\\*'
 
     condition: selection and not filter
 falsepositives:

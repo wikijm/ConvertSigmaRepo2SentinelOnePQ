@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\comn.dll" and (not (module.path in ("c:\\program files\\AOMEI\\AOMEI Backupper\*\*","c:\\program files (x86)\\AOMEI\\AOMEI Backupper\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\comn.dll" and (not (module.path="c:\\program files\\AOMEI\\AOMEI Backupper\\*\\*" or module.path="c:\\program files (x86)\\AOMEI\\AOMEI Backupper\\*\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\comn.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
-            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files\AOMEI\AOMEI Backupper\\*\\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\\*\\*'
 
     condition: selection and not filter
 falsepositives:

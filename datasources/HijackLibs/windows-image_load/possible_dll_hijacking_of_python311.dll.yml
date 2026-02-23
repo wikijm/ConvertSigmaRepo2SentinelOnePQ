@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\python311.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Python311\*'
-            - 'c:\program files (x86)\Python311\*'
-            - 'c:\users\*\appdata\local\Programs\Python\Python311\*'
+            - 'c:\program files\Python311\\*'
+            - 'c:\program files (x86)\Python311\\*'
+            - 'c:\users\\*\appdata\local\Programs\Python\Python311\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\liteskinutils.dll" and (not (module.path in ("c:\\program files\\ICQLite\*","c:\\program files (x86)\\ICQLite\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\liteskinutils.dll" and (not (module.path contains "c:\\program files\\ICQLite\\" or module.path contains "c:\\program files (x86)\\ICQLite\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\liteskinutils.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\ICQLite\*'
-            - 'c:\program files (x86)\ICQLite\*'
+            - 'c:\program files\ICQLite\\*'
+            - 'c:\program files (x86)\ICQLite\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\calibre-launcher.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Calibre2\*'
-            - 'c:\program files (x86)\Calibre2\*'
+            - 'c:\program files\Calibre2\\*'
+            - 'c:\program files (x86)\Calibre2\\*'
 
     condition: selection and not filter
 falsepositives:

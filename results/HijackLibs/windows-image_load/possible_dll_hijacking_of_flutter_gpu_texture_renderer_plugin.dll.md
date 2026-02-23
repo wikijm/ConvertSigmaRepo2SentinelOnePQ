@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\flutter_gpu_texture_renderer_plugin.dll" and (not (module.path in ("c:\\users\*\\appdata\\local\\rustdesk\*","c:\\program files\\RustDesk\*","c:\\program files (x86)\\RustDesk\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\flutter_gpu_texture_renderer_plugin.dll" and (not (module.path="c:\\users\\*\\appdata\\local\\rustdesk\\*" or module.path contains "c:\\program files\\RustDesk\\" or module.path contains "c:\\program files (x86)\\RustDesk\\"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\flutter_gpu_texture_renderer_plugin.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\rustdesk\*'
-            - 'c:\program files\RustDesk\*'
-            - 'c:\program files (x86)\RustDesk\*'
+            - 'c:\users\\*\appdata\local\rustdesk\\*'
+            - 'c:\program files\RustDesk\\*'
+            - 'c:\program files (x86)\RustDesk\\*'
 
     condition: selection and not filter
 falsepositives:

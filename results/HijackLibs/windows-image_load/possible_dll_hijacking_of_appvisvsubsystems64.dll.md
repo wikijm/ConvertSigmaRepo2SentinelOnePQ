@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvisvsubsystems64.dll" and (not (module.path="c:\\program files\\Common Files\\microsoft shared\\ClickToRun\*" or module.path="c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\*" or module.path="c:\\program files\\Common Files\\microsoft shared\\ClickToRun\\Updates\*\*" or module.path="c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\\Updates\*\*" or module.path="c:\\program files\\Microsoft Office\\root\\Client\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\Client\*" or module.path="c:\\program files\\Microsoft Office\\root\\Office*\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\Office*\*" or module.path="c:\\program files\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvisvsubsystems64.dll" and (not (module.path contains "c:\\program files\\Common Files\\microsoft shared\\ClickToRun\\" or module.path contains "c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\\" or module.path="c:\\program files\\Common Files\\microsoft shared\\ClickToRun\\Updates\\*\\*" or module.path="c:\\program files (x86)\\Common Files\\microsoft shared\\ClickToRun\\Updates\\*\\*" or module.path contains "c:\\program files\\Microsoft Office\\root\\Client\\" or module.path contains "c:\\program files (x86)\\Microsoft Office\\root\\Client\\" or module.path="c:\\program files\\Microsoft Office\\root\\Office*\\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\Office*\\*" or module.path="c:\\program files\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\\*" or module.path="c:\\program files (x86)\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office*\\*"))))
 ```
 
 
@@ -25,16 +25,16 @@ detection:
         ImageLoaded: '*\appvisvsubsystems64.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Common Files\microsoft shared\ClickToRun\*'
-            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\*'
-            - 'c:\program files\Common Files\microsoft shared\ClickToRun\Updates\*\*'
-            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\Updates\*\*'
-            - 'c:\program files\Microsoft Office\root\Client\*'
-            - 'c:\program files (x86)\Microsoft Office\root\Client\*'
-            - 'c:\program files\Microsoft Office\root\Office*\*'
-            - 'c:\program files (x86)\Microsoft Office\root\Office*\*'
-            - 'c:\program files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\*'
-            - 'c:\program files (x86)\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\*'
+            - 'c:\program files\Common Files\microsoft shared\ClickToRun\\*'
+            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\\*'
+            - 'c:\program files\Common Files\microsoft shared\ClickToRun\Updates\\*\\*'
+            - 'c:\program files (x86)\Common Files\microsoft shared\ClickToRun\Updates\\*\\*'
+            - 'c:\program files\Microsoft Office\root\Client\\*'
+            - 'c:\program files (x86)\Microsoft Office\root\Client\\*'
+            - 'c:\program files\Microsoft Office\root\Office*\\*'
+            - 'c:\program files (x86)\Microsoft Office\root\Office*\\*'
+            - 'c:\program files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\\*'
+            - 'c:\program files (x86)\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office*\\*'
 
     condition: selection and not filter
 falsepositives:

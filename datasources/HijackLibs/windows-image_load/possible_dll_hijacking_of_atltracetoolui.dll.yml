@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\atltracetoolui.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft Visual Studio 11.0\Common7\Tools\*'
-            - 'c:\program files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\*'
+            - 'c:\program files\Microsoft Visual Studio 11.0\Common7\Tools\\*'
+            - 'c:\program files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\\*'
 
     condition: selection and not filter
 falsepositives:

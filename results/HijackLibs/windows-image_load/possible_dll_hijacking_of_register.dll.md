@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\register.dll" and (not (module.path in ("c:\\program files\\IObit\\Driver Booster\*\*","c:\\program files (x86)\\IObit\\Driver Booster\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\register.dll" and (not (module.path="c:\\program files\\IObit\\Driver Booster\\*\\*" or module.path="c:\\program files (x86)\\IObit\\Driver Booster\\*\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\register.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\IObit\Driver Booster\*\*'
-            - 'c:\program files (x86)\IObit\Driver Booster\*\*'
+            - 'c:\program files\IObit\Driver Booster\\*\\*'
+            - 'c:\program files (x86)\IObit\Driver Booster\\*\\*'
 
     condition: selection and not filter
 falsepositives:

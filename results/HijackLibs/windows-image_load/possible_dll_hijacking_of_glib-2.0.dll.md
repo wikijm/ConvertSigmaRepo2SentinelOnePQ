@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\glib-2.0.dll" and (not (module.path in ("c:\\program files\\VMware\\VMware Tools\*","c:\\program files (x86)\\VMware\\VMware Tools\*","c:\\program files\\VMware\\VMware Workstation\*","c:\\program files (x86)\\VMware\\VMware Workstation\*","c:\\program files\\VMware\\VMware Player\*","c:\\program files (x86)\\VMware\\VMware Player\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\glib-2.0.dll" and (not (module.path contains "c:\\program files\\VMware\\VMware Tools\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Tools\\" or module.path contains "c:\\program files\\VMware\\VMware Workstation\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Workstation\\" or module.path contains "c:\\program files\\VMware\\VMware Player\\" or module.path contains "c:\\program files (x86)\\VMware\\VMware Player\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\glib-2.0.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\VMware\VMware Tools\*'
-            - 'c:\program files (x86)\VMware\VMware Tools\*'
-            - 'c:\program files\VMware\VMware Workstation\*'
-            - 'c:\program files (x86)\VMware\VMware Workstation\*'
-            - 'c:\program files\VMware\VMware Player\*'
-            - 'c:\program files (x86)\VMware\VMware Player\*'
+            - 'c:\program files\VMware\VMware Tools\\*'
+            - 'c:\program files (x86)\VMware\VMware Tools\\*'
+            - 'c:\program files\VMware\VMware Workstation\\*'
+            - 'c:\program files (x86)\VMware\VMware Workstation\\*'
+            - 'c:\program files\VMware\VMware Player\\*'
+            - 'c:\program files (x86)\VMware\VMware Player\\*'
 
     condition: selection and not filter
 falsepositives:

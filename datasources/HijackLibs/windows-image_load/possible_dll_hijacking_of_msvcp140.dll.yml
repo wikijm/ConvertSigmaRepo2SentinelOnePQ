@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\msvcp140.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
-            - 'c:\program files\*'
-            - 'c:\program files (x86)\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\program files\\*'
+            - 'c:\program files (x86)\\*'
 
     condition: selection and not filter
 falsepositives:

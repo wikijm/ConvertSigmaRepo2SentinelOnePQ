@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvpolicy.dll" and (not (module.path in ("c:\\windows\\system32\*","c:\\program files\\Common Files\\Microsoft Shared\\ClickToRun\*","c:\\program files (x86)\\Common Files\\Microsoft Shared\\ClickToRun\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\appvpolicy.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\program files\\Common Files\\Microsoft Shared\\ClickToRun\\" or module.path contains "c:\\program files (x86)\\Common Files\\Microsoft Shared\\ClickToRun\\"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\appvpolicy.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\*'
-            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\program files\Common Files\Microsoft Shared\ClickToRun\\*'
+            - 'c:\program files (x86)\Common Files\Microsoft Shared\ClickToRun\\*'
 
     condition: selection and not filter
 falsepositives:

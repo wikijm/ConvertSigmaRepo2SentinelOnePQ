@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\comn.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\AOMEI\AOMEI Backupper\*\*'
-            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\*\*'
+            - 'c:\program files\AOMEI\AOMEI Backupper\\*\\*'
+            - 'c:\program files (x86)\AOMEI\AOMEI Backupper\\*\\*'
 
     condition: selection and not filter
 falsepositives:

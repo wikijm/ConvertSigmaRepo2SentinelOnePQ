@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rzlog4cpp_logger.dll" and (not module.path="c:\\users\*\\appdata\\local\\razer\\InGameEngine\\cache\\RzFpsApplet\*")))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\rzlog4cpp_logger.dll" and (not module.path="c:\\users\\*\\appdata\\local\\razer\\InGameEngine\\cache\\RzFpsApplet\\*")))
 ```
 
 
@@ -25,7 +25,7 @@ detection:
         ImageLoaded: '*\rzlog4cpp_logger.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\razer\InGameEngine\cache\RzFpsApplet\*'
+            - 'c:\users\\*\appdata\local\razer\InGameEngine\cache\RzFpsApplet\\*'
 
     condition: selection and not filter
 falsepositives:

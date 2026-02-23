@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\concrt140.dll" and (not (module.path="c:\\program files\\Microsoft Visual Studio\*\\Community\\Common7\\IDE\\VC\\vcpackages\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\*\\Community\\Common7\\IDE\\VC\\vcpackages\*" or module.path="c:\\program files\\Microsoft Visual Studio\*\\BuildTools\\Common7\\IDE\\VC\\vcpackages\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\*\\BuildTools\\Common7\\IDE\\VC\\vcpackages\*" or module.path="c:\\program files\\Microsoft Visual Studio\*\\BuildTools\\Common7\\IDE\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\*\\BuildTools\\Common7\\IDE\*" or module.path="c:\\program files\\Microsoft Intune Management Extension\*" or module.path="c:\\program files (x86)\\Microsoft Intune Management Extension\*" or module.path="c:\\program files\\Microsoft\\Edge\\Application\*\*" or module.path="c:\\program files (x86)\\Microsoft\\Edge\\Application\*\*" or module.path="c:\\program files\\Microsoft\\EdgeWebView\\Application\*\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeWebView\\Application\*\*" or module.path="c:\\program files\\microsoft\\edgewebview\\application\*\*" or module.path="c:\\program files (x86)\\microsoft\\edgewebview\\application\*\*" or module.path="c:\\program files\\Microsoft RDInfra\\RDMonitoringAgent_*\\Agent\*" or module.path="c:\\program files (x86)\\Microsoft RDInfra\\RDMonitoringAgent_*\\Agent\*" or module.path="c:\\program files\\WindowsApps\\Microsoft.VCLibs.*\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.VCLibs.*\*" or module.path="c:\\program files\\WindowsApps\\Microsoft.OutlookForWindows_*\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.OutlookForWindows_*\*" or module.path="c:\\windows\\system32\*" or module.path="c:\\windows\\syswow64\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\concrt140.dll" and (not (module.path="c:\\program files\\Microsoft Visual Studio\\*\\Community\\Common7\\IDE\\VC\\vcpackages\\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\\*\\Community\\Common7\\IDE\\VC\\vcpackages\\*" or module.path="c:\\program files\\Microsoft Visual Studio\\*\\BuildTools\\Common7\\IDE\\VC\\vcpackages\\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\\*\\BuildTools\\Common7\\IDE\\VC\\vcpackages\\*" or module.path="c:\\program files\\Microsoft Visual Studio\\*\\BuildTools\\Common7\\IDE\\*" or module.path="c:\\program files (x86)\\Microsoft Visual Studio\\*\\BuildTools\\Common7\\IDE\\*" or module.path contains "c:\\program files\\Microsoft Intune Management Extension\\" or module.path contains "c:\\program files (x86)\\Microsoft Intune Management Extension\\" or module.path="c:\\program files\\Microsoft\\Edge\\Application\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\Edge\\Application\\*\\*" or module.path="c:\\program files\\Microsoft\\EdgeWebView\\Application\\*\\*" or module.path="c:\\program files (x86)\\Microsoft\\EdgeWebView\\Application\\*\\*" or module.path="c:\\program files\\microsoft\\edgewebview\\application\\*\\*" or module.path="c:\\program files (x86)\\microsoft\\edgewebview\\application\\*\\*" or module.path="c:\\program files\\Microsoft RDInfra\\RDMonitoringAgent_*\\Agent\\*" or module.path="c:\\program files (x86)\\Microsoft RDInfra\\RDMonitoringAgent_*\\Agent\\*" or module.path="c:\\program files\\WindowsApps\\Microsoft.VCLibs.*\\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.VCLibs.*\\*" or module.path="c:\\program files\\WindowsApps\\Microsoft.OutlookForWindows_*\\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.OutlookForWindows_*\\*" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
 
@@ -25,28 +25,28 @@ detection:
         ImageLoaded: '*\concrt140.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft Visual Studio\*\Community\Common7\IDE\VC\vcpackages\*'
-            - 'c:\program files (x86)\Microsoft Visual Studio\*\Community\Common7\IDE\VC\vcpackages\*'
-            - 'c:\program files\Microsoft Visual Studio\*\BuildTools\Common7\IDE\VC\vcpackages\*'
-            - 'c:\program files (x86)\Microsoft Visual Studio\*\BuildTools\Common7\IDE\VC\vcpackages\*'
-            - 'c:\program files\Microsoft Visual Studio\*\BuildTools\Common7\IDE\*'
-            - 'c:\program files (x86)\Microsoft Visual Studio\*\BuildTools\Common7\IDE\*'
-            - 'c:\program files\Microsoft Intune Management Extension\*'
-            - 'c:\program files (x86)\Microsoft Intune Management Extension\*'
-            - 'c:\program files\Microsoft\Edge\Application\*\*'
-            - 'c:\program files (x86)\Microsoft\Edge\Application\*\*'
-            - 'c:\program files\Microsoft\EdgeWebView\Application\*\*'
-            - 'c:\program files (x86)\Microsoft\EdgeWebView\Application\*\*'
-            - 'c:\program files\microsoft\edgewebview\application\*\*'
-            - 'c:\program files (x86)\microsoft\edgewebview\application\*\*'
-            - 'c:\program files\Microsoft RDInfra\RDMonitoringAgent_*\Agent\*'
-            - 'c:\program files (x86)\Microsoft RDInfra\RDMonitoringAgent_*\Agent\*'
-            - 'c:\program files\WindowsApps\Microsoft.VCLibs.*\*'
-            - 'c:\program files (x86)\WindowsApps\Microsoft.VCLibs.*\*'
-            - 'c:\program files\WindowsApps\Microsoft.OutlookForWindows_*\*'
-            - 'c:\program files (x86)\WindowsApps\Microsoft.OutlookForWindows_*\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\Microsoft Visual Studio\\*\Community\Common7\IDE\VC\vcpackages\\*'
+            - 'c:\program files (x86)\Microsoft Visual Studio\\*\Community\Common7\IDE\VC\vcpackages\\*'
+            - 'c:\program files\Microsoft Visual Studio\\*\BuildTools\Common7\IDE\VC\vcpackages\\*'
+            - 'c:\program files (x86)\Microsoft Visual Studio\\*\BuildTools\Common7\IDE\VC\vcpackages\\*'
+            - 'c:\program files\Microsoft Visual Studio\\*\BuildTools\Common7\IDE\\*'
+            - 'c:\program files (x86)\Microsoft Visual Studio\\*\BuildTools\Common7\IDE\\*'
+            - 'c:\program files\Microsoft Intune Management Extension\\*'
+            - 'c:\program files (x86)\Microsoft Intune Management Extension\\*'
+            - 'c:\program files\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files (x86)\Microsoft\Edge\Application\\*\\*'
+            - 'c:\program files\Microsoft\EdgeWebView\Application\\*\\*'
+            - 'c:\program files (x86)\Microsoft\EdgeWebView\Application\\*\\*'
+            - 'c:\program files\microsoft\edgewebview\application\\*\\*'
+            - 'c:\program files (x86)\microsoft\edgewebview\application\\*\\*'
+            - 'c:\program files\Microsoft RDInfra\RDMonitoringAgent_*\Agent\\*'
+            - 'c:\program files (x86)\Microsoft RDInfra\RDMonitoringAgent_*\Agent\\*'
+            - 'c:\program files\WindowsApps\Microsoft.VCLibs.*\\*'
+            - 'c:\program files (x86)\WindowsApps\Microsoft.VCLibs.*\\*'
+            - 'c:\program files\WindowsApps\Microsoft.OutlookForWindows_*\\*'
+            - 'c:\program files (x86)\WindowsApps\Microsoft.OutlookForWindows_*\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

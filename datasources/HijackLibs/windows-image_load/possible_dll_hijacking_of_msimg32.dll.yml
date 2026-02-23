@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\msimg32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Haihaisoft PDF Reader\*'
-            - 'c:\program files (x86)\Haihaisoft PDF Reader\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\Haihaisoft PDF Reader\\*'
+            - 'c:\program files (x86)\Haihaisoft PDF Reader\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\atl71.dll" and (not (module.path in ("c:\\program files\\Common Files\\Thunder Network\\TP\*\*","c:\\program files (x86)\\Common Files\\Thunder Network\\TP\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\atl71.dll" and (not (module.path="c:\\program files\\Common Files\\Thunder Network\\TP\\*\\*" or module.path="c:\\program files (x86)\\Common Files\\Thunder Network\\TP\\*\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\atl71.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Common Files\Thunder Network\TP\*\*'
-            - 'c:\program files (x86)\Common Files\Thunder Network\TP\*\*'
+            - 'c:\program files\Common Files\Thunder Network\TP\\*\\*'
+            - 'c:\program files (x86)\Common Files\Thunder Network\TP\\*\\*'
 
     condition: selection and not filter
 falsepositives:

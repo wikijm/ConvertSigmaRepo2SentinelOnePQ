@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\acrodistdll.dll" and (not (module.path="c:\\program files\\Adobe\\Acrobat *\\Acrobat\*" or module.path="c:\\program files (x86)\\Adobe\\Acrobat *\\Acrobat\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\acrodistdll.dll" and (not (module.path="c:\\program files\\Adobe\\Acrobat *\\Acrobat\\*" or module.path="c:\\program files (x86)\\Adobe\\Acrobat *\\Acrobat\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\acrodistdll.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Adobe\Acrobat *\Acrobat\*'
-            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\*'
+            - 'c:\program files\Adobe\Acrobat *\Acrobat\\*'
+            - 'c:\program files (x86)\Adobe\Acrobat *\Acrobat\\*'
 
     condition: selection and not filter
 falsepositives:

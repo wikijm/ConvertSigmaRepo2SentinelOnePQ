@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpclient.dll" and (not (module.path in ("c:\\program files\\Windows Defender\*","c:\\program files (x86)\\Windows Defender\*","c:\\programdata\\Microsoft\\Windows Defender\\Platform\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpclient.dll" and (not (module.path contains "c:\\program files\\Windows Defender\\" or module.path contains "c:\\program files (x86)\\Windows Defender\\" or module.path="c:\\programdata\\Microsoft\\Windows Defender\\Platform\\*\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\mpclient.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Windows Defender\*'
-            - 'c:\program files (x86)\Windows Defender\*'
-            - 'c:\programdata\Microsoft\Windows Defender\Platform\*\*'
+            - 'c:\program files\Windows Defender\\*'
+            - 'c:\program files (x86)\Windows Defender\\*'
+            - 'c:\programdata\Microsoft\Windows Defender\Platform\\*\\*'
 
     condition: selection and not filter
 falsepositives:

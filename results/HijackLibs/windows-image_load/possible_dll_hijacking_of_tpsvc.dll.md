@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tpsvc.dll" and (not (module.path in ("c:\\program files\\VMWare\\VMWare Tools\*","c:\\program files (x86)\\VMWare\\VMWare Tools\*","c:\\program files\\Common Files\\ThinPrint\*","c:\\program files (x86)\\Common Files\\ThinPrint\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tpsvc.dll" and (not (module.path contains "c:\\program files\\VMWare\\VMWare Tools\\" or module.path contains "c:\\program files (x86)\\VMWare\\VMWare Tools\\" or module.path contains "c:\\program files\\Common Files\\ThinPrint\\" or module.path contains "c:\\program files (x86)\\Common Files\\ThinPrint\\"))))
 ```
 
 
@@ -25,10 +25,10 @@ detection:
         ImageLoaded: '*\tpsvc.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\VMWare\VMWare Tools\*'
-            - 'c:\program files (x86)\VMWare\VMWare Tools\*'
-            - 'c:\program files\Common Files\ThinPrint\*'
-            - 'c:\program files (x86)\Common Files\ThinPrint\*'
+            - 'c:\program files\VMWare\VMWare Tools\\*'
+            - 'c:\program files (x86)\VMWare\VMWare Tools\\*'
+            - 'c:\program files\Common Files\ThinPrint\\*'
+            - 'c:\program files (x86)\Common Files\ThinPrint\\*'
 
     condition: selection and not filter
 falsepositives:

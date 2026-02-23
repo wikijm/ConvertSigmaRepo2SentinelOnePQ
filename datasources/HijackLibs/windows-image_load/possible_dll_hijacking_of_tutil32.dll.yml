@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\tutil32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\PDE\*'
-            - 'c:\program files (x86)\PDE\*'
+            - 'c:\program files\PDE\\*'
+            - 'c:\program files (x86)\PDE\\*'
 
     condition: selection and not filter
 falsepositives:

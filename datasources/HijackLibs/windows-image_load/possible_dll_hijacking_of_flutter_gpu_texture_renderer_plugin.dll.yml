@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\flutter_gpu_texture_renderer_plugin.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\rustdesk\*'
-            - 'c:\program files\RustDesk\*'
-            - 'c:\program files (x86)\RustDesk\*'
+            - 'c:\users\\*\appdata\local\rustdesk\\*'
+            - 'c:\program files\RustDesk\\*'
+            - 'c:\program files (x86)\RustDesk\\*'
 
     condition: selection and not filter
 falsepositives:

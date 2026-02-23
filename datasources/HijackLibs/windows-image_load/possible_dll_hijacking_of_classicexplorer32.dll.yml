@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\classicexplorer32.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Classic Shell\*'
-            - 'c:\program files (x86)\Classic Shell\*'
-            - 'c:\program files\Open-Shell\*'
-            - 'c:\program files (x86)\Open-Shell\*'
+            - 'c:\program files\Classic Shell\\*'
+            - 'c:\program files (x86)\Classic Shell\\*'
+            - 'c:\program files\Open-Shell\\*'
+            - 'c:\program files (x86)\Open-Shell\\*'
 
     condition: selection and not filter
 falsepositives:

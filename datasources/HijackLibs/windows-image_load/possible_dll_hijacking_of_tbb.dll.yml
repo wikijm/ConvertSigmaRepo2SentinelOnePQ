@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\tbb.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Adobe\Adobe Photoshop CC *\*'
-            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\*'
+            - 'c:\program files\Adobe\Adobe Photoshop CC *\\*'
+            - 'c:\program files (x86)\Adobe\Adobe Photoshop CC *\\*'
 
     condition: selection and not filter
 falsepositives:

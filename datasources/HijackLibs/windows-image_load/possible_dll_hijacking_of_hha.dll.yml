@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\hha.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
-            - 'c:\program files\HTML Help Workshop\*'
-            - 'c:\program files (x86)\HTML Help Workshop\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\program files\HTML Help Workshop\\*'
+            - 'c:\program files (x86)\HTML Help Workshop\\*'
 
     condition: selection and not filter
 falsepositives:

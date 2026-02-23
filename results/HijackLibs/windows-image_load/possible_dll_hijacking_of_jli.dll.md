@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\jli.dll" and (not (module.path in ("c:\\program files\\Java\*\\bin\*","c:\\program files (x86)\\Java\*\\bin\*","c:\\program files\*\\jre\\bin\*","c:\\program files (x86)\*\\jre\\bin\*","c:\\users\*\\appdata\\local\\Temp\*\\bin\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\jli.dll" and (not (module.path="c:\\program files\\Java\\*\\bin\\*" or module.path="c:\\program files (x86)\\Java\\*\\bin\\*" or module.path="c:\\program files\\*\\jre\\bin\\*" or module.path="c:\\program files (x86)\\*\\jre\\bin\\*" or module.path="c:\\users\\*\\appdata\\local\\Temp\\*\\bin\\*"))))
 ```
 
 
@@ -25,11 +25,11 @@ detection:
         ImageLoaded: '*\jli.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Java\*\bin\*'
-            - 'c:\program files (x86)\Java\*\bin\*'
-            - 'c:\program files\*\jre\bin\*'
-            - 'c:\program files (x86)\*\jre\bin\*'
-            - 'c:\users\*\appdata\local\Temp\*\bin\*'
+            - 'c:\program files\Java\\*\bin\\*'
+            - 'c:\program files (x86)\Java\\*\bin\\*'
+            - 'c:\program files\\*\jre\bin\\*'
+            - 'c:\program files (x86)\\*\jre\bin\\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\bin\\*'
 
     condition: selection and not filter
 falsepositives:

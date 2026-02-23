@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\libwsutil.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Wireshark\*'
-            - 'c:\program files (x86)\Wireshark\*'
+            - 'c:\program files\Wireshark\\*'
+            - 'c:\program files (x86)\Wireshark\\*'
 
     condition: selection and not filter
 falsepositives:

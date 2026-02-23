@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\fxsapi.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\system32\driverstore\filerepository\prnms002.inf_*\amd64\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\system32\driverstore\filerepository\prnms002.inf_*\amd64\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

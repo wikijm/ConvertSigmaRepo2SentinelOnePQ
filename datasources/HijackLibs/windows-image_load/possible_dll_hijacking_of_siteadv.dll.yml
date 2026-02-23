@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\siteadv.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SiteAdvisor\*\*'
-            - 'c:\program files (x86)\SiteAdvisor\*\*'
+            - 'c:\program files\SiteAdvisor\\*\\*'
+            - 'c:\program files (x86)\SiteAdvisor\\*\\*'
 
     condition: selection and not filter
 falsepositives:

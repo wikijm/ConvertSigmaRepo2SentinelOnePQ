@@ -17,14 +17,14 @@ detection:
         ImageLoaded: '*\ppcore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Microsoft Office\OFFICE*\*'
-            - 'c:\program files (x86)\Microsoft Office\OFFICE*\*'
-            - 'c:\program files\Microsoft Office\Root\OFFICE*\*'
-            - 'c:\program files (x86)\Microsoft Office\Root\OFFICE*\*'
-            - 'c:\program files\Microsoft Office *\ClientX86\Root\Office*\*'
-            - 'c:\program files (x86)\Microsoft Office *\ClientX86\Root\Office*\*'
-            - 'c:\program files\Microsoft Office *\ClientX64\Root\Office*\*'
-            - 'c:\program files (x86)\Microsoft Office *\ClientX64\Root\Office*\*'
+            - 'c:\program files\Microsoft Office\OFFICE*\\*'
+            - 'c:\program files (x86)\Microsoft Office\OFFICE*\\*'
+            - 'c:\program files\Microsoft Office\Root\OFFICE*\\*'
+            - 'c:\program files (x86)\Microsoft Office\Root\OFFICE*\\*'
+            - 'c:\program files\Microsoft Office *\ClientX86\Root\Office*\\*'
+            - 'c:\program files (x86)\Microsoft Office *\ClientX86\Root\Office*\\*'
+            - 'c:\program files\Microsoft Office *\ClientX64\Root\Office*\\*'
+            - 'c:\program files (x86)\Microsoft Office *\ClientX64\Root\Office*\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\siteadv.dll" and (not (module.path in ("c:\\program files\\SiteAdvisor\*\*","c:\\program files (x86)\\SiteAdvisor\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\siteadv.dll" and (not (module.path="c:\\program files\\SiteAdvisor\\*\\*" or module.path="c:\\program files (x86)\\SiteAdvisor\\*\\*"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\siteadv.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\SiteAdvisor\*\*'
-            - 'c:\program files (x86)\SiteAdvisor\*\*'
+            - 'c:\program files\SiteAdvisor\\*\\*'
+            - 'c:\program files (x86)\SiteAdvisor\\*\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\wxmsw313u_aui_vc_custom.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Audacity\*'
-            - 'c:\program files (x86)\Audacity\*'
+            - 'c:\program files\Audacity\\*'
+            - 'c:\program files (x86)\Audacity\\*'
 
     condition: selection and not filter
 falsepositives:

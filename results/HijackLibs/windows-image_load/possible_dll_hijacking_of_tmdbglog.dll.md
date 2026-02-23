@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbglog.dll" and (not (module.path in ("c:\\program files\\Trend Micro\\Titanium\*","c:\\program files (x86)\\Trend Micro\\Titanium\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\tmdbglog.dll" and (not (module.path contains "c:\\program files\\Trend Micro\\Titanium\\" or module.path contains "c:\\program files (x86)\\Trend Micro\\Titanium\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\tmdbglog.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Trend Micro\Titanium\*'
-            - 'c:\program files (x86)\Trend Micro\Titanium\*'
+            - 'c:\program files\Trend Micro\Titanium\\*'
+            - 'c:\program files (x86)\Trend Micro\Titanium\\*'
 
     condition: selection and not filter
 falsepositives:

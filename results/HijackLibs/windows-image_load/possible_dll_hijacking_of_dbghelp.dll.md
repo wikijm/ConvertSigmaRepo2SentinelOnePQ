@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbghelp.dll" and (not (module.path="c:\\program files\\windows kits\\10\\debuggers\\arm\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\arm\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\arm\\srcsrv\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\arm\\srcsrv\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\arm64\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\arm64\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\arm64\\srcsrv\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\arm64\\srcsrv\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\x64\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\x64\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\x64\\srcsrv\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\x64\\srcsrv\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\x86\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\*" or module.path="c:\\program files\\windows kits\\10\\debuggers\\x86\\srcsrv\*" or module.path="c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\\srcsrv\*" or module.path="c:\\program files\\cisco systems\\cisco jabber\*" or module.path="c:\\program files (x86)\\cisco systems\\cisco jabber\*" or module.path="c:\\program files\\microsoft office\\root\\office*\*" or module.path="c:\\program files (x86)\\microsoft office\\root\\office*\*" or module.path="c:\\program files\\microsoft office\\root\\vfs\\programfilesx86\\microsoft analysis services\\as oledb\\140\*" or module.path="c:\\program files (x86)\\microsoft office\\root\\vfs\\programfilesx86\\microsoft analysis services\\as oledb\\140\*" or module.path="c:\\windows\\system32\*" or module.path="c:\\windows\\syswow64\*"))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dbghelp.dll" and (not (module.path contains "c:\\program files\\windows kits\\10\\debuggers\\arm\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\arm\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\arm\\srcsrv\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\arm\\srcsrv\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\arm64\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\arm64\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\arm64\\srcsrv\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\arm64\\srcsrv\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\x64\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\x64\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\x64\\srcsrv\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\x64\\srcsrv\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\x86\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\\" or module.path contains "c:\\program files\\windows kits\\10\\debuggers\\x86\\srcsrv\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\\srcsrv\\" or module.path contains "c:\\program files\\cisco systems\\cisco jabber\\" or module.path contains "c:\\program files (x86)\\cisco systems\\cisco jabber\\" or module.path="c:\\program files\\microsoft office\\root\\office*\\*" or module.path="c:\\program files (x86)\\microsoft office\\root\\office*\\*" or module.path contains "c:\\program files\\microsoft office\\root\\vfs\\programfilesx86\\microsoft analysis services\\as oledb\\140\\" or module.path contains "c:\\program files (x86)\\microsoft office\\root\\vfs\\programfilesx86\\microsoft analysis services\\as oledb\\140\\" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
 
@@ -26,30 +26,30 @@ detection:
         ImageLoaded: '*\dbghelp.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\windows kits\10\debuggers\arm\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\arm\*'
-            - 'c:\program files\windows kits\10\debuggers\arm\srcsrv\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\arm\srcsrv\*'
-            - 'c:\program files\windows kits\10\debuggers\arm64\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\arm64\*'
-            - 'c:\program files\windows kits\10\debuggers\arm64\srcsrv\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\arm64\srcsrv\*'
-            - 'c:\program files\windows kits\10\debuggers\x64\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\x64\*'
-            - 'c:\program files\windows kits\10\debuggers\x64\srcsrv\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\x64\srcsrv\*'
-            - 'c:\program files\windows kits\10\debuggers\x86\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\x86\*'
-            - 'c:\program files\windows kits\10\debuggers\x86\srcsrv\*'
-            - 'c:\program files (x86)\windows kits\10\debuggers\x86\srcsrv\*'
-            - 'c:\program files\cisco systems\cisco jabber\*'
-            - 'c:\program files (x86)\cisco systems\cisco jabber\*'
-            - 'c:\program files\microsoft office\root\office*\*'
-            - 'c:\program files (x86)\microsoft office\root\office*\*'
-            - 'c:\program files\microsoft office\root\vfs\programfilesx86\microsoft analysis services\as oledb\140\*'
-            - 'c:\program files (x86)\microsoft office\root\vfs\programfilesx86\microsoft analysis services\as oledb\140\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\windows kits\10\debuggers\arm\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\arm\\*'
+            - 'c:\program files\windows kits\10\debuggers\arm\srcsrv\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\arm\srcsrv\\*'
+            - 'c:\program files\windows kits\10\debuggers\arm64\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\arm64\\*'
+            - 'c:\program files\windows kits\10\debuggers\arm64\srcsrv\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\arm64\srcsrv\\*'
+            - 'c:\program files\windows kits\10\debuggers\x64\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\x64\\*'
+            - 'c:\program files\windows kits\10\debuggers\x64\srcsrv\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\x64\srcsrv\\*'
+            - 'c:\program files\windows kits\10\debuggers\x86\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\x86\\*'
+            - 'c:\program files\windows kits\10\debuggers\x86\srcsrv\\*'
+            - 'c:\program files (x86)\windows kits\10\debuggers\x86\srcsrv\\*'
+            - 'c:\program files\cisco systems\cisco jabber\\*'
+            - 'c:\program files (x86)\cisco systems\cisco jabber\\*'
+            - 'c:\program files\microsoft office\root\office*\\*'
+            - 'c:\program files (x86)\microsoft office\root\office*\\*'
+            - 'c:\program files\microsoft office\root\vfs\programfilesx86\microsoft analysis services\as oledb\140\\*'
+            - 'c:\program files (x86)\microsoft office\root\vfs\programfilesx86\microsoft analysis services\as oledb\140\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

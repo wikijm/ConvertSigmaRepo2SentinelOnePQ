@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\ldvpocx.ocx'
     filter:
         ImageLoaded:
-            - 'c:\program files\Symantec_Client_Security\Symantec AntiVirus\*'
-            - 'c:\program files (x86)\Symantec_Client_Security\Symantec AntiVirus\*'
-            - 'c:\program files\Symantec AntiVirus\*'
-            - 'c:\program files (x86)\Symantec AntiVirus\*'
+            - 'c:\program files\Symantec_Client_Security\Symantec AntiVirus\\*'
+            - 'c:\program files (x86)\Symantec_Client_Security\Symantec AntiVirus\\*'
+            - 'c:\program files\Symantec AntiVirus\\*'
+            - 'c:\program files (x86)\Symantec AntiVirus\\*'
 
     condition: selection and not filter
 falsepositives:

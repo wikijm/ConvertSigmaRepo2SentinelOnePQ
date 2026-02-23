@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\rtl120.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\DualSafe Password Manager\*'
-            - 'c:\program files (x86)\DualSafe Password Manager\*'
+            - 'c:\program files\DualSafe Password Manager\\*'
+            - 'c:\program files (x86)\DualSafe Password Manager\\*'
 
     condition: selection and not filter
 falsepositives:

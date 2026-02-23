@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\ccleanerreactivator.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\CCleaner\*'
-            - 'c:\program files (x86)\CCleaner\*'
+            - 'c:\program files\CCleaner\\*'
+            - 'c:\program files (x86)\CCleaner\\*'
 
     condition: selection and not filter
 falsepositives:

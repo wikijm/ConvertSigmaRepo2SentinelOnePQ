@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\wpdshext.dll'
     filter:
         ImageLoaded:
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

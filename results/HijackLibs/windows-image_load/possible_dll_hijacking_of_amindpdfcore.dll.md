@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amindpdfcore.dll" and (not (module.path in ("c:\\program files\\GeekerPDF\\GeekerPDF\*","c:\\program files (x86)\\GeekerPDF\\GeekerPDF\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\amindpdfcore.dll" and (not (module.path contains "c:\\program files\\GeekerPDF\\GeekerPDF\\" or module.path contains "c:\\program files (x86)\\GeekerPDF\\GeekerPDF\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\amindpdfcore.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\GeekerPDF\GeekerPDF\*'
-            - 'c:\program files (x86)\GeekerPDF\GeekerPDF\*'
+            - 'c:\program files\GeekerPDF\GeekerPDF\\*'
+            - 'c:\program files (x86)\GeekerPDF\GeekerPDF\\*'
 
     condition: selection and not filter
 falsepositives:

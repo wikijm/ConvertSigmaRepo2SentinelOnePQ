@@ -17,9 +17,9 @@ detection:
         ImageLoaded: '*\basicnetutils.dll'
     filter:
         ImageLoaded:
-            - 'c:\users\*\appdata\local\Temp\*\Application2\*'
-            - 'c:\program files\BAIDU\BAIDUPINYIN\*\*'
-            - 'c:\program files (x86)\BAIDU\BAIDUPINYIN\*\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\Application2\\*'
+            - 'c:\program files\BAIDU\BAIDUPINYIN\\*\\*'
+            - 'c:\program files (x86)\BAIDU\BAIDUPINYIN\\*\\*'
 
     condition: selection and not filter
 falsepositives:

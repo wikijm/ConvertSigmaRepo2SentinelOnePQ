@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ccleanerreactivator.dll" and (not (module.path in ("c:\\program files\\CCleaner\*","c:\\program files (x86)\\CCleaner\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ccleanerreactivator.dll" and (not (module.path contains "c:\\program files\\CCleaner\\" or module.path contains "c:\\program files (x86)\\CCleaner\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\ccleanerreactivator.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\CCleaner\*'
-            - 'c:\program files (x86)\CCleaner\*'
+            - 'c:\program files\CCleaner\\*'
+            - 'c:\program files (x86)\CCleaner\\*'
 
     condition: selection and not filter
 falsepositives:

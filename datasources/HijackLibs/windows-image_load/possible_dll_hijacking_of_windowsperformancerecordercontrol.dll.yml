@@ -17,10 +17,10 @@ detection:
         ImageLoaded: '*\windowsperformancerecordercontrol.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\windows kits\10\windows performance toolkit\*'
-            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\*'
-            - 'c:\windows\system32\*'
-            - 'c:\windows\syswow64\*'
+            - 'c:\program files\windows kits\10\windows performance toolkit\\*'
+            - 'c:\program files (x86)\windows kits\10\windows performance toolkit\\*'
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
 
     condition: selection and not filter
 falsepositives:

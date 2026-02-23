@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\common.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\iroot\*'
-            - 'c:\program files (x86)\iroot\*'
+            - 'c:\program files\iroot\\*'
+            - 'c:\program files (x86)\iroot\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpgear.dll" and (not (module.path in ("c:\\program files\\Windows Defender Advanced Threat Protection\\Classification\*","c:\\program files (x86)\\Windows Defender Advanced Threat Protection\\Classification\*","c:\\windows\\system32\\MRT\*\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mpgear.dll" and (not (module.path contains "c:\\program files\\Windows Defender Advanced Threat Protection\\Classification\\" or module.path contains "c:\\program files (x86)\\Windows Defender Advanced Threat Protection\\Classification\\" or module.path="c:\\windows\\system32\\MRT\\*\\*"))))
 ```
 
 
@@ -25,9 +25,9 @@ detection:
         ImageLoaded: '*\mpgear.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Windows Defender Advanced Threat Protection\Classification\*'
-            - 'c:\program files (x86)\Windows Defender Advanced Threat Protection\Classification\*'
-            - 'c:\windows\system32\MRT\*\*'
+            - 'c:\program files\Windows Defender Advanced Threat Protection\Classification\\*'
+            - 'c:\program files (x86)\Windows Defender Advanced Threat Protection\Classification\\*'
+            - 'c:\windows\system32\MRT\\*\\*'
 
     condition: selection and not filter
 falsepositives:

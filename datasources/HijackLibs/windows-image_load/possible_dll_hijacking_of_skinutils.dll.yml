@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\skinutils.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\ICQLite\*'
-            - 'c:\program files (x86)\ICQLite\*'
+            - 'c:\program files\ICQLite\\*'
+            - 'c:\program files (x86)\ICQLite\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\hpqhvsei.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\HP\*'
-            - 'c:\program files (x86)\HP\*'
+            - 'c:\program files\HP\\*'
+            - 'c:\program files (x86)\HP\\*'
 
     condition: selection and not filter
 falsepositives:

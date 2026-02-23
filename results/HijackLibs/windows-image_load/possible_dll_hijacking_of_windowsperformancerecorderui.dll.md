@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\windowsperformancerecorderui.dll" and (not (module.path in ("c:\\program files\\Windows Kits\\10\\Windows Performance Toolkit\*","c:\\program files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\windowsperformancerecorderui.dll" and (not (module.path contains "c:\\program files\\Windows Kits\\10\\Windows Performance Toolkit\\" or module.path contains "c:\\program files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"))))
 ```
 
 
@@ -25,8 +25,8 @@ detection:
         ImageLoaded: '*\windowsperformancerecorderui.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Windows Kits\10\Windows Performance Toolkit\*'
-            - 'c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\*'
+            - 'c:\program files\Windows Kits\10\Windows Performance Toolkit\\*'
+            - 'c:\program files (x86)\Windows Kits\10\Windows Performance Toolkit\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -17,8 +17,8 @@ detection:
         ImageLoaded: '*\avupdate.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Confer\scanner\upd.exe\*'
-            - 'c:\program files (x86)\Confer\scanner\upd.exe\*'
+            - 'c:\program files\Confer\scanner\upd.exe\\*'
+            - 'c:\program files (x86)\Confer\scanner\upd.exe\\*'
 
     condition: selection and not filter
 falsepositives:

@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qt5network.dll" and (not (module.path in ("c:\\program files\\LSoft Technologies\\Active@ Data Studio\*","c:\\program files (x86)\\LSoft Technologies\\Active@ Data Studio\*","c:\\program files\\LSoft Technologies\\Active@ File Recovery\*","c:\\program files (x86)\\LSoft Technologies\\Active@ File Recovery\*","c:\\program files\\LSoft Technologies\\Active@ Disk Editor\*","c:\\program files (x86)\\LSoft Technologies\\Active@ Disk Editor\*","c:\\program files\\LSoft Technologies\\Active@ Password Changer\*","c:\\program files (x86)\\LSoft Technologies\\Active@ Password Changer\*","c:\\program files\\LSoft Technologies\\Active@ ISO Manager\*","c:\\program files (x86)\\LSoft Technologies\\Active@ ISO Manager\*","c:\\program files\\LSoft Technologies\\Active@ UNERASER\*","c:\\program files (x86)\\LSoft Technologies\\Active@ UNERASER\*","c:\\program files\\LSoft Technologies\\Active@ KillDisk 25\*","c:\\program files (x86)\\LSoft Technologies\\Active@ KillDisk 25\*","c:\\program files\\LSoft Technologies\\Active@ UNDELETE\*","c:\\program files (x86)\\LSoft Technologies\\Active@ UNDELETE\*","c:\\program files\\LSoft Technologies\\Active@ Disk Monitor\*","c:\\program files (x86)\\LSoft Technologies\\Active@ Disk Monitor\*","c:\\program files\\LSoft Technologies\\Active@ Partition Manager\*","c:\\program files (x86)\\LSoft Technologies\\Active@ Partition Manager\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qt5network.dll" and (not (module.path contains "c:\\program files\\LSoft Technologies\\Active@ Data Studio\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ Data Studio\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ File Recovery\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ File Recovery\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ Disk Editor\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ Disk Editor\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ Password Changer\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ Password Changer\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ ISO Manager\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ ISO Manager\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ UNERASER\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ UNERASER\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ KillDisk 25\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ KillDisk 25\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ UNDELETE\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ UNDELETE\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ Disk Monitor\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ Disk Monitor\\" or module.path contains "c:\\program files\\LSoft Technologies\\Active@ Partition Manager\\" or module.path contains "c:\\program files (x86)\\LSoft Technologies\\Active@ Partition Manager\\"))))
 ```
 
 
@@ -25,26 +25,26 @@ detection:
         ImageLoaded: '*\qt5network.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\LSoft Technologies\Active@ Data Studio\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ Data Studio\*'
-            - 'c:\program files\LSoft Technologies\Active@ File Recovery\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ File Recovery\*'
-            - 'c:\program files\LSoft Technologies\Active@ Disk Editor\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ Disk Editor\*'
-            - 'c:\program files\LSoft Technologies\Active@ Password Changer\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ Password Changer\*'
-            - 'c:\program files\LSoft Technologies\Active@ ISO Manager\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ ISO Manager\*'
-            - 'c:\program files\LSoft Technologies\Active@ UNERASER\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ UNERASER\*'
-            - 'c:\program files\LSoft Technologies\Active@ KillDisk 25\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ KillDisk 25\*'
-            - 'c:\program files\LSoft Technologies\Active@ UNDELETE\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ UNDELETE\*'
-            - 'c:\program files\LSoft Technologies\Active@ Disk Monitor\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ Disk Monitor\*'
-            - 'c:\program files\LSoft Technologies\Active@ Partition Manager\*'
-            - 'c:\program files (x86)\LSoft Technologies\Active@ Partition Manager\*'
+            - 'c:\program files\LSoft Technologies\Active@ Data Studio\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ Data Studio\\*'
+            - 'c:\program files\LSoft Technologies\Active@ File Recovery\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ File Recovery\\*'
+            - 'c:\program files\LSoft Technologies\Active@ Disk Editor\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ Disk Editor\\*'
+            - 'c:\program files\LSoft Technologies\Active@ Password Changer\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ Password Changer\\*'
+            - 'c:\program files\LSoft Technologies\Active@ ISO Manager\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ ISO Manager\\*'
+            - 'c:\program files\LSoft Technologies\Active@ UNERASER\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ UNERASER\\*'
+            - 'c:\program files\LSoft Technologies\Active@ KillDisk 25\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ KillDisk 25\\*'
+            - 'c:\program files\LSoft Technologies\Active@ UNDELETE\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ UNDELETE\\*'
+            - 'c:\program files\LSoft Technologies\Active@ Disk Monitor\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ Disk Monitor\\*'
+            - 'c:\program files\LSoft Technologies\Active@ Partition Manager\\*'
+            - 'c:\program files (x86)\LSoft Technologies\Active@ Partition Manager\\*'
 
     condition: selection and not filter
 falsepositives:

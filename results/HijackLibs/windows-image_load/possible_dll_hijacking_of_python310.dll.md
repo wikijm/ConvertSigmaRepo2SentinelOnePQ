@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 02:27:47):
-event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python310.dll" and (not (module.path in ("c:\\program files\\Python310\*","c:\\program files (x86)\\Python310\*","c:\\users\*\\appdata\\local\\Temp\*\*","c:\\program files\\DWAgent\\runtime\*","c:\\program files (x86)\\DWAgent\\runtime\*","%USERPROFILE%\\anaconda3\*")))))
+// Translated content (automatically translated on 23-02-2026 02:28:53):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\python310.dll" and (not (module.path contains "c:\\program files\\Python310\\" or module.path contains "c:\\program files (x86)\\Python310\\" or module.path="c:\\users\\*\\appdata\\local\\Temp\\*\\*" or module.path contains "c:\\program files\\DWAgent\\runtime\\" or module.path contains "c:\\program files (x86)\\DWAgent\\runtime\\" or module.path contains "%USERPROFILE%\\anaconda3\\"))))
 ```
 
 
@@ -25,12 +25,12 @@ detection:
         ImageLoaded: '*\python310.dll'
     filter:
         ImageLoaded:
-            - 'c:\program files\Python310\*'
-            - 'c:\program files (x86)\Python310\*'
-            - 'c:\users\*\appdata\local\Temp\*\*'
-            - 'c:\program files\DWAgent\runtime\*'
-            - 'c:\program files (x86)\DWAgent\runtime\*'
-            - '%USERPROFILE%\anaconda3\*'
+            - 'c:\program files\Python310\\*'
+            - 'c:\program files (x86)\Python310\\*'
+            - 'c:\users\\*\appdata\local\Temp\\*\\*'
+            - 'c:\program files\DWAgent\runtime\\*'
+            - 'c:\program files (x86)\DWAgent\runtime\\*'
+            - '%USERPROFILE%\anaconda3\\*'
 
     condition: selection and not filter
 falsepositives:
