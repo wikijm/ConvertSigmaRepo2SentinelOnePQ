@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-02-2026 01:10:26):
+// Translated content (automatically translated on 23-02-2026 01:10:14):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.image.path contains "\\ProgramData\\JWrapper-Remote Access\\JWAppsSharedConfig\\restricted\\" or tgt.process.image.path contains "\\ProgramData\\JWrapper-Remote Access\\JWAppsSharedConfig\\") and (tgt.process.image.path contains "\\SimpleService.exe" or tgt.process.image.path contains "\\serviceconfig.xml")))
 ```
 
