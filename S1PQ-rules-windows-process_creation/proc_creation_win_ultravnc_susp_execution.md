@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 23-02-2026 02:51:12):
+// Translated content (automatically translated on 24-02-2026 02:48:10):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "-autoreconnect " and tgt.process.cmdline contains "-connect " and tgt.process.cmdline contains "-id:"))
 ```
 
