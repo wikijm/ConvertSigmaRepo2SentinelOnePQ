@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-02-2026 01:13:32):
+// Translated content (automatically translated on 25-02-2026 01:19:01):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/firewall-cmd" or tgt.process.image.path contains "/ufw" or tgt.process.image.path contains "/iptables" or tgt.process.image.path contains "/netstat" or tgt.process.image.path contains "/ss" or tgt.process.image.path contains "/ip" or tgt.process.image.path contains "/ifconfig" or tgt.process.image.path contains "/systemd-resolve" or tgt.process.image.path contains "/route") or tgt.process.cmdline contains "/etc/resolv.conf"))
 ```
 
