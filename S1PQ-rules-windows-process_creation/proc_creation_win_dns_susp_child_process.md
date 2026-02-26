@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-02-2026 02:49:21):
+// Translated content (automatically translated on 26-02-2026 02:44:06):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\dns.exe" and (not tgt.process.image.path contains "\\conhost.exe")))
 ```
 
