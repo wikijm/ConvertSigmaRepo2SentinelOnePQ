@@ -480,6 +480,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for libcares-2.dll DLL Hijacking
+id: 3059582b-8917-48a3-7724-5b9ff8430517
+status: experimental
+description: Detects possible DLL hijacking of libcares-2.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/c-ares/libcares-2.html
+author: "Wietze Beukema"
+date: 2026-02-26
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\libcares-2.dll'
+    filter:
+        TargetFileName:
+            - 'c:\users\\*\appdata\local\GitKraken\app-*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for calibre-launcher.dll DLL Hijacking
 id: 1636202b-5264-48a3-2775-5b9ff8996636
 status: experimental
@@ -1175,6 +1201,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for crashrpt.dll DLL Hijacking
+id: 9651332b-1257-48a3-6224-5b9ff8973528
+status: experimental
+description: Detects possible DLL hijacking of crashrpt.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/idol/crashrpt.html
+author: "Still Hsu"
+date: 2026-01-09
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\crashrpt.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\MPC-HC\CrashReporter\\*'
+            - 'c:\program files (x86)\MPC-HC\CrashReporter\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for tbb.dll DLL Hijacking
 id: 3106522b-4746-48a3-1019-5b9ff8256030
 status: experimental
@@ -1310,6 +1363,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for jrtools.dll DLL Hijacking
+id: 3986952b-1497-48a3-1258-5b9ff8247078
+status: experimental
+description: Detects possible DLL hijacking of jrtools.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/jriver/jrtools.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\jrtools.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\J River\Media Center *\\*'
+            - 'c:\program files (x86)\J River\Media Center *\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for krpt.dll DLL Hijacking
 id: 4415742b-9766-48a3-4354-5b9ff8616475
 status: experimental
@@ -1333,6 +1413,29 @@ detection:
             - 'c:\program files (x86)\Kingsoft\WPS Office\\*\office6\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for dsp_bridge_x64.dll DLL Hijacking
+id: 3179262b-3028-48a3-8802-5b9ff8680997
+status: experimental
+description: Detects possible DLL hijacking of dsp_bridge_x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/kugou/dsp_bridge_x64.html
+author: "Zhangir Ospanov"
+date: 2026-01-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\dsp_bridge_x64.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -2379,6 +2482,60 @@ detection:
         TargetFileName:
             - 'c:\program files\SentinelOne\Sentinel Agent *\\*'
             - 'c:\program files (x86)\SentinelOne\Sentinel Agent *\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for roboform-x64.dll DLL Hijacking
+id: 2016812b-1497-48a3-1258-5b9ff8516792
+status: experimental
+description: Detects possible DLL hijacking of roboform-x64.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform-x64.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\roboform-x64.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for roboform.dll DLL Hijacking
+id: 3758612b-1497-48a3-1258-5b9ff8264542
+status: experimental
+description: Detects possible DLL hijacking of roboform.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\roboform.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -14170,6 +14327,35 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for vcruntime140.dll DLL Hijacking
+id: 1697282b-3028-48a3-8802-5b9ff8136955
+status: experimental
+description: Detects possible DLL hijacking of vcruntime140.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/vcruntime140.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-01-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\vcruntime140.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for vdsutil.dll DLL Hijacking
 id: 6376582b-7437-48a3-2115-5b9ff8267815
 status: experimental
@@ -16430,6 +16616,35 @@ detection:
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm\\*'
             - 'c:\program files\Windows Kits\10\bin\\*\arm64\\*'
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm64\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for midlrtmd.dll DLL Hijacking
+id: 4697262b-1497-48a3-1258-5b9ff8380603
+status: experimental
+description: Detects possible DLL hijacking of midlrtmd.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/midlrtmd.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\midlrtmd.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
 
     condition: selection and not filter
 falsepositives:
