@@ -1,0 +1,35 @@
+```sql
+// Translated content (automatically translated on 27-02-2026 02:21:46):
+event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\roboform.dll" and (not (module.path contains "c:\\program files\\Siber Systems\\AI RoboForm\\" or module.path contains "c:\\program files (x86)\\Siber Systems\\AI RoboForm\\"))))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Possible DLL Hijacking of roboform.dll
+id: 3758611b-1497-48a3-1258-5b9ff8264542
+status: experimental
+description: Detects possible DLL hijacking of roboform.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\roboform.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+```

@@ -477,6 +477,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of libcares-2.dll
+id: 3059581b-8917-48a3-7724-5b9ff8430517
+status: experimental
+description: Detects possible DLL hijacking of libcares-2.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/c-ares/libcares-2.html
+author: "Wietze Beukema"
+date: 2026-02-26
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\libcares-2.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\users\\*\appdata\local\GitKraken\app-*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of calibre-launcher.dll
 id: 1636201b-5264-48a3-2775-5b9ff8996636
 status: experimental
@@ -1169,6 +1195,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of crashrpt.dll
+id: 9651331b-1257-48a3-6224-5b9ff8973528
+status: experimental
+description: Detects possible DLL hijacking of crashrpt.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/idol/crashrpt.html
+author: "Still Hsu"
+date: 2026-01-09
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\crashrpt.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\MPC-HC\CrashReporter\\*'
+            - 'c:\program files (x86)\MPC-HC\CrashReporter\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of tbb.dll
 id: 3106521b-4746-48a3-1019-5b9ff8256030
 status: experimental
@@ -1304,6 +1357,33 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of jrtools.dll
+id: 3986951b-1497-48a3-1258-5b9ff8247078
+status: experimental
+description: Detects possible DLL hijacking of jrtools.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/jriver/jrtools.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\jrtools.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\J River\Media Center *\\*'
+            - 'c:\program files (x86)\J River\Media Center *\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of krpt.dll
 id: 4415741b-9766-48a3-4354-5b9ff8616475
 status: experimental
@@ -1327,6 +1407,29 @@ detection:
             - 'c:\program files (x86)\Kingsoft\WPS Office\\*\office6\\*'
 
     condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of dsp_bridge_x64.dll
+id: 3179261b-3028-48a3-8802-5b9ff8680997
+status: experimental
+description: Detects possible DLL hijacking of dsp_bridge_x64.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/kugou/dsp_bridge_x64.html
+author: "Zhangir Ospanov"
+date: 2026-01-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\dsp_bridge_x64.dll'
+
+    condition: selection 
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
@@ -2373,6 +2476,60 @@ detection:
         ImageLoaded:
             - 'c:\program files\SentinelOne\Sentinel Agent *\\*'
             - 'c:\program files (x86)\SentinelOne\Sentinel Agent *\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of roboform-x64.dll
+id: 2016811b-1497-48a3-1258-5b9ff8516792
+status: experimental
+description: Detects possible DLL hijacking of roboform-x64.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform-x64.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\roboform-x64.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of roboform.dll
+id: 3758611b-1497-48a3-1258-5b9ff8264542
+status: experimental
+description: Detects possible DLL hijacking of roboform.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/sibersystems/roboform.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\roboform.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Siber Systems\AI RoboForm\\*'
+            - 'c:\program files (x86)\Siber Systems\AI RoboForm\\*'
 
     condition: selection and not filter
 falsepositives:
@@ -13120,6 +13277,32 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+title: Possible DLL Hijacking of vcruntime140.dll
+id: 1697281b-3028-48a3-8802-5b9ff8136955
+status: experimental
+description: Detects possible DLL hijacking of vcruntime140.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/vcruntime140.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-01-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\vcruntime140.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\windows\system32\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
 title: Possible DLL Hijacking of vdsutil.dll
 id: 6376581b-7437-48a3-2115-5b9ff8267815
 status: experimental
@@ -15179,6 +15362,35 @@ detection:
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm\\*'
             - 'c:\program files\Windows Kits\10\bin\\*\arm64\\*'
             - 'c:\program files (x86)\Windows Kits\10\bin\\*\arm64\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+title: Possible DLL Hijacking of midlrtmd.dll
+id: 4697261b-1497-48a3-1258-5b9ff8380603
+status: experimental
+description: Detects possible DLL hijacking of midlrtmd.dll by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/external/midlrtmd.html
+author: "Rick Gatenby"
+date: 2026-02-03
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\midlrtmd.dll'
+    filter:
+        ImageLoaded:
+            - 'c:\program files\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x64\mdmerge.exe\\*'
+            - 'c:\program files\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
+            - 'c:\program files (x86)\Windows Kits\\*\bin\\*\x86\mdmerge.exe\\*'
 
     condition: selection and not filter
 falsepositives:
