@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-02-2026 01:51:05):
+// Translated content (automatically translated on 27-02-2026 01:49:50):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Temp\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\$Recycle.Bin\\" or src.process.image.path contains "\\Contacts\\" or src.process.image.path contains "\\Desktop\\" or src.process.image.path contains "\\Documents\\" or src.process.image.path contains "\\Downloads\\" or src.process.image.path contains "\\Favorites\\" or src.process.image.path contains "\\Favourites\\" or src.process.image.path contains "\\inetpub\\wwwroot\\" or src.process.image.path contains "\\Music\\" or src.process.image.path contains "\\Pictures\\" or src.process.image.path contains "\\Start Menu\\Programs\\Startup\\" or src.process.image.path contains "\\Users\\Default\\" or src.process.image.path contains "\\Videos\\") and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
 ```
 
