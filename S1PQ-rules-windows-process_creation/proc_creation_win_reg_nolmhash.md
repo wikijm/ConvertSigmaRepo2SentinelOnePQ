@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-02-2026 02:44:06):
+// Translated content (automatically translated on 27-02-2026 02:42:51):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "\\System\\CurrentControlSet\\Control\\Lsa" and tgt.process.cmdline contains "NoLMHash" and tgt.process.cmdline contains " 0"))
 ```
 
