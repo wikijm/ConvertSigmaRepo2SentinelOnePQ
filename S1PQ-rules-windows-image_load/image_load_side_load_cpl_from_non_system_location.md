@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 28-02-2026 01:41:23):
-event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\hdwwiz.cpl" or module.path contains "\\appwiz.cpl") and (not (module.path contains ":\\Windows\\System32\\" or module.path contains ":\\Windows\\SysWOW64\\" or module.path contains ":\\Windows\\WinSxS\\"))))
+// Translated content (automatically translated on 01-03-2026 02:02:13):
+event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\appwiz.cpl" or module.path contains "\\bthprops.cpl" or module.path contains "\\hdwwiz.cpl") and (not (module.path contains "C:\\Windows\\Prefetch\\" or module.path contains "C:\\Windows\\System32\\" or module.path contains "C:\\Windows\\SysWOW64\\" or module.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
 
@@ -9,30 +9,39 @@ event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "
 title: System Control Panel Item Loaded From Uncommon Location
 id: 2b140a5c-dc02-4bb8-b6b1-8bdb45714cde
 status: test
-description: Detects image load events of system control panel items (.cpl) from uncommon or non-system locations which might be the result of sideloading.
+description: |
+    Detects image load events of system control panel items (.cpl) from uncommon or non-system locations that may indicate DLL sideloading or other abuse techniques.
 references:
     - https://www.hexacorn.com/blog/2024/01/06/1-little-known-secret-of-fondue-exe/
     - https://www.hexacorn.com/blog/2024/01/01/1-little-known-secret-of-hdwwiz-exe/
+    - https://github.com/mhaskar/FsquirtCPLPoC
+    - https://securelist.com/sidewinder-apt/114089/
 author: Anish Bogati
 date: 2024-01-09
+modified: 2026-02-17
 tags:
     - attack.defense-evasion
-    - attack.t1036
+    - attack.persistence
+    - attack.privilege-escalation
+    - attack.t1574.001
 logsource:
     product: windows
     category: image_load
 detection:
     selection:
         ImageLoaded|endswith:
-            - '\hdwwiz.cpl' # Usually loaded by hdwwiz.exe
             - '\appwiz.cpl' # Usually loaded by fondue.exe
+            - '\bthprops.cpl' # Usually loaded by fsquirt.exe
+            - '\hdwwiz.cpl' # Usually loaded by hdwwiz.exe
     filter_main_legit_location:
-        ImageLoaded|contains:
-            - ':\Windows\System32\'
-            - ':\Windows\SysWOW64\'
-            - ':\Windows\WinSxS\'
-    condition: selection and not 1 of filter_*
+        ImageLoaded|startswith:
+            - 'C:\Windows\Prefetch\'
+            - 'C:\Windows\System32\'
+            - 'C:\Windows\SysWOW64\'
+            - 'C:\Windows\WinSxS\'
+    condition: selection and not 1 of filter_main_*
 falsepositives:
     - Unknown
-level: medium
+level: high
+regression_tests_path: regression_data/rules/windows/image_load/image_load_side_load_cpl_from_non_system_location/info.yml
 ```
