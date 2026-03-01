@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-02-2026 02:31:20):
+// Translated content (automatically translated on 01-03-2026 03:14:34):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "Enable-WindowsOptionalFeature" and tgt.process.cmdline contains "-Online" and tgt.process.cmdline contains "-FeatureName") and (tgt.process.cmdline contains "TelnetServer" or tgt.process.cmdline contains "Internet-Explorer-Optional-amd64" or tgt.process.cmdline contains "TFTP" or tgt.process.cmdline contains "SMB1Protocol" or tgt.process.cmdline contains "Client-ProjFS" or tgt.process.cmdline contains "Microsoft-Windows-Subsystem-Linux")))
 ```
 

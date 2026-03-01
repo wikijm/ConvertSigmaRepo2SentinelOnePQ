@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-02-2026 02:31:20):
+// Translated content (automatically translated on 01-03-2026 03:14:34):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "iex " or tgt.process.cmdline contains "Invoke-Expression " or tgt.process.cmdline contains "Invoke-Command " or tgt.process.cmdline contains "icm ") and (tgt.process.cmdline contains "cat " or tgt.process.cmdline contains "get-content " or tgt.process.cmdline contains "type ") and tgt.process.cmdline contains " -raw"))
 ```
 

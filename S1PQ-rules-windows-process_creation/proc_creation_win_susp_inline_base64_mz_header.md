@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-02-2026 02:31:20):
+// Translated content (automatically translated on 01-03-2026 03:14:34):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "TVqQAAMAAAAEAAAA" or tgt.process.cmdline contains "TVpQAAIAAAAEAA8A" or tgt.process.cmdline contains "TVqAAAEAAAAEABAA" or tgt.process.cmdline contains "TVoAAAAAAAAAAAAA" or tgt.process.cmdline contains "TVpTAQEAAAAEAAAA"))
 ```
 
