@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 02-03-2026 02:24:31):
+// Translated content (automatically translated on 03-03-2026 02:26:42):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\qrt.dll" and (not (module.path contains "c:\\program files\\F-Secure\\Anti-Virus\\" or module.path contains "c:\\program files (x86)\\F-Secure\\Anti-Virus\\"))))
 ```
 
