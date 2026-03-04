@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-03-2026 02:47:15):
+// Translated content (automatically translated on 04-03-2026 02:39:42):
 event.category="dns" and (endpoint.os="windows" and (src.process.image.path contains "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_" and src.process.image.path contains "\\AppInstaller.exe"))
 ```
 
