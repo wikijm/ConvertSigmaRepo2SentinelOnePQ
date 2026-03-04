@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 03-03-2026 01:10:31):
+// Translated content (automatically translated on 04-03-2026 01:06:43):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path="*accessserver*.exe" or src.process.image.path contains "accessserver.exe") or (tgt.process.image.path="*accessserver*.exe" or tgt.process.image.path contains "accessserver.exe")))
 ```
 
