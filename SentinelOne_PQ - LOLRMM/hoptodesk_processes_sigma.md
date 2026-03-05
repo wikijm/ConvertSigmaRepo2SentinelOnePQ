@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 04-03-2026 01:06:43):
+// Translated content (automatically translated on 05-03-2026 01:09:19):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "hoptodesk.exe" or tgt.process.image.path contains "hoptodesk.exe"))
 ```
 
