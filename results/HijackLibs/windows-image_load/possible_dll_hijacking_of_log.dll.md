@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-03-2026 02:23:20):
+// Translated content (automatically translated on 06-03-2026 02:21:33):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\log.dll" and (not (module.path contains "c:\\program files\\Bitdefender Antivirus Free\\" or module.path contains "c:\\program files (x86)\\Bitdefender Antivirus Free\\" or module.path="c:\\program files\\Bitdefender Agent\\*\\*" or module.path="c:\\program files (x86)\\Bitdefender Agent\\*\\*" or module.path="c:\\program files\\Bitdefender Agent\\*\\x64\\*" or module.path="c:\\program files (x86)\\Bitdefender Agent\\*\\x64\\*" or module.path contains "c:\\program files\\Bitdefender\\Bitdefender Security\\" or module.path contains "c:\\program files (x86)\\Bitdefender\\Bitdefender Security\\" or module.path contains "c:\\program files\\Bitdefender\\Bitdefender Security App\\" or module.path contains "c:\\program files (x86)\\Bitdefender\\Bitdefender Security App\\"))))
 ```
 
