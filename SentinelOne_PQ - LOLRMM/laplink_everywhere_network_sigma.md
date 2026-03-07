@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-03-2026 01:13:07):
+// Translated content (automatically translated on 07-03-2026 01:04:43):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "everywhere.laplink.com" or url.address contains "le.laplink.com" or url.address contains "atled.syspectr.com") or (event.dns.request contains "everywhere.laplink.com" or event.dns.request contains "le.laplink.com" or event.dns.request contains "atled.syspectr.com")))
 ```
 
