@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-03-2026 02:07:59):
+// Translated content (automatically translated on 08-03-2026 02:25:41):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\atl71.dll" and (not (module.path="c:\\program files\\Common Files\\Thunder Network\\TP\\*\\*" or module.path="c:\\program files (x86)\\Common Files\\Thunder Network\\TP\\*\\*"))))
 ```
 
