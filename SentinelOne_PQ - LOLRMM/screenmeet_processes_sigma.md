@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-03-2026 01:09:48):
+// Translated content (automatically translated on 09-03-2026 01:09:44):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "ScreenMeetSupport.exe" or src.process.image.path contains "ScreenMeet.Support.exe") or (tgt.process.image.path contains "ScreenMeetSupport.exe" or tgt.process.image.path contains "ScreenMeet.Support.exe")))
 ```
 
