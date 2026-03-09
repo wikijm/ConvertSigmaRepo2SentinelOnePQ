@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-03-2026 02:10:12):
+// Translated content (automatically translated on 09-03-2026 02:11:05):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "domotz.exe" or src.process.image.path contains "Domotz Pro Desktop App.exe" or src.process.image.path contains "domotz_bash.exe" or src.process.image.path="*domotz*.exe" or src.process.image.path="*Domotz Pro Desktop App Setup*.exe" or src.process.image.path="*domotz-windows*.exe"))
 ```
 
