@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-03-2026 02:49:15):
+// Translated content (automatically translated on 10-03-2026 02:40:33):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "\\vsjitdebugger.exe" and (not (tgt.process.image.path="*\\vsimmersiveactivatehelper*.exe" or tgt.process.image.path contains "\\devenv.exe"))))
 ```
 
