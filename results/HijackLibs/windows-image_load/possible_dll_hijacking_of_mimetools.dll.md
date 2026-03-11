@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-03-2026 02:12:00):
+// Translated content (automatically translated on 11-03-2026 02:11:21):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\mimetools.dll" and (not (module.path contains "c:\\program files\\Notepad++\\plugins\\" or module.path contains "c:\\program files (x86)\\Notepad++\\plugins\\" or module.path contains "c:\\program files\\Notepad++\\plugins\\mimetools\\" or module.path contains "c:\\program files (x86)\\Notepad++\\plugins\\mimetools\\"))))
 ```
 
