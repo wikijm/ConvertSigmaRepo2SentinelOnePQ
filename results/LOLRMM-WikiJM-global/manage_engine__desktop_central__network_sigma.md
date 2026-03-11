@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 10-03-2026 02:03:43):
+// Translated content (automatically translated on 11-03-2026 02:03:21):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "desktopcentral.manageengine.com" or url.address contains "desktopcentral.manageengine.com.eu" or url.address contains "desktopcentral.manageengine.cn" or url.address contains ".dms.zoho.com" or url.address contains ".dms.zoho.com.eu" or url.address contains ".-dms.zoho.com.cn") or (event.dns.request contains "desktopcentral.manageengine.com" or event.dns.request contains "desktopcentral.manageengine.com.eu" or event.dns.request contains "desktopcentral.manageengine.cn" or event.dns.request contains ".dms.zoho.com" or event.dns.request contains ".dms.zoho.com.eu" or event.dns.request contains ".-dms.zoho.com.cn")))
 ```
 
