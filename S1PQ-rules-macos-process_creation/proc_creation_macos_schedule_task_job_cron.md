@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-03-2026 01:48:25):
+// Translated content (automatically translated on 12-03-2026 01:52:36):
 event.type="Process Creation" and (endpoint.os="osx" and (tgt.process.image.path contains "/crontab" and tgt.process.cmdline contains "/tmp/"))
 ```
 
