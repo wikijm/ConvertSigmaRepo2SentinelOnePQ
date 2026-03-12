@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 11-03-2026 01:47:37):
+// Translated content (automatically translated on 12-03-2026 01:51:13):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\mpclient.dll" and (src.process.image.path contains "\\MpCmdRun.exe" or src.process.image.path contains "\\NisSrv.exe")) and (not (src.process.image.path contains "C:\\Program Files (x86)\\Windows Defender\\" or src.process.image.path contains "C:\\Program Files\\Microsoft Security Client\\" or src.process.image.path contains "C:\\Program Files\\Windows Defender\\" or src.process.image.path contains "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\" or src.process.image.path contains "C:\\Windows\\WinSxS\\"))))
 ```
 
