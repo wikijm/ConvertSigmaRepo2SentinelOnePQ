@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 12-03-2026 02:24:39):
+// Translated content (automatically translated on 13-03-2026 02:22:46):
 event.type="Module Load" and (endpoint.os="windows" and module.path contains "\\cdpsgshims.dll")
 ```
 
