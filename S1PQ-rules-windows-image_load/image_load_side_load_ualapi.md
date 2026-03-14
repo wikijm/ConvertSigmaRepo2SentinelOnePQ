@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-03-2026 01:51:35):
+// Translated content (automatically translated on 14-03-2026 01:49:10):
 event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains "\\fxssvc.exe" and module.path contains "ualapi.dll") and (not module.path contains "C:\\Windows\\WinSxS\\")))
 ```
 
