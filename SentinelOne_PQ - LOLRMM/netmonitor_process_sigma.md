@@ -1,0 +1,45 @@
+```sql
+// Translated content (automatically translated on 14-03-2026 01:07:01):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "\\nmep_agtconfig.exe" or src.process.image.path contains "\\nmep_ctrlagent.exe" or src.process.image.path contains "\\nmep_ctrlagentsvc.exe" or src.process.image.path contains "\\winpty-agent.exe" or src.process.image.path contains "\\winpty-agent64.exe") or (tgt.process.image.path contains "\\nmep_agtconfig.exe" or tgt.process.image.path contains "\\nmep_ctrlagent.exe" or tgt.process.image.path contains "\\nmep_ctrlagentsvc.exe" or tgt.process.image.path contains "\\winpty-agent.exe" or tgt.process.image.path contains "\\winpty-agent64.exe")))
+```
+
+
+# Original Sigma Rule:
+```yaml
+title: Potential Network Monitor for Employees RMM Tool Process Activity
+id: 5c75a549-50f5-47c6-ab50-550ac108fc7e
+status: experimental
+description: |
+    Detects potential processes activity of Network Monitor for Employees RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+    - https://networklookout.com/
+    - https://www.huntress.com/blog/employee-monitoring-simplehelp-abused-in-ransomware-operations
+author: Daniel Koifman (Koifsec)
+date: 2026-02-12
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - '\nmep_agtconfig.exe'
+            - '\nmep_ctrlagent.exe'
+            - '\nmep_ctrlagentsvc.exe'
+            - '\winpty-agent.exe'
+            - '\winpty-agent64.exe'
+    selection_image:
+        Image|endswith: 
+            - '\nmep_agtconfig.exe'
+            - '\nmep_ctrlagent.exe'
+            - '\nmep_ctrlagentsvc.exe'
+            - '\winpty-agent.exe'
+            - '\winpty-agent64.exe'
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Network Monitor for Employees
+level: medium
+```

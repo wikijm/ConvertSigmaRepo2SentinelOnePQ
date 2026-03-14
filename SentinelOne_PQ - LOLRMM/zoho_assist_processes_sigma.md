@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 13-03-2026 01:07:44):
-event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "zaservice.exe" or src.process.image.path contains "ZMAgent.exe" or src.process.image.path contains "ZA_Access.exe" or src.process.image.path contains "ZohoMeeting.exe" or src.process.image.path contains "Zohours.exe" or src.process.image.path contains "zohotray.exe" or src.process.image.path contains "ZohoURSService.exe" or src.process.image.path contains "ZA_Access.exe" or src.process.image.path contains "Zaservice.exe" or src.process.image.path contains "za_connect.exe" or src.process.image.path contains "connect.exe") or (tgt.process.image.path contains "zaservice.exe" or tgt.process.image.path contains "ZMAgent.exe" or tgt.process.image.path contains "ZA_Access.exe" or tgt.process.image.path contains "ZohoMeeting.exe" or tgt.process.image.path contains "Zohours.exe" or tgt.process.image.path contains "zohotray.exe" or tgt.process.image.path contains "ZohoURSService.exe" or tgt.process.image.path contains "ZA_Access.exe" or tgt.process.image.path contains "Zaservice.exe" or tgt.process.image.path contains "za_connect.exe" or tgt.process.image.path contains "connect.exe")))
+// Translated content (automatically translated on 14-03-2026 01:07:01):
+event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "toolsiq.exe" or src.process.image.path contains "zaservice.exe" or src.process.image.path contains "ZMAgent.exe" or src.process.image.path contains "ZA_Access.exe" or src.process.image.path contains "ZohoMeeting.exe" or src.process.image.path contains "Zohours.exe" or src.process.image.path contains "zohotray.exe" or src.process.image.path contains "ZohoURSService.exe" or src.process.image.path contains "za_connect.exe" or src.process.image.path contains "connect.exe") or (tgt.process.image.path contains "toolsiq.exe" or tgt.process.image.path contains "zaservice.exe" or tgt.process.image.path contains "ZMAgent.exe" or tgt.process.image.path contains "ZA_Access.exe" or tgt.process.image.path contains "ZohoMeeting.exe" or tgt.process.image.path contains "Zohours.exe" or tgt.process.image.path contains "zohotray.exe" or tgt.process.image.path contains "ZohoURSService.exe" or tgt.process.image.path contains "za_connect.exe" or tgt.process.image.path contains "connect.exe")))
 ```
 
 
@@ -13,6 +13,7 @@ description: |
     Detects potential processes activity of Zoho Assist RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
+    - https://www.huntress.com/blog/active-exploitation-solarwinds-web-help-desk-cve-2025-26399
 author: LOLRMM Project
 date: 2025-12-01
 tags:
@@ -24,6 +25,7 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
+            - toolsiq.exe
             - zaservice.exe
             - ZMAgent.exe
             - ZA_Access.exe
@@ -31,12 +33,11 @@ detection:
             - Zohours.exe
             - zohotray.exe
             - ZohoURSService.exe
-            - ZA_Access.exe
-            - Zaservice.exe
             - za_connect.exe
             - connect.exe
     selection_image:
         Image|endswith:
+            - toolsiq.exe
             - zaservice.exe
             - ZMAgent.exe
             - ZA_Access.exe
@@ -44,8 +45,6 @@ detection:
             - Zohours.exe
             - zohotray.exe
             - ZohoURSService.exe
-            - ZA_Access.exe
-            - Zaservice.exe
             - za_connect.exe
             - connect.exe
     condition: 1 of selection_*
