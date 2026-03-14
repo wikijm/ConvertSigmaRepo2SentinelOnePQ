@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 13-03-2026 02:22:46):
+// Translated content (automatically translated on 14-03-2026 02:20:43):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\register.dll" and (not (module.path="c:\\program files\\IObit\\Driver Booster\\*\\*" or module.path="c:\\program files (x86)\\IObit\\Driver Booster\\*\\*"))))
 ```
 
