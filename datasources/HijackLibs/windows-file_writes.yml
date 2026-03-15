@@ -4215,6 +4215,37 @@ falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.
 
 ---
+                      | replace: "\*","\\\\*"title: Possible preparation for bthprops.cpl DLL Hijacking
+id: 9160872b-3316-48a3-9077-5b9ff8347867
+status: experimental
+description: Detects possible DLL hijacking of bthprops.cpl by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/bthprops.html
+author: "Swachchhanda Shrawan Poudel"
+date: 2026-02-05
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\bthprops.cpl'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\Prefetch\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
                       | replace: "\*","\\\\*"title: Possible preparation for cabinet.dll DLL Hijacking
 id: 1147392b-9395-48a3-4833-5b9ff8774102
 status: experimental
@@ -11114,6 +11145,36 @@ logsource:
 detection:
     selection:
         TargetFileName: '*\ntmarta.dll'
+    filter:
+        TargetFileName:
+            - 'c:\windows\system32\\*'
+            - 'c:\windows\syswow64\\*'
+            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
+---
+                      | replace: "\*","\\\\*"title: Possible preparation for ntprint.dll DLL Hijacking
+id: 1969622b-7194-48a3-1387-5b9ff8446202
+status: experimental
+description: Detects possible DLL hijacking of ntprint.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/microsoft/built-in/ntprint.html
+author: "SanSan"
+date: 2026-03-06
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\ntprint.dll'
     filter:
         TargetFileName:
             - 'c:\windows\system32\\*'
