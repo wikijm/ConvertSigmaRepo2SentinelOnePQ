@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 14-03-2026 01:11:35):
+// Translated content (automatically translated on 15-03-2026 01:23:41):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.image.path contains "/auditctl" and tgt.process.cmdline matches "-D"))
 ```
 
