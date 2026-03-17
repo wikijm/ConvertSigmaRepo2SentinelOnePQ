@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-03-2026 02:39:43):
+// Translated content (automatically translated on 17-03-2026 02:24:48):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\iepdf32.dll" and (not (module.path contains "c:\\program files\\Handy Viewer\\" or module.path contains "c:\\program files (x86)\\Handy Viewer\\"))))
 ```
 
