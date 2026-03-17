@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 16-03-2026 03:22:47):
+// Translated content (automatically translated on 17-03-2026 02:45:39):
 event.type="Process Creation" and (endpoint.os="windows" and tgt.process.cmdline matches "(?i)echo.*clip.*&&.*(Clipboard|i`?n`?v`?o`?k`?e`?)")
 ```
 
