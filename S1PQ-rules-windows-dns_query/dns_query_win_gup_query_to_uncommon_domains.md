@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-03-2026 02:52:14):
+// Translated content (automatically translated on 20-03-2026 02:42:57):
 event.category="dns" and (endpoint.os="windows" and (src.process.image.path contains "\\gup.exe" and (not event.dns.request="notepad-plus-plus.org") and (not (event.dns.request contains ".sourceforge.net" or (event.dns.request contains ".githubusercontent.com" or event.dns.request="github.com") or event.dns.request contains ".googleapis.com"))))
 ```
 
