@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-03-2026 01:13:28):
+// Translated content (automatically translated on 20-03-2026 01:09:13):
 event.type="Process Creation" and (endpoint.os="windows" and (src.process.image.path contains "tdp2tcp.exe" or tgt.process.image.path contains "tdp2tcp.exe"))
 ```
 

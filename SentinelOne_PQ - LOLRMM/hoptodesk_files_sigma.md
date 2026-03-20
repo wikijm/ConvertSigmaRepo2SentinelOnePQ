@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 19-03-2026 01:13:28):
+// Translated content (automatically translated on 20-03-2026 01:09:13):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\HopToDesk\\HopToDesk.exe" or tgt.file.path contains "C:\\Program Files (x86)\\HopToDesk\\privacyhelper.exe" or tgt.file.path contains "C:\\Program Files (x86)\\HopToDesk\\PrivacyMode.dll" or tgt.file.path contains "C:\\Program Files (x86)\\HopToDesk\\sciter.dll" or tgt.file.path contains "C:\\Users\*\\AppData\\Roaming\\HopToDesk\\config\\HopToDesk.toml" or tgt.file.path contains "C:\\Users\*\\AppData\\Local\\Temp\\privacyhelper.exe" or tgt.file.path="*/System/Volumes/Data/Users/*/Library/Logs/HopToDesk/hoptodesk_rCURRENT.log"))
 ```
 
