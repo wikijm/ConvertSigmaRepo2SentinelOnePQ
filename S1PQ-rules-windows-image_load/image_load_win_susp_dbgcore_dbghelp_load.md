@@ -1,6 +1,6 @@
 ```sql
-// Translated content (automatically translated on 19-03-2026 01:59:05):
-event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Temp\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\$Recycle.Bin\\" or src.process.image.path contains "\\Contacts\\" or src.process.image.path contains "\\Desktop\\" or src.process.image.path contains "\\Documents\\" or src.process.image.path contains "\\Downloads\\" or src.process.image.path contains "\\Favorites\\" or src.process.image.path contains "\\Favourites\\" or src.process.image.path contains "\\inetpub\\wwwroot\\" or src.process.image.path contains "\\Music\\" or src.process.image.path contains "\\Pictures\\" or src.process.image.path contains "\\Start Menu\\Programs\\Startup\\" or src.process.image.path contains "\\Users\\Default\\" or src.process.image.path contains "\\Videos\\") and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
+// Translated content (automatically translated on 20-03-2026 01:53:23):
+event.type="Module Load" and (endpoint.os="windows" and ((src.process.image.path contains ":\\Perflogs\\" or src.process.image.path contains ":\\Temp\\" or src.process.image.path contains ":\\Users\\Public\\" or src.process.image.path contains "\\$Recycle.Bin\\" or src.process.image.path contains "\\Contacts\\" or src.process.image.path contains "\\Documents\\" or src.process.image.path contains "\\Favorites\\" or src.process.image.path contains "\\Favourites\\" or src.process.image.path contains "\\inetpub\\wwwroot\\" or src.process.image.path contains "\\Music\\" or src.process.image.path contains "\\Pictures\\" or src.process.image.path contains "\\Start Menu\\Programs\\Startup\\" or src.process.image.path contains "\\Users\\Default\\" or src.process.image.path contains "\\Videos\\") and (module.path contains "\\dbgcore.dll" or module.path contains "\\dbghelp.dll")))
 ```
 
 
@@ -21,6 +21,7 @@ references:
     - https://www.splunk.com/en_us/blog/security/you-bet-your-lsass-hunting-lsass-access.html
 author: Swachchhanda Shrawan Poudel (Nextron Systems)
 date: 2025-11-27
+modified: 2026-01-09
 tags:
     - attack.credential-access
     - attack.t1003
@@ -37,9 +38,9 @@ detection:
             - ':\Users\Public\'
             - '\$Recycle.Bin\'
             - '\Contacts\'
-            - '\Desktop\'
+            # - '\Desktop\'
             - '\Documents\'
-            - '\Downloads\'
+            # - '\Downloads\'
             - '\Favorites\'
             - '\Favourites\'
             - '\inetpub\wwwroot\'
@@ -55,7 +56,7 @@ detection:
             - '\dbghelp.dll'
     condition: all of selection_*
 falsepositives:
-    - Possibly during software installation or update processes
+    - Unknown
 level: high
 regression_tests_path: regression_data/rules/windows/image_load/image_load_win_susp_dbgcore_dbghelp_load/info.yml
 ```
