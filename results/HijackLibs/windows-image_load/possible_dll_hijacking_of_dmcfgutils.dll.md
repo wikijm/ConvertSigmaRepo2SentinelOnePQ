@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 21-03-2026 02:10:39):
+// Translated content (automatically translated on 22-03-2026 02:31:38):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\dmcfgutils.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
