@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-03-2026 02:31:38):
+// Translated content (automatically translated on 23-03-2026 02:32:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\commfunc.dll" and (not (module.path contains "c:\\program files\\Lenovo\\Communications Utility\\" or module.path contains "c:\\program files (x86)\\Lenovo\\Communications Utility\\"))))
 ```
 

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 22-03-2026 02:31:38):
+// Translated content (automatically translated on 23-03-2026 02:32:08):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\ppcore.dll" and (not (module.path="c:\\program files\\Microsoft Office\\OFFICE*\\*" or module.path="c:\\program files (x86)\\Microsoft Office\\OFFICE*\\*" or module.path="c:\\program files\\Microsoft Office\\Root\\OFFICE*\\*" or module.path="c:\\program files (x86)\\Microsoft Office\\Root\\OFFICE*\\*" or module.path="c:\\program files\\Microsoft Office *\\ClientX86\\Root\\Office*\\*" or module.path="c:\\program files (x86)\\Microsoft Office *\\ClientX86\\Root\\Office*\\*" or module.path="c:\\program files\\Microsoft Office *\\ClientX64\\Root\\Office*\\*" or module.path="c:\\program files (x86)\\Microsoft Office *\\ClientX64\\Root\\Office*\\*"))))
 ```
 
