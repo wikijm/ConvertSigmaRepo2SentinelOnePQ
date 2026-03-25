@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-03-2026 02:24:18):
+// Translated content (automatically translated on 25-03-2026 02:29:01):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\eappprxy.dll" and (not (module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
