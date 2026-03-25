@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-03-2026 02:46:20):
+// Translated content (automatically translated on 25-03-2026 02:51:22):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains ":\\Windows\\Sysnative\\" or tgt.process.image.path contains ":\\Windows\\Sysnative\\") and (not ((tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\Framework64\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\Framework\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm\\v" or tgt.process.image.path contains "C:\\Windows\\Microsoft.NET\\FrameworkArm64\\v") and tgt.process.image.path contains "\\ngen.exe" and tgt.process.cmdline contains "install")) and (not (tgt.process.cmdline contains "\"C:\\Windows\\sysnative\\cmd.exe\"" and tgt.process.cmdline contains "\\xampp\\" and tgt.process.cmdline contains "\\catalina_start.bat"))))
 ```
 
