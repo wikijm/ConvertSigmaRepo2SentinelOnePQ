@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 24-03-2026 02:44:52):
+// Translated content (automatically translated on 25-03-2026 02:49:54):
 event.category="dns" and (endpoint.os="windows" and (event.dns.request="update.onelaunch.com" and src.process.image.path contains "\\OneLaunch.exe"))
 ```
 
