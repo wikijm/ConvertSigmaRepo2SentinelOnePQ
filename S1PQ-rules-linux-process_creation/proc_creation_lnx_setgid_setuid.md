@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-03-2026 01:17:20):
+// Translated content (automatically translated on 26-03-2026 01:22:44):
 event.type="Process Creation" and (endpoint.os="linux" and (tgt.process.cmdline contains "chown root" and (tgt.process.cmdline contains " chmod u+s" or tgt.process.cmdline contains " chmod g+s")))
 ```
 
