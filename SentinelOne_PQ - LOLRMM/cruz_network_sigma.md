@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-03-2026 01:12:26):
+// Translated content (automatically translated on 26-03-2026 01:17:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and (url.address contains "resources.doradosoftware.com/cruz-rmm" or event.dns.request contains "resources.doradosoftware.com/cruz-rmm"))
 ```
 
