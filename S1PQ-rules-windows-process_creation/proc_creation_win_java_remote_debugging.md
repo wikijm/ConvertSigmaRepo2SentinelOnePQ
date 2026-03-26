@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 25-03-2026 02:51:22):
+// Translated content (automatically translated on 26-03-2026 03:15:55):
 event.type="Process Creation" and (endpoint.os="windows" and ((tgt.process.cmdline contains "transport=dt_socket,address=" and (tgt.process.cmdline contains "jre1." or tgt.process.cmdline contains "jdk1.")) and (not (tgt.process.cmdline contains "address=127.0.0.1" or tgt.process.cmdline contains "address=localhost"))))
 ```
 
