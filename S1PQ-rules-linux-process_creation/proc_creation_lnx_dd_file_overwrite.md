@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 26-03-2026 01:22:44):
+// Translated content (automatically translated on 27-03-2026 01:22:23):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path in ("/bin/dd","/usr/bin/dd")) and tgt.process.cmdline contains "of=" and (tgt.process.cmdline contains "if=/dev/zero" or tgt.process.cmdline contains "if=/dev/null")))
 ```
 
