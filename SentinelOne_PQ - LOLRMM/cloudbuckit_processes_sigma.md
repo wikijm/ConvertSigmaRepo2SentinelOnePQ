@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-03-2026 01:17:52):
+// Translated content (automatically translated on 28-03-2026 01:11:00):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path="*\\CloudBuckIt*.exe")
 ```
 
