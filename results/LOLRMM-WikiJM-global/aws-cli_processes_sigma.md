@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 27-03-2026 02:28:46):
+// Translated content (automatically translated on 28-03-2026 02:11:47):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\AWSCLISetup.exe")
 ```
 
