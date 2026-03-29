@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 28-03-2026 01:11:00):
+// Translated content (automatically translated on 29-03-2026 01:20:55):
 event.type="Process Creation" and (endpoint.os="windows" and src.process.image.path contains "\\FreeFileSync.exe")
 ```
 
