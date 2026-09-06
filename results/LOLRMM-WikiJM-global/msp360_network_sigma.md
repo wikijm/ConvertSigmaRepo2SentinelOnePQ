@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 03:16:17):
+// Translated content (automatically translated on 06-09-2026 03:16:02):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".cloudberrylab.com" or url.address contains ".msp360.com" or url.address contains ".mspbackups.com" or url.address contains "msp360.com") or (event.dns.request contains ".cloudberrylab.com" or event.dns.request contains ".msp360.com" or event.dns.request contains ".mspbackups.com" or event.dns.request contains "msp360.com")))
 ```
 
