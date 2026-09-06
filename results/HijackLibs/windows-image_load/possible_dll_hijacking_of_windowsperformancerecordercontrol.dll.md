@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 03:29:58):
+// Translated content (automatically translated on 06-09-2026 03:30:39):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\windowsperformancerecordercontrol.dll" and (not (module.path contains "c:\\program files\\windows kits\\10\\windows performance toolkit\\" or module.path contains "c:\\program files (x86)\\windows kits\\10\\windows performance toolkit\\" or module.path contains "c:\\windows\\system32\\" or module.path contains "c:\\windows\\syswow64\\"))))
 ```
 
