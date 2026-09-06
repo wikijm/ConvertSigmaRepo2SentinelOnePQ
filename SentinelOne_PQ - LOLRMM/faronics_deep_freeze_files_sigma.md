@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Deep Freeze\\DFServ.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Deep Freeze\\DFServEx.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Faronics\\Deep Freeze\\DFWks.exe" or tgt.file.path contains "C:\\Windows\\Temp\\DFServiceInit.log" or tgt.file.path contains "C:\\Users\\<USER>\\AppData\\Local\\Temp\\_$Df\\DFStdInstall.sib"))
 ```
 

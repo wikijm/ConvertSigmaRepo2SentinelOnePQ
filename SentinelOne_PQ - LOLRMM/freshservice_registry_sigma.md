@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FSAgentService" or registry.keyPath contains "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FreshServiceScan" or registry.keyPath contains "HKLM\\SOFTWARE\\Freshdesk\\FSAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Freshdesk\\FSAgent" or registry.keyPath contains "HKLM\\SOFTWARE\\Freshworks\\FreshServiceProbe" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Freshworks\\FreshServiceProbe" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\FreshService Probe" or registry.keyPath contains "HKLM\\SOFTWARE\\FreshService Probe" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{8BE075F9-36C7-4145-8BC0-35D420223576}" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{892D2C60-AFC1-48C0-8C5D-A2DC856A3605}"))
 ```
 

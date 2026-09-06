@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "/opt/dataplicity/tuxtunnel/manager" or tgt.file.path contains "/opt/dataplicity/credentials" or tgt.file.path contains "/etc/systemd/system/dataplicity.service" or tgt.file.path contains "/etc/init.d/dataplicity"))
 ```
 

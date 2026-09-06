@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "deepfreeze.com" or url.address contains "www.deepfreeze.com" or url.address contains "faronicscloud.com" or url.address contains "cloud.faronics.com" or url.address contains "upd.faronicslabs.com" or url.address contains "faronics.com" or url.address contains "www.faronics.com") or (event.dns.request contains "deepfreeze.com" or event.dns.request contains "www.deepfreeze.com" or event.dns.request contains "faronicscloud.com" or event.dns.request contains "cloud.faronics.com" or event.dns.request contains "upd.faronicslabs.com" or event.dns.request contains "faronics.com" or event.dns.request contains "www.faronics.com")))
 ```
 

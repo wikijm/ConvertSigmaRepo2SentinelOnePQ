@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\TrustConnect Agent\\TrustConnectAgent.exe" or tgt.file.path contains "C:\\Program Files\\TrustConnect Agent\\config.json" or tgt.file.path contains "C:\\ProgramData\\TrustConnect\*\\config.json" or tgt.file.path contains "C:\\ProgramData\\TrustConnect\*\\device.id"))
 ```
 

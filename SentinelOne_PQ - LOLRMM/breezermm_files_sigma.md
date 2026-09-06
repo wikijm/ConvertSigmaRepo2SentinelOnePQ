@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 01:53:09):
+// Translated content (automatically translated on 06-09-2026 01:47:37):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-agent.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-watchdog.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-user-helper.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\breeze-backup.exe" or tgt.file.path contains "C:\\Program Files\\Breeze\\scripts\\install\\install-windows.ps1" or tgt.file.path contains "C:\\ProgramData\\Breeze\\agent.env" or tgt.file.path contains "C:\\ProgramData\\Breeze\\secrets.yaml" or tgt.file.path contains "C:\\ProgramData\\Breeze\\logs\\agent.log"))
 ```
 
