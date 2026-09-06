@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 02:01:00):
+// Translated content (automatically translated on 06-09-2026 01:56:45):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "awk" or tgt.process.image.path contains "/cat" or tgt.process.image.path contains "grep" or tgt.process.image.path contains "/head" or tgt.process.image.path contains "/less" or tgt.process.image.path contains "/more" or tgt.process.image.path contains "/nl" or tgt.process.image.path contains "/tail") and (tgt.process.cmdline contains "/proc/2/" or (tgt.process.cmdline contains "/proc/" and (tgt.process.cmdline contains "/cgroup" or tgt.process.cmdline contains "/sched")))))
 ```
 
