@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 05-09-2026 02:48:20):
+// Translated content (automatically translated on 06-09-2026 02:46:18):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\offreg.dll" and (not ((src.process.image.path contains "C:\\Windows\\System32\\" or src.process.image.path contains "C:\\Windows\\SysWOW64\\" or src.process.image.path contains "C:\\Windows\\WinSxS\\") or (src.process.image.path contains "C:\\Program Files\\" or src.process.image.path contains "C:\\Program Files (x86)\\") or (src.process.image.path contains "C:\\Users\\" and src.process.image.path contains "\\AppData\\Local\\Programs\\") or (src.process.image.path contains "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\" and src.process.image.path contains "\\MsMpEng.exe")))))
 ```
 
