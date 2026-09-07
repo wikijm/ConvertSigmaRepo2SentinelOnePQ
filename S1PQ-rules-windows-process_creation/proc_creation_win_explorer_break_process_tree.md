@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2026 04:13:50):
+// Translated content (automatically translated on 07-09-2026 04:13:05):
 event.type="Process Creation" and (endpoint.os="windows" and (tgt.process.cmdline contains "/factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b}" or (tgt.process.cmdline contains "explorer.exe" and (tgt.process.cmdline contains " -root," or tgt.process.cmdline contains " /root," or tgt.process.cmdline contains " –root," or tgt.process.cmdline contains " —root," or tgt.process.cmdline contains " ―root,"))))
 ```
 
