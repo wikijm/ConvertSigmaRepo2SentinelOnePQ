@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2026 01:56:45):
+// Translated content (automatically translated on 07-09-2026 01:53:56):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/chmod" and (tgt.process.cmdline contains "/tmp/" or tgt.process.cmdline contains "/.Library/" or tgt.process.cmdline contains "/etc/" or tgt.process.cmdline contains "/opt/")) and (not ((tgt.process.cmdline contains "chmod --reference=/etc/shells" and src.process.cmdline contains "/update-shells") or (tgt.process.cmdline contains "/etc/" and (src.process.cmdline contains "/var/lib/dpkg/info/" and src.process.cmdline contains ".postinst configure")) or tgt.process.cmdline contains "chmod 700 /tmp/apt-key-gpghome." or tgt.process.cmdline contains "chmod 755 /var/tmp/mkinitramfs" or tgt.process.cmdline="chmod 0775 /etc/landscape/" or tgt.process.cmdline="chmod 644 /etc/apparmor.d/tunables/home.d/ubuntu"))))
 ```
 
