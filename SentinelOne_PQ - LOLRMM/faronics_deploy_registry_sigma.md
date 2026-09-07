@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 06-09-2026 01:47:37):
+// Translated content (automatically translated on 07-09-2026 01:44:50):
 event.category="registry" and (endpoint.os="windows" and (registry.keyPath contains "HKLM\\SOFTWARE\\Faronics" or registry.keyPath contains "HKLM\\SOFTWARE\\WOW6432Node\\Faronics\\Faronics Core 3\\Storage Spaces\\Spaces\\FWA" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\AppID\\FWAService.exe" or registry.keyPath contains "HKLM\\SOFTWARE\\Classes\\{359C24F1-51B5-44CE-8F2D-2FBB1A0FE4EA}\\FWA_GUI_Agent" or registry.keyPath contains "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{581F69E6-A5D1-48C7-9F6F-CC333007F7EB}"))
 ```
 
