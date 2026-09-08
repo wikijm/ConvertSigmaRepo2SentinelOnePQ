@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 03:30:29):
+// Translated content (automatically translated on 08-09-2026 03:35:44):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libcrypto-1_1.dll" and (not (module.path contains "c:\\program files\\AOMEI Partition Assistant\\" or module.path contains "c:\\program files (x86)\\AOMEI Partition Assistant\\"))))
 ```
 
