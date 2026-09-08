@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 02:44:18):
+// Translated content (automatically translated on 08-09-2026 02:55:35):
 event.type="Module Load" and (endpoint.os="windows" and ((module.path contains "\\SmadHook32c.dll" or module.path contains "\\SmadHook64c.dll") and (not ((src.process.image.path in ("C:\\Program Files (x86)\\SMADAV\\SmadavProtect32.exe","C:\\Program Files (x86)\\SMADAV\\SmadavProtect64.exe","C:\\Program Files\\SMADAV\\SmadavProtect32.exe","C:\\Program Files\\SMADAV\\SmadavProtect64.exe")) and (module.path contains "C:\\Program Files (x86)\\SMADAV\\" or module.path contains "C:\\Program Files\\SMADAV\\")))))
 ```
 
