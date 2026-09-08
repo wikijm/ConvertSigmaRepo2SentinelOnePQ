@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:53:56):
+// Translated content (automatically translated on 08-09-2026 02:04:58):
 event.type="Process Creation" and (endpoint.os="linux" and ((tgt.process.image.path contains "/flock" and tgt.process.cmdline contains " -u ") and (tgt.process.cmdline contains "/bin/bash" or tgt.process.cmdline contains "/bin/dash" or tgt.process.cmdline contains "/bin/fish" or tgt.process.cmdline contains "/bin/sh" or tgt.process.cmdline contains "/bin/zsh")))
 ```
 

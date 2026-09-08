@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:53:56):
+// Translated content (automatically translated on 08-09-2026 02:04:58):
 event.type="Process Creation" and (endpoint.os="linux" and (((tgt.process.image.path contains "/service" or tgt.process.image.path contains "/systemctl" or tgt.process.image.path contains "/chkconfig") and (tgt.process.cmdline contains " stop " or tgt.process.cmdline contains " disable ")) and (not ((tgt.process.image.path contains "/systemctl" and (tgt.process.cmdline contains "--no-reload disable snap-snapd-" or tgt.process.cmdline contains " stop snap-snapd-")) or (tgt.process.image.path contains "/systemctl" and src.process.cmdline contains "tmp.ci/preinst upgrade" and (tgt.process.cmdline contains " stop " and tgt.process.cmdline contains "ssh.")) or (src.process.cmdline contains "/dpkg/info/ubuntu-pro-client.prerm upgrade" and tgt.process.image.path contains "/systemctl"))) and (not (tgt.process.image.path contains "/systemctl" and tgt.process.cmdline contains "snap.amazon-ssm-agent.amazon-ssm-agent.service"))))
 ```
 
