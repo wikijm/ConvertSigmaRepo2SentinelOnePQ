@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:44:50):
+// Translated content (automatically translated on 08-09-2026 01:56:19):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "helpwire.app" or url.address contains "get.helpwire.app" or url.address contains "api.helpwire.app" or url.address contains "staging.helpwire.app" or url.address contains "account.flexihub.com" or url.address contains "stun.helpwire.app" or url.address contains "stunserver.stunprotocol.org") or (event.dns.request contains "helpwire.app" or event.dns.request contains "get.helpwire.app" or event.dns.request contains "api.helpwire.app" or event.dns.request contains "staging.helpwire.app" or event.dns.request contains "account.flexihub.com" or event.dns.request contains "stun.helpwire.app" or event.dns.request contains "stunserver.stunprotocol.org")))
 ```
 

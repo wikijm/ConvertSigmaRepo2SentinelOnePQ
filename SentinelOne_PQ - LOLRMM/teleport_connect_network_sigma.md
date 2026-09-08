@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:44:50):
+// Translated content (automatically translated on 08-09-2026 01:56:19):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "cdn.teleport.dev" or url.address contains "reporting-connect.teleportinfra.sh" or url.address contains "usage.teleport.dev" or url.address contains ".teleport.sh" or url.address contains "user_managed") or (event.dns.request contains "cdn.teleport.dev" or event.dns.request contains "reporting-connect.teleportinfra.sh" or event.dns.request contains "usage.teleport.dev" or event.dns.request contains ".teleport.sh" or event.dns.request contains "user_managed")))
 ```
 

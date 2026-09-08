@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:44:50):
+// Translated content (automatically translated on 08-09-2026 01:56:19):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".logmeinrescue.com" or url.address contains ".logmeinrescue.eu" or url.address contains "logmeinrescue.com" or url.address="*rescue-list.*.logmein-gateway.com" or url.address contains "rescue-data-cetner.logmein-gateway.com") or (event.dns.request contains ".logmeinrescue.com" or event.dns.request contains ".logmeinrescue.eu" or event.dns.request contains "logmeinrescue.com" or event.dns.request="*rescue-list.*.logmein-gateway.com" or event.dns.request contains "rescue-data-cetner.logmein-gateway.com")))
 ```
 

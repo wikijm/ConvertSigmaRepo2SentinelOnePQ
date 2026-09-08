@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 07-09-2026 01:44:50):
+// Translated content (automatically translated on 08-09-2026 01:56:19):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Google\\Chrome Remote Desktop\*\\remoting_host.exe" or tgt.file.path contains "/Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_me2me_host" or tgt.file.path contains "/Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_me2me_host_service" or tgt.file.path contains "/Library/LaunchAgents/org.chromium.chromoting.plist" or tgt.file.path contains "/Library/LaunchDaemons/org.chromium.chromoting.broker.plist" or tgt.file.path contains "/Library/PrivilegedHelperTools/org.chromium.chromoting.json" or tgt.file.path contains "/Library/PrivilegedHelperTools/org.chromium.chromoting.settings.json" or tgt.file.path contains "/Applications/Chrome Remote Desktop Host Uninstaller.app" or tgt.file.path contains "/opt/google/chrome-remote-desktop/chrome-remote-desktop-host" or tgt.file.path contains "/opt/google/chrome-remote-desktop/chrome-remote-desktop" or tgt.file.path contains "/lib/systemd/system/chrome-remote-desktop.service"))
 ```
 
