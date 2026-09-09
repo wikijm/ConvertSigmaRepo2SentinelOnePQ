@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-09-2026 01:56:19):
+// Translated content (automatically translated on 09-09-2026 02:01:10):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\\fleetdeck_agent_svc.exe" or tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\*\\fleetdeck_agent.exe" or tgt.file.path contains "C:\\Program Files (x86)\\FleetDeck Agent\*\\fd_agent.dll" or tgt.file.path contains "C:\\Windows\\Temp\\FleetDeck\*"))
 ```
 

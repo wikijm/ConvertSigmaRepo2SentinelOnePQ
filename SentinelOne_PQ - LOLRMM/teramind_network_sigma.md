@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-09-2026 01:56:19):
+// Translated content (automatically translated on 09-09-2026 02:01:10):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".teramind.co" or url.address contains "teramind.co" or url.address contains "www.teramind.co" or url.address contains "rt.teramind.co" or url.address contains "sentry.dev.teramind.co" or url.address contains "<on-prem-master-server-host>" or url.address contains "<on-prem-app-server-host>") or (event.dns.request contains ".teramind.co" or event.dns.request contains "teramind.co" or event.dns.request contains "www.teramind.co" or event.dns.request contains "rt.teramind.co" or event.dns.request contains "sentry.dev.teramind.co" or event.dns.request contains "<on-prem-master-server-host>" or event.dns.request contains "<on-prem-app-server-host>")))
 ```
 
