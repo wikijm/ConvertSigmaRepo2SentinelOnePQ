@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 08-09-2026 03:35:44):
+// Translated content (automatically translated on 09-09-2026 03:40:34):
 event.type="Module Load" and (endpoint.os="windows" and (module.path contains "\\libsmartscreenn.dll" and (not (module.path="c:\\program files\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*" or module.path="c:\\program files (x86)\\WindowsApps\\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe\\*"))))
 ```
 
