@@ -1,0 +1,26 @@
+title: Possible preparation for kerneltracecontrol.dll DLL Hijacking
+id: 6685882b-5380-48a3-4616-5b9ff8707436
+status: experimental
+description: Detects possible DLL hijacking of kerneltracecontrol.dll by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - https://hijacklibs.net/entries/3rd_party/abbyy/kerneltracecontrol.html
+author: "Cristian Poenaru - HuntressLabs"
+date: 2026-09-08
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\kerneltracecontrol.dll'
+    filter:
+        TargetFileName:
+            - 'c:\program files\ABBYY FineReader\\*'
+            - 'c:\program files (x86)\ABBYY FineReader\\*'
+
+    condition: selection and not filter
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.
+
