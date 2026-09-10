@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:56:53):
+// Translated content (automatically translated on 10-09-2026 02:57:55):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/truncate" and tgt.process.cmdline contains "-s +") or (tgt.process.image.path contains "/dd" and (tgt.process.cmdline contains "if=/dev/zero" or tgt.process.cmdline contains "if=/dev/random" or tgt.process.cmdline contains "if=/dev/urandom"))))
 ```
 

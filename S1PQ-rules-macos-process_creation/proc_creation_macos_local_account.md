@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:56:53):
+// Translated content (automatically translated on 10-09-2026 02:57:55):
 event.type="Process Creation" and (endpoint.os="osx" and ((tgt.process.image.path contains "/dscl" and (tgt.process.cmdline contains "list" and tgt.process.cmdline contains "/users")) or (tgt.process.image.path contains "/dscacheutil" and (tgt.process.cmdline contains "-q" and tgt.process.cmdline contains "user")) or tgt.process.cmdline="*'*:0:'*" or ((tgt.process.image.path contains "/cat" or tgt.process.image.path contains "/awk" or tgt.process.image.path contains "/grep") and (tgt.process.cmdline contains "/etc/passwd" or tgt.process.cmdline contains "/etc/sudoers")) or tgt.process.image.path contains "/id" or (tgt.process.image.path contains "/lsof" and tgt.process.cmdline contains "-u") or (tgt.process.image.path contains "/who" or tgt.process.image.path contains "/w" or tgt.process.image.path contains "/users" or tgt.process.image.path contains "/last") or (tgt.process.image.path contains "/ls" and (tgt.process.cmdline contains "/Users" or tgt.process.cmdline contains "/Users'" or tgt.process.cmdline contains "/Users\"")) or ((tgt.process.image.path contains "/defaults" or tgt.process.image.path contains "/plutil") and tgt.process.cmdline contains "com.apple.loginwindow")))
 ```
 
