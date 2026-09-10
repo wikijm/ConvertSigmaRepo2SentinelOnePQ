@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:01:10):
+// Translated content (automatically translated on 10-09-2026 01:58:18):
 event.type="Process Creation" and (endpoint.os="windows" and ((src.process.image.path contains "komari-windows-386.exe" or src.process.image.path contains "komari-windows-amd64.exe" or src.process.image.path contains "komari-windows-arm64.exe" or src.process.image.path contains "komari-agent.exe") or (tgt.process.image.path contains "komari-windows-386.exe" or tgt.process.image.path contains "komari-windows-amd64.exe" or tgt.process.image.path contains "komari-windows-arm64.exe" or tgt.process.image.path contains "komari-agent.exe")))
 ```
 

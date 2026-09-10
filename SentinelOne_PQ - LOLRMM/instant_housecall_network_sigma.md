@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:01:10):
+// Translated content (automatically translated on 10-09-2026 01:58:18):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains ".instanthousecall.com" or url.address contains "secure.instanthousecall.com" or url.address contains ".instanthousecall.net" or url.address contains "instanthousecall.com") or (event.dns.request contains ".instanthousecall.com" or event.dns.request contains "secure.instanthousecall.com" or event.dns.request contains ".instanthousecall.net" or event.dns.request contains "instanthousecall.com")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-09-09
 tags:
     - attack.command-and-control
     - attack.t1219

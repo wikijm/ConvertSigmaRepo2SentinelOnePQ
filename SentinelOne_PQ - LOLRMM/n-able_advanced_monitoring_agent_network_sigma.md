@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:01:10):
+// Translated content (automatically translated on 10-09-2026 01:58:18):
 (event.category in ("dns","url","ip")) and (endpoint.os="windows" and ((url.address contains "beanywhere.com" or url.address contains ".beanywhere.com" or url.address contains "systemmonitor.co.uk" or url.address contains ".system-monitor.com" or url.address contains "cloudbackup.management" or url.address contains ".systemmonitor.co.uk" or url.address contains "n-able.com" or url.address contains "systemmonitor.us" or url.address contains ".systemmonitor.eu.com" or url.address contains ".logicnow.com" or url.address contains ".swi-tc.com" or url.address contains ".remote.management" or url.address contains "systemmonitor.us.cdn.cloudflare.net" or url.address contains ".cloudbackup.management" or url.address contains "remote.management" or url.address contains "logicnow.com" or url.address contains "system-monitor.com" or url.address contains ".systemmonitor.us" or url.address contains "systemmonitor.eu.com" or url.address contains ".n-able.com") or (event.dns.request contains "beanywhere.com" or event.dns.request contains ".beanywhere.com" or event.dns.request contains "systemmonitor.co.uk" or event.dns.request contains ".system-monitor.com" or event.dns.request contains "cloudbackup.management" or event.dns.request contains ".systemmonitor.co.uk" or event.dns.request contains "n-able.com" or event.dns.request contains "systemmonitor.us" or event.dns.request contains ".systemmonitor.eu.com" or event.dns.request contains ".logicnow.com" or event.dns.request contains ".swi-tc.com" or event.dns.request contains ".remote.management" or event.dns.request contains "systemmonitor.us.cdn.cloudflare.net" or event.dns.request contains ".cloudbackup.management" or event.dns.request contains "remote.management" or event.dns.request contains "logicnow.com" or event.dns.request contains "system-monitor.com" or event.dns.request contains ".systemmonitor.us" or event.dns.request contains "systemmonitor.eu.com" or event.dns.request contains ".n-able.com")))
 ```
 
@@ -15,7 +15,7 @@ references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
 date: 2025-12-01
-modified: 2026-09-02
+modified: 2026-09-09
 tags:
     - attack.command-and-control
     - attack.t1219

@@ -1,5 +1,5 @@
 ```sql
-// Translated content (automatically translated on 09-09-2026 02:01:10):
+// Translated content (automatically translated on 10-09-2026 01:58:18):
 event.category="file" and (endpoint.os="windows" and (tgt.file.path contains "C:\\Program Files (x86)\\Techinline Ltd\\SetMe Unattended\\Client\\SetMe_Client.exe" or tgt.file.path contains "C:\\Program Files (x86)\\Techinline Ltd\\SetMe Unattended\\Module\*\\tinUnattendedModule.exe" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\tinClientExtractor-*\\tinClientDesktopApplication.exe" or tgt.file.path="*C:\\Users\*\\AppData\\Local\\Temp\\tinClientExtractor-*\\tinClientSessionManager.exe" or tgt.file.path contains "C:\\ProgramData\\Techinline Ltd\\settings.ini" or tgt.file.path contains "C:\\ProgramData\\SetMe Client" or tgt.file.path contains "C:\\Windows\\Temp\\setme\\Sentry\*"))
 ```
 
